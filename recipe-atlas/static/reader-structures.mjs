@@ -3,13 +3,16 @@ import {mountParticleContext} from './reader-particle.mjs?v=0.41.3';
 import {el,button,link,badge,siteURL,disclosure,recordURL} from './reader-utils.mjs';
 import {elementLegend,atomColors} from './chemical-viewer.mjs?v=0.41.0';
 import {drawFiniteReference} from './finite-crystal-reference.mjs';
+import {defaultCrystalReferences} from './crystal-defaults.mjs';
 let registry,roles,availability;
 const colors=atomColors;
 export async function crystalReferences(r){
  registry??=fetch(siteURL('assets/crystal-references/registry.json'),{cache:'no-store'}).then(r=>r.json());
  roles??=fetch(siteURL('assets/crystal-references/component-roles.json'),{cache:'no-store'}).then(r=>r.ok?r.json():{entries:{}});
  const [data,labels]=await Promise.all([registry,roles]);
- return data.entries.filter(x=>(x.record_ids||[]).includes(r.record_id)).map(original=>referenceForRecord(original,r.record_id,labels.entries?.[original.id]));
+ const bound=data.entries.filter(x=>(x.record_ids||[]).includes(r.record_id)).map(original=>referenceForRecord(original,r.record_id,labels.entries?.[original.id]));
+ // Routes without a hand-bound reference still get the bulk cell for their composition.
+ return bound.length?bound:defaultCrystalReferences(data.entries,r,data.excluded_materials);
 }
 export function referenceForRecord(original,recordId,roleLabels={}){
  const ref={...original,sample_context_ids:Object.hasOwn(original,'sampleContextIdsByRecord')?(original.sampleContextIdsByRecord?.[recordId]||[]):original.sample_context_ids,roleByRecord:{...original.roleByRecord,...roleLabels}};

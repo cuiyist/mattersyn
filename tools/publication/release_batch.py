@@ -149,6 +149,26 @@ def selected_page_scope(documents):
     return True
 
 
+def extracted_page_scope(row):
+    """Bind the separately labelled local-extraction lane without claiming an audit."""
+    if row.get('main_status') != 'extracted_not_expert_reviewed':
+        return False
+    documents = row.get('documents')
+    if not isinstance(documents, list) or len(documents) != 1 or not isinstance(documents[0], dict):
+        return False
+    doc = documents[0]
+    page_count, pages_read = doc.get('page_count'), doc.get('pages_read')
+    if (doc.get('role') != 'main' or type(page_count) is not int or page_count < 1 or
+            not isinstance(pages_read, list) or not pages_read or
+            not all(type(n) is int and 1 <= n <= page_count for n in pages_read) or
+            pages_read != sorted(set(pages_read)) or
+            type(doc.get('all_text_read')) is not bool or doc.get('all_visually_reviewed') is not False):
+        return False
+    if doc['all_text_read'] and len(pages_read) != page_count:
+        return False
+    return True
+
+
 def new_paper_routes(dist, papers):
     """Bind each new source to a formal review or its explicitly scoped record page."""
     if not papers:
@@ -174,10 +194,11 @@ def new_paper_routes(dist, papers):
                 raise SystemExit(f'expected one scoped inventory row for new source {source}; found {len(scoped)}')
             row = scoped[0]
             rid_list = row.get('record_ids')
-            selected_main_pages = selected_page_scope(row.get('documents'))
-            if (row.get('paper_id') != source or row.get('review_status') != 'selected_recipe_and_figure_review' or
-                    not eligible_scoped_status(row) or
-                    not selected_main_pages or
+            extracted = row.get('review_status') == 'source_extracted'
+            valid_scope = (extracted_page_scope(row) if extracted else
+                           row.get('review_status') == 'selected_recipe_and_figure_review' and
+                           eligible_scoped_status(row) and selected_page_scope(row.get('documents')))
+            if (row.get('paper_id') != source or not valid_scope or
                     row.get('paper_review_url') not in (None, '') or
                     not isinstance(row.get('review_scope'), str) or not row['review_scope'].strip() or
                     not isinstance(rid_list, list) or not rid_list or len(rid_list) != len(set(rid_list)) or
@@ -191,6 +212,8 @@ def new_paper_routes(dist, papers):
                 if not record_path.is_file():
                     raise SystemExit(f'scoped record data missing for new source {source}: {rid}')
                 rec = json.loads(record_path.read_text(encoding='utf-8'))
+                if extracted and (rec.get('quality') or {}).get('review_status') != 'source_extracted':
+                    raise SystemExit(f'source-extracted route contains a differently labelled record: {source}: {rid}')
                 if (rec.get('record_id') != rid or (rec.get('lineage') or {}).get('source_group') != source or
                         not any(s.get('id') == source and s.get('doi') == doi for s in rec.get('sources', []))):
                     raise SystemExit(f'scoped record identity differs from inventory for {source}: {rid}')

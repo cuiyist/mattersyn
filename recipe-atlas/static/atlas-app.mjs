@@ -2,6 +2,7 @@ import {elements} from './periodic-data.mjs';
 import {componentScopeLabel} from './reader-utils.mjs?v=0.40.1';
 const $=id=>document.getElementById(id),selected=new Set(),tiles=new Map();let materials=[];
 const params=new URLSearchParams(location.search);
+const routes=m=>m.route_records??m.reviewed_records;
 for(const symbol of (params.get('elements')||'').split(','))if(elements.some(e=>e.symbol===symbol))selected.add(symbol);
 const table=$('periodic-table');
 for(const e of elements){
@@ -14,12 +15,12 @@ function render(){
  for(const symbol of selected){const b=document.createElement('button');b.className='element-chip';b.textContent=symbol+' ×';b.setAttribute('aria-label','Remove '+symbol);b.addEventListener('click',()=>{selected.delete(symbol);render();});selection.append(b);}
  for(const [symbol,b] of tiles)b.setAttribute('aria-pressed',String(selected.has(symbol)));
  const query=$('material-search').value.trim().toLowerCase(),scope=$('material-scope').value,exact=$('exact-elements').checked;
- const matches=materials.filter(m=>[...selected].every(s=>m.elements.includes(s))&&(!exact||!selected.size||m.elements.length===selected.size)&&(!query||`${m.formula} ${m.name}`.toLowerCase().includes(query))&&(scope==='all'||m.reviewed_records>0));
- matches.sort((a,b)=>(b.reviewed_records>0)-(a.reviewed_records>0)||(b.benchmark_records>0)-(a.benchmark_records>0)||b.reviewed_records-a.reviewed_records||a.formula.localeCompare(b.formula));
+ const matches=materials.filter(m=>[...selected].every(s=>m.elements.includes(s))&&(!exact||!selected.size||m.elements.length===selected.size)&&(!query||`${m.formula} ${m.name}`.toLowerCase().includes(query))&&(scope==='all'||routes(m)>0));
+ matches.sort((a,b)=>(routes(b)>0)-(routes(a)>0)||(b.benchmark_records>0)-(a.benchmark_records>0)||routes(b)-routes(a)||a.formula.localeCompare(b.formula));
  const host=$('material-results');host.replaceChildren();$('material-count').textContent=matches.length+' material / component pages'+(selected.size?' containing '+[...selected].join(' + '):' in the collection');
  for(const m of matches.slice(0,60)){
-  const card=document.createElement('article');card.className='material-entry';const status=document.createElement('span');status.className='atlas-status';status.textContent=m.reviewed_records?'Reviewed synthesis records':m.benchmark_records?'Published benchmark':'Indexed literature · awaiting review';
-  const h=document.createElement('h3');h.textContent=m.formula;const p=document.createElement('p');p.textContent=m.component_only?componentScopeLabel(m):m.name;const meta=document.createElement('div');meta.className='entry-meta';meta.textContent=`${m.paper_count} verified source contributions · ${m.reviewed_records} methods / variants`;
+  const card=document.createElement('article');card.className='material-entry';const status=document.createElement('span');status.className='atlas-status';status.textContent=m.source_extracted_records?(m.reviewed_records?'Audited and source-extracted synthesis':'Source-extracted synthesis'):m.reviewed_records?'Reviewed synthesis records':m.benchmark_records?'Published benchmark':'Indexed literature · awaiting review';
+  const h=document.createElement('h3');h.textContent=m.formula;const p=document.createElement('p');p.textContent=m.component_only?componentScopeLabel(m):m.name;const meta=document.createElement('div');meta.className='entry-meta';meta.textContent=`${m.paper_count} source contributions · ${routes(m)} methods / variants`;
   const a=document.createElement('a');a.href=m.url;a.textContent='Open material →';card.append(status,h,p,meta,a);host.append(card);
  }
  if(!matches.length){const p=document.createElement('p');p.className='atlas-empty';p.textContent='No reviewed synthesis page matches this selection yet. Papers awaiting review remain in the Source library. This does not establish that synthesis methods do not exist.';host.append(p);}
@@ -28,7 +29,7 @@ function render(){
 }
 $('clear-elements').addEventListener('click',()=>{selected.clear();$('material-search').value='';render();});for(const id of ['material-search','material-scope','exact-elements'])$(id).addEventListener(id==='material-search'?'input':'change',render);
 try{const response=await fetch('data/materials-index.json',{cache:'no-store'});if(!response.ok)throw Error('Material index could not be loaded');const data=await response.json();materials=data.materials;
- for(const [symbol,b] of tiles){const found=materials.filter(m=>m.elements.includes(symbol));b.classList.toggle('covered',found.some(m=>m.reviewed_records>0||m.benchmark_records>0));b.classList.toggle('indexed',found.length>0&&!found.some(m=>m.reviewed_records>0||m.benchmark_records>0));}
+ for(const [symbol,b] of tiles){const found=materials.filter(m=>m.elements.includes(symbol));b.classList.toggle('covered',found.some(m=>routes(m)>0||m.benchmark_records>0));b.classList.toggle('indexed',found.length>0&&!found.some(m=>routes(m)>0||m.benchmark_records>0));}
  if(data.coverage)$('corpus-coverage').textContent=data.coverage;
  render();
 }catch(e){$('material-count').textContent=e.message;console.error(e);}
