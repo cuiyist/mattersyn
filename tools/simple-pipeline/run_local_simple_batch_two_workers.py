@@ -138,10 +138,12 @@ class StateWriter:
 
 
 class Coordinator:
-    def __init__(self, batch, script, server_pid, model='qwen3-32b'):
+    def __init__(self, batch, script, server_pid, model='qwen3-32b', *, manifest=None, trusted_meta=None):
         self.batch, self.script = Path(batch), Path(script)
         self.server_pid, self.model = server_pid, model
-        self.manifest = json.loads((self.batch / 'identity-supported-manifest.json').read_text(encoding='utf8'))
+        self.manifest_path = Path(manifest) if manifest is not None else self.batch / 'identity-supported-manifest.json'
+        self.trusted_meta = Path(trusted_meta) if trusted_meta is not None else self.batch / 'trusted-meta'
+        self.manifest = json.loads(self.manifest_path.read_text(encoding='utf8'))
         self.cohort = json.loads((self.batch / 'manifest.json').read_text(encoding='utf8'))
         self.papers = self.manifest['papers']
         keys = [p['doi'] for p in self.papers]
@@ -288,7 +290,7 @@ class Coordinator:
 
     def _run_owned(self):
         self.work.mkdir(exist_ok=True); self.pairs.mkdir(exist_ok=True)
-        for meta in (self.batch / 'trusted-meta').glob('*.meta.json'):
+        for meta in self.trusted_meta.glob('*.meta.json'):
             if (self.work / meta.name).exists():
                 preserve_files([self.work / meta.name], self.batch / 'reused-originals' / meta.stem / 'before-command')
             shutil.copy2(meta, self.work / meta.name)
@@ -328,8 +330,11 @@ def main():
     parser.add_argument('--script', type=Path, required=True)
     parser.add_argument('--server-pid', type=int, required=True)
     parser.add_argument('--model', default='qwen3-32b')
+    parser.add_argument('--manifest', type=Path, help='Supported identity manifest; default: <batch>/identity-supported-manifest.json')
+    parser.add_argument('--trusted-meta', type=Path, help='DOI-only metadata directory; default: <batch>/trusted-meta')
     args = parser.parse_args()
-    return Coordinator(args.batch, args.script, args.server_pid, args.model).run()
+    return Coordinator(args.batch, args.script, args.server_pid, args.model,
+                       manifest=args.manifest, trusted_meta=args.trusted_meta).run()
 
 
 if __name__ == '__main__':
