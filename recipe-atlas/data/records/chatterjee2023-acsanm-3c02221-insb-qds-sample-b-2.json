@@ -1,0 +1,632 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "chatterjee2023-acsanm-3c02221-insb-qds-sample-b-2",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Subhashri Chatterjee (2023): InSb QDs (sample B)",
+  "material": {
+    "formula": "InSb",
+    "family": "InSb nanocrystals",
+    "elements": [
+      "In",
+      "Sb"
+    ],
+    "components": [
+      "InSb"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Hot injection",
+  "sources": [
+    {
+      "id": "chatterjee2023-acsanm-3c02221",
+      "doi": "10.1021/acsanm.3c02221",
+      "title": "Solution-Processed InSb Quantum Dot Photodiodes for Short-Wave Infrared Sensing",
+      "authors": "Subhashri Chatterjee, Kazuhiro Nemoto, Batu Ghosh, Hong-Tao Sun, and Naoto Shirahata",
+      "year": 2023,
+      "url": "https://doi.org/10.1021/acsanm.3c02221",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "chatterjee2023-acsanm-3c02221",
+    "recipe_family": "chatterjee2023-acsanm-3c02221-insb-qds-sample-b-2",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "InSb",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "chatterjee2023-acsanm-3c02221",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "zinc blende",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "chatterjee2023-acsanm-3c02221",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "sphere",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "chatterjee2023-acsanm-3c02221",
+          "locator": "Main PDF p.4"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "chatterjee2023-acsanm-3c02221-insb-qds-sample-b-2--liet3bh",
+      "name": "LiEt3BH",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "volume": {
+          "value": 2.5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "2.5 mL",
+          "evidence": [
+            {
+              "source_id": "chatterjee2023-acsanm-3c02221",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "chatterjee2023-acsanm-3c02221",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "chatterjee2023-acsanm-3c02221-insb-qds-sample-b-2--after-s01-heat",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "chatterjee2023-acsanm-3c02221-insb-qds-sample-b-2--after-s02-add",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "chatterjee2023-acsanm-3c02221-insb-qds-sample-b-2--after-s01-heat",
+        "chatterjee2023-acsanm-3c02221-insb-qds-sample-b-2--liet3bh"
+      ]
+    },
+    {
+      "id": "chatterjee2023-acsanm-3c02221-insb-qds-sample-b-2--after-s03-inject",
+      "name": "mixture after step 3",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "chatterjee2023-acsanm-3c02221-insb-qds-sample-b-2--after-s02-add"
+      ]
+    },
+    {
+      "id": "chatterjee2023-acsanm-3c02221-insb-qds-sample-b-2--after-s04-quench",
+      "name": "mixture after step 4",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "chatterjee2023-acsanm-3c02221-insb-qds-sample-b-2--after-s03-inject",
+        "chatterjee2023-acsanm-3c02221-insb-qds-sample-b-2--liet3bh"
+      ]
+    },
+    {
+      "id": "chatterjee2023-acsanm-3c02221-insb-qds-sample-b-2--after-s05-centrifuge",
+      "name": "mixture after step 5",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "chatterjee2023-acsanm-3c02221-insb-qds-sample-b-2--after-s04-quench",
+        "chatterjee2023-acsanm-3c02221-insb-qds-sample-b-2--liet3bh"
+      ]
+    },
+    {
+      "id": "chatterjee2023-acsanm-3c02221-insb-qds-sample-b-2--after-s06-wash",
+      "name": "mixture after step 6",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "chatterjee2023-acsanm-3c02221-insb-qds-sample-b-2--after-s05-centrifuge",
+        "chatterjee2023-acsanm-3c02221-insb-qds-sample-b-2--liet3bh"
+      ]
+    },
+    {
+      "id": "chatterjee2023-acsanm-3c02221-insb-qds-sample-b-2--after-s07-dry",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "chatterjee2023-acsanm-3c02221-insb-qds-sample-b-2--after-s06-wash",
+        "chatterjee2023-acsanm-3c02221-insb-qds-sample-b-2--liet3bh"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-heat",
+      "action": "heat",
+      "label": "Heating OLA to reaction temperature",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "chatterjee2023-acsanm-3c02221-insb-qds-sample-b-2--after-s01-heat"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 240,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "240 °C",
+          "evidence": [
+            {
+              "source_id": "chatterjee2023-acsanm-3c02221",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Heating OLA to reaction temperature",
+      "evidence": [
+        {
+          "source_id": "chatterjee2023-acsanm-3c02221",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-add",
+      "action": "add",
+      "label": "Addition of SH solution",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-heat"
+      ],
+      "inputs": [
+        "chatterjee2023-acsanm-3c02221-insb-qds-sample-b-2--after-s01-heat",
+        "chatterjee2023-acsanm-3c02221-insb-qds-sample-b-2--liet3bh"
+      ],
+      "outputs": [
+        "chatterjee2023-acsanm-3c02221-insb-qds-sample-b-2--after-s02-add"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 240,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "240 °C",
+          "evidence": [
+            {
+              "source_id": "chatterjee2023-acsanm-3c02221",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Addition of SH solution",
+      "evidence": [
+        {
+          "source_id": "chatterjee2023-acsanm-3c02221",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-inject",
+      "action": "inject",
+      "label": "Injection of In−Sb precursor solution",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-add"
+      ],
+      "inputs": [
+        "chatterjee2023-acsanm-3c02221-insb-qds-sample-b-2--after-s02-add"
+      ],
+      "outputs": [
+        "chatterjee2023-acsanm-3c02221-insb-qds-sample-b-2--after-s03-inject"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "5 min",
+          "evidence": [
+            {
+              "source_id": "chatterjee2023-acsanm-3c02221",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Injection of In−Sb precursor solution",
+      "evidence": [
+        {
+          "source_id": "chatterjee2023-acsanm-3c02221",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s04-quench",
+      "action": "quench",
+      "label": "Quenching the reaction",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s03-inject"
+      ],
+      "inputs": [
+        "chatterjee2023-acsanm-3c02221-insb-qds-sample-b-2--after-s03-inject",
+        "chatterjee2023-acsanm-3c02221-insb-qds-sample-b-2--liet3bh"
+      ],
+      "outputs": [
+        "chatterjee2023-acsanm-3c02221-insb-qds-sample-b-2--after-s04-quench"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Quenching the reaction",
+      "evidence": [
+        {
+          "source_id": "chatterjee2023-acsanm-3c02221",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s05-centrifuge",
+      "action": "centrifuge",
+      "label": "Centrifugation to separate precipitate",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s04-quench"
+      ],
+      "inputs": [
+        "chatterjee2023-acsanm-3c02221-insb-qds-sample-b-2--after-s04-quench",
+        "chatterjee2023-acsanm-3c02221-insb-qds-sample-b-2--liet3bh"
+      ],
+      "outputs": [
+        "chatterjee2023-acsanm-3c02221-insb-qds-sample-b-2--after-s05-centrifuge"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "5 min",
+          "evidence": [
+            {
+              "source_id": "chatterjee2023-acsanm-3c02221",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Centrifugation to separate precipitate",
+      "evidence": [
+        {
+          "source_id": "chatterjee2023-acsanm-3c02221",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s06-wash",
+      "action": "wash",
+      "label": "Washing the precipitate",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s05-centrifuge"
+      ],
+      "inputs": [
+        "chatterjee2023-acsanm-3c02221-insb-qds-sample-b-2--after-s05-centrifuge",
+        "chatterjee2023-acsanm-3c02221-insb-qds-sample-b-2--liet3bh"
+      ],
+      "outputs": [
+        "chatterjee2023-acsanm-3c02221-insb-qds-sample-b-2--after-s06-wash"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "10 min",
+          "evidence": [
+            {
+              "source_id": "chatterjee2023-acsanm-3c02221",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Washing the precipitate",
+      "evidence": [
+        {
+          "source_id": "chatterjee2023-acsanm-3c02221",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s07-dry",
+      "action": "dry",
+      "label": "Drying the precipitate",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s06-wash"
+      ],
+      "inputs": [
+        "chatterjee2023-acsanm-3c02221-insb-qds-sample-b-2--after-s06-wash",
+        "chatterjee2023-acsanm-3c02221-insb-qds-sample-b-2--liet3bh"
+      ],
+      "outputs": [
+        "chatterjee2023-acsanm-3c02221-insb-qds-sample-b-2--after-s07-dry"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Drying the precipitate",
+      "evidence": [
+        {
+          "source_id": "chatterjee2023-acsanm-3c02221",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "chatterjee2023-acsanm-3c02221-insb-qds-sample-b-2--product",
+      "source_sample_label": "InSb QDs (sample B)",
+      "batch_id": null,
+      "material_state_id": "chatterjee2023-acsanm-3c02221-insb-qds-sample-b-2--after-s07-dry",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "InSb",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "chatterjee2023-acsanm-3c02221",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "zinc blende",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "chatterjee2023-acsanm-3c02221",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "sphere",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "chatterjee2023-acsanm-3c02221",
+            "locator": "Main PDF p.4"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "chatterjee2023-acsanm-3c02221",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reaction temperature: 240 degC (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction time not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

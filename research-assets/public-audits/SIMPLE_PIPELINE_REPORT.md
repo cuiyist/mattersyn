@@ -56,9 +56,9 @@ These are DOI-level matches against recorded values, not an independent determin
 
 ## Batches
 
-No simple-pipeline paper batch has been deployed yet. Batch 1 selected 20 screened papers, with 18 supported identities and two unresolved identity holds. Extraction and one retry per failed paper took 52.9375 wall-clock minutes across 44 pass executions. Four papers remain excluded after the permitted retry: three persistent model/JSON failures and one malformed pair-entry failure. These are technical failures, not evidence that their sources lack synthesis.
+Historical preparation before the first verified simple-pipeline batch (publication results follow below): Batch 1 selected 20 screened papers, with 18 supported identities and two unresolved identity holds. Extraction and one retry per failed paper took 52.9375 wall-clock minutes across 44 pass executions. Four papers remain excluded after the permitted retry: three persistent model/JSON failures and one malformed pair-entry failure. These are technical failures, not evidence that their sources lack synthesis.
 
-`check` processed 18 papers, saw 587 values and retained 362 values in 24 pairs from 14 papers. Its three predicates remain unchanged. Conversion retains 13 papers, 20 route-eligible records and 65 figure crops. One paper and three additional pairs produced no ordinary synthesis route and remain private. Optional five-field completeness is reported separately and is not a new admission gate. All new records retain `source_extracted`; integration is pending publication and adds zero live paper credit so far.
+`check` processed 18 papers, saw 587 values and retained 362 values in 24 pairs from 14 papers. Its three predicates remain unchanged. Conversion retains 13 papers, 20 route-eligible records and 65 figure crops. One paper and three additional pairs produced no ordinary synthesis route and remain private. Optional five-field completeness is reported separately and is not a new admission gate. All new records retain `source_extracted`; at that preparation checkpoint, integration had no live publication credit.
 
 The owner-authorized rare-material read is complete for five papers: four corrected, one unchanged. It made 27 deletion operations; no replacement facts were added. Originals and retained quote/check data remain local. This is a limited single-reader check, not an independent audit. The next 49 identity-supported papers are generating locally while this batch is prepared; two subsequent cohorts have metadata prepared. No common-material review or audited-lane work has resumed.
 
@@ -103,3 +103,100 @@ Three other non-route pairs are retained privately rather than converted: DOI 10
 Two additional verified public copies from Part A were removed: 42,975 files / 1,978,677,064 logical bytes. Observed free space increased 2,013,970,432 bytes, including concurrent allocation. Five uncertain cleanup targets were left intact. All papers, quoted training files, receipts and working checkouts were preserved.
 
 Cleanup removed 32 historical generated targets containing 70,339 files and 1,415,166,126 logical bytes only after exact public Git verification. Observed C-drive free space rose 1,610,690,560 bytes; that observation includes concurrent allocation. No papers, private evidence, current run or working checkouts were removed. No automatic approval rejection occurred. Private target paths remain local.
+
+## Verified simple-pipeline batches
+
+### simple-batch01-20261011
+
+Anonymous verification passed at 2026-10-11T06:06:36+00:00: 3,294 files, zero mismatches. [Source commit](https://github.com/cuiyist/mattersyn/commit/2bf52eb2931a3ff0eb508b605fe4a081250bf7b0) and [Site commit](https://github.com/cuiyist/mattersyn-site/commit/2a6d0edd2f9db48d3651608105e854f76aa920ce). This batch contains 13 source groups, 20 records and 65 source figure crops; 13 distinct newly contributing primary papers after DOI deduplication. Every new contribution remains machine extracted and not independently audited. The final built site is 1,084,521,926 bytes / 25,407 files.
+
+Live counter: **244 audited + 13 machine extracted = 257 papers**, 3,005 canonical records, 252 direct material families, 289 material/component pages and 864 displayed recipe–structure pairs (6 more comprehensive; 858 partial). These display counts do not establish extraction accuracy, measured atomic coordinates or training eligibility.
+
+Recorded source pr: [14](https://github.com/cuiyist/mattersyn/pull/14).
+
+Recorded source ci run: [38114276173](https://github.com/cuiyist/mattersyn/actions/runs/38114276173).
+
+Recorded pages run: [38116679526](https://github.com/cuiyist/mattersyn-site/actions/runs/38116679526).
+
+| Primary DOI | Records | Figure crops | Public page |
+| --- | ---: | ---: | --- |
+| 10.1007/s00396-009-2037-9 | 2 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/chen2009-s00396-009-2037-9-cds-pmma-hybrids-1.html) |
+| 10.1021/acs.chemmater.5c00408 | 2 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/das2025-acs-chemmater-5c00408-cspbbr3-rhombicuboctahedron-nanocrystals-1.html) |
+| 10.1021/acsami.1c06627 | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/dong2021-acsami-1c06627-as-evaporated-cspbbr3-and-cs4pbbr6-embed-1.html) |
+| 10.1021/acsami.0c20349 | 2 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/hu2021-acsami-0c20349-cspbbr3-cncs-1.html) |
+| 10.1002/adfm.200600955 | 2 | 9 | [Open](https://cuiyist.github.io/mattersyn-site/records/jasieniak2007-adfm-200600955-cdsezns-qd-doped-tio2-waveguide-1.html) |
+| 10.1006/jcis.2000.6894 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/kho2000-jcis-2000-6894-zns-ncs-old-1-1.html) |
+| 10.1021/acs.chemmater.4c00011 | 2 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/ko2024-acs-chemmater-4c00011-cs1xrbxpbbr3-ncs-with-0-rb-alloying-1.html) |
+| 10.1007/s10971-006-9120-1 | 1 | 7 | [Open](https://cuiyist.github.io/mattersyn-site/records/leventis2006-s10971-006-9120-1-cds-quantum-dots-1.html) |
+| 10.1007/s10853-006-7461-3 | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/murugan2006-s10853-006-7461-3-zns-nanoparticles-1.html) |
+| 10.1021/acs.chemmater.3c02503 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/rusch2023-acs-chemmater-3c02503-cspbbr3pbxbiysz-nc-heterostructures-1.html) |
+| 10.1002/adma.200501523 | 2 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/torre2006-adma-200501523-cdtecnt-composites-1.html) |
+| 10.1021/acs.chemmater.9b03709 | 1 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/wen2019-acs-chemmater-9b03709-cspbbr3-nanocrystals-1.html) |
+| 10.1002/smll.200600298 | 2 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/xie2006-smll-200600298-znte-cdse-tetrapod-1.html) |
+
+## Latest continuation checkpoint
+
+At 2026-10-11T06:09:34+00:00, Batch01 is live and anonymously verified; Batch02 remains in local processing with 47/49 two-pass-complete papers at its last saved checkpoint. These are processing counts, not additional published papers. The audited lane stays paused.
+
+Recommended choice: save this verified publication checkpoint on the next substantive batch branch now, then merge it with that batch; this keeps the GitHub record current without a status-only website deployment.
+
+Additional Part A cleanup removed 12 verified rebuildable child targets: 85,754 files and 3,879,530,160 logical bytes. Observed free space increased 4,105,388,032 bytes, including concurrent allocation. Original papers, quoted training files, receipts, active batches and working checkouts were preserved.
+
+## Simple-pipeline preparation checkpoints
+
+### batch02
+
+Preparation only: 36 retained papers, 68 ordinary route records and 252 available figure crops. This checkpoint adds zero live paper credit. Publication requires the normal release and passed anonymous verification. New records remain source extracted, not independently audited or training eligible.
+
+Final extraction handoff: 48 successful two-pass papers.
+
+Extraction wall-clock minutes: 118.4057. No publication-rate claim follows from this duration.
+
+Identity holds: 10.1021/j100054a032.
+
+| Paper left out | Metadata reason |
+| --- | --- |
+| 10.1021/ja805655b | invalid_or_failed_pass_after_one_redo |
+| 10.1021/acsnano.5b01154 | no_route_eligible_record |
+| 10.1021/am4038068 | no_route_eligible_record |
+| 10.1021/am504057y | no_route_eligible_record |
+| 10.1021/cm010291q | no_route_eligible_record |
+| 10.1021/ja0173167 | no_usable_pairs |
+| 10.1021/ja068351m | no_usable_pairs |
+| 10.1021/ja103956p | no_usable_pairs |
+| 10.1021/ja2029415 | no_route_eligible_record |
+| 10.1021/ja206303g | no_usable_pairs |
+| 10.1021/ja301285x | no_usable_pairs |
+| 10.1021/ja308200f | no_route_eligible_record |
+| 10.1021/ja410165f | no_route_eligible_record |
+
+## Batch02 processing and changes
+
+Preparation only; this batch has not yet added live papers. Selected 50 screened local papers: 49 confirmed identities, 48 successful two-pass papers after one permitted redo. Automatic check: 2,045 values considered, 1,249 retained and 91 checked pairs. Normal route conversion retains 36 papers, 68 records and 252 crops. Extraction took 118.4057 wall-clock minutes; figures and check took 2.7578 minutes. These are extraction measurements, not a published-paper rate.
+
+The 15 rare-material papers received one scoped reading each. Corrected private copies removed 88 field/path entries (86 validated value objects reported by the readers), with no replacement facts. Wrong route/product/step bindings, component versus whole-product sizes/phases, unsupported vessel/method claims and incorrectly typed optical statements were removed. The automatic check totals above describe the original checked outputs; they do not claim post-reading accuracy. All 36 papers remain source extracted and excluded from reviewed/training-ready counts.
+
+Choices and fixes:
+
+- Keep the existing prompt: the fresh development run cleared the owner's threshold.
+- Raise only future extraction response capacity from 10,240 to 12,288 tokens: saved failures reached the former output limit, and the measured representative input plus the new output reserve fits 32,768. The omitted Batch02 paper is not given another retry.
+- Use two local paper workers: an actual load test found two 32,768-token slots fully on the RTX5090 through the installed Vulkan backend, with q8_0 K/V cache. Load-only peak was 28,800 MiB and minimum free memory 3,388 MiB. Changed cache precision can change outputs; no accuracy or throughput gain is claimed.
+- Keep extraction A/B calls sequential within each paper and preserve the single-redo reservation across restart. Serial directory creation fixes a measured Windows snapshot-directory race without serializing model requests or weakening admission. Synthetic tests cover both contention and permanent technical holds.
+- Preserve ISO timestamps as strings when loading private PowerShell JSON arguments; automatic date conversion had lost precision/format. The capacity helper also recognizes the recorded completed handoff and the actual RTX5090 Vulkan cache evidence, retaining exact PID, ownership, cache, context, full GPU and memory checks. Its first rejected load restored the original server. No automatic approval refusal occurred.
+- Use an ordinary copied crop when the local filesystem refuses a hard link. Original quoted text, pass and pair files remain private and intact.
+
+The quote-found, number-in-quote and both-passes-agree rules are unchanged. No audited record is rewritten. The public batch archive contains no quotes.
+
+Additional verified cleanup after Batch01: removed 326 exact published copies (325 PNG copies and one quote-free archive copy), 123,482,315 logical bytes. A separate 8.00 GB whole-directory cleanup plan is only a proposal; no space is claimed freed from it yet.
+
+
+## Batch02 complete-build correction
+
+At 2026-10-11T07:18:39+00:00, the complete local candidate failed only three legacy Si assertions that assumed every contribution was reviewed. The narrow correction pins the original six reviewed Littau/Heath/Stiger routes and their exact DOI set, and keeps those component routes out of direct Si synthesis. New source-extracted routes still pass the existing canonical membership, status, source and paper-link checks. Sixteen focused regressions and all 166,133 checks on the existing candidate passed privately; fresh full Source/build/browser checks remain pending. No paper from Batch02 is claimed live and no old audited record is changed.
+
+The complete local engineering suites reported 812 tests: 806 passed and six existing Windows environment skips, with zero final failures. The initial missing-library failure and initial complete-build failure remain saved. The first staging attempt exceeded the Windows command-line limit; normal NUL-separated exact path-list staging fixes that technical failure without broadening the payload.
+
+Recommended choice: preserve the first failed attempt, bind this code-and-test fix normally in the same Batch02 branch, then run a fresh complete candidate and publish the batch. The 8.00 GB directory cleanup remains parked because its active-process guard found an unrelated process referencing an ancestor; no targets from that plan were deleted and no automatic approval refusal occurred.
+
+
+At 2026-10-11T07:32:47+00:00, the fresh R2 candidate caught an encoding mistake introduced during Root's application of the Si patch: an unrelated Ag–Te literal had been garbled by the default Windows decoder. The original UTF-8 bytes were restored from the pre-fix commit. An inverse-replacement comparison proves that only the two intended Si regions differ from the original checker; the unchanged Ag–Te check is preserved. All 166,133 quality checks now pass on the existing complete candidate, with zero warnings. Both failed candidates remain recorded, and a fresh complete R3 build and exact-commit CI are still required before pushing. No records were changed for this repair.

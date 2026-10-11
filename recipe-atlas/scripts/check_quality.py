@@ -99,6 +99,20 @@ def material_membership_errors(hub, records):
             for key, values in expected.items() if set(hub.get(key, [])) != values]
 
 
+def silicon_reviewed_regression_checks(hub, byid):
+    """Pin the old reviewed Si component routes without excluding extracted routes."""
+    legacy_routes = LITTAU_SI_ROUTES | HEATH_GE_SI_ROUTES | {"stiger-1999-electrodeposition"}
+    reviewed_routes = {rid for rid in hub.get("record_ids", [])
+                       if byid.get(rid, {}).get("quality", {}).get("review_status") == "source_reviewed"}
+    direct = set(hub.get("direct_record_ids", []))
+    reviewed_dois = {primary_doi(byid[rid]) for rid in reviewed_routes}
+    return [
+        (not (direct & (legacy_routes | reviewed_routes)), "Si: Littau component contribution promoted to pure-material synthesis"),
+        (reviewed_routes == legacy_routes, "Si: missing or unaudited synthesis contribution; only reviewed Littau, Heath and Stiger routes are allowed"),
+        (reviewed_dois == {"10.1021/j100108a019", "10.1021/jp951903v", "10.1021/la980800b"}, "Si: unreviewed title match added to the reviewed contributions"),
+    ]
+
+
 class Audit:
     def __init__(self, root):
         self.root = root.resolve()
@@ -223,10 +237,9 @@ class Audit:
         self.check("saha-2019-coo-cofe2o4-seeded-growth" in ferrite.get("record_ids", []), "Missing separately scoped Saha ferrite-shell contribution")
         self.check("separately scoped" in ferrite.get("scope_note", "").lower() or "shell" in ferrite.get("scope_note", "").lower(), "CoFe2O4: composite-shell evidence lacks an explicit scope note")
         silicon = self.hubs.get("Si", {})
-        self.check(silicon.get("component_only") is True and silicon.get("direct_record_ids") == [], "Si: Littau component contribution promoted to pure-material synthesis")
         stiger_routes = {"stiger-1999-electrodeposition"}
-        self.check(set(silicon.get("record_ids", [])) == LITTAU_SI_ROUTES | HEATH_GE_SI_ROUTES | stiger_routes, "Si: missing or unaudited synthesis contribution; only reviewed Littau, Heath and Stiger routes are allowed")
-        self.check(set(silicon.get("paper_dois", [])) == {"10.1021/j100108a019", "10.1021/jp951903v", "10.1021/la980800b"}, "Si: unreviewed title match added to the reviewed contributions")
+        for condition, message in silicon_reviewed_regression_checks(silicon, self.byid):
+            self.check(condition, message)
         self.check(all(self.byid.get(rid, {}).get("material", {}).get("formula") == "Si/SiOx" for rid in LITTAU_SI_ROUTES), "Si: source surface-oxidized product identity was erased")
         self.check(all(self.byid.get(rid, {}).get("material", {}).get("formula") == "Ge/Si" for rid in HEATH_GE_SI_ROUTES), "Ge/Si: supported island identity was erased")
         germanium = self.hubs.get("Ge", {})
