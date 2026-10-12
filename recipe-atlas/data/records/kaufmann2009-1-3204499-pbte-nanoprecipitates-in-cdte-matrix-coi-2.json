@@ -1,0 +1,295 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "kaufmann2009-1-3204499-pbte-nanoprecipitates-in-cdte-matrix-coi-2",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "E. Kaufmann (2009): PbTe nanoprecipitates in CdTe matrix (coimplanted Pb+ and Te+)",
+  "material": {
+    "formula": "PbTe",
+    "family": "PbTe nanocrystals",
+    "elements": [
+      "Pb",
+      "Te"
+    ],
+    "components": [
+      "PbTe"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Ion implantation",
+  "sources": [
+    {
+      "id": "kaufmann2009-1-3204499",
+      "doi": "10.1063/1.3204499",
+      "title": "PbTe and SnTe quantum dot precipitates in a CdTe matrix fabricated by ion implantation",
+      "authors": "E. Kaufmann, T. Schwarzl, H. Groiss, G. Hesser, F. Schäfﬂer, L. Palmetshofer, G. Springholz, and W. Heiss",
+      "year": 2009,
+      "url": "https://doi.org/10.1063/1.3204499",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "kaufmann2009-1-3204499",
+    "recipe_family": "kaufmann2009-1-3204499-pbte-nanoprecipitates-in-cdte-matrix-coi-2",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "PbTe",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "kaufmann2009-1-3204499",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "rock-salt",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "kaufmann2009-1-3204499",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "kaufmann2009-1-3204499-pbte-nanoprecipitates-in-cdte-matrix-coi-2--after-s01-implant",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "kaufmann2009-1-3204499-pbte-nanoprecipitates-in-cdte-matrix-coi-2--after-s02-anneal",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "kaufmann2009-1-3204499-pbte-nanoprecipitates-in-cdte-matrix-coi-2--after-s01-implant"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-implant",
+      "action": "implant",
+      "label": "Coimplantation of Pb+ and Te+ ions into CdTe layers",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "kaufmann2009-1-3204499-pbte-nanoprecipitates-in-cdte-matrix-coi-2--after-s01-implant"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "N2/H2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "kaufmann2009-1-3204499",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Coimplantation of Pb+ and Te+ ions into CdTe layers",
+      "evidence": [
+        {
+          "source_id": "kaufmann2009-1-3204499",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-anneal",
+      "action": "anneal",
+      "label": "Thermal annealing to form nanoprecipitates",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-implant"
+      ],
+      "inputs": [
+        "kaufmann2009-1-3204499-pbte-nanoprecipitates-in-cdte-matrix-coi-2--after-s01-implant"
+      ],
+      "outputs": [
+        "kaufmann2009-1-3204499-pbte-nanoprecipitates-in-cdte-matrix-coi-2--after-s02-anneal"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 490,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "490 °C",
+          "evidence": [
+            {
+              "source_id": "kaufmann2009-1-3204499",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "10 min",
+          "evidence": [
+            {
+              "source_id": "kaufmann2009-1-3204499",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "N2/H2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "kaufmann2009-1-3204499",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Thermal annealing to form nanoprecipitates",
+      "evidence": [
+        {
+          "source_id": "kaufmann2009-1-3204499",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "kaufmann2009-1-3204499-pbte-nanoprecipitates-in-cdte-matrix-coi-2--product",
+      "source_sample_label": "PbTe nanoprecipitates in CdTe matrix (coimplanted Pb+ and Te+)",
+      "batch_id": null,
+      "material_state_id": "kaufmann2009-1-3204499-pbte-nanoprecipitates-in-cdte-matrix-coi-2--after-s02-anneal",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "PbTe",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "kaufmann2009-1-3204499",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "rock-salt",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "kaufmann2009-1-3204499",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "kaufmann2009-1-3204499",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "notes": [
+        "Reaction temperature: 490 degC (Main PDF p.3).",
+        "Reaction time: 10 min (Main PDF p.3)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Reactor not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

@@ -13,7 +13,9 @@ def sha(raw):return hashlib.sha256(raw).hexdigest()
 def read(p):return json.loads(Path(p).read_text(encoding='utf-8-sig'))
 def write(p,v):
     p=Path(p);p.parent.mkdir(parents=True,exist_ok=True);tmp=p.with_name(p.name+'.caption-tmp')
-    tmp.write_text(json.dumps(v,ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n');os.replace(tmp,p)
+    # Keep the large Reader compact after caption application; other payloads keep their style.
+    options={'separators':(',',':')} if p.name=='reader-presentation-reviewed.json' else {'indent':2}
+    tmp.write_text(json.dumps(v,ensure_ascii=False,**options)+'\n',encoding='utf-8',newline='\n');os.replace(tmp,p)
 def norm(v):return re.sub(r'[^a-z0-9]+','-',str(v).lower()).strip('-')
 def stamp():return datetime.datetime.now(datetime.timezone.utc).isoformat()
 

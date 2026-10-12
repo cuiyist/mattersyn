@@ -35,7 +35,9 @@ def public_figure_caption(figure):
 def dump_like(path, data):
     """Write JSON in the style the file already has (line endings, final newline), so only real changes show up."""
     raw = Path(path).read_bytes() if Path(path).is_file() else b'\n'
-    text = json.dumps(data, ensure_ascii=False, indent=2) + ('\n' if raw.endswith(b'\n') else '')
+    # Compact only the large Reader sidecar; canonical/generic JSON stays unchanged.
+    options = {'separators': (',', ':')} if Path(path).name == 'reader-presentation-reviewed.json' else {'indent': 2}
+    text = json.dumps(data, ensure_ascii=False, **options) + ('\n' if raw.endswith(b'\n') else '')
     Path(path).write_bytes(text.replace('\n', '\r\n').encode('utf-8') if b'\r\n' in raw else text.encode('utf-8'))
 
 

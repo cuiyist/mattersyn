@@ -1,0 +1,222 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "yu2004-1-1695097-zno-tetrapods-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "W. D. Yu (2004): ZnO tetrapods",
+  "material": {
+    "formula": "ZnO",
+    "family": "ZnO nanocrystals",
+    "elements": [
+      "Zn",
+      "O"
+    ],
+    "components": [
+      "ZnO"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Vapor transport",
+  "sources": [
+    {
+      "id": "yu2004-1-1695097",
+      "doi": "10.1063/1.1695097",
+      "title": "Self-catalytic synthesis and photoluminescence of ZnO nanostructures on ZnO nanocrystal substrates",
+      "authors": "W. D. Yu, X. M. Li, and X. D. Gao",
+      "year": 2004,
+      "url": "https://doi.org/10.1063/1.1695097",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "yu2004-1-1695097",
+    "recipe_family": "yu2004-1-1695097-zno-tetrapods-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "phase": {
+      "value": "wurtzite",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "yu2004-1-1695097",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "yu2004-1-1695097-zno-tetrapods-1--zno-powder",
+      "name": "ZnO powder",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "yu2004-1-1695097",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "yu2004-1-1695097-zno-tetrapods-1--after-s01-coat",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "yu2004-1-1695097-zno-tetrapods-1--zno-powder"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-coat",
+      "action": "coat",
+      "label": "Coat Si plates with ZnO seed crystals using SILAR method",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "yu2004-1-1695097-zno-tetrapods-1--zno-powder"
+      ],
+      "outputs": [
+        "yu2004-1-1695097-zno-tetrapods-1--after-s01-coat"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "Ar",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yu2004-1-1695097",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Coat Si plates with ZnO seed crystals using SILAR method",
+      "evidence": [
+        {
+          "source_id": "yu2004-1-1695097",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "yu2004-1-1695097-zno-tetrapods-1--product",
+      "source_sample_label": "ZnO tetrapods",
+      "batch_id": null,
+      "material_state_id": "yu2004-1-1695097-zno-tetrapods-1--after-s01-coat",
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "phase": {
+        "value": "wurtzite",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yu2004-1-1695097",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "yu2004-1-1695097",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reactor: horizontal tube furnace (Main PDF p.2).",
+        "Reaction temperature: 850 degC (Main PDF p.2).",
+        "Reaction time: 15 min (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Amount of ZnO powder not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

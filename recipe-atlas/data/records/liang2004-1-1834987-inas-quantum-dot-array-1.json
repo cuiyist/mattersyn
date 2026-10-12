@@ -1,0 +1,599 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "liang2004-1-1834987-inas-quantum-dot-array-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Jianyu Liang (2004): InAs quantum dot array",
+  "material": {
+    "formula": "InAs",
+    "family": "InAs nanocrystals",
+    "elements": [
+      "In",
+      "As"
+    ],
+    "components": [
+      "InAs"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Molecular-beam epitaxy",
+  "sources": [
+    {
+      "id": "liang2004-1-1834987",
+      "doi": "10.1063/1.1834987",
+      "title": "A growth pathway for highly ordered quantum dot arrays",
+      "authors": "Jianyu Liang, Hailin Luo, Rod Beresford, and Jimmy Xu",
+      "year": 2004,
+      "url": "https://doi.org/10.1063/1.1834987",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "liang2004-1-1834987",
+    "recipe_family": "liang2004-1-1834987-inas-quantum-dot-array-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "InAs",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "liang2004-1-1834987",
+          "locator": "Main PDF p.4"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "zinc blende",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "liang2004-1-1834987",
+          "locator": "Main PDF p.4"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": 55,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "55 nm",
+      "evidence": [
+        {
+          "source_id": "liang2004-1-1834987",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "nanodot",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "liang2004-1-1834987",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "liang2004-1-1834987-inas-quantum-dot-array-1--inas",
+      "name": "InAs",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "liang2004-1-1834987",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "liang2004-1-1834987-inas-quantum-dot-array-1--gaas",
+      "name": "GaAs",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "liang2004-1-1834987",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "liang2004-1-1834987-inas-quantum-dot-array-1--after-s01-clean",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "liang2004-1-1834987-inas-quantum-dot-array-1--gaas"
+      ]
+    },
+    {
+      "id": "liang2004-1-1834987-inas-quantum-dot-array-1--after-s02-deposit",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "liang2004-1-1834987-inas-quantum-dot-array-1--after-s01-clean",
+        "liang2004-1-1834987-inas-quantum-dot-array-1--gaas"
+      ]
+    },
+    {
+      "id": "liang2004-1-1834987-inas-quantum-dot-array-1--after-s03-anneal",
+      "name": "mixture after step 3",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "liang2004-1-1834987-inas-quantum-dot-array-1--after-s02-deposit"
+      ]
+    },
+    {
+      "id": "liang2004-1-1834987-inas-quantum-dot-array-1--after-s04-grow",
+      "name": "mixture after step 4",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "liang2004-1-1834987-inas-quantum-dot-array-1--after-s03-anneal",
+        "liang2004-1-1834987-inas-quantum-dot-array-1--inas"
+      ]
+    },
+    {
+      "id": "liang2004-1-1834987-inas-quantum-dot-array-1--after-s05-anneal",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "liang2004-1-1834987-inas-quantum-dot-array-1--after-s04-grow"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-clean",
+      "action": "clean",
+      "label": "Ultrasonic cleaning in deionized water",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "liang2004-1-1834987-inas-quantum-dot-array-1--gaas"
+      ],
+      "outputs": [
+        "liang2004-1-1834987-inas-quantum-dot-array-1--after-s01-clean"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "As-rich",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "liang2004-1-1834987",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Ultrasonic cleaning in deionized water",
+      "evidence": [
+        {
+          "source_id": "liang2004-1-1834987",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-deposit",
+      "action": "deposit",
+      "label": "Deposit GaAs buffer layer",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-clean"
+      ],
+      "inputs": [
+        "liang2004-1-1834987-inas-quantum-dot-array-1--after-s01-clean",
+        "liang2004-1-1834987-inas-quantum-dot-array-1--gaas"
+      ],
+      "outputs": [
+        "liang2004-1-1834987-inas-quantum-dot-array-1--after-s02-deposit"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 580,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "580 °C",
+          "evidence": [
+            {
+              "source_id": "liang2004-1-1834987",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "10 min",
+          "evidence": [
+            {
+              "source_id": "liang2004-1-1834987",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "As-rich",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "liang2004-1-1834987",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Deposit GaAs buffer layer",
+      "evidence": [
+        {
+          "source_id": "liang2004-1-1834987",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "s03-anneal",
+      "action": "anneal",
+      "label": "Anneal under As overpressure",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-deposit"
+      ],
+      "inputs": [
+        "liang2004-1-1834987-inas-quantum-dot-array-1--after-s02-deposit"
+      ],
+      "outputs": [
+        "liang2004-1-1834987-inas-quantum-dot-array-1--after-s03-anneal"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 580,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "580 °C",
+          "evidence": [
+            {
+              "source_id": "liang2004-1-1834987",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "10 min",
+          "evidence": [
+            {
+              "source_id": "liang2004-1-1834987",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "As-rich",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "liang2004-1-1834987",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Anneal under As overpressure",
+      "evidence": [
+        {
+          "source_id": "liang2004-1-1834987",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "s04-grow",
+      "action": "grow",
+      "label": "Grow InAs QDs",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s03-anneal"
+      ],
+      "inputs": [
+        "liang2004-1-1834987-inas-quantum-dot-array-1--after-s03-anneal",
+        "liang2004-1-1834987-inas-quantum-dot-array-1--inas"
+      ],
+      "outputs": [
+        "liang2004-1-1834987-inas-quantum-dot-array-1--after-s04-grow"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "As-rich",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "liang2004-1-1834987",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Grow InAs QDs",
+      "evidence": [
+        {
+          "source_id": "liang2004-1-1834987",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "s05-anneal",
+      "action": "anneal",
+      "label": "Anneal after InAs growth",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s04-grow"
+      ],
+      "inputs": [
+        "liang2004-1-1834987-inas-quantum-dot-array-1--after-s04-grow"
+      ],
+      "outputs": [
+        "liang2004-1-1834987-inas-quantum-dot-array-1--after-s05-anneal"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "10 min",
+          "evidence": [
+            {
+              "source_id": "liang2004-1-1834987",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "As-rich",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "liang2004-1-1834987",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Anneal after InAs growth",
+      "evidence": [
+        {
+          "source_id": "liang2004-1-1834987",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "liang2004-1-1834987-inas-quantum-dot-array-1--product",
+      "source_sample_label": "InAs quantum dot array",
+      "batch_id": null,
+      "material_state_id": "liang2004-1-1834987-inas-quantum-dot-array-1--after-s05-anneal",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "InAs",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "liang2004-1-1834987",
+            "locator": "Main PDF p.4"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "zinc blende",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "liang2004-1-1834987",
+            "locator": "Main PDF p.4"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "nanodot",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "liang2004-1-1834987",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "liang2004-1-1834987",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "notes": [
+        "Reaction temperature: 490 degC (Main PDF p.3).",
+        "Reaction time: 10 min (Main PDF p.3)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "liang2004-1-1834987-inas-quantum-dot-array-1--size",
+      "sample_id": "liang2004-1-1834987-inas-quantum-dot-array-1--product",
+      "property": "diameter",
+      "technique": "SEM",
+      "value": {
+        "value": 55,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "55 nm",
+        "evidence": [
+          {
+            "source_id": "liang2004-1-1834987",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "liang2004-1-1834987",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Ligand not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Amount of InAs not reported in the extracted text.",
+      "Amount of GaAs not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
