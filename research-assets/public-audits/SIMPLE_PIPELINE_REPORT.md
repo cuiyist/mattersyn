@@ -589,6 +589,52 @@ Recorded source ci run: [38197718624](https://github.com/cuiyist/mattersyn/actio
 | 10.1021/nn100339b | 2 | 7 | [Open](https://cuiyist.github.io/mattersyn-site/records/zarghami2010-nn100339b-6-1-nm-pbse-qds-1.html) |
 | 10.1021/nn5040444 | 1 | 8 | [Open](https://cuiyist.github.io/mattersyn-site/records/zhou2014-nn5040444-cdte-nc-self-assembly-materials-1.html) |
 
+
+### simple-batch11-20261012
+
+Anonymous verification passed at 2026-10-12T05:46:50+00:00: 565 files, zero mismatches. [Source commit](https://github.com/cuiyist/mattersyn/commit/28de5bb49100fbc39efb13568568e57a4f994abd) and [Site commit](https://github.com/cuiyist/mattersyn-site/commit/cac61f2667fe351fc771d7ea0be91a1df0a6f1e8). This batch contains 32 source groups, 43 records and 141 source figure crops; 32 distinct newly contributing primary papers after DOI deduplication. Every new contribution remains machine extracted and not independently audited. The final built site is 1,749,842,236 bytes / 31,894 files.
+
+Live counter: **244 audited + 374 machine extracted = 618 papers**, 3,558 canonical records, 360 direct material families, 415 material/component pages and 1437 displayed recipe–structure pairs (6 more comprehensive; 1431 partial). These display counts do not establish extraction accuracy, measured atomic coordinates or training eligibility.
+
+Recorded source pr: [28](https://github.com/cuiyist/mattersyn/pull/28).
+
+Recorded source ci run: [38204759466](https://github.com/cuiyist/mattersyn/actions/runs/38204759466).
+
+| Primary DOI | Records | Figure crops | Public page |
+| --- | ---: | ---: | --- |
+| 10.1063/1.46441 | 1 | 0 | [Open](https://cuiyist.github.io/mattersyn-site/records/11994-1-46441-cds-nanocrystalline-materials-1.html) |
+| 10.1016/j.electacta.2011.02.071 | 3 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/al2011-j-electacta-2011-02-071-zn2sno4-nanoparticles-1.html) |
+| 10.1021/nn401657n | 1 | 8 | [Open](https://cuiyist.github.io/mattersyn-site/records/al2013-nn401657n-pbse-nanoparticles-capped-with-pb-oleate-1.html) |
+| 10.1021/nn500852g | 2 | 6 | [Open](https://cuiyist.github.io/mattersyn-site/records/al2014-nn500852g-cdse-zns-qds-1.html) |
+| 10.1021/nn502588k | 2 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/al2014-nn502588k-cdse-zns-core-shell-qds-green-emitting-1.html) |
+| 10.1039/d4tc01805b | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/cao2024-d4tc01805b-sno2-qds-pbs-i-qds-pbs-edt-qds-1.html) |
+| 10.1021/jz401780w | 1 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/cate2013-jz401780w-pbse-edt-qd-solid-1.html) |
+| 10.1021/cm803248j | 1 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/cm803248j-p3ht-cdse-nanocomposite-1.html) |
+| 10.1021/jp302992k | 1 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/dutta2012-jp302992k-graphene-quantum-dots-gqds-1.html) |
+| 10.1038/nature10569 | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/galland12011-nature10569-cdse-cds-nanocrystals-1.html) |
+| 10.1021/jp9823603 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/gao1998-jp9823603-cdte-nanocrystals-fraction-i-1.html) |
+| 10.1021/ac202910y | 1 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/han2012-ac202910y-zns-nccs-44-nm-1.html) |
+| 10.1021/ja903445f | 4 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/joo2009-ja903445f-pbse-nqds-radius-1-2-nm-1.html) |
+| 10.1021/jp411214n | 1 | 6 | [Open](https://cuiyist.github.io/mattersyn-site/records/lee2014-jp411214n-cdse-tps-1.html) |
+| 10.1063/1.3100196 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/li2009-1-3100196-cds-quantum-rods-qrs-1.html) |
+| 10.1186/s11671-016-1606-3 | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/liu2016-s11671-016-1606-3-cdse-zns-qds-1.html) |
+| 10.1063/1.110838 | 3 | 2 | [Open](https://cuiyist.github.io/mattersyn-site/records/mukherjee1994-1-110838-pbs-polyacrylamide-composite-specimen-no-1.html) |
+| 10.1007/s00604-007-0770-7 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/munro2008-s00604-007-0770-7-cdse-cdzns-zns-core-shell-shell-quantum-1.html) |
+| 10.1038/s41467-019-14014-3 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/nurmikko2020-s41467-019-14014-3-cg-qds-cdse-cdxzn1xse-znse0-5s0-5-zns-1.html) |
+| 10.1021/ph400011z | 1 | 6 | [Open](https://cuiyist.github.io/mattersyn-site/records/parand2014-ph400011z-graphene-pbs-composite-counter-electrode-1.html) |
+| 10.1021/ja0027766 | 1 | 2 | [Open](https://cuiyist.github.io/mattersyn-site/records/peng2001-ja0027766-cdse-quantum-rods-1.html) |
+| 10.1021/jp409937z | 1 | 9 | [Open](https://cuiyist.github.io/mattersyn-site/records/rath2013-jp409937z-mn-doped-zns-nanocrystals-with-a-shell-l-1.html) |
+| 10.1063/1.2993178 | 3 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/sritirawisarn2008-1-2993178-2-6-ml-inas-qd-arrays-with-0-6-ml-gaas-i-1.html) |
+| 10.1007/s11671-007-9040-1 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/strom2007-s11671-007-9040-1-inas-quantum-dots-on-gaas-ring-like-nano-1.html) |
+| 10.1038/srep10626 | 1 | 6 | [Open](https://cuiyist.github.io/mattersyn-site/records/sun2015-srep10626-pbs-quantum-dots-1.html) |
+| 10.1021/jp505812q | 1 | 7 | [Open](https://cuiyist.github.io/mattersyn-site/records/tournebize2014-jp505812q-eht-capped-cuins2-ncs-1.html) |
+| 10.1111/j.1551-2916.2004.00084.x | 1 | 1 | [Open](https://cuiyist.github.io/mattersyn-site/records/wang2004-j-1551-2916-2004-00084-x-zno-nanocrystalline-coatings-1.html) |
+| 10.1021/jp112010m | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/x2011-jp112010m-pbs-counter-electrode-pbs-ce-1.html) |
+| 10.1007/s11426-010-3098-9 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/xianxiang12010-s11426-010-3098-9-guvs-cdte-1.html) |
+| 10.1021/la904488w | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/yu2010-la904488w-lac-qds-1.html) |
+| 10.1021/am404811j | 1 | 6 | [Open](https://cuiyist.github.io/mattersyn-site/records/yu2014-am404811j-cdte-cds-coreshell-qds-capped-with-3-mer-1.html) |
+| 10.1021/jp303766d | 1 | 8 | [Open](https://cuiyist.github.io/mattersyn-site/records/zillner2012-jp303766d-cdse-qds-4-5-nm-with-pyridine-surfactant-3.html) |
+
 ## Latest continuation checkpoint
 
 At 2026-10-11T06:09:34+00:00, Batch01 is live and anonymously verified; Batch02 remains in local processing with 47/49 two-pass-complete papers at its last saved checkpoint. These are processing counts, not additional published papers. The audited lane stays paused.
@@ -1071,3 +1117,10 @@ Preserved operational failures: initial Source-preparation WinError5; subsequent
 Batch11 is locally prepared only:32 papers /43 records /141 retained figures;112 accepted,22 recovered and7 manual captions bound in322 Reader contexts. The one-reader rare pass deleted29 scientific objects,7 coupled units and2 wrong page locators,38 paths total,0 additions. Exact bibliography metadata correction affects19 retained papers/23 records/26 dependency files. All3,515 previous canonical records remain unchanged. No nonempty Reader sync follows metadata application. Fresh asset/dependency checks and the normal cohesive Source/CI/browser/Site release remain pending; zero publication credit until anonymous verification.
 
 Choice: continue the ready batch and retain the existing guarded cleanup hold, because unknown process ancestry remains unresolved and the only unreferenced code ZIPs total268KB. No local data deletion was attempted. The audited lane, historical tests/denominator and four owner questions remain paused and unchanged. No uninterrupted work or achieved throughput is claimed.
+
+
+Root delivery checkpoint, 2026-10-12T05:59:27.638583+00:00. Batch11 normal release and both published Peng2001 desktop/phone caption checks passed as recorded above. Batch12 current preparation:30 papers,36 records,140 captions (126 accepted/10 recovered/4 manual),312 Reader instances; no live credit. All prior canonical rows protected. Strict citation plan applied to11 retained papers/15 records with18 mechanical dependency files. Initial Root caption pin check had a transcription omission; the completed input was unchanged and its original full hash matched before any binding. Failed attempt preserved privately. No script, scientific check or release gate changed.
+
+Storage: completed owned regenerable-copy cleanup removed6,269,699,643 logical bytes from22 B10 targets and3,305,639,942 logical bytes from8 B11Q targets. Only verified Root-owned preview processes were stopped. Papers, training payloads, unique evidence, normal release payloads and all receipts remain. B11 cleanup measured26.253GiB free afterward, not continuous/current availability. Batch11 built site:1,749,842,236 bytes /31,894 files; deployment succeeded, so the size-failure trigger for mattersyn2 did not fire.
+
+Batch14 final collector exited0; original controller OS exit was not observed. Batch15 controller51360 was observed in phaseextract with21 two-pass papers at2026-10-12T05:58:36.051084+00:00; this is an observation, not a promise of uninterrupted activity. Batch16 has50 copied local QD PDFs,41 supported identities and9 technical holds; it is unlaunched. Remaining metadata candidate counts731QD /311metal are not publishable-paper counts. No new paper download, held-out test, machine calibration, audit-lane resume or changed training admission occurred.
