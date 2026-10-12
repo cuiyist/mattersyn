@@ -65,7 +65,7 @@ class GeneratedNewlines(unittest.TestCase):
             with patch.object(build_reader_metadata, 'ROOT', root), patch.object(build_reader_metadata, 'display_view', return_value=transformed):
                 build_reader_metadata.main()
             self.assertEqual(source.read_bytes(), raw)
-            expected = (json.dumps(transformed, ensure_ascii=False, indent=2) + '\n').encode('utf-8')
+            expected = (json.dumps(transformed, ensure_ascii=False, separators=(',', ':')) + '\n').encode('utf-8')
             self.assertEqual((root / 'dist/data/reader-presentation.json').read_bytes(), expected)
 
 

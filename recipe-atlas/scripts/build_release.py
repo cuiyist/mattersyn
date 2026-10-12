@@ -16,6 +16,21 @@ def execute(command,cwd):
     run={'command':command,'stdout':result.stdout,'stderr':result.stderr,'returncode':result.returncode,'elapsed_seconds':round(time.perf_counter()-started,6)}
     if result.returncode:raise BuildCommandError(run)
     return run
+TEST_MODULE_INPUTS=('tools/simple-pipeline/to_site.py','tools/simple-pipeline/local_caption_backfill.py')
+def copy_test_dependencies(source_root,work,snapshot):
+    """Carry only the two exact snapshot-bound authored test dependencies."""
+    selected=[]
+    for relative in TEST_MODULE_INPUTS:
+        rows=[row for row in snapshot['input_files'] if row['path']==relative]
+        if len(rows)!=1:raise ValueError('Missing or duplicate test dependency snapshot row: '+relative)
+        source=(source_root/relative).resolve()
+        if not source.is_relative_to(source_root.resolve()) or not source.is_file() or sha(source)!=rows[0]['sha256']:raise ValueError('Test dependency input hash mismatch: '+relative)
+        selected.append((relative,source,rows[0]['sha256']))
+    for relative,source,digest in selected:
+        target=work.parent/relative
+        target.parent.mkdir(parents=True,exist_ok=True)
+        shutil.copyfile(source,target)
+        if sha(target)!=digest:raise ValueError('Copied test dependency hash mismatch: '+relative)
 def main():
     p=argparse.ArgumentParser();p.add_argument('--output',type=Path,required=True);p.add_argument('--snapshot',type=Path,required=True);p.add_argument('--gate',type=Path);p.add_argument('--allowlist',type=Path);p.add_argument('--policy',type=Path);p.add_argument('--registry',type=Path,required=True);p.add_argument('--display-overrides',type=Path);p.add_argument('--artifact-transform',type=Path);p.add_argument('--candidate',action='store_true',help='Build a review artifact only; never approve or emit release-manifest.json');a=p.parse_args()
     if not a.candidate and not all([a.gate,a.allowlist,a.policy]):raise SystemExit('Final release requires --gate, --allowlist and --policy; use --candidate for unapproved review output')
@@ -33,6 +48,7 @@ def main():
     # Source/static inputs reached this tree only through the cleared migration.
     for name in ['scripts','templates','data','static','tests']:
         if (ROOT/name).exists():shutil.copytree(ROOT/name,work/name)
+    copy_test_dependencies(ROOT.parent,work,snapshot)
     if(ROOT.parent/'README.md').is_file():shutil.copyfile(ROOT.parent/'README.md',work.parent/'README.md')
     shutil.copytree(work/'static',work/'dist');runs=[]
     if a.display_overrides:

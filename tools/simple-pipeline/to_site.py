@@ -35,7 +35,9 @@ def public_figure_caption(figure):
 def dump_like(path, data):
     """Write JSON in the style the file already has (line endings, final newline), so only real changes show up."""
     raw = Path(path).read_bytes() if Path(path).is_file() else b'\n'
-    text = json.dumps(data, ensure_ascii=False, indent=2) + ('\n' if raw.endswith(b'\n') else '')
+    # Compact only the large Reader sidecar; canonical/generic JSON stays unchanged.
+    options = {'separators': (',', ':')} if Path(path).name == 'reader-presentation-reviewed.json' else {'indent': 2}
+    text = json.dumps(data, ensure_ascii=False, **options) + ('\n' if raw.endswith(b'\n') else '')
     Path(path).write_bytes(text.replace('\n', '\r\n').encode('utf-8') if b'\r\n' in raw else text.encode('utf-8'))
 
 
@@ -336,6 +338,7 @@ def cmd_sync(a):
     repo = Path(a.repo); atlas = repo / 'recipe-atlas'; pairs_dir = Path(a.pairs)
     side_path = atlas / 'data/reader-presentation-reviewed.json'; side = json.loads(side_path.read_text(encoding='utf-8-sig'))
     new_assets = []
+    side_changed = False
     inventory = json.loads((atlas / 'data/inventory-evidence.json').read_text(encoding='utf-8'))
     for f in sorted(pairs_dir.glob('*.pairs.json')):
         doc = json.loads(f.read_text(encoding='utf-8'))
@@ -359,6 +362,7 @@ def cmd_sync(a):
             accepted.append(existing)
         records = accepted
         if not records: continue
+        side_changed = True
         figures = []
         for fig in doc.get('figures') or []:
             src = pairs_dir / 'figures' / fig['file']
@@ -413,10 +417,13 @@ def cmd_sync(a):
     if a.dist:  # material pages must list exactly the routes the site build puts on them
         hubs = {p.stem: json.loads(p.read_text(encoding='utf-8')) for p in (Path(a.dist) / 'data/materials').glob('*.json')}
         for hid, hub in hubs.items():
+            is_new = hid not in side['materials']
             view = side['materials'].setdefault(hid, {'id': hid, 'formula': hub['formula'], 'record_ids': [], 'component_only': hub.get('component_only', False),
                                                       'scopeLabel': 'Source-specific methods and samples are kept separate.', 'figure_count': 0, 'property_figure_count': 0})
+            if is_new or view['record_ids'] != hub['record_ids']: side_changed = True
             view['record_ids'] = hub['record_ids']
-        for hid in [h for h in side['materials'] if h not in hubs]: del side['materials'][hid]
+        for hid in [h for h in side['materials'] if h not in hubs]:
+            del side['materials'][hid]; side_changed = True
         # the record baseline lists every record with its checksum; add the new rows exactly as the build computed them
         built = json.loads((Path(a.dist) / 'data/dataset-manifest.json').read_text(encoding='utf-8'))
         base_path = atlas / 'data/release-baseline-manifest.json'; base = json.loads(base_path.read_text(encoding='utf-8'))
@@ -436,7 +443,7 @@ def cmd_sync(a):
             for key in ('record_count', 'group_count', 'families'): base[key] = built[key]
             dump_like(base_path, base)
             print(f'baseline: {len(added)} new record rows, {len(stale)} refreshed')
-    dump_like(side_path, side)
+    if side_changed: dump_like(side_path, side)
     print(f'reader entries: {sum(1 for v in side["records"].values() if v.get("presentation_status") == "pending" and "extracted" in v.get("scopeLabel", ""))} extracted records; {len(new_assets)} asset files written')
 
 
