@@ -1,0 +1,314 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "yusuf2007-la7002904-qdcm-2",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Yusuf (2007): QDCM",
+  "material": {
+    "formula": "CdS",
+    "family": "CdS nanocrystals",
+    "elements": [
+      "Cd",
+      "S"
+    ],
+    "components": [
+      "CdS"
+    ],
+    "architecture": "composite"
+  },
+  "method": "Synthesis as described in the source",
+  "sources": [
+    {
+      "id": "yusuf2007-la7002904",
+      "doi": "10.1021/la7002904",
+      "title": "A Hierarchical Self-Assembly Route to Three-Dimensional Polymer−Quantum Dot Photonic Arrays",
+      "authors": "Huda Yusuf; Whan-Gi Kim; Dong Hoon Lee; Marie Aloshyna; Alexandre G. Brolo; Matthew G. Moffitt",
+      "year": 2007,
+      "url": "https://doi.org/10.1021/la7002904",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "yusuf2007-la7002904",
+    "recipe_family": "yusuf2007-la7002904-qdcm-2",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdS",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "yusuf2007-la7002904",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": 110,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "110 nm",
+      "evidence": [
+        {
+          "source_id": "yusuf2007-la7002904",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "sphere",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "yusuf2007-la7002904",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "yusuf2007-la7002904-qdcm-2--polystyrene-b-poly-acrylic-acid-ps-665-b",
+      "name": "polystyrene-b-poly(acrylic acid) (PS(665)-b-PAA(68))",
+      "formula": null,
+      "role": "ligand",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "yusuf2007-la7002904",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "yusuf2007-la7002904-qdcm-2--after-s01-dissolve",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "yusuf2007-la7002904-qdcm-2--polystyrene-b-poly-acrylic-acid-ps-665-b"
+      ]
+    },
+    {
+      "id": "yusuf2007-la7002904-qdcm-2--after-s02-add",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "yusuf2007-la7002904-qdcm-2--after-s01-dissolve"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-dissolve",
+      "action": "dissolve",
+      "label": "Dissolve BC-QDs and PS(665)-b-PAA(68) in DMF",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "yusuf2007-la7002904-qdcm-2--polystyrene-b-poly-acrylic-acid-ps-665-b"
+      ],
+      "outputs": [
+        "yusuf2007-la7002904-qdcm-2--after-s01-dissolve"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Dissolve BC-QDs and PS(665)-b-PAA(68) in DMF",
+      "evidence": [
+        {
+          "source_id": "yusuf2007-la7002904",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-add",
+      "action": "add",
+      "label": "Dropwise water addition",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-dissolve"
+      ],
+      "inputs": [
+        "yusuf2007-la7002904-qdcm-2--after-s01-dissolve"
+      ],
+      "outputs": [
+        "yusuf2007-la7002904-qdcm-2--after-s02-add"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Dropwise water addition",
+      "evidence": [
+        {
+          "source_id": "yusuf2007-la7002904",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "yusuf2007-la7002904-qdcm-2--product",
+      "source_sample_label": "QDCM",
+      "batch_id": null,
+      "material_state_id": "yusuf2007-la7002904-qdcm-2--after-s02-add",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdS",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yusuf2007-la7002904",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": "sphere",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yusuf2007-la7002904",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": "PS(665)-b-PAA(68)",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yusuf2007-la7002904",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "yusuf2007-la7002904",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [
+    {
+      "id": "yusuf2007-la7002904-qdcm-2--size",
+      "sample_id": "yusuf2007-la7002904-qdcm-2--product",
+      "property": "diameter",
+      "technique": "TEM",
+      "value": {
+        "value": 110,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "110 nm",
+        "evidence": [
+          {
+            "source_id": "yusuf2007-la7002904",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "yusuf2007-la7002904",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of polystyrene-b-poly(acrylic acid) (PS(665)-b-PAA(68)) not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

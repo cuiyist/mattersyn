@@ -1,6 +1,6 @@
 # Published machine-extracted papers
 
-374 distinct primary papers, covering 573 records. These are live ordinary-page contributions with data status `source_extracted`; they are not independently audited, accuracy is unmeasured, and they are excluded from training-ready exports.
+404 distinct primary papers, covering 609 records. These are live ordinary-page contributions with data status `source_extracted`; they are not independently audited, accuracy is unmeasured, and they are excluded from training-ready exports.
 
 `rare_read=yes` means at least one assigned rare-product pair received the owner's limited single-reader, deletion-only reading. It does not mean a full paper review, independent audit or measured accuracy. `rare_read=no` means no such reading was recorded; common products were not reviewed. Dates are actual anonymous verification times. Corrections and engineering add no extra paper credit.
 
@@ -8,25 +8,31 @@
 | --- | --- | --- | --- | --- |
 | [10.1002/adfm.200600955](<https://doi.org/10.1002/adfm.200600955>) | `jasieniak2007-adfm-200600955-cdsezns-qd-doped-tio2-waveguide-1`, `jasieniak2007-adfm-200600955-cdsezns-qd-doped-zro2-waveguide-2` | batch01 | 2026-10-11T06:06:36+00:00 | yes |
 | [10.1002/adfm.200900852](<https://doi.org/10.1002/adfm.200900852>) | `heinemann2009-adfm-200900852-cdse-nanocrystals-1` | batch06 | 2026-10-11T21:29:20+00:00 | no |
+| [10.1002/adfm.201000711](<https://doi.org/10.1002/adfm.201000711>) | `hu2010-adfm-201000711-qdmm-sio2-1` | batch12 | 2026-10-12T08:53:49+00:00 | yes |
 | [10.1002/adma.200501523](<https://doi.org/10.1002/adma.200501523>) | `torre2006-adma-200501523-cdtecnt-composites-1`, `torre2006-adma-200501523-cdtecnt-sio2-composites-2` | batch01 | 2026-10-11T06:06:36+00:00 | no |
 | [10.1002/crat.200410534](<https://doi.org/10.1002/crat.200410534>) | `provided2006-crat-200410534-cds-nanocrystallites-sample-s1-1`, `provided2006-crat-200410534-cds-nanocrystallites-sample-s2-2` | batch05 | 2026-10-11T15:42:48+00:00 | no |
 | [10.1002/pola.23816](<https://doi.org/10.1002/pola.23816>) | `shao2010-pola-23816-cds-quantum-dot-polymer-microspheres-1` | batch05 | 2026-10-11T15:42:48+00:00 | no |
 | [10.1002/pssa.200622106](<https://doi.org/10.1002/pssa.200622106>) | `al2006-pssa-200622106-sample-a-1`, `al2006-pssa-200622106-sample-b-2`, `al2006-pssa-200622106-sample-c-3`, `al2006-pssa-200622106-sample-d-4` | batch08 | 2026-10-12T00:31:26+00:00 | yes |
 | [10.1002/pssc.200671556](<https://doi.org/10.1002/pssc.200671556>) | `passow2006-pssc-200671556-inas-gaas-quantum-dots-qds-with-high-den-1`, `passow2006-pssc-200671556-inas-gaas-quantum-dots-qds-with-lower-de-2` | batch10 | 2026-10-12T03:55:31+00:00 | no |
+| [10.1002/smll.200600218](<https://doi.org/10.1002/smll.200600218>) | `chang2006-smll-200600218-cdse-cds-core-shell-qds-with-6000-mw-peg-3`, `chang2006-smll-200600218-cdse-cds-core-shell-qds-with-750-mw-peg-2`, `chang2006-smll-200600218-cdse-cds-core-shell-qds-with-no-peg-coat-1` | batch12 | 2026-10-12T08:53:49+00:00 | no |
 | [10.1002/smll.200600298](<https://doi.org/10.1002/smll.200600298>) | `xie2006-smll-200600298-znte-cds-tetrapod-2`, `xie2006-smll-200600298-znte-cdse-tetrapod-1` | batch01 | 2026-10-11T06:06:36+00:00 | yes |
 | [10.1006/jcis.2000.6894](<https://doi.org/10.1006/jcis.2000.6894>) | `kho2000-jcis-2000-6894-zns-ncs-old-1-1` | batch01 | 2026-10-11T06:06:36+00:00 | no |
 | [10.1007/s00339-010-6005-5](<https://doi.org/10.1007/s00339-010-6005-5>) | `chakrabarti2011-s00339-010-6005-5-bilayer-inas-gaas-quantum-dot-structure-1`, `chakrabarti2011-s00339-010-6005-5-single-layer-inas-gaas-quantum-dot-struc-2` | batch06 | 2026-10-11T21:29:20+00:00 | yes |
 | [10.1007/s00396-009-2037-9](<https://doi.org/10.1007/s00396-009-2037-9>) | `chen2009-s00396-009-2037-9-cds-pmma-hybrids-1`, `chen2009-s00396-009-2037-9-cds-pmps-co-pmma-hybrids-2` | batch01 | 2026-10-11T06:06:36+00:00 | yes |
 | [10.1007/s00604-007-0770-7](<https://doi.org/10.1007/s00604-007-0770-7>) | `munro2008-s00604-007-0770-7-cdse-cdzns-zns-core-shell-shell-quantum-1` | batch11 | 2026-10-12T05:46:50+00:00 | yes |
 | [10.1007/s10853-006-7461-3](<https://doi.org/10.1007/s10853-006-7461-3>) | `murugan2006-s10853-006-7461-3-zns-nanoparticles-1` | batch01 | 2026-10-11T06:06:36+00:00 | no |
+| [10.1007/s10853-008-3138-4](<https://doi.org/10.1007/s10853-008-3138-4>) | `wang2009-s10853-008-3138-4-mps-capped-cdse-zns-core-shell-qds-1` | batch12 | 2026-10-12T08:53:49+00:00 | yes |
 | [10.1007/s10854-007-9340-3](<https://doi.org/10.1007/s10854-007-9340-3>) | `ren2008-s10854-007-9340-3-zns-mn-nanoparticles-1` | batch08 | 2026-10-12T00:31:26+00:00 | yes |
 | [10.1007/s10971-006-9120-1](<https://doi.org/10.1007/s10971-006-9120-1>) | `leventis2006-s10971-006-9120-1-cds-quantum-dots-1` | batch01 | 2026-10-11T06:06:36+00:00 | no |
 | [10.1007/s11426-010-3098-9](<https://doi.org/10.1007/s11426-010-3098-9>) | `xianxiang12010-s11426-010-3098-9-guvs-cdte-1` | batch11 | 2026-10-12T05:46:50+00:00 | no |
 | [10.1007/s11458-006-0053-6](<https://doi.org/10.1007/s11458-006-0053-6>) | `hongye2006-s11458-006-0053-6-cdse-quantum-dots-1`, `hongye2006-s11458-006-0053-6-polymer-beads-qds-composites-3` | batch06 | 2026-10-11T21:29:20+00:00 | yes |
 | [10.1007/s11671-007-9040-1](<https://doi.org/10.1007/s11671-007-9040-1>) | `strom2007-s11671-007-9040-1-inas-quantum-dots-on-gaas-ring-like-nano-1` | batch11 | 2026-10-12T05:46:50+00:00 | no |
+| [10.1007/s11671-010-9632-z](<https://doi.org/10.1007/s11671-010-9632-z>) | `x2010-s11671-010-9632-z-si-ncs-1` | batch12 | 2026-10-12T08:53:49+00:00 | no |
 | [10.1016/j.cap.2019.05.016](<https://doi.org/10.1016/j.cap.2019.05.016>) | `noha2019-j-cap-2019-05-016-red-emitting-cdse-cds-cdzns-qds-2` | batch07 | 2026-10-11T22:58:07+00:00 | yes |
 | [10.1016/j.cap.2021.07.001](<https://doi.org/10.1016/j.cap.2021.07.001>) | `a2021-j-cap-2021-07-001-cdse-zns-qds-1` | batch05 | 2026-10-11T15:42:48+00:00 | no |
+| [10.1016/j.cej.2024.158969](<https://doi.org/10.1016/j.cej.2024.158969>) | `shen2025-j-cej-2024-158969-pbs-qds-1` | batch12 | 2026-10-12T08:53:49+00:00 | no |
 | [10.1016/j.electacta.2011.02.071](<https://doi.org/10.1016/j.electacta.2011.02.071>) | `al2011-j-electacta-2011-02-071-cds-qd-sensitized-zn2sno4-electrode-3`, `al2011-j-electacta-2011-02-071-zn2sno4-nanoparticles-1`, `al2011-j-electacta-2011-02-071-zn2sno4-paste-2` | batch11 | 2026-10-12T05:46:50+00:00 | yes |
+| [10.1016/j.jpowsour.2014.12.022](<https://doi.org/10.1016/j.jpowsour.2014.12.022>) | `shen2015-j-jpowsour-2014-12-022-cdte-cds-qds-1` | batch12 | 2026-10-12T08:53:49+00:00 | yes |
 | [10.1016/j.jpowsour.2016.11.069](<https://doi.org/10.1016/j.jpowsour.2016.11.069>) | `sisman2017-j-jpowsour-2016-11-069-zno-bnrs-cds1-xsex-1` | batch05 | 2026-10-11T15:42:48+00:00 | yes |
 | [10.1016/j.materresbull.2019.110588](<https://doi.org/10.1016/j.materresbull.2019.110588>) | `hassan2019-j-materresbull-2019-110588-tio2-cds-nc-3`, `hassan2019-j-materresbull-2019-110588-tio2-pbs-nc-1`, `hassan2019-j-materresbull-2019-110588-zno-cds-nc-4`, `hassan2019-j-materresbull-2019-110588-zno-pbs-nc-2` | batch08 | 2026-10-12T00:31:26+00:00 | yes |
 | [10.1016/j.orgel.2016.03.023](<https://doi.org/10.1016/j.orgel.2016.03.023>) | `ankah2016-j-orgel-2016-03-023-pbs-qds-1` | batch07 | 2026-10-11T22:58:07+00:00 | no |
@@ -35,6 +41,8 @@
 | [10.1016/j.solener.2019.02.019](<https://doi.org/10.1016/j.solener.2019.02.019>) | `khodam2019-j-solener-2019-02-019-znti-ldh-cds-1` | batch05 | 2026-10-11T15:42:48+00:00 | yes |
 | [10.1021/ac201016c](<https://doi.org/10.1021/ac201016c>) | `text2011-ac201016c-mn2-doped-zns-cys-mn-zns-cys-qds-1` | batch08 | 2026-10-12T00:31:26+00:00 | no |
 | [10.1021/ac202910y](<https://doi.org/10.1021/ac202910y>) | `han2012-ac202910y-zns-nccs-44-nm-1` | batch11 | 2026-10-12T05:46:50+00:00 | no |
+| [10.1021/ac501020b](<https://doi.org/10.1021/ac501020b>) | `wang2014-ac501020b-apba-qds-2`, `wang2014-ac501020b-paa-qds-1` | batch12 | 2026-10-12T08:53:49+00:00 | yes |
+| [10.1021/ac503134r](<https://doi.org/10.1021/ac503134r>) | `text2014-ac503134r-zns-mn-ncs-1` | batch12 | 2026-10-12T08:53:49+00:00 | no |
 | [10.1021/acs.bioconjchem.8b00100](<https://doi.org/10.1021/acs.bioconjchem.8b00100>) | `popow-stellmaszyk2018-acs-bioconjchem-8b00100-znonh2-qds-1` | batch05 | 2026-10-11T15:42:48+00:00 | no |
 | [10.1021/acs.bioconjchem.9b00279](<https://doi.org/10.1021/acs.bioconjchem.9b00279>) | `roy2019-acs-bioconjchem-9b00279-functionalized-silicon-quantum-dots-fsqd-2`, `roy2019-acs-bioconjchem-9b00279-silicon-quantum-dots-sqds-1` | batch07 | 2026-10-11T22:58:07+00:00 | yes |
 | [10.1021/acs.chemmater.0c04569](<https://doi.org/10.1021/acs.chemmater.0c04569>) | `brown2021-acs-chemmater-0c04569-cspbbr3-nanocrystals-ncs-1` | batch05 | 2026-10-11T15:42:48+00:00 | no |
@@ -72,6 +80,7 @@
 | [10.1021/am5012782](<https://doi.org/10.1021/am5012782>) | `li2014-am5012782-cdse-cds-cdxzn1xs-zns-qd-nanobeads-1` | batch10 | 2026-10-12T03:55:31+00:00 | yes |
 | [10.1021/am5033567](<https://doi.org/10.1021/am5033567>) | `tian2014-am5033567-cdse-zns-coreshell-qds-1` | batch08 | 2026-10-12T00:31:26+00:00 | no |
 | [10.1021/am504536a](<https://doi.org/10.1021/am504536a>) | `huang2014-am504536a-oa-cdse-qds-1` | batch10 | 2026-10-12T03:55:31+00:00 | no |
+| [10.1021/am505130a](<https://doi.org/10.1021/am505130a>) | `zhou2014-am505130a-cdse-qds-modified-with-1-4-benzenedithio-1` | batch12 | 2026-10-12T08:53:49+00:00 | no |
 | [10.1021/am505371g](<https://doi.org/10.1021/am505371g>) | `zhang2014-am505371g-cdse-cds-au-qd-au-coresatellite-hncs-ass-1` | batch08 | 2026-10-12T00:31:26+00:00 | yes |
 | [10.1021/am900917n](<https://doi.org/10.1021/am900917n>) | `hwang2010-am900917n-cds-sensitized-tio2-electrode-1` | batch08 | 2026-10-12T00:31:26+00:00 | no |
 | [10.1021/bc400157z](<https://doi.org/10.1021/bc400157z>) | `bestel2013-bc400157z-cdse-zns-quantum-dots-qds-encapsulated-i-1` | batch10 | 2026-10-12T03:55:31+00:00 | no |
@@ -107,6 +116,7 @@
 | [10.1021/cm903648c](<https://doi.org/10.1021/cm903648c>) | `li2010-cm903648c-155-nm-pbs-cncs-1`, `li2010-cm903648c-180-nm-pbs-cncs-2`, `li2010-cm903648c-240-nm-pbs-cncs-3` | batch02 | 2026-10-11T08:39:37+00:00 | no |
 | [10.1021/cm990371i](<https://doi.org/10.1021/cm990371i>) | `huang1999-cm990371i-cds-dendrimer-nanocomposite-2`, `huang1999-cm990371i-cds-pei-nanocomposite-1` | batch07 | 2026-10-11T22:58:07+00:00 | no |
 | [10.1021/ic201333y](<https://doi.org/10.1021/ic201333y>) | `yao2011-ic201333y-topo-capped-cdte-aerogel-1` | batch07 | 2026-10-11T22:58:07+00:00 | no |
+| [10.1021/ic401587r](<https://doi.org/10.1021/ic401587r>) | `l2014-ic401587r-znse-zns-qds-1` | batch12 | 2026-10-12T08:53:49+00:00 | yes |
 | [10.1021/ie402911w](<https://doi.org/10.1021/ie402911w>) | `antony2014-ie402911w-pss2cds-composite-1`, `antony2014-ie402911w-pss3cds-composite-2` | batch07 | 2026-10-11T22:58:07+00:00 | yes |
 | [10.1021/ie501035s](<https://doi.org/10.1021/ie501035s>) | `liu2014-ie501035s-fluorescent-spherical-polyelectrolyte-br-1` | batch09 | 2026-10-12T02:14:36+00:00 | no |
 | [10.1021/ja0027766](<https://doi.org/10.1021/ja0027766>) | `peng2001-ja0027766-cdse-quantum-rods-1` | batch11 | 2026-10-12T05:46:50+00:00 | no |
@@ -181,8 +191,10 @@
 | [10.1021/jp112010m](<https://doi.org/10.1021/jp112010m>) | `x2011-jp112010m-pbs-counter-electrode-pbs-ce-1` | batch11 | 2026-10-12T05:46:50+00:00 | no |
 | [10.1021/jp2023346](<https://doi.org/10.1021/jp2023346>) | `blumling2011-jp2023346-cdse-quantum-dots-1` | batch07 | 2026-10-11T22:58:07+00:00 | no |
 | [10.1021/jp2040604](<https://doi.org/10.1021/jp2040604>) | `radychev2011-jp2040604-butylamine-capped-cdse-quantum-dots-1` | batch06 | 2026-10-11T21:29:20+00:00 | no |
+| [10.1021/jp205419z](<https://doi.org/10.1021/jp205419z>) | `pang2011-jp205419z-mpa-qds-4-atp-gce-1` | batch12 | 2026-10-12T08:53:49+00:00 | no |
 | [10.1021/jp205844r](<https://doi.org/10.1021/jp205844r>) | `lee2011-jp205844r-cdse-cds-zno-nw-1` | batch09 | 2026-10-12T02:14:36+00:00 | yes |
 | [10.1021/jp206120p](<https://doi.org/10.1021/jp206120p>) | `x2011-jp206120p-cdse-cds-cdzns-zns-qds-1` | batch07 | 2026-10-11T22:58:07+00:00 | yes |
+| [10.1021/jp206443p](<https://doi.org/10.1021/jp206443p>) | `zhao2011-jp206443p-qd-encoded-sio2-nps-1` | batch12 | 2026-10-12T08:53:49+00:00 | no |
 | [10.1021/jp208879f](<https://doi.org/10.1021/jp208879f>) | `text2012-jp208879f-t-nt-cdse-taa-n2-1` | batch03 | 2026-10-11T10:06:46+00:00 | yes |
 | [10.1021/jp209832h](<https://doi.org/10.1021/jp209832h>) | `text2012-jp209832h-cdte-qds-1` | batch09 | 2026-10-12T02:14:36+00:00 | no |
 | [10.1021/jp210062x](<https://doi.org/10.1021/jp210062x>) | `wang2012-jp210062x-cdse-zns-qds-1` | batch09 | 2026-10-12T02:14:36+00:00 | no |
@@ -217,8 +229,10 @@
 | [10.1021/jp803845n](<https://doi.org/10.1021/jp803845n>) | `ouyang2008-jp803845n-family-395-cdse-msns-3`, `ouyang2008-jp803845n-family-463-cdse-msns-2`, `ouyang2008-jp803845n-family-513-cdse-msns-1` | batch09 | 2026-10-12T02:14:36+00:00 | no |
 | [10.1021/jp807591d](<https://doi.org/10.1021/jp807591d>) | `cui2008-jp807591d-topo-capped-cdte-qd-1` | batch09 | 2026-10-12T02:14:36+00:00 | no |
 | [10.1021/jp808091d](<https://doi.org/10.1021/jp808091d>) | `guijarro2009-jp808091d-cdse-qds-direct-adsorption-1`, `guijarro2009-jp808091d-cdse-qds-mpa-mediated-adsorption-2` | batch03 | 2026-10-11T10:06:46+00:00 | no |
+| [10.1021/jp8099169](<https://doi.org/10.1021/jp8099169>) | `halpert2009-jp8099169-qd550-ttbc-1` | batch12 | 2026-10-12T08:53:49+00:00 | no |
 | [10.1021/jp900252e](<https://doi.org/10.1021/jp900252e>) | `ouyang2009-jp900252e-cds-qds-myristic-acid-240-c-120-min-1` | batch03 | 2026-10-11T10:06:46+00:00 | no |
 | [10.1021/jp900564r](<https://doi.org/10.1021/jp900564r>) | `spoerke2009-jp900564r-cds-coated-zno-nanorods-1` | batch03 | 2026-10-11T10:06:46+00:00 | no |
+| [10.1021/jp9019574](<https://doi.org/10.1021/jp9019574>) | `banerjee2009-jp9019574-cds-mn-zns-qdots-1`, `banerjee2009-jp9019574-qdl-dopamine-conjugated-qdots-2` | batch12 | 2026-10-12T08:53:49+00:00 | yes |
 | [10.1021/jp903199y](<https://doi.org/10.1021/jp903199y>) | `yu2009-jp903199y-oa-capped-cds-ncs-1` | batch03 | 2026-10-11T10:06:46+00:00 | no |
 | [10.1021/jp9044429](<https://doi.org/10.1021/jp9044429>) | `keeble2009-jp9044429-cds-meh-ppv-1`, `keeble2009-jp9044429-pbs-meh-ppv-2` | batch07 | 2026-10-11T22:58:07+00:00 | no |
 | [10.1021/jp906096a](<https://doi.org/10.1021/jp906096a>) | `kim2009-jp906096a-cds-quantum-dots-1` | batch10 | 2026-10-12T03:55:31+00:00 | no |
@@ -257,15 +271,18 @@
 | [10.1021/nl101079u](<https://doi.org/10.1021/nl101079u>) | `bui2010-nl101079u-cdse-zns-core-shell-streptavidin-conjuga-1` | batch04 | 2026-10-11T11:55:05+00:00 | no |
 | [10.1021/nl101284k](<https://doi.org/10.1021/nl101284k>) | `mayer2010-nl101284k-oleate-capped-pbse-ncs-3-1-nm-diameter-1`, `mayer2010-nl101284k-oleate-capped-pbse-ncs-6-1-nm-diameter-2`, `mayer2010-nl101284k-oleate-capped-pbse-ncs-8-6-nm-diameter-3` | batch04 | 2026-10-11T11:55:05+00:00 | no |
 | [10.1021/nl102705p](<https://doi.org/10.1021/nl102705p>) | `evers2010-nl102705p-au-nanocrystals-3`, `evers2010-nl102705p-cdse-nanocrystals-5-8-nm-effective-diame-2`, `evers2010-nl102705p-pbse-nanocrystals-11-0-nm-effective-diam-1` | batch04 | 2026-10-11T11:55:05+00:00 | no |
+| [10.1021/nl200704h](<https://doi.org/10.1021/nl200704h>) | `kim2011-nl200704h-pbse-nanocrystal-layer-1` | batch12 | 2026-10-12T08:53:49+00:00 | no |
 | [10.1021/nl201282v](<https://doi.org/10.1021/nl201282v>) | `jasieniak2011-nl201282v-cdte-nanocrystals-1`, `jasieniak2011-nl201282v-zno-nanocrystals-2` | batch08 | 2026-10-12T00:31:26+00:00 | no |
 | [10.1021/nl2028848](<https://doi.org/10.1021/nl2028848>) | `x2011-nl2028848-pbse-nc-fet-infilled-with-1-nm-of-al2o3-1` | batch06 | 2026-10-11T21:29:20+00:00 | no |
 | [10.1021/nl203620f](<https://doi.org/10.1021/nl203620f>) | `pal2012-nl203620f-cdse-16cds-g-nqds-1` | batch09 | 2026-10-12T02:14:36+00:00 | no |
+| [10.1021/nl204323j](<https://doi.org/10.1021/nl204323j>) | `tang2012-nl204323j-pbs-nanocrystals-1`, `tang2012-nl204323j-zno-nanoparticles-2` | batch12 | 2026-10-12T08:53:49+00:00 | no |
 | [10.1021/nl300524j](<https://doi.org/10.1021/nl300524j>) | `liang2012-nl300524j-pbte-nanocrystal-coated-glass-fibers-1` | batch04 | 2026-10-11T11:55:05+00:00 | no |
 | [10.1021/nl3027444](<https://doi.org/10.1021/nl3027444>) | `otto2012-nl3027444-cdte-qds-embedded-in-nacl-mixed-crystals-1` | batch09 | 2026-10-12T02:14:36+00:00 | no |
 | [10.1021/nl304753n](<https://doi.org/10.1021/nl304753n>) | `al2013-nl304753n-sulfide-exchanged-alumina-infilled-6-3-n-1` | batch04 | 2026-10-11T11:55:05+00:00 | no |
 | [10.1021/nl801629f](<https://doi.org/10.1021/nl801629f>) | `lees2008-nl801629f-core-cdse-qd-1-1`, `lees2008-nl801629f-core-cdse-qd-2-2`, `lees2008-nl801629f-core-cdse-qd-3-3`, `lees2008-nl801629f-core-cdse-qd-4-4`, `lees2008-nl801629f-core-shell-cdse-zns-qd-1-5`, `lees2008-nl801629f-core-shell-cdse-zns-qd-2-6`, `lees2008-nl801629f-core-shell-cdse-zns-qd-3-7`, `lees2008-nl801629f-core-shell-cdse-zns-qd-4-8`, `lees2008-nl801629f-core-shell-cdse-zns-qd-5-9` | batch04 | 2026-10-11T11:55:05+00:00 | no |
 | [10.1021/nl801685a](<https://doi.org/10.1021/nl801685a>) | `evans2008-nl801685a-pbse-mscs-1` | batch08 | 2026-10-12T00:31:26+00:00 | no |
 | [10.1021/nl903217w](<https://doi.org/10.1021/nl903217w>) | `hensel2010-nl903217w-cdse-tio2-n-nanoparticle-films-1` | batch08 | 2026-10-12T00:31:26+00:00 | yes |
+| [10.1021/nn100021b](<https://doi.org/10.1021/nn100021b>) | `buhbut2010-nn100021b-cdse-cds-zns-qds-1` | batch12 | 2026-10-12T08:53:49+00:00 | no |
 | [10.1021/nn100076f](<https://doi.org/10.1021/nn100076f>) | `jiang2010-nn100076f-cdse-nanorods-1` | batch10 | 2026-10-12T03:55:31+00:00 | no |
 | [10.1021/nn100339b](<https://doi.org/10.1021/nn100339b>) | `zarghami2010-nn100339b-6-1-nm-pbse-qds-1`, `zarghami2010-nn100339b-8-8-nm-pbs-qds-2` | batch10 | 2026-10-12T03:55:31+00:00 | no |
 | [10.1021/nn101319x](<https://doi.org/10.1021/nn101319x>) | `fuke2010-nn101319x-cdse-nqd-ba-2`, `fuke2010-nn101319x-cdse-nqd-topo-1` | batch08 | 2026-10-12T00:31:26+00:00 | no |
@@ -277,6 +294,7 @@
 | [10.1021/nn201988w](<https://doi.org/10.1021/nn201988w>) | `miszta2011-nn201988w-cu2-xse-core-cu2s-pods-octapod-1` | batch04 | 2026-10-11T11:55:05+00:00 | yes |
 | [10.1021/nn2033117](<https://doi.org/10.1021/nn2033117>) | `ihly2011-nn2033117-pbs-qd-film-2-9-0-3-nm-3`, `ihly2011-nn2033117-pbs-qd-film-5-0-0-6-nm-1`, `ihly2011-nn2033117-pbs-qd-film-7-0-0-7-nm-2` | batch04 | 2026-10-11T11:55:05+00:00 | no |
 | [10.1021/nn203683s](<https://doi.org/10.1021/nn203683s>) | `al2011-nn203683s-cdse-c1-1` | batch10 | 2026-10-12T03:55:31+00:00 | yes |
+| [10.1021/nn203728t](<https://doi.org/10.1021/nn203728t>) | `al2011-nn203728t-pbs-nanocrystals-capped-with-c18-oleic-a-1` | batch12 | 2026-10-12T08:53:49+00:00 | no |
 | [10.1021/nn2044388](<https://doi.org/10.1021/nn2044388>) | `al2012-nn2044388-cdses-zns-1` | batch10 | 2026-10-12T03:55:31+00:00 | yes |
 | [10.1021/nn204601n](<https://doi.org/10.1021/nn204601n>) | `al2012-nn204601n-znse-zns-nrs-1` | batch04 | 2026-10-11T11:55:05+00:00 | yes |
 | [10.1021/nn301182h](<https://doi.org/10.1021/nn301182h>) | `ruberu2012-nn301182h-cds-nanorods-2`, `ruberu2012-nn301182h-cds0-34se0-66-nanorods-3`, `ruberu2012-nn301182h-cds1xsex-nanodots-1` | batch04 | 2026-10-11T11:55:05+00:00 | yes |
@@ -284,8 +302,12 @@
 | [10.1021/nn3024255](<https://doi.org/10.1021/nn3024255>) | `al2012-nn3024255-cdse-cds-dot-in-plate-ncs-sample-p4-1` | batch04 | 2026-10-11T11:55:05+00:00 | no |
 | [10.1021/nn3029716](<https://doi.org/10.1021/nn3029716>) | `al2012-nn3029716-pbse-qd-solid-with-eda-ligands-1` | batch06 | 2026-10-11T21:29:20+00:00 | no |
 | [10.1021/nn303130d](<https://doi.org/10.1021/nn303130d>) | `segets2012-nn303130d-pbs-small-qds-1`, `segets2012-nn303130d-pbse-small-qds-2` | batch04 | 2026-10-11T11:55:05+00:00 | no |
+| [10.1021/nn303769h](<https://doi.org/10.1021/nn303769h>) | `hendricks2012-nn303769h-cds-nanocrystals-1` | batch12 | 2026-10-12T08:53:49+00:00 | no |
+| [10.1021/nn3045215](<https://doi.org/10.1021/nn3045215>) | `wang2013-nn3045215-520-nm-cdse-cds-zns-qd-barcodes-1` | batch12 | 2026-10-12T08:53:49+00:00 | no |
 | [10.1021/nn3052428](<https://doi.org/10.1021/nn3052428>) | `jun2013-nn3052428-cdse-cds-zns-qdsm-1` | batch06 | 2026-10-11T21:29:20+00:00 | no |
 | [10.1021/nn401657n](<https://doi.org/10.1021/nn401657n>) | `al2013-nn401657n-pbse-nanoparticles-capped-with-pb-oleate-1` | batch11 | 2026-10-12T05:46:50+00:00 | no |
+| [10.1021/nn4017845](<https://doi.org/10.1021/nn4017845>) | `al2013-nn4017845-cdse-cds-seeded-rods-1` | batch12 | 2026-10-12T08:53:49+00:00 | no |
+| [10.1021/nn4021983](<https://doi.org/10.1021/nn4021983>) | `al2013-nn4021983-pbs-cqds-with-cdcl2-passivation-1` | batch12 | 2026-10-12T08:53:49+00:00 | no |
 | [10.1021/nn402844m](<https://doi.org/10.1021/nn402844m>) | `al2013-nn402844m-zns-nanoparticles-2` | batch08 | 2026-10-12T00:31:26+00:00 | no |
 | [10.1021/nn402870e](<https://doi.org/10.1021/nn402870e>) | `lee2013-nn402870e-cdzns-zns-qds-3-h-shelled-1` | batch10 | 2026-10-12T03:55:31+00:00 | yes |
 | [10.1021/nn402931y](<https://doi.org/10.1021/nn402931y>) | `groeneveld2013-nn402931y-zn-cd-se-nanocrystals-5-6-nm-diameter-22-3`, `groeneveld2013-nn402931y-znse-nanocrystals-3-7-nm-diameter-1`, `groeneveld2013-nn402931y-znse-nanocrystals-5-6-nm-diameter-2` | batch04 | 2026-10-11T11:55:05+00:00 | yes |
@@ -305,6 +327,7 @@
 | [10.1021/nn504679k](<https://doi.org/10.1021/nn504679k>) | `al2014-nn504679k-pbse-qd-films-treated-with-2da-1` | batch04 | 2026-10-11T11:55:05+00:00 | no |
 | [10.1021/nn505375n](<https://doi.org/10.1021/nn505375n>) | `kholmicheva2014-nn505375n-pbs-cds-core-shell-nanocrystals-2` | batch04 | 2026-10-11T11:55:05+00:00 | yes |
 | [10.1021/nn7003469](<https://doi.org/10.1021/nn7003469>) | `gooding2008-nn7003469-cdse-cds-zns-nanocrystals-1` | batch10 | 2026-10-12T03:55:31+00:00 | no |
+| [10.1021/nn8003247](<https://doi.org/10.1021/nn8003247>) | `koole2008-nn8003247-cdse-qds-2-8-nm-qy-40-1` | batch12 | 2026-10-12T08:53:49+00:00 | no |
 | [10.1021/nn800737a](<https://doi.org/10.1021/nn800737a>) | `mcdaniel2009-nn800737a-fe3o4-cds-nanocrystal-heterostructures-1` | batch04 | 2026-10-11T11:55:05+00:00 | yes |
 | [10.1021/nn900138d](<https://doi.org/10.1021/nn900138d>) | `nn900138d-cdse-cds-zns-core-shell-shell-qds-1` | batch04 | 2026-10-11T11:55:05+00:00 | no |
 | [10.1021/nn9004507](<https://doi.org/10.1021/nn9004507>) | `narayanaswamy2009-nn9004507-inp-zns-core-shell-quantum-dots-1-8-nm-1`, `narayanaswamy2009-nn9004507-inp-zns-core-shell-quantum-dots-3-0-nm-2`, `narayanaswamy2009-nn9004507-inp-zns-core-shell-quantum-dots-3-8-nm-3`, `narayanaswamy2009-nn9004507-inp-zns-core-shell-quantum-dots-4-5-nm-4` | batch04 | 2026-10-11T11:55:05+00:00 | no |
@@ -329,6 +352,7 @@
 | [10.1038/srep10626](<https://doi.org/10.1038/srep10626>) | `sun2015-srep10626-pbs-quantum-dots-1` | batch11 | 2026-10-12T05:46:50+00:00 | no |
 | [10.1039/b006950g](<https://doi.org/10.1039/b006950g>) | `suyver2000-b006950g-znse-mn2-nanocrystals-1` | batch05 | 2026-10-11T15:42:48+00:00 | yes |
 | [10.1039/b108062h](<https://doi.org/10.1039/b108062h>) | `lee2002-b108062h-cds-tp-n-0-086mos2-nanohybrid-1` | batch08 | 2026-10-12T00:31:26+00:00 | yes |
+| [10.1039/b111013f](<https://doi.org/10.1039/b111013f>) | `sun2002-b111013f-pdda-cdte-n-film-1` | batch12 | 2026-10-12T08:53:49+00:00 | no |
 | [10.1039/b315332k](<https://doi.org/10.1039/b315332k>) | `bullen2004-b315332k-cdse-cds-core-shell-particles-in-zro2sio-2`, `bullen2004-b315332k-cdse-core-particles-in-zro2sio2-solgel-f-1`, `bullen2004-b315332k-cdse-zns-core-shell-particles-in-zro2sio-3` | batch05 | 2026-10-11T15:42:48+00:00 | yes |
 | [10.1039/b607124d](<https://doi.org/10.1039/b607124d>) | `oh2006-b607124d-qdp-clusters-made-from-3-nm-cdse-qds-1`, `oh2006-b607124d-qdp-clusters-made-from-4-nm-cdse-qds-2` | batch05 | 2026-10-11T15:42:48+00:00 | yes |
 | [10.1039/b815034f](<https://doi.org/10.1039/b815034f>) | `yang2008-b815034f-cds-nc-1-1`, `yang2008-b815034f-cds-nc-2-2` | batch10 | 2026-10-12T03:55:31+00:00 | no |
@@ -343,10 +367,12 @@
 | [10.1039/c9cp01923e](<https://doi.org/10.1039/c9cp01923e>) | `patwari2019-c9cp01923e-pbs-qd-tio2-ptz-triohybrid-1` | batch05 | 2026-10-11T15:42:48+00:00 | no |
 | [10.1039/c9na00334g](<https://doi.org/10.1039/c9na00334g>) | `c9na00334g-cdse-cds-qd-mpa-1`, `c9na00334g-cdse-cds-qd-peg-oh-2`, `c9na00334g-cdse-cds-qd-peg-ome-3` | batch10 | 2026-10-12T03:55:31+00:00 | no |
 | [10.1039/d2na00734g](<https://doi.org/10.1039/d2na00734g>) | `d2na00734g-inp-zns-core-shell-qds-1` | batch05 | 2026-10-11T15:42:48+00:00 | no |
+| [10.1039/d4mh01182a](<https://doi.org/10.1039/d4mh01182a>) | `kim2025-d4mh01182a-ingap-qds-1`, `kim2025-d4mh01182a-ingap-znses-zns-qds-2` | batch12 | 2026-10-12T08:53:49+00:00 | yes |
 | [10.1039/d4tc01805b](<https://doi.org/10.1039/d4tc01805b>) | `cao2024-d4tc01805b-sno2-qds-pbs-i-qds-pbs-edt-qds-1` | batch11 | 2026-10-12T05:46:50+00:00 | no |
 | [10.1063/1.110838](<https://doi.org/10.1063/1.110838>) | `mukherjee1994-1-110838-pbs-polyacrylamide-composite-specimen-no-1`, `mukherjee1994-1-110838-pbs-polyacrylamide-composite-specimen-no-2`, `mukherjee1994-1-110838-pbs-polyacrylamide-composite-specimen-no-3` | batch11 | 2026-10-12T05:46:50+00:00 | no |
 | [10.1063/1.112568](<https://doi.org/10.1063/1.112568>) | `danek1994-1-112568-znse-cdse-qd-composite-with-3-5-nm-ncs-1`, `danek1994-1-112568-znse-cdse-qd-composite-with-5-0-nm-ncs-2` | batch05 | 2026-10-11T15:42:48+00:00 | no |
 | [10.1063/1.121906](<https://doi.org/10.1063/1.121906>) | `xua1998-1-121906-zns-cu-1`, `xua1998-1-121906-zns-eu-2`, `xua1998-1-121906-zns-mn-3` | batch10 | 2026-10-12T03:55:31+00:00 | yes |
+| [10.1063/1.126759](<https://doi.org/10.1063/1.126759>) | `kim2000-1-126759-cdse-pyridine-1` | batch12 | 2026-10-12T08:53:49+00:00 | no |
 | [10.1063/1.1374235](<https://doi.org/10.1063/1.1374235>) | `borgstrom2001-1-1374235-inas-quantum-dot-stacks-embedded-in-inp-1` | batch09 | 2026-10-12T02:14:36+00:00 | no |
 | [10.1063/1.1467961](<https://doi.org/10.1063/1.1467961>) | `tang2002-1-1467961-two-stacked-inas-gaas-quantum-dot-pin-di-1` | batch08 | 2026-10-12T00:31:26+00:00 | yes |
 | [10.1063/1.1510157](<https://doi.org/10.1063/1.1510157>) | `mazur2002-1-1510157-vertically-aligned-double-layer-inas-gaa-1` | batch08 | 2026-10-12T00:31:26+00:00 | yes |
@@ -358,10 +384,13 @@
 | [10.1063/1.2133904](<https://doi.org/10.1063/1.2133904>) | `howe2005-1-2133904-inas-gaas-001-quantum-dot-qd-bilayer-str-1` | batch05 | 2026-10-11T15:42:48+00:00 | yes |
 | [10.1063/1.2202195](<https://doi.org/10.1063/1.2202195>) | `liu2006-1-2202195-1-32-m-inas-quantum-dot-laser-with-five-1` | batch06 | 2026-10-11T21:29:20+00:00 | no |
 | [10.1063/1.2354448](<https://doi.org/10.1063/1.2354448>) | `zhang2006-1-2354448-dot-shaped-cdte-ncs-1`, `zhang2006-1-2354448-rod-shaped-cdte-ncs-2`, `zhang2006-1-2354448-tetrapod-shaped-cdte-ncs-3` | batch06 | 2026-10-11T21:29:20+00:00 | no |
+| [10.1063/1.2358847](<https://doi.org/10.1063/1.2358847>) | `mi2006-1-2358847-metamorphic-inas-tunnel-injection-quantu-1` | batch12 | 2026-10-12T08:53:49+00:00 | no |
+| [10.1063/1.2906121](<https://doi.org/10.1063/1.2906121>) | `lioudakis2008-1-2906121-pbs-qds-pei-multilayers-1` | batch12 | 2026-10-12T08:53:49+00:00 | no |
 | [10.1063/1.2966341](<https://doi.org/10.1063/1.2966341>) | `kim2008-1-2966341-cdse-decorated-fluorinated-double-walled-1`, `kim2008-1-2966341-cdse-decorated-oxidized-double-walled-ca-2` | batch09 | 2026-10-12T02:14:36+00:00 | no |
 | [10.1063/1.2993178](<https://doi.org/10.1063/1.2993178>) | `sritirawisarn2008-1-2993178-2-6-ml-inas-qd-arrays-with-0-6-ml-gaas-i-1`, `sritirawisarn2008-1-2993178-2-6-ml-inas-qd-arrays-with-0-72-ml-gaas-2`, `sritirawisarn2008-1-2993178-2-6-ml-inas-qd-arrays-with-0-84-ml-gaas-3` | batch11 | 2026-10-12T05:46:50+00:00 | no |
 | [10.1063/1.3028070](<https://doi.org/10.1063/1.3028070>) | `kang2008-1-3028070-mpa-capped-cdse-zns-qds-2`, `kang2008-1-3028070-topo-capped-cdse-zns-qds-1` | batch08 | 2026-10-12T00:31:26+00:00 | no |
 | [10.1063/1.3100196](<https://doi.org/10.1063/1.3100196>) | `li2009-1-3100196-cds-quantum-rods-qrs-1` | batch11 | 2026-10-12T05:46:50+00:00 | no |
+| [10.1063/1.3117221](<https://doi.org/10.1063/1.3117221>) | `chen2009-1-3117221-oa-capped-cdse-qd-3-nm-1` | batch12 | 2026-10-12T08:53:49+00:00 | no |
 | [10.1063/1.3429226](<https://doi.org/10.1063/1.3429226>) | `clarke2010-1-3429226-inas-gaas-qd-bilayer-with-seed-layer-gro-1` | batch05 | 2026-10-11T15:42:48+00:00 | yes |
 | [10.1063/1.3530466](<https://doi.org/10.1063/1.3530466>) | `s-g-pawar-1-3530466-nanocrystalline-pbs-thin-films-1` | batch10 | 2026-10-12T03:55:31+00:00 | no |
 | [10.1063/1.370578](<https://doi.org/10.1063/1.370578>) | `nan1999-1-370578-bi-doped-nanocrystalline-zno-bz2-2`, `nan1999-1-370578-undoped-nanocrystalline-zno-pz1-1` | batch09 | 2026-10-12T02:14:36+00:00 | yes |
@@ -374,6 +403,7 @@
 | [10.1103/physrevlett.100.057403](<https://doi.org/10.1103/physrevlett.100.057403>) | `chilla2008-physrevlett-100-057403-cdse-cds-zns-core-shell-shell-nanocrysta-1` | batch06 | 2026-10-11T21:29:20+00:00 | yes |
 | [10.1111/j.1551-2916.2004.00084.x](<https://doi.org/10.1111/j.1551-2916.2004.00084.x>) | `wang2004-j-1551-2916-2004-00084-x-zno-nanocrystalline-coatings-1` | batch11 | 2026-10-12T05:46:50+00:00 | no |
 | [10.1149/1.3465655](<https://doi.org/10.1149/1.3465655>) | `song2010-1-3465655-ba2si3o8-eu2-phosphor-1`, `song2010-1-3465655-zncdse-znse-core-shell-quantum-dot-2` | batch08 | 2026-10-12T00:31:26+00:00 | yes |
+| [10.1166/jnn.2008.1221](<https://doi.org/10.1166/jnn.2008.1221>) | `kim2008-jnn-2008-1221-zno-nanowire-cdte-quantum-dot-hybrid-sys-1` | batch12 | 2026-10-12T08:53:49+00:00 | no |
 | [10.1166/jnn.2009.j050](<https://doi.org/10.1166/jnn.2009.j050>) | `uehara2009-jnn-2009-j050-zns-cdse-zns-core-shell-shell-1` | batch05 | 2026-10-11T15:42:48+00:00 | yes |
 | [10.1186/1477-3155-6-7](<https://doi.org/10.1186/1477-3155-6-7>) | `jr2008-1477-3155-6-7-cdse-zns-core-shell-qds-1` | batch05 | 2026-10-11T15:42:48+00:00 | no |
 | [10.1186/s11671-016-1606-3](<https://doi.org/10.1186/s11671-016-1606-3>) | `liu2016-s11671-016-1606-3-cdse-zns-qds-1` | batch11 | 2026-10-12T05:46:50+00:00 | no |
@@ -394,3 +424,4 @@ Publication proof mapping:
 - batch09: Source `4faf4932e7e8969de9406351e10c1914f845734c`, Site `7d53adb44fd36b1b3a32323637788e307ad81d98`, anonymous pass 2026-10-12T02:14:36+00:00; live receipt SHA256 `fcf3c0e8e35420d7aaf542470235e8404fa40bf06360cf24e2204e4b0cc69e7a`.
 - batch10: Source `f1e3acd3d1a2666f7b09e04e3f0ae1593b248817`, Site `a4b117846e4f1e36701201acb53b2dfeb9b8644c`, anonymous pass 2026-10-12T03:55:31+00:00; live receipt SHA256 `944e1f4d1cd8a3e8c87751a963abbae0efa7858b58dbba95950e1b9ffa94e4e5`.
 - batch11: Source `28de5bb49100fbc39efb13568568e57a4f994abd`, Site `cac61f2667fe351fc771d7ea0be91a1df0a6f1e8`, anonymous pass 2026-10-12T05:46:50+00:00; live receipt SHA256 `cba17c85b22a58fb2b1a38ee62599d2777b5ea05848b1cce4d42106d404498b7`.
+- batch12: Source `4a8118eb2b80c5c1f5cf37502edbc62beccd06b6`, Site `6877d67fa957d8e057388cff277cff7aead590c9`, anonymous pass 2026-10-12T08:53:49+00:00; live receipt SHA256 `625e8d6425e6445c1d4bf676fe7e80b38b0478789ae01fa4d6d1188963c0f6e9`.

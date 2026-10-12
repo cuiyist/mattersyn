@@ -1,0 +1,264 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "murcia2008-ja803325b-lipo-coated-cdse-zns-qds-2",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Michael J. Murcia (2008): LIPO-coated CdSe/ZnS QDs",
+  "material": {
+    "formula": "CdSe/ZnS",
+    "family": "CdSe/ZnS nanocrystals",
+    "elements": [
+      "Cd",
+      "Se",
+      "Zn",
+      "S"
+    ],
+    "components": [
+      "CdSe",
+      "ZnS"
+    ],
+    "architecture": "core_shell"
+  },
+  "method": "Synthesis as described in the source",
+  "sources": [
+    {
+      "id": "murcia2008-ja803325b",
+      "doi": "10.1021/ja803325b",
+      "title": "Design of Quantum Dot-Conjugated Lipids for Long-Term, High-Speed Tracking Experiments on Cell Surfaces",
+      "authors": "Michael J. Murcia, Daniel. E. Minner, Gina-Mirela Mustata, Kenneth Ritchie, and Christoph A. Naumann",
+      "year": 2008,
+      "url": "https://doi.org/10.1021/ja803325b",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "murcia2008-ja803325b",
+    "recipe_family": "murcia2008-ja803325b-lipo-coated-cdse-zns-qds-2",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdSe/ZnS",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "murcia2008-ja803325b",
+          "locator": "Main PDF p.4"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "murcia2008-ja803325b-lipo-coated-cdse-zns-qds-2--1-2-dipalmitoyl-sn-glycero-3-phosphoetha",
+      "name": "1,2-dipalmitoyl-sn-glycero-3-phosphoethanolamine-N-[methoxy(polyethylene glycol-2000] (DPPE-PEG2000)",
+      "formula": null,
+      "role": "ligand",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "murcia2008-ja803325b",
+          "locator": "Main PDF p.4"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "murcia2008-ja803325b-lipo-coated-cdse-zns-qds-2--after-s01-evaporate",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "murcia2008-ja803325b-lipo-coated-cdse-zns-qds-2--after-s02-add",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "murcia2008-ja803325b-lipo-coated-cdse-zns-qds-2--after-s01-evaporate"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-evaporate",
+      "action": "evaporate",
+      "label": "Evaporate chloroform",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "murcia2008-ja803325b-lipo-coated-cdse-zns-qds-2--after-s01-evaporate"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Evaporate chloroform",
+      "evidence": [
+        {
+          "source_id": "murcia2008-ja803325b",
+          "locator": "Main PDF p.4"
+        }
+      ]
+    },
+    {
+      "id": "s02-add",
+      "action": "add",
+      "label": "Add distilled water",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-evaporate"
+      ],
+      "inputs": [
+        "murcia2008-ja803325b-lipo-coated-cdse-zns-qds-2--after-s01-evaporate"
+      ],
+      "outputs": [
+        "murcia2008-ja803325b-lipo-coated-cdse-zns-qds-2--after-s02-add"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Add distilled water",
+      "evidence": [
+        {
+          "source_id": "murcia2008-ja803325b",
+          "locator": "Main PDF p.4"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "murcia2008-ja803325b-lipo-coated-cdse-zns-qds-2--product",
+      "source_sample_label": "LIPO-coated CdSe/ZnS QDs",
+      "batch_id": null,
+      "material_state_id": "murcia2008-ja803325b-lipo-coated-cdse-zns-qds-2--after-s02-add",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdSe/ZnS",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "murcia2008-ja803325b",
+            "locator": "Main PDF p.4"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "murcia2008-ja803325b",
+          "locator": "Main PDF p.4"
+        }
+      ],
+      "notes": [
+        "Reaction temperature: 80 degC (Main PDF p.4)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of 1,2-dipalmitoyl-sn-glycero-3-phosphoethanolamine-N-[methoxy(polyethylene glycol-2000] (DPPE-PEG2000) not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

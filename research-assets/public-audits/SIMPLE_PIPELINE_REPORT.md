@@ -635,6 +635,50 @@ Recorded source ci run: [38204759466](https://github.com/cuiyist/mattersyn/actio
 | 10.1021/am404811j | 1 | 6 | [Open](https://cuiyist.github.io/mattersyn-site/records/yu2014-am404811j-cdte-cds-coreshell-qds-capped-with-3-mer-1.html) |
 | 10.1021/jp303766d | 1 | 8 | [Open](https://cuiyist.github.io/mattersyn-site/records/zillner2012-jp303766d-cdse-qds-4-5-nm-with-pyridine-surfactant-3.html) |
 
+
+### simple-batch12-20261012
+
+Anonymous verification passed at 2026-10-12T08:53:49+00:00: 517 files, zero mismatches. [Source commit](https://github.com/cuiyist/mattersyn/commit/4a8118eb2b80c5c1f5cf37502edbc62beccd06b6) and [Site commit](https://github.com/cuiyist/mattersyn-site/commit/6877d67fa957d8e057388cff277cff7aead590c9). This batch contains 30 source groups, 36 records and 140 source figure crops; 30 distinct newly contributing primary papers after DOI deduplication. Every new contribution remains machine extracted and not independently audited. The final built site is 1,791,003,129 bytes / 32,335 files.
+
+Live counter: **244 audited + 404 machine extracted = 648 papers**, 3,594 canonical records, 365 direct material families, 422 material/component pages and 1473 displayed recipe–structure pairs (6 more comprehensive; 1467 partial). These display counts do not establish extraction accuracy, measured atomic coordinates or training eligibility.
+
+Recorded source pr: [29](https://github.com/cuiyist/mattersyn/pull/29).
+
+Recorded source ci run: [38216306647](https://github.com/cuiyist/mattersyn/actions/runs/38216306647).
+
+| Primary DOI | Records | Figure crops | Public page |
+| --- | ---: | ---: | --- |
+| 10.1021/nn203728t | 1 | 6 | [Open](https://cuiyist.github.io/mattersyn-site/records/al2011-nn203728t-pbs-nanocrystals-capped-with-c18-oleic-a-1.html) |
+| 10.1021/nn4017845 | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/al2013-nn4017845-cdse-cds-seeded-rods-1.html) |
+| 10.1021/nn4021983 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/al2013-nn4021983-pbs-cqds-with-cdcl2-passivation-1.html) |
+| 10.1021/jp9019574 | 2 | 6 | [Open](https://cuiyist.github.io/mattersyn-site/records/banerjee2009-jp9019574-cds-mn-zns-qdots-1.html) |
+| 10.1021/nn100021b | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/buhbut2010-nn100021b-cdse-cds-zns-qds-1.html) |
+| 10.1002/smll.200600218 | 3 | 6 | [Open](https://cuiyist.github.io/mattersyn-site/records/chang2006-smll-200600218-cdse-cds-core-shell-qds-with-no-peg-coat-1.html) |
+| 10.1063/1.3117221 | 1 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/chen2009-1-3117221-oa-capped-cdse-qd-3-nm-1.html) |
+| 10.1021/jp8099169 | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/halpert2009-jp8099169-qd550-ttbc-1.html) |
+| 10.1021/nn303769h | 1 | 6 | [Open](https://cuiyist.github.io/mattersyn-site/records/hendricks2012-nn303769h-cds-nanocrystals-1.html) |
+| 10.1002/adfm.201000711 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/hu2010-adfm-201000711-qdmm-sio2-1.html) |
+| 10.1063/1.126759 | 1 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/kim2000-1-126759-cdse-pyridine-1.html) |
+| 10.1166/jnn.2008.1221 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/kim2008-jnn-2008-1221-zno-nanowire-cdte-quantum-dot-hybrid-sys-1.html) |
+| 10.1021/nl200704h | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/kim2011-nl200704h-pbse-nanocrystal-layer-1.html) |
+| 10.1039/d4mh01182a | 2 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/kim2025-d4mh01182a-ingap-qds-1.html) |
+| 10.1021/nn8003247 | 1 | 6 | [Open](https://cuiyist.github.io/mattersyn-site/records/koole2008-nn8003247-cdse-qds-2-8-nm-qy-40-1.html) |
+| 10.1021/ic401587r | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/l2014-ic401587r-znse-zns-qds-1.html) |
+| 10.1063/1.2906121 | 1 | 8 | [Open](https://cuiyist.github.io/mattersyn-site/records/lioudakis2008-1-2906121-pbs-qds-pei-multilayers-1.html) |
+| 10.1063/1.2358847 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/mi2006-1-2358847-metamorphic-inas-tunnel-injection-quantu-1.html) |
+| 10.1021/jp205419z | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/pang2011-jp205419z-mpa-qds-4-atp-gce-1.html) |
+| 10.1016/j.jpowsour.2014.12.022 | 1 | 8 | [Open](https://cuiyist.github.io/mattersyn-site/records/shen2015-j-jpowsour-2014-12-022-cdte-cds-qds-1.html) |
+| 10.1016/j.cej.2024.158969 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/shen2025-j-cej-2024-158969-pbs-qds-1.html) |
+| 10.1039/b111013f | 1 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/sun2002-b111013f-pdda-cdte-n-film-1.html) |
+| 10.1021/nl204323j | 2 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/tang2012-nl204323j-pbs-nanocrystals-1.html) |
+| 10.1021/ac503134r | 1 | 6 | [Open](https://cuiyist.github.io/mattersyn-site/records/text2014-ac503134r-zns-mn-ncs-1.html) |
+| 10.1007/s10853-008-3138-4 | 1 | 2 | [Open](https://cuiyist.github.io/mattersyn-site/records/wang2009-s10853-008-3138-4-mps-capped-cdse-zns-core-shell-qds-1.html) |
+| 10.1021/nn3045215 | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/wang2013-nn3045215-520-nm-cdse-cds-zns-qd-barcodes-1.html) |
+| 10.1021/ac501020b | 2 | 6 | [Open](https://cuiyist.github.io/mattersyn-site/records/wang2014-ac501020b-paa-qds-1.html) |
+| 10.1007/s11671-010-9632-z | 1 | 2 | [Open](https://cuiyist.github.io/mattersyn-site/records/x2010-s11671-010-9632-z-si-ncs-1.html) |
+| 10.1021/jp206443p | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/zhao2011-jp206443p-qd-encoded-sio2-nps-1.html) |
+| 10.1021/am505130a | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/zhou2014-am505130a-cdse-qds-modified-with-1-4-benzenedithio-1.html) |
+
 ## Latest continuation checkpoint
 
 At 2026-10-11T06:09:34+00:00, Batch01 is live and anonymously verified; Batch02 remains in local processing with 47/49 two-pass-complete papers at its last saved checkpoint. These are processing counts, not additional published papers. The audited lane stays paused.
@@ -1126,3 +1170,12 @@ Storage: completed owned regenerable-copy cleanup removed6,269,699,643 logical b
 Batch14 final collector exited0; original controller OS exit was not observed. Batch15 controller51360 was observed in phaseextract with21 two-pass papers at2026-10-12T05:58:36.051084+00:00; this is an observation, not a promise of uninterrupted activity. Batch16 has50 copied local QD PDFs,41 supported identities and9 technical holds; it is unlaunched. Remaining metadata candidate counts731QD /311metal are not publishable-paper counts. No new paper download, held-out test, machine calibration, audit-lane resume or changed training admission occurred.
 
 At 2026-10-12T06:28:51.068692+00:00, Batch12's first complete local build failed the unchanged component-architecture check before any push: the new Mn-ZnS single-material record had been mechanically split into standalone Mn and ZnS component links. The narrow importer fix preserves the composition and architecture and suppresses those separate links; only this new record's component metadata and its exact dependent hashes changed. All3,558 prior canonical records, recipe values, figure/caption bytes and statuses remain unchanged. The existing component regression suite passed7 tests. The failed build is retained, and fresh normal Source preparation/build/browser/CI/release checks are required; Batch12 still earns zero publication credit. The caption requirement remains in force.
+
+
+Root current delivery checkpoint, 2026-10-12T09:18:16.830465+00:00. Batch12 anonymous verification passed517 files with0 mismatches/0 failed paper or material routes; Source4a8118eb2b80c5c1f5cf37502edbc62beccd06b6, Site6877d67fa957d8e057388cff277cff7aead590c9. Source PR29/CI38216306647 merged normally; live caption card and enlarged-view checks passed at08:55:34.528Z desktop and08:55:40.502Z phone. Built1,791,003,129 bytes/32,335 files, successfully deployed: no size-failure trigger.
+
+Batch13 preparation retained34 papers/56 records/192 crops after51 scientific-object,6 coupled-unit and1 wrong-locator deletions (58 paths); zero additions. Applied authority-bound citation-only metadata to16 papers/27 new records and30 dependency files. Bound186 accepted/5 recovered/1 manual captions in517 Reader instances. All3,594 old canonical rows protected; dependency build returned0. Normal complete Source/build/browser/CI/deployment checks are still pending, with zero B13 credit. No nonempty Reader sync follows caption/citation metadata.
+
+Batch15 final49 successful two-pass papers/80 checked pairs/263 crops and planned captions/rare reading complete, unpublished. Batch16 collector native24178 returned0:40 successful two-pass papers/60 checked pairs/174 crops;9 identity holds and one omission after redo. Native caption64090 returned0,40 requests/168 accepted/2 failed packets; saved-response recovery returned0 and retained4 valid captions, leaving2 long-verbatim refusals for manual paraphrase. Original controller OS exits remain unknown. Batch17 native launch returned0 with actual controller7888,44 supported papers/6 identity holds. No publication count follows generation or these observations.
+
+Verified rebuildable-copy cleanup removed3,386,759,600 logical bytes from40 finite original failed-q public targets; all155 private-build files, original PDFs/training payloads and small failure receipts remained. Native cleanup63176 returned0; simultaneous release work means logical removal is not asserted as physical net disk gain. Choices: release ready B13 and reuse accepted work; keep rejected caption packets and valid recoveries separate; continue local generation while integrating. No audits, stopped checks, external paper transfer, audited-record rewrite, storage-repository split or uninterrupted work claim.

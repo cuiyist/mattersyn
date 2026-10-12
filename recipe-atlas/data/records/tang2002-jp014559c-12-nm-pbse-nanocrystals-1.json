@@ -1,0 +1,314 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "tang2002-jp014559c-12-nm-pbse-nanocrystals-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Jing Tang (2002): 12 nm PbSe nanocrystals",
+  "material": {
+    "formula": "PbSe",
+    "family": "PbSe nanocrystals",
+    "elements": [
+      "Pb",
+      "Se"
+    ],
+    "components": [
+      "PbSe"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Organometallic",
+  "sources": [
+    {
+      "id": "tang2002-jp014559c",
+      "doi": "10.1021/jp014559c",
+      "title": "Gas-Liquid-Solid Phase Transition Model for Two-Dimensional Nanocrystal Self-Assembly on Graphite",
+      "authors": "Jing Tang; Guanglu Ge; Louis E. Brus",
+      "year": 2002,
+      "url": "https://doi.org/10.1021/jp014559c",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "tang2002-jp014559c",
+    "recipe_family": "tang2002-jp014559c-12-nm-pbse-nanocrystals-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "PbSe",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "tang2002-jp014559c",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "cubic",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "tang2002-jp014559c",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": 12.0,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "12 nm",
+      "evidence": [
+        {
+          "source_id": "tang2002-jp014559c",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "tang2002-jp014559c-12-nm-pbse-nanocrystals-1--oleic-acid",
+      "name": "oleic acid",
+      "formula": null,
+      "role": "ligand",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "tang2002-jp014559c",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "tang2002-jp014559c-12-nm-pbse-nanocrystals-1--after-s01-synthesize",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "tang2002-jp014559c-12-nm-pbse-nanocrystals-1--oleic-acid"
+      ]
+    },
+    {
+      "id": "tang2002-jp014559c-12-nm-pbse-nanocrystals-1--after-s02-size-select",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "tang2002-jp014559c-12-nm-pbse-nanocrystals-1--after-s01-synthesize"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-synthesize",
+      "action": "synthesize",
+      "label": "Organometallic synthesis of PbSe nanocrystals",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "tang2002-jp014559c-12-nm-pbse-nanocrystals-1--oleic-acid"
+      ],
+      "outputs": [
+        "tang2002-jp014559c-12-nm-pbse-nanocrystals-1--after-s01-synthesize"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Organometallic synthesis of PbSe nanocrystals",
+      "evidence": [
+        {
+          "source_id": "tang2002-jp014559c",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-size-select",
+      "action": "size-select",
+      "label": "Size selection using hexane/ethanol solvent pair",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-synthesize"
+      ],
+      "inputs": [
+        "tang2002-jp014559c-12-nm-pbse-nanocrystals-1--after-s01-synthesize"
+      ],
+      "outputs": [
+        "tang2002-jp014559c-12-nm-pbse-nanocrystals-1--after-s02-size-select"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Size selection using hexane/ethanol solvent pair",
+      "evidence": [
+        {
+          "source_id": "tang2002-jp014559c",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "tang2002-jp014559c-12-nm-pbse-nanocrystals-1--product",
+      "source_sample_label": "12 nm PbSe nanocrystals",
+      "batch_id": null,
+      "material_state_id": "tang2002-jp014559c-12-nm-pbse-nanocrystals-1--after-s02-size-select",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "PbSe",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "tang2002-jp014559c",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "cubic",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "tang2002-jp014559c",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": "oleic acid",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "tang2002-jp014559c",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "tang2002-jp014559c",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [
+    {
+      "id": "tang2002-jp014559c-12-nm-pbse-nanocrystals-1--size",
+      "sample_id": "tang2002-jp014559c-12-nm-pbse-nanocrystals-1--product",
+      "property": "diameter",
+      "technique": "TEM",
+      "value": {
+        "value": 12.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "12 nm",
+        "evidence": [
+          {
+            "source_id": "tang2002-jp014559c",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "tang2002-jp014559c",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Shape not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of oleic acid not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

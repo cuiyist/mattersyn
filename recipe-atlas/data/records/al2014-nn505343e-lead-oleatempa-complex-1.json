@@ -1,0 +1,418 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "al2014-nn505343e-lead-oleatempa-complex-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "CAREY ET AL. (2014): lead oleate–MPA complex",
+  "material": {
+    "formula": "Pb oleate–MPA",
+    "family": "Pb oleate–MPA nanocrystals",
+    "elements": [
+      "Pb",
+      "P"
+    ],
+    "components": [
+      "Pb oleate",
+      "MPA"
+    ],
+    "architecture": "composite"
+  },
+  "method": "Synthesis as described in the source",
+  "sources": [
+    {
+      "id": "al2014-nn505343e",
+      "doi": "10.1021/nn505343e",
+      "title": "Electronically Active Impurities in Colloidal Quantum Dot Solids",
+      "authors": "Graham H. Carey; Illan J. Kramer; Pongsakorn Kanjanaboos; Gabriel Moreno-Bautista; Oleksandr Voznyy; Lisa Rollny; Joel A. Tang; Sjoerd Hoogland; Edward H. Sargent",
+      "year": 2014,
+      "url": "https://doi.org/10.1021/nn505343e",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "al2014-nn505343e",
+    "recipe_family": "al2014-nn505343e-lead-oleatempa-complex-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Pb oleate–MPA",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "al2014-nn505343e",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "al2014-nn505343e-lead-oleatempa-complex-1--3-mercaptopropionic-acid",
+      "name": "3-mercaptopropionic acid",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "concentration": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "%",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "10 %",
+          "evidence": [
+            {
+              "source_id": "al2014-nn505343e",
+              "locator": "Main PDF p.5"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "al2014-nn505343e",
+          "locator": "Main PDF p.5"
+        }
+      ]
+    },
+    {
+      "id": "al2014-nn505343e-lead-oleatempa-complex-1--methanol",
+      "name": "methanol",
+      "formula": null,
+      "role": "solvent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "al2014-nn505343e",
+          "locator": "Main PDF p.5"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "al2014-nn505343e-lead-oleatempa-complex-1--after-s01-warm",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "al2014-nn505343e-lead-oleatempa-complex-1--after-s02-mix",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "al2014-nn505343e-lead-oleatempa-complex-1--after-s01-warm",
+        "al2014-nn505343e-lead-oleatempa-complex-1--3-mercaptopropionic-acid",
+        "al2014-nn505343e-lead-oleatempa-complex-1--methanol"
+      ]
+    },
+    {
+      "id": "al2014-nn505343e-lead-oleatempa-complex-1--after-s03-centrifuge",
+      "name": "mixture after step 3",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "al2014-nn505343e-lead-oleatempa-complex-1--after-s02-mix"
+      ]
+    },
+    {
+      "id": "al2014-nn505343e-lead-oleatempa-complex-1--after-s04-dry",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "al2014-nn505343e-lead-oleatempa-complex-1--after-s03-centrifuge"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-warm",
+      "action": "warm",
+      "label": "Warming lead oleate to liquid state",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "al2014-nn505343e-lead-oleatempa-complex-1--after-s01-warm"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Warming lead oleate to liquid state",
+      "evidence": [
+        {
+          "source_id": "al2014-nn505343e",
+          "locator": "Main PDF p.5"
+        }
+      ]
+    },
+    {
+      "id": "s02-mix",
+      "action": "mix",
+      "label": "Mixing lead oleate with MPA solution",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-warm"
+      ],
+      "inputs": [
+        "al2014-nn505343e-lead-oleatempa-complex-1--after-s01-warm",
+        "al2014-nn505343e-lead-oleatempa-complex-1--3-mercaptopropionic-acid",
+        "al2014-nn505343e-lead-oleatempa-complex-1--methanol"
+      ],
+      "outputs": [
+        "al2014-nn505343e-lead-oleatempa-complex-1--after-s02-mix"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Mixing lead oleate with MPA solution",
+      "evidence": [
+        {
+          "source_id": "al2014-nn505343e",
+          "locator": "Main PDF p.5"
+        }
+      ]
+    },
+    {
+      "id": "s03-centrifuge",
+      "action": "centrifuge",
+      "label": "Separating precipitate",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-mix"
+      ],
+      "inputs": [
+        "al2014-nn505343e-lead-oleatempa-complex-1--after-s02-mix"
+      ],
+      "outputs": [
+        "al2014-nn505343e-lead-oleatempa-complex-1--after-s03-centrifuge"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Separating precipitate",
+      "evidence": [
+        {
+          "source_id": "al2014-nn505343e",
+          "locator": "Main PDF p.5"
+        }
+      ]
+    },
+    {
+      "id": "s04-dry",
+      "action": "dry",
+      "label": "Drying precipitate under vacuum",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s03-centrifuge"
+      ],
+      "inputs": [
+        "al2014-nn505343e-lead-oleatempa-complex-1--after-s03-centrifuge"
+      ],
+      "outputs": [
+        "al2014-nn505343e-lead-oleatempa-complex-1--after-s04-dry"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 30,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "30 min",
+          "evidence": [
+            {
+              "source_id": "al2014-nn505343e",
+              "locator": "Main PDF p.5"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Drying precipitate under vacuum",
+      "evidence": [
+        {
+          "source_id": "al2014-nn505343e",
+          "locator": "Main PDF p.5"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "al2014-nn505343e-lead-oleatempa-complex-1--product",
+      "source_sample_label": "lead oleate–MPA complex",
+      "batch_id": null,
+      "material_state_id": "al2014-nn505343e-lead-oleatempa-complex-1--after-s04-dry",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Pb oleate–MPA",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "al2014-nn505343e",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": "MPA",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "al2014-nn505343e",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "al2014-nn505343e",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Shape not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of methanol not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
