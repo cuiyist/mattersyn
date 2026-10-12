@@ -1,0 +1,441 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "liu2007-jp066018z-mwnts-sno2-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Yangqiao Liu (2007): MWNTs/SnO2",
+  "material": {
+    "formula": "SnO2",
+    "family": "SnO2 nanocrystals",
+    "elements": [
+      "Sn",
+      "O"
+    ],
+    "components": [
+      "SnO2"
+    ],
+    "architecture": "composite"
+  },
+  "method": "In-situ formation",
+  "sources": [
+    {
+      "id": "liu2007-jp066018z",
+      "doi": "10.1021/jp066018z",
+      "title": "Noncovalent Functionalization of Carbon Nanotubes with Sodium Lignosulfonate and Subsequent Quantum Dot Decoration",
+      "authors": "Yangqiao Liu, Lian Gao, and Jing Sun",
+      "year": 2007,
+      "url": "https://doi.org/10.1021/jp066018z",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "liu2007-jp066018z",
+    "recipe_family": "liu2007-jp066018z-mwnts-sno2-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "SnO2",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "liu2007-jp066018z",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "tetragonal",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "liu2007-jp066018z",
+          "locator": "Main PDF p.6"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "nanoparticle",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "liu2007-jp066018z",
+          "locator": "Main PDF p.6"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "liu2007-jp066018z-mwnts-sno2-1--sncl4",
+      "name": "SnCl4",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "concentration": {
+          "value": 0.01,
+          "minimum": null,
+          "maximum": null,
+          "unit": "M",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0.01 M",
+          "evidence": [
+            {
+              "source_id": "liu2007-jp066018z",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "liu2007-jp066018z",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "liu2007-jp066018z-mwnts-sno2-1--hydrazine",
+      "name": "hydrazine",
+      "formula": null,
+      "role": "reducing_agent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "concentration": {
+          "value": 0.04,
+          "minimum": null,
+          "maximum": null,
+          "unit": "M",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0.04 M",
+          "evidence": [
+            {
+              "source_id": "liu2007-jp066018z",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "liu2007-jp066018z",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "liu2007-jp066018z-mwnts-sno2-1--after-s01-mix",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "liu2007-jp066018z-mwnts-sno2-1--sncl4"
+      ]
+    },
+    {
+      "id": "liu2007-jp066018z-mwnts-sno2-1--after-s02-heat",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "liu2007-jp066018z-mwnts-sno2-1--after-s01-mix"
+      ]
+    },
+    {
+      "id": "liu2007-jp066018z-mwnts-sno2-1--after-s03-filter",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "liu2007-jp066018z-mwnts-sno2-1--after-s02-heat"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-mix",
+      "action": "mix",
+      "label": "SLS-functionalized MWNTs solution mixed with SnCl4 solution",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "liu2007-jp066018z-mwnts-sno2-1--sncl4"
+      ],
+      "outputs": [
+        "liu2007-jp066018z-mwnts-sno2-1--after-s01-mix"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 30,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "30 min",
+          "evidence": [
+            {
+              "source_id": "liu2007-jp066018z",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "SLS-functionalized MWNTs solution mixed with SnCl4 solution",
+      "evidence": [
+        {
+          "source_id": "liu2007-jp066018z",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-heat",
+      "action": "heat",
+      "label": "Mixture heated in autoclave",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-mix"
+      ],
+      "inputs": [
+        "liu2007-jp066018z-mwnts-sno2-1--after-s01-mix"
+      ],
+      "outputs": [
+        "liu2007-jp066018z-mwnts-sno2-1--after-s02-heat"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 150,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "150 °C",
+          "evidence": [
+            {
+              "source_id": "liu2007-jp066018z",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 24,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "24 h",
+          "evidence": [
+            {
+              "source_id": "liu2007-jp066018z",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Mixture heated in autoclave",
+      "evidence": [
+        {
+          "source_id": "liu2007-jp066018z",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-filter",
+      "action": "filter",
+      "label": "Product filtered and washed",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-heat"
+      ],
+      "inputs": [
+        "liu2007-jp066018z-mwnts-sno2-1--after-s02-heat"
+      ],
+      "outputs": [
+        "liu2007-jp066018z-mwnts-sno2-1--after-s03-filter"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Product filtered and washed",
+      "evidence": [
+        {
+          "source_id": "liu2007-jp066018z",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "liu2007-jp066018z-mwnts-sno2-1--product",
+      "source_sample_label": "MWNTs/SnO2",
+      "batch_id": null,
+      "material_state_id": "liu2007-jp066018z-mwnts-sno2-1--after-s03-filter",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "SnO2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "liu2007-jp066018z",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "tetragonal",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "liu2007-jp066018z",
+            "locator": "Main PDF p.6"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "nanoparticle",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "liu2007-jp066018z",
+            "locator": "Main PDF p.6"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "liu2007-jp066018z",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reactor: autoclave (Main PDF p.2).",
+        "Reaction temperature: 150 degC (Main PDF p.2).",
+        "Reaction time: 24 h (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
