@@ -1,3 +1,5 @@
+Latest 2026-10-12T12:09:06.258922+00:00:B14 full build caught two test packaging/formatting defects;three-file correction and focused tests passed, fullnormalchecks/CI/deployment still pending. B19 local extraction/captions complete,166acceptedcaptions/fivefailedpackets under recovery; prospective26papers remain unpublished. Twelve old Rootpreviews retired; filecleanup stillheld beforedeletion. Auditlane/questions/window remain unchanged.
+
 Latest operational update 2026-10-12T11:44:03.929215+00:00: B14 normal post-metadata asset registration and seven dependency stages passed;26 papers/35 records/114 captioned crops remain unpublished. Lossless Reader compaction93,801,030→70,450,640 bytes; all3,685 canonical files unchanged and prior3,650 exact HEAD rows protected. B18 eight residual manual captions are complete privately. Source preparation, complete checks, CI and deployment remain next. Audit lane unchanged.
 
 ## Current simple-pipeline checkpoint — Batch13 live, Batch14 preparing
