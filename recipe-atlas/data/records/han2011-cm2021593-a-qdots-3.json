@@ -1,0 +1,343 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "han2011-cm2021593-a-qdots-3",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Hyunjoo Han (2011): A-qdots",
+  "material": {
+    "formula": "CdSe/ZnS",
+    "family": "CdSe/ZnS nanocrystals",
+    "elements": [
+      "Cd",
+      "Se",
+      "Zn",
+      "S"
+    ],
+    "components": [
+      "CdSe",
+      "ZnS"
+    ],
+    "architecture": "core_shell"
+  },
+  "method": "Ligand exchange",
+  "sources": [
+    {
+      "id": "han2011-cm2021593",
+      "doi": "10.1021/cm2021593",
+      "title": "Direct Attachment of Oligonucleotides to Quantum Dot Interfaces",
+      "authors": "Hyunjoo Han; Joshua Zylstra; Mathew M. Maye",
+      "year": 2011,
+      "url": "https://doi.org/10.1021/cm2021593",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "han2011-cm2021593",
+    "recipe_family": "han2011-cm2021593-a-qdots-3",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdSe/ZnS",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "han2011-cm2021593",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "zinc blende",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "han2011-cm2021593",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": 4.4,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "4.4 nm",
+      "evidence": [
+        {
+          "source_id": "han2011-cm2021593",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "sphere",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "han2011-cm2021593",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "han2011-cm2021593-a-qdots-3--30-c3-thiol-modified-oligonucleotides-a",
+      "name": "30-C3-thiol modified oligonucleotides (A-type)",
+      "formula": null,
+      "role": "ligand",
+      "stage": "workup",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "han2011-cm2021593",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "han2011-cm2021593-a-qdots-3--after-s01-purify",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "han2011-cm2021593-a-qdots-3--30-c3-thiol-modified-oligonucleotides-a"
+      ]
+    },
+    {
+      "id": "han2011-cm2021593-a-qdots-3--after-s02-add",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "han2011-cm2021593-a-qdots-3--after-s01-purify",
+        "han2011-cm2021593-a-qdots-3--30-c3-thiol-modified-oligonucleotides-a"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-purify",
+      "action": "purify",
+      "label": "Purify reduced A-type oligonucleotides with sephadex column",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "han2011-cm2021593-a-qdots-3--30-c3-thiol-modified-oligonucleotides-a"
+      ],
+      "outputs": [
+        "han2011-cm2021593-a-qdots-3--after-s01-purify"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Purify reduced A-type oligonucleotides with sephadex column",
+      "evidence": [
+        {
+          "source_id": "han2011-cm2021593",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-add",
+      "action": "add",
+      "label": "Add reduced A-type oligonucleotides to 2-qdots",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-purify"
+      ],
+      "inputs": [
+        "han2011-cm2021593-a-qdots-3--after-s01-purify",
+        "han2011-cm2021593-a-qdots-3--30-c3-thiol-modified-oligonucleotides-a"
+      ],
+      "outputs": [
+        "han2011-cm2021593-a-qdots-3--after-s02-add"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 2,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "2 h",
+          "evidence": [
+            {
+              "source_id": "han2011-cm2021593",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Add reduced A-type oligonucleotides to 2-qdots",
+      "evidence": [
+        {
+          "source_id": "han2011-cm2021593",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "han2011-cm2021593-a-qdots-3--product",
+      "source_sample_label": "A-qdots",
+      "batch_id": null,
+      "material_state_id": "han2011-cm2021593-a-qdots-3--after-s02-add",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdSe/ZnS",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "han2011-cm2021593",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "zinc blende",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "han2011-cm2021593",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "sphere",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "han2011-cm2021593",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "han2011-cm2021593",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [
+    {
+      "id": "han2011-cm2021593-a-qdots-3--size",
+      "sample_id": "han2011-cm2021593-a-qdots-3--product",
+      "property": "diameter",
+      "technique": "TEM",
+      "value": {
+        "value": 4.4,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "4.4 nm",
+        "evidence": [
+          {
+            "source_id": "han2011-cm2021593",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "han2011-cm2021593",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Ligand not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of 30-C3-thiol modified oligonucleotides (A-type) not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

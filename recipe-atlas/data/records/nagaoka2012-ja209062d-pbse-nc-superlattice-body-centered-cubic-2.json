@@ -1,0 +1,350 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "nagaoka2012-ja209062d-pbse-nc-superlattice-body-centered-cubic-2",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Yasutaka Nagaoka (2012): PbSe NC superlattice (body-centered cubic)",
+  "material": {
+    "formula": "PbSe",
+    "family": "PbSe nanocrystals",
+    "elements": [
+      "Pb",
+      "Se"
+    ],
+    "components": [
+      "PbSe"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Synthesis as described in the source",
+  "sources": [
+    {
+      "id": "nagaoka2012-ja209062d",
+      "doi": "10.1021/ja209062d",
+      "title": "Structural Control of Nanocrystal Superlattices Using Organic Guest Molecules",
+      "authors": "Yasutaka Nagaoka, Ou Chen, Zhongwu Wang, Y. Charles Cao",
+      "year": 2012,
+      "url": "https://doi.org/10.1021/ja209062d",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "nagaoka2012-ja209062d",
+    "recipe_family": "nagaoka2012-ja209062d-pbse-nc-superlattice-body-centered-cubic-2",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "PbSe",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "nagaoka2012-ja209062d",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "body-centered cubic (bcc)",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "nagaoka2012-ja209062d",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "rhombicuboctahedron",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "nagaoka2012-ja209062d",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "nagaoka2012-ja209062d-pbse-nc-superlattice-body-centered-cubic-2--toluene",
+      "name": "toluene",
+      "formula": null,
+      "role": "solvent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "nagaoka2012-ja209062d",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "nagaoka2012-ja209062d-pbse-nc-superlattice-body-centered-cubic-2--after-s01-dissolve",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "nagaoka2012-ja209062d-pbse-nc-superlattice-body-centered-cubic-2--toluene"
+      ]
+    },
+    {
+      "id": "nagaoka2012-ja209062d-pbse-nc-superlattice-body-centered-cubic-2--after-s02-drop-cast",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "nagaoka2012-ja209062d-pbse-nc-superlattice-body-centered-cubic-2--after-s01-dissolve",
+        "nagaoka2012-ja209062d-pbse-nc-superlattice-body-centered-cubic-2--toluene"
+      ]
+    },
+    {
+      "id": "nagaoka2012-ja209062d-pbse-nc-superlattice-body-centered-cubic-2--after-s03-evaporate",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "nagaoka2012-ja209062d-pbse-nc-superlattice-body-centered-cubic-2--after-s02-drop-cast",
+        "nagaoka2012-ja209062d-pbse-nc-superlattice-body-centered-cubic-2--toluene"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-dissolve",
+      "action": "dissolve",
+      "label": "Dissolve PbSe NCs and squalane in toluene",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "nagaoka2012-ja209062d-pbse-nc-superlattice-body-centered-cubic-2--toluene"
+      ],
+      "outputs": [
+        "nagaoka2012-ja209062d-pbse-nc-superlattice-body-centered-cubic-2--after-s01-dissolve"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "nagaoka2012-ja209062d",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Dissolve PbSe NCs and squalane in toluene",
+      "evidence": [
+        {
+          "source_id": "nagaoka2012-ja209062d",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "s02-drop-cast",
+      "action": "drop-cast",
+      "label": "Drop-cast solution onto substrates",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-dissolve"
+      ],
+      "inputs": [
+        "nagaoka2012-ja209062d-pbse-nc-superlattice-body-centered-cubic-2--after-s01-dissolve",
+        "nagaoka2012-ja209062d-pbse-nc-superlattice-body-centered-cubic-2--toluene"
+      ],
+      "outputs": [
+        "nagaoka2012-ja209062d-pbse-nc-superlattice-body-centered-cubic-2--after-s02-drop-cast"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "nagaoka2012-ja209062d",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Drop-cast solution onto substrates",
+      "evidence": [
+        {
+          "source_id": "nagaoka2012-ja209062d",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "s03-evaporate",
+      "action": "evaporate",
+      "label": "Evaporate solvent at room temperature",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-drop-cast"
+      ],
+      "inputs": [
+        "nagaoka2012-ja209062d-pbse-nc-superlattice-body-centered-cubic-2--after-s02-drop-cast",
+        "nagaoka2012-ja209062d-pbse-nc-superlattice-body-centered-cubic-2--toluene"
+      ],
+      "outputs": [
+        "nagaoka2012-ja209062d-pbse-nc-superlattice-body-centered-cubic-2--after-s03-evaporate"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "nagaoka2012-ja209062d",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Evaporate solvent at room temperature",
+      "evidence": [
+        {
+          "source_id": "nagaoka2012-ja209062d",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "nagaoka2012-ja209062d-pbse-nc-superlattice-body-centered-cubic-2--product",
+      "source_sample_label": "PbSe NC superlattice (body-centered cubic)",
+      "batch_id": null,
+      "material_state_id": "nagaoka2012-ja209062d-pbse-nc-superlattice-body-centered-cubic-2--after-s03-evaporate",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "PbSe",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "nagaoka2012-ja209062d",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "body-centered cubic (bcc)",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "nagaoka2012-ja209062d",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "rhombicuboctahedron",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "nagaoka2012-ja209062d",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": "oleate",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "nagaoka2012-ja209062d",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "nagaoka2012-ja209062d",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Size not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of toluene not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

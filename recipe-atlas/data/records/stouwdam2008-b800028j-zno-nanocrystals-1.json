@@ -1,0 +1,395 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "stouwdam2008-b800028j-zno-nanocrystals-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Jan W. Stouwdam and Rene´ A. J. Janssen (2008): ZnO nanocrystals",
+  "material": {
+    "formula": "ZnO",
+    "family": "ZnO nanocrystals",
+    "elements": [
+      "Zn",
+      "O"
+    ],
+    "components": [
+      "ZnO"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Precipitation",
+  "sources": [
+    {
+      "id": "stouwdam2008-b800028j",
+      "doi": "10.1039/b800028j",
+      "title": "Red, green, and blue quantum dot LEDs with solution processable ZnO nanocrystal electron injection layers",
+      "authors": "Jan W. Stouwdam and Rene´ A. J. Janssen",
+      "year": 2008,
+      "url": "https://doi.org/10.1039/b800028j",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "stouwdam2008-b800028j",
+    "recipe_family": "stouwdam2008-b800028j-zno-nanocrystals-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "ZnO",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "stouwdam2008-b800028j",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "stouwdam2008-b800028j-zno-nanocrystals-1--zinc-acetate-dihydrate",
+      "name": "zinc acetate dihydrate",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "amount": {
+          "value": 13.4,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mmol",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "13.4 mmol",
+          "evidence": [
+            {
+              "source_id": "stouwdam2008-b800028j",
+              "locator": "Main PDF p.1"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "stouwdam2008-b800028j",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "stouwdam2008-b800028j-zno-nanocrystals-1--potassium-hydroxide",
+      "name": "potassium hydroxide",
+      "formula": null,
+      "role": "nonmetal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "amount": {
+          "value": 26.4,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mmol",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "26.4 mmol",
+          "evidence": [
+            {
+              "source_id": "stouwdam2008-b800028j",
+              "locator": "Main PDF p.1"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "stouwdam2008-b800028j",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "stouwdam2008-b800028j-zno-nanocrystals-1--after-s01-dissolve",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "stouwdam2008-b800028j-zno-nanocrystals-1--zinc-acetate-dihydrate"
+      ]
+    },
+    {
+      "id": "stouwdam2008-b800028j-zno-nanocrystals-1--after-s02-wash",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "stouwdam2008-b800028j-zno-nanocrystals-1--after-s01-dissolve"
+      ]
+    },
+    {
+      "id": "stouwdam2008-b800028j-zno-nanocrystals-1--after-s03-dissolve",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "stouwdam2008-b800028j-zno-nanocrystals-1--after-s02-wash"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-dissolve",
+      "action": "dissolve",
+      "label": "Dissolving zinc acetate dihydrate in methanol",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "stouwdam2008-b800028j-zno-nanocrystals-1--zinc-acetate-dihydrate"
+      ],
+      "outputs": [
+        "stouwdam2008-b800028j-zno-nanocrystals-1--after-s01-dissolve"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 60,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "60 °C",
+          "evidence": [
+            {
+              "source_id": "stouwdam2008-b800028j",
+              "locator": "Main PDF p.1"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "not stated",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "stouwdam2008-b800028j",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Dissolving zinc acetate dihydrate in methanol",
+      "evidence": [
+        {
+          "source_id": "stouwdam2008-b800028j",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "s02-wash",
+      "action": "wash",
+      "label": "Washing the precipitate with methanol",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-dissolve"
+      ],
+      "inputs": [
+        "stouwdam2008-b800028j-zno-nanocrystals-1--after-s01-dissolve"
+      ],
+      "outputs": [
+        "stouwdam2008-b800028j-zno-nanocrystals-1--after-s02-wash"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Washing the precipitate with methanol",
+      "evidence": [
+        {
+          "source_id": "stouwdam2008-b800028j",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "s03-dissolve",
+      "action": "dissolve",
+      "label": "Dissolving the particles in isopropanol",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-wash"
+      ],
+      "inputs": [
+        "stouwdam2008-b800028j-zno-nanocrystals-1--after-s02-wash"
+      ],
+      "outputs": [
+        "stouwdam2008-b800028j-zno-nanocrystals-1--after-s03-dissolve"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "not stated",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "stouwdam2008-b800028j",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Dissolving the particles in isopropanol",
+      "evidence": [
+        {
+          "source_id": "stouwdam2008-b800028j",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "stouwdam2008-b800028j-zno-nanocrystals-1--product",
+      "source_sample_label": "ZnO nanocrystals",
+      "batch_id": null,
+      "material_state_id": "stouwdam2008-b800028j-zno-nanocrystals-1--after-s03-dissolve",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "ZnO",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "stouwdam2008-b800028j",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "stouwdam2008-b800028j",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "notes": [
+        "Reactor: not stated (Main PDF p.1).",
+        "Reaction temperature: 60 degC (Main PDF p.1).",
+        "Reaction time: 2 h (Main PDF p.1)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

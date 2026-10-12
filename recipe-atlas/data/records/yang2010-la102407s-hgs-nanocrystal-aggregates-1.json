@@ -1,0 +1,450 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "yang2010-la102407s-hgs-nanocrystal-aggregates-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Yan-Gang Yang (2010): β-HgS nanocrystal aggregates",
+  "material": {
+    "formula": "HgS",
+    "family": "HgS nanocrystals",
+    "elements": [
+      "Hg",
+      "S"
+    ],
+    "components": [
+      "HgS"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Synthesis as described in the source",
+  "sources": [
+    {
+      "id": "yang2010-la102407s",
+      "doi": "10.1021/la102407s",
+      "title": "One-Step Synthesis and Assembly of Two-Dimensional Arrays of Mercury Sulfide Nanocrystal Aggregates at the Air/Water Interface",
+      "authors": "Yan-Gang Yang, Hong-Guo Liu, Lan-Jun Chen, Kuang-Cai Chen, Hui-Ping Ding, and Jingcheng Hao",
+      "year": 2010,
+      "url": "https://doi.org/10.1021/la102407s",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "yang2010-la102407s",
+    "recipe_family": "yang2010-la102407s-hgs-nanocrystal-aggregates-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "HgS",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "yang2010-la102407s",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "cubic (β-HgS)",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "yang2010-la102407s",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "yang2010-la102407s-hgs-nanocrystal-aggregates-1--arachidic-acid",
+      "name": "arachidic acid",
+      "formula": null,
+      "role": "ligand",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "yang2010-la102407s",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "yang2010-la102407s-hgs-nanocrystal-aggregates-1--mercury-acetate",
+      "name": "mercury acetate",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "yang2010-la102407s",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "yang2010-la102407s-hgs-nanocrystal-aggregates-1--sodium-sulfide",
+      "name": "sodium sulfide",
+      "formula": null,
+      "role": "chalcogen_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "yang2010-la102407s",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "yang2010-la102407s-hgs-nanocrystal-aggregates-1--after-s01-pour",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "yang2010-la102407s-hgs-nanocrystal-aggregates-1--mercury-acetate"
+      ]
+    },
+    {
+      "id": "yang2010-la102407s-hgs-nanocrystal-aggregates-1--after-s02-spread",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "yang2010-la102407s-hgs-nanocrystal-aggregates-1--after-s01-pour",
+        "yang2010-la102407s-hgs-nanocrystal-aggregates-1--arachidic-acid"
+      ]
+    },
+    {
+      "id": "yang2010-la102407s-hgs-nanocrystal-aggregates-1--after-s03-evaporate",
+      "name": "mixture after step 3",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "yang2010-la102407s-hgs-nanocrystal-aggregates-1--after-s02-spread",
+        "yang2010-la102407s-hgs-nanocrystal-aggregates-1--arachidic-acid"
+      ]
+    },
+    {
+      "id": "yang2010-la102407s-hgs-nanocrystal-aggregates-1--after-s04-seal",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "yang2010-la102407s-hgs-nanocrystal-aggregates-1--after-s03-evaporate",
+        "yang2010-la102407s-hgs-nanocrystal-aggregates-1--sodium-sulfide"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-pour",
+      "action": "pour",
+      "label": "Pour mercury acetate solution into Petri dish",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "yang2010-la102407s-hgs-nanocrystal-aggregates-1--mercury-acetate"
+      ],
+      "outputs": [
+        "yang2010-la102407s-hgs-nanocrystal-aggregates-1--after-s01-pour"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yang2010-la102407s",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Pour mercury acetate solution into Petri dish",
+      "evidence": [
+        {
+          "source_id": "yang2010-la102407s",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-spread",
+      "action": "spread",
+      "label": "Spread AA solution onto air/water interface",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-pour"
+      ],
+      "inputs": [
+        "yang2010-la102407s-hgs-nanocrystal-aggregates-1--after-s01-pour",
+        "yang2010-la102407s-hgs-nanocrystal-aggregates-1--arachidic-acid"
+      ],
+      "outputs": [
+        "yang2010-la102407s-hgs-nanocrystal-aggregates-1--after-s02-spread"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yang2010-la102407s",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Spread AA solution onto air/water interface",
+      "evidence": [
+        {
+          "source_id": "yang2010-la102407s",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-evaporate",
+      "action": "evaporate",
+      "label": "Evaporate organic solvent",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-spread"
+      ],
+      "inputs": [
+        "yang2010-la102407s-hgs-nanocrystal-aggregates-1--after-s02-spread",
+        "yang2010-la102407s-hgs-nanocrystal-aggregates-1--arachidic-acid"
+      ],
+      "outputs": [
+        "yang2010-la102407s-hgs-nanocrystal-aggregates-1--after-s03-evaporate"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "10 min",
+          "evidence": [
+            {
+              "source_id": "yang2010-la102407s",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yang2010-la102407s",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Evaporate organic solvent",
+      "evidence": [
+        {
+          "source_id": "yang2010-la102407s",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s04-seal",
+      "action": "seal",
+      "label": "Seal container to control H2S release",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s03-evaporate"
+      ],
+      "inputs": [
+        "yang2010-la102407s-hgs-nanocrystal-aggregates-1--after-s03-evaporate",
+        "yang2010-la102407s-hgs-nanocrystal-aggregates-1--sodium-sulfide"
+      ],
+      "outputs": [
+        "yang2010-la102407s-hgs-nanocrystal-aggregates-1--after-s04-seal"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yang2010-la102407s",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Seal container to control H2S release",
+      "evidence": [
+        {
+          "source_id": "yang2010-la102407s",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "yang2010-la102407s-hgs-nanocrystal-aggregates-1--product",
+      "source_sample_label": "β-HgS nanocrystal aggregates",
+      "batch_id": null,
+      "material_state_id": "yang2010-la102407s-hgs-nanocrystal-aggregates-1--after-s04-seal",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "HgS",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yang2010-la102407s",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "cubic (β-HgS)",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yang2010-la102407s",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "yang2010-la102407s",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reactor: Petri dish (Main PDF p.2).",
+        "Reaction temperature: 14 degC (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of arachidic acid not reported in the extracted text.",
+      "Amount of mercury acetate not reported in the extracted text.",
+      "Amount of sodium sulfide not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
