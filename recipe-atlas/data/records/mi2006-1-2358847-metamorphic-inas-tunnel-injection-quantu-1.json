@@ -1,0 +1,450 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "mi2006-1-2358847-metamorphic-inas-tunnel-injection-quantu-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Z. Mi (2006): metamorphic InAs tunnel injection quantum dot lasers",
+  "material": {
+    "formula": "InAs",
+    "family": "InAs nanocrystals",
+    "elements": [
+      "In",
+      "As"
+    ],
+    "components": [
+      "InAs"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Molecular beam epitaxy",
+  "sources": [
+    {
+      "id": "mi2006-1-2358847",
+      "doi": "10.1063/1.2358847",
+      "title": "Growth and characteristics of ultralow threshold 1.45 µm metamorphic InAs tunnel injection quantum dot lasers on GaAs",
+      "authors": "Z. Mi, P. Bhattacharya, and J. Yang",
+      "year": 2006,
+      "url": "https://doi.org/10.1063/1.2358847",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "mi2006-1-2358847",
+    "recipe_family": "mi2006-1-2358847-metamorphic-inas-tunnel-injection-quantu-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "mi2006-1-2358847-metamorphic-inas-tunnel-injection-quantu-1--inas",
+      "name": "InAs",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "amount": {
+          "value": 2.9,
+          "minimum": null,
+          "maximum": null,
+          "unit": "monolayer",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "2.9 monolayer",
+          "evidence": [
+            {
+              "source_id": "mi2006-1-2358847",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "mi2006-1-2358847",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "mi2006-1-2358847-metamorphic-inas-tunnel-injection-quantu-1--in0-33ga0-67as",
+      "name": "In0.33Ga0.67As",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "amount": {
+          "value": 50,
+          "minimum": null,
+          "maximum": null,
+          "unit": "Å",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "50 Å",
+          "evidence": [
+            {
+              "source_id": "mi2006-1-2358847",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "mi2006-1-2358847",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "mi2006-1-2358847-metamorphic-inas-tunnel-injection-quantu-1--after-s01-anneal",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "mi2006-1-2358847-metamorphic-inas-tunnel-injection-quantu-1--after-s02-grow",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "mi2006-1-2358847-metamorphic-inas-tunnel-injection-quantu-1--after-s01-anneal",
+        "mi2006-1-2358847-metamorphic-inas-tunnel-injection-quantu-1--inas",
+        "mi2006-1-2358847-metamorphic-inas-tunnel-injection-quantu-1--in0-33ga0-67as"
+      ]
+    },
+    {
+      "id": "mi2006-1-2358847-metamorphic-inas-tunnel-injection-quantu-1--after-s03-anneal",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "mi2006-1-2358847-metamorphic-inas-tunnel-injection-quantu-1--after-s02-grow",
+        "mi2006-1-2358847-metamorphic-inas-tunnel-injection-quantu-1--inas",
+        "mi2006-1-2358847-metamorphic-inas-tunnel-injection-quantu-1--in0-33ga0-67as"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-anneal",
+      "action": "anneal",
+      "label": "Thermal annealing after In0.15Ga0.85As buffer layer",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "mi2006-1-2358847-metamorphic-inas-tunnel-injection-quantu-1--after-s01-anneal"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 700,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "700 °C",
+          "evidence": [
+            {
+              "source_id": "mi2006-1-2358847",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "10 min",
+          "evidence": [
+            {
+              "source_id": "mi2006-1-2358847",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "arsenic flux",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "mi2006-1-2358847",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Thermal annealing after In0.15Ga0.85As buffer layer",
+      "evidence": [
+        {
+          "source_id": "mi2006-1-2358847",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "s02-grow",
+      "action": "grow",
+      "label": "Grow InAs quantum dot layer",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-anneal"
+      ],
+      "inputs": [
+        "mi2006-1-2358847-metamorphic-inas-tunnel-injection-quantu-1--after-s01-anneal",
+        "mi2006-1-2358847-metamorphic-inas-tunnel-injection-quantu-1--inas",
+        "mi2006-1-2358847-metamorphic-inas-tunnel-injection-quantu-1--in0-33ga0-67as"
+      ],
+      "outputs": [
+        "mi2006-1-2358847-metamorphic-inas-tunnel-injection-quantu-1--after-s02-grow"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 530,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "530 °C",
+          "evidence": [
+            {
+              "source_id": "mi2006-1-2358847",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "arsenic flux",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "mi2006-1-2358847",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Grow InAs quantum dot layer",
+      "evidence": [
+        {
+          "source_id": "mi2006-1-2358847",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "s03-anneal",
+      "action": "anneal",
+      "label": "In situ annealing after InAs QD layer",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-grow"
+      ],
+      "inputs": [
+        "mi2006-1-2358847-metamorphic-inas-tunnel-injection-quantu-1--after-s02-grow",
+        "mi2006-1-2358847-metamorphic-inas-tunnel-injection-quantu-1--inas",
+        "mi2006-1-2358847-metamorphic-inas-tunnel-injection-quantu-1--in0-33ga0-67as"
+      ],
+      "outputs": [
+        "mi2006-1-2358847-metamorphic-inas-tunnel-injection-quantu-1--after-s03-anneal"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 600,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "600 °C",
+          "evidence": [
+            {
+              "source_id": "mi2006-1-2358847",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "arsenic flux",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "mi2006-1-2358847",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "In situ annealing after InAs QD layer",
+      "evidence": [
+        {
+          "source_id": "mi2006-1-2358847",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "mi2006-1-2358847-metamorphic-inas-tunnel-injection-quantu-1--product",
+      "source_sample_label": "metamorphic InAs tunnel injection quantum dot lasers",
+      "batch_id": null,
+      "material_state_id": "mi2006-1-2358847-metamorphic-inas-tunnel-injection-quantu-1--after-s03-anneal",
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "mi2006-1-2358847",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "notes": [
+        "Reactor: Veeco Gen II molecular beam epitaxy system (Main PDF p.2).",
+        "Reaction temperature: 530 degC (Main PDF p.3).",
+        "Reaction time: 10 min (Main PDF p.3)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

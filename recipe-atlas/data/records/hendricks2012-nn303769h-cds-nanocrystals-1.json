@@ -1,0 +1,390 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "hendricks2012-nn303769h-cds-nanocrystals-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Mark P. Hendricks (2012): CdS nanocrystals",
+  "material": {
+    "formula": "CdS",
+    "family": "CdS nanocrystals",
+    "elements": [
+      "Cd",
+      "S"
+    ],
+    "components": [
+      "CdS"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Heat-up",
+  "sources": [
+    {
+      "id": "hendricks2012-nn303769h",
+      "doi": "10.1021/nn303769h",
+      "title": "The Importance of Nanocrystal Precursor Conversion Kinetics: Mechanism of the Reaction between Cadmium Carboxylate and Cadmium Bis(diphenyldithiophosphinate)",
+      "authors": "Mark P. Hendricks, Brandi M. Cossairt, Jonathan S. Owen",
+      "year": 2012,
+      "url": "https://doi.org/10.1021/nn303769h",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "hendricks2012-nn303769h",
+    "recipe_family": "hendricks2012-nn303769h-cds-nanocrystals-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdS",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "hendricks2012-nn303769h",
+          "locator": "Main PDF p.5"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "zinc blende",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "hendricks2012-nn303769h",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": 3.8,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "3.8 nm",
+      "evidence": [
+        {
+          "source_id": "hendricks2012-nn303769h",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "sphere",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "hendricks2012-nn303769h",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "hendricks2012-nn303769h-cds-nanocrystals-1--cadmium-tetradecanoate",
+      "name": "cadmium tetradecanoate",
+      "formula": null,
+      "role": "ligand",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "amount": {
+          "value": 0.175,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mmol",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0.175 mmol",
+          "evidence": [
+            {
+              "source_id": "hendricks2012-nn303769h",
+              "locator": "Main PDF p.7"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "hendricks2012-nn303769h",
+          "locator": "Main PDF p.7"
+        }
+      ]
+    },
+    {
+      "id": "hendricks2012-nn303769h-cds-nanocrystals-1--1-octadecene",
+      "name": "1-octadecene",
+      "formula": null,
+      "role": "solvent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "volume": {
+          "value": 6.3,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "6.3 mL",
+          "evidence": [
+            {
+              "source_id": "hendricks2012-nn303769h",
+              "locator": "Main PDF p.7"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "hendricks2012-nn303769h",
+          "locator": "Main PDF p.7"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "hendricks2012-nn303769h-cds-nanocrystals-1--after-s01-add",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "hendricks2012-nn303769h-cds-nanocrystals-1--cadmium-tetradecanoate"
+      ]
+    },
+    {
+      "id": "hendricks2012-nn303769h-cds-nanocrystals-1--after-s02-add",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "hendricks2012-nn303769h-cds-nanocrystals-1--after-s01-add",
+        "hendricks2012-nn303769h-cds-nanocrystals-1--1-octadecene"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-add",
+      "action": "add",
+      "label": "Add Cd(S2PPh2)2 and cadmium tetradecanoate to the flask",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "hendricks2012-nn303769h-cds-nanocrystals-1--cadmium-tetradecanoate"
+      ],
+      "outputs": [
+        "hendricks2012-nn303769h-cds-nanocrystals-1--after-s01-add"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "argon",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "hendricks2012-nn303769h",
+            "locator": "Main PDF p.7"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Add Cd(S2PPh2)2 and cadmium tetradecanoate to the flask",
+      "evidence": [
+        {
+          "source_id": "hendricks2012-nn303769h",
+          "locator": "Main PDF p.7"
+        }
+      ]
+    },
+    {
+      "id": "s02-add",
+      "action": "add",
+      "label": "Add 1-octadecene to the flask",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-add"
+      ],
+      "inputs": [
+        "hendricks2012-nn303769h-cds-nanocrystals-1--after-s01-add",
+        "hendricks2012-nn303769h-cds-nanocrystals-1--1-octadecene"
+      ],
+      "outputs": [
+        "hendricks2012-nn303769h-cds-nanocrystals-1--after-s02-add"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "argon",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "hendricks2012-nn303769h",
+            "locator": "Main PDF p.7"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Add 1-octadecene to the flask",
+      "evidence": [
+        {
+          "source_id": "hendricks2012-nn303769h",
+          "locator": "Main PDF p.7"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "hendricks2012-nn303769h-cds-nanocrystals-1--product",
+      "source_sample_label": "CdS nanocrystals",
+      "batch_id": null,
+      "material_state_id": "hendricks2012-nn303769h-cds-nanocrystals-1--after-s02-add",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdS",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "hendricks2012-nn303769h",
+            "locator": "Main PDF p.5"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "zinc blende",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "hendricks2012-nn303769h",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "sphere",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "hendricks2012-nn303769h",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": "tetradecanoate",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "hendricks2012-nn303769h",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "hendricks2012-nn303769h",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "notes": [
+        "Reactor: three-neck round-bottom flask (Main PDF p.7).",
+        "Reaction temperature: 240 degC (Main PDF p.1).",
+        "Reaction time: 40 min (Main PDF p.7)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "hendricks2012-nn303769h-cds-nanocrystals-1--size",
+      "sample_id": "hendricks2012-nn303769h-cds-nanocrystals-1--product",
+      "property": "optically_derived_size",
+      "technique": "optical sizing",
+      "value": {
+        "value": 3.8,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "3.8 nm",
+        "evidence": [
+          {
+            "source_id": "hendricks2012-nn303769h",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "hendricks2012-nn303769h",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

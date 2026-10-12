@@ -1,0 +1,522 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "x2010-s11671-010-9632-z-si-ncs-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "x2010-s11671-010-9632-z (2010): Si NCs",
+  "material": {
+    "formula": "Si",
+    "family": "Si nanocrystals",
+    "elements": [
+      "Si"
+    ],
+    "components": [
+      "Si"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Non-thermal plasma",
+  "sources": [
+    {
+      "id": "x2010-s11671-010-9632-z",
+      "doi": "10.1007/s11671-010-9632-z",
+      "title": "A Silicon Nanocrystal Schottky Junction Solar Cell produced from Colloidal Silicon Nanocrystals",
+      "authors": "Chin-Yi Liu; Uwe R. Kortshagen",
+      "year": 2010,
+      "url": "https://doi.org/10.1007/s11671-010-9632-z",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "x2010-s11671-010-9632-z",
+    "recipe_family": "x2010-s11671-010-9632-z-si-ncs-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Si",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "x2010-s11671-010-9632-z",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "nanocrystalline",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "x2010-s11671-010-9632-z",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "nanoparticle",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "x2010-s11671-010-9632-z",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "x2010-s11671-010-9632-z-si-ncs-1--silane-sih4",
+      "name": "silane (SiH4)",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "x2010-s11671-010-9632-z",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "x2010-s11671-010-9632-z-si-ncs-1--after-s01-flow",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "x2010-s11671-010-9632-z-si-ncs-1--silane-sih4"
+      ]
+    },
+    {
+      "id": "x2010-s11671-010-9632-z-si-ncs-1--after-s02-collect",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "x2010-s11671-010-9632-z-si-ncs-1--after-s01-flow"
+      ]
+    },
+    {
+      "id": "x2010-s11671-010-9632-z-si-ncs-1--after-s03-dry",
+      "name": "mixture after step 3",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "x2010-s11671-010-9632-z-si-ncs-1--after-s02-collect"
+      ]
+    },
+    {
+      "id": "x2010-s11671-010-9632-z-si-ncs-1--after-s04-degas",
+      "name": "mixture after step 4",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "x2010-s11671-010-9632-z-si-ncs-1--after-s03-dry"
+      ]
+    },
+    {
+      "id": "x2010-s11671-010-9632-z-si-ncs-1--after-s05-disperse",
+      "name": "mixture after step 5",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "x2010-s11671-010-9632-z-si-ncs-1--after-s04-degas"
+      ]
+    },
+    {
+      "id": "x2010-s11671-010-9632-z-si-ncs-1--after-s06-sonicate",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "x2010-s11671-010-9632-z-si-ncs-1--after-s05-disperse"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-flow",
+      "action": "flow",
+      "label": "Flowing and dissociating silane in a non-thermal plasma reactor",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "x2010-s11671-010-9632-z-si-ncs-1--silane-sih4"
+      ],
+      "outputs": [
+        "x2010-s11671-010-9632-z-si-ncs-1--after-s01-flow"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "vacuum",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "x2010-s11671-010-9632-z",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Flowing and dissociating silane in a non-thermal plasma reactor",
+      "evidence": [
+        {
+          "source_id": "x2010-s11671-010-9632-z",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-collect",
+      "action": "collect",
+      "label": "Collecting Si NCs downstream of the plasma on stainless steel meshes",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-flow"
+      ],
+      "inputs": [
+        "x2010-s11671-010-9632-z-si-ncs-1--after-s01-flow"
+      ],
+      "outputs": [
+        "x2010-s11671-010-9632-z-si-ncs-1--after-s02-collect"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Collecting Si NCs downstream of the plasma on stainless steel meshes",
+      "evidence": [
+        {
+          "source_id": "x2010-s11671-010-9632-z",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-dry",
+      "action": "dry",
+      "label": "Drying DCB with molecular sieves",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-collect"
+      ],
+      "inputs": [
+        "x2010-s11671-010-9632-z-si-ncs-1--after-s02-collect"
+      ],
+      "outputs": [
+        "x2010-s11671-010-9632-z-si-ncs-1--after-s03-dry"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Drying DCB with molecular sieves",
+      "evidence": [
+        {
+          "source_id": "x2010-s11671-010-9632-z",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s04-degas",
+      "action": "degas",
+      "label": "Degassing DCB by bubbling nitrogen for 60 min",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s03-dry"
+      ],
+      "inputs": [
+        "x2010-s11671-010-9632-z-si-ncs-1--after-s03-dry"
+      ],
+      "outputs": [
+        "x2010-s11671-010-9632-z-si-ncs-1--after-s04-degas"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 60,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "60 min",
+          "evidence": [
+            {
+              "source_id": "x2010-s11671-010-9632-z",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "vacuum",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "x2010-s11671-010-9632-z",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Degassing DCB by bubbling nitrogen for 60 min",
+      "evidence": [
+        {
+          "source_id": "x2010-s11671-010-9632-z",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s05-disperse",
+      "action": "disperse",
+      "label": "Dispersing Si NCs in DCB to form a cloudy, yet stable solution",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s04-degas"
+      ],
+      "inputs": [
+        "x2010-s11671-010-9632-z-si-ncs-1--after-s04-degas"
+      ],
+      "outputs": [
+        "x2010-s11671-010-9632-z-si-ncs-1--after-s05-disperse"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "vacuum",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "x2010-s11671-010-9632-z",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Dispersing Si NCs in DCB to form a cloudy, yet stable solution",
+      "evidence": [
+        {
+          "source_id": "x2010-s11671-010-9632-z",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s06-sonicate",
+      "action": "sonicate",
+      "label": "Sonicating the cloudy solution for 20 min to reduce Si NC agglomeration",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s05-disperse"
+      ],
+      "inputs": [
+        "x2010-s11671-010-9632-z-si-ncs-1--after-s05-disperse"
+      ],
+      "outputs": [
+        "x2010-s11671-010-9632-z-si-ncs-1--after-s06-sonicate"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 20,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "20 min",
+          "evidence": [
+            {
+              "source_id": "x2010-s11671-010-9632-z",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "vacuum",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "x2010-s11671-010-9632-z",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Sonicating the cloudy solution for 20 min to reduce Si NC agglomeration",
+      "evidence": [
+        {
+          "source_id": "x2010-s11671-010-9632-z",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "x2010-s11671-010-9632-z-si-ncs-1--product",
+      "source_sample_label": "Si NCs",
+      "batch_id": null,
+      "material_state_id": "x2010-s11671-010-9632-z-si-ncs-1--after-s06-sonicate",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Si",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "x2010-s11671-010-9632-z",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "nanocrystalline",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "x2010-s11671-010-9632-z",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "nanoparticle",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "x2010-s11671-010-9632-z",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "x2010-s11671-010-9632-z",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of silane (SiH4) not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
