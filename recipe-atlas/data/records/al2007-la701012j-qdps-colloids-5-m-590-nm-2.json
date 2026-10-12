@@ -1,0 +1,331 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "al2007-la701012j-qdps-colloids-5-m-590-nm-2",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "EVerett et al. (2007): QDPS colloids (5 µm/590 nm)",
+  "material": {
+    "formula": "CdSe-ZnS",
+    "family": "CdSe-ZnS nanocrystals",
+    "elements": [
+      "Cd",
+      "Se",
+      "Zn",
+      "S"
+    ],
+    "components": [
+      "CdSe",
+      "ZnS"
+    ],
+    "architecture": "core_shell"
+  },
+  "method": "Hot injection",
+  "sources": [
+    {
+      "id": "al2007-la701012j",
+      "doi": "10.1021/la701012j",
+      "title": "Evanescent Wave Excited Luminescence from Levitated Quantum Dot Modified Colloids",
+      "authors": "W. Neil Everett; Richard E. Beckham; Kenith Meissner; Michael A. Bevan",
+      "year": 2007,
+      "url": "https://doi.org/10.1021/la701012j",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "al2007-la701012j",
+    "recipe_family": "al2007-la701012j-qdps-colloids-5-m-590-nm-2",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdSe-ZnS",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "al2007-la701012j",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "al2007-la701012j-qdps-colloids-5-m-590-nm-2--cdo",
+      "name": "CdO",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "al2007-la701012j",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "al2007-la701012j-qdps-colloids-5-m-590-nm-2--se",
+      "name": "Se",
+      "formula": null,
+      "role": "chalcogen_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "al2007-la701012j",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "al2007-la701012j-qdps-colloids-5-m-590-nm-2--topo",
+      "name": "TOPO",
+      "formula": null,
+      "role": "ligand",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "al2007-la701012j",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "al2007-la701012j-qdps-colloids-5-m-590-nm-2--zns",
+      "name": "ZnS",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "al2007-la701012j",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "al2007-la701012j-qdps-colloids-5-m-590-nm-2--after-s01-heat",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "al2007-la701012j-qdps-colloids-5-m-590-nm-2--cdo",
+        "al2007-la701012j-qdps-colloids-5-m-590-nm-2--se",
+        "al2007-la701012j-qdps-colloids-5-m-590-nm-2--topo"
+      ]
+    },
+    {
+      "id": "al2007-la701012j-qdps-colloids-5-m-590-nm-2--after-s02-transfer",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "al2007-la701012j-qdps-colloids-5-m-590-nm-2--after-s01-heat"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-heat",
+      "action": "heat",
+      "label": "Synthesis of CdSe nanocrystals",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "al2007-la701012j-qdps-colloids-5-m-590-nm-2--cdo",
+        "al2007-la701012j-qdps-colloids-5-m-590-nm-2--se",
+        "al2007-la701012j-qdps-colloids-5-m-590-nm-2--topo"
+      ],
+      "outputs": [
+        "al2007-la701012j-qdps-colloids-5-m-590-nm-2--after-s01-heat"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Synthesis of CdSe nanocrystals",
+      "evidence": [
+        {
+          "source_id": "al2007-la701012j",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "s02-transfer",
+      "action": "transfer",
+      "label": "Transfer to chloroform",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-heat"
+      ],
+      "inputs": [
+        "al2007-la701012j-qdps-colloids-5-m-590-nm-2--after-s01-heat"
+      ],
+      "outputs": [
+        "al2007-la701012j-qdps-colloids-5-m-590-nm-2--after-s02-transfer"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Transfer to chloroform",
+      "evidence": [
+        {
+          "source_id": "al2007-la701012j",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "al2007-la701012j-qdps-colloids-5-m-590-nm-2--product",
+      "source_sample_label": "QDPS colloids (5 µm/590 nm)",
+      "batch_id": null,
+      "material_state_id": "al2007-la701012j-qdps-colloids-5-m-590-nm-2--after-s02-transfer",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdSe-ZnS",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "al2007-la701012j",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "al2007-la701012j",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of CdO not reported in the extracted text.",
+      "Amount of Se not reported in the extracted text.",
+      "Amount of TOPO not reported in the extracted text.",
+      "Amount of ZnS not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

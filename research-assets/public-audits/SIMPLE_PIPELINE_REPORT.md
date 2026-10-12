@@ -445,8 +445,6 @@ Recorded source ci run: [38178370238](https://github.com/cuiyist/mattersyn/actio
 
 ### simple-batch08-20261011
 
-Caption display delivered in this batch: all 196 new crops have descriptive public captions (171 accepted local, 20 recovered local, five manual); 484 Reader figure instances were bound. Cards and enlarged views show the caption and page/figure locator, with phone wrapping. The shared legacy selector restores 13 existing public paraphrases (Costanzo five, Ghezelbash eight), with cache version 0.41.6. Exact final desktop/phone checks passed; the published Yu 2003 Figure 1 card and enlargement were observed after deployment. No scientific claim, crop, source provenance, permission, training eligibility or release gate was changed by this display repair.
-
 Anonymous verification passed at 2026-10-12T00:31:26+00:00: 4,125 files, zero mismatches. [Source commit](https://github.com/cuiyist/mattersyn/commit/6da4670e33a024fa39aa52478be303cf62245e39) and [Site commit](https://github.com/cuiyist/mattersyn-site/commit/708ba0c4feb13abce6696d6ba4bce7cb157e319f). This batch contains 35 source groups, 52 records and 196 source figure crops; 35 distinct newly contributing primary papers after DOI deduplication. Every new contribution remains machine extracted and not independently audited. The final built site is 1,602,746,579 bytes / 30,293 files.
 
 Live counter: **244 audited + 272 machine extracted = 516 papers**, 3,417 canonical records, 335 direct material families, 383 material/component pages and 1296 displayed recipe–structure pairs (6 more comprehensive; 1290 partial). These display counts do not establish extraction accuracy, measured atomic coordinates or training eligibility.
@@ -492,6 +490,55 @@ Recorded source ci run: [38184483692](https://github.com/cuiyist/mattersyn/actio
 | 10.1021/cm034081k | 3 | 7 | [Open](https://cuiyist.github.io/mattersyn-site/records/yu2003-cm034081k-cdte-nanocrystals-1.html) |
 | 10.1021/cm050260l | 2 | 9 | [Open](https://cuiyist.github.io/mattersyn-site/records/zhang2005-cm050260l-cdte-ps-composites-cfp-method-1.html) |
 | 10.1021/am505371g | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/zhang2014-am505371g-cdse-cds-au-qd-au-coresatellite-hncs-ass-1.html) |
+
+
+### simple-batch09-20261012
+
+Anonymous verification passed at 2026-10-12T02:14:36+00:00: 635 files, zero mismatches. [Source commit](https://github.com/cuiyist/mattersyn/commit/4faf4932e7e8969de9406351e10c1914f845734c) and [Site commit](https://github.com/cuiyist/mattersyn-site/commit/7d53adb44fd36b1b3a32323637788e307ad81d98). This batch contains 35 source groups, 45 records and 182 source figure crops; 35 distinct newly contributing primary papers after DOI deduplication. Every new contribution remains machine extracted and not independently audited. The final built site is 1,654,212,947 bytes / 30,849 files.
+
+Live counter: **244 audited + 307 machine extracted = 551 papers**, 3,462 canonical records, 341 direct material families, 391 material/component pages and 1341 displayed recipe–structure pairs (6 more comprehensive; 1335 partial). These display counts do not establish extraction accuracy, measured atomic coordinates or training eligibility.
+
+Recorded source pr: [26](https://github.com/cuiyist/mattersyn/pull/26).
+
+Recorded source ci run: [38190616336](https://github.com/cuiyist/mattersyn/actions/runs/38190616336).
+
+| Primary DOI | Records | Figure crops | Public page |
+| --- | ---: | ---: | --- |
+| 10.1063/1.1374235 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/borgstrom2001-1-1374235-inas-quantum-dot-stacks-embedded-in-inp-1.html) |
+| 10.1039/c3ta10255f | 1 | 7 | [Open](https://cuiyist.github.io/mattersyn-site/records/chen2013-c3ta10255f-core-shell-cdte-cds-qd-tio2-nanotube-arr-1.html) |
+| 10.1038/s41598-017-00669-9 | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/choi2017-s41598-017-00669-9-pbs-qd-ink-1.html) |
+| 10.1063/1.2011768 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/choudhury2005-1-2011768-pbse-quantum-dots-in-poly-n-vinylcarbazo-1.html) |
+| 10.1021/jp807591d | 1 | 6 | [Open](https://cuiyist.github.io/mattersyn-site/records/cui2008-jp807591d-topo-capped-cdte-qd-1.html) |
+| 10.1038/nature03832 | 2 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/erwin2005-nature03832-mn-doped-znse-nanocrystals-1.html) |
+| 10.1063/1.1781361 | 1 | 2 | [Open](https://cuiyist.github.io/mattersyn-site/records/holub2004-1-1781361-inas-mn-quantum-dot-multilayer-1.html) |
+| 10.1021/jacs.0c10916 | 1 | 6 | [Open](https://cuiyist.github.io/mattersyn-site/records/imran2021-jacs-0c10916-cspbbr3pb4s3br2-heterostructures-1.html) |
+| 10.1103/physrevb.70.195327 | 1 | 8 | [Open](https://cuiyist.github.io/mattersyn-site/records/jarosz2004-physrevb-70-195327-cdse-quantum-dots-qds-with-a-diameter-of-1.html) |
+| 10.1021/la052197k | 1 | 9 | [Open](https://cuiyist.github.io/mattersyn-site/records/joumaa2006-la052197k-topo-coated-cdse-zns-qd-tagged-polystyre-1.html) |
+| 10.1021/jp4110773 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/jumabekov2014-jp4110773-pbs-qd-sensitized-tio2-electrodes-1.html) |
+| 10.1063/1.2966341 | 2 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/kim2008-1-2966341-cdse-decorated-fluorinated-double-walled-1.html) |
+| 10.1021/acsanm.2c00717 | 1 | 8 | [Open](https://cuiyist.github.io/mattersyn-site/records/koc2022-acsanm-2c00717-nitrogen-doped-carbon-quantum-dots-n-cqd-1.html) |
+| 10.1039/b817000b | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/lan2009-b817000b-tio2-3-pdda-qdcdte-3-fto-1.html) |
+| 10.1021/jp205844r | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/lee2011-jp205844r-cdse-cds-zno-nw-1.html) |
+| 10.1021/jp508315m | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/lee2014-jp508315m-cdse-a-tio2-1.html) |
+| 10.1021/jp101695s | 1 | 9 | [Open](https://cuiyist.github.io/mattersyn-site/records/leschkies2010-jp101695s-edt-treated-pbse-qd-films-1.html) |
+| 10.1021/ja204538f | 3 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/li2011-ja204538f-cds-nanocrystals-classic-approach-1.html) |
+| 10.1021/jp066018z | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/liu2007-jp066018z-mwnts-sno2-1.html) |
+| 10.1021/ie501035s | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/liu2014-ie501035s-fluorescent-spherical-polyelectrolyte-br-1.html) |
+| 10.1038/nmat902 | 1 | 1 | [Open](https://cuiyist.github.io/mattersyn-site/records/manna2003-nmat902-cdte-tetrapods-1.html) |
+| 10.1063/1.370578 | 2 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/nan1999-1-370578-undoped-nanocrystalline-zno-pz1-1.html) |
+| 10.1021/nl3027444 | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/otto2012-nl3027444-cdte-qds-embedded-in-nacl-mixed-crystals-1.html) |
+| 10.1021/jp803845n | 3 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/ouyang2008-jp803845n-family-513-cdse-msns-1.html) |
+| 10.1021/nl203620f | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/pal2012-nl203620f-cdse-16cds-g-nqds-1.html) |
+| 10.1021/jp020453l | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/plass2002-jp020453l-pbs-quantum-dots-on-tio2-1.html) |
+| 10.1021/ja017002j | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/qu2002-ja017002j-cdse-nanocrystals-1.html) |
+| 10.1021/jp410599q | 1 | 8 | [Open](https://cuiyist.github.io/mattersyn-site/records/shen2014-jp410599q-cdse-qds-capped-with-top-1.html) |
+| 10.1021/jp306255g | 3 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/shepherd2012-jp306255g-cdse-qds-capped-with-oleic-acid-tri-n-oc-1.html) |
+| 10.1021/am500429c | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/sohn2014-am500429c-cuins2-zns-qdes-1.html) |
+| 10.1021/jp209832h | 1 | 8 | [Open](https://cuiyist.github.io/mattersyn-site/records/text2012-jp209832h-cdte-qds-1.html) |
+| 10.1557/jmr.2004.0420 | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/wang2004-jmr-2004-0420-cdse-magic-sized-nanoclusters-1.html) |
+| 10.1021/jp210062x | 1 | 6 | [Open](https://cuiyist.github.io/mattersyn-site/records/wang2012-jp210062x-cdse-zns-qds-1.html) |
+| 10.1021/jp044531b | 2 | 8 | [Open](https://cuiyist.github.io/mattersyn-site/records/warner2005-jp044531b-1-nm-pbs-nc-p-composite-1.html) |
+| 10.1038/nmat3118 | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/x2011-nmat3118-br-capped-pbs-cqd-film-1.html) |
 
 ## Latest continuation checkpoint
 
@@ -951,3 +998,14 @@ Normal asset registration checked 409 assets, added 384 exact entries and added 
 Choice: ship available public descriptive captions with exact source locators; keep original source captions, quoted pass/pair files and local-model payloads local. Batch 11 continues local generation independently; its completion is not inferred. Batches 12–13 have private inputs prepared and are not launched.
 
 The first Source-preparation attempt rejected the newly updated machine-paper list as an unexpected path before staging. Use the existing exact --extra-path argument for research-assets/public-audits/MACHINE_EXTRACTED_PAPERS.md; no tool, policy or path rule is changed.
+
+
+## Caption completion and Batch10 preparation — 2026-10-12T02:30:52.683357+00:00
+
+Batch9 live verification succeeded at2026-10-12T02:14:36+00:00 (635 files,zero mismatches). Initial failed Reader-file retrieval and the exact-byte probe/retry are preserved; this is not a second deployment. Live card/enlargement captions were inspected on Imran2021 at02:23:49 UTC.
+
+Batch10 prepared scope is35 papers,53 records,181 retained crops; all have public captions (176 accepted local,4 saved-response recovered,1 manual),435 Reader instances. Seventeen retained papers received citation-only metadata corrections,26 records,29 dependent files; no scientific facts changed. Missing captions on20 distinct legacy crops are added across116 record views and116 source-gallery views;232 caption fields only. The complete build, local visual checks, Source CI/merge and normal Site publication remain pending; Batch10 paper credit is0.
+
+NN4002825 is omitted because its retained record no longer matches the immutable original citation ID. The strict binding was not changed. Initial integration was retained privately and the prior Source payload restored with3,462 old canonical rows unchanged; two stale generated files were retained explicitly before ordinary integration of the other35 papers. All original pairs, receipts, figures and unsuccessful attempts remain local. No data was destroyed.
+
+Batch12:44 two-pass successes,55 checked pairs,213 private figure rows;51.5253 extraction minutes; original controller OS exit isunknown. Local caption client returned0 with199 accepted captions,43 requests and2 original failures; recovery/manual completion is private and separate. All three rare groups completed. Batch13 local controller47724 launched45 supported papers on owned server32512;5 identity holds; no publication credit. The source job continues; the audited lane and its four questions/history remain paused. No uninterrupted work or unmeasured hourly rate is asserted.
