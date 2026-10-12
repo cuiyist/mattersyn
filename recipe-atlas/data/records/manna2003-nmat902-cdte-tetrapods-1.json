@@ -1,0 +1,392 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "manna2003-nmat902-cdte-tetrapods-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Liberato Manna (2003): CdTe tetrapods",
+  "material": {
+    "formula": "CdTe",
+    "family": "CdTe nanocrystals",
+    "elements": [
+      "Cd",
+      "Te"
+    ],
+    "components": [
+      "CdTe"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Synthesis as described in the source",
+  "sources": [
+    {
+      "id": "manna2003-nmat902",
+      "doi": "10.1038/nmat902",
+      "title": "Controlled growth of tetrapod-branched inorganic nanocrystals",
+      "authors": "Liberato Manna, Delia J. Milliron, Andreas Meisel, Erik C. Scher, A. Paul Alivisatos",
+      "year": 2003,
+      "url": "https://doi.org/10.1038/nmat902",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "manna2003-nmat902",
+    "recipe_family": "manna2003-nmat902-cdte-tetrapods-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdTe",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "manna2003-nmat902",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "zinc blende and wurtzite",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "manna2003-nmat902",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "tetrapod",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "manna2003-nmat902",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "manna2003-nmat902-cdte-tetrapods-1--cdo",
+      "name": "CdO",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "manna2003-nmat902",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "manna2003-nmat902-cdte-tetrapods-1--te",
+      "name": "Te",
+      "formula": null,
+      "role": "chalcogen_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "manna2003-nmat902",
+          "locator": "Main PDF p.4"
+        }
+      ]
+    },
+    {
+      "id": "manna2003-nmat902-cdte-tetrapods-1--topo",
+      "name": "TOPO",
+      "formula": null,
+      "role": "solvent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "manna2003-nmat902",
+          "locator": "Main PDF p.4"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "manna2003-nmat902-cdte-tetrapods-1--after-s01-heat",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "manna2003-nmat902-cdte-tetrapods-1--topo",
+        "manna2003-nmat902-cdte-tetrapods-1--cdo"
+      ]
+    },
+    {
+      "id": "manna2003-nmat902-cdte-tetrapods-1--after-s02-inject",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "manna2003-nmat902-cdte-tetrapods-1--after-s01-heat",
+        "manna2003-nmat902-cdte-tetrapods-1--te"
+      ]
+    },
+    {
+      "id": "manna2003-nmat902-cdte-tetrapods-1--after-s03-precipitate",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "manna2003-nmat902-cdte-tetrapods-1--after-s02-inject"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-heat",
+      "action": "heat",
+      "label": "Heating the mixture under argon until CdO decomposes",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "manna2003-nmat902-cdte-tetrapods-1--topo",
+        "manna2003-nmat902-cdte-tetrapods-1--cdo"
+      ],
+      "outputs": [
+        "manna2003-nmat902-cdte-tetrapods-1--after-s01-heat"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Heating the mixture under argon until CdO decomposes",
+      "evidence": [
+        {
+          "source_id": "manna2003-nmat902",
+          "locator": "Main PDF p.4"
+        }
+      ]
+    },
+    {
+      "id": "s02-inject",
+      "action": "inject",
+      "label": "Injection of Te:TOP precursor solution",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-heat"
+      ],
+      "inputs": [
+        "manna2003-nmat902-cdte-tetrapods-1--after-s01-heat",
+        "manna2003-nmat902-cdte-tetrapods-1--te"
+      ],
+      "outputs": [
+        "manna2003-nmat902-cdte-tetrapods-1--after-s02-inject"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 315,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "315 °C",
+          "evidence": [
+            {
+              "source_id": "manna2003-nmat902",
+              "locator": "Main PDF p.4"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Injection of Te:TOP precursor solution",
+      "evidence": [
+        {
+          "source_id": "manna2003-nmat902",
+          "locator": "Main PDF p.4"
+        }
+      ]
+    },
+    {
+      "id": "s03-precipitate",
+      "action": "precipitate",
+      "label": "Precipitation of nanocrystals with methanol",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-inject"
+      ],
+      "inputs": [
+        "manna2003-nmat902-cdte-tetrapods-1--after-s02-inject"
+      ],
+      "outputs": [
+        "manna2003-nmat902-cdte-tetrapods-1--after-s03-precipitate"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Precipitation of nanocrystals with methanol",
+      "evidence": [
+        {
+          "source_id": "manna2003-nmat902",
+          "locator": "Main PDF p.4"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "manna2003-nmat902-cdte-tetrapods-1--product",
+      "source_sample_label": "CdTe tetrapods",
+      "batch_id": null,
+      "material_state_id": "manna2003-nmat902-cdte-tetrapods-1--after-s03-precipitate",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdTe",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "manna2003-nmat902",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "zinc blende and wurtzite",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "manna2003-nmat902",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "tetrapod",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "manna2003-nmat902",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "manna2003-nmat902",
+          "locator": "Main PDF p.4"
+        }
+      ],
+      "notes": [
+        "Reaction temperature: 315 degC (Main PDF p.4).",
+        "Reaction time: 5 min (Main PDF p.4)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Amount of CdO not reported in the extracted text.",
+      "Amount of Te not reported in the extracted text.",
+      "Amount of TOPO not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

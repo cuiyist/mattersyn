@@ -442,6 +442,57 @@ Recorded source ci run: [38178370238](https://github.com/cuiyist/mattersyn/actio
 | 10.1021/ic201333y | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/yao2011-ic201333y-topo-capped-cdte-aerogel-1.html) |
 | 10.1021/cm034729t | 4 | 8 | [Open](https://cuiyist.github.io/mattersyn-site/records/yu2003-cm034729t-cdte-nanocrystals-with-wurtzite-structur-1.html) |
 
+
+### simple-batch08-20261011
+
+Caption display delivered in this batch: all 196 new crops have descriptive public captions (171 accepted local, 20 recovered local, five manual); 484 Reader figure instances were bound. Cards and enlarged views show the caption and page/figure locator, with phone wrapping. The shared legacy selector restores 13 existing public paraphrases (Costanzo five, Ghezelbash eight), with cache version 0.41.6. Exact final desktop/phone checks passed; the published Yu 2003 Figure 1 card and enlargement were observed after deployment. No scientific claim, crop, source provenance, permission, training eligibility or release gate was changed by this display repair.
+
+Anonymous verification passed at 2026-10-12T00:31:26+00:00: 4,125 files, zero mismatches. [Source commit](https://github.com/cuiyist/mattersyn/commit/6da4670e33a024fa39aa52478be303cf62245e39) and [Site commit](https://github.com/cuiyist/mattersyn-site/commit/708ba0c4feb13abce6696d6ba4bce7cb157e319f). This batch contains 35 source groups, 52 records and 196 source figure crops; 35 distinct newly contributing primary papers after DOI deduplication. Every new contribution remains machine extracted and not independently audited. The final built site is 1,602,746,579 bytes / 30,293 files.
+
+Live counter: **244 audited + 272 machine extracted = 516 papers**, 3,417 canonical records, 335 direct material families, 383 material/component pages and 1296 displayed recipe–structure pairs (6 more comprehensive; 1290 partial). These display counts do not establish extraction accuracy, measured atomic coordinates or training eligibility.
+
+Recorded source pr: [25](https://github.com/cuiyist/mattersyn/pull/25).
+
+Recorded source ci run: [38184483692](https://github.com/cuiyist/mattersyn/actions/runs/38184483692).
+
+| Primary DOI | Records | Figure crops | Public page |
+| --- | ---: | ---: | --- |
+| 10.1002/pssa.200622106 | 4 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/al2006-pssa-200622106-sample-a-1.html) |
+| 10.1021/cm1006229 | 1 | 7 | [Open](https://cuiyist.github.io/mattersyn-site/records/al2010-cm1006229-pbse-nanocrystals-capped-with-oleic-acid-1.html) |
+| 10.1021/la904474h | 2 | 8 | [Open](https://cuiyist.github.io/mattersyn-site/records/al2010-la904474h-q-cdse-3-1-nm-1.html) |
+| 10.1021/nn402844m | 1 | 8 | [Open](https://cuiyist.github.io/mattersyn-site/records/al2013-nn402844m-zns-nanoparticles-2.html) |
+| 10.1021/nn405236k | 1 | 7 | [Open](https://cuiyist.github.io/mattersyn-site/records/al2014-nn405236k-pbs-qds-synthesized-from-pbcl2-1.html) |
+| 10.1021/nl801685a | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/evans2008-nl801685a-pbse-mscs-1.html) |
+| 10.1021/nn101319x | 2 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/fuke2010-nn101319x-cdse-nqd-topo-1.html) |
+| 10.1016/j.materresbull.2019.110588 | 4 | 7 | [Open](https://cuiyist.github.io/mattersyn-site/records/hassan2019-j-materresbull-2019-110588-tio2-pbs-nc-1.html) |
+| 10.1021/nl903217w | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/hensel2010-nl903217w-cdse-tio2-n-nanoparticle-films-1.html) |
+| 10.1021/am900917n | 1 | 6 | [Open](https://cuiyist.github.io/mattersyn-site/records/hwang2010-am900917n-cds-sensitized-tio2-electrode-1.html) |
+| 10.1016/j.snb.2019.02.042 | 1 | 8 | [Open](https://cuiyist.github.io/mattersyn-site/records/j-snb-2019-02-042-pbs-cqds-1.html) |
+| 10.1021/nl201282v | 2 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/jasieniak2011-nl201282v-cdte-nanocrystals-1.html) |
+| 10.1063/1.3028070 | 2 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/kang2008-1-3028070-topo-capped-cdse-zns-qds-1.html) |
+| 10.1021/cm502763z | 1 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/kim2014-cm502763z-pbs-nanocrystals-5-5-nm-1.html) |
+| 10.1039/b108062h | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/lee2002-b108062h-cds-tp-n-0-086mos2-nanohybrid-1.html) |
+| 10.1039/b917634a | 1 | 7 | [Open](https://cuiyist.github.io/mattersyn-site/records/liu2009-b917634a-cdse-qd-sensitized-bicontinuous-tio2-fil-1.html) |
+| 10.1038/nmat2222 | 1 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/mahler2008-nmat2222-cdsecds-coreshell-quantum-dots-with-5-nm-1.html) |
+| 10.1063/1.1510157 | 1 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/mazur2002-1-1510157-vertically-aligned-double-layer-inas-gaa-1.html) |
+| 10.1021/cm071410q | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/moreels2007-cm071410q-q-pbse-3-3-nm-1.html) |
+| 10.1103/physrevb.73.155303 | 1 | 11 | [Open](https://cuiyist.github.io/mattersyn-site/records/porter2006-physrevb-73-155303-cdte-nanocrystals-1.html) |
+| 10.1557/jmr.2010.0077 | 2 | 8 | [Open](https://cuiyist.github.io/mattersyn-site/records/reda2010-jmr-2010-0077-cds-nanoparticles-1.html) |
+| 10.1007/s10854-007-9340-3 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/ren2008-s10854-007-9340-3-zns-mn-nanoparticles-1.html) |
+| 10.1021/nn406126u | 2 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/schimpf2014-nn406126u-photodoped-zno-nanocrystals-r-1-75-nm-1.html) |
+| 10.1021/nn900735y | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/shallcross2009-nn900735y-ligand-capped-cdse-nanocrystal-diffracti-1.html) |
+| 10.1149/1.3465655 | 2 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/song2010-1-3465655-ba2si3o8-eu2-phosphor-1.html) |
+| 10.1063/1.1609634 | 1 | 6 | [Open](https://cuiyist.github.io/mattersyn-site/records/stewart2003-1-1609634-30-stack-inas-gaas-quantum-dot-infrared-1.html) |
+| 10.1021/acs.chemmater.6b03585 | 2 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/tamang2016-acs-chemmater-6b03585-inas-nanoclusters-1.html) |
+| 10.1063/1.1467961 | 1 | 6 | [Open](https://cuiyist.github.io/mattersyn-site/records/tang2002-1-1467961-two-stacked-inas-gaas-quantum-dot-pin-di-1.html) |
+| 10.1021/nn901564q | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/tang2010-nn901564q-pbs-ncs-with-930-nm-excitonic-peak-1.html) |
+| 10.1021/ac201016c | 1 | 7 | [Open](https://cuiyist.github.io/mattersyn-site/records/text2011-ac201016c-mn2-doped-zns-cys-mn-zns-cys-qds-1.html) |
+| 10.1021/acsomega.0c00019 | 1 | 7 | [Open](https://cuiyist.github.io/mattersyn-site/records/text2020-acsomega-0c00019-si-qd-cluster-1.html) |
+| 10.1021/am5033567 | 1 | 6 | [Open](https://cuiyist.github.io/mattersyn-site/records/tian2014-am5033567-cdse-zns-coreshell-qds-1.html) |
+| 10.1021/cm034081k | 3 | 7 | [Open](https://cuiyist.github.io/mattersyn-site/records/yu2003-cm034081k-cdte-nanocrystals-1.html) |
+| 10.1021/cm050260l | 2 | 9 | [Open](https://cuiyist.github.io/mattersyn-site/records/zhang2005-cm050260l-cdte-ps-composites-cfp-method-1.html) |
+| 10.1021/am505371g | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/zhang2014-am505371g-cdse-cds-au-qd-au-coresatellite-hncs-ass-1.html) |
+
 ## Latest continuation checkpoint
 
 At 2026-10-11T06:09:34+00:00, Batch01 is live and anonymously verified; Batch02 remains in local processing with 47/49 two-pass-complete papers at its last saved checkpoint. These are processing counts, not additional published papers. The audited lane stays paused.
@@ -871,3 +922,32 @@ Choice: private caption generation proceeds alongside the next local extraction 
 Batch 7 is verified live: 36 new papers, 54 records and 216 captioned crops; 747 anonymously checked files, zero mismatches. Live counters: 481 papers and 1,244 recipe–structure pairs. Batch 8 has 35 papers / 52 records / 196 crops locally prepared, zero publication credit. All 196 retained crops have bound descriptive public captions: 171 accepted local, 20 recovered local, five manual paraphrases, covering 484 Reader instances. Original caption text remains private. Twelve rare papers were read once; 62 scientific objects and four coupled units were removed. Twelve retained papers received citation-only corrections; old record bytes remain protected.
 
 The existing-caption display fix selects 13 already-public paraphrases and shows captions in legacy cards/enlargements with phone wrapping. Twenty-one display/cache/test files changed; no scientific record, crop, provenance, permission or release gate changes. Normal source/build/CI/browser/deployment checks are still pending. One fresh asset dry run failed because PowerShell parsed an ISO timestamp to DateTime before replay; replaying the saved exact string through Python passed, with the same timestamp and unchanged guard. All 487 assets checked, 465 new registry entries, zero path-rule additions. No gate was changed to pass.
+
+## Batch 9 prepared with captions — publication pending
+
+2026-10-12T00:47:30+00:00: **35 papers, 45 ordinary records and 182 figure crops** are locally prepared, with **zero Batch 9 publication credit**. The current live total remains 516 papers / 1,296 displayed pairs. All 182 retained crops have validated descriptive public captions and page/figure locators, bound to 409 Reader instances. These retained captions came from accepted local paraphrases; recovery/manual captions from omitted papers are not claimed as shipped.
+
+The one-reader rare-material scope covered nine papers and deleted 18 incorrect scientific objects, three coupled units and one wrong locator (22 paths); no facts were added. Ten retained papers / 14 records received authority-bound citation-only corrections in 17 dependent files. All 3,417 prior canonical rows remain byte-identical. Status remains `source_extracted`; audited records and the six training exports keep their existing scope.
+
+The 50-paper cohort had 47 supported generation inputs and 46 successful two-pass papers. Extraction took 71.6445 wall-clock minutes; one original failed pass and one failed pass on the permitted retry left DOI 10.1021/am504615x out. Three identity holds (a_1022608802635, a_1026714004563 and cm00055a009) remain technical holds. Before rare reading, the unchanged checker retained 878 of 1,423 assessed values in 63 private pairs; conversion then selected the 35-paper payload above. Missing stage timestamps were not inferred.
+
+| Additional omitted paper or route | Normal conversion reason |
+| --- | --- |
+| 10.1002/jbm.a.30410 | no_route_eligible_record |
+| 10.1007/s12274-010-0010-z | no_route_eligible_record |
+| 10.1021/ac400250j | no_route_eligible_record |
+| 10.1021/jp053621t | no_usable_pairs |
+| 10.1021/jp061453e | no_route_eligible_record |
+| 10.1021/jp066018z; pair 2 only | no_synthesis_operation |
+| 10.1021/jp5111218 | no_route_eligible_record |
+| 10.1021/jp809538z | no_usable_pairs |
+| 10.1021/ma701983y | no_route_eligible_record |
+| 10.1021/nl403889u | no_route_eligible_record |
+| 10.1039/c6ta04934f | no_usable_pairs |
+| 10.1063/1.1759788 | no_usable_pairs |
+
+Normal asset registration checked 409 assets, added 384 exact entries and added zero new path rules. An initial invocation used an unsupported `--out` argument and wrote no asset changes; the correction saved the normal tool's JSON stdout without modifying it. Fresh registration and the dependent metadata build passed. Complete local release checks, CI, preview, deployment and anonymous verification remain required. No policy or gate was weakened.
+
+Choice: ship available public descriptive captions with exact source locators; keep original source captions, quoted pass/pair files and local-model payloads local. Batch 11 continues local generation independently; its completion is not inferred. Batches 12–13 have private inputs prepared and are not launched.
+
+The first Source-preparation attempt rejected the newly updated machine-paper list as an unexpected path before staging. Use the existing exact --extra-path argument for research-assets/public-audits/MACHINE_EXTRACTED_PAPERS.md; no tool, policy or path rule is changed.

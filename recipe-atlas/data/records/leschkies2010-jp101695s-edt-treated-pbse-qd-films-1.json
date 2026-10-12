@@ -1,0 +1,514 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "leschkies2010-jp101695s-edt-treated-pbse-qd-films-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Kurtis S. Leschkies (2010): EDT-treated PbSe QD films",
+  "material": {
+    "formula": "PbSe",
+    "family": "PbSe nanocrystals",
+    "elements": [
+      "Pb",
+      "Se"
+    ],
+    "components": [
+      "PbSe"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Heat-up",
+  "sources": [
+    {
+      "id": "leschkies2010-jp101695s",
+      "doi": "10.1021/jp101695s",
+      "title": "Influence of Atmospheric Gases on the Electrical Properties of PbSe Quantum-Dot Films",
+      "authors": "Kurtis S. Leschkies, Moon Sung Kang, Eray S. Aydil, and David J. Norris",
+      "year": 2010,
+      "url": "https://doi.org/10.1021/jp101695s",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "leschkies2010-jp101695s",
+    "recipe_family": "leschkies2010-jp101695s-edt-treated-pbse-qd-films-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "PbSe",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "leschkies2010-jp101695s",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": 5.6,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "5.6 nm",
+      "evidence": [
+        {
+          "source_id": "leschkies2010-jp101695s",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "leschkies2010-jp101695s-edt-treated-pbse-qd-films-1--selenium-shot",
+      "name": "selenium shot",
+      "formula": null,
+      "role": "chalcogen_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "leschkies2010-jp101695s",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "leschkies2010-jp101695s-edt-treated-pbse-qd-films-1--after-s01-heat",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "leschkies2010-jp101695s-edt-treated-pbse-qd-films-1--selenium-shot"
+      ]
+    },
+    {
+      "id": "leschkies2010-jp101695s-edt-treated-pbse-qd-films-1--after-s02-precipitate",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "leschkies2010-jp101695s-edt-treated-pbse-qd-films-1--after-s01-heat"
+      ]
+    },
+    {
+      "id": "leschkies2010-jp101695s-edt-treated-pbse-qd-films-1--after-s03-centrifuge",
+      "name": "mixture after step 3",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "leschkies2010-jp101695s-edt-treated-pbse-qd-films-1--after-s02-precipitate"
+      ]
+    },
+    {
+      "id": "leschkies2010-jp101695s-edt-treated-pbse-qd-films-1--after-s04-redisperse",
+      "name": "mixture after step 4",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "leschkies2010-jp101695s-edt-treated-pbse-qd-films-1--after-s03-centrifuge"
+      ]
+    },
+    {
+      "id": "leschkies2010-jp101695s-edt-treated-pbse-qd-films-1--after-s05-treat",
+      "name": "mixture after step 5",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "leschkies2010-jp101695s-edt-treated-pbse-qd-films-1--after-s04-redisperse"
+      ]
+    },
+    {
+      "id": "leschkies2010-jp101695s-edt-treated-pbse-qd-films-1--after-s06-redisperse",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "leschkies2010-jp101695s-edt-treated-pbse-qd-films-1--after-s05-treat"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-heat",
+      "action": "heat",
+      "label": "Heat-up reaction",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "leschkies2010-jp101695s-edt-treated-pbse-qd-films-1--selenium-shot"
+      ],
+      "outputs": [
+        "leschkies2010-jp101695s-edt-treated-pbse-qd-films-1--after-s01-heat"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "leschkies2010-jp101695s",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Heat-up reaction",
+      "evidence": [
+        {
+          "source_id": "leschkies2010-jp101695s",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-precipitate",
+      "action": "precipitate",
+      "label": "Precipitation of QDs",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-heat"
+      ],
+      "inputs": [
+        "leschkies2010-jp101695s-edt-treated-pbse-qd-films-1--after-s01-heat"
+      ],
+      "outputs": [
+        "leschkies2010-jp101695s-edt-treated-pbse-qd-films-1--after-s02-precipitate"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Precipitation of QDs",
+      "evidence": [
+        {
+          "source_id": "leschkies2010-jp101695s",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-centrifuge",
+      "action": "centrifuge",
+      "label": "Centrifugation",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-precipitate"
+      ],
+      "inputs": [
+        "leschkies2010-jp101695s-edt-treated-pbse-qd-films-1--after-s02-precipitate"
+      ],
+      "outputs": [
+        "leschkies2010-jp101695s-edt-treated-pbse-qd-films-1--after-s03-centrifuge"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Centrifugation",
+      "evidence": [
+        {
+          "source_id": "leschkies2010-jp101695s",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s04-redisperse",
+      "action": "redisperse",
+      "label": "Redispersion in octane",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s03-centrifuge"
+      ],
+      "inputs": [
+        "leschkies2010-jp101695s-edt-treated-pbse-qd-films-1--after-s03-centrifuge"
+      ],
+      "outputs": [
+        "leschkies2010-jp101695s-edt-treated-pbse-qd-films-1--after-s04-redisperse"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Redispersion in octane",
+      "evidence": [
+        {
+          "source_id": "leschkies2010-jp101695s",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s05-treat",
+      "action": "treat",
+      "label": "EDT treatment",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s04-redisperse"
+      ],
+      "inputs": [
+        "leschkies2010-jp101695s-edt-treated-pbse-qd-films-1--after-s04-redisperse"
+      ],
+      "outputs": [
+        "leschkies2010-jp101695s-edt-treated-pbse-qd-films-1--after-s05-treat"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "s",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "5 s",
+          "evidence": [
+            {
+              "source_id": "leschkies2010-jp101695s",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "leschkies2010-jp101695s",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "EDT treatment",
+      "evidence": [
+        {
+          "source_id": "leschkies2010-jp101695s",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s06-redisperse",
+      "action": "redisperse",
+      "label": "Second coating of QDs",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s05-treat"
+      ],
+      "inputs": [
+        "leschkies2010-jp101695s-edt-treated-pbse-qd-films-1--after-s05-treat"
+      ],
+      "outputs": [
+        "leschkies2010-jp101695s-edt-treated-pbse-qd-films-1--after-s06-redisperse"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Second coating of QDs",
+      "evidence": [
+        {
+          "source_id": "leschkies2010-jp101695s",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "leschkies2010-jp101695s-edt-treated-pbse-qd-films-1--product",
+      "source_sample_label": "EDT-treated PbSe QD films",
+      "batch_id": null,
+      "material_state_id": "leschkies2010-jp101695s-edt-treated-pbse-qd-films-1--after-s06-redisperse",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "PbSe",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "leschkies2010-jp101695s",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "leschkies2010-jp101695s",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reactor: reaction vessel (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "leschkies2010-jp101695s-edt-treated-pbse-qd-films-1--size",
+      "sample_id": "leschkies2010-jp101695s-edt-treated-pbse-qd-films-1--product",
+      "property": "optically_derived_size",
+      "technique": "optical sizing",
+      "value": {
+        "value": 5.6,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "5.6 nm",
+        "evidence": [
+          {
+            "source_id": "leschkies2010-jp101695s",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "leschkies2010-jp101695s",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of selenium shot not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
