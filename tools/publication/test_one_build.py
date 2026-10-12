@@ -173,6 +173,12 @@ class TransactionTests(unittest.TestCase):
             b"print('{\"passed\":true,\"counts\":{\"checks\":1},\"errors\":[],\"warnings\":[]}')\n")
         put(cls.source / 'recipe-atlas/tests/test_fixture.py',
             b'import unittest\nclass Fixture(unittest.TestCase):\n def test_one(self): self.assertEqual(1,1)\n')
+        # The real build copier requires exact authored dependency pins even
+        # when this minimal fixture has no serializer test to import them.
+        cls.test_dependencies = ('tools/simple-pipeline/to_site.py',
+                                 'tools/simple-pipeline/local_caption_backfill.py')
+        for relative in cls.test_dependencies:
+            put(cls.source / relative, b'# Synthetic authored test dependency.\n')
         registry = {'schema_version': 'mattersyn-public-asset-rights/1', 'assets': [], 'snapshots': []}
         put(cls.source / p.REGISTRY, registry)
         policy = {'schema_version': 'mattersyn-public-projection-policy/1',
@@ -190,6 +196,10 @@ class TransactionTests(unittest.TestCase):
         blueprint = {'schema': 'mattersyn-build-input-blueprint/1', 'release_id': 'synthetic-fixture',
                      'updated_at': '2026-01-01T00:00:00Z', 'input_files': p.inventory(cls.source / 'recipe-atlas/static')}
         blueprint['input_files'][0]['path'] = 'recipe-atlas/static/index.html'
+        blueprint['input_files'].extend(
+            {'path': relative, 'sha256': p.sha(cls.source / relative),
+             'bytes': (cls.source / relative).stat().st_size}
+            for relative in cls.test_dependencies)
         put(cls.source / 'publication/build-inputs.json', blueprint)
         p.git(cls.source, 'add', '.'); p.git(cls.source, 'commit', '-qm', 'Synthetic fixture')
         cls.head = p.git(cls.source, 'rev-parse', 'HEAD').decode().strip()
@@ -253,6 +263,16 @@ class TransactionTests(unittest.TestCase):
             put(self.review_path, review)
         out = self.top / self.id().split('.')[-1]
         return p.promote(self.source, self.candidate, self.seal_pin['sha256'], out, self.review_path, p.sha(self.review_path))
+
+    def test_synthetic_dependencies_are_snapshot_bound_and_never_public(self):
+        rows = p.read(self.snapshot)['input_files']
+        for relative in self.test_dependencies:
+            pins = [row for row in rows if row['path'] == relative]
+            self.assertEqual(len(pins), 1)
+            self.assertEqual(pins[0]['sha256'], p.sha(self.source / relative))
+            copied = self.candidate / 'project' / relative
+            self.assertEqual(copied.read_bytes(), (self.source / relative).read_bytes())
+        self.assertFalse(any(row['path'].startswith('tools/') for row in self.manifest['files']))
 
     def test_one_full_build_then_fresh_real_boundary_no_second_build(self):
         before = p.sha(self.candidate / 'candidate-manifest.json')
