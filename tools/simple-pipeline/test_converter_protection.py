@@ -112,5 +112,55 @@ class ConverterProtectionTest(unittest.TestCase):
                 self.run_guard_case(command, 'two passes agree, quotes found')
 
 
+    def test_empty_sync_preserves_pretty_reader_bytes_and_does_not_write(self):
+        for crlf, final_newline, bom in ((False, True, False), (True, True, False), (False, False, True)):
+            with self.subTest(crlf=crlf, final_newline=final_newline, bom=bom), TemporaryDirectory(dir=Path(__file__).parent) as tmp:
+                repo = Path(tmp); atlas = repo / 'recipe-atlas'; pairs = repo / 'pairs'; pairs.mkdir()
+                self.put(atlas / 'data/inventory-evidence.json', {'per_paper': []})
+                side_path = atlas / 'data/reader-presentation-reviewed.json'
+                data = {'records': {'audited': {'scopeLabel': 'Audited µm'}}, 'figures_by_source': {}, 'materials': {}}
+                text = json.dumps(data, ensure_ascii=False, indent=2) + ('\n' if final_newline else '')
+                if crlf: text = text.replace('\n', '\r\n')
+                before = (b'\xef\xbb\xbf' if bom else b'') + text.encode('utf-8')
+                side_path.write_bytes(before)
+                with mock.patch.object(converter, 'dump_like', wraps=converter.dump_like) as write:
+                    converter.cmd_sync(SimpleNamespace(repo=repo, pairs=pairs, dist=None, include_optical=False))
+                    write.assert_not_called()
+                self.assertEqual(side_path.read_bytes(), before)
+
+    def test_empty_sync_still_reconciles_changed_hubs_then_preserves_noop_bytes(self):
+        with TemporaryDirectory(dir=Path(__file__).parent) as tmp:
+            repo = Path(tmp); atlas = repo / 'recipe-atlas'; pairs = repo / 'pairs'; pairs.mkdir(); dist = repo / 'dist'
+            self.put(atlas / 'data/inventory-evidence.json', {'per_paper': []})
+            side_path = atlas / 'data/reader-presentation-reviewed.json'
+            original_records = {'audited': {'scopeLabel': 'Audited fixture'}}
+            self.put(side_path, {'records': original_records, 'figures_by_source': {}, 'materials': {
+                'existing': {'id': 'existing', 'formula': 'CdS', 'record_ids': [], 'scopeLabel': 'Original kept scope'},
+                'obsolete': {'record_ids': ['audited']}}})
+            self.put(dist / 'data/materials/existing.json', {'formula': 'CdS', 'record_ids': ['audited']})
+            self.put(dist / 'data/materials/new.json', {'formula': 'ZnS', 'record_ids': ['route'], 'component_only': True})
+            manifest = {'records': [], 'record_count': 0, 'group_count': 0, 'families': []}
+            baseline = atlas / 'data/release-baseline-manifest.json'
+            self.put(baseline, manifest); self.put(dist / 'data/dataset-manifest.json', manifest)
+            baseline_bytes = baseline.read_bytes(); original_side_bytes = side_path.read_bytes()
+            converter.cmd_sync(SimpleNamespace(repo=repo, pairs=pairs, dist=dist, include_optical=False))
+            changed = side_path.read_bytes(); result = json.loads(changed)
+            self.assertEqual(result['records'], original_records)
+            self.assertEqual(set(result['materials']), {'existing', 'new'})
+            self.assertEqual(result['materials']['existing']['record_ids'], ['audited'])
+            self.assertEqual(result['materials']['existing']['scopeLabel'], 'Original kept scope')
+            self.assertEqual(result['materials']['new']['record_ids'], ['route'])
+            self.assertTrue(result['materials']['new']['component_only'])
+            expected = json.dumps(result, ensure_ascii=False, separators=(',', ':')) + '\n'
+            if b'\r\n' in original_side_bytes: expected = expected.replace('\n', '\r\n')
+            self.assertEqual(changed, expected.encode('utf-8'))
+            self.assertEqual(baseline.read_bytes(), baseline_bytes)
+            with mock.patch.object(converter, 'dump_like', wraps=converter.dump_like) as write:
+                converter.cmd_sync(SimpleNamespace(repo=repo, pairs=pairs, dist=dist, include_optical=False))
+                write.assert_not_called()
+            self.assertEqual(side_path.read_bytes(), changed)
+
+
+
 if __name__ == '__main__':
     unittest.main()
