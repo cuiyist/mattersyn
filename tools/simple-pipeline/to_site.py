@@ -169,6 +169,8 @@ class Builder:
         components = components_of(composition)
         reported_architecture = str((st.get('architecture') or {}).get('value') or '').strip().lower()
         architecture = ARCHITECTURE.get(reported_architecture, reported_architecture if reported_architecture in {'single_material', 'core_shell', 'heterostructure', 'alloy', 'composite', 'phase_mixture', 'unresolved'} else 'unresolved' if len(components) > 1 else 'single_material')
+        if architecture == 'single_material' and len(components) > 1:
+            components = []  # A printed dopant separator does not establish separate product components.
         method = str((rc.get('method') or {}).get('value') or 'synthesis as described in the source')
         notes = []
         if rc.get('reactor'): notes.append(f'Reactor: {rc["reactor"]["value"]} (Main PDF p.{rc["reactor"].get("page", "?")}).')

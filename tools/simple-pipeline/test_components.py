@@ -33,4 +33,13 @@ class ComponentsTests(unittest.TestCase):
     def test_single_composition_default_is_unchanged(self):
         self.assertEqual(self.record('CdSe')['material']['architecture'],'single_material')
 
+    def test_explicit_single_material_dopant_not_separate_products(self):
+        material = self.record('Mn-ZnS', 'single_material')['material']
+        self.assertEqual(material['formula'], 'Mn-ZnS')
+        self.assertEqual(material['elements'], ['Mn', 'Zn', 'S'])
+        self.assertEqual(material['architecture'], 'single_material')
+        self.assertNotIn('Mn', material['components'])
+        self.assertNotIn('ZnS', material['components'])
+        self.assertEqual(self.record('CdSe/ZnS', 'core_shell')['material']['components'], ['CdSe', 'ZnS'])
+
 if __name__ == '__main__': unittest.main()

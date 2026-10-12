@@ -1,7 +1,7 @@
 {
   "schema": "mattersyn-curation-control/1",
   "status": "simple_pipeline_active_audit_lane_paused",
-  "recorded_at": "2026-10-12T05:59:27.638583+00:00",
+  "recorded_at": "2026-10-12T06:28:51.068692+00:00",
   "authorization": "Owner October 10 evening: continue the separate source_extracted simple-pipeline website job; the audited lane and its open questions remain paused. Use local two-pass extraction, unchanged quote/number/agreement checks and normal release tools.",
   "supersedes_hold": "October 10 evening authorizes only the separate source_extracted simple-pipeline job. The audited lane, original findings, denominator and open owner questions stay paused.",
   "active_run": "Private simple-website-20261010 checkpoint; public report research-assets/public-audits/SIMPLE_PIPELINE_REPORT.md",
@@ -1889,8 +1889,8 @@
       "counts_in_live_homepage": false
     }
   },
-  "current_task": "Batch12 has 30 papers /36 records /140 captioned crops integrated privately; normal build, source, browser, CI and release checks remain. Batch15 local two-pass extraction continues.",
-  "next_step": "Complete the cohesive Batch12 Source preparation and normal publication. Reuse saved Batch13/14 work; launch Batch16 only after the owned Batch15 controller genuinely completes.",
+  "current_task": "Batch12 local full build caught a new-record component mapping inconsistency; importer and one new record repaired, captions preserved. Normal successor preparation and full release checks pending. Batch15 local generation continues.",
+  "next_step": "Complete normal Batch12 successor Source preparation, clean build, browser checks, CI and release; reuse Batch13/14; launch Batch16 only after genuine Batch15 completion.",
   "machine_extracted_paper_list": {
     "path": "research-assets/public-audits/MACHINE_EXTRACTED_PAPERS.md",
     "sha256": "a440579fef701d0f7f65a7744cc25481d8d1c8633f2dc1075c35240940b8998a",
@@ -2033,7 +2033,7 @@
     "result_receipt_sha256": "9a4e26a112197d8976482a6f9d843509f982b85a86b85bd49c4aa25b4776d4cd",
     "status": "parked; generation completed but strict whole-attempt coverage failed"
   },
-  "updated_at": "2026-10-12T05:59:27.638583+00:00",
+  "updated_at": "2026-10-12T06:28:51.068692+00:00",
   "last_verified_publication": {
     "source_commit": "5f567a5c3704ebe75fe512eaed10b92292f8499e",
     "site_commit": "334aa56ccff3a6c29f4d133fe934ff27ac0a3f9e",
@@ -16123,7 +16123,7 @@
       "new_records": 0
     }
   ],
-  "updated_at_utc": "2026-10-12T05:59:27.638583+00:00",
+  "updated_at_utc": "2026-10-12T06:28:51.068692+00:00",
   "pending_figure_caption_delivery": {
     "observed_at_utc": "2026-10-11T23:07:48.007667+00:00",
     "status": "batch07_deployed_batch08_prepared_older_display_repair_pending_release",
@@ -16181,7 +16181,7 @@
     "scientific_audit_asserted": false
   },
   "simple_delivery_current_checkpoint": {
-    "recorded_at": "2026-10-12T05:59:27.638583+00:00",
+    "recorded_at": "2026-10-12T06:28:51.068692+00:00",
     "latest_anonymous_release": "simple-batch11-20261012",
     "source_commit": "28de5bb49100fbc39efb13568568e57a4f994abd",
     "site_commit": "cac61f2667fe351fc771d7ea0be91a1df0a6f1e8",
@@ -16201,7 +16201,16 @@
       "caption_reader_instances_updated": 312,
       "published": false,
       "paper_credit": 0,
-      "prior_canonical_rows_protected": 3558
+      "prior_canonical_rows_protected": 3558,
+      "local_build_attempt_1": {
+        "source_commit": "a30f3e639e1ea99f2cb740eee868a4ea1d61d94e",
+        "passed": false,
+        "finished_at": "2026-10-12T06:17:52.975999+00:00",
+        "failure": "check_quality: single_material record incorrectly linked as separate Mn and ZnS component contributions",
+        "corrected_new_record_only": true,
+        "scientific_values_and_status_unchanged": true,
+        "fresh_checks_pending": true
+      }
     },
     "batch13": {
       "saved_work_ready": true,
@@ -16222,9 +16231,9 @@
     },
     "batch15": {
       "phase_observed": "extract",
-      "observed_run_state_at": "2026-10-12T05:58:36.051084+00:00",
+      "observed_run_state_at": "2026-10-12T06:28:20.733316+00:00",
       "controller_pid": 51360,
-      "successful_two_pass_papers_observed": 21,
+      "successful_two_pass_papers_observed": 48,
       "published": false,
       "paper_credit": 0
     },
