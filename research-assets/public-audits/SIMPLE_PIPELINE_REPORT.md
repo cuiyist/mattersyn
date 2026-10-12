@@ -540,6 +540,55 @@ Recorded source ci run: [38190616336](https://github.com/cuiyist/mattersyn/actio
 | 10.1021/jp044531b | 2 | 8 | [Open](https://cuiyist.github.io/mattersyn-site/records/warner2005-jp044531b-1-nm-pbs-nc-p-composite-1.html) |
 | 10.1038/nmat3118 | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/x2011-nmat3118-br-capped-pbs-cqd-film-1.html) |
 
+
+### simple-batch10-20261012
+
+Anonymous verification passed at 2026-10-12T03:55:31+00:00: 645 files, zero mismatches. [Source commit](https://github.com/cuiyist/mattersyn/commit/f1e3acd3d1a2666f7b09e04e3f0ae1593b248817) and [Site commit](https://github.com/cuiyist/mattersyn-site/commit/a4b117846e4f1e36701201acb53b2dfeb9b8644c). This batch contains 35 source groups, 53 records and 181 source figure crops; 35 distinct newly contributing primary papers after DOI deduplication. Every new contribution remains machine extracted and not independently audited. The final built site is 1,711,933,632 bytes / 31,409 files.
+
+Live counter: **244 audited + 342 machine extracted = 586 papers**, 3,515 canonical records, 353 direct material families, 407 material/component pages and 1394 displayed recipe–structure pairs (6 more comprehensive; 1388 partial). These display counts do not establish extraction accuracy, measured atomic coordinates or training eligibility.
+
+Recorded source pr: [27](https://github.com/cuiyist/mattersyn/pull/27).
+
+Recorded source ci run: [38197718624](https://github.com/cuiyist/mattersyn/actions/runs/38197718624).
+
+| Primary DOI | Records | Figure crops | Public page |
+| --- | ---: | ---: | --- |
+| 10.1021/la701012j | 3 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/al2007-la701012j-qdps-colloids-4-m-540-nm-1.html) |
+| 10.1021/nn103024b | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/al2011-nn103024b-qd-fen-1.html) |
+| 10.1021/nn203683s | 1 | 7 | [Open](https://cuiyist.github.io/mattersyn-site/records/al2011-nn203683s-cdse-c1-1.html) |
+| 10.1021/nn2044388 | 1 | 7 | [Open](https://cuiyist.github.io/mattersyn-site/records/al2012-nn2044388-cdses-zns-1.html) |
+| 10.1021/nn403132x | 1 | 6 | [Open](https://cuiyist.github.io/mattersyn-site/records/al2013-nn403132x-cdse-nanowires-nws-1.html) |
+| 10.1021/nn403190s | 1 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/al2013-nn403190s-pbs-qds-1.html) |
+| 10.1021/cm501739h | 1 | 6 | [Open](https://cuiyist.github.io/mattersyn-site/records/al2014-cm501739h-pbs-cds-core-shell-nanocrystals-1.html) |
+| 10.1021/bc400157z | 1 | 6 | [Open](https://cuiyist.github.io/mattersyn-site/records/bestel2013-bc400157z-cdse-zns-quantum-dots-qds-encapsulated-i-1.html) |
+| 10.1039/c9na00334g | 3 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/c9na00334g-cdse-cds-qd-mpa-1.html) |
+| 10.1038/srep04085 | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/chen2014-srep04085-zncdses-qds-1.html) |
+| 10.1038/s41560-020-0617-6 | 3 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/du2020-s41560-020-0617-6-zn-cuinse2-qds-with-oam-ligands-1.html) |
+| 10.1021/nn7003469 | 1 | 6 | [Open](https://cuiyist.github.io/mattersyn-site/records/gooding2008-nn7003469-cdse-cds-zns-nanocrystals-1.html) |
+| 10.1021/am403173n | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/ho2013-am403173n-green-cdsezns-qds-1.html) |
+| 10.1021/ja061644v | 2 | 2 | [Open](https://cuiyist.github.io/mattersyn-site/records/houtepen2006-ja061644v-pbse-ncs-spherical-1.html) |
+| 10.1021/am504536a | 1 | 8 | [Open](https://cuiyist.github.io/mattersyn-site/records/huang2014-am504536a-oa-cdse-qds-1.html) |
+| 10.1021/jp312190x | 1 | 6 | [Open](https://cuiyist.github.io/mattersyn-site/records/itzhakov2013-jp312190x-cdte-cdse-core-shell-nanocrystals-1.html) |
+| 10.1021/nn100076f | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/jiang2010-nn100076f-cdse-nanorods-1.html) |
+| 10.1021/acs.chemmater.3c01359 | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/jo2023-acs-chemmater-3c01359-in-zn-p-znse-zns-qds-1.html) |
+| 10.1021/nl071225b | 2 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/jua-rez2007-nl071225b-cdse-nanorods-1.html) |
+| 10.1038/s41467-019-08432-6 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/jung2019-s41467-019-08432-6-cdse-cd1xznxse1ysy-core-alloyed-shell-co-1.html) |
+| 10.1039/c8ra08136k | 1 | 14 | [Open](https://cuiyist.github.io/mattersyn-site/records/kathirgamanathan2018-c8ra08136k-zno-m1-1.html) |
+| 10.1021/jp906096a | 1 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/kim2009-jp906096a-cds-quantum-dots-1.html) |
+| 10.1038/nnano.2011.46 | 2 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/lee2011-nnano-2011-46-cdse-nanocrystals-with-in2se4-2-ligands-1.html) |
+| 10.1021/nn402870e | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/lee2013-nn402870e-cdzns-zns-qds-3-h-shelled-1.html) |
+| 10.1021/am5012782 | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/li2014-am5012782-cdse-cds-cdxzn1xs-zns-qd-nanobeads-1.html) |
+| 10.1021/nn403594j | 2 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/lim2013-nn403594j-inp-znses-qds-with-1-1-nm-shell-thicknes-1.html) |
+| 10.1021/jp0646123 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/murphy2006-jp0646123-oleate-capped-pbse-nanocrystals-1.html) |
+| 10.1002/pssc.200671556 | 2 | 2 | [Open](https://cuiyist.github.io/mattersyn-site/records/passow2006-pssc-200671556-inas-gaas-quantum-dots-qds-with-high-den-1.html) |
+| 10.1063/1.3530466 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/s-g-pawar-1-3530466-nanocrystalline-pbs-thin-films-1.html) |
+| 10.1021/jp109301d | 2 | 9 | [Open](https://cuiyist.github.io/mattersyn-site/records/x2011-jp109301d-si-ncs-fragmented-in-ethanol-1.html) |
+| 10.1021/jz5015086 | 3 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/x2014-jz5015086-oleic-acid-capped-pbs-ncs-1.html) |
+| 10.1063/1.121906 | 3 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/xua1998-1-121906-zns-cu-1.html) |
+| 10.1039/b815034f | 2 | 6 | [Open](https://cuiyist.github.io/mattersyn-site/records/yang2008-b815034f-cds-nc-1-1.html) |
+| 10.1021/nn100339b | 2 | 7 | [Open](https://cuiyist.github.io/mattersyn-site/records/zarghami2010-nn100339b-6-1-nm-pbse-qds-1.html) |
+| 10.1021/nn5040444 | 1 | 8 | [Open](https://cuiyist.github.io/mattersyn-site/records/zhou2014-nn5040444-cdte-nc-self-assembly-materials-1.html) |
+
 ## Latest continuation checkpoint
 
 At 2026-10-11T06:09:34+00:00, Batch01 is live and anonymously verified; Batch02 remains in local processing with 47/49 two-pass-complete papers at its last saved checkpoint. These are processing counts, not additional published papers. The audited lane stays paused.
@@ -1009,3 +1058,16 @@ Batch10 prepared scope is35 papers,53 records,181 retained crops; all have publi
 NN4002825 is omitted because its retained record no longer matches the immutable original citation ID. The strict binding was not changed. Initial integration was retained privately and the prior Source payload restored with3,462 old canonical rows unchanged; two stale generated files were retained explicitly before ordinary integration of the other35 papers. All original pairs, receipts, figures and unsuccessful attempts remain local. No data was destroyed.
 
 Batch12:44 two-pass successes,55 checked pairs,213 private figure rows;51.5253 extraction minutes; original controller OS exit isunknown. Local caption client returned0 with199 accepted captions,43 requests and2 original failures; recovery/manual completion is private and separate. All three rare groups completed. Batch13 local controller47724 launched45 supported papers on owned server32512;5 identity holds; no publication credit. The source job continues; the audited lane and its four questions/history remain paused. No uninterrupted work or unmeasured hourly rate is asserted.
+
+
+## Root caption/publication checkpoint — 2026-10-12T04:14:37.294927+00:00
+
+Batch10 actual Source PR27 passed Ubuntu/Windows/compare-artifacts CI at prepared`f1e3acd3d1a2666f7b09e04e3f0ae1593b248817` and merged normally as`42e870c879df940f5d9eed4f79c243366b8100dc`. Actual Site`a4b117846e4f1e36701201acb53b2dfeb9b8644c` was pushed at03:49:01UTC and anonymously verified at03:55:31UTC. The normal verification passed645 files with0 mismatches and0 failed paper/material routes, recording35 distinct new paper events. Built size:1,711,933,632bytes /31,409files; this successful deployment is not a size-refusal trigger. Counts are586 papers /1,394 displayed pairs, including342 source-extracted papers /530 pairs; scientific audit or calibrated accuracy is not asserted.
+
+Caption display is verified on all73 sealed preview routes, three phone pages and both repaired legacy pages at desktop/phone. Two initial stale-node actions were retried after fresh DOM snapshots and passed; original errors remain local. Live He2021 card and enlargement showed their complete descriptive caption and source/page/figure locator at03:55:27.296Z and at phone width. Legacy corrections cover20 descriptions/232 Reader contexts/82 existing record IDs, with zero additional paper or figure credit. The caption inventory has4,088 renderable unique asset paths /13,666 contexts and no missing meaningful caption;20 nonrenderable descriptors were excluded. These are presentation checks, not a scientific audit.
+
+Preserved operational failures: initial Source-preparation WinError5; subsequent strict Git ownership rejection; accepted per-process safe-directory retry; successful Source push followed by API HTTP502 and API-only retry. No force-push, gate change or automatic-approval bypass occurred. Whole-DOI NN4002825 remains a strict original-ID technical hold; no repaired identity or science is inferred.
+
+Batch11 is locally prepared only:32 papers /43 records /141 retained figures;112 accepted,22 recovered and7 manual captions bound in322 Reader contexts. The one-reader rare pass deleted29 scientific objects,7 coupled units and2 wrong page locators,38 paths total,0 additions. Exact bibliography metadata correction affects19 retained papers/23 records/26 dependency files. All3,515 previous canonical records remain unchanged. No nonempty Reader sync follows metadata application. Fresh asset/dependency checks and the normal cohesive Source/CI/browser/Site release remain pending; zero publication credit until anonymous verification.
+
+Choice: continue the ready batch and retain the existing guarded cleanup hold, because unknown process ancestry remains unresolved and the only unreferenced code ZIPs total268KB. No local data deletion was attempted. The audited lane, historical tests/denominator and four owner questions remain paused and unchanged. No uninterrupted work or achieved throughput is claimed.
