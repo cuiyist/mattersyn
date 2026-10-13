@@ -1,0 +1,343 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "lu2016-jacs-6b09065-nhcag2s-ncs-2",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Haipeng Lu (2016): NHC−Ag2S NCs",
+  "material": {
+    "formula": "Ag2S",
+    "family": "Ag2S nanocrystals",
+    "elements": [
+      "Ag",
+      "S"
+    ],
+    "components": [
+      "Ag2S"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Injection",
+  "sources": [
+    {
+      "id": "lu2016-jacs-6b09065",
+      "doi": "10.1021/jacs.6b09065",
+      "title": "Exposing the Dynamics and Energetics of the N-Heterocyclic Carbene−Nanocrystal Interface",
+      "authors": "Haipeng Lu, Zhaohui Zhou, Oleg V. Prezhdo, Richard L. Brutchey",
+      "year": 2016,
+      "url": "https://doi.org/10.1021/jacs.6b09065",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "lu2016-jacs-6b09065",
+    "recipe_family": "lu2016-jacs-6b09065-nhcag2s-ncs-2",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Ag2S",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "lu2016-jacs-6b09065",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "monoclinic",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "lu2016-jacs-6b09065",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": 15.2,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "15.2 nm",
+      "evidence": [
+        {
+          "source_id": "lu2016-jacs-6b09065",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "sphere",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "lu2016-jacs-6b09065",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "lu2016-jacs-6b09065-nhcag2s-ncs-2--nhcag-ncs",
+      "name": "NHC−Ag NCs",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "lu2016-jacs-6b09065",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "lu2016-jacs-6b09065-nhcag2s-ncs-2--after-s01-suspend",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "lu2016-jacs-6b09065-nhcag2s-ncs-2--nhcag-ncs"
+      ]
+    },
+    {
+      "id": "lu2016-jacs-6b09065-nhcag2s-ncs-2--after-s02-inject",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "lu2016-jacs-6b09065-nhcag2s-ncs-2--after-s01-suspend"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-suspend",
+      "action": "suspend",
+      "label": "Suspend NHC−Ag NCs in ODE",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "lu2016-jacs-6b09065-nhcag2s-ncs-2--nhcag-ncs"
+      ],
+      "outputs": [
+        "lu2016-jacs-6b09065-nhcag2s-ncs-2--after-s01-suspend"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Suspend NHC−Ag NCs in ODE",
+      "evidence": [
+        {
+          "source_id": "lu2016-jacs-6b09065",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-inject",
+      "action": "inject",
+      "label": "Inject S in ODE into NHC−Ag NC suspension",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-suspend"
+      ],
+      "inputs": [
+        "lu2016-jacs-6b09065-nhcag2s-ncs-2--after-s01-suspend"
+      ],
+      "outputs": [
+        "lu2016-jacs-6b09065-nhcag2s-ncs-2--after-s02-inject"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 120,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "120 °C",
+          "evidence": [
+            {
+              "source_id": "lu2016-jacs-6b09065",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Inject S in ODE into NHC−Ag NC suspension",
+      "evidence": [
+        {
+          "source_id": "lu2016-jacs-6b09065",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "lu2016-jacs-6b09065-nhcag2s-ncs-2--product",
+      "source_sample_label": "NHC−Ag2S NCs",
+      "batch_id": null,
+      "material_state_id": "lu2016-jacs-6b09065-nhcag2s-ncs-2--after-s02-inject",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Ag2S",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "lu2016-jacs-6b09065",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "monoclinic",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "lu2016-jacs-6b09065",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "sphere",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "lu2016-jacs-6b09065",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": "NHC",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "lu2016-jacs-6b09065",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "lu2016-jacs-6b09065",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reaction temperature: 120 degC (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "lu2016-jacs-6b09065-nhcag2s-ncs-2--size",
+      "sample_id": "lu2016-jacs-6b09065-nhcag2s-ncs-2--product",
+      "property": "diameter",
+      "technique": "TEM",
+      "value": {
+        "value": 15.2,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "15.2 nm",
+        "evidence": [
+          {
+            "source_id": "lu2016-jacs-6b09065",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "lu2016-jacs-6b09065",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Reactor not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of NHC−Ag NCs not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

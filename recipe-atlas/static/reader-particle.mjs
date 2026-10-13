@@ -1,5 +1,5 @@
 // Source-bound morphology illustrations; never measured coordinates or training labels.
-import {el,link,badge,recordURL,disclosure,siteURL} from './reader-utils.mjs?v=0.41.6';
+import {el,link,badge,recordURL,disclosure,siteURL} from './reader-utils.mjs?v=0.41.7';
 import {particleShapeSVG,particleShapeInfo} from './particle-shapes.mjs?v=0.40.5';
 import {scopedProductArt} from './reader-scoped-product-art.mjs';
 
@@ -9,19 +9,31 @@ const sourceRecord=(context,fallback)=>context.record_id||context.source?.data_p
 // Zhong's branched specimens cannot be represented by the straight-rod primitive.
 const pendingZhongBranches=(value,recordId)=>recordId==='zhong2007-cdte-cdse-jp0709407-sequential-growth-series'&&/\bmultiple[- ](?:armed|branched)\s+rods?\b/.test(text(value).toLowerCase());
 
+function sameCanonicalProductFact(fact,group,kind){
+ const field=group.product?.[kind],source=fact.source;
+ if(!field||fact.kind!=='product_fact'||fact.record_id!==group.recordId||fact.sample_id!==group.sampleId||
+  source?.data_path!=='data/records/'+group.recordId+'.json'||fact.status!==field.status||text(fact.value)!==text(field.value))return false;
+ const pointer='/products/'+group.productIndex+'/'+kind;
+ if(source?.json_pointer!==pointer&&source?.json_pointer!==pointer+'/value')return false;
+ const inputHash=group.context?.source?.input_sha256;
+ if(inputHash&&source.input_sha256!==inputHash)return false;
+ if(JSON.stringify(fact.source_locator||[])!==JSON.stringify(field.evidence||[]))return false;
+ return !field.note||text(fact.qualifier).includes(text(field.note));
+}
+
 export function particleGroups(r,presentation={}){
  const groups=new Map();
  const ensure=(recordId,sampleId,label)=>{const key=recordId+':'+sampleId;if(!groups.has(key))groups.set(key,{key,recordId,sampleId,label:label||sampleId,facts:[],context:null});return groups.get(key);};
  // Seed from complete contexts, not only non-null fact rows. Unknown is visible.
  for(const context of presentation.productContexts||[])ensure(sourceRecord(context,r.record_id),context.sample_id,context.label).context=context;
- for(const product of r.products||[]){const g=ensure(r.record_id,product.sample_id,product.source_sample_label||product.sample_id);g.product=product;}
+ for(const [productIndex,product] of (r.products||[]).entries()){const g=ensure(r.record_id,product.sample_id,product.source_sample_label||product.sample_id);g.product=product;g.productIndex=productIndex;}
  for(const fact of presentation.allProductFacts||presentation.productFacts||[]){const g=ensure(fact.record_id||r.record_id,fact.sample_id||'unassigned',fact.scope);g.facts.push(fact);}
  // Some scoped Readers list measurements only. Retain the canonical product's
  // qualitative observations without borrowing another record or specimen.
  for(const group of groups.values())for(const kind of ['composition','phase','morphology','surface']){
   const field=group.product?.[kind];
   if(!field||!knownStatus.has(field.status)||!text(field.value))continue;
-  if(group.facts.some(f=>f.kind===kind&&knownStatus.has(f.status)&&text(f.value)))continue;
+  if(group.facts.some(f=>f.kind===kind&&knownStatus.has(f.status)&&text(f.value)||sameCanonicalProductFact(f,group,kind)))continue;
   group.facts.push({kind,label:kind[0].toUpperCase()+kind.slice(1),value:field.value,status:field.status,
    record_id:group.recordId,sample_id:group.sampleId,scope:group.label,
    qualifier:[field.status==='reported'?'':field.status.replaceAll('_',' '),field.note].filter(Boolean).join(' · '),
@@ -83,13 +95,33 @@ export function particleDescriptor(group,interpretations={}){
  // A material formula or another specimen's TEM cannot supply this shape.
  const inferred=interpretations[group.recordId+':'+group.sampleId];
  const shape=inferred?.shape||classifyMorphology(morphology,group.recordId);
- const sourceFact=group.facts.find(f=>f.kind==='morphology'&&knownStatus.has(f.status));
+ const sourceFact=group.facts.find(f=>f.kind==='morphology'&&knownStatus.has(f.status)||sameCanonicalProductFact(f,group,'morphology'));
  return {composition:composition||'Composition not assigned',scope:group.label||group.sampleId,
          morphology,shape,inferred,sourceFact,
          caption:shape==='neutral'?(pendingZhongBranches(morphology,group.recordId)?'The source reports a branched morphology for this specimen. A matching illustration has not yet been assigned; the source description and figures remain available.':'The source evidence does not yet support a specific morphology illustration for this specimen.'):inferred?.rationale||(
           shape==='rod-assembly'?'Schematic rods only; source-reported pore geometry, layer alignment and spacing are not reconstructed. Constituent count and orientation are illustrative.':
           shape==='porous-hybrid-film'?'Schematic repeated hybrid motifs in a porous film; number, positions and pore geometry are illustrative.':
           'Schematic interpretation of the source description. Geometry and colors are illustrative; not to scale or an atomic reconstruction.')};
+}
+
+export function particleDisplayDescriptor(r,group,presentation={},interpretations={}){
+ const d=particleDescriptor(group,interpretations),product=group.product;
+ const shapeOnly=new Set(['sphere','cube','rod','platelet','belt','ellipsoid','irregular','truncated-octahedron']);
+ const sourceIds=new Set((r.sources||[]).map(source=>source.id));
+ const reportedMorphology=text(product?.morphology?.value),wire=reportedMorphology.trim().toLowerCase()==='wire';
+ const reportedPrimitive=wire?'rod':classifyMorphology(reportedMorphology,group.recordId);
+ const reportedShape=r.quality?.review_status==='source_extracted'&&group.recordId===r.record_id&&
+  (r.products||[]).includes(product)&&product?.sample_id===group.sampleId&&
+  product.morphology?.status==='reported'&&shapeOnly.has(reportedPrimitive)&&d.morphology===reportedMorphology&&
+  (d.shape===reportedPrimitive||wire&&d.shape==='neutral')&&
+  (product.morphology.evidence||[]).some(item=>sourceIds.has(item.source_id)&&text(item.locator));
+ if(reportedShape&&!d.inferred&&wire){
+  d.shape=reportedPrimitive;d.caption='Illustrative elongated outline for the source-reported wire. Geometry and colors are illustrative; not to scale or an atomic reconstruction.';
+ }
+ // A reported primitive supports an illustrative outline even when chemistry
+ // is unassigned. Pending reviewed contexts keep their interpretation rule.
+ if(presentation.presentation_status==='pending'&&!d.inferred&&!reportedShape)d.shape='neutral';
+ return d;
 }
 
 function particleArt(descriptor){
@@ -115,14 +147,11 @@ export async function mountParticleContext(panel,r,presentation={}){
  const groups=particleGroups(r,presentation),choose=el('select',undefined,'reader-method-select'),display=el('div');choose.setAttribute('aria-label','Particle specimen or reported context');
  for(const [id,g] of groups){const option=el('option',g.label||g.sampleId);option.value=id;choose.append(option);}
  const wanted=r.record_id+':'+presentation.primary_product?.default_sample_id;
- const illustrated=[...groups.values()].filter(g=>particleDescriptor(g,interpretations).shape!=='neutral');
+ const illustrated=[...groups.values()].filter(g=>particleDisplayDescriptor(r,g,presentation,interpretations).shape!=='neutral');
  const preferred=illustrated.find(g=>g.key===wanted)||illustrated.find(g=>g.recordId===r.record_id&&(g.context?.recipe_link||g.product?.recipe_link)==='explicit')||illustrated[0];
  if(preferred)choose.value=preferred.key;else if(groups.has(wanted))choose.value=wanted;
  panel.append(choose,display);
- function show(){const group=groups.get(choose.value)||groups.values().next().value,d=particleDescriptor(group,interpretations),layout=el('div',undefined,'reader-product-layout'),copy=el('div');
-  // Pending Readers keep observations and source figures; only a reviewed
-  // specimen-specific interpretation may supply their morphology drawing.
-  if(presentation.presentation_status==='pending'&&!d.inferred)d.shape='neutral';
+ function show(){const group=groups.get(choose.value)||groups.values().next().value,d=particleDisplayDescriptor(r,group,presentation,interpretations),layout=el('div',undefined,'reader-product-layout'),copy=el('div');
   const caption=d.shape==='neutral'&&presentation.presentation_status==='pending'?'A morphology illustration has not yet been assigned to this specimen. Its available source-reported observations are retained below.':d.caption;
   copy.append(badge(d.shape==='neutral'?'Reported product information':d.inferred?.display_kind==='composition_schematic'?'Conceptual product':d.inferred?'Inferred morphology':'Morphology illustration','reference'),el('h3',d.inferred?.label||d.composition),el('p',d.scope,'reader-note'),el('p',caption,'reader-note'));
   if(d.inferred)copy.append(el('p','Interpretive schematic · dimensions, interfaces and atomic positions are not reconstructed.','reader-note'));

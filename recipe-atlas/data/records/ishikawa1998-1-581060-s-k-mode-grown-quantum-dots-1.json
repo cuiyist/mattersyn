@@ -1,0 +1,457 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "ishikawa1998-1-581060-s-k-mode-grown-quantum-dots-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "H. Ishikawa (1998): S-K mode grown quantum dots",
+  "material": {
+    "formula": "InAs",
+    "family": "InAs nanocrystals",
+    "elements": [
+      "In",
+      "As"
+    ],
+    "components": [
+      "InAs"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "S-K mode growth",
+  "sources": [
+    {
+      "id": "ishikawa1998-1-581060",
+      "doi": "10.1116/1.581060",
+      "title": "Self-organized quantum dots and quantum dot lasers (invited)",
+      "authors": "H. Ishikawa, H. Shoji, Y. Nakata, K. Mukai, M. Sugawara, M. Egawa, N. Otsuka, Y. Sugiyama, T. Futatsugi, and N. Yokoyama",
+      "year": 1998,
+      "url": "https://doi.org/10.1116/1.581060",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "ishikawa1998-1-581060",
+    "recipe_family": "ishikawa1998-1-581060-s-k-mode-grown-quantum-dots-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "InAs or InGaAs",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "ishikawa1998-1-581060",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": 20,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "20 nm",
+      "evidence": [
+        {
+          "source_id": "ishikawa1998-1-581060",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "ishikawa1998-1-581060-s-k-mode-grown-quantum-dots-1--inas",
+      "name": "InAs",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "amount": {
+          "value": 1.8,
+          "minimum": null,
+          "maximum": null,
+          "unit": "monolayer",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1.8 monolayer",
+          "evidence": [
+            {
+              "source_id": "ishikawa1998-1-581060",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "ishikawa1998-1-581060",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "ishikawa1998-1-581060-s-k-mode-grown-quantum-dots-1--gaas",
+      "name": "GaAs",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "ishikawa1998-1-581060",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "ishikawa1998-1-581060-s-k-mode-grown-quantum-dots-1--after-s01-clean",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "ishikawa1998-1-581060-s-k-mode-grown-quantum-dots-1--after-s02-grow",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "ishikawa1998-1-581060-s-k-mode-grown-quantum-dots-1--after-s01-clean",
+        "ishikawa1998-1-581060-s-k-mode-grown-quantum-dots-1--inas"
+      ]
+    },
+    {
+      "id": "ishikawa1998-1-581060-s-k-mode-grown-quantum-dots-1--after-s03-grow",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "ishikawa1998-1-581060-s-k-mode-grown-quantum-dots-1--after-s02-grow",
+        "ishikawa1998-1-581060-s-k-mode-grown-quantum-dots-1--gaas"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-clean",
+      "action": "clean",
+      "label": "Cleaning the substrate surface",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "ishikawa1998-1-581060-s-k-mode-grown-quantum-dots-1--after-s01-clean"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 680,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "680 °C",
+          "evidence": [
+            {
+              "source_id": "ishikawa1998-1-581060",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "As pressure",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ishikawa1998-1-581060",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Cleaning the substrate surface",
+      "evidence": [
+        {
+          "source_id": "ishikawa1998-1-581060",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "s02-grow",
+      "action": "grow",
+      "label": "Supply of InAs to the substrate",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-clean"
+      ],
+      "inputs": [
+        "ishikawa1998-1-581060-s-k-mode-grown-quantum-dots-1--after-s01-clean",
+        "ishikawa1998-1-581060-s-k-mode-grown-quantum-dots-1--inas"
+      ],
+      "outputs": [
+        "ishikawa1998-1-581060-s-k-mode-grown-quantum-dots-1--after-s02-grow"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 510,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "510 °C",
+          "evidence": [
+            {
+              "source_id": "ishikawa1998-1-581060",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "As pressure",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ishikawa1998-1-581060",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Supply of InAs to the substrate",
+      "evidence": [
+        {
+          "source_id": "ishikawa1998-1-581060",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "s03-grow",
+      "action": "grow",
+      "label": "Growth of GaAs barrier layer",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-grow"
+      ],
+      "inputs": [
+        "ishikawa1998-1-581060-s-k-mode-grown-quantum-dots-1--after-s02-grow",
+        "ishikawa1998-1-581060-s-k-mode-grown-quantum-dots-1--gaas"
+      ],
+      "outputs": [
+        "ishikawa1998-1-581060-s-k-mode-grown-quantum-dots-1--after-s03-grow"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 650,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "650 °C",
+          "evidence": [
+            {
+              "source_id": "ishikawa1998-1-581060",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "As pressure",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ishikawa1998-1-581060",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Growth of GaAs barrier layer",
+      "evidence": [
+        {
+          "source_id": "ishikawa1998-1-581060",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "ishikawa1998-1-581060-s-k-mode-grown-quantum-dots-1--product",
+      "source_sample_label": "S-K mode grown quantum dots",
+      "batch_id": null,
+      "material_state_id": "ishikawa1998-1-581060-s-k-mode-grown-quantum-dots-1--after-s03-grow",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "InAs or InGaAs",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ishikawa1998-1-581060",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "ishikawa1998-1-581060",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "notes": [
+        "Reactor: conventional molecular beam epitaxy (Main PDF p.3).",
+        "Reaction temperature: 510 degC (Main PDF p.3)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "ishikawa1998-1-581060-s-k-mode-grown-quantum-dots-1--size",
+      "sample_id": "ishikawa1998-1-581060-s-k-mode-grown-quantum-dots-1--product",
+      "property": "diameter",
+      "technique": "TEM",
+      "value": {
+        "value": 20,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "20 nm",
+        "evidence": [
+          {
+            "source_id": "ishikawa1998-1-581060",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "ishikawa1998-1-581060",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of GaAs not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

@@ -1,5 +1,5 @@
 import {elements} from './periodic-data.mjs';
-import {componentScopeLabel} from './reader-utils.mjs?v=0.41.6';
+import {componentScopeLabel} from './reader-utils.mjs?v=0.41.7';
 const $=id=>document.getElementById(id),selected=new Set(),tiles=new Map();let materials=[];
 const params=new URLSearchParams(location.search);
 const routes=m=>m.route_records??m.reviewed_records;

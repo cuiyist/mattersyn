@@ -1,4 +1,4 @@
-import {el,disclosure,link,recordURL} from './reader-utils.mjs?v=0.41.6';
+import {el,disclosure,link,recordURL} from './reader-utils.mjs?v=0.41.7';
 export function mountWuContext(host,sections,sources,r,p){if(r.lineage?.source_group!=='wu2008')return;
  host.prepend(el('p','Main-only source review. SI not located/verified. Sample/batch joins unresolved; no exact coordinate–recipe pair or training admission. One growth route; downstream preparation/device procedures are separate.','reader-note'));
  sections[0].append(el('p','Source-scoped chemical references and separate solution-component views are included. Molecular conformers are illustrative references, not measured Wu structures. Salt/metal components and polymers retain explicit representation limits. Dodecanethiol and hexane isomer identity is unassigned by the source; the named 1-dodecanethiol/n-hexane views are reference alternatives. Each drawing is linked to its source-specific material or solution context.','reader-note'));

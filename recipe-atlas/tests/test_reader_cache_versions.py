@@ -4,7 +4,7 @@ import ast
 import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = '0.41.6'
+VERSION = '0.41.7'
 
 
 class ReaderCacheVersionTests(unittest.TestCase):
@@ -63,5 +63,21 @@ class ReaderCacheVersionTests(unittest.TestCase):
             self.assertIn('Loading material…', text)
             self.assertNotIn('Loading reviewed material', text)
 
+
+
+    def test_connected_reader_parent_imports_have_no_stale_cache_tokens(self):
+        for rel in ('templates/material-reader.html', 'scripts/build_dataset.py', 'scripts/build_reader_views.py',
+                    'static/atlas-app.mjs', 'static/crystal-viewer.mjs', 'static/illustrated-record.mjs',
+                    'static/material-hub.mjs', 'static/material-guide.mjs', 'static/paper-review.mjs',
+                    'static/protocol-references.mjs', 'static/reader-app.mjs', 'static/reader-figure-morphology.mjs',
+                    'static/reader-particle.mjs', 'static/reader-structures.mjs', 'static/wu2008-reader-context.mjs'):
+            with self.subTest(parent=rel):
+                text = self.read(rel)
+                self.assertIn(VERSION, text)
+                self.assertNotIn('0.41.6', text)
+        # Fresh record and legacy-material parents must reach both corrected modules.
+        self.assertIn('material-guide.mjs?v=' + VERSION, self.read('static/illustrated-record.mjs'))
+        self.assertIn('material-guide.mjs?v=' + VERSION, self.read('static/material-hub.mjs'))
+        self.assertIn('reader-particle.mjs?v=' + VERSION, self.read('static/reader-structures.mjs'))
 
 if __name__ == '__main__': unittest.main()

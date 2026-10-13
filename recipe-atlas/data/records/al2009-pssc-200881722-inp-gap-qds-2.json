@@ -1,0 +1,437 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "al2009-pssc-200881722-inp-gap-qds-2",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "W. Guo et al. (2009): InP/GaP QDs",
+  "material": {
+    "formula": "InP/GaP",
+    "family": "InP/GaP nanocrystals",
+    "elements": [
+      "In",
+      "P",
+      "Ga"
+    ],
+    "components": [
+      "InP",
+      "GaP"
+    ],
+    "architecture": "unresolved"
+  },
+  "method": "Gas-source MBE",
+  "sources": [
+    {
+      "id": "al2009-pssc-200881722",
+      "doi": "10.1002/pssc.200881722",
+      "title": "First step to Si photonics: synthesis of quantum dot light‐emitters on GaP substrate by MBE",
+      "authors": "Weiming Guo; Alexandre Bondi; Charles Cornet; Hervé Folliot; Antoine Létoublon; Soline Boyer‐Richard; Nicolas Chevalier; Maud Gicquel; Bassem Alsahwa; Alain Le Corre; Jacky Even; Olivier Durand; Slimane Loualiche",
+      "year": 2009,
+      "url": "https://doi.org/10.1002/pssc.200881722",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "al2009-pssc-200881722",
+    "recipe_family": "al2009-pssc-200881722-inp-gap-qds-2",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "InP/GaP",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "al2009-pssc-200881722",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "island",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "al2009-pssc-200881722",
+          "locator": "Main PDF p.4"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "al2009-pssc-200881722-inp-gap-qds-2--inp",
+      "name": "InP",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "al2009-pssc-200881722",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "al2009-pssc-200881722-inp-gap-qds-2--gap",
+      "name": "GaP",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "al2009-pssc-200881722",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "al2009-pssc-200881722-inp-gap-qds-2--ph3",
+      "name": "PH3",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "amount": {
+          "value": 3,
+          "minimum": null,
+          "maximum": null,
+          "unit": "SCCM",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "3 SCCM",
+          "evidence": [
+            {
+              "source_id": "al2009-pssc-200881722",
+              "locator": "Main PDF p.4"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "al2009-pssc-200881722",
+          "locator": "Main PDF p.4"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "al2009-pssc-200881722-inp-gap-qds-2--after-s01-heat",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "al2009-pssc-200881722-inp-gap-qds-2--after-s02-deposit",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "al2009-pssc-200881722-inp-gap-qds-2--after-s01-heat"
+      ]
+    },
+    {
+      "id": "al2009-pssc-200881722-inp-gap-qds-2--after-s03-grow",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "al2009-pssc-200881722-inp-gap-qds-2--after-s02-deposit",
+        "al2009-pssc-200881722-inp-gap-qds-2--inp",
+        "al2009-pssc-200881722-inp-gap-qds-2--ph3"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-heat",
+      "action": "heat",
+      "label": "Oxide desorption",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "al2009-pssc-200881722-inp-gap-qds-2--after-s01-heat"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 680,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "680 °C",
+          "evidence": [
+            {
+              "source_id": "al2009-pssc-200881722",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Oxide desorption",
+      "evidence": [
+        {
+          "source_id": "al2009-pssc-200881722",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-deposit",
+      "action": "deposit",
+      "label": "GaP buffer layer",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-heat"
+      ],
+      "inputs": [
+        "al2009-pssc-200881722-inp-gap-qds-2--after-s01-heat"
+      ],
+      "outputs": [
+        "al2009-pssc-200881722-inp-gap-qds-2--after-s02-deposit"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 580,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "580 °C",
+          "evidence": [
+            {
+              "source_id": "al2009-pssc-200881722",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "GaP buffer layer",
+      "evidence": [
+        {
+          "source_id": "al2009-pssc-200881722",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-grow",
+      "action": "grow",
+      "label": "InP quantum dots",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-deposit"
+      ],
+      "inputs": [
+        "al2009-pssc-200881722-inp-gap-qds-2--after-s02-deposit",
+        "al2009-pssc-200881722-inp-gap-qds-2--inp",
+        "al2009-pssc-200881722-inp-gap-qds-2--ph3"
+      ],
+      "outputs": [
+        "al2009-pssc-200881722-inp-gap-qds-2--after-s03-grow"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 500,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "500 °C",
+          "evidence": [
+            {
+              "source_id": "al2009-pssc-200881722",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "InP quantum dots",
+      "evidence": [
+        {
+          "source_id": "al2009-pssc-200881722",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "al2009-pssc-200881722-inp-gap-qds-2--product",
+      "source_sample_label": "InP/GaP QDs",
+      "batch_id": null,
+      "material_state_id": "al2009-pssc-200881722-inp-gap-qds-2--after-s03-grow",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "InP/GaP",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "al2009-pssc-200881722",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": "island",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "al2009-pssc-200881722",
+            "locator": "Main PDF p.4"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "al2009-pssc-200881722",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reactor: Riber 2300 gas source MBE system (Main PDF p.2).",
+        "Reaction temperature: 500 degC (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of InP not reported in the extracted text.",
+      "Amount of GaP not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
