@@ -1,0 +1,387 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "zhang2009-b914213d-cdteps-composite-films-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Hao Zhang (2009): CdTe–PS composite films",
+  "material": {
+    "formula": "CdTe",
+    "family": "CdTe nanocrystals",
+    "elements": [
+      "Cd",
+      "Te"
+    ],
+    "components": [
+      "CdTe"
+    ],
+    "architecture": "composite"
+  },
+  "method": "Synthesis as described in the source",
+  "sources": [
+    {
+      "id": "zhang2009-b914213d",
+      "doi": "10.1039/b914213d",
+      "title": "Manipulation of semiconductor nanocrystal growth in polymer soft solids",
+      "authors": "Hao Zhang, Yue Tang, Junhu Zhang, Minjie Li, Xi Yao, Xiao Li and Bai Yang",
+      "year": 2009,
+      "url": "https://doi.org/10.1039/b914213d",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "zhang2009-b914213d",
+    "recipe_family": "zhang2009-b914213d-cdteps-composite-films-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdTe",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "zhang2009-b914213d",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "crystal",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "zhang2009-b914213d",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": 2.3,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "2.3 nm",
+      "evidence": [
+        {
+          "source_id": "zhang2009-b914213d",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "sphere",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "zhang2009-b914213d",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "zhang2009-b914213d-cdteps-composite-films-1--polystyrene-ps",
+      "name": "polystyrene (PS)",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "zhang2009-b914213d",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "zhang2009-b914213d-cdteps-composite-films-1--after-s01-mix",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "zhang2009-b914213d-cdteps-composite-films-1--polystyrene-ps"
+      ]
+    },
+    {
+      "id": "zhang2009-b914213d-cdteps-composite-films-1--after-s02-spin-coat",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "zhang2009-b914213d-cdteps-composite-films-1--after-s01-mix",
+        "zhang2009-b914213d-cdteps-composite-films-1--polystyrene-ps"
+      ]
+    },
+    {
+      "id": "zhang2009-b914213d-cdteps-composite-films-1--after-s03-heat",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "zhang2009-b914213d-cdteps-composite-films-1--after-s02-spin-coat",
+        "zhang2009-b914213d-cdteps-composite-films-1--polystyrene-ps"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-mix",
+      "action": "mix",
+      "label": "Mixing CdTe NCs with PS solution",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "zhang2009-b914213d-cdteps-composite-films-1--polystyrene-ps"
+      ],
+      "outputs": [
+        "zhang2009-b914213d-cdteps-composite-films-1--after-s01-mix"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "zhang2009-b914213d",
+            "locator": "Main PDF p.4"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Mixing CdTe NCs with PS solution",
+      "evidence": [
+        {
+          "source_id": "zhang2009-b914213d",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "s02-spin-coat",
+      "action": "spin-coat",
+      "label": "Spin-coating the mixture onto a quartz slide",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-mix"
+      ],
+      "inputs": [
+        "zhang2009-b914213d-cdteps-composite-films-1--after-s01-mix",
+        "zhang2009-b914213d-cdteps-composite-films-1--polystyrene-ps"
+      ],
+      "outputs": [
+        "zhang2009-b914213d-cdteps-composite-films-1--after-s02-spin-coat"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "zhang2009-b914213d",
+            "locator": "Main PDF p.4"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Spin-coating the mixture onto a quartz slide",
+      "evidence": [
+        {
+          "source_id": "zhang2009-b914213d",
+          "locator": "Main PDF p.4"
+        }
+      ]
+    },
+    {
+      "id": "s03-heat",
+      "action": "heat",
+      "label": "Heating the composite films at 180 °C",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-spin-coat"
+      ],
+      "inputs": [
+        "zhang2009-b914213d-cdteps-composite-films-1--after-s02-spin-coat",
+        "zhang2009-b914213d-cdteps-composite-films-1--polystyrene-ps"
+      ],
+      "outputs": [
+        "zhang2009-b914213d-cdteps-composite-films-1--after-s03-heat"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "zhang2009-b914213d",
+            "locator": "Main PDF p.4"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Heating the composite films at 180 °C",
+      "evidence": [
+        {
+          "source_id": "zhang2009-b914213d",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "zhang2009-b914213d-cdteps-composite-films-1--product",
+      "source_sample_label": "CdTe–PS composite films",
+      "batch_id": null,
+      "material_state_id": "zhang2009-b914213d-cdteps-composite-films-1--after-s03-heat",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdTe",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "zhang2009-b914213d",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "crystal",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "zhang2009-b914213d",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "sphere",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "zhang2009-b914213d",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": "3-mercaptopropionic acid",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "zhang2009-b914213d",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "zhang2009-b914213d",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [
+    {
+      "id": "zhang2009-b914213d-cdteps-composite-films-1--size",
+      "sample_id": "zhang2009-b914213d-cdteps-composite-films-1--product",
+      "property": "diameter",
+      "technique": "TEM",
+      "value": {
+        "value": 2.3,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "2.3 nm",
+        "evidence": [
+          {
+            "source_id": "zhang2009-b914213d",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "zhang2009-b914213d",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Reactor not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of polystyrene (PS) not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

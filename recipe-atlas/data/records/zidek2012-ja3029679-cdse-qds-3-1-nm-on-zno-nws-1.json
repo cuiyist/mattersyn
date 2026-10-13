@@ -1,0 +1,409 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "zidek2012-ja3029679-cdse-qds-3-1-nm-on-zno-nws-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Karel Žídek (2012): CdSe QDs (3.1 nm) on ZnO NWs",
+  "material": {
+    "formula": "CdSe",
+    "family": "CdSe nanocrystals",
+    "elements": [
+      "Cd",
+      "Se"
+    ],
+    "components": [
+      "CdSe"
+    ],
+    "architecture": "composite"
+  },
+  "method": "Synthesis as described in the source",
+  "sources": [
+    {
+      "id": "zidek2012-ja3029679",
+      "doi": "10.1021/ja3029679",
+      "title": "Electron Transfer in Quantum-Dot-Sensitized ZnO Nanowires: Ultrafast Time-Resolved Absorption and Terahertz Study",
+      "authors": "Karel Žídek, Kaibo Zheng, Carlito S. Ponseca, Jr., Maria E. Messing, L. Reine Wallenberg, Pavel Chábera, Mohamed Abdellah, Villy Sundström, and Tõnu Pullerits",
+      "year": 2012,
+      "url": "https://doi.org/10.1021/ja3029679",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "zidek2012-ja3029679",
+    "recipe_family": "zidek2012-ja3029679-cdse-qds-3-1-nm-on-zno-nws-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdSe",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "zidek2012-ja3029679",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "zinc blende",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "zidek2012-ja3029679",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": 3.1,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "3.1 nm",
+      "evidence": [
+        {
+          "source_id": "zidek2012-ja3029679",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "sphere",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "zidek2012-ja3029679",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "zidek2012-ja3029679-cdse-qds-3-1-nm-on-zno-nws-1--2-mercaptopropionic-acid",
+      "name": "2-mercaptopropionic acid",
+      "formula": null,
+      "role": "ligand",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "zidek2012-ja3029679",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "zidek2012-ja3029679-cdse-qds-3-1-nm-on-zno-nws-1--ethanol",
+      "name": "ethanol",
+      "formula": null,
+      "role": "solvent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "zidek2012-ja3029679",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "zidek2012-ja3029679-cdse-qds-3-1-nm-on-zno-nws-1--after-s01-heat",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "zidek2012-ja3029679-cdse-qds-3-1-nm-on-zno-nws-1--after-s02-exchange",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "zidek2012-ja3029679-cdse-qds-3-1-nm-on-zno-nws-1--after-s01-heat",
+        "zidek2012-ja3029679-cdse-qds-3-1-nm-on-zno-nws-1--2-mercaptopropionic-acid"
+      ]
+    },
+    {
+      "id": "zidek2012-ja3029679-cdse-qds-3-1-nm-on-zno-nws-1--after-s03-immersion",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "zidek2012-ja3029679-cdse-qds-3-1-nm-on-zno-nws-1--after-s02-exchange",
+        "zidek2012-ja3029679-cdse-qds-3-1-nm-on-zno-nws-1--ethanol"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-heat",
+      "action": "heat",
+      "label": "Heat reaction to obtain QDs with different sizes",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "zidek2012-ja3029679-cdse-qds-3-1-nm-on-zno-nws-1--after-s01-heat"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 240,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "240 °C",
+          "evidence": [
+            {
+              "source_id": "zidek2012-ja3029679",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Heat reaction to obtain QDs with different sizes",
+      "evidence": [
+        {
+          "source_id": "zidek2012-ja3029679",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-exchange",
+      "action": "exchange",
+      "label": "Exchange capping agent to 2-mercaptopropionic acid",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-heat"
+      ],
+      "inputs": [
+        "zidek2012-ja3029679-cdse-qds-3-1-nm-on-zno-nws-1--after-s01-heat",
+        "zidek2012-ja3029679-cdse-qds-3-1-nm-on-zno-nws-1--2-mercaptopropionic-acid"
+      ],
+      "outputs": [
+        "zidek2012-ja3029679-cdse-qds-3-1-nm-on-zno-nws-1--after-s02-exchange"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Exchange capping agent to 2-mercaptopropionic acid",
+      "evidence": [
+        {
+          "source_id": "zidek2012-ja3029679",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-immersion",
+      "action": "immersion",
+      "label": "Immersion of ZnO NWs into CdSe QD solution",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-exchange"
+      ],
+      "inputs": [
+        "zidek2012-ja3029679-cdse-qds-3-1-nm-on-zno-nws-1--after-s02-exchange",
+        "zidek2012-ja3029679-cdse-qds-3-1-nm-on-zno-nws-1--ethanol"
+      ],
+      "outputs": [
+        "zidek2012-ja3029679-cdse-qds-3-1-nm-on-zno-nws-1--after-s03-immersion"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Immersion of ZnO NWs into CdSe QD solution",
+      "evidence": [
+        {
+          "source_id": "zidek2012-ja3029679",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "zidek2012-ja3029679-cdse-qds-3-1-nm-on-zno-nws-1--product",
+      "source_sample_label": "CdSe QDs (3.1 nm) on ZnO NWs",
+      "batch_id": null,
+      "material_state_id": "zidek2012-ja3029679-cdse-qds-3-1-nm-on-zno-nws-1--after-s03-immersion",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdSe",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "zidek2012-ja3029679",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "zinc blende",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "zidek2012-ja3029679",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "sphere",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "zidek2012-ja3029679",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": "2-mercaptopropionic acid",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "zidek2012-ja3029679",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "zidek2012-ja3029679",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reaction temperature: 240 degC (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "zidek2012-ja3029679-cdse-qds-3-1-nm-on-zno-nws-1--size",
+      "sample_id": "zidek2012-ja3029679-cdse-qds-3-1-nm-on-zno-nws-1--product",
+      "property": "particle_size",
+      "technique": "not reported",
+      "value": {
+        "value": 3.1,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "3.1 nm",
+        "evidence": [
+          {
+            "source_id": "zidek2012-ja3029679",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "zidek2012-ja3029679",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Reactor not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of 2-mercaptopropionic acid not reported in the extracted text.",
+      "Amount of ethanol not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

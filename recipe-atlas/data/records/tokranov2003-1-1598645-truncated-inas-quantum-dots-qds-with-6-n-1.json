@@ -1,0 +1,401 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "tokranov2003-1-1598645-truncated-inas-quantum-dots-qds-with-6-n-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "V. Tokranov (2003): truncated InAs quantum dots (QDs) with 6-nm-thick GaAs overlayer",
+  "material": {
+    "formula": "InAs",
+    "family": "InAs nanocrystals",
+    "elements": [
+      "In",
+      "As"
+    ],
+    "components": [
+      "InAs"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Molecular beam epitaxy",
+  "sources": [
+    {
+      "id": "tokranov2003-1-1598645",
+      "doi": "10.1063/1.1598645",
+      "title": "Enhanced thermal stability of laser diodes with shape-engineered quantum dot medium",
+      "authors": "V. Tokranov; M. Yakimov; A. Katsnelson; M. Lamberti; S. Oktyabrsky",
+      "year": 2003,
+      "url": "https://doi.org/10.1063/1.1598645",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "tokranov2003-1-1598645",
+    "recipe_family": "tokranov2003-1-1598645-truncated-inas-quantum-dots-qds-with-6-n-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "truncated pyramid",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "tokranov2003-1-1598645",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "tokranov2003-1-1598645-truncated-inas-quantum-dots-qds-with-6-n-1--inas",
+      "name": "InAs",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "amount": {
+          "value": 2.3,
+          "minimum": null,
+          "maximum": null,
+          "unit": "monolayer",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "2.3 monolayer",
+          "evidence": [
+            {
+              "source_id": "tokranov2003-1-1598645",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "tokranov2003-1-1598645",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "tokranov2003-1-1598645-truncated-inas-quantum-dots-qds-with-6-n-1--gaas",
+      "name": "GaAs",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "amount": {
+          "value": 25,
+          "minimum": null,
+          "maximum": null,
+          "unit": "monolayer",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "25 monolayer",
+          "evidence": [
+            {
+              "source_id": "tokranov2003-1-1598645",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "tokranov2003-1-1598645",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "tokranov2003-1-1598645-truncated-inas-quantum-dots-qds-with-6-n-1--after-s01-overgrow",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "tokranov2003-1-1598645-truncated-inas-quantum-dots-qds-with-6-n-1--gaas"
+      ]
+    },
+    {
+      "id": "tokranov2003-1-1598645-truncated-inas-quantum-dots-qds-with-6-n-1--after-s02-heat",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "tokranov2003-1-1598645-truncated-inas-quantum-dots-qds-with-6-n-1--after-s01-overgrow"
+      ]
+    },
+    {
+      "id": "tokranov2003-1-1598645-truncated-inas-quantum-dots-qds-with-6-n-1--after-s03-overgrow",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "tokranov2003-1-1598645-truncated-inas-quantum-dots-qds-with-6-n-1--after-s02-heat",
+        "tokranov2003-1-1598645-truncated-inas-quantum-dots-qds-with-6-n-1--gaas"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-overgrow",
+      "action": "overgrow",
+      "label": "GaAs and/or SPSL with various thicknesses",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "tokranov2003-1-1598645-truncated-inas-quantum-dots-qds-with-6-n-1--gaas"
+      ],
+      "outputs": [
+        "tokranov2003-1-1598645-truncated-inas-quantum-dots-qds-with-6-n-1--after-s01-overgrow"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "vacuum",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "tokranov2003-1-1598645",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "GaAs and/or SPSL with various thicknesses",
+      "evidence": [
+        {
+          "source_id": "tokranov2003-1-1598645",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-heat",
+      "action": "heat",
+      "label": "QD truncation",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-overgrow"
+      ],
+      "inputs": [
+        "tokranov2003-1-1598645-truncated-inas-quantum-dots-qds-with-6-n-1--after-s01-overgrow"
+      ],
+      "outputs": [
+        "tokranov2003-1-1598645-truncated-inas-quantum-dots-qds-with-6-n-1--after-s02-heat"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 580,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "580 °C",
+          "evidence": [
+            {
+              "source_id": "tokranov2003-1-1598645",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "vacuum",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "tokranov2003-1-1598645",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "QD truncation",
+      "evidence": [
+        {
+          "source_id": "tokranov2003-1-1598645",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-overgrow",
+      "action": "overgrow",
+      "label": "GaAs and/or SPSL",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-heat"
+      ],
+      "inputs": [
+        "tokranov2003-1-1598645-truncated-inas-quantum-dots-qds-with-6-n-1--after-s02-heat",
+        "tokranov2003-1-1598645-truncated-inas-quantum-dots-qds-with-6-n-1--gaas"
+      ],
+      "outputs": [
+        "tokranov2003-1-1598645-truncated-inas-quantum-dots-qds-with-6-n-1--after-s03-overgrow"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "vacuum",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "tokranov2003-1-1598645",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "GaAs and/or SPSL",
+      "evidence": [
+        {
+          "source_id": "tokranov2003-1-1598645",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "tokranov2003-1-1598645-truncated-inas-quantum-dots-qds-with-6-n-1--product",
+      "source_sample_label": "truncated InAs quantum dots (QDs) with 6-nm-thick GaAs overlayer",
+      "batch_id": null,
+      "material_state_id": "tokranov2003-1-1598645-truncated-inas-quantum-dots-qds-with-6-n-1--after-s03-overgrow",
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": "truncated pyramid",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "tokranov2003-1-1598645",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "tokranov2003-1-1598645",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reactor: EPI MOD GEN II molecular beam epitaxy system (Main PDF p.2).",
+        "Reaction temperature: 460 degC (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Reaction time not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
