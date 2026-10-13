@@ -2,6 +2,18 @@
 
 Owner instruction: October 10, 2026, evening. This report records only measured results. The audit lane stays paused; new contributions retain `source_extracted`. Source PDFs, full text, pass files and pair files with quotes remain local. Site records contain locators without quotes.
 
+## Current verified delivery and next-batch status — 2026-10-13T12:28:18+00:00
+
+Batch 17 passed normal anonymous verification at 2026-10-13T11:00:02+00:00: 31 new source-extracted papers, 48 records, 125 captioned figures and 31 SourceEx ledger events. All 495 probes passed with zero mismatches; all 31 paper and 58 material routes passed. Prepared Source `76e016d33e4a24825e073eb05997e15792eab576` merged as `96eec94e6aa33112efc997277c5e310a18437329`; Site `7faea48380df5dc115d4aa339fde7530a8c3eff1`. Live coverage is 244 audited + 547 simple = 791 papers; 3,826 canonical records; 408 direct material families; 482 material/component pages; 1,705 displayed pairs (864 audited + 841 simple), with six more comprehensive and 1,699 partial. The final manifest contains 34,618 files and 1,947,068,762 bytes. New contributions remain source_extracted, not independently audited or training eligible.
+
+B18 Source working integration completed at 2026-10-13T12:22:40+00:00 with 28 papers, 43 new records and 123 figures. Canonical working records are 3,869 = 3,826 + 43; all 3,826 old records remain byte-identical. Root reports the last nonempty reader sync complete, strict citation application for seven papers / nine records / 12 dependent files, and all 123 retained captions applied from 104 accepted, 13 recovered and six manual captions. Accepted original inputs remain three rare proposals, 15 deletion paths and zero additions; all 185 original caption keys are complete, and 41 citation authorities are complete. Initial 30 papers / 46 records remain historical selection inputs. Root retains the English anie edition and omits the authorized German ange alternate in the new selected pair copy. B18 publication has not occurred and pending cohorts receive zero live credit. Complete the cohesive B18 Source milestone, complete clean release build and all unchanged normal gates; future B18 heads remain unset.
+
+B31 local generation launched at 2026-10-13T12:20:20.0499706Z for 26 supported papers, preserving 24 identity holds and the unchanged owned 32B server. It has zero publication credit; no generation completion is inferred.
+
+Completed cleanup totals 324,947,723,133 logical bytes across 6,951,560 files. Separate lossless metadata compression saved 5,459,851,247 bytes; every original byte remains recoverable locally. The 600 GB target remains unmet. The completed accounting is saved in [the cleanup report](https://github.com/cuiyist/mattersyn2/blob/23ed96f641cddb9425ec513b8f2e61747061c271/CLEANUP_REPORT_2026-10-12.md). C free space before cleanup was 11,985,891,328 bytes; the actual report-time observation is 181,709,901,824 bytes at 2026-10-13T12:32:45.140149+00:00. Free-space changes also reflect other disk activity and are separate from file-size accounting. The unused Qwen3 4B model was removed once (4,280,404,704 bytes); Ollama 9B/27B were not located and receive zero removal credit. Active 32B/CUDA, originals, quoted training files and working checkouts remain protected. A separate local folder report names the 16 observed Python HTTP previews whose served folders were retained; none was stopped. Prior observations and cleanup windows remain historical.
+
+The audited lane, all four unresolved owner questions, original sampling denominator, historical failures and owner limits remain paused and unchanged. Six training exports remain audited-only. No achieved hourly rate, uninterrupted activity, scientific audit or training admission is asserted. Older dated checkpoints below remain historical.
+
 ## Current verified delivery and next-batch status — 2026-10-13T08:13:01+00:00
 
 Reports: [machine-extracted paper list](research-assets/public-audits/MACHINE_EXTRACTED_PAPERS.md), [single cumulative job report](research-assets/public-audits/SIMPLE_PIPELINE_REPORT.md), [control](research-assets/curation-control.json), and [cleanup report at the verified public commit](https://github.com/cuiyist/mattersyn2/blob/87245e92e42f9b068f68f81e37f8f1646f508111/CLEANUP_REPORT_2026-10-12.md).
@@ -859,6 +871,50 @@ Recorded pages run: [38361827164](https://github.com/cuiyist/mattersyn-site/acti
 | 10.1021/nl401698z | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/x2013-nl401698z-pbse-qd-thin-film-1.html) |
 | 10.1007/s11664-006-0021-4 | 1 | 6 | [Open](https://cuiyist.github.io/mattersyn-site/records/zhang2007-s11664-006-0021-4-znse-n-film-1.html) |
 | 10.1021/nl503085v | 2 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/zhang2014-nl503085v-pbse-qds-2-9-nm-1.html) |
+
+### simple-batch17-20261013
+
+Anonymous verification passed at 2026-10-13T11:00:02+00:00: 495 files, zero mismatches. [Source commit](https://github.com/cuiyist/mattersyn/commit/76e016d33e4a24825e073eb05997e15792eab576) and [Site commit](https://github.com/cuiyist/mattersyn-site/commit/7faea48380df5dc115d4aa339fde7530a8c3eff1). This batch contains 31 source groups, 48 records and 125 source figure crops; 31 distinct newly contributing primary papers after DOI deduplication. Every new contribution remains machine extracted and not independently audited. The final built site is 1,947,068,762 bytes / 34,618 files.
+
+Live counter: **244 audited + 547 machine extracted = 791 papers**, 3,826 canonical records, 408 direct material families, 482 material/component pages and 1705 displayed recipe–structure pairs (6 more comprehensive; 1699 partial). These display counts do not establish extraction accuracy, measured atomic coordinates or training eligibility.
+
+Recorded source pr: [35](https://github.com/cuiyist/mattersyn/pull/35).
+
+Recorded pages run: [38383181560](https://github.com/cuiyist/mattersyn-site/actions/runs/38383181560).
+
+| Primary DOI | Records | Figure crops | Public page |
+| --- | ---: | ---: | --- |
+| 10.1002/anie.200600545 | 1 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/bolinger2006-anie-200600545-cdse-topo-qd-hybrid-vesicles-hvs-1.html) |
+| 10.1063/1.1632542 | 1 | 2 | [Open](https://cuiyist.github.io/mattersyn-site/records/borgstrom2003-1-1632542-inas-quantum-dot-stack-1.html) |
+| 10.1063/1.3233926 | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/dedigamuwa2009-1-3233926-surfactant-free-pbse-quantum-dot-film-1.html) |
+| 10.1063/1.1763979 | 3 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/dybiec2004-1-1763979-inas-quantum-dots-embedded-in-in0-15ga0-1.html) |
+| 10.1063/1.118816 | 1 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/fukuda1997-1-118816-si-quantum-dot-1.html) |
+| 10.1021/ac500590d | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/he2014-ac500590d-znse-qds-doped-with-hg-ii-1.html) |
+| 10.1021/acs.nanolett.4c00651 | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/hu2024-acs-nanolett-4c00651-c-cspbi3-qds-1.html) |
+| 10.1002/pssc.200303088 | 1 | 2 | [Open](https://cuiyist.github.io/mattersyn-site/records/hwang2003-pssc-200303088-5-layer-inas-inp-quantum-dot-qd-stack-1.html) |
+| 10.1002/adma.200701582 | 3 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/jasieniak2008-adma-200701582-cdse-cds-zns-quantum-dots-yellow-1.html) |
+| 10.1021/jp030168h | 2 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/kim2003-jp030168h-2-1-nm-diameter-cdse-1-thioglycerol-nano-1.html) |
+| 10.1002/pssc.200303073 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/kulbachinskii2003-pssc-200303073-inas-gaas-quantum-dot-structures-1.html) |
+| 10.1021/cm1027354 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/lambert2011-cm1027354-cdse-qd-monolayer-embedded-in-al2o3-1.html) |
+| 10.1063/1.2234817 | 1 | 6 | [Open](https://cuiyist.github.io/mattersyn-site/records/lin2006-1-2234817-inas-gaas-quantum-dot-structure-1.html) |
+| 10.1016/j.materresbull.2011.05.017 | 1 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/mahmoud2011-j-materresbull-2011-05-017-pva-pbs-nanocomposite-1.html) |
+| 10.1021/am404227x | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/mangold2014-am404227x-cdse-nc-qds-in-sio2-matrix-1.html) |
+| 10.1103/physrevb.69.045301 | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/mcginley2004-physrevb-69-045301-inas-cdse-core-shell-nanocrystals-1.html) |
+| 10.1021/ma9006285 | 1 | 2 | [Open](https://cuiyist.github.io/mattersyn-site/records/palaniappan2009-ma9006285-cdse-quantum-dots-1.html) |
+| 10.1002/pip.452 | 7 | 6 | [Open](https://cuiyist.github.io/mattersyn-site/records/raffaelle2002-pip-452-cdse-quantum-dots-green-sample-1.html) |
+| 10.1103/physrevb.72.205410 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/rath2005-physrevb-72-205410-hgte-nanocrystalline-thin-films-1.html) |
+| 10.1038/nphoton.2009.72 | 1 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/rauch2009-nphoton-2009-72-pbsqd-p3ht-pcbm-blend-1.html) |
+| 10.1038/nmat4231 | 2 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/rowland2015-nmat4231-4-ml-cdse-npl-1.html) |
+| 10.1063/1.2185008 | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/saint-girons2006-1-2185008-inas-inp-001-quantum-dots-qds-1.html) |
+| 10.1063/1.2402744 | 2 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/salhi2006-1-2402744-inas-ingaas-gaas-quantum-dot-layers-five-1.html) |
+| 10.1063/1.2927496 | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/semenova2008-1-2927496-inas-quantum-dots-qds-embedded-in-in0-42-1.html) |
+| 10.1021/jp004541m | 4 | 6 | [Open](https://cuiyist.github.io/mattersyn-site/records/sirota2001-jp004541m-acid-iii-cds-1.html) |
+| 10.1063/1.1539279 | 1 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/springholz2003-1-1539279-pbse-pb1-xeuxte-quantum-dot-superlattice-1.html) |
+| 10.1021/jp020170t | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/striolo2002-jp020170t-cdse-nanocrystals-1.html) |
+| 10.1063/1.1428118 | 1 | 2 | [Open](https://cuiyist.github.io/mattersyn-site/records/suyver2001-1-1428118-znse-cu-ncs-1.html) |
+| 10.1002/pssb.200880670 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/tribu2009-pssb-200880670-cdse-qd-in-znse-nanowire-1.html) |
+| 10.1007/s10832-007-9288-y | 2 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/wang2008-s10832-007-9288-y-znse-nanocrystalline-powders-as-milled-1.html) |
+| 10.1063/1.1445269 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/yeh2002-1-1445269-inas-gaas-quantum-dot-laser-with-ingap-c-1.html) |
 
 ## Latest continuation checkpoint
 

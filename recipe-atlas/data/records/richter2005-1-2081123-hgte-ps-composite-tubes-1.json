@@ -1,0 +1,248 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "richter2005-1-2081123-hgte-ps-composite-tubes-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Stefan Richter (2005): HgTe/PS composite tubes",
+  "material": {
+    "formula": "HgTe",
+    "family": "HgTe nanocrystals",
+    "elements": [
+      "Hg",
+      "Te"
+    ],
+    "components": [
+      "HgTe"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Synthesis as described in the source",
+  "sources": [
+    {
+      "id": "richter2005-1-2081123",
+      "doi": "10.1063/1.2081123",
+      "title": "Quantum dot emitters in two-dimensional photonic crystals of macroporous silicon",
+      "authors": "Stefan Richter, Martin Steinhart, Herbert Hofmeister, Margit Zacharias, and Ulrich Gösele, Nikolai Gaponik and Alexander Eychmüller, Andrey L. Rogach, Joachim H. Wendorff, Stefan L. Schweizer, Andreas von Rhein, and Ralf B. Wehrspohn",
+      "year": 2005,
+      "url": "https://doi.org/10.1063/1.2081123",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "richter2005-1-2081123",
+    "recipe_family": "richter2005-1-2081123-hgte-ps-composite-tubes-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "HgTe",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "richter2005-1-2081123",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "richter2005-1-2081123-hgte-ps-composite-tubes-1--after-s01-wet",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "richter2005-1-2081123-hgte-ps-composite-tubes-1--after-s02-evaporate",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "richter2005-1-2081123-hgte-ps-composite-tubes-1--after-s01-wet"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-wet",
+      "action": "wet",
+      "label": "Polymer/QD solution applied to macroporous Si",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "richter2005-1-2081123-hgte-ps-composite-tubes-1--after-s01-wet"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "ambient",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "richter2005-1-2081123",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Polymer/QD solution applied to macroporous Si",
+      "evidence": [
+        {
+          "source_id": "richter2005-1-2081123",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-evaporate",
+      "action": "evaporate",
+      "label": "Toluene evaporated to form solidified composite",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-wet"
+      ],
+      "inputs": [
+        "richter2005-1-2081123-hgte-ps-composite-tubes-1--after-s01-wet"
+      ],
+      "outputs": [
+        "richter2005-1-2081123-hgte-ps-composite-tubes-1--after-s02-evaporate"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "ambient",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "richter2005-1-2081123",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Toluene evaporated to form solidified composite",
+      "evidence": [
+        {
+          "source_id": "richter2005-1-2081123",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "richter2005-1-2081123-hgte-ps-composite-tubes-1--product",
+      "source_sample_label": "HgTe/PS composite tubes",
+      "batch_id": null,
+      "material_state_id": "richter2005-1-2081123-hgte-ps-composite-tubes-1--after-s02-evaporate",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "HgTe",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "richter2005-1-2081123",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "richter2005-1-2081123",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

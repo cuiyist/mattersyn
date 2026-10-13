@@ -1,0 +1,348 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "holy2009-physrevb-79-035324-3d-sige-quantum-dot-crystal-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Vaclav Holý (2009): 3D SiGe quantum dot crystal",
+  "material": {
+    "formula": "SiGe",
+    "family": "SiGe nanocrystals",
+    "elements": [
+      "Si",
+      "Ge"
+    ],
+    "components": [
+      "SiGe"
+    ],
+    "architecture": "heterostructure"
+  },
+  "method": "MBE",
+  "sources": [
+    {
+      "id": "holy2009-physrevb-79-035324",
+      "doi": "10.1103/physrevb.79.035324",
+      "title": "X-ray diffraction investigation of a three-dimensional Si/SiGe quantum dot crystal",
+      "authors": "Vaclav Holý, Julian Stangl, Thomas Fromherz, Rainer T. Lechner, Eugene Wintersberger, Günther Bauer, Christian Dais, Elisabeth Müller, Detlev Grützmacher",
+      "year": 2009,
+      "url": "https://doi.org/10.1103/physrevb.79.035324",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "holy2009-physrevb-79-035324",
+    "recipe_family": "holy2009-physrevb-79-035324-3d-sige-quantum-dot-crystal-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "SiGe",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "holy2009-physrevb-79-035324",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "pyramid",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "holy2009-physrevb-79-035324",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "holy2009-physrevb-79-035324-3d-sige-quantum-dot-crystal-1--ge",
+      "name": "Ge",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "volume": {
+          "value": 7,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "7 mL",
+          "evidence": [
+            {
+              "source_id": "holy2009-physrevb-79-035324",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "holy2009-physrevb-79-035324",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "holy2009-physrevb-79-035324-3d-sige-quantum-dot-crystal-1--si",
+      "name": "Si",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "holy2009-physrevb-79-035324",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "holy2009-physrevb-79-035324-3d-sige-quantum-dot-crystal-1--after-s01-deposit",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "holy2009-physrevb-79-035324-3d-sige-quantum-dot-crystal-1--after-s02-deposit",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "holy2009-physrevb-79-035324-3d-sige-quantum-dot-crystal-1--after-s01-deposit",
+        "holy2009-physrevb-79-035324-3d-sige-quantum-dot-crystal-1--ge"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-deposit",
+      "action": "deposit",
+      "label": "MBE deposition of Si buffer layer",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "holy2009-physrevb-79-035324-3d-sige-quantum-dot-crystal-1--after-s01-deposit"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 300,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "300 °C",
+          "evidence": [
+            {
+              "source_id": "holy2009-physrevb-79-035324",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "MBE deposition of Si buffer layer",
+      "evidence": [
+        {
+          "source_id": "holy2009-physrevb-79-035324",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-deposit",
+      "action": "deposit",
+      "label": "MBE deposition of Ge to form islands",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-deposit"
+      ],
+      "inputs": [
+        "holy2009-physrevb-79-035324-3d-sige-quantum-dot-crystal-1--after-s01-deposit",
+        "holy2009-physrevb-79-035324-3d-sige-quantum-dot-crystal-1--ge"
+      ],
+      "outputs": [
+        "holy2009-physrevb-79-035324-3d-sige-quantum-dot-crystal-1--after-s02-deposit"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 450,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "450 °C",
+          "evidence": [
+            {
+              "source_id": "holy2009-physrevb-79-035324",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "MBE deposition of Ge to form islands",
+      "evidence": [
+        {
+          "source_id": "holy2009-physrevb-79-035324",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "holy2009-physrevb-79-035324-3d-sige-quantum-dot-crystal-1--product",
+      "source_sample_label": "3D SiGe quantum dot crystal",
+      "batch_id": null,
+      "material_state_id": "holy2009-physrevb-79-035324-3d-sige-quantum-dot-crystal-1--after-s02-deposit",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "SiGe",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "holy2009-physrevb-79-035324",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": "pyramid",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "holy2009-physrevb-79-035324",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "holy2009-physrevb-79-035324",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reactor: MBE reactor (Main PDF p.1).",
+        "Reaction temperature: 450 degC (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of Si not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
