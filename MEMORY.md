@@ -3432,7 +3432,7 @@ The mixed local Source eff4eb196ee9 is retained as failed, unpushed evidence: it
 
 ## Latest verified simple-pipeline publication
 
-simple-batch14-20261012 is deployed and anonymously verified at 2026-10-12T22:25:08+00:00, Source `35badab38b980fe8cb5f9597533d18f914d82fe9`, Site `6601729f8ef0afd53b2646df1d057597eed8f64f`. This verified batch adds 26 distinct source-extracted primary papers, 35 records and 114 source crops. Live coverage is 244 audited + 464 machine extracted = 708 papers; 3,685 records; 379 direct material families. The built site is 1,846,061,842 bytes. New records are not independently audited or training eligible. The audit lane remains paused with its original findings, denominator and owner questions unchanged. See the single [job report](research-assets/public-audits/SIMPLE_PIPELINE_REPORT.md). This checkpoint asserts no uninterrupted work or unmeasured throughput.
+simple-batch15-20261012 is deployed and anonymously verified at 2026-10-13T02:21:13+00:00, Source `59a8064722109335a5781d4aac61fa971c94e03d`, Site `6d0f25d778a066f8c879d269fb51ee97da535042`. This verified batch adds 28 distinct source-extracted primary papers, 53 records and 148 source crops. Live coverage is 244 audited + 492 machine extracted = 736 papers; 3,738 records; 392 direct material families. The built site is 1,888,591,533 bytes. New records are not independently audited or training eligible. The audit lane remains paused with its original findings, denominator and owner questions unchanged. See the single [job report](research-assets/public-audits/SIMPLE_PIPELINE_REPORT.md). This checkpoint asserts no uninterrupted work or unmeasured throughput.
 
 ## Batch05 checked, Batch06 launch refused — 2026-10-11T11:59:58+00:00
 
@@ -3453,3 +3453,7 @@ Owner authorization, 2026-10-11 (Root observed the first reply at 16:23 UTC, min
 ## Storage and unused-model checkpoint
 
 Confirmed partial cleanup: 195,449,827,011 logical bytes, including the unused 4B model. The active 32B model and other programs remain preserved; no Ollama removal is claimed. See the [archive cleanup report](https://github.com/cuiyist/mattersyn2/blob/main/CLEANUP_REPORT_2026-10-12.md) and the single job report for this frozen observation.
+
+### October 13 active continuation checkpoint
+
+Batch 15 is genuinely live and anonymously verified (28 papers, 53 records, 148 captioned figures; Site `6d0f25d778a066f8c879d269fb51ee97da535042`). Current live counter: 736 papers, 392 families, 1,617 pairs. Batch 16 integration and Batch 24 local generation continue; Batch 23 caption completion has four keys pending. Cleanup is incomplete at 267.04 GB of confirmed logical removals, with the detailed safe archive report above; the 600 GB target has not been achieved. The active 32B server/CUDA, private page text/pass/pair files and current checkouts must stay. The audited lane and its owner questions remain paused. No status-only site release.

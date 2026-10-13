@@ -1,0 +1,436 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "1-1863445-cds-zns-nc-silica-composite-film-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "1-1863445 (n.d.): CdS/ZnS NC-silica composite film",
+  "material": {
+    "formula": "CdS/ZnS",
+    "family": "CdS/ZnS nanocrystals",
+    "elements": [
+      "Cd",
+      "S",
+      "Zn"
+    ],
+    "components": [
+      "CdS",
+      "ZnS"
+    ],
+    "architecture": "composite"
+  },
+  "method": "Other",
+  "sources": [
+    {
+      "id": "1-1863445",
+      "doi": "10.1063/1.1863445",
+      "title": "Blue semiconductor nanocrystal laser",
+      "authors": "Yinthai Chan; Jonathan S. Steckel; Preston T. Snee; J.-Michel Caruge; Justin M. Hodgkiss; Daniel G. Nocera; Moungi G. Bawendi",
+      "year": 2005,
+      "url": "https://doi.org/10.1063/1.1863445",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "1-1863445",
+    "recipe_family": "1-1863445-cds-zns-nc-silica-composite-film-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdS/ZnS",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "1-1863445",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "1-1863445-cds-zns-nc-silica-composite-film-1--cds-zns-ncs",
+      "name": "CdS/ZnS NCs",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "1-1863445",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "1-1863445-cds-zns-nc-silica-composite-film-1--after-s01-treat",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "1-1863445-cds-zns-nc-silica-composite-film-1--cds-zns-ncs"
+      ]
+    },
+    {
+      "id": "1-1863445-cds-zns-nc-silica-composite-film-1--after-s02-spin-coat",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "1-1863445-cds-zns-nc-silica-composite-film-1--after-s01-treat"
+      ]
+    },
+    {
+      "id": "1-1863445-cds-zns-nc-silica-composite-film-1--after-s03-anneal",
+      "name": "mixture after step 3",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "1-1863445-cds-zns-nc-silica-composite-film-1--after-s02-spin-coat"
+      ]
+    },
+    {
+      "id": "1-1863445-cds-zns-nc-silica-composite-film-1--after-s04-anneal",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "1-1863445-cds-zns-nc-silica-composite-film-1--after-s03-anneal"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-treat",
+      "action": "treat",
+      "label": "Treatment with oleylamine and 5-amino-1-pentanol",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "1-1863445-cds-zns-nc-silica-composite-film-1--cds-zns-ncs"
+      ],
+      "outputs": [
+        "1-1863445-cds-zns-nc-silica-composite-film-1--after-s01-treat"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Treatment with oleylamine and 5-amino-1-pentanol",
+      "evidence": [
+        {
+          "source_id": "1-1863445",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "s02-spin-coat",
+      "action": "spin coat",
+      "label": "Spin coating onto a glass slide",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-treat"
+      ],
+      "inputs": [
+        "1-1863445-cds-zns-nc-silica-composite-film-1--after-s01-treat"
+      ],
+      "outputs": [
+        "1-1863445-cds-zns-nc-silica-composite-film-1--after-s02-spin-coat"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Spin coating onto a glass slide",
+      "evidence": [
+        {
+          "source_id": "1-1863445",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "s03-anneal",
+      "action": "anneal",
+      "label": "Annealing at 100 °C for ~5 min",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-spin-coat"
+      ],
+      "inputs": [
+        "1-1863445-cds-zns-nc-silica-composite-film-1--after-s02-spin-coat"
+      ],
+      "outputs": [
+        "1-1863445-cds-zns-nc-silica-composite-film-1--after-s03-anneal"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 100,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "100 °C",
+          "evidence": [
+            {
+              "source_id": "1-1863445",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "5 min",
+          "evidence": [
+            {
+              "source_id": "1-1863445",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Annealing at 100 °C for ~5 min",
+      "evidence": [
+        {
+          "source_id": "1-1863445",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "s04-anneal",
+      "action": "anneal",
+      "label": "Annealing at 200 °C for ~2 min",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s03-anneal"
+      ],
+      "inputs": [
+        "1-1863445-cds-zns-nc-silica-composite-film-1--after-s03-anneal"
+      ],
+      "outputs": [
+        "1-1863445-cds-zns-nc-silica-composite-film-1--after-s04-anneal"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 200,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "200 °C",
+          "evidence": [
+            {
+              "source_id": "1-1863445",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 2,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "2 min",
+          "evidence": [
+            {
+              "source_id": "1-1863445",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Annealing at 200 °C for ~2 min",
+      "evidence": [
+        {
+          "source_id": "1-1863445",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "1-1863445-cds-zns-nc-silica-composite-film-1--product",
+      "source_sample_label": "CdS/ZnS NC-silica composite film",
+      "batch_id": null,
+      "material_state_id": "1-1863445-cds-zns-nc-silica-composite-film-1--after-s04-anneal",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdS/ZnS",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "1-1863445",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": "oleylamine and 5-amino-1-pentanol",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "1-1863445",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "1-1863445",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Shape not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of CdS/ZnS NCs not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

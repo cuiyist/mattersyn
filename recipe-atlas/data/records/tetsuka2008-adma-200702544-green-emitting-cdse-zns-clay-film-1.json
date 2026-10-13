@@ -1,0 +1,345 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "tetsuka2008-adma-200702544-green-emitting-cdse-zns-clay-film-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Hiroyuki Tetsuka (2008): green-emitting CdSe/ZnS-clay film",
+  "material": {
+    "formula": "CdSe/ZnS",
+    "family": "CdSe/ZnS nanocrystals",
+    "elements": [
+      "Cd",
+      "Se",
+      "Zn",
+      "S"
+    ],
+    "components": [
+      "CdSe",
+      "ZnS"
+    ],
+    "architecture": "core_shell"
+  },
+  "method": "Synthesis as described in the source",
+  "sources": [
+    {
+      "id": "tetsuka2008-adma-200702544",
+      "doi": "10.1002/adma.200702544",
+      "title": "Highly Luminescent Flexible Quantum Dot–Clay Films",
+      "authors": "Hiroyuki Tetsuka, Takeo Ebina, Fujio Mizukami",
+      "year": 2008,
+      "url": "https://doi.org/10.1002/adma.200702544",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "tetsuka2008-adma-200702544",
+    "recipe_family": "tetsuka2008-adma-200702544-green-emitting-cdse-zns-clay-film-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdSe/ZnS",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "tetsuka2008-adma-200702544",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": 2.4,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "2.4 nm",
+      "evidence": [
+        {
+          "source_id": "tetsuka2008-adma-200702544",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "sphere",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "tetsuka2008-adma-200702544",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "tetsuka2008-adma-200702544-green-emitting-cdse-zns-clay-film-1--3-mercaptopropionic-acid",
+      "name": "3-mercaptopropionic acid",
+      "formula": null,
+      "role": "ligand",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "tetsuka2008-adma-200702544",
+          "locator": "Main PDF p.4"
+        }
+      ]
+    },
+    {
+      "id": "tetsuka2008-adma-200702544-green-emitting-cdse-zns-clay-film-1--sodium-polyacrylate",
+      "name": "sodium polyacrylate",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "tetsuka2008-adma-200702544",
+          "locator": "Main PDF p.4"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "tetsuka2008-adma-200702544-green-emitting-cdse-zns-clay-film-1--after-s01-add",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "tetsuka2008-adma-200702544-green-emitting-cdse-zns-clay-film-1--after-s02-mix",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "tetsuka2008-adma-200702544-green-emitting-cdse-zns-clay-film-1--after-s01-add",
+        "tetsuka2008-adma-200702544-green-emitting-cdse-zns-clay-film-1--sodium-polyacrylate"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-add",
+      "action": "add",
+      "label": "Add KOH to deprotonate MPA",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "tetsuka2008-adma-200702544-green-emitting-cdse-zns-clay-film-1--after-s01-add"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "tetsuka2008-adma-200702544",
+            "locator": "Main PDF p.4"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Add KOH to deprotonate MPA",
+      "evidence": [
+        {
+          "source_id": "tetsuka2008-adma-200702544",
+          "locator": "Main PDF p.4"
+        }
+      ]
+    },
+    {
+      "id": "s02-mix",
+      "action": "mix",
+      "label": "Mix NCs with clay suspension",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-add"
+      ],
+      "inputs": [
+        "tetsuka2008-adma-200702544-green-emitting-cdse-zns-clay-film-1--after-s01-add",
+        "tetsuka2008-adma-200702544-green-emitting-cdse-zns-clay-film-1--sodium-polyacrylate"
+      ],
+      "outputs": [
+        "tetsuka2008-adma-200702544-green-emitting-cdse-zns-clay-film-1--after-s02-mix"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "tetsuka2008-adma-200702544",
+            "locator": "Main PDF p.4"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Mix NCs with clay suspension",
+      "evidence": [
+        {
+          "source_id": "tetsuka2008-adma-200702544",
+          "locator": "Main PDF p.4"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "tetsuka2008-adma-200702544-green-emitting-cdse-zns-clay-film-1--product",
+      "source_sample_label": "green-emitting CdSe/ZnS-clay film",
+      "batch_id": null,
+      "material_state_id": "tetsuka2008-adma-200702544-green-emitting-cdse-zns-clay-film-1--after-s02-mix",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdSe/ZnS",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "tetsuka2008-adma-200702544",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": "sphere",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "tetsuka2008-adma-200702544",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": "mercaptopropionic acid",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "tetsuka2008-adma-200702544",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "tetsuka2008-adma-200702544",
+          "locator": "Main PDF p.4"
+        }
+      ],
+      "notes": [
+        "Reactor: glass sheet in a mold (Main PDF p.4).",
+        "Reaction temperature: 60 degC (Main PDF p.4)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "tetsuka2008-adma-200702544-green-emitting-cdse-zns-clay-film-1--size",
+      "sample_id": "tetsuka2008-adma-200702544-green-emitting-cdse-zns-clay-film-1--product",
+      "property": "optically_derived_size",
+      "technique": "optical sizing",
+      "value": {
+        "value": 2.4,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "2.4 nm",
+        "evidence": [
+          {
+            "source_id": "tetsuka2008-adma-200702544",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "tetsuka2008-adma-200702544",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of 3-mercaptopropionic acid not reported in the extracted text.",
+      "Amount of sodium polyacrylate not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
