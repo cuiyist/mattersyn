@@ -1,0 +1,307 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "law2008-nl802353x-5-1-0-4-nm-diameter-pbse-nanocrystals-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Matt Law (2008): 5.1 ( 0.4 nm diameter PbSe nanocrystals",
+  "material": {
+    "formula": "PbSe",
+    "family": "PbSe nanocrystals",
+    "elements": [
+      "Pb",
+      "Se"
+    ],
+    "components": [
+      "PbSe"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Hot injection",
+  "sources": [
+    {
+      "id": "law2008-nl802353x",
+      "doi": "10.1021/nl802353x",
+      "title": "Determining the Internal Quantum Efficiency of PbSe Nanocrystal Solar Cells with the Aid of an Optical Model",
+      "authors": "Matt Law, Matthew C. Beard, Sukgeun Choi, Joseph M. Luther, Mark C. Hanna, and Arthur J. Nozik",
+      "year": 2008,
+      "url": "https://doi.org/10.1021/nl802353x",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "law2008-nl802353x",
+    "recipe_family": "law2008-nl802353x-5-1-0-4-nm-diameter-pbse-nanocrystals-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "PbSe",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "law2008-nl802353x",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "sphere",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "law2008-nl802353x",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "law2008-nl802353x-5-1-0-4-nm-diameter-pbse-nanocrystals-1--after-s01-inject",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "law2008-nl802353x-5-1-0-4-nm-diameter-pbse-nanocrystals-1--after-s02-quench",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "law2008-nl802353x-5-1-0-4-nm-diameter-pbse-nanocrystals-1--after-s01-inject"
+      ]
+    },
+    {
+      "id": "law2008-nl802353x-5-1-0-4-nm-diameter-pbse-nanocrystals-1--after-s03-precipitate",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "law2008-nl802353x-5-1-0-4-nm-diameter-pbse-nanocrystals-1--after-s02-quench"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-inject",
+      "action": "inject",
+      "label": "Injection of TOP-Se solution",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "law2008-nl802353x-5-1-0-4-nm-diameter-pbse-nanocrystals-1--after-s01-inject"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "airfree",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "law2008-nl802353x",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Injection of TOP-Se solution",
+      "evidence": [
+        {
+          "source_id": "law2008-nl802353x",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-quench",
+      "action": "quench",
+      "label": "Quenching the reaction",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-inject"
+      ],
+      "inputs": [
+        "law2008-nl802353x-5-1-0-4-nm-diameter-pbse-nanocrystals-1--after-s01-inject"
+      ],
+      "outputs": [
+        "law2008-nl802353x-5-1-0-4-nm-diameter-pbse-nanocrystals-1--after-s02-quench"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "airfree",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "law2008-nl802353x",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Quenching the reaction",
+      "evidence": [
+        {
+          "source_id": "law2008-nl802353x",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-precipitate",
+      "action": "precipitate",
+      "label": "Purifying the nanocrystals",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-quench"
+      ],
+      "inputs": [
+        "law2008-nl802353x-5-1-0-4-nm-diameter-pbse-nanocrystals-1--after-s02-quench"
+      ],
+      "outputs": [
+        "law2008-nl802353x-5-1-0-4-nm-diameter-pbse-nanocrystals-1--after-s03-precipitate"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Purifying the nanocrystals",
+      "evidence": [
+        {
+          "source_id": "law2008-nl802353x",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "law2008-nl802353x-5-1-0-4-nm-diameter-pbse-nanocrystals-1--product",
+      "source_sample_label": "5.1 ( 0.4 nm diameter PbSe nanocrystals",
+      "batch_id": null,
+      "material_state_id": "law2008-nl802353x-5-1-0-4-nm-diameter-pbse-nanocrystals-1--after-s03-precipitate",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "PbSe",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "law2008-nl802353x",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": "sphere",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "law2008-nl802353x",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": "oleic acid",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "law2008-nl802353x",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "law2008-nl802353x",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

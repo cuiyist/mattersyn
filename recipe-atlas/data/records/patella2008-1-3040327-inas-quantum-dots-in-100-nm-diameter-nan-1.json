@@ -1,0 +1,531 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "patella2008-1-3040327-inas-quantum-dots-in-100-nm-diameter-nan-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "F. Patella (2008): InAs quantum dots in 100 nm diameter nanoholes",
+  "material": {
+    "formula": "InAs",
+    "family": "InAs nanocrystals",
+    "elements": [
+      "In",
+      "As"
+    ],
+    "components": [
+      "InAs"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Molecular beam epitaxy",
+  "sources": [
+    {
+      "id": "patella2008-1-3040327",
+      "doi": "10.1063/1.3040327",
+      "title": "Single quantum dot emission by nanoscale selective growth of InAs on GaAs: A bottom-up approach",
+      "authors": "F. Patella, F. Arciprete, E. Placidi, M. Fanfoni, A. Balzarotti, A. Vinattieri, L. Cavigli, M. Abbarchi, M. Gurioli, L. Lunghi, and A. Gerardino",
+      "year": 2008,
+      "url": "https://doi.org/10.1063/1.3040327",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "patella2008-1-3040327",
+    "recipe_family": "patella2008-1-3040327-inas-quantum-dots-in-100-nm-diameter-nan-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "InAs",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "patella2008-1-3040327",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "zinc blende",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "patella2008-1-3040327",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": 25,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "25 nm",
+      "evidence": [
+        {
+          "source_id": "patella2008-1-3040327",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "nanodot",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "patella2008-1-3040327",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "patella2008-1-3040327-inas-quantum-dots-in-100-nm-diameter-nan-1--inas",
+      "name": "InAs",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "patella2008-1-3040327",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "patella2008-1-3040327-inas-quantum-dots-in-100-nm-diameter-nan-1--gaas",
+      "name": "GaAs",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "patella2008-1-3040327",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "patella2008-1-3040327-inas-quantum-dots-in-100-nm-diameter-nan-1--sio2",
+      "name": "SiO2",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "amount": {
+          "value": 160,
+          "minimum": null,
+          "maximum": null,
+          "unit": "nm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "160 nm",
+          "evidence": [
+            {
+              "source_id": "patella2008-1-3040327",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "patella2008-1-3040327",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "patella2008-1-3040327-inas-quantum-dots-in-100-nm-diameter-nan-1--after-s01-deposit",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "patella2008-1-3040327-inas-quantum-dots-in-100-nm-diameter-nan-1--sio2"
+      ]
+    },
+    {
+      "id": "patella2008-1-3040327-inas-quantum-dots-in-100-nm-diameter-nan-1--after-s02-deposit",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "patella2008-1-3040327-inas-quantum-dots-in-100-nm-diameter-nan-1--after-s01-deposit",
+        "patella2008-1-3040327-inas-quantum-dots-in-100-nm-diameter-nan-1--gaas"
+      ]
+    },
+    {
+      "id": "patella2008-1-3040327-inas-quantum-dots-in-100-nm-diameter-nan-1--after-s03-deposit",
+      "name": "mixture after step 3",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "patella2008-1-3040327-inas-quantum-dots-in-100-nm-diameter-nan-1--after-s02-deposit",
+        "patella2008-1-3040327-inas-quantum-dots-in-100-nm-diameter-nan-1--inas"
+      ]
+    },
+    {
+      "id": "patella2008-1-3040327-inas-quantum-dots-in-100-nm-diameter-nan-1--after-s04-deposit",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "patella2008-1-3040327-inas-quantum-dots-in-100-nm-diameter-nan-1--after-s03-deposit"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-deposit",
+      "action": "deposit",
+      "label": "Deposit SiO2 film on GaAs substrate",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "patella2008-1-3040327-inas-quantum-dots-in-100-nm-diameter-nan-1--sio2"
+      ],
+      "outputs": [
+        "patella2008-1-3040327-inas-quantum-dots-in-100-nm-diameter-nan-1--after-s01-deposit"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Deposit SiO2 film on GaAs substrate",
+      "evidence": [
+        {
+          "source_id": "patella2008-1-3040327",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-deposit",
+      "action": "deposit",
+      "label": "Deposit GaAs buffer layer",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-deposit"
+      ],
+      "inputs": [
+        "patella2008-1-3040327-inas-quantum-dots-in-100-nm-diameter-nan-1--after-s01-deposit",
+        "patella2008-1-3040327-inas-quantum-dots-in-100-nm-diameter-nan-1--gaas"
+      ],
+      "outputs": [
+        "patella2008-1-3040327-inas-quantum-dots-in-100-nm-diameter-nan-1--after-s02-deposit"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 592,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "592 °C",
+          "evidence": [
+            {
+              "source_id": "patella2008-1-3040327",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Deposit GaAs buffer layer",
+      "evidence": [
+        {
+          "source_id": "patella2008-1-3040327",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-deposit",
+      "action": "deposit",
+      "label": "Selective deposition of InAs",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-deposit"
+      ],
+      "inputs": [
+        "patella2008-1-3040327-inas-quantum-dots-in-100-nm-diameter-nan-1--after-s02-deposit",
+        "patella2008-1-3040327-inas-quantum-dots-in-100-nm-diameter-nan-1--inas"
+      ],
+      "outputs": [
+        "patella2008-1-3040327-inas-quantum-dots-in-100-nm-diameter-nan-1--after-s03-deposit"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 500,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "500 °C",
+          "evidence": [
+            {
+              "source_id": "patella2008-1-3040327",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Selective deposition of InAs",
+      "evidence": [
+        {
+          "source_id": "patella2008-1-3040327",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s04-deposit",
+      "action": "deposit",
+      "label": "Deposit InGaAs capping layer",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s03-deposit"
+      ],
+      "inputs": [
+        "patella2008-1-3040327-inas-quantum-dots-in-100-nm-diameter-nan-1--after-s03-deposit"
+      ],
+      "outputs": [
+        "patella2008-1-3040327-inas-quantum-dots-in-100-nm-diameter-nan-1--after-s04-deposit"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 500,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "500 °C",
+          "evidence": [
+            {
+              "source_id": "patella2008-1-3040327",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Deposit InGaAs capping layer",
+      "evidence": [
+        {
+          "source_id": "patella2008-1-3040327",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "patella2008-1-3040327-inas-quantum-dots-in-100-nm-diameter-nan-1--product",
+      "source_sample_label": "InAs quantum dots in 100 nm diameter nanoholes",
+      "batch_id": null,
+      "material_state_id": "patella2008-1-3040327-inas-quantum-dots-in-100-nm-diameter-nan-1--after-s04-deposit",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "InAs",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "patella2008-1-3040327",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "zinc blende",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "patella2008-1-3040327",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "nanodot",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "patella2008-1-3040327",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "patella2008-1-3040327",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reaction temperature: 500 degC (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "patella2008-1-3040327-inas-quantum-dots-in-100-nm-diameter-nan-1--size",
+      "sample_id": "patella2008-1-3040327-inas-quantum-dots-in-100-nm-diameter-nan-1--product",
+      "property": "particle_size",
+      "technique": "not reported",
+      "value": {
+        "value": 25,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "25 nm",
+        "evidence": [
+          {
+            "source_id": "patella2008-1-3040327",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "patella2008-1-3040327",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Ligand not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of InAs not reported in the extracted text.",
+      "Amount of GaAs not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
