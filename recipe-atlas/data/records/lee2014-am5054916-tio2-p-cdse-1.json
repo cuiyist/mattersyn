@@ -1,0 +1,469 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "lee2014-am5054916-tio2-p-cdse-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "I-Ping Liu et al. (2014): TiO2/P-CdSe",
+  "material": {
+    "formula": "CdSe",
+    "family": "CdSe nanocrystals",
+    "elements": [
+      "Cd",
+      "Se"
+    ],
+    "components": [
+      "CdSe"
+    ],
+    "architecture": "composite"
+  },
+  "method": "Synthesis as described in the source",
+  "sources": [
+    {
+      "id": "lee2014-am5054916",
+      "doi": "10.1021/am5054916",
+      "title": "Performance Enhancement of Quantum-Dot-Sensitized Solar Cells by Potential-Induced Ionic Layer Adsorption and Reaction",
+      "authors": "Yi-Lun Lee, Chia-Hung Chang, and Yu-Lun Lee",
+      "year": 2014,
+      "url": "https://doi.org/10.1021/am5054916",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "lee2014-am5054916",
+    "recipe_family": "lee2014-am5054916-tio2-p-cdse-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdSe",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "lee2014-am5054916",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "nanoparticle",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "lee2014-am5054916",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "lee2014-am5054916-tio2-p-cdse-1--cd-no3-2",
+      "name": "Cd(NO3)2",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "concentration": {
+          "value": 0.1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "M",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0.1 M",
+          "evidence": [
+            {
+              "source_id": "lee2014-am5054916",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "lee2014-am5054916",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "lee2014-am5054916-tio2-p-cdse-1--na2seso3",
+      "name": "Na2SeSO3",
+      "formula": null,
+      "role": "chalcogen_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "concentration": {
+          "value": 0.03,
+          "minimum": null,
+          "maximum": null,
+          "unit": "M",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0.03 M",
+          "evidence": [
+            {
+              "source_id": "lee2014-am5054916",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "lee2014-am5054916",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "lee2014-am5054916-tio2-p-cdse-1--after-s01-heat",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "lee2014-am5054916-tio2-p-cdse-1--after-s02-apply-bias",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "lee2014-am5054916-tio2-p-cdse-1--after-s01-heat",
+        "lee2014-am5054916-tio2-p-cdse-1--cd-no3-2"
+      ]
+    },
+    {
+      "id": "lee2014-am5054916-tio2-p-cdse-1--after-s03-immersion",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "lee2014-am5054916-tio2-p-cdse-1--after-s02-apply-bias",
+        "lee2014-am5054916-tio2-p-cdse-1--na2seso3"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-heat",
+      "action": "heat",
+      "label": "Heat the TiO2 films in air atmosphere",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "lee2014-am5054916-tio2-p-cdse-1--after-s01-heat"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 500,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "500 °C",
+          "evidence": [
+            {
+              "source_id": "lee2014-am5054916",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 30,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "30 min",
+          "evidence": [
+            {
+              "source_id": "lee2014-am5054916",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "lee2014-am5054916",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Heat the TiO2 films in air atmosphere",
+      "evidence": [
+        {
+          "source_id": "lee2014-am5054916",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-apply-bias",
+      "action": "apply bias",
+      "label": "Apply ±2.0 V bias to facilitate Cd2+ diffusion into TiO2 matrices",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-heat"
+      ],
+      "inputs": [
+        "lee2014-am5054916-tio2-p-cdse-1--after-s01-heat",
+        "lee2014-am5054916-tio2-p-cdse-1--cd-no3-2"
+      ],
+      "outputs": [
+        "lee2014-am5054916-tio2-p-cdse-1--after-s02-apply-bias"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 60,
+          "minimum": null,
+          "maximum": null,
+          "unit": "s",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "60 s",
+          "evidence": [
+            {
+              "source_id": "lee2014-am5054916",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "lee2014-am5054916",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Apply ±2.0 V bias to facilitate Cd2+ diffusion into TiO2 matrices",
+      "evidence": [
+        {
+          "source_id": "lee2014-am5054916",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-immersion",
+      "action": "immersion",
+      "label": "Immersion in Na2SeSO3 solution to generate CdSe QDs",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-apply-bias"
+      ],
+      "inputs": [
+        "lee2014-am5054916-tio2-p-cdse-1--after-s02-apply-bias",
+        "lee2014-am5054916-tio2-p-cdse-1--na2seso3"
+      ],
+      "outputs": [
+        "lee2014-am5054916-tio2-p-cdse-1--after-s03-immersion"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 50,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "50 °C",
+          "evidence": [
+            {
+              "source_id": "lee2014-am5054916",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "lee2014-am5054916",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Immersion in Na2SeSO3 solution to generate CdSe QDs",
+      "evidence": [
+        {
+          "source_id": "lee2014-am5054916",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "lee2014-am5054916-tio2-p-cdse-1--product",
+      "source_sample_label": "TiO2/P-CdSe",
+      "batch_id": null,
+      "material_state_id": "lee2014-am5054916-tio2-p-cdse-1--after-s03-immersion",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdSe",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "lee2014-am5054916",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": "nanoparticle",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "lee2014-am5054916",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": "Na2SeSO3",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "lee2014-am5054916",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "lee2014-am5054916",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reactor: electrochemical cell (Main PDF p.2).",
+        "Reaction temperature: 50 degC (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Reaction time not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

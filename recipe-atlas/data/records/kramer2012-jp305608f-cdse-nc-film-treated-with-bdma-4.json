@@ -1,0 +1,462 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "kramer2012-jp305608f-cdse-nc-film-treated-with-bdma-4",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Theodore J. Kramer et al. (2013): CdSe NC film treated with BDMA",
+  "material": {
+    "formula": "CdSe",
+    "family": "CdSe nanocrystals",
+    "elements": [
+      "Cd",
+      "Se"
+    ],
+    "components": [
+      "CdSe"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Synthesis as described in the source",
+  "sources": [
+    {
+      "id": "kramer2012-jp305608f",
+      "doi": "10.1021/jp305608f",
+      "title": "Reducing Strain and Fracture of Electrophoretically Deposited CdSe Nanocrystal Films. II. Postdeposition Infusion of Monomers",
+      "authors": "Theodore J. Kramer, Sanat K. Kumar, Michael L. Steigerwald, Irving P. Herman",
+      "year": 2013,
+      "url": "https://doi.org/10.1021/jp305608f",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "kramer2012-jp305608f",
+    "recipe_family": "kramer2012-jp305608f-cdse-nc-film-treated-with-bdma-4",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdSe",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "kramer2012-jp305608f",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "zinc blende",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "kramer2012-jp305608f",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": 3.5,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "3.5 nm",
+      "evidence": [
+        {
+          "source_id": "kramer2012-jp305608f",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "sphere",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "kramer2012-jp305608f",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "kramer2012-jp305608f-cdse-nc-film-treated-with-bdma-4--cdse-ncs",
+      "name": "CdSe NCs",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "kramer2012-jp305608f",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "kramer2012-jp305608f-cdse-nc-film-treated-with-bdma-4--irgacure-819",
+      "name": "Irgacure 819",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "kramer2012-jp305608f",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "kramer2012-jp305608f-cdse-nc-film-treated-with-bdma-4--after-s01-deposit",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "kramer2012-jp305608f-cdse-nc-film-treated-with-bdma-4--cdse-ncs"
+      ]
+    },
+    {
+      "id": "kramer2012-jp305608f-cdse-nc-film-treated-with-bdma-4--after-s02-soak",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "kramer2012-jp305608f-cdse-nc-film-treated-with-bdma-4--after-s01-deposit",
+        "kramer2012-jp305608f-cdse-nc-film-treated-with-bdma-4--irgacure-819"
+      ]
+    },
+    {
+      "id": "kramer2012-jp305608f-cdse-nc-film-treated-with-bdma-4--after-s03-spin",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "kramer2012-jp305608f-cdse-nc-film-treated-with-bdma-4--after-s02-soak"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-deposit",
+      "action": "deposit",
+      "label": "Deposit EPD film on gold-coated silicon electrodes",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "kramer2012-jp305608f-cdse-nc-film-treated-with-bdma-4--cdse-ncs"
+      ],
+      "outputs": [
+        "kramer2012-jp305608f-cdse-nc-film-treated-with-bdma-4--after-s01-deposit"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "10 min",
+          "evidence": [
+            {
+              "source_id": "kramer2012-jp305608f",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "kramer2012-jp305608f",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Deposit EPD film on gold-coated silicon electrodes",
+      "evidence": [
+        {
+          "source_id": "kramer2012-jp305608f",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-soak",
+      "action": "soak",
+      "label": "Soak film in BDMA monomer bath",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-deposit"
+      ],
+      "inputs": [
+        "kramer2012-jp305608f-cdse-nc-film-treated-with-bdma-4--after-s01-deposit",
+        "kramer2012-jp305608f-cdse-nc-film-treated-with-bdma-4--irgacure-819"
+      ],
+      "outputs": [
+        "kramer2012-jp305608f-cdse-nc-film-treated-with-bdma-4--after-s02-soak"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 12,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "12 h",
+          "evidence": [
+            {
+              "source_id": "kramer2012-jp305608f",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "kramer2012-jp305608f",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Soak film in BDMA monomer bath",
+      "evidence": [
+        {
+          "source_id": "kramer2012-jp305608f",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-spin",
+      "action": "spin",
+      "label": "Spin film to remove excess monomer",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-soak"
+      ],
+      "inputs": [
+        "kramer2012-jp305608f-cdse-nc-film-treated-with-bdma-4--after-s02-soak"
+      ],
+      "outputs": [
+        "kramer2012-jp305608f-cdse-nc-film-treated-with-bdma-4--after-s03-spin"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1 min",
+          "evidence": [
+            {
+              "source_id": "kramer2012-jp305608f",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "kramer2012-jp305608f",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Spin film to remove excess monomer",
+      "evidence": [
+        {
+          "source_id": "kramer2012-jp305608f",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "kramer2012-jp305608f-cdse-nc-film-treated-with-bdma-4--product",
+      "source_sample_label": "CdSe NC film treated with BDMA",
+      "batch_id": null,
+      "material_state_id": "kramer2012-jp305608f-cdse-nc-film-treated-with-bdma-4--after-s03-spin",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdSe",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "kramer2012-jp305608f",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "zinc blende",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "kramer2012-jp305608f",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "sphere",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "kramer2012-jp305608f",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": "phosphonic acids and TOPO",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "kramer2012-jp305608f",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "kramer2012-jp305608f",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [
+    {
+      "id": "kramer2012-jp305608f-cdse-nc-film-treated-with-bdma-4--size",
+      "sample_id": "kramer2012-jp305608f-cdse-nc-film-treated-with-bdma-4--product",
+      "property": "particle_size",
+      "technique": "not reported",
+      "value": {
+        "value": 3.5,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "3.5 nm",
+        "evidence": [
+          {
+            "source_id": "kramer2012-jp305608f",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "kramer2012-jp305608f",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Reactor not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of CdSe NCs not reported in the extracted text.",
+      "Amount of Irgacure 819 not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
