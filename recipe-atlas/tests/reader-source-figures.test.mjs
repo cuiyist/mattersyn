@@ -101,6 +101,34 @@ test('text-only figures remain disclosures and do not acquire fabricated image a
  assert.match(h.textContent,/original image unavailable/);assert.match(h.textContent,/No exact batch is assigned/);
 });
 
+
+test('source-extracted figure introduction stays neutral without changing source figures or status',async()=>{
+ const {fallbackSources:neutralFallback}=await import('../static/material-guide.mjs?neutral-source-intro-fixture');
+ const data=freeze({records:{'route-a':{figures:fixture}}});
+ globalThis.fetch=async()=>({ok:true,json:async()=>data});
+ const r=freeze({...record,quality:{review_status:'source_extracted'},review_status:'source_reviewed'});
+ const before=JSON.stringify({r,data}),h=host();
+ assert.equal(await neutralFallback(h,r),true);
+ assert.equal(h.children[0].textContent,'Source figures assigned to this record retain their own specimen and context qualifications; their display does not establish the same physical batch.');
+ assert.doesNotMatch(h.children[0].textContent,/reviewed|audited|extracted/i);
+ assert.equal(nodes(h,'button').filter(n=>n.attributes.role==='tab').length,7);
+ assert.equal(JSON.stringify({r,data}),before);
+});
+test('audited and other existing figure introductions retain their exact wording and gallery',async()=>{
+ const {fallbackSources:legacyFallback}=await import('../static/material-guide.mjs?legacy-source-intro-fixture');
+ const data=freeze({records:{'route-a':{figures:fixture}}});
+ globalThis.fetch=async()=>({ok:true,json:async()=>data});
+ const before=JSON.stringify(data);
+ for(const status of ['source_reviewed','audited','pending',undefined]){
+  const r=freeze({...record,quality:{review_status:status},review_status:'source_extracted'}),rBefore=JSON.stringify(r),h=host();
+  assert.equal(await legacyFallback(h,r),true);
+  assert.equal(h.children[0].textContent,'Source figures assigned to this reviewed record retain their own specimen and context qualifications; their display does not establish the same physical batch.');
+  assert.equal(nodes(h,'button').filter(n=>n.attributes.role==='tab').length,7);
+  assert.equal(JSON.stringify(r),rBefore);
+ }
+ assert.equal(JSON.stringify(data),before);
+});
+
 test('Data fallback reads only the exact record presentation without adding other paper or sample figures',async()=>{
  const data=freeze({records:{'route-a':{figures:fixture},'other-route':{figures:[figure('unrelated','protocol')]}}});
  const requests=[];globalThis.fetch=async url=>{requests.push(String(url));return {ok:true,json:async()=>data};};

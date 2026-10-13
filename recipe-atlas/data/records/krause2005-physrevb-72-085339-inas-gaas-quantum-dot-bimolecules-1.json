@@ -1,0 +1,433 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "krause2005-physrevb-72-085339-inas-gaas-quantum-dot-bimolecules-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "B. Krause (2005): InAs/GaAs quantum dot bimolecules",
+  "material": {
+    "formula": "InAs/GaAs",
+    "family": "InAs/GaAs nanocrystals",
+    "elements": [
+      "In",
+      "As",
+      "Ga"
+    ],
+    "components": [
+      "InAs",
+      "GaAs"
+    ],
+    "architecture": "heterostructure"
+  },
+  "method": "Molecular beam epitaxy",
+  "sources": [
+    {
+      "id": "krause2005-physrevb-72-085339",
+      "doi": "10.1103/physrevb.72.085339",
+      "title": "Shape, strain, and ordering of lateral InAs quantum dot molecules",
+      "authors": "B. Krause, T. H. Metzger, A. Rastelli, R. Songmuang, S. Kiravittaya, and O. G. Schmidt",
+      "year": 2005,
+      "url": "https://doi.org/10.1103/physrevb.72.085339",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "krause2005-physrevb-72-085339",
+    "recipe_family": "krause2005-physrevb-72-085339-inas-gaas-quantum-dot-bimolecules-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "InAs/GaAs",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "krause2005-physrevb-72-085339",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "zinc blende",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "krause2005-physrevb-72-085339",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": 500,
+      "minimum": null,
+      "maximum": null,
+      "unit": "Å",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "500 Å",
+      "evidence": [
+        {
+          "source_id": "krause2005-physrevb-72-085339",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "krause2005-physrevb-72-085339-inas-gaas-quantum-dot-bimolecules-1--inas",
+      "name": "InAs",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "krause2005-physrevb-72-085339",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "krause2005-physrevb-72-085339-inas-gaas-quantum-dot-bimolecules-1--gaas",
+      "name": "GaAs",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "krause2005-physrevb-72-085339",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "krause2005-physrevb-72-085339-inas-gaas-quantum-dot-bimolecules-1--after-s01-deposit",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "krause2005-physrevb-72-085339-inas-gaas-quantum-dot-bimolecules-1--inas"
+      ]
+    },
+    {
+      "id": "krause2005-physrevb-72-085339-inas-gaas-quantum-dot-bimolecules-1--after-s02-overgrow",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "krause2005-physrevb-72-085339-inas-gaas-quantum-dot-bimolecules-1--after-s01-deposit",
+        "krause2005-physrevb-72-085339-inas-gaas-quantum-dot-bimolecules-1--gaas"
+      ]
+    },
+    {
+      "id": "krause2005-physrevb-72-085339-inas-gaas-quantum-dot-bimolecules-1--after-s03-etch",
+      "name": "mixture after step 3",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "krause2005-physrevb-72-085339-inas-gaas-quantum-dot-bimolecules-1--after-s02-overgrow"
+      ]
+    },
+    {
+      "id": "krause2005-physrevb-72-085339-inas-gaas-quantum-dot-bimolecules-1--after-s04-fill",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "krause2005-physrevb-72-085339-inas-gaas-quantum-dot-bimolecules-1--after-s03-etch",
+        "krause2005-physrevb-72-085339-inas-gaas-quantum-dot-bimolecules-1--inas"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-deposit",
+      "action": "deposit",
+      "label": "Deposition of InAs quantum dots",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "krause2005-physrevb-72-085339-inas-gaas-quantum-dot-bimolecules-1--inas"
+      ],
+      "outputs": [
+        "krause2005-physrevb-72-085339-inas-gaas-quantum-dot-bimolecules-1--after-s01-deposit"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Deposition of InAs quantum dots",
+      "evidence": [
+        {
+          "source_id": "krause2005-physrevb-72-085339",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-overgrow",
+      "action": "overgrow",
+      "label": "Overgrowth of InAs quantum dots by GaAs cap layer",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-deposit"
+      ],
+      "inputs": [
+        "krause2005-physrevb-72-085339-inas-gaas-quantum-dot-bimolecules-1--after-s01-deposit",
+        "krause2005-physrevb-72-085339-inas-gaas-quantum-dot-bimolecules-1--gaas"
+      ],
+      "outputs": [
+        "krause2005-physrevb-72-085339-inas-gaas-quantum-dot-bimolecules-1--after-s02-overgrow"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Overgrowth of InAs quantum dots by GaAs cap layer",
+      "evidence": [
+        {
+          "source_id": "krause2005-physrevb-72-085339",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-etch",
+      "action": "etch",
+      "label": "Selective etching of overgrown quantum dots with AsBr3",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-overgrow"
+      ],
+      "inputs": [
+        "krause2005-physrevb-72-085339-inas-gaas-quantum-dot-bimolecules-1--after-s02-overgrow"
+      ],
+      "outputs": [
+        "krause2005-physrevb-72-085339-inas-gaas-quantum-dot-bimolecules-1--after-s03-etch"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Selective etching of overgrown quantum dots with AsBr3",
+      "evidence": [
+        {
+          "source_id": "krause2005-physrevb-72-085339",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s04-fill",
+      "action": "fill",
+      "label": "Filling of resulting holes with InAs and nucleation of quantum dot molecules",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s03-etch"
+      ],
+      "inputs": [
+        "krause2005-physrevb-72-085339-inas-gaas-quantum-dot-bimolecules-1--after-s03-etch",
+        "krause2005-physrevb-72-085339-inas-gaas-quantum-dot-bimolecules-1--inas"
+      ],
+      "outputs": [
+        "krause2005-physrevb-72-085339-inas-gaas-quantum-dot-bimolecules-1--after-s04-fill"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Filling of resulting holes with InAs and nucleation of quantum dot molecules",
+      "evidence": [
+        {
+          "source_id": "krause2005-physrevb-72-085339",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "krause2005-physrevb-72-085339-inas-gaas-quantum-dot-bimolecules-1--product",
+      "source_sample_label": "InAs/GaAs quantum dot bimolecules",
+      "batch_id": null,
+      "material_state_id": "krause2005-physrevb-72-085339-inas-gaas-quantum-dot-bimolecules-1--after-s04-fill",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "InAs/GaAs",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "krause2005-physrevb-72-085339",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "zinc blende",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "krause2005-physrevb-72-085339",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": "natural oxide",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "krause2005-physrevb-72-085339",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "krause2005-physrevb-72-085339",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reaction temperature: 500 degC (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "krause2005-physrevb-72-085339-inas-gaas-quantum-dot-bimolecules-1--size",
+      "sample_id": "krause2005-physrevb-72-085339-inas-gaas-quantum-dot-bimolecules-1--product",
+      "property": "particle_size",
+      "technique": "not reported",
+      "value": {
+        "value": 500,
+        "minimum": null,
+        "maximum": null,
+        "unit": "Å",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "500 Å",
+        "evidence": [
+          {
+            "source_id": "krause2005-physrevb-72-085339",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "krause2005-physrevb-72-085339",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Shape not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of InAs not reported in the extracted text.",
+      "Amount of GaAs not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

@@ -1,0 +1,445 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "manna2014-nl500349j-cdse-cds-core-shell-ncs-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Liberato Manna (2014): CdSe/CdS core-shell NCs",
+  "material": {
+    "formula": "CdSe/CdS",
+    "family": "CdSe/CdS nanocrystals",
+    "elements": [
+      "Cd",
+      "Se",
+      "S"
+    ],
+    "components": [
+      "CdSe",
+      "CdS"
+    ],
+    "architecture": "core_shell"
+  },
+  "method": "Cation exchange",
+  "sources": [
+    {
+      "id": "manna2014-nl500349j",
+      "doi": "10.1021/nl500349j",
+      "title": "Nanocrystal Film Patterning by Inhibiting Cation Exchange via Electron-Beam or X-ray Lithography",
+      "authors": "Karol Miszta; Fanny Greullet; Sergio Marras; Mirko Prato; Andrea Toma; Milena Arciniegas; Liberato Manna; Roman Krahne",
+      "year": 2014,
+      "url": "https://doi.org/10.1021/nl500349j",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "manna2014-nl500349j",
+    "recipe_family": "manna2014-nl500349j-cdse-cds-core-shell-ncs-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdSe/CdS",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "manna2014-nl500349j",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": 20,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "20 nm",
+      "evidence": [
+        {
+          "source_id": "manna2014-nl500349j",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "manna2014-nl500349j-cdse-cds-core-shell-ncs-1--cu-i-tetrakis-acetonitrile-hexafluoropho",
+      "name": "Cu(I) tetrakis (acetonitrile) hexafluorophosphate",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "amount": {
+          "value": 60,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mg/mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "60 mg/mL",
+          "evidence": [
+            {
+              "source_id": "manna2014-nl500349j",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "manna2014-nl500349j",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "manna2014-nl500349j-cdse-cds-core-shell-ncs-1--methanol",
+      "name": "methanol",
+      "formula": null,
+      "role": "solvent",
+      "stage": "workup",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "volume": {
+          "value": 5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "5 mL",
+          "evidence": [
+            {
+              "source_id": "manna2014-nl500349j",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "manna2014-nl500349j",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "manna2014-nl500349j-cdse-cds-core-shell-ncs-1--after-s01-deposit",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "manna2014-nl500349j-cdse-cds-core-shell-ncs-1--after-s02-expose",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "manna2014-nl500349j-cdse-cds-core-shell-ncs-1--after-s01-deposit"
+      ]
+    },
+    {
+      "id": "manna2014-nl500349j-cdse-cds-core-shell-ncs-1--after-s03-wash",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "manna2014-nl500349j-cdse-cds-core-shell-ncs-1--after-s02-expose",
+        "manna2014-nl500349j-cdse-cds-core-shell-ncs-1--methanol"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-deposit",
+      "action": "deposit",
+      "label": "Deposit NCs on Si/SiO2 substrates by spin coating",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "manna2014-nl500349j-cdse-cds-core-shell-ncs-1--after-s01-deposit"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 4,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "4 min",
+          "evidence": [
+            {
+              "source_id": "manna2014-nl500349j",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Deposit NCs on Si/SiO2 substrates by spin coating",
+      "evidence": [
+        {
+          "source_id": "manna2014-nl500349j",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-expose",
+      "action": "expose",
+      "label": "Expose NC film to electron-beam",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-deposit"
+      ],
+      "inputs": [
+        "manna2014-nl500349j-cdse-cds-core-shell-ncs-1--after-s01-deposit"
+      ],
+      "outputs": [
+        "manna2014-nl500349j-cdse-cds-core-shell-ncs-1--after-s02-expose"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Expose NC film to electron-beam",
+      "evidence": [
+        {
+          "source_id": "manna2014-nl500349j",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-wash",
+      "action": "wash",
+      "label": "Wash with methanol",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-expose"
+      ],
+      "inputs": [
+        "manna2014-nl500349j-cdse-cds-core-shell-ncs-1--after-s02-expose",
+        "manna2014-nl500349j-cdse-cds-core-shell-ncs-1--methanol"
+      ],
+      "outputs": [
+        "manna2014-nl500349j-cdse-cds-core-shell-ncs-1--after-s03-wash"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 30,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "30 min",
+          "evidence": [
+            {
+              "source_id": "manna2014-nl500349j",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Wash with methanol",
+      "evidence": [
+        {
+          "source_id": "manna2014-nl500349j",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "manna2014-nl500349j-cdse-cds-core-shell-ncs-1--product",
+      "source_sample_label": "CdSe/CdS core-shell NCs",
+      "batch_id": null,
+      "material_state_id": "manna2014-nl500349j-cdse-cds-core-shell-ncs-1--after-s03-wash",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdSe/CdS",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "manna2014-nl500349j",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": "native surface ligands",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "manna2014-nl500349j",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "manna2014-nl500349j",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [
+    {
+      "id": "manna2014-nl500349j-cdse-cds-core-shell-ncs-1--size",
+      "sample_id": "manna2014-nl500349j-cdse-cds-core-shell-ncs-1--product",
+      "property": "particle_size",
+      "technique": "not reported",
+      "value": {
+        "value": 20,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "20 nm",
+        "evidence": [
+          {
+            "source_id": "manna2014-nl500349j",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "manna2014-nl500349j",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Shape not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

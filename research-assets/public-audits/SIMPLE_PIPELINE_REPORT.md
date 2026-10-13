@@ -727,6 +727,46 @@ Recorded source ci run: [38231455521](https://github.com/cuiyist/mattersyn/actio
 | 10.1021/am503580j | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/yang2014-am503580j-gnrs-and-qds-codoped-polymer-nanofiber-1.html) |
 | 10.1021/la7002904 | 3 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/yusuf2007-la7002904-bc-qd-1.html) |
 
+
+### simple-batch14-20261012
+
+Anonymous verification passed at 2026-10-12T22:25:08+00:00: 434 files, zero mismatches. [Source commit](https://github.com/cuiyist/mattersyn/commit/35badab38b980fe8cb5f9597533d18f914d82fe9) and [Site commit](https://github.com/cuiyist/mattersyn-site/commit/6601729f8ef0afd53b2646df1d057597eed8f64f). This batch contains 26 source groups, 35 records and 114 source figure crops; 26 distinct newly contributing primary papers after DOI deduplication. Every new contribution remains machine extracted and not independently audited. The final built site is 1,846,061,842 bytes / 33,308 files.
+
+Live counter: **244 audited + 464 machine extracted = 708 papers**, 3,685 canonical records, 379 direct material families, 441 material/component pages and 1564 displayed recipe–structure pairs (6 more comprehensive; 1558 partial). These display counts do not establish extraction accuracy, measured atomic coordinates or training eligibility.
+
+Recorded source pr: [31](https://github.com/cuiyist/mattersyn/pull/31).
+
+Recorded source ci run: [38273152748](https://github.com/cuiyist/mattersyn/actions/runs/38273152748).
+
+| Primary DOI | Records | Figure crops | Public page |
+| --- | ---: | ---: | --- |
+| 10.1021/nl8011243 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/bose2008-nl8011243-pbs-qds-emitting-at-1475-nm-1.html) |
+| 10.1021/ph500162a | 1 | 6 | [Open](https://cuiyist.github.io/mattersyn-site/records/chen2014-ph500162a-inas-gaas-qd-sld-on-si-substrate-1.html) |
+| 10.1063/1.3245305 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/chia2009-1-3245305-inas-gaas-quantum-dot-laser-1.html) |
+| 10.1021/nl301104z | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/choi2012-nl301104z-thiocyanate-exchanged-cdse-qd-thin-film-1.html) |
+| 10.1063/1.1543647 | 1 | 7 | [Open](https://cuiyist.github.io/mattersyn-site/records/el-emawy2003-1-1543647-inas-qds-grown-on-5-ml-of-in0-15ga0-85as-1.html) |
+| 10.1063/1.1516637 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/gong2002-1-1516637-inas-quantum-dots-on-in0-35ga0-65as-temp-1.html) |
+| 10.1063/1.2817951 | 3 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/groiss2007-1-2817951-pbte-cdte-quantum-dot-precipitates-1-nm-1.html) |
+| 10.1021/nl802042g | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/guo2008-nl802042g-cuinse2-nanocrystals-sphalerite-1.html) |
+| 10.1063/1.3204499 | 3 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/kaufmann2009-1-3204499-pbte-nanoprecipitates-in-cdte-matrix-1.html) |
+| 10.1063/1.2973399 | 2 | 6 | [Open](https://cuiyist.github.io/mattersyn-site/records/lechner2008-1-2973399-boron-doped-silicon-nanocrystals-si-ncs-1.html) |
+| 10.1063/1.1336554 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/lee2001-1-1336554-inas-quantum-dot-lattice-1.html) |
+| 10.1063/1.121719 | 3 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/lian1998-1-121719-inas-quantum-dots-in-gaas-quantum-well-s-1.html) |
+| 10.1063/1.1834987 | 1 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/liang2004-1-1834987-inas-quantum-dot-array-1.html) |
+| 10.1039/b409825k | 1 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/liu2004-b409825k-cu2s-nanocrystal-superlattice-ncs-prepar-2.html) |
+| 10.1063/1.2798251 | 2 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/mahapatra2007-1-2798251-cdse-znse-001-quantum-dots-qds-with-dcap-1.html) |
+| 10.1063/1.122991 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/meldrum1999-1-122991-zns-nanocrystals-in-amorphous-si-1.html) |
+| 10.1063/1.1985969 | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/mi2005-1-1985969-inas-gaas-quantum-dot-bilayer-sample-c-1.html) |
+| 10.1021/nl062483w | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/minot2007-nl062483w-inpinasp-nanowire-light-emitting-diode-w-1.html) |
+| 10.1063/1.1382855 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/pal2001-1-1382855-inas-gaas-quantum-dot-superlattice-1.html) |
+| 10.1021/la901056d | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/quan2009-la901056d-zns-0-06mn2-nanocrystals-1.html) |
+| 10.1063/1.3050332 | 1 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/rafiq2008-1-3050332-sinc-film-with-8-nm-diameter-si-nanocrys-1.html) |
+| 10.1063/1.2233554 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/saint-girons2006-1-2233554-inas-inp-quantum-dots-with-a-5-nm-inp-ca-1.html) |
+| 10.1063/1.3167813 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/selcuk2009-1-3167813-single-inas-quantum-dot-arrays-1.html) |
+| 10.1071/ch03120 | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/wood2003-ch03120-zno-quantum-dots-qds-1.html) |
+| 10.1039/d0tc03838e | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/x2020-d0tc03838e-cspbbr3-peqds-1.html) |
+| 10.1063/1.1695097 | 2 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/yu2004-1-1695097-zno-tetrapods-1.html) |
+
 ## Latest continuation checkpoint
 
 At 2026-10-11T06:09:34+00:00, Batch01 is live and anonymously verified; Batch02 remains in local processing with 47/49 two-pass-complete papers at its last saved checkpoint. These are processing counts, not additional published papers. The audited lane stays paused.
@@ -1268,3 +1308,25 @@ Storage:12 exact obsolete Root-owned preview processes were retired;zero files h
 B14 actual correction 2026-10-12T13:31:09.137731+00:00. Cohesive fixture Source f37e3c620a3d84e01af009a4c30626e931ace5e5 was prepared normally and committed with parent3097566;it has not been pushed or published. Original s-r3 preparation stopped on Windows sandbox path resolution (WinError5), before its Source tool;the new native s-r3-native preparation returned0 and original failure remains preserved. Full local Q-r3 passed JavaScript,publication boundary,205 publication/preservation helper tests,package importer,workflow and silver fixtures;it then stopped on six original simple-pipeline no-op byte assertions. The compact serializer was rewriting an unchanged Reader sidecar even when every incoming record was rejected or absent. The minimal production fix only writes the sidecar for accepted record updates or actual material-membership changes;empty-pair material reconciliation remains functional. All three check predicates,protected-source/record conditions,canonical data and Reader compaction remain unchanged. Seven original converter-protection tests plus two new newline/BOM/no-op and material-reconciliation regressions passed,as did all nine serializer tests. The first private broad-overlay attempt retained its new fixture newline mistake and synthetic TEMP-root conflicts;no full124-pass claim is made. The focused revised overlay returned0,with18tests/zero failures/errors/skips and exact clean Source preserved. Root full actual124 and every other normal gate remain required on the real successor.
 
 The remaining offline preliminary suite initially lacked pypdf,producing45errors in114tests. The approved package installation was then aligned to existing requirements-build-lock.txt:pypdf6.10.0. The preliminary suite passed114tests after installation;its locked-version rerun remains in fullvalidation. This is an environment dependency correction,not a release-gate change. No model extraction,prompt,private caption adapter,held-out run,scientific value,data status or published audited record was changed. Storage still has zero file deletions at this checkpoint;separate finite-copy proof preparation is not cleanup completion. B14 remains26papers/35records/114captionedcrops unpublished,and live totals remain682papers/3,650records/1,529pairs.
+
+## Storage and unused-model checkpoint, October 12, 2026
+
+At the fixed 2026-10-12T21:51:35.759336+00:00 administrative checkpoint, completed receipts and confirmed file-removal events established 195,449,827,011 logical bytes and 3,862,386 files removed. This is partial progress toward the requested 600 GB; intents, holds and later removals are not credited. See the [public archive cleanup report](https://github.com/cuiyist/mattersyn2/blob/main/CLEANUP_REPORT_2026-10-12.md).
+
+The total includes the owner-approved unused 4B model removal: 4,280,404,704 bytes. Observed free space was 146,323,890,176 bytes before and 150,663,954,432 bytes after; concurrent disk activity makes that change differ from logical bytes removed. The active Qwen3-32B/CUDA model and other programs were preserved. No Ollama installation was located by the bounded checks, so no Ollama removal is claimed. Original papers, quoted page text, saved passes and pair files remain local.
+
+Automatic approval refused removal of a worktree indicating pending integration and refused public disclosure of local host details. Those items were left out; private details and original failures remain preserved. No refused action was bypassed, and no release check or audit rule was changed.
+
+
+Root delivery and storage follow-up, 2026-10-12T22:35:10.863705+00:00. Batch14 Site PR1 merged ordinarily to 6601729f8ef0afd53b2646df1d057597eed8f64f. Pages38315160010 passed both validation and deployment. Anonymous verification at22:25:08UTC checked434 files,26 paper routes and43 material bindings with zero failures; 26 new events retain source_extracted tier and add zero gold credit. Built site1,846,061,842 bytes/33,308 files. The GitHub API omitted its PR merge-commit field; the private observer was fixed using the actual merge response, exact two commit parents and current main. An early verification launch was refused while Pages was pending; it was run only after an observed successful deployment. No release predicate was removed.
+
+The newer22:09:45UTC cleanup snapshot establishes207,362,111,207 logical bytes removed, already including the4,280,404,704-byte unused model; the600GB target is not met. Local host details refused for public GitHub remain out of this report and were supplied privately in chat. The active32B server, quoted page/pass/pair files and original papers are preserved. No Ollama removal is claimed. Four missing, already-public inventory files were restored exactly from their previously verified Site commits for accepted B15/B16 bindings. Batch15 selected28 papers/53 records/148 figures after reusing12 completed rare reads and37 deletion paths; its initial build, final nonempty sync and quote-free export succeeded. Those papers remain unpublished.
+
+Root checkpoint, 2026-10-12T23:15:00Z. The public cleanup report at commit d59d99122339b26a80714e6e34c4da2886e511ac records 217,806,381,414 logical bytes and 4,513,864 files removed. This replaces earlier progress totals; it is not an additional deletion amount. The unused model is included once and the 600 GB target remains unmet.
+
+Batch15 citations and all148 selected captions were applied, with53 records and302 new assets registered. Complete local checks on the first unpublished prepared commit passed JavaScript tests, source projection, source allowlist and boundary. The full build then failed one Ag historical-inventory assertion among191,694 quality checks. Its complete canonical membership checks accepted the new source_extracted NHC–Ag contribution; the audited-only exact regression list was being compared with the combined list. Publication remains held while the historical check is scoped to reviewed records, preserving the exact audited inventory and the independent full membership/status/role checks. No scientific record is changed or promoted to reviewed. The original failed commit and reports remain recorded privately; fresh normal bindings, full build and visual checks precede any push.
+
+The bounded fix scopes only the two historical Ag inventory assertions to source_reviewed IDs. Their expected legacy IDs and all complete canonical membership, status, architecture and contribution-role checks remain unchanged. The updated checker passed191,694 checks on the preserved build, and four regression tests passed: extracted contributions remain separate; promotion to reviewed, demotion of a legacy reviewed contribution, unsupported or invented membership, direct-component promotion and missing membership are rejected. This preflight does not replace the required fresh complete build.
+
+
+Display correction before Batch15 publication, 2026-10-13T00:01:15.708583+00:00. The complete q-r2 local checks passed, but actual desktop/phone review caught a SourceEx figure introduction saying reviewed record and the pending-presentation fallback suppressing source-supported qualitative shape drawings. The combined renderer fix makes only the extracted-record introduction neutral, retains existing audited wording, permits an existing illustrative primitive only for the same reported and source-located product, and omits exact pointer-bound duplicate fallback fact rows. Two literal wire descriptions use the existing elongated outline; films and unsupported specialized shapes remain neutral. Canonical records, source bindings, crops, captions, review statuses and training exports are unchanged. Both earlier unpublished preparations and their failure/pass evidence are preserved. Normal Source file-list binding and complete build/visual/release gates remain mandatory. Cleanup 217,806,381,414 logical bytes is confirmed;600GB remains unfinished. Batch15 remains unpublished.

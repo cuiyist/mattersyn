@@ -1,0 +1,389 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "sheng2014-nn502121t-cds-cdse-irox-sensitized-zno-nanowire-3",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Sheng (2014): CdS/CdSe/IrOx-sensitized ZnO nanowire",
+  "material": {
+    "formula": "ZnO",
+    "family": "ZnO nanocrystals",
+    "elements": [
+      "Zn",
+      "O"
+    ],
+    "components": [
+      "ZnO"
+    ],
+    "architecture": "core_shell"
+  },
+  "method": "CBD",
+  "sources": [
+    {
+      "id": "sheng2014-nn502121t",
+      "doi": "10.1021/nn502121t",
+      "title": "Quantum Dot-Sensitized Hierarchical Micro/Nanowire Architecture for Photoelectrochemical Water Splitting",
+      "authors": "Wenjun Sheng; Bo Sun; Tielin Shi; Xianhua Tan; Zhengchun Peng; Guanglan Liao",
+      "year": 2014,
+      "url": "https://doi.org/10.1021/nn502121t",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "sheng2014-nn502121t",
+    "recipe_family": "sheng2014-nn502121t-cds-cdse-irox-sensitized-zno-nanowire-3",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "phase": {
+      "value": "polycrystalline",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "sheng2014-nn502121t",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "nanowire",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "sheng2014-nn502121t",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "sheng2014-nn502121t-cds-cdse-irox-sensitized-zno-nanowire-3--na2ircl6",
+      "name": "Na2IrCl6",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "concentration": {
+          "value": 2,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mM",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "2 mM",
+          "evidence": [
+            {
+              "source_id": "sheng2014-nn502121t",
+              "locator": "Main PDF p.6"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "sheng2014-nn502121t",
+          "locator": "Main PDF p.6"
+        }
+      ]
+    },
+    {
+      "id": "sheng2014-nn502121t-cds-cdse-irox-sensitized-zno-nanowire-3--naoh",
+      "name": "NaOH",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "sheng2014-nn502121t",
+          "locator": "Main PDF p.6"
+        }
+      ]
+    },
+    {
+      "id": "sheng2014-nn502121t-cds-cdse-irox-sensitized-zno-nanowire-3--hno3",
+      "name": "HNO3",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "sheng2014-nn502121t",
+          "locator": "Main PDF p.6"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "sheng2014-nn502121t-cds-cdse-irox-sensitized-zno-nanowire-3--after-s01-heating",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "sheng2014-nn502121t-cds-cdse-irox-sensitized-zno-nanowire-3--na2ircl6",
+        "sheng2014-nn502121t-cds-cdse-irox-sensitized-zno-nanowire-3--naoh"
+      ]
+    },
+    {
+      "id": "sheng2014-nn502121t-cds-cdse-irox-sensitized-zno-nanowire-3--after-s02-immersion",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "sheng2014-nn502121t-cds-cdse-irox-sensitized-zno-nanowire-3--after-s01-heating"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-heating",
+      "action": "heating",
+      "label": "Heating solution to 90 ˚C",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "sheng2014-nn502121t-cds-cdse-irox-sensitized-zno-nanowire-3--na2ircl6",
+        "sheng2014-nn502121t-cds-cdse-irox-sensitized-zno-nanowire-3--naoh"
+      ],
+      "outputs": [
+        "sheng2014-nn502121t-cds-cdse-irox-sensitized-zno-nanowire-3--after-s01-heating"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 90,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "90 °C",
+          "evidence": [
+            {
+              "source_id": "sheng2014-nn502121t",
+              "locator": "Main PDF p.6"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 20,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "20 min",
+          "evidence": [
+            {
+              "source_id": "sheng2014-nn502121t",
+              "locator": "Main PDF p.6"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Heating solution to 90 ˚C",
+      "evidence": [
+        {
+          "source_id": "sheng2014-nn502121t",
+          "locator": "Main PDF p.6"
+        }
+      ]
+    },
+    {
+      "id": "s02-immersion",
+      "action": "immersion",
+      "label": "Immersion in IrOx colloidal solution",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-heating"
+      ],
+      "inputs": [
+        "sheng2014-nn502121t-cds-cdse-irox-sensitized-zno-nanowire-3--after-s01-heating"
+      ],
+      "outputs": [
+        "sheng2014-nn502121t-cds-cdse-irox-sensitized-zno-nanowire-3--after-s02-immersion"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 3,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "3 h",
+          "evidence": [
+            {
+              "source_id": "sheng2014-nn502121t",
+              "locator": "Main PDF p.6"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Immersion in IrOx colloidal solution",
+      "evidence": [
+        {
+          "source_id": "sheng2014-nn502121t",
+          "locator": "Main PDF p.6"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "sheng2014-nn502121t-cds-cdse-irox-sensitized-zno-nanowire-3--product",
+      "source_sample_label": "CdS/CdSe/IrOx-sensitized ZnO nanowire",
+      "batch_id": null,
+      "material_state_id": "sheng2014-nn502121t-cds-cdse-irox-sensitized-zno-nanowire-3--after-s02-immersion",
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "phase": {
+        "value": "polycrystalline",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "sheng2014-nn502121t",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "nanowire",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "sheng2014-nn502121t",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "sheng2014-nn502121t",
+          "locator": "Main PDF p.6"
+        }
+      ],
+      "notes": [
+        "Reactor: aqueous solution (Main PDF p.6).",
+        "Reaction temperature: 90 degC (Main PDF p.6).",
+        "Reaction time: 20 min (Main PDF p.6)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Amount of NaOH not reported in the extracted text.",
+      "Amount of HNO3 not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

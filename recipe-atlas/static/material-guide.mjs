@@ -1,9 +1,9 @@
-import {figureGallery} from './reader-app.mjs?v=0.41.6';
+import {figureGallery} from './reader-app.mjs?v=0.41.7';
 import {stockScope} from './stock-scope.mjs';
 import {quantityValue} from './quantity-value.mjs';
-import {sourceItemCard} from './source-evidence.mjs?v=0.41.6';
-import {mountCrystalReferences} from './crystal-viewer.mjs?v=0.41.6';
-export {mountCrystalReferences} from './crystal-viewer.mjs?v=0.41.6';
+import {sourceItemCard} from './source-evidence.mjs?v=0.41.7';
+import {mountCrystalReferences} from './crystal-viewer.mjs?v=0.41.7';
+export {mountCrystalReferences} from './crystal-viewer.mjs?v=0.41.7';
 import {mountProtocol} from './protocol-visuals.mjs?v=0.39.1';
 import {chemicalRegistry,chemicalEntry,chemicalImage,openChemical,mountStockComponents,mountReagentComponents} from './chemical-viewer.mjs?v=0.34.1';
 const el=(tag,text,cls)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(cls)n.className=cls;return n;};
@@ -17,7 +17,8 @@ export async function fallbackSources(host,r){
  readerPresentations??=fetch(new URL('data/reader-presentation.json',import.meta.url),{cache:'no-store'}).then(response=>{if(!response.ok)throw Error('Reviewed presentation unavailable');return response.json();});
  const presentation=(await readerPresentations).records?.[r.record_id];
  if(!Array.isArray(presentation?.figures)||!presentation.figures.length)return false;
- host.append(el('p','Source figures assigned to this reviewed record retain their own specimen and context qualifications; their display does not establish the same physical batch.','guide-notice'));
+ const recordScope=r.quality?.review_status==='source_extracted'?'record':'reviewed record';
+ host.append(el('p','Source figures assigned to this '+recordScope+' retain their own specimen and context qualifications; their display does not establish the same physical batch.','guide-notice'));
  figureGallery(host,presentation.figures,r,'source',presentation);
  return true;
 }

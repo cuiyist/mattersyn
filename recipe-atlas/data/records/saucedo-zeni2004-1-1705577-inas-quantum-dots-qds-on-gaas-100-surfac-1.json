@@ -1,0 +1,280 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "saucedo-zeni2004-1-1705577-inas-quantum-dots-qds-on-gaas-100-surfac-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "N. Saucedo-Zeni (2004): InAs quantum dots (QDs) on GaAs(100) surface (Sample A)",
+  "material": {
+    "formula": "InAs",
+    "family": "InAs nanocrystals",
+    "elements": [
+      "In",
+      "As"
+    ],
+    "components": [
+      "InAs"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Synthesis as described in the source",
+  "sources": [
+    {
+      "id": "saucedo-zeni2004-1-1705577",
+      "doi": "10.1116/1.1705577",
+      "title": "Improvement on the InAs quantum dot size distribution employing high-temperature GaAs(100) substrate treatment",
+      "authors": "N. Saucedo-Zeni, A. Yu. Gorbatchev, and V. H. Me´ndez-Garcı´a",
+      "year": 2004,
+      "url": "https://doi.org/10.1116/1.1705577",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "saucedo-zeni2004-1-1705577",
+    "recipe_family": "saucedo-zeni2004-1-1705577-inas-quantum-dots-qds-on-gaas-100-surfac-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "InAs",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "saucedo-zeni2004-1-1705577",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "saucedo-zeni2004-1-1705577-inas-quantum-dots-qds-on-gaas-100-surfac-1--gaas-buffer-layer",
+      "name": "GaAs buffer layer",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "saucedo-zeni2004-1-1705577",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "saucedo-zeni2004-1-1705577-inas-quantum-dots-qds-on-gaas-100-surfac-1--inas",
+      "name": "InAs",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "amount": {
+          "value": 2.1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "monolayer",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "2.1 monolayer",
+          "evidence": [
+            {
+              "source_id": "saucedo-zeni2004-1-1705577",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "saucedo-zeni2004-1-1705577",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "saucedo-zeni2004-1-1705577-inas-quantum-dots-qds-on-gaas-100-surfac-1--after-s01-deposit",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "saucedo-zeni2004-1-1705577-inas-quantum-dots-qds-on-gaas-100-surfac-1--inas"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-deposit",
+      "action": "deposit",
+      "label": "InAs deposition at 500 °C",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "saucedo-zeni2004-1-1705577-inas-quantum-dots-qds-on-gaas-100-surfac-1--inas"
+      ],
+      "outputs": [
+        "saucedo-zeni2004-1-1705577-inas-quantum-dots-qds-on-gaas-100-surfac-1--after-s01-deposit"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 500,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "500 °C",
+          "evidence": [
+            {
+              "source_id": "saucedo-zeni2004-1-1705577",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "As4 flux",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "saucedo-zeni2004-1-1705577",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "InAs deposition at 500 °C",
+      "evidence": [
+        {
+          "source_id": "saucedo-zeni2004-1-1705577",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "saucedo-zeni2004-1-1705577-inas-quantum-dots-qds-on-gaas-100-surfac-1--product",
+      "source_sample_label": "InAs quantum dots (QDs) on GaAs(100) surface (Sample A)",
+      "batch_id": null,
+      "material_state_id": "saucedo-zeni2004-1-1705577-inas-quantum-dots-qds-on-gaas-100-surfac-1--after-s01-deposit",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "InAs",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "saucedo-zeni2004-1-1705577",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "saucedo-zeni2004-1-1705577",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reaction temperature: 500 degC (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of GaAs buffer layer not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
