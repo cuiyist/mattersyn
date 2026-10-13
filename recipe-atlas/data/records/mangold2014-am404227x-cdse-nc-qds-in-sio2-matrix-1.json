@@ -1,0 +1,442 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "mangold2014-am404227x-cdse-nc-qds-in-sio2-matrix-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "H. Moritz Mangold (2014): CdSe NC-QDs in SiO2 matrix",
+  "material": {
+    "formula": "CdSe",
+    "family": "CdSe nanocrystals",
+    "elements": [
+      "Cd",
+      "Se"
+    ],
+    "components": [
+      "CdSe"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Synthesis as described in the source",
+  "sources": [
+    {
+      "id": "mangold2014-am404227x",
+      "doi": "10.1021/am404227x",
+      "title": "Site-Selective Ion Beam Synthesis and Optical Properties of Individual CdSe Nanocrystal Quantum Dots in a SiO2 Matrix",
+      "authors": "H. Moritz Mangold, Helmut Karl, Hubert J. Krenner",
+      "year": 2014,
+      "url": "https://doi.org/10.1021/am404227x",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "mangold2014-am404227x",
+    "recipe_family": "mangold2014-am404227x-cdse-nc-qds-in-sio2-matrix-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdSe",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "mangold2014-am404227x",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": 11,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "11 nm",
+      "evidence": [
+        {
+          "source_id": "mangold2014-am404227x",
+          "locator": "Main PDF p.4"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "mangold2014-am404227x-cdse-nc-qds-in-sio2-matrix-1--selenium-ions",
+      "name": "selenium ions",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "amount": {
+          "value": 0.6,
+          "minimum": null,
+          "maximum": null,
+          "unit": "×10^16 at/cm²",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0.6 ×10^16 at/cm²",
+          "evidence": [
+            {
+              "source_id": "mangold2014-am404227x",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "mangold2014-am404227x",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "mangold2014-am404227x-cdse-nc-qds-in-sio2-matrix-1--cadmium-ions",
+      "name": "cadmium ions",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "mangold2014-am404227x",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "mangold2014-am404227x-cdse-nc-qds-in-sio2-matrix-1--after-s01-define-apertures",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "mangold2014-am404227x-cdse-nc-qds-in-sio2-matrix-1--after-s02-implant",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "mangold2014-am404227x-cdse-nc-qds-in-sio2-matrix-1--after-s01-define-apertures",
+        "mangold2014-am404227x-cdse-nc-qds-in-sio2-matrix-1--selenium-ions",
+        "mangold2014-am404227x-cdse-nc-qds-in-sio2-matrix-1--cadmium-ions"
+      ]
+    },
+    {
+      "id": "mangold2014-am404227x-cdse-nc-qds-in-sio2-matrix-1--after-s03-anneal",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "mangold2014-am404227x-cdse-nc-qds-in-sio2-matrix-1--after-s02-implant"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-define-apertures",
+      "action": "define apertures",
+      "label": "Define apertures by electron beam lithography and wet chemical etching",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "mangold2014-am404227x-cdse-nc-qds-in-sio2-matrix-1--after-s01-define-apertures"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Define apertures by electron beam lithography and wet chemical etching",
+      "evidence": [
+        {
+          "source_id": "mangold2014-am404227x",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-implant",
+      "action": "implant",
+      "label": "Implant Se+ and Cd+ ions at cryogenic temperature",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-define-apertures"
+      ],
+      "inputs": [
+        "mangold2014-am404227x-cdse-nc-qds-in-sio2-matrix-1--after-s01-define-apertures",
+        "mangold2014-am404227x-cdse-nc-qds-in-sio2-matrix-1--selenium-ions",
+        "mangold2014-am404227x-cdse-nc-qds-in-sio2-matrix-1--cadmium-ions"
+      ],
+      "outputs": [
+        "mangold2014-am404227x-cdse-nc-qds-in-sio2-matrix-1--after-s02-implant"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 77,
+          "minimum": null,
+          "maximum": null,
+          "unit": "K",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "77 K",
+          "evidence": [
+            {
+              "source_id": "mangold2014-am404227x",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Implant Se+ and Cd+ ions at cryogenic temperature",
+      "evidence": [
+        {
+          "source_id": "mangold2014-am404227x",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-anneal",
+      "action": "anneal",
+      "label": "Post implantation rapid thermal annealing",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-implant"
+      ],
+      "inputs": [
+        "mangold2014-am404227x-cdse-nc-qds-in-sio2-matrix-1--after-s02-implant"
+      ],
+      "outputs": [
+        "mangold2014-am404227x-cdse-nc-qds-in-sio2-matrix-1--after-s03-anneal"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 900,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "900 °C",
+          "evidence": [
+            {
+              "source_id": "mangold2014-am404227x",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 30,
+          "minimum": null,
+          "maximum": null,
+          "unit": "s",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "30 s",
+          "evidence": [
+            {
+              "source_id": "mangold2014-am404227x",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Post implantation rapid thermal annealing",
+      "evidence": [
+        {
+          "source_id": "mangold2014-am404227x",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "mangold2014-am404227x-cdse-nc-qds-in-sio2-matrix-1--product",
+      "source_sample_label": "CdSe NC-QDs in SiO2 matrix",
+      "batch_id": null,
+      "material_state_id": "mangold2014-am404227x-cdse-nc-qds-in-sio2-matrix-1--after-s03-anneal",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdSe",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "mangold2014-am404227x",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "mangold2014-am404227x",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reaction temperature: 900 degC (Main PDF p.2).",
+        "Reaction time: 30 s (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "mangold2014-am404227x-cdse-nc-qds-in-sio2-matrix-1--size",
+      "sample_id": "mangold2014-am404227x-cdse-nc-qds-in-sio2-matrix-1--product",
+      "property": "particle_size",
+      "technique": "not reported",
+      "value": {
+        "value": 11,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "11 nm",
+        "evidence": [
+          {
+            "source_id": "mangold2014-am404227x",
+            "locator": "Main PDF p.4"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "mangold2014-am404227x",
+          "locator": "Main PDF p.4"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Amount of cadmium ions not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
