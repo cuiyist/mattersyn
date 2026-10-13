@@ -1,5 +1,14 @@
 # Simple pipeline website job
 
+## Pending Batch22 caption source conflict — 2026-10-13T23:03:42.1684760Z
+
+B21 remains the latest verified live delivery:905 papers/3,992 canonical records/1,871 displayed pairs. B22's25 papers/36 new records/103 figures remain private and earn zero publication credit. Old Source9cea and its complete13-phase q PASS are retained; a new ordinary content commit, NEWs-r3, NEWq-r2 and fresh normal visual/CI/deployment/anonymous proof are required.
+
+Bounded source evidence confirms JA061608W Figure1's original caption reports1:8 while the printed panel reports1:16. Root chose public source-attributed wording that states both conflicting reported ratios and retains the existing locator because the bounded evidence cannot justify silently choosing one. The actual local application changed only four Reader public-caption fields; canonical records/crops/links/provenance are unchanged. This does not establish a model error, scientific audit or training eligibility. Future corrected Source head and preparation time remain unset.
+
+Saved B35 final metadata:41 two-pass successes,39 checked files,36 nonempty papers,75 pairs,225 crops; original native OS exit unobserved. Actual B36 launch:2026-10-13T22:52:57.4167751Z,43 supported/seven holds, controller27484/server32512, with extract state reported by Root and no completion inferred. Neither adds live credit. Audit questions/denominator/training status and all older history remain unchanged; the MACHINE paper list is unchanged.
+
+
 ## Current verified delivery and continuation — 2026-10-13T21:29:10+00:00
 
 B21 passed actual anonymous verification at 2026-10-13T21:24:50+00:00; normal proof records 27 papers, 39 records and 105 figures. Live totals are 905 contributing papers, 3,992 canonical records and 1,871 displayed pairs. Source PR39 merged as `dc45dded5573e2d8b58a54a9309eddaf0b32dba7`; prepared Source `7091ecafc8251ee7600536374dea4f16c4191ff2` and Site `7e7cb11698385fe3791331c48530757419033190` remain the release bindings.
@@ -1741,4 +1750,4 @@ B21 remains the latest verified live checkpoint: 905 contributing papers, 3,992 
 The [verified current cleanup report](https://github.com/cuiyist/mattersyn2/blob/cc039900cbdbd686f64c6fe8910ddf2b5e675588/CLEANUP_REPORT_2026-10-12.md) records 324,947,723,133 removed bytes /6,951,560 files, plus 11,771,016,610 bytes separate lossless compression. The 4,280,404,704-byte 4B removal is included once; requested 9B/27B models were not found. C free was 84,779,479,040 bytes at 21:40:53.5165795Z, compared with 11,985,891,328 before cleanup. Root found 25 Python preview processes at 21:44Z; saved folder receipts remain the authority and no fresh native CWD read is asserted. Protected 32B/CUDA and programmes remain preserved. This update adds zero deletion/compression credit; the 600 GB target remains unmet.
 
 
-- 2026-10-13T22:12:16.754445+00:00: Batch 21 is privately integrated with 36 new source_extracted records; 103 of 103 retained figure captions are bound. Corrected 12 new title prefixes and their exact dependent labels/hash pointers. All 3,992 prior canonical records and scientific fields are unchanged. Normal Source/build/visual/CI and Site deployment/anonymous checks remain pending. This checkpoint adds zero publication or independent audit credit.
+- 2026-10-13T22:12:16.754445+00:00: Batch 22 is privately integrated with 36 new source_extracted records; 103 of 103 retained figure captions are bound. Corrected 12 new title prefixes and their exact dependent labels/hash pointers. All 3,992 prior canonical records and scientific fields are unchanged. Normal Source/build/visual/CI and Site deployment/anonymous checks remain pending. This checkpoint adds zero publication or independent audit credit.
