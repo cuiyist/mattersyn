@@ -1,3 +1,11 @@
+## Current simple delivery — Batch16 caption correction, 2026-10-13T05:41:08.027199+00:00
+
+Batch 16 Source PR33 merged, but Site publication is held for a two-field caption-area deletion. Fresh corrective Source preparation, complete checks, CI and a new sealed release are pending. The verified live Site remains Batch 15:736 papers,3738 records and1617 recipe-structure pairs.
+
+Bind the caption deletion and these current documents in one corrective Source commit, complete fresh normal local checks and Source CI/merge, then sealed R2 desktop/phone and ordinary Site PR/Pages/anonymous verification. Only after actual Batch 16 anonymous success integrate saved Batch 17 rare, bibliography and caption work; preserve all accepted originals.
+
+Exactly two public-caption fields lost an unsupported area clause; no numeric replacement, canonical/crop/provenance/status change or scientific audit. The first Source/preview evidence remains historical. The verified cleanup report 01f5e9b803498c75a3b959360fab56f9b8a23070 now records312,116,029,628 logical bytes/6,557,101 files removed, replacing earlier totals and including the unused4B model once. C free is separately approximately215GB; no700 or800 nomination credit is added. The600GB target remains unfinished. Audited-lane questions, denominator and failures remain paused and unchanged. Older checkpoints below are dated history.
+
 ## Latest delivery hold — 2026-10-13T00:01:15.708583+00:00
 
 Batch14 is live (708 total papers). Batch15 has28 papers/53 records/148 captioned figures and is receiving a combined display-only fix after actual visual review. Reuse all accepted science/citations/captions; do not rerun nonempty sync. Normal full checks and ordinary Source/Site PR publication follow. Cleanup217.81GB confirmed; active32B preserved;600GB target unfinished. Audit lane stays paused.
