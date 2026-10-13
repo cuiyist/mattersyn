@@ -239,7 +239,7 @@ class Audit:
         # Concrete regressions established by the independently reviewed sources.
         ferrite = self.hubs.get("CoFe2O4", {})
         tirosh_direct = {"tirosh-2006-cofe2o4-method-a-230c", "tirosh-2006-cofe2o4-method-a-250c", "tirosh-2006-cofe2o4-method-a-270c"}
-        self.check(ferrite.get("component_only") is False and set(ferrite.get("direct_record_ids", [])) == tirosh_direct, "CoFe2O4: the three reviewed Tirosh Method-A temperature routes must be direct contributions")
+        self.check(ferrite.get("component_only") is False and reviewed_silver_record_ids(ferrite, self.byid, "direct_record_ids") == tirosh_direct, "CoFe2O4: the three reviewed Tirosh Method-A temperature routes must be direct contributions")
         self.check("saha-2019-coo-cofe2o4-seeded-growth" in ferrite.get("record_ids", []), "Missing separately scoped Saha ferrite-shell contribution")
         self.check("separately scoped" in ferrite.get("scope_note", "").lower() or "shell" in ferrite.get("scope_note", "").lower(), "CoFe2O4: composite-shell evidence lacks an explicit scope note")
         silicon = self.hubs.get("Si", {})
