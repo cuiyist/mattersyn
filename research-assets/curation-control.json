@@ -1,7 +1,7 @@
 {
   "schema": "mattersyn-curation-control/1",
-  "status": "simple_pipeline_active_cleanup_in_progress",
-  "recorded_at": "2026-10-13T02:22:49+00:00",
+  "status": "simple_pipeline_active_audit_lane_paused_batch16_caption_correction",
+  "recorded_at": "2026-10-13T05:41:08.027199+00:00",
   "authorization": "Owner October 10 evening: continue the separate source_extracted simple-pipeline website job; the audited lane and its open questions remain paused. Use local two-pass extraction, unchanged quote/number/agreement checks and normal release tools.",
   "supersedes_hold": "October 10 evening authorizes only the separate source_extracted simple-pipeline job. The audited lane, original findings, denominator and open owner questions stay paused.",
   "active_run": "Private simple-website-20261010 checkpoint; public report research-assets/public-audits/SIMPLE_PIPELINE_REPORT.md",
@@ -1843,8 +1843,8 @@
       "counts_in_live_homepage": false
     }
   },
-  "current_task": "Correct the Batch 16 reviewed-only ferrite regression assertion; Batch 25 local two-pass processing and verified duplicate cleanup are active.",
-  "next_step": "Prepare the corrective source commit with normal file-list bindings, complete local build and visual checks, then the ordinary Source and Site publication path.",
+  "current_task": "Batch 16 Source PR33 merged, but Site publication is held for a two-field caption-area deletion. Fresh corrective Source preparation, complete checks, CI and a new sealed release are pending. The verified live Site remains Batch 15:736 papers,3738 records and1617 recipe-structure pairs.",
+  "next_step": "Bind the caption deletion and these current documents in one corrective Source commit, complete fresh normal local checks and Source CI/merge, then sealed R2 desktop/phone and ordinary Site PR/Pages/anonymous verification. Only after actual Batch 16 anonymous success integrate saved Batch 17 rare, bibliography and caption work; preserve all accepted originals.",
   "machine_extracted_paper_list": {
     "path": "research-assets/public-audits/MACHINE_EXTRACTED_PAPERS.md",
     "sha256": "a440579fef701d0f7f65a7744cc25481d8d1c8633f2dc1075c35240940b8998a",
@@ -2361,8 +2361,8 @@
     },
     "new_simple_papers_published": 492,
     "public_report": "research-assets/public-audits/SIMPLE_PIPELINE_REPORT.md",
-    "status": "active",
-    "latest_status_at": "2026-10-13T02:27:33+00:00",
+    "status": "active_batch16_caption_correction_before_site_publication",
+    "latest_status_at": "2026-10-13T05:41:08.027199+00:00",
     "publication_events": [
       {
         "event_id": "source_extracted:simple-batch01-20261011:2bf52eb2931a3ff0eb508b605fe4a081250bf7b0",
@@ -11762,11 +11762,42 @@
       "publication_event_id": "source_extracted:simple-batch15-20261012:59a8064722109335a5781d4aac61fa971c94e03d"
     },
     "batch16": {
-      "status": "ordinary_additive_integration_in_progress",
+      "status": "source_merged_site_held_caption_clause_deletion",
       "selected_papers": 24,
       "selected_records": 40,
       "selected_figures": 105,
-      "publication_credit": 0
+      "publication_credit": 0,
+      "source_pr": 33,
+      "source_merge_commit": "0b4dde9222d71216e78a668445ab7c86aad2ac18",
+      "source_prepared_before_caption_fix": "3d07ca30e249a13076e25d65dbede50665a050e7",
+      "published": false,
+      "paper_credit": 0,
+      "new_live_paper_credit": 0,
+      "new_live_credit": 0,
+      "caption_delivery_correction": {
+        "recorded_at": "2026-10-13T05:41:08.027199+00:00",
+        "public_caption_fields_changed": 2,
+        "figure_id": "1-1863445-figure-1",
+        "page": 2,
+        "edit": "delete unsupported scan-area clause only",
+        "numeric_replacement": false,
+        "canonical_records_changed": 0,
+        "crop_bytes_changed": 0,
+        "provenance_and_permission_flags_changed": false,
+        "source_or_scientific_audit": false,
+        "first_sealed_attempt_preserved": true,
+        "fresh_normal_source_checks_CI_R2_required": true,
+        "corrective_source_head": null,
+        "corrective_site_commit": null
+      },
+      "normal_preview_r1_observation": {
+        "normal_build_and_boundary_checks_passed": true,
+        "mandatory_desktop_routes_passed": 54,
+        "phone_routes_passed": 3,
+        "caption_area_defect_discovered_after_pass": true,
+        "site_publication_credit": 0,
+        "cannot_substitute_for_corrected_preview_evidence": true
+      }
     },
     "batch23": {
       "status": "local_generation_and_caption_run_complete_private",
@@ -11789,20 +11820,39 @@
       "model_server_restarted": false
     },
     "storage_cleanup_latest": {
-      "observed_at": "2026-10-13T02:20:53.845670+00:00",
-      "confirmed_removed_logical_bytes": 267041557089,
-      "removed_files": 5808704,
-      "C_free_before_bytes": 11985891328,
-      "C_free_after_bytes": 195963129856,
-      "requested_target_bytes": 600000000000,
-      "target_met": false,
-      "unused_4b_removed_bytes": 4280404704,
-      "active_model_preserved": true,
-      "ollama_removal_claimed": false,
-      "private_training_files_retained": true,
-      "archive_report_url": "https://github.com/cuiyist/mattersyn2/blob/main/CLEANUP_REPORT_2026-10-12.md",
-      "archive_report_commit": "22671b62a806aed9fd4db09a745050f20b1e0103",
-      "safe_snapshot_sha256": "1638b83f283aa14c9328827e02cdaf31ae211fe79c03584ceda1ae305aaf7441"
+      "recorded_at_document_update": "2026-10-13T05:44:44.607343+00:00",
+      "confirmed_removed_bytes": 312116029628,
+      "confirmed_removed_files": 6557101,
+      "report_commit": "01f5e9b803498c75a3b959360fab56f9b8a23070",
+      "report_url": "https://github.com/cuiyist/mattersyn2/blob/main/CLEANUP_REPORT_2026-10-12.md",
+      "report_observation_time_utc": null,
+      "root_supplied_verified_report_total": true,
+      "C_before_free_bytes": 11985891328,
+      "latest_C_free_GB_approximate": 215,
+      "new_exact_C_free_byte_query_performed": false,
+      "target_600GB_achieved": false,
+      "unused_Qwen3_4B_removed_bytes": 4280404704,
+      "unused_model_counted_once": true,
+      "Ollama_9B_27B_removed_bytes": 0,
+      "active_Qwen3_32B_and_CUDA_runtime_preserved": true,
+      "PDFs_page_text_passes_pairs_deleted": false,
+      "counts_are_logical_removal_receipts_not_a_free_space_delta": true,
+      "previous_snapshot_preserved": {
+        "observed_at": "2026-10-13T02:20:53.845670+00:00",
+        "confirmed_removed_logical_bytes": 267041557089,
+        "removed_files": 5808704,
+        "C_free_before_bytes": 11985891328,
+        "C_free_after_bytes": 195963129856,
+        "requested_target_bytes": 600000000000,
+        "target_met": false,
+        "unused_4b_removed_bytes": 4280404704,
+        "active_model_preserved": true,
+        "ollama_removal_claimed": false,
+        "private_training_files_retained": true,
+        "archive_report_url": "https://github.com/cuiyist/mattersyn2/blob/main/CLEANUP_REPORT_2026-10-12.md",
+        "archive_report_commit": "22671b62a806aed9fd4db09a745050f20b1e0103",
+        "safe_snapshot_sha256": "1638b83f283aa14c9328827e02cdaf31ae211fe79c03584ceda1ae305aaf7441"
+      }
     }
   },
   "paused_audited_lane_checkpoint": {
@@ -20195,7 +20245,7 @@
       "new_records": 0
     }
   ],
-  "updated_at_utc": "2026-10-13T03:34:22.794835+00:00",
+  "updated_at_utc": "2026-10-13T05:41:08.027199+00:00",
   "pending_figure_caption_delivery": {
     "observed_at_utc": "2026-10-11T23:07:48.007667+00:00",
     "status": "batch07_deployed_batch08_prepared_older_display_repair_pending_release",
@@ -20458,19 +20508,38 @@
     }
   },
   "storage_cleanup_latest": {
-    "observed_at": "2026-10-13T03:16:14.802708+00:00",
-    "confirmed_removed_bytes": 286334215592,
-    "confirmed_removed_files": 6148054,
-    "C_before_free_bytes": 11985891328,
-    "C_after_free_bytes": 209584783360,
-    "report_commit": "5afb68559aee5bcc7623638c566594b7ea48a92c",
+    "recorded_at_document_update": "2026-10-13T05:44:44.607343+00:00",
+    "confirmed_removed_bytes": 312116029628,
+    "confirmed_removed_files": 6557101,
+    "report_commit": "01f5e9b803498c75a3b959360fab56f9b8a23070",
     "report_url": "https://github.com/cuiyist/mattersyn2/blob/main/CLEANUP_REPORT_2026-10-12.md",
+    "report_observation_time_utc": null,
+    "root_supplied_verified_report_total": true,
+    "C_before_free_bytes": 11985891328,
+    "latest_C_free_GB_approximate": 215,
+    "new_exact_C_free_byte_query_performed": false,
     "target_600GB_achieved": false,
     "unused_Qwen3_4B_removed_bytes": 4280404704,
+    "unused_model_counted_once": true,
     "Ollama_9B_27B_removed_bytes": 0,
     "active_Qwen3_32B_and_CUDA_runtime_preserved": true,
     "PDFs_page_text_passes_pairs_deleted": false,
-    "counts_are_logical_removal_receipts_not_a_free_space_delta": true
+    "counts_are_logical_removal_receipts_not_a_free_space_delta": true,
+    "previous_snapshot_preserved": {
+      "observed_at": "2026-10-13T03:16:14.802708+00:00",
+      "confirmed_removed_bytes": 286334215592,
+      "confirmed_removed_files": 6148054,
+      "C_before_free_bytes": 11985891328,
+      "C_after_free_bytes": 209584783360,
+      "report_commit": "5afb68559aee5bcc7623638c566594b7ea48a92c",
+      "report_url": "https://github.com/cuiyist/mattersyn2/blob/main/CLEANUP_REPORT_2026-10-12.md",
+      "target_600GB_achieved": false,
+      "unused_Qwen3_4B_removed_bytes": 4280404704,
+      "Ollama_9B_27B_removed_bytes": 0,
+      "active_Qwen3_32B_and_CUDA_runtime_preserved": true,
+      "PDFs_page_text_passes_pairs_deleted": false,
+      "counts_are_logical_removal_receipts_not_a_free_space_delta": true
+    }
   },
   "simple_pending_display_validation": {
     "batch": "batch16",
@@ -20483,7 +20552,13 @@
     "proposed_correction": "Apply existing reviewed-status filter only to the historical ferrite set assertion; general canonical membership, status, role and asset checks remain unchanged.",
     "focused_tests_passed": 12,
     "independent_code_review": "pending",
-    "new_canonical_or_audited_record_changes": 0
+    "new_canonical_or_audited_record_changes": 0,
+    "status": "caption_clause_deleted_fresh_delivery_checks_pending",
+    "current_issue": "One public AFM caption included an unsupported area clause; deleted without numeric replacement.",
+    "source_pr33_merged": true,
+    "source_merged_commit": "0b4dde9222d71216e78a668445ab7c86aad2ac18",
+    "historical_ferrite_fix_and_failed_build_preserved": true,
+    "fresh_complete_checks_CI_and_sealed_preview_required": true
   },
   "simple_local_batch25_observation": {
     "launch": "2026-10-13T03:28:14.7212864Z",
@@ -20492,5 +20567,24 @@
     "identity_holds": 6,
     "model_server_restarted": false,
     "publication_credit": 0
+  },
+  "storage_cleanup_pending_reconciliation": {
+    "root_reported_at_document_preparation": "2026-10-13T05:41:08.027199+00:00",
+    "slice600_completed_logical_bytes": 8478700553,
+    "single_completed_preview_removed_GB_approximate": 1.834,
+    "unique_local_preservation_MB_approximate": 61.58,
+    "slice700_action": "in progress; no additional credit here",
+    "slice800_nomination_matches": 232936,
+    "slice800_nomination_GB_approximate": 9.005,
+    "slice800_deleted_bytes_credited_here": 0,
+    "final_confirmed_snapshot_pending": false,
+    "existing_report_total_unchanged": false,
+    "not_additive_to_completed_receipt_totals": true,
+    "latest_verified_report_commit": "01f5e9b803498c75a3b959360fab56f9b8a23070",
+    "latest_verified_report_removed_bytes": 312116029628,
+    "latest_verified_report_removed_files": 6557101,
+    "aggregate_replaced_from_actual_report": true,
+    "no_separate_600_or_preview_addition": true,
+    "future_700_completion_reconciliation_pending": true
   }
 }
