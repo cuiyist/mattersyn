@@ -1,0 +1,365 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "semenova2008-1-2927496-inas-quantum-dots-qds-embedded-in-in0-42-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "E. S. Semenova (2008): InAs quantum dots (QDs) embedded in In0.42Ga0.58As metamorphic matrix on GaAs substrate",
+  "material": {
+    "formula": "InAs",
+    "family": "InAs nanocrystals",
+    "elements": [
+      "In",
+      "As"
+    ],
+    "components": [
+      "InAs"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Molecular beam epitaxy",
+  "sources": [
+    {
+      "id": "semenova2008-1-2927496",
+      "doi": "10.1063/1.2927496",
+      "title": "Metamorphic approach to single quantum dot emission at 1.55 µm on GaAs substrate",
+      "authors": "E. S. Semenova; R. Hostein; G. Patriarche; O. Mauguin; L. Largeau; I. Robert-Philip; A. Beveratos; A. Lemaître",
+      "year": 2008,
+      "url": "https://doi.org/10.1063/1.2927496",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "semenova2008-1-2927496",
+    "recipe_family": "semenova2008-1-2927496-inas-quantum-dots-qds-embedded-in-in0-42-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "InAs",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "semenova2008-1-2927496",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "crystalline",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "semenova2008-1-2927496",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "diamondlike",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "semenova2008-1-2927496",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "semenova2008-1-2927496-inas-quantum-dots-qds-embedded-in-in0-42-1--in0-6ga0-4as",
+      "name": "In0.6Ga0.4As",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "semenova2008-1-2927496",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "semenova2008-1-2927496-inas-quantum-dots-qds-embedded-in-in0-42-1--after-s01-grow",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "semenova2008-1-2927496-inas-quantum-dots-qds-embedded-in-in0-42-1--after-s02-grow",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "semenova2008-1-2927496-inas-quantum-dots-qds-embedded-in-in0-42-1--after-s01-grow"
+      ]
+    },
+    {
+      "id": "semenova2008-1-2927496-inas-quantum-dots-qds-embedded-in-in0-42-1--after-s03-cap",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "semenova2008-1-2927496-inas-quantum-dots-qds-embedded-in-in0-42-1--after-s02-grow",
+        "semenova2008-1-2927496-inas-quantum-dots-qds-embedded-in-in0-42-1--in0-6ga0-4as"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-grow",
+      "action": "grow",
+      "label": "Grow graded InxGa1−xAs buffer layer",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "semenova2008-1-2927496-inas-quantum-dots-qds-embedded-in-in0-42-1--after-s01-grow"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 350,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "350 °C",
+          "evidence": [
+            {
+              "source_id": "semenova2008-1-2927496",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Grow graded InxGa1−xAs buffer layer",
+      "evidence": [
+        {
+          "source_id": "semenova2008-1-2927496",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-grow",
+      "action": "grow",
+      "label": "Grow In0.42Ga0.58As metamorphic matrix",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-grow"
+      ],
+      "inputs": [
+        "semenova2008-1-2927496-inas-quantum-dots-qds-embedded-in-in0-42-1--after-s01-grow"
+      ],
+      "outputs": [
+        "semenova2008-1-2927496-inas-quantum-dots-qds-embedded-in-in0-42-1--after-s02-grow"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 480,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "480 °C",
+          "evidence": [
+            {
+              "source_id": "semenova2008-1-2927496",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Grow In0.42Ga0.58As metamorphic matrix",
+      "evidence": [
+        {
+          "source_id": "semenova2008-1-2927496",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-cap",
+      "action": "cap",
+      "label": "Cap with In0.6Ga0.4As quantum well",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-grow"
+      ],
+      "inputs": [
+        "semenova2008-1-2927496-inas-quantum-dots-qds-embedded-in-in0-42-1--after-s02-grow",
+        "semenova2008-1-2927496-inas-quantum-dots-qds-embedded-in-in0-42-1--in0-6ga0-4as"
+      ],
+      "outputs": [
+        "semenova2008-1-2927496-inas-quantum-dots-qds-embedded-in-in0-42-1--after-s03-cap"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Cap with In0.6Ga0.4As quantum well",
+      "evidence": [
+        {
+          "source_id": "semenova2008-1-2927496",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "semenova2008-1-2927496-inas-quantum-dots-qds-embedded-in-in0-42-1--product",
+      "source_sample_label": "InAs quantum dots (QDs) embedded in In0.42Ga0.58As metamorphic matrix on GaAs substrate",
+      "batch_id": null,
+      "material_state_id": "semenova2008-1-2927496-inas-quantum-dots-qds-embedded-in-in0-42-1--after-s03-cap",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "InAs",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "semenova2008-1-2927496",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "crystalline",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "semenova2008-1-2927496",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "diamondlike",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "semenova2008-1-2927496",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "semenova2008-1-2927496",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reaction temperature: 350 degC (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of In0.6Ga0.4As not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
