@@ -1,0 +1,462 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "ng2006-1-2191737-sample-1-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "C. Y. Ng (2006): sample 1",
+  "material": {
+    "formula": "Si",
+    "family": "Si nanocrystals",
+    "elements": [
+      "Si"
+    ],
+    "components": [
+      "Si"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Ion implantation",
+  "sources": [
+    {
+      "id": "ng2006-1-2191737",
+      "doi": "10.1063/1.2191737",
+      "title": "Electrical characteristics of Si nanocrystal distributed in a narrow layer in the gate oxide near the gate synthesized with very-low-energy ion beams",
+      "authors": "C. Y. Ng, T. P. Chen, P. Zhao, L. Ding, Y. Liu, Ampere A. Tseng, S. Fung",
+      "year": 2006,
+      "url": "https://doi.org/10.1063/1.2191737",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "ng2006-1-2191737",
+    "recipe_family": "ng2006-1-2191737-sample-1-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Si",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "ng2006-1-2191737",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "crystalline",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "ng2006-1-2191737",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": 5.0,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "5 nm",
+      "evidence": [
+        {
+          "source_id": "ng2006-1-2191737",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "nanocrystal",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "ng2006-1-2191737",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "ng2006-1-2191737-sample-1-1--sio2-thin-film",
+      "name": "SiO2 thin film",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "ng2006-1-2191737",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "ng2006-1-2191737-sample-1-1--si-ions",
+      "name": "Si+ ions",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "ng2006-1-2191737",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "ng2006-1-2191737-sample-1-1--after-s01-grow",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "ng2006-1-2191737-sample-1-1--sio2-thin-film"
+      ]
+    },
+    {
+      "id": "ng2006-1-2191737-sample-1-1--after-s02-implant",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "ng2006-1-2191737-sample-1-1--after-s01-grow",
+        "ng2006-1-2191737-sample-1-1--si-ions"
+      ]
+    },
+    {
+      "id": "ng2006-1-2191737-sample-1-1--after-s03-anneal",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "ng2006-1-2191737-sample-1-1--after-s02-implant",
+        "ng2006-1-2191737-sample-1-1--sio2-thin-film",
+        "ng2006-1-2191737-sample-1-1--si-ions"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-grow",
+      "action": "grow",
+      "label": "Grow SiO2 thin film",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "ng2006-1-2191737-sample-1-1--sio2-thin-film"
+      ],
+      "outputs": [
+        "ng2006-1-2191737-sample-1-1--after-s01-grow"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 950,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "950 °C",
+          "evidence": [
+            {
+              "source_id": "ng2006-1-2191737",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ng2006-1-2191737",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Grow SiO2 thin film",
+      "evidence": [
+        {
+          "source_id": "ng2006-1-2191737",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-implant",
+      "action": "implant",
+      "label": "Implant Si+ ions",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-grow"
+      ],
+      "inputs": [
+        "ng2006-1-2191737-sample-1-1--after-s01-grow",
+        "ng2006-1-2191737-sample-1-1--si-ions"
+      ],
+      "outputs": [
+        "ng2006-1-2191737-sample-1-1--after-s02-implant"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 2,
+          "minimum": null,
+          "maximum": null,
+          "unit": "keV",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "2 keV",
+          "evidence": [
+            {
+              "source_id": "ng2006-1-2191737",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ng2006-1-2191737",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Implant Si+ ions",
+      "evidence": [
+        {
+          "source_id": "ng2006-1-2191737",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-anneal",
+      "action": "anneal",
+      "label": "Anneal to form nc-Si",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-implant"
+      ],
+      "inputs": [
+        "ng2006-1-2191737-sample-1-1--after-s02-implant",
+        "ng2006-1-2191737-sample-1-1--sio2-thin-film",
+        "ng2006-1-2191737-sample-1-1--si-ions"
+      ],
+      "outputs": [
+        "ng2006-1-2191737-sample-1-1--after-s03-anneal"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 1000,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1000 °C",
+          "evidence": [
+            {
+              "source_id": "ng2006-1-2191737",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ng2006-1-2191737",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Anneal to form nc-Si",
+      "evidence": [
+        {
+          "source_id": "ng2006-1-2191737",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "ng2006-1-2191737-sample-1-1--product",
+      "source_sample_label": "sample 1",
+      "batch_id": null,
+      "material_state_id": "ng2006-1-2191737-sample-1-1--after-s03-anneal",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Si",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ng2006-1-2191737",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "crystalline",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ng2006-1-2191737",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "nanocrystal",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ng2006-1-2191737",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "ng2006-1-2191737",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reaction temperature: 1000 degC (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "ng2006-1-2191737-sample-1-1--size",
+      "sample_id": "ng2006-1-2191737-sample-1-1--product",
+      "property": "diameter",
+      "technique": "HRTEM",
+      "value": {
+        "value": 5.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "5 nm",
+        "evidence": [
+          {
+            "source_id": "ng2006-1-2191737",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "ng2006-1-2191737",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Ligand not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of SiO2 thin film not reported in the extracted text.",
+      "Amount of Si+ ions not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

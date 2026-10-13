@@ -1,0 +1,416 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "robin2006-1-2209202-cdse-islands-on-znse-3-ml-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Ivan-Christophe Robin (2006): CdSe islands on ZnSe (3 ML)",
+  "material": {
+    "formula": "CdSe",
+    "family": "CdSe nanocrystals",
+    "elements": [
+      "Cd",
+      "Se"
+    ],
+    "components": [
+      "CdSe"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Synthesis as described in the source",
+  "sources": [
+    {
+      "id": "robin2006-1-2209202",
+      "doi": "10.1063/1.2209202",
+      "title": "Elastic and surface energies: Two key parameters for CdSe quantum dot formation",
+      "authors": "Ivan-Christophe Robin, Régis André, Catherine Bougerol, Thomas Aichele, and Serge Tatarenko",
+      "year": 2006,
+      "url": "https://doi.org/10.1063/1.2209202",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "robin2006-1-2209202",
+    "recipe_family": "robin2006-1-2209202-cdse-islands-on-znse-3-ml-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdSe",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "robin2006-1-2209202",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "zinc blende",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "robin2006-1-2209202",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": 20,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "20 nm",
+      "evidence": [
+        {
+          "source_id": "robin2006-1-2209202",
+          "locator": "Main PDF p.4"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "robin2006-1-2209202-cdse-islands-on-znse-3-ml-1--cd",
+      "name": "Cd",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "robin2006-1-2209202",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "robin2006-1-2209202-cdse-islands-on-znse-3-ml-1--se",
+      "name": "Se",
+      "formula": null,
+      "role": "chalcogen_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "robin2006-1-2209202",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "robin2006-1-2209202-cdse-islands-on-znse-3-ml-1--amorphous-selenium",
+      "name": "amorphous selenium",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "robin2006-1-2209202",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "robin2006-1-2209202-cdse-islands-on-znse-3-ml-1--after-s01-deposit",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "robin2006-1-2209202-cdse-islands-on-znse-3-ml-1--amorphous-selenium"
+      ]
+    },
+    {
+      "id": "robin2006-1-2209202-cdse-islands-on-znse-3-ml-1--after-s02-desorb",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "robin2006-1-2209202-cdse-islands-on-znse-3-ml-1--after-s01-deposit"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-deposit",
+      "action": "deposit",
+      "label": "Deposit amorphous selenium at low temperature",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "robin2006-1-2209202-cdse-islands-on-znse-3-ml-1--amorphous-selenium"
+      ],
+      "outputs": [
+        "robin2006-1-2209202-cdse-islands-on-znse-3-ml-1--after-s01-deposit"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 15,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "15 min",
+          "evidence": [
+            {
+              "source_id": "robin2006-1-2209202",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "vacuum",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "robin2006-1-2209202",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Deposit amorphous selenium at low temperature",
+      "evidence": [
+        {
+          "source_id": "robin2006-1-2209202",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-desorb",
+      "action": "desorb",
+      "label": "Desorb amorphous selenium by ramping temperature",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-deposit"
+      ],
+      "inputs": [
+        "robin2006-1-2209202-cdse-islands-on-znse-3-ml-1--after-s01-deposit"
+      ],
+      "outputs": [
+        "robin2006-1-2209202-cdse-islands-on-znse-3-ml-1--after-s02-desorb"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 280,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "280 °C",
+          "evidence": [
+            {
+              "source_id": "robin2006-1-2209202",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 15,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "15 min",
+          "evidence": [
+            {
+              "source_id": "robin2006-1-2209202",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "vacuum",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "robin2006-1-2209202",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Desorb amorphous selenium by ramping temperature",
+      "evidence": [
+        {
+          "source_id": "robin2006-1-2209202",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "robin2006-1-2209202-cdse-islands-on-znse-3-ml-1--product",
+      "source_sample_label": "CdSe islands on ZnSe (3 ML)",
+      "batch_id": null,
+      "material_state_id": "robin2006-1-2209202-cdse-islands-on-znse-3-ml-1--after-s02-desorb",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdSe",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "robin2006-1-2209202",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "zinc blende",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "robin2006-1-2209202",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "robin2006-1-2209202",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reactor: MBE chamber (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "robin2006-1-2209202-cdse-islands-on-znse-3-ml-1--size",
+      "sample_id": "robin2006-1-2209202-cdse-islands-on-znse-3-ml-1--product",
+      "property": "particle_size",
+      "technique": "not reported",
+      "value": {
+        "value": 20,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "20 nm",
+        "evidence": [
+          {
+            "source_id": "robin2006-1-2209202",
+            "locator": "Main PDF p.4"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "robin2006-1-2209202",
+          "locator": "Main PDF p.4"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of Cd not reported in the extracted text.",
+      "Amount of Se not reported in the extracted text.",
+      "Amount of amorphous selenium not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

@@ -1,0 +1,351 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "n2014-jz402752k-cdse-p3ht-bulk-heterojunction-solar-cell-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Amy Ng et al. (2014): CdSe:P3HT bulk heterojunction solar cell",
+  "material": {
+    "formula": "CdSe:P3HT",
+    "family": "CdSe:P3HT nanocrystals",
+    "elements": [
+      "Cd",
+      "Se",
+      "P",
+      "H"
+    ],
+    "components": [
+      "CdSe:P3HT"
+    ],
+    "architecture": "composite"
+  },
+  "method": "Synthesis as described in the source",
+  "sources": [
+    {
+      "id": "n2014-jz402752k",
+      "doi": "10.1021/jz402752k",
+      "title": "Direct Electronic Property Imaging of a Nanocrystal-Based Photovoltaic Device by Electron Beam-Induced Current via Scanning Electron Microscopy",
+      "authors": "A. N., J. D. P., S. J. R., C. L., J. P., S. J. P.",
+      "year": 2014,
+      "url": "https://doi.org/10.1021/jz402752k",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "n2014-jz402752k",
+    "recipe_family": "n2014-jz402752k-cdse-p3ht-bulk-heterojunction-solar-cell-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdSe:P3HT",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "n2014-jz402752k",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": 30,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "30 nm",
+      "evidence": [
+        {
+          "source_id": "n2014-jz402752k",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "nanorod",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "n2014-jz402752k",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "n2014-jz402752k-cdse-p3ht-bulk-heterojunction-solar-cell-1--cdse-nanorods",
+      "name": "CdSe nanorods",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "n2014-jz402752k",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "n2014-jz402752k-cdse-p3ht-bulk-heterojunction-solar-cell-1--p3ht",
+      "name": "P3HT",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "n2014-jz402752k",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "n2014-jz402752k-cdse-p3ht-bulk-heterojunction-solar-cell-1--after-s01-anneal",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "n2014-jz402752k-cdse-p3ht-bulk-heterojunction-solar-cell-1--after-s02-evaporate",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "n2014-jz402752k-cdse-p3ht-bulk-heterojunction-solar-cell-1--after-s01-anneal"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-anneal",
+      "action": "anneal",
+      "label": "Anneal the photoactive layer at 120 °C to remove excess ligands",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "n2014-jz402752k-cdse-p3ht-bulk-heterojunction-solar-cell-1--after-s01-anneal"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 120,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "120 °C",
+          "evidence": [
+            {
+              "source_id": "n2014-jz402752k",
+              "locator": "Main PDF p.4"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Anneal the photoactive layer at 120 °C to remove excess ligands",
+      "evidence": [
+        {
+          "source_id": "n2014-jz402752k",
+          "locator": "Main PDF p.4"
+        }
+      ]
+    },
+    {
+      "id": "s02-evaporate",
+      "action": "evaporate",
+      "label": "Evaporate a 250 nm layer of Al as the back contact",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-anneal"
+      ],
+      "inputs": [
+        "n2014-jz402752k-cdse-p3ht-bulk-heterojunction-solar-cell-1--after-s01-anneal"
+      ],
+      "outputs": [
+        "n2014-jz402752k-cdse-p3ht-bulk-heterojunction-solar-cell-1--after-s02-evaporate"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Evaporate a 250 nm layer of Al as the back contact",
+      "evidence": [
+        {
+          "source_id": "n2014-jz402752k",
+          "locator": "Main PDF p.4"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "n2014-jz402752k-cdse-p3ht-bulk-heterojunction-solar-cell-1--product",
+      "source_sample_label": "CdSe:P3HT bulk heterojunction solar cell",
+      "batch_id": null,
+      "material_state_id": "n2014-jz402752k-cdse-p3ht-bulk-heterojunction-solar-cell-1--after-s02-evaporate",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdSe:P3HT",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "n2014-jz402752k",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": "nanorod",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "n2014-jz402752k",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": "pyridine",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "n2014-jz402752k",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "n2014-jz402752k",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [
+    {
+      "id": "n2014-jz402752k-cdse-p3ht-bulk-heterojunction-solar-cell-1--size",
+      "sample_id": "n2014-jz402752k-cdse-p3ht-bulk-heterojunction-solar-cell-1--product",
+      "property": "diameter",
+      "technique": "STEM",
+      "value": {
+        "value": 30,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "30 nm",
+        "evidence": [
+          {
+            "source_id": "n2014-jz402752k",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "n2014-jz402752k",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of CdSe nanorods not reported in the extracted text.",
+      "Amount of P3HT not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

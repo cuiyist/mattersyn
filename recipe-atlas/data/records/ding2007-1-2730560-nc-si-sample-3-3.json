@@ -1,0 +1,304 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "ding2007-1-2730560-nc-si-sample-3-3",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "L. Ding (2007): nc-Si (sample 3)",
+  "material": {
+    "formula": "nc-Si (sample 3)",
+    "family": "nc-Si (sample 3) nanocrystals",
+    "elements": [
+      "Si"
+    ],
+    "components": [
+      "nc",
+      "Si (sample 3)"
+    ],
+    "architecture": "unresolved"
+  },
+  "method": "Synthesis as described in the source",
+  "sources": [
+    {
+      "id": "ding2007-1-2730560",
+      "doi": "10.1063/1.2730560",
+      "title": "Influence of nanocrystal size on optical properties of Si nanocrystals embedded in SiO2 synthesized by Si ion implantation",
+      "authors": "L. Ding, T. P. Chen, Y. Liu, M. Yang, J. I. Wong, Y. C. Liu, A. D. Trigg, F. R. Zhu, M. C. Tan, S. Fung",
+      "year": 2007,
+      "url": "https://doi.org/10.1063/1.2730560",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "ding2007-1-2730560",
+    "recipe_family": "ding2007-1-2730560-nc-si-sample-3-3",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "phase": {
+      "value": "crystalline",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "ding2007-1-2730560",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "ding2007-1-2730560-nc-si-sample-3-3--after-s01-grow",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "ding2007-1-2730560-nc-si-sample-3-3--after-s02-anneal",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "ding2007-1-2730560-nc-si-sample-3-3--after-s01-grow"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-grow",
+      "action": "grow",
+      "label": "SiO2 film grown on Si substrate by wet oxidation",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "ding2007-1-2730560-nc-si-sample-3-3--after-s01-grow"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 1000,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1000 °C",
+          "evidence": [
+            {
+              "source_id": "ding2007-1-2730560",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ding2007-1-2730560",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "SiO2 film grown on Si substrate by wet oxidation",
+      "evidence": [
+        {
+          "source_id": "ding2007-1-2730560",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "s02-anneal",
+      "action": "anneal",
+      "label": "High temperature annealing to form nanocrystals",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-grow"
+      ],
+      "inputs": [
+        "ding2007-1-2730560-nc-si-sample-3-3--after-s01-grow"
+      ],
+      "outputs": [
+        "ding2007-1-2730560-nc-si-sample-3-3--after-s02-anneal"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 1000,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1000 °C",
+          "evidence": [
+            {
+              "source_id": "ding2007-1-2730560",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 20,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "20 min",
+          "evidence": [
+            {
+              "source_id": "ding2007-1-2730560",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ding2007-1-2730560",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "High temperature annealing to form nanocrystals",
+      "evidence": [
+        {
+          "source_id": "ding2007-1-2730560",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "ding2007-1-2730560-nc-si-sample-3-3--product",
+      "source_sample_label": "nc-Si (sample 3)",
+      "batch_id": null,
+      "material_state_id": "ding2007-1-2730560-nc-si-sample-3-3--after-s02-anneal",
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "phase": {
+        "value": "crystalline",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ding2007-1-2730560",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "ding2007-1-2730560",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "notes": [
+        "Reaction temperature: 1000 degC (Main PDF p.3).",
+        "Reaction time: 20 min (Main PDF p.3)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Reactor not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

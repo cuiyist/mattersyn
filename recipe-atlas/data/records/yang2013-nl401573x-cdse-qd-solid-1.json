@@ -1,0 +1,392 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "yang2013-nl401573x-cdse-qd-solid-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Ye Yang et al. (2013): CdSe QD solid",
+  "material": {
+    "formula": "CdSe",
+    "family": "CdSe nanocrystals",
+    "elements": [
+      "Cd",
+      "Se"
+    ],
+    "components": [
+      "CdSe"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Layer-by-layer spin coating",
+  "sources": [
+    {
+      "id": "yang2013-nl401573x",
+      "doi": "10.1021/nl401573x",
+      "title": "Bulk Transport and Interfacial Transfer Dynamics of Photogenerated Carriers in CdSe Quantum Dot Solid Electrodes",
+      "authors": "Ye Yang; Zheng Liu; Tianquan Lian",
+      "year": 2013,
+      "url": "https://doi.org/10.1021/nl401573x",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "yang2013-nl401573x",
+    "recipe_family": "yang2013-nl401573x-cdse-qd-solid-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdSe",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "yang2013-nl401573x",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "zinc blende",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "yang2013-nl401573x",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": 3.0,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "3 nm",
+      "evidence": [
+        {
+          "source_id": "yang2013-nl401573x",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "sphere",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "yang2013-nl401573x",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "yang2013-nl401573x-cdse-qd-solid-1--cdse-qds",
+      "name": "CdSe QDs",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "yang2013-nl401573x",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "yang2013-nl401573x-cdse-qd-solid-1--ethanedithiol",
+      "name": "ethanedithiol",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "yang2013-nl401573x",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "yang2013-nl401573x-cdse-qd-solid-1--after-s01-spin-coat",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "yang2013-nl401573x-cdse-qd-solid-1--cdse-qds",
+        "yang2013-nl401573x-cdse-qd-solid-1--ethanedithiol"
+      ]
+    },
+    {
+      "id": "yang2013-nl401573x-cdse-qd-solid-1--after-s02-anneal",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "yang2013-nl401573x-cdse-qd-solid-1--after-s01-spin-coat"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-spin-coat",
+      "action": "spin coat",
+      "label": "Layer-by-layer spin coating of CdSe QDs with ethanedithiol",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "yang2013-nl401573x-cdse-qd-solid-1--cdse-qds",
+        "yang2013-nl401573x-cdse-qd-solid-1--ethanedithiol"
+      ],
+      "outputs": [
+        "yang2013-nl401573x-cdse-qd-solid-1--after-s01-spin-coat"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yang2013-nl401573x",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Layer-by-layer spin coating of CdSe QDs with ethanedithiol",
+      "evidence": [
+        {
+          "source_id": "yang2013-nl401573x",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-anneal",
+      "action": "anneal",
+      "label": "Annealing at 120 °C in air for 30 min",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-spin-coat"
+      ],
+      "inputs": [
+        "yang2013-nl401573x-cdse-qd-solid-1--after-s01-spin-coat"
+      ],
+      "outputs": [
+        "yang2013-nl401573x-cdse-qd-solid-1--after-s02-anneal"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 120,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "120 °C",
+          "evidence": [
+            {
+              "source_id": "yang2013-nl401573x",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 30,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "30 min",
+          "evidence": [
+            {
+              "source_id": "yang2013-nl401573x",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yang2013-nl401573x",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Annealing at 120 °C in air for 30 min",
+      "evidence": [
+        {
+          "source_id": "yang2013-nl401573x",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "yang2013-nl401573x-cdse-qd-solid-1--product",
+      "source_sample_label": "CdSe QD solid",
+      "batch_id": null,
+      "material_state_id": "yang2013-nl401573x-cdse-qd-solid-1--after-s02-anneal",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdSe",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yang2013-nl401573x",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "zinc blende",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yang2013-nl401573x",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "sphere",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yang2013-nl401573x",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": "ethanedithiol",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yang2013-nl401573x",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "yang2013-nl401573x",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reaction temperature: 120 degC (Main PDF p.2).",
+        "Reaction time: 30 min (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "yang2013-nl401573x-cdse-qd-solid-1--size",
+      "sample_id": "yang2013-nl401573x-cdse-qd-solid-1--product",
+      "property": "optically_derived_size",
+      "technique": "optical sizing",
+      "value": {
+        "value": 3.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "3 nm",
+        "evidence": [
+          {
+            "source_id": "yang2013-nl401573x",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "yang2013-nl401573x",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Reactor not reported in the extracted text.",
+      "Amount of CdSe QDs not reported in the extracted text.",
+      "Amount of ethanedithiol not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
