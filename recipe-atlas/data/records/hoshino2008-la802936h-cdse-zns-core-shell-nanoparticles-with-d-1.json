@@ -1,0 +1,372 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "hoshino2008-la802936h-cdse-zns-core-shell-nanoparticles-with-d-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Kazunori Hoshino (2008): CdSe/ZnS core-shell nanoparticles with diameter of 9.8 nm",
+  "material": {
+    "formula": "CdSe/ZnS",
+    "family": "CdSe/ZnS nanocrystals",
+    "elements": [
+      "Cd",
+      "Se",
+      "Zn",
+      "S"
+    ],
+    "components": [
+      "CdSe",
+      "ZnS"
+    ],
+    "architecture": "core_shell"
+  },
+  "method": "Langmuir-Schaefer",
+  "sources": [
+    {
+      "id": "hoshino2008-la802936h",
+      "doi": "10.1021/la802936h",
+      "title": "Single Molecular Stamping of a Sub-10-nm Colloidal Quantum Dot Array",
+      "authors": "Kazunori Hoshino, Travis C. Turner, Sunmin Kim, Ashwini Gopal, and Xiaojing Zhang",
+      "year": 2008,
+      "url": "https://doi.org/10.1021/la802936h",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "hoshino2008-la802936h",
+    "recipe_family": "hoshino2008-la802936h-cdse-zns-core-shell-nanoparticles-with-d-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdSe/ZnS",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "hoshino2008-la802936h",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": 9.8,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "9.8 nm",
+      "evidence": [
+        {
+          "source_id": "hoshino2008-la802936h",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "hoshino2008-la802936h-cdse-zns-core-shell-nanoparticles-with-d-1--cdse-zns-core-shell-nanoparticles",
+      "name": "CdSe/ZnS core-shell nanoparticles",
+      "formula": null,
+      "role": "reagent",
+      "stage": "workup",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "amount": {
+          "value": 0.032,
+          "minimum": null,
+          "maximum": null,
+          "unit": "nmol",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0.032 nmol",
+          "evidence": [
+            {
+              "source_id": "hoshino2008-la802936h",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "hoshino2008-la802936h",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "hoshino2008-la802936h-cdse-zns-core-shell-nanoparticles-with-d-1--after-s01-precipitate",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "hoshino2008-la802936h-cdse-zns-core-shell-nanoparticles-with-d-1--cdse-zns-core-shell-nanoparticles"
+      ]
+    },
+    {
+      "id": "hoshino2008-la802936h-cdse-zns-core-shell-nanoparticles-with-d-1--after-s02-mix",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "hoshino2008-la802936h-cdse-zns-core-shell-nanoparticles-with-d-1--after-s01-precipitate",
+        "hoshino2008-la802936h-cdse-zns-core-shell-nanoparticles-with-d-1--cdse-zns-core-shell-nanoparticles"
+      ]
+    },
+    {
+      "id": "hoshino2008-la802936h-cdse-zns-core-shell-nanoparticles-with-d-1--after-s03-deposit",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "hoshino2008-la802936h-cdse-zns-core-shell-nanoparticles-with-d-1--after-s02-mix",
+        "hoshino2008-la802936h-cdse-zns-core-shell-nanoparticles-with-d-1--cdse-zns-core-shell-nanoparticles"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-precipitate",
+      "action": "precipitate",
+      "label": "Precipitate and resuspend in hexane to remove excess ligands",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "hoshino2008-la802936h-cdse-zns-core-shell-nanoparticles-with-d-1--cdse-zns-core-shell-nanoparticles"
+      ],
+      "outputs": [
+        "hoshino2008-la802936h-cdse-zns-core-shell-nanoparticles-with-d-1--after-s01-precipitate"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Precipitate and resuspend in hexane to remove excess ligands",
+      "evidence": [
+        {
+          "source_id": "hoshino2008-la802936h",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-mix",
+      "action": "mix",
+      "label": "Mix quantum dots into solvent",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-precipitate"
+      ],
+      "inputs": [
+        "hoshino2008-la802936h-cdse-zns-core-shell-nanoparticles-with-d-1--after-s01-precipitate",
+        "hoshino2008-la802936h-cdse-zns-core-shell-nanoparticles-with-d-1--cdse-zns-core-shell-nanoparticles"
+      ],
+      "outputs": [
+        "hoshino2008-la802936h-cdse-zns-core-shell-nanoparticles-with-d-1--after-s02-mix"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Mix quantum dots into solvent",
+      "evidence": [
+        {
+          "source_id": "hoshino2008-la802936h",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-deposit",
+      "action": "deposit",
+      "label": "Deposit colloidal suspension onto convex water surface",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-mix"
+      ],
+      "inputs": [
+        "hoshino2008-la802936h-cdse-zns-core-shell-nanoparticles-with-d-1--after-s02-mix",
+        "hoshino2008-la802936h-cdse-zns-core-shell-nanoparticles-with-d-1--cdse-zns-core-shell-nanoparticles"
+      ],
+      "outputs": [
+        "hoshino2008-la802936h-cdse-zns-core-shell-nanoparticles-with-d-1--after-s03-deposit"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Deposit colloidal suspension onto convex water surface",
+      "evidence": [
+        {
+          "source_id": "hoshino2008-la802936h",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "hoshino2008-la802936h-cdse-zns-core-shell-nanoparticles-with-d-1--product",
+      "source_sample_label": "CdSe/ZnS core-shell nanoparticles with diameter of 9.8 nm",
+      "batch_id": null,
+      "material_state_id": "hoshino2008-la802936h-cdse-zns-core-shell-nanoparticles-with-d-1--after-s03-deposit",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdSe/ZnS",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "hoshino2008-la802936h",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "hoshino2008-la802936h",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [
+    {
+      "id": "hoshino2008-la802936h-cdse-zns-core-shell-nanoparticles-with-d-1--size",
+      "sample_id": "hoshino2008-la802936h-cdse-zns-core-shell-nanoparticles-with-d-1--product",
+      "property": "particle_size",
+      "technique": "not reported",
+      "value": {
+        "value": 9.8,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "9.8 nm",
+        "evidence": [
+          {
+            "source_id": "hoshino2008-la802936h",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "hoshino2008-la802936h",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

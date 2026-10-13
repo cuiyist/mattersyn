@@ -1,0 +1,481 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "chen2010-elps-201000260-cdte-cds-core-shell-quantum-dots-qd-capp-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Q. Chen and Y. Fung (2010): CdTe/CdS core/shell quantum dots (QD) capped with MPA",
+  "material": {
+    "formula": "CdTe/CdS",
+    "family": "CdTe/CdS nanocrystals",
+    "elements": [
+      "Cd",
+      "Te",
+      "S"
+    ],
+    "components": [
+      "CdTe",
+      "CdS"
+    ],
+    "architecture": "core_shell"
+  },
+  "method": "Other",
+  "sources": [
+    {
+      "id": "chen2010-elps-201000260",
+      "doi": "10.1002/elps.201000260",
+      "title": "Capillary electrophoresis with immobilized quantum dot fluorescence detection for rapid determination of organophosphorus pesticides in vegetables",
+      "authors": "Q. Chen and Y. Fung",
+      "year": 2010,
+      "url": "https://doi.org/10.1002/elps.201000260",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "chen2010-elps-201000260",
+    "recipe_family": "chen2010-elps-201000260-cdte-cds-core-shell-quantum-dots-qd-capp-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdTe/CdS",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "chen2010-elps-201000260",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": 2.8,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "2.8 nm",
+      "evidence": [
+        {
+          "source_id": "chen2010-elps-201000260",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "sphere",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "chen2010-elps-201000260",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "chen2010-elps-201000260-cdte-cds-core-shell-quantum-dots-qd-capp-1--3-mercaptopropyl-acid-mpa",
+      "name": "3-mercaptopropyl acid (MPA)",
+      "formula": null,
+      "role": "ligand",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "chen2010-elps-201000260",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "chen2010-elps-201000260-cdte-cds-core-shell-quantum-dots-qd-capp-1--after-s01-condition",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "chen2010-elps-201000260-cdte-cds-core-shell-quantum-dots-qd-capp-1--after-s02-deposit",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "chen2010-elps-201000260-cdte-cds-core-shell-quantum-dots-qd-capp-1--after-s01-condition"
+      ]
+    },
+    {
+      "id": "chen2010-elps-201000260-cdte-cds-core-shell-quantum-dots-qd-capp-1--after-s03-clean",
+      "name": "mixture after step 3",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "chen2010-elps-201000260-cdte-cds-core-shell-quantum-dots-qd-capp-1--after-s02-deposit"
+      ]
+    },
+    {
+      "id": "chen2010-elps-201000260-cdte-cds-core-shell-quantum-dots-qd-capp-1--after-s04-immobilize",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "chen2010-elps-201000260-cdte-cds-core-shell-quantum-dots-qd-capp-1--after-s03-clean"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-condition",
+      "action": "condition",
+      "label": "Rinsing new capillary using 0.1 M NaOH, followed by standing in 0.1 M NaOH solution overnight",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "chen2010-elps-201000260-cdte-cds-core-shell-quantum-dots-qd-capp-1--after-s01-condition"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "not specified",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "chen2010-elps-201000260",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Rinsing new capillary using 0.1 M NaOH, followed by standing in 0.1 M NaOH solution overnight",
+      "evidence": [
+        {
+          "source_id": "chen2010-elps-201000260",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "s02-deposit",
+      "action": "deposit",
+      "label": "A syringe pump was used to introduce a toluene solution of MPTS (5 103 mol/L) into the capillary through its open end until it reaches a 2 cm length and then standing for 6 h",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-condition"
+      ],
+      "inputs": [
+        "chen2010-elps-201000260-cdte-cds-core-shell-quantum-dots-qd-capp-1--after-s01-condition"
+      ],
+      "outputs": [
+        "chen2010-elps-201000260-cdte-cds-core-shell-quantum-dots-qd-capp-1--after-s02-deposit"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 6,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "6 h",
+          "evidence": [
+            {
+              "source_id": "chen2010-elps-201000260",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "not specified",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "chen2010-elps-201000260",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "A syringe pump was used to introduce a toluene solution of MPTS (5 103 mol/L) into the capillary through its open end until it reaches a 2 cm length and then standing for 6 h",
+      "evidence": [
+        {
+          "source_id": "chen2010-elps-201000260",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "s03-clean",
+      "action": "clean",
+      "label": "The capillary was then rinsed with chloroform, acetone and deionized water to remove physically absorbed molecules, and then subjected to drying for 1 h at 1201C under nitrogen purging before cooling in a desiccator to stabilize the three-dimensional organic silica gel network deposited",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-deposit"
+      ],
+      "inputs": [
+        "chen2010-elps-201000260-cdte-cds-core-shell-quantum-dots-qd-capp-1--after-s02-deposit"
+      ],
+      "outputs": [
+        "chen2010-elps-201000260-cdte-cds-core-shell-quantum-dots-qd-capp-1--after-s03-clean"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1 h",
+          "evidence": [
+            {
+              "source_id": "chen2010-elps-201000260",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "not specified",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "chen2010-elps-201000260",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "The capillary was then rinsed with chloroform, acetone and deionized water to remove physically absorbed molecules, and then subjected to drying for 1 h at 1201C under nitrogen purging before cooling in a desiccator to stabilize the three-dimensional organic silica gel network deposited",
+      "evidence": [
+        {
+          "source_id": "chen2010-elps-201000260",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "s04-immobilize",
+      "action": "immobilize",
+      "label": "The capillary/microfluidic device was filled with QD (6.7 104 mol/L with reference to Te) and then standing for 2 h to allow QD immobilization to complete, and finally washed with deionized water before drying by passing nitrogen gases",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s03-clean"
+      ],
+      "inputs": [
+        "chen2010-elps-201000260-cdte-cds-core-shell-quantum-dots-qd-capp-1--after-s03-clean"
+      ],
+      "outputs": [
+        "chen2010-elps-201000260-cdte-cds-core-shell-quantum-dots-qd-capp-1--after-s04-immobilize"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 2,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "2 h",
+          "evidence": [
+            {
+              "source_id": "chen2010-elps-201000260",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "not specified",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "chen2010-elps-201000260",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "The capillary/microfluidic device was filled with QD (6.7 104 mol/L with reference to Te) and then standing for 2 h to allow QD immobilization to complete, and finally washed with deionized water before drying by passing nitrogen gases",
+      "evidence": [
+        {
+          "source_id": "chen2010-elps-201000260",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "chen2010-elps-201000260-cdte-cds-core-shell-quantum-dots-qd-capp-1--product",
+      "source_sample_label": "CdTe/CdS core/shell quantum dots (QD) capped with MPA",
+      "batch_id": null,
+      "material_state_id": "chen2010-elps-201000260-cdte-cds-core-shell-quantum-dots-qd-capp-1--after-s04-immobilize",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdTe/CdS",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "chen2010-elps-201000260",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": "sphere",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "chen2010-elps-201000260",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": "MPA",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "chen2010-elps-201000260",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "chen2010-elps-201000260",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "notes": [
+        "Reactor: not specified (Main PDF p.3)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "chen2010-elps-201000260-cdte-cds-core-shell-quantum-dots-qd-capp-1--size",
+      "sample_id": "chen2010-elps-201000260-cdte-cds-core-shell-quantum-dots-qd-capp-1--product",
+      "property": "optically_derived_size",
+      "technique": "optical sizing",
+      "value": {
+        "value": 2.8,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "2.8 nm",
+        "evidence": [
+          {
+            "source_id": "chen2010-elps-201000260",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "chen2010-elps-201000260",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of 3-mercaptopropyl acid (MPA) not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

@@ -1,0 +1,384 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "sablon2010-1-3486014-dfence-qd-structure-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "K. A. Sablon (2010): DFENCE QD structure",
+  "material": {
+    "formula": "DFENCE QD structure",
+    "family": "DFENCE QD structure nanocrystals",
+    "elements": [
+      "F",
+      "N",
+      "C"
+    ],
+    "components": [
+      "DFENCE QD structure"
+    ],
+    "architecture": "heterostructure"
+  },
+  "method": "Molecular beam epitaxy",
+  "sources": [
+    {
+      "id": "sablon2010-1-3486014",
+      "doi": "10.1063/1.3486014",
+      "title": "Effects of AlGaAs energy barriers on InAs/GaAs quantum dot solar cells",
+      "authors": "K. A. Sablon, J. W. Little, K. A. Olver, Zh. M. Wang, V. G. Dorogan, Yu. I. Mazur, G. J. Salamo, and F. J. Towner",
+      "year": 2010,
+      "url": "https://doi.org/10.1063/1.3486014",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "sablon2010-1-3486014",
+    "recipe_family": "sablon2010-1-3486014-dfence-qd-structure-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "nanodot",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "sablon2010-1-3486014",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "sablon2010-1-3486014-dfence-qd-structure-1--al0-2ga0-8as",
+      "name": "Al0.2Ga0.8As",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "sablon2010-1-3486014",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "sablon2010-1-3486014-dfence-qd-structure-1--gaas",
+      "name": "GaAs",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "sablon2010-1-3486014",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "sablon2010-1-3486014-dfence-qd-structure-1--after-s01-grow",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "sablon2010-1-3486014-dfence-qd-structure-1--after-s02-grow",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "sablon2010-1-3486014-dfence-qd-structure-1--after-s01-grow"
+      ]
+    },
+    {
+      "id": "sablon2010-1-3486014-dfence-qd-structure-1--after-s03-grow",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "sablon2010-1-3486014-dfence-qd-structure-1--after-s02-grow"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-grow",
+      "action": "grow",
+      "label": "Grow n+ GaAs buffer",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "sablon2010-1-3486014-dfence-qd-structure-1--after-s01-grow"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 595,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "595 °C",
+          "evidence": [
+            {
+              "source_id": "sablon2010-1-3486014",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Grow n+ GaAs buffer",
+      "evidence": [
+        {
+          "source_id": "sablon2010-1-3486014",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-grow",
+      "action": "grow",
+      "label": "Grow intrinsic GaAs region",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-grow"
+      ],
+      "inputs": [
+        "sablon2010-1-3486014-dfence-qd-structure-1--after-s01-grow"
+      ],
+      "outputs": [
+        "sablon2010-1-3486014-dfence-qd-structure-1--after-s02-grow"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 530,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "530 °C",
+          "evidence": [
+            {
+              "source_id": "sablon2010-1-3486014",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Grow intrinsic GaAs region",
+      "evidence": [
+        {
+          "source_id": "sablon2010-1-3486014",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-grow",
+      "action": "grow",
+      "label": "Grow p+ GaAs and Al0.45Ga0.55As layers",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-grow"
+      ],
+      "inputs": [
+        "sablon2010-1-3486014-dfence-qd-structure-1--after-s02-grow"
+      ],
+      "outputs": [
+        "sablon2010-1-3486014-dfence-qd-structure-1--after-s03-grow"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 550,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "550 °C",
+          "evidence": [
+            {
+              "source_id": "sablon2010-1-3486014",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Grow p+ GaAs and Al0.45Ga0.55As layers",
+      "evidence": [
+        {
+          "source_id": "sablon2010-1-3486014",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "sablon2010-1-3486014-dfence-qd-structure-1--product",
+      "source_sample_label": "DFENCE QD structure",
+      "batch_id": null,
+      "material_state_id": "sablon2010-1-3486014-dfence-qd-structure-1--after-s03-grow",
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": "nanodot",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "sablon2010-1-3486014",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "sablon2010-1-3486014",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reactor: MBE system (Main PDF p.2).",
+        "Reaction temperature: 530 degC (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of Al0.2Ga0.8As not reported in the extracted text.",
+      "Amount of GaAs not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
