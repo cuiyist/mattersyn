@@ -1,0 +1,411 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "chakrabarti2004-1-1755709-70-layer-inas-gaas-qdip-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "S. Chakrabarti (2004): 70 layer InAs/GaAs QDIP",
+  "material": {
+    "formula": "InAs/GaAs",
+    "family": "InAs/GaAs nanocrystals",
+    "elements": [
+      "In",
+      "As",
+      "Ga"
+    ],
+    "components": [
+      "InAs",
+      "GaAs"
+    ],
+    "architecture": "heterostructure"
+  },
+  "method": "Molecular beam epitaxy",
+  "sources": [
+    {
+      "id": "chakrabarti2004-1-1755709",
+      "doi": "10.1116/1.1755709",
+      "title": "Heterostructures for achieving large responsivity in InAs/GaAs quantum dot infrared photodetectors",
+      "authors": "S. Chakrabarti, A. D. Stiff-Roberts, P. Bhattacharya, S. W. Kennerly",
+      "year": 2004,
+      "url": "https://doi.org/10.1116/1.1755709",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "chakrabarti2004-1-1755709",
+    "recipe_family": "chakrabarti2004-1-1755709-70-layer-inas-gaas-qdip-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "InAs/GaAs",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "chakrabarti2004-1-1755709",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "crystal",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "chakrabarti2004-1-1755709",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "dot",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "chakrabarti2004-1-1755709",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "chakrabarti2004-1-1755709-70-layer-inas-gaas-qdip-1--inas",
+      "name": "InAs",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "chakrabarti2004-1-1755709",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "chakrabarti2004-1-1755709-70-layer-inas-gaas-qdip-1--gaas",
+      "name": "GaAs",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "chakrabarti2004-1-1755709",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "chakrabarti2004-1-1755709-70-layer-inas-gaas-qdip-1--si",
+      "name": "Si",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "chakrabarti2004-1-1755709",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "chakrabarti2004-1-1755709-70-layer-inas-gaas-qdip-1--after-s01-grow",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "chakrabarti2004-1-1755709-70-layer-inas-gaas-qdip-1--after-s02-grow",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "chakrabarti2004-1-1755709-70-layer-inas-gaas-qdip-1--after-s01-grow",
+        "chakrabarti2004-1-1755709-70-layer-inas-gaas-qdip-1--inas",
+        "chakrabarti2004-1-1755709-70-layer-inas-gaas-qdip-1--si"
+      ]
+    },
+    {
+      "id": "chakrabarti2004-1-1755709-70-layer-inas-gaas-qdip-1--after-s03-grow",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "chakrabarti2004-1-1755709-70-layer-inas-gaas-qdip-1--after-s02-grow",
+        "chakrabarti2004-1-1755709-70-layer-inas-gaas-qdip-1--gaas"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-grow",
+      "action": "grow",
+      "label": "Grow bottom GaAs contact layer",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "chakrabarti2004-1-1755709-70-layer-inas-gaas-qdip-1--after-s01-grow"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 620,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "620 °C",
+          "evidence": [
+            {
+              "source_id": "chakrabarti2004-1-1755709",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Grow bottom GaAs contact layer",
+      "evidence": [
+        {
+          "source_id": "chakrabarti2004-1-1755709",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "s02-grow",
+      "action": "grow",
+      "label": "Grow InAs quantum dots",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-grow"
+      ],
+      "inputs": [
+        "chakrabarti2004-1-1755709-70-layer-inas-gaas-qdip-1--after-s01-grow",
+        "chakrabarti2004-1-1755709-70-layer-inas-gaas-qdip-1--inas",
+        "chakrabarti2004-1-1755709-70-layer-inas-gaas-qdip-1--si"
+      ],
+      "outputs": [
+        "chakrabarti2004-1-1755709-70-layer-inas-gaas-qdip-1--after-s02-grow"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Grow InAs quantum dots",
+      "evidence": [
+        {
+          "source_id": "chakrabarti2004-1-1755709",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "s03-grow",
+      "action": "grow",
+      "label": "Grow GaAs barrier",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-grow"
+      ],
+      "inputs": [
+        "chakrabarti2004-1-1755709-70-layer-inas-gaas-qdip-1--after-s02-grow",
+        "chakrabarti2004-1-1755709-70-layer-inas-gaas-qdip-1--gaas"
+      ],
+      "outputs": [
+        "chakrabarti2004-1-1755709-70-layer-inas-gaas-qdip-1--after-s03-grow"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 590,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "590 °C",
+          "evidence": [
+            {
+              "source_id": "chakrabarti2004-1-1755709",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Grow GaAs barrier",
+      "evidence": [
+        {
+          "source_id": "chakrabarti2004-1-1755709",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "chakrabarti2004-1-1755709-70-layer-inas-gaas-qdip-1--product",
+      "source_sample_label": "70 layer InAs/GaAs QDIP",
+      "batch_id": null,
+      "material_state_id": "chakrabarti2004-1-1755709-70-layer-inas-gaas-qdip-1--after-s03-grow",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "InAs/GaAs",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "chakrabarti2004-1-1755709",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "crystal",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "chakrabarti2004-1-1755709",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "dot",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "chakrabarti2004-1-1755709",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "chakrabarti2004-1-1755709",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "notes": [
+        "Reactor: MBE reactor (Main PDF p.2).",
+        "Reaction temperature: 590 degC (Main PDF p.3)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of InAs not reported in the extracted text.",
+      "Amount of GaAs not reported in the extracted text.",
+      "Amount of Si not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

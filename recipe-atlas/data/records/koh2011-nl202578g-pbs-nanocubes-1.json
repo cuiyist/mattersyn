@@ -1,0 +1,371 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "koh2011-nl202578g-pbs-nanocubes-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Weon-kyu Koh (2011): PbS nanocubes",
+  "material": {
+    "formula": "PbS",
+    "family": "PbS nanocrystals",
+    "elements": [
+      "Pb",
+      "S"
+    ],
+    "components": [
+      "PbS"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Other",
+  "sources": [
+    {
+      "id": "koh2011-nl202578g",
+      "doi": "10.1021/nl202578g",
+      "title": "Thiocyanate-Capped PbS Nanocubes: Ambipolar Transport Enables Quantum Dot Based Circuits on a Flexible Substrate",
+      "authors": "Weon-kyu Koh, Sangameshwar R. Saudari, Aaron T. Fafarman, Cherie R. Kagan, Christopher B. Murray",
+      "year": 2011,
+      "url": "https://doi.org/10.1021/nl202578g",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "koh2011-nl202578g",
+    "recipe_family": "koh2011-nl202578g-pbs-nanocubes-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "PbS",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "koh2011-nl202578g",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": 11,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "11 nm",
+      "evidence": [
+        {
+          "source_id": "koh2011-nl202578g",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "cube",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "koh2011-nl202578g",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "koh2011-nl202578g-pbs-nanocubes-1--ammonium-thiocyanate",
+      "name": "ammonium thiocyanate",
+      "formula": null,
+      "role": "ligand",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "concentration": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "%",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1 %",
+          "evidence": [
+            {
+              "source_id": "koh2011-nl202578g",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "koh2011-nl202578g",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "koh2011-nl202578g-pbs-nanocubes-1--acetone",
+      "name": "acetone",
+      "formula": null,
+      "role": "solvent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "koh2011-nl202578g",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "koh2011-nl202578g-pbs-nanocubes-1--after-s01-assemble",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "koh2011-nl202578g-pbs-nanocubes-1--after-s02-immersion",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "koh2011-nl202578g-pbs-nanocubes-1--after-s01-assemble",
+        "koh2011-nl202578g-pbs-nanocubes-1--ammonium-thiocyanate",
+        "koh2011-nl202578g-pbs-nanocubes-1--acetone"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-assemble",
+      "action": "assemble",
+      "label": "Assemble PbS nanocubes at the liquid-gas interface",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "koh2011-nl202578g-pbs-nanocubes-1--after-s01-assemble"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Assemble PbS nanocubes at the liquid-gas interface",
+      "evidence": [
+        {
+          "source_id": "koh2011-nl202578g",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "s02-immersion",
+      "action": "immersion",
+      "label": "Immersion in thiocyanate solution",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-assemble"
+      ],
+      "inputs": [
+        "koh2011-nl202578g-pbs-nanocubes-1--after-s01-assemble",
+        "koh2011-nl202578g-pbs-nanocubes-1--ammonium-thiocyanate",
+        "koh2011-nl202578g-pbs-nanocubes-1--acetone"
+      ],
+      "outputs": [
+        "koh2011-nl202578g-pbs-nanocubes-1--after-s02-immersion"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1 min",
+          "evidence": [
+            {
+              "source_id": "koh2011-nl202578g",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Immersion in thiocyanate solution",
+      "evidence": [
+        {
+          "source_id": "koh2011-nl202578g",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "koh2011-nl202578g-pbs-nanocubes-1--product",
+      "source_sample_label": "PbS nanocubes",
+      "batch_id": null,
+      "material_state_id": "koh2011-nl202578g-pbs-nanocubes-1--after-s02-immersion",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "PbS",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "koh2011-nl202578g",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": "cube",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "koh2011-nl202578g",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": "thiocyanate",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "koh2011-nl202578g",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "koh2011-nl202578g",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [
+    {
+      "id": "koh2011-nl202578g-pbs-nanocubes-1--size",
+      "sample_id": "koh2011-nl202578g-pbs-nanocubes-1--product",
+      "property": "diameter",
+      "technique": "TEM",
+      "value": {
+        "value": 11,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "11 nm",
+        "evidence": [
+          {
+            "source_id": "koh2011-nl202578g",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "koh2011-nl202578g",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of acetone not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

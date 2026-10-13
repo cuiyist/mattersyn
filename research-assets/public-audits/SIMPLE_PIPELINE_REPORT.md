@@ -767,6 +767,48 @@ Recorded source ci run: [38273152748](https://github.com/cuiyist/mattersyn/actio
 | 10.1039/d0tc03838e | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/x2020-d0tc03838e-cspbbr3-peqds-1.html) |
 | 10.1063/1.1695097 | 2 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/yu2004-1-1695097-zno-tetrapods-1.html) |
 
+
+### simple-batch15-20261012
+
+Anonymous verification passed at 2026-10-13T02:21:13+00:00: 4,284 files, zero mismatches. [Source commit](https://github.com/cuiyist/mattersyn/commit/59a8064722109335a5781d4aac61fa971c94e03d) and [Site commit](https://github.com/cuiyist/mattersyn-site/commit/6d0f25d778a066f8c879d269fb51ee97da535042). This batch contains 28 source groups, 53 records and 148 source figure crops; 28 distinct newly contributing primary papers after DOI deduplication. Every new contribution remains machine extracted and not independently audited. The final built site is 1,888,591,533 bytes / 33,809 files.
+
+Live counter: **244 audited + 492 machine extracted = 736 papers**, 3,738 canonical records, 392 direct material families, 460 material/component pages and 1617 displayed recipe–structure pairs (6 more comprehensive; 1611 partial). These display counts do not establish extraction accuracy, measured atomic coordinates or training eligibility.
+
+Recorded source pr: [32](https://github.com/cuiyist/mattersyn/pull/32).
+
+Recorded source ci run: [38327786726](https://github.com/cuiyist/mattersyn/actions/runs/38327786726).
+
+| Primary DOI | Records | Figure crops | Public page |
+| --- | ---: | ---: | --- |
+| 10.1063/1.1476069 | 3 | 9 | [Open](https://cuiyist.github.io/mattersyn-site/records/al2002-1-1476069-inas-quantum-dots-qds-grown-at-0-15-ml-s-1.html) |
+| 10.1002/pssc.200881722 | 2 | 7 | [Open](https://cuiyist.github.io/mattersyn-site/records/al2009-pssc-200881722-inas-gap-qds-1.html) |
+| 10.1021/nn505092a | 3 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/al2014-nn505092a-hgse-cqds-1-min-sample-1.html) |
+| 10.1021/nl4043642 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/bekenstein2014-nl4043642-cu2s-nanocrystal-arrays-1.html) |
+| 10.1039/c0cc00621a | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/cho2010-c0cc00621a-sqs-silica-microspheres-encapsulating-a-1.html) |
+| 10.1021/la062906+ | 1 | 8 | [Open](https://cuiyist.github.io/mattersyn-site/records/choi2007-la062906-h-terminated-si-nanocrystals-1.html) |
+| 10.1021/cg500911w | 2 | 11 | [Open](https://cuiyist.github.io/mattersyn-site/records/choi2014-cg500911w-amorphous-zno-film-a-zno-1.html) |
+| 10.1021/nl304066h | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/feng2013-nl304066h-cr2-doped-znse-nanowires-1.html) |
+| 10.1021/am100303n | 1 | 8 | [Open](https://cuiyist.github.io/mattersyn-site/records/hao2010-am100303n-zn0-95co0-05o-nanocrystals-1.html) |
+| 10.1063/1.115504 | 2 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/illing1995-1-115504-cdznse-znse-quantum-dots-1.html) |
+| 10.1116/1.581060 | 2 | 11 | [Open](https://cuiyist.github.io/mattersyn-site/records/ishikawa1998-1-581060-s-k-mode-grown-quantum-dots-1.html) |
+| 10.1103/physrevb.72.085339 | 2 | 12 | [Open](https://cuiyist.github.io/mattersyn-site/records/krause2005-physrevb-72-085339-inas-gaas-quantum-dot-bimolecules-1.html) |
+| 10.1021/acsomega.8b03459 | 1 | 6 | [Open](https://cuiyist.github.io/mattersyn-site/records/le2019-acsomega-8b03459-si-qd-cluster-a-p-2-1.html) |
+| 10.1021/jacs.6b09065 | 3 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/lu2016-jacs-6b09065-nhcag-ncs-1.html) |
+| 10.1021/nl500349j | 2 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/manna2014-nl500349j-cdse-cds-core-shell-ncs-1.html) |
+| 10.1021/jz4010015 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/panthani2013-jz4010015-cuinse2-cise-qds-synthesized-at-100-c-1.html) |
+| 10.1021/am500110x | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/rizzo2014-am500110x-pbs-qds-2.html) |
+| 10.1063/1.119043 | 2 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/rodriguez-viejo1997-1-119043-cdse-zns-quantum-dot-composites-33-a-dia-1.html) |
+| 10.1116/1.1705577 | 2 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/saucedo-zeni2004-1-1705577-inas-quantum-dots-qds-on-gaas-100-surfac-1.html) |
+| 10.1116/1.590068 | 2 | 2 | [Open](https://cuiyist.github.io/mattersyn-site/records/shen1998-1-590068-inas-quantum-dots-1.html) |
+| 10.1021/nn502121t | 3 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/sheng2014-nn502121t-cds-sensitized-zno-nanowire-1.html) |
+| 10.1063/1.1389517 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/springholz2001-1-1389517-pbse-pb0-95eu0-05te-quantum-dot-superlat-1.html) |
+| 10.1021/nl4046069 | 2 | 2 | [Open](https://cuiyist.github.io/mattersyn-site/records/stam2014-nl4046069-hexagonal-bipyramid-shaped-zns-nanocryst-1.html) |
+| 10.1021/ja9832414 | 5 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/wang1999-ja9832414-znse-1.html) |
+| 10.1021/jp210080k | 1 | 6 | [Open](https://cuiyist.github.io/mattersyn-site/records/wei2012-jp210080k-si-ncs-generated-at-tr-1-06-and-p-11-0-m-1.html) |
+| 10.1021/jp011576t | 1 | 6 | [Open](https://cuiyist.github.io/mattersyn-site/records/wood2001-jp011576t-5-nm-zno-quantum-dots-1.html) |
+| 10.1021/nl052417e | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/zhao2006-nl052417e-cdse-cds-qds-1.html) |
+| 10.1021/ja903722d | 4 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/zhong2009-ja903722d-cdte-cdse-nanorods-1.html) |
+
 ## Latest continuation checkpoint
 
 At 2026-10-11T06:09:34+00:00, Batch01 is live and anonymously verified; Batch02 remains in local processing with 47/49 two-pass-complete papers at its last saved checkpoint. These are processing counts, not additional published papers. The audited lane stays paused.
@@ -1330,3 +1372,20 @@ The bounded fix scopes only the two historical Ag inventory assertions to source
 
 
 Display correction before Batch15 publication, 2026-10-13T00:01:15.708583+00:00. The complete q-r2 local checks passed, but actual desktop/phone review caught a SourceEx figure introduction saying reviewed record and the pending-presentation fallback suppressing source-supported qualitative shape drawings. The combined renderer fix makes only the extracted-record introduction neutral, retains existing audited wording, permits an existing illustrative primitive only for the same reported and source-located product, and omits exact pointer-bound duplicate fallback fact rows. Two literal wire descriptions use the existing elongated outline; films and unsupported specialized shapes remain neutral. Canonical records, source bindings, crops, captions, review statuses and training exports are unchanged. Both earlier unpublished preparations and their failure/pass evidence are preserved. Normal Source file-list binding and complete build/visual/release gates remain mandatory. Cleanup 217,806,381,414 logical bytes is confirmed;600GB remains unfinished. Batch15 remains unpublished.
+
+## Active cleanup and next-batch checkpoint, October 13, 2026
+
+Observed 2026-10-13T02:27:33+00:00. Batch 15 passed anonymous verification at 2026-10-13T02:21:13Z: 28 distinct papers, 53 records and 148 captioned figures; 4,284 file probes and all mandatory paper/material routes passed. Two earlier transient anonymous failures remain saved; no gate was changed. The live totals are 736 papers, 392 material families and 1,617 displayed recipe–structure pairs. The 244 audited papers and 492 source-extracted papers remain distinct in data; the audited lane remains paused.
+
+Cleanup checkpoint 2026-10-13T02:20:53.845670+00:00: 267,041,557,089 logical bytes and 5,808,704 files removed. C free space was 11,985,891,328 bytes at the initial observation and 195,963,129,856 bytes at this checkpoint. The 600 GB target is not met. The unused 4B model removal contributed 4,280,404,704 bytes; active Qwen3-32B and CUDA were preserved without a server restart. No Ollama removal is claimed. Private page text, saved passes, quoted pairs, original papers and current working checkouts remain intact. The [archive cleanup report](https://github.com/cuiyist/mattersyn2/blob/main/CLEANUP_REPORT_2026-10-12.md) contains safe aggregated evidence.
+
+Batch 16 is in additive integration: 24 selected papers, 40 records, 105 figures, with 10 accepted rare-material readings reused and 12 deletion-only corrections. Batch 23 has 43 successful two-pass inputs; 26 papers/37 records are prospective converter candidates. Caption processing accepted 164 and recovered 12 of 180 keys, leaving four for scoped paraphrases. Batch 24 has launched 42 identity-supported inputs and preserves eight technical identity holds. These batches add no publication credit until their normal deployment and anonymous checks pass. No uninterrupted background activity or achieved throughput is inferred.
+
+
+## 2026-10-13T03:34:22.794835+00:00 — Batch 16 validation correction and cleanup
+
+Batch 14 and Batch 15 remain anonymously verified live (736 distinct papers). Batch 16 is unpublished: 24 papers, 40 records and 105 bound captions. Its first complete local build rejected a historical CoFe2O4 equality assertion: the three reviewed Tirosh direct routes are still present; two additional source_extracted direct routes triggered the assertion. The proposed one-expression correction scopes that historical assertion to reviewed records and keeps the full canonical membership/status/role/asset checks. Twelve focused tests passed; independent code review and the normal corrected release remain pending. The original failed build is preserved.
+
+Batch 24 completed 42 two-pass inputs, 62 checked pairs and 199 figures; 26 prospective papers/44 records remain private. Caption generation retained 163 captions and saved-packet recovery retained another 28; eight captions await completion. Batch 25 launched locally with 44 supported inputs and six identity holds. No paper text or model payload is uploaded, no server restart occurred, and no publication credit is given to either batch.
+
+The approved GitHub cleanup report at commit 5afb68559aee5bcc7623638c566594b7ea48a92c records 286,334,215,592 logical bytes removed across 6,148,054 files. At its 03:16:14 UTC observation, C free space was 209,584,783,360 bytes versus the original 11,985,891,328-byte baseline. These are separate removal and free-space observations. The 600 GB target remains unmet. The unused 4B model accounts for 4,280,404,704 bytes; the 9B/27B Ollama installations were not located and receive zero removal credit. Active Qwen3-32B/CUDA, original PDFs, page text, passes and quoted pairs are preserved. Other programs are not stopped. Audited-lane questions, historical sampling windows and all prior publication events are unchanged.
