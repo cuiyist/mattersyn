@@ -1613,3 +1613,11 @@ The latest verified public cleanup report at commit 01f5e9b803498c75a3b959360fab
 Root continuation 2026-10-13T16:58:12+00:00: B20 is privately integrated (33 papers / 51 records / 135 figures), with all 3,902 existing canonical records preserved. Seven retained papers / 11 new records received citation-only corrections; all 135 retained figure captions are bound. Last nonempty sync is complete; no later nonempty sync follows metadata. B20 adds zero publication credit until normal deployment and anonymous verification. B31 has 26 resolved public DOI authorities; the earlier 52 DNS failures remain on record. Its rare reads and caption completion are pending. The audit lane, open owner questions, training exports and sampling denominator are unchanged.
 
 Script fix 2026-10-13T17:00:37.514130+00:00: the checker now holds a whole paper when either pass has malformed nested recipe, structure, chemical or step containers, rather than crashing the batch. The quote-found, number-in-quote and both-passes-agree rules, extraction prompt and all other functions remain unchanged. Eight malformed-container fixtures are held; the normal and five valid null/empty controls produce byte-identical checked pairs. B32 original failure and raw outputs remain preserved; four one-time redos remain pending. This adds no scientific-review, training or publication credit.
+
+
+### Batch 20 display correction, 2026-10-13T17:49:02.866177+00:00
+
+Batch 20 visual review found stale author/year method labels after bibliography correction. Corrected only 11 new source_extracted titles and their Reader/chemical/protocol hash dependencies; all 3,902 previous records and scientific fields are unchanged. The earlier successful checks and failed visual observation remain preserved. Fresh complete checks and desktop/phone review are pending; this correction adds zero publication credit.
+
+
+- 2026-10-13T17:53:02.181907+00:00: The normal baseline guard rejected the post-preparation title correction without exact digest approvals. Added only the eleven new-record title digests to the existing build-input approval map and supplied its exact separate metadata review. No policy, eligibility, scientific field or release check changed; the failed preparation is retained.
