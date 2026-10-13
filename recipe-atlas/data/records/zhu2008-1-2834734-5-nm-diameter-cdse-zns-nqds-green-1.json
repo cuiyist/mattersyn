@@ -1,0 +1,430 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "zhu2008-1-2834734-5-nm-diameter-cdse-zns-nqds-green-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "T. Zhu (2008): 5 nm diameter CdSe(ZnS) NQDs (green)",
+  "material": {
+    "formula": "CdSe(ZnS",
+    "family": "CdSe(ZnS nanocrystals",
+    "elements": [
+      "Cd",
+      "Se",
+      "Zn",
+      "S"
+    ],
+    "components": [
+      "CdSe(ZnS"
+    ],
+    "architecture": "core_shell"
+  },
+  "method": "Mist deposition",
+  "sources": [
+    {
+      "id": "zhu2008-1-2834734",
+      "doi": "10.1063/1.2834734",
+      "title": "Mist fabrication of light emitting diodes with colloidal nanocrystal quantum dots",
+      "authors": "T. Zhu, K. Shanmugasundaram, S. C. Price, J. Ruzyllo, F. Zhang, J. Xu, S. E. Mohney, Q. Zhang, and A. Y. Wang",
+      "year": 2008,
+      "url": "https://doi.org/10.1063/1.2834734",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "zhu2008-1-2834734",
+    "recipe_family": "zhu2008-1-2834734-5-nm-diameter-cdse-zns-nqds-green-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdSe(ZnS)",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "zhu2008-1-2834734",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "single crystalline",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "zhu2008-1-2834734",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": 5.0,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "5 nm",
+      "evidence": [
+        {
+          "source_id": "zhu2008-1-2834734",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "zhu2008-1-2834734-5-nm-diameter-cdse-zns-nqds-green-1--cdse-nqds",
+      "name": "CdSe NQDs",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "zhu2008-1-2834734",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "zhu2008-1-2834734-5-nm-diameter-cdse-zns-nqds-green-1--after-s01-disperse",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "zhu2008-1-2834734-5-nm-diameter-cdse-zns-nqds-green-1--cdse-nqds"
+      ]
+    },
+    {
+      "id": "zhu2008-1-2834734-5-nm-diameter-cdse-zns-nqds-green-1--after-s02-atomize",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "zhu2008-1-2834734-5-nm-diameter-cdse-zns-nqds-green-1--after-s01-disperse",
+        "zhu2008-1-2834734-5-nm-diameter-cdse-zns-nqds-green-1--cdse-nqds"
+      ]
+    },
+    {
+      "id": "zhu2008-1-2834734-5-nm-diameter-cdse-zns-nqds-green-1--after-s03-deposit",
+      "name": "mixture after step 3",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "zhu2008-1-2834734-5-nm-diameter-cdse-zns-nqds-green-1--after-s02-atomize",
+        "zhu2008-1-2834734-5-nm-diameter-cdse-zns-nqds-green-1--cdse-nqds"
+      ]
+    },
+    {
+      "id": "zhu2008-1-2834734-5-nm-diameter-cdse-zns-nqds-green-1--after-s04-cure",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "zhu2008-1-2834734-5-nm-diameter-cdse-zns-nqds-green-1--after-s03-deposit",
+        "zhu2008-1-2834734-5-nm-diameter-cdse-zns-nqds-green-1--cdse-nqds"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-disperse",
+      "action": "disperse",
+      "label": "CdSe NQDs dispersed in toluene",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "zhu2008-1-2834734-5-nm-diameter-cdse-zns-nqds-green-1--cdse-nqds"
+      ],
+      "outputs": [
+        "zhu2008-1-2834734-5-nm-diameter-cdse-zns-nqds-green-1--after-s01-disperse"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "zhu2008-1-2834734",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "CdSe NQDs dispersed in toluene",
+      "evidence": [
+        {
+          "source_id": "zhu2008-1-2834734",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "s02-atomize",
+      "action": "atomize",
+      "label": "NQD-dispersed liquid is atomized into mist droplets",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-disperse"
+      ],
+      "inputs": [
+        "zhu2008-1-2834734-5-nm-diameter-cdse-zns-nqds-green-1--after-s01-disperse",
+        "zhu2008-1-2834734-5-nm-diameter-cdse-zns-nqds-green-1--cdse-nqds"
+      ],
+      "outputs": [
+        "zhu2008-1-2834734-5-nm-diameter-cdse-zns-nqds-green-1--after-s02-atomize"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "zhu2008-1-2834734",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "NQD-dispersed liquid is atomized into mist droplets",
+      "evidence": [
+        {
+          "source_id": "zhu2008-1-2834734",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "s03-deposit",
+      "action": "deposit",
+      "label": "Mist droplets are deposited onto a substrate using an electric field",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-atomize"
+      ],
+      "inputs": [
+        "zhu2008-1-2834734-5-nm-diameter-cdse-zns-nqds-green-1--after-s02-atomize",
+        "zhu2008-1-2834734-5-nm-diameter-cdse-zns-nqds-green-1--cdse-nqds"
+      ],
+      "outputs": [
+        "zhu2008-1-2834734-5-nm-diameter-cdse-zns-nqds-green-1--after-s03-deposit"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "zhu2008-1-2834734",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Mist droplets are deposited onto a substrate using an electric field",
+      "evidence": [
+        {
+          "source_id": "zhu2008-1-2834734",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "s04-cure",
+      "action": "cure",
+      "label": "NQD film is thermally cured",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s03-deposit"
+      ],
+      "inputs": [
+        "zhu2008-1-2834734-5-nm-diameter-cdse-zns-nqds-green-1--after-s03-deposit",
+        "zhu2008-1-2834734-5-nm-diameter-cdse-zns-nqds-green-1--cdse-nqds"
+      ],
+      "outputs": [
+        "zhu2008-1-2834734-5-nm-diameter-cdse-zns-nqds-green-1--after-s04-cure"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "zhu2008-1-2834734",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "NQD film is thermally cured",
+      "evidence": [
+        {
+          "source_id": "zhu2008-1-2834734",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "zhu2008-1-2834734-5-nm-diameter-cdse-zns-nqds-green-1--product",
+      "source_sample_label": "5 nm diameter CdSe(ZnS) NQDs (green)",
+      "batch_id": null,
+      "material_state_id": "zhu2008-1-2834734-5-nm-diameter-cdse-zns-nqds-green-1--after-s04-cure",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdSe(ZnS)",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "zhu2008-1-2834734",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "single crystalline",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "zhu2008-1-2834734",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "zhu2008-1-2834734",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reactor: atomizer with nitrogen pressure (Main PDF p.3)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "zhu2008-1-2834734-5-nm-diameter-cdse-zns-nqds-green-1--size",
+      "sample_id": "zhu2008-1-2834734-5-nm-diameter-cdse-zns-nqds-green-1--product",
+      "property": "diameter",
+      "technique": "TEM",
+      "value": {
+        "value": 5.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "5 nm",
+        "evidence": [
+          {
+            "source_id": "zhu2008-1-2834734",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "zhu2008-1-2834734",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of CdSe NQDs not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

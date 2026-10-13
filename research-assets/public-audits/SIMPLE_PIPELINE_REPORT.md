@@ -1,5 +1,14 @@
 # Simple pipeline website job
 
+## Current verified delivery and continuation — 2026-10-13T21:29:10+00:00
+
+B21 passed actual anonymous verification at 2026-10-13T21:24:50+00:00; normal proof records 27 papers, 39 records and 105 figures. Live totals are 905 contributing papers, 3,992 canonical records and 1,871 displayed pairs. Source PR39 merged as `dc45dded5573e2d8b58a54a9309eddaf0b32dba7`; prepared Source `7091ecafc8251ee7600536374dea4f16c4191ff2` and Site `7e7cb11698385fe3791331c48530757419033190` remain the release bindings.
+
+B22 remains private pending its own normal preparation and publication proof; final retained counts are unset. Prior extraction, caption and recovery observations remain dated history and add zero current live credit. No new completion, accuracy, scientific-audit or training claim is inferred. Protected 32B/CUDA and programme holdings remain preserved.
+
+Cleanup remains 324,947,723,133 logical bytes / 6,951,560 files, with 11,771,016,610 bytes separate lossless compression savings and locally retained original content. The 600 GB removal target remains unmet. The [actual cleanup report](https://github.com/cuiyist/mattersyn2/blob/be70d196b43d50ccde89922366d7c197ab1c666b/CLEANUP_REPORT_2026-10-12.md) observed C free space of 98,200,895,488 bytes at 2026-10-13T20:22:30.561219+00:00; this dated observation is distinct from removal accounting. The saved private preview register has 24 owner rows, without a fresh PID-presence or native CWD claim. Historical windows, audit questions, denominators and prior failures remain preserved.
+
+
 ## Current verified delivery and continuation — 2026-10-13T19:28:05+00:00
 
 B20 passed actual anonymous verification at 2026-10-13T19:26:53+00:00; normal proof records 33 papers, 51 records and 135 figures. Live totals are 878 contributing papers, 3,953 canonical records and 1,832 displayed pairs. Source PR38 merged as `06cd5290deb1349cd57529da8c6e5a35aee5fa5f`; prepared Source `a65d047eaa4c5b4beae48280418dd4006ccc1991` and Site `b9db6898807619a795b483314639429d739bcfd5` remain the release bindings.
@@ -1077,6 +1086,48 @@ Recorded pages run: [38453789305](https://github.com/cuiyist/mattersyn-site/acti
 | 10.1063/1.3531650 | 1 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/zhu2010-1-3531650-t-boc-deprotected-pbs-nc-pvk-nanocomposi-1.html) |
 | 10.1016/j.jelechem.2011.05.018 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/zhu2011-j-jelechem-2011-05-018-tio2-cds-electrode-4-1.html) |
 
+### simple-batch21-20261013
+
+Anonymous verification passed at 2026-10-13T21:24:50+00:00: 439 files, zero mismatches. [Source commit](https://github.com/cuiyist/mattersyn/commit/7091ecafc8251ee7600536374dea4f16c4191ff2) and [Site commit](https://github.com/cuiyist/mattersyn-site/commit/7e7cb11698385fe3791331c48530757419033190). This batch contains 27 source groups, 39 records and 105 source figure crops; 27 distinct newly contributing primary papers after DOI deduplication. Every new contribution remains machine extracted and not independently audited. The final built site is 2,044,900,219 bytes / 36,211 files.
+
+Live counter: **244 audited + 661 machine extracted = 905 papers**, 3,992 canonical records, 432 direct material families, 517 material/component pages and 1871 displayed recipe–structure pairs (6 more comprehensive; 1865 partial). These display counts do not establish extraction accuracy, measured atomic coordinates or training eligibility.
+
+Recorded source pr: [39](https://github.com/cuiyist/mattersyn/pull/39).
+
+Recorded source ci run: [38461970557](https://github.com/cuiyist/mattersyn/actions/runs/38461970557).
+
+Recorded pages run: [38469205232](https://github.com/cuiyist/mattersyn-site/actions/runs/38469205232).
+
+| Primary DOI | Records | Figure crops | Public page |
+| --- | ---: | ---: | --- |
+| 10.1021/jp0360671 | 1 | 8 | [Open](https://cuiyist.github.io/mattersyn-site/records/al2004-jp0360671-cds-nanoparticles-1.html) |
+| 10.1021/ja066749c | 2 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/arachchige2007-ja066749c-cdse-zns-core-shell-aerogel-1.html) |
+| 10.1002/adma.200700111 | 1 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/boberl2007-adma-200700111-hgte-nanocrystals-3-nm-1.html) |
+| 10.1039/b823510d | 2 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/cai2009-b823510d-btscdse-1.html) |
+| 10.1080/17458080903314030 | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/chu2010-17458080903314030-qd-egf-bioconjugates-1.html) |
+| 10.1063/1.2201047 | 1 | 2 | [Open](https://cuiyist.github.io/mattersyn-site/records/cui2006-1-2201047-pbse-nqds-p3ht-hybrid-photovoltaic-devic-1.html) |
+| 10.1007/s11664-008-0645-7 | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/ferdousi2009-s11664-008-0645-7-pbse-nanocrystals-1.html) |
+| 10.1021/jz5001193 | 1 | 2 | [Open](https://cuiyist.github.io/mattersyn-site/records/hansen2014-jz5001193-cdse-qds-3-1-nm-attached-to-zno-nanowire-1.html) |
+| 10.1021/jp710778s | 1 | 6 | [Open](https://cuiyist.github.io/mattersyn-site/records/huang2008-jp710778s-nc-zno-doped-ssflc-1.html) |
+| 10.1063/1.3246800 | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/jang2009-1-3246800-cdse-znse-core-shell-qds-1.html) |
+| 10.1021/jp1062226 | 1 | 6 | [Open](https://cuiyist.github.io/mattersyn-site/records/jin-nouchi2010-jp1062226-cds-pd-mp-tio2-1.html) |
+| 10.1063/1.2912340 | 2 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/johnston2008-1-2912340-pbs-nanocrystal-quantum-dot-film-design-1.html) |
+| 10.1016/j.ssc.2009.07.002 | 1 | 2 | [Open](https://cuiyist.github.io/mattersyn-site/records/kitada2009-j-ssc-2009-07-002-pbse-colloidal-quantum-dots-qds-capped-w-1.html) |
+| 10.1021/jp305608f | 4 | 6 | [Open](https://cuiyist.github.io/mattersyn-site/records/kramer2012-jp305608f-cdse-nc-film-treated-with-mma-1.html) |
+| 10.1021/am5054916 | 1 | 6 | [Open](https://cuiyist.github.io/mattersyn-site/records/lee2014-am5054916-tio2-p-cdse-1.html) |
+| 10.1002/adma.200500875 | 2 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/maskaly2006-adma-200500875-cdse-solgel-nc-composite-infiltrated-int-1.html) |
+| 10.1063/1.3075577 | 1 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/osedach2009-1-3075577-cdse-qd-film-1.html) |
+| 10.1021/nl100498e | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/pietraszek2010-nl100498e-pbs-2-7-nm-1.html) |
+| 10.1021/ja055557z | 1 | 2 | [Open](https://cuiyist.github.io/mattersyn-site/records/pradhan2005-ja055557z-cu-znse-nanocrystals-1.html) |
+| 10.1002/pssa.200460325 | 1 | 1 | [Open](https://cuiyist.github.io/mattersyn-site/records/provided2005-pssa-200460325-inas-ingaas-quantum-dot-heterostructures-1.html) |
+| 10.1063/1.2889446 | 1 | 2 | [Open](https://cuiyist.github.io/mattersyn-site/records/qian2008-1-2889446-zns-cds-mn-zns-quantum-well-quantum-dots-1.html) |
+| 10.1002/pssc.200564694 | 4 | 2 | [Open](https://cuiyist.github.io/mattersyn-site/records/roventa2006-pssc-200564694-cdse-zn-s-se-quantum-dot-stacks-sample-a-1.html) |
+| 10.1007/s11671-010-9553-x | 2 | 8 | [Open](https://cuiyist.github.io/mattersyn-site/records/s11671-010-9553-x-2-8-nm-cdte-ncs-1.html) |
+| 10.1021/jp305050w | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/shen2012-jp305050w-tio2-cds-zns-n719-hybrid-photoanode-1.html) |
+| 10.1063/1.3454774 | 1 | 2 | [Open](https://cuiyist.github.io/mattersyn-site/records/son2010-1-3454774-zno-qds-embedded-in-pmma-layer-1.html) |
+| 10.1063/1.1385584 | 1 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/stiff2001-1-1385584-inas-gaas-quantum-dot-detector-1.html) |
+| 10.1021/nl0350938 | 2 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/wargnier2004-nl0350938-positively-charged-zncdse-zns-core-shell-2.html) |
+
 ## Latest continuation checkpoint
 
 At 2026-10-11T06:09:34+00:00, Batch01 is live and anonymously verified; Batch02 remains in local processing with 47/49 two-pass-complete papers at its last saved checkpoint. These are processing counts, not additional published papers. The audited lane stays paused.
@@ -1681,3 +1732,13 @@ Batch 20 visual review found stale author/year method labels after bibliography 
 
 
 - 2026-10-13T19:46:35.998018+00:00: Batch 21 is privately integrated with 39 new source_extracted records; 105 of 105 retained figure captions are bound. Corrected 12 new title prefixes and their exact dependent labels/hash pointers. All 3,953 prior canonical records and scientific fields are unchanged. Normal Source/build/visual/CI and Site deployment/anonymous checks remain pending. This checkpoint adds zero publication or independent audit credit.
+
+
+## Dated private continuation and cleanup — 2026-10-13T21:59:19+00:00
+
+B21 remains the latest verified live checkpoint: 905 contributing papers, 3,992 canonical records and 1,871 displayed pairs. B22 has privately integrated 25 papers /36 new records /103 source crops, with 4,028 working records and the old 3,992-record baseline preserved. Its three rare-paper reads proposed five deletion paths (four objects and one coupled unit), zero additions; strict citations were applied to seven papers /13 records /16 dependencies. The title-label authority comparison is awaiting assigned metadata diagnosis in this dated observation. All normal gates remain unchanged; B22 is unpublished and adds no audit or training claim. Root observed B35 at 40 successful two-pass papers of 43 at 21:52:43Z, without known controller exit or final-completion credit.
+
+The [verified current cleanup report](https://github.com/cuiyist/mattersyn2/blob/cc039900cbdbd686f64c6fe8910ddf2b5e675588/CLEANUP_REPORT_2026-10-12.md) records 324,947,723,133 removed bytes /6,951,560 files, plus 11,771,016,610 bytes separate lossless compression. The 4,280,404,704-byte 4B removal is included once; requested 9B/27B models were not found. C free was 84,779,479,040 bytes at 21:40:53.5165795Z, compared with 11,985,891,328 before cleanup. Root found 25 Python preview processes at 21:44Z; saved folder receipts remain the authority and no fresh native CWD read is asserted. Protected 32B/CUDA and programmes remain preserved. This update adds zero deletion/compression credit; the 600 GB target remains unmet.
+
+
+- 2026-10-13T22:12:16.754445+00:00: Batch 21 is privately integrated with 36 new source_extracted records; 103 of 103 retained figure captions are bound. Corrected 12 new title prefixes and their exact dependent labels/hash pointers. All 3,992 prior canonical records and scientific fields are unchanged. Normal Source/build/visual/CI and Site deployment/anonymous checks remain pending. This checkpoint adds zero publication or independent audit credit.
