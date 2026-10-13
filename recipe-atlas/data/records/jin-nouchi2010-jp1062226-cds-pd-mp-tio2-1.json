@@ -1,0 +1,431 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "jin-nouchi2010-jp1062226-cds-pd-mp-tio2-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Yasuaki Jin-nouchi (2010): CdS(PD)/mp-TiO2",
+  "material": {
+    "formula": "CdS",
+    "family": "CdS nanocrystals",
+    "elements": [
+      "Cd",
+      "S"
+    ],
+    "components": [
+      "CdS"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Photodeposition",
+  "sources": [
+    {
+      "id": "jin-nouchi2010-jp1062226",
+      "doi": "10.1021/jp1062226",
+      "title": "Quantum-Dot-Sensitized Solar Cell Using a Photoanode Prepared by in Situ Photodeposition of CdS on Nanocrystalline TiO2 Films",
+      "authors": "Yasuaki Jin-nouchi, Shin-ichi Naya, and Hiroaki Tada",
+      "year": 2010,
+      "url": "https://doi.org/10.1021/jp1062226",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "jin-nouchi2010-jp1062226",
+    "recipe_family": "jin-nouchi2010-jp1062226-cds-pd-mp-tio2-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdS",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "jin-nouchi2010-jp1062226",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": 6.5,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "6.5 nm",
+      "evidence": [
+        {
+          "source_id": "jin-nouchi2010-jp1062226",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "nanoparticle",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "jin-nouchi2010-jp1062226",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "jin-nouchi2010-jp1062226-cds-pd-mp-tio2-1--cd-clo4-2",
+      "name": "Cd(ClO4)2",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "jin-nouchi2010-jp1062226",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "jin-nouchi2010-jp1062226-cds-pd-mp-tio2-1--s8",
+      "name": "S8",
+      "formula": null,
+      "role": "chalcogen_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "jin-nouchi2010-jp1062226",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "jin-nouchi2010-jp1062226-cds-pd-mp-tio2-1--after-s01-immersion",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "jin-nouchi2010-jp1062226-cds-pd-mp-tio2-1--cd-clo4-2",
+        "jin-nouchi2010-jp1062226-cds-pd-mp-tio2-1--s8"
+      ]
+    },
+    {
+      "id": "jin-nouchi2010-jp1062226-cds-pd-mp-tio2-1--after-s02-irradiation",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "jin-nouchi2010-jp1062226-cds-pd-mp-tio2-1--after-s01-immersion"
+      ]
+    },
+    {
+      "id": "jin-nouchi2010-jp1062226-cds-pd-mp-tio2-1--after-s03-washing",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "jin-nouchi2010-jp1062226-cds-pd-mp-tio2-1--after-s02-irradiation"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-immersion",
+      "action": "immersion",
+      "label": "Mp-TiO2/FTO electrode immersed in ethanol solution containing Cd(ClO4)2 and S8",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "jin-nouchi2010-jp1062226-cds-pd-mp-tio2-1--cd-clo4-2",
+        "jin-nouchi2010-jp1062226-cds-pd-mp-tio2-1--s8"
+      ],
+      "outputs": [
+        "jin-nouchi2010-jp1062226-cds-pd-mp-tio2-1--after-s01-immersion"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 0.5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0.5 h",
+          "evidence": [
+            {
+              "source_id": "jin-nouchi2010-jp1062226",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "Ar",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jin-nouchi2010-jp1062226",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Mp-TiO2/FTO electrode immersed in ethanol solution containing Cd(ClO4)2 and S8",
+      "evidence": [
+        {
+          "source_id": "jin-nouchi2010-jp1062226",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-irradiation",
+      "action": "irradiation",
+      "label": "UV-light irradiation of the solution",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-immersion"
+      ],
+      "inputs": [
+        "jin-nouchi2010-jp1062226-cds-pd-mp-tio2-1--after-s01-immersion"
+      ],
+      "outputs": [
+        "jin-nouchi2010-jp1062226-cds-pd-mp-tio2-1--after-s02-irradiation"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 298,
+          "minimum": null,
+          "maximum": null,
+          "unit": "K",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "298 K",
+          "evidence": [
+            {
+              "source_id": "jin-nouchi2010-jp1062226",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "Ar",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jin-nouchi2010-jp1062226",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "UV-light irradiation of the solution",
+      "evidence": [
+        {
+          "source_id": "jin-nouchi2010-jp1062226",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-washing",
+      "action": "washing",
+      "label": "Washing the resulting substrates with ethanol",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-irradiation"
+      ],
+      "inputs": [
+        "jin-nouchi2010-jp1062226-cds-pd-mp-tio2-1--after-s02-irradiation"
+      ],
+      "outputs": [
+        "jin-nouchi2010-jp1062226-cds-pd-mp-tio2-1--after-s03-washing"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "Ar",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jin-nouchi2010-jp1062226",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Washing the resulting substrates with ethanol",
+      "evidence": [
+        {
+          "source_id": "jin-nouchi2010-jp1062226",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "jin-nouchi2010-jp1062226-cds-pd-mp-tio2-1--product",
+      "source_sample_label": "CdS(PD)/mp-TiO2",
+      "batch_id": null,
+      "material_state_id": "jin-nouchi2010-jp1062226-cds-pd-mp-tio2-1--after-s03-washing",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdS",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jin-nouchi2010-jp1062226",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": "nanoparticle",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jin-nouchi2010-jp1062226",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "jin-nouchi2010-jp1062226",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reactor: 250 mL ethanol solution (Main PDF p.2).",
+        "Reaction temperature: 298 K (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "jin-nouchi2010-jp1062226-cds-pd-mp-tio2-1--size",
+      "sample_id": "jin-nouchi2010-jp1062226-cds-pd-mp-tio2-1--product",
+      "property": "diameter",
+      "technique": "TEM",
+      "value": {
+        "value": 6.5,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "6.5 nm",
+        "evidence": [
+          {
+            "source_id": "jin-nouchi2010-jp1062226",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "jin-nouchi2010-jp1062226",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of Cd(ClO4)2 not reported in the extracted text.",
+      "Amount of S8 not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

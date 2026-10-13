@@ -1,5 +1,14 @@
 # Simple pipeline website job
 
+## Current verified delivery and continuation — 2026-10-13T19:28:05+00:00
+
+B20 passed actual anonymous verification at 2026-10-13T19:26:53+00:00; normal proof records 33 papers, 51 records and 135 figures. Live totals are 878 contributing papers, 3,953 canonical records and 1,832 displayed pairs. Source PR38 merged as `06cd5290deb1349cd57529da8c6e5a35aee5fa5f`; prepared Source `a65d047eaa4c5b4beae48280418dd4006ccc1991` and Site `b9db6898807619a795b483314639429d739bcfd5` remain the release bindings.
+
+B21 remains private pending its own normal preparation and publication proof; final retained counts are unset. Prior extraction, caption and recovery observations remain dated history and add zero current live credit. No new completion, accuracy, scientific-audit or training claim is inferred. Protected 32B/CUDA and programme holdings remain preserved.
+
+Cleanup remains 324,947,723,133 logical bytes / 6,951,560 files, with 11,771,016,610 bytes separate lossless compression savings and locally retained original content. The 600 GB removal target remains unmet. The [actual cleanup report](https://github.com/cuiyist/mattersyn2/blob/3bb914ba7879e63c204a0658addd2bf872c80c0b/CLEANUP_REPORT_2026-10-12.md) observed C free space of 105,682,673,664 bytes at 2026-10-13T19:16:31.413241+00:00; this dated observation is distinct from removal accounting. The saved private preview register has 23 owner rows, without a fresh PID-presence or native CWD claim. Historical windows, audit questions, denominators and prior failures remain preserved.
+
+
 ## Current verified delivery and continuation — 2026-10-13T16:48:14+00:00
 
 B19 passed actual anonymous verification at 2026-10-13T16:35:31+00:00; normal proof records 26 papers, 33 records and 105 figures. Live totals are 845 contributing papers, 3,902 canonical records and 1,781 displayed pairs. Source PR37 merged as `8efa5efc9d96ce638a83460ff19142fec57e84f0`; prepared Source `b7217048be4cd05d7ad196c10a34959812c01a09` and Site `429387c95f263f0925d884c7cf0bd4d5d39f337a` remain the release bindings.
@@ -1020,6 +1029,54 @@ Recorded pages run: [38430512988](https://github.com/cuiyist/mattersyn-site/acti
 | 10.1063/1.3093692 | 1 | 6 | [Open](https://cuiyist.github.io/mattersyn-site/records/yoon2009-1-3093692-cdte-nanocrystals-1.html) |
 | 10.1063/1.2388139 | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/zhu2006-1-2388139-inas-gaas-quantum-dot-qd-sample-1.html) |
 
+### simple-batch20-20261013
+
+Anonymous verification passed at 2026-10-13T19:26:53+00:00: 574 files, zero mismatches. [Source commit](https://github.com/cuiyist/mattersyn/commit/a65d047eaa4c5b4beae48280418dd4006ccc1991) and [Site commit](https://github.com/cuiyist/mattersyn-site/commit/b9db6898807619a795b483314639429d739bcfd5). This batch contains 33 source groups, 51 records and 135 source figure crops; 33 distinct newly contributing primary papers after DOI deduplication. Every new contribution remains machine extracted and not independently audited. The final built site is 2,023,927,062 bytes / 35,844 files.
+
+Live counter: **244 audited + 634 machine extracted = 878 papers**, 3,953 canonical records, 428 direct material families, 512 material/component pages and 1832 displayed recipe–structure pairs (6 more comprehensive; 1826 partial). These display counts do not establish extraction accuracy, measured atomic coordinates or training eligibility.
+
+Recorded source pr: [38](https://github.com/cuiyist/mattersyn/pull/38).
+
+Recorded source ci run: [38445338494](https://github.com/cuiyist/mattersyn/actions/runs/38445338494).
+
+Recorded pages run: [38453789305](https://github.com/cuiyist/mattersyn-site/actions/runs/38453789305).
+
+| Primary DOI | Records | Figure crops | Public page |
+| --- | ---: | ---: | --- |
+| 10.1021/nn2039164 | 2 | 6 | [Open](https://cuiyist.github.io/mattersyn-site/records/al2012-nn2039164-pbs-cqd-films-passivated-by-mpa-1.html) |
+| 10.1021/ma801416x | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/alam2008-ma801416x-cdse-qds-4-hexylphenyl-4-phenylquinoline-1.html) |
+| 10.1063/1.2775536 | 1 | 9 | [Open](https://cuiyist.github.io/mattersyn-site/records/arpatzanis2007-1-2775536-inas-quantum-dots-qds-embedded-in-gaas-1.html) |
+| 10.1063/1.1795368 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/chan2004-1-1795368-cdse-zns-core-shell-nanocrystals-1.html) |
+| 10.1063/1.122695 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/choi1998-1-122695-si-self-assembled-quantum-dot-transistor-1.html) |
+| 10.1063/1.2730560 | 5 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/ding2007-1-2730560-nc-si-sample-1-1.html) |
+| 10.1116/1.1515912 | 1 | 6 | [Open](https://cuiyist.github.io/mattersyn-site/records/finnie2002-1-1515912-inas-quantum-dots-on-gaas-100-1.html) |
+| 10.1063/1.2721117 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/ito2007-1-2721117-nanopolycrystal-zno-npc-zno-1.html) |
+| 10.1038/s41467-019-10170-8 | 4 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/jagtap2019-s41467-019-10170-8-hgse-ncs-1.html) |
+| 10.1063/1.1517710 | 3 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/kim2002-1-1517710-inas-in0-15ga0-85as-quantum-dots-qds-wit-1.html) |
+| 10.1063/1.2103397 | 1 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/laurent2005-1-2103397-single-quantum-dot-embedded-in-a-two-dim-1.html) |
+| 10.1063/1.1644627 | 1 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/lechner2004-1-1644627-pbse-pbeute-quantum-dot-superlattices-1.html) |
+| 10.1063/1.3098400 | 1 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/li2009-1-3098400-zno-qd-mwcnt-hybrid-nanocomposite-1.html) |
+| 10.1063/1.3204696 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/li2009-1-3204696-cdse-znse-qd-mwcnt-hybrid-nanocomposite-1.html) |
+| 10.1021/ja073790m | 1 | 2 | [Open](https://cuiyist.github.io/mattersyn-site/records/liu2007-ja073790m-cdse-zncds-qd-cys-1.html) |
+| 10.1063/1.2132083 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/lu2005-1-2132083-si-nanocrystal-multilayer-with-three-lay-1.html) |
+| 10.1063/1.2214300 | 4 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/lu2006-1-2214300-sample-a-1.html) |
+| 10.1063/1.1365939 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/medeiros-ribeiro2001-1-1365939-inp-islands-on-inas-quantum-dot-template-1.html) |
+| 10.1063/1.124284 | 2 | 2 | [Open](https://cuiyist.github.io/mattersyn-site/records/mukhametzhanov1999-1-124284-inas-gaas-quantum-dots-saqds-grown-via-p-1.html) |
+| 10.1021/jz402752k | 1 | 2 | [Open](https://cuiyist.github.io/mattersyn-site/records/n2014-jz402752k-cdse-p3ht-bulk-heterojunction-solar-cell-1.html) |
+| 10.1063/1.2191737 | 2 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/ng2006-1-2191737-sample-1-1.html) |
+| 10.1063/1.1926413 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/nuntawong2005-1-1926413-inas-gaas-quantum-dot-qd-laser-with-4-ml-1.html) |
+| 10.1021/jp0526795 | 2 | 6 | [Open](https://cuiyist.github.io/mattersyn-site/records/osovsky2005-jp0526795-cdte-ca-ncs-1.html) |
+| 10.1103/physrevb.75.035330 | 1 | 6 | [Open](https://cuiyist.github.io/mattersyn-site/records/physrevb-75-035330-cdte-cdse-core-shell-nanocrystals-with-a-1.html) |
+| 10.1063/1.1458689 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/reddy2002-1-1458689-inp-self-assembled-quantum-dots-in-in0-5-1.html) |
+| 10.1063/1.2209202 | 1 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/robin2006-1-2209202-cdse-islands-on-znse-3-ml-1.html) |
+| 10.1063/1.1521249 | 1 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/sabarinathan2002-1-1521249-inas-gaas-quantum-dot-photonic-crystal-m-1.html) |
+| 10.1063/1.1781741 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/tatebayashi2004-1-1781741-five-layer-vertically-aligned-inas-quant-1.html) |
+| 10.1063/1.1530728 | 3 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/yang2003-1-1530728-inas-site-controlled-quantum-dots-scqds-1.html) |
+| 10.1021/nl401573x | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/yang2013-nl401573x-cdse-qd-solid-1.html) |
+| 10.1021/cg070477n | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/zeng2007-cg070477n-kmnf3-yb3-er3-nanocrystals-1.html) |
+| 10.1063/1.3531650 | 1 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/zhu2010-1-3531650-t-boc-deprotected-pbs-nc-pvk-nanocomposi-1.html) |
+| 10.1016/j.jelechem.2011.05.018 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/zhu2011-j-jelechem-2011-05-018-tio2-cds-electrode-4-1.html) |
+
 ## Latest continuation checkpoint
 
 At 2026-10-11T06:09:34+00:00, Batch01 is live and anonymously verified; Batch02 remains in local processing with 47/49 two-pass-complete papers at its last saved checkpoint. These are processing counts, not additional published papers. The audited lane stays paused.
@@ -1621,3 +1678,6 @@ Batch 20 visual review found stale author/year method labels after bibliography 
 
 
 - 2026-10-13T17:53:02.181907+00:00: The normal baseline guard rejected the post-preparation title correction without exact digest approvals. Added only the eleven new-record title digests to the existing build-input approval map and supplied its exact separate metadata review. No policy, eligibility, scientific field or release check changed; the failed preparation is retained.
+
+
+- 2026-10-13T19:46:35.998018+00:00: Batch 21 is privately integrated with 39 new source_extracted records; 105 of 105 retained figure captions are bound. Corrected 12 new title prefixes and their exact dependent labels/hash pointers. All 3,953 prior canonical records and scientific fields are unchanged. Normal Source/build/visual/CI and Site deployment/anonymous checks remain pending. This checkpoint adds zero publication or independent audit credit.
