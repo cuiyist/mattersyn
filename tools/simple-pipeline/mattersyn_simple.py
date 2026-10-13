@@ -482,6 +482,27 @@ def check_paper(paper_text, passA, passB, stats):
     return final
 
 
+def check_pass_shape_valid(data):
+    """Reject a whole pass with malformed nested containers; never rescue fields."""
+    if (not isinstance(data, dict) or 'error' in data or not isinstance(data.get('pairs'), list)
+            or any(not isinstance(pair, dict) for pair in data.get('pairs', []))):
+        return False
+    for pair in data['pairs']:
+        for group, fields in (('structure', STRUCTURE_FIELDS), ('recipe', RECIPE_FIELDS)):
+            values = pair.get(group, {})
+            if group == 'recipe':
+                values = values or {}
+            if not isinstance(values, dict):
+                return False
+            if any(field in values and values[field] is not None and not isinstance(values[field], dict) for field in fields):
+                return False
+        for collection in ('chemicals', 'steps'):
+            entries = (pair.get('recipe') or {}).get(collection) or []
+            if not isinstance(entries, list) or any(not isinstance(entry, dict) for entry in entries):
+                return False
+    return True
+
+
 def cmd_check(a):
     import collections
     work, out = Path(a.work), Path(a.out); out.mkdir(parents=True, exist_ok=True)
@@ -499,8 +520,7 @@ def cmd_check(a):
                 data = json.loads(path.read_text(encoding='utf-8'))
             except (OSError, UnicodeError, json.JSONDecodeError):
                 failed.append(name); continue
-            if (not isinstance(data, dict) or 'error' in data or not isinstance(data.get('pairs'), list)
-                    or any(not isinstance(pair, dict) for pair in data.get('pairs', []))):
+            if not check_pass_shape_valid(data):
                 failed.append(name); continue
             passes.append(data)
         total['papers'] += 1

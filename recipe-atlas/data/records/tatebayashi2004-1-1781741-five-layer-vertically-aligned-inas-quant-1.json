@@ -1,0 +1,331 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "tatebayashi2004-1-1781741-five-layer-vertically-aligned-inas-quant-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Jun Tatebayashi (2004): five layer vertically aligned InAs quantum dots",
+  "material": {
+    "formula": "InAs",
+    "family": "InAs nanocrystals",
+    "elements": [
+      "In",
+      "As"
+    ],
+    "components": [
+      "InAs"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Metalorganic chemical vapor deposition",
+  "sources": [
+    {
+      "id": "tatebayashi2004-1-1781741",
+      "doi": "10.1063/1.1781741",
+      "title": "InAs/GaAs self-assembled quantum-dot lasers grown by metalorganic chemical vapor deposition—Effects of postgrowth annealing on stacked InAs quantum dots",
+      "authors": "Jun Tatebayashi, Yasuhiko Arakawa, Nobuaki Hatori, Hiroji Ebe, Mitsuru Sugawara, Hisao Sudo, Akito Kuramata",
+      "year": 2004,
+      "url": "https://doi.org/10.1063/1.1781741",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "tatebayashi2004-1-1781741",
+    "recipe_family": "tatebayashi2004-1-1781741-five-layer-vertically-aligned-inas-quant-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "InAs",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "tatebayashi2004-1-1781741",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "crystal",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "tatebayashi2004-1-1781741",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "quantum dot",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "tatebayashi2004-1-1781741",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "tatebayashi2004-1-1781741-five-layer-vertically-aligned-inas-quant-1--tertiarybutylarsine",
+      "name": "tertiarybutylarsine",
+      "formula": null,
+      "role": "nonmetal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "tatebayashi2004-1-1781741",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "tatebayashi2004-1-1781741-five-layer-vertically-aligned-inas-quant-1--after-s01-grow",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "tatebayashi2004-1-1781741-five-layer-vertically-aligned-inas-quant-1--tertiarybutylarsine"
+      ]
+    },
+    {
+      "id": "tatebayashi2004-1-1781741-five-layer-vertically-aligned-inas-quant-1--after-s02-anneal",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "tatebayashi2004-1-1781741-five-layer-vertically-aligned-inas-quant-1--after-s01-grow",
+        "tatebayashi2004-1-1781741-five-layer-vertically-aligned-inas-quant-1--tertiarybutylarsine"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-grow",
+      "action": "grow",
+      "label": "Grow QD laser structure on n-GaAs substrate",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "tatebayashi2004-1-1781741-five-layer-vertically-aligned-inas-quant-1--tertiarybutylarsine"
+      ],
+      "outputs": [
+        "tatebayashi2004-1-1781741-five-layer-vertically-aligned-inas-quant-1--after-s01-grow"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "TBA flow",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "tatebayashi2004-1-1781741",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Grow QD laser structure on n-GaAs substrate",
+      "evidence": [
+        {
+          "source_id": "tatebayashi2004-1-1781741",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-anneal",
+      "action": "anneal",
+      "label": "Postgrowth annealing",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-grow"
+      ],
+      "inputs": [
+        "tatebayashi2004-1-1781741-five-layer-vertically-aligned-inas-quant-1--after-s01-grow",
+        "tatebayashi2004-1-1781741-five-layer-vertically-aligned-inas-quant-1--tertiarybutylarsine"
+      ],
+      "outputs": [
+        "tatebayashi2004-1-1781741-five-layer-vertically-aligned-inas-quant-1--after-s02-anneal"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 600,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "600 °C",
+          "evidence": [
+            {
+              "source_id": "tatebayashi2004-1-1781741",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1 h",
+          "evidence": [
+            {
+              "source_id": "tatebayashi2004-1-1781741",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "TBA flow",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "tatebayashi2004-1-1781741",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Postgrowth annealing",
+      "evidence": [
+        {
+          "source_id": "tatebayashi2004-1-1781741",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "tatebayashi2004-1-1781741-five-layer-vertically-aligned-inas-quant-1--product",
+      "source_sample_label": "five layer vertically aligned InAs quantum dots",
+      "batch_id": null,
+      "material_state_id": "tatebayashi2004-1-1781741-five-layer-vertically-aligned-inas-quant-1--after-s02-anneal",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "InAs",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "tatebayashi2004-1-1781741",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "crystal",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "tatebayashi2004-1-1781741",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "quantum dot",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "tatebayashi2004-1-1781741",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "tatebayashi2004-1-1781741",
+          "locator": "Main PDF p.4"
+        }
+      ],
+      "notes": [
+        "Reactor: low-pressure MOCVD reactor (Main PDF p.2).",
+        "Reaction temperature: 600 degC (Main PDF p.4).",
+        "Reaction time: 1 h (Main PDF p.3)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Amount of tertiarybutylarsine not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
