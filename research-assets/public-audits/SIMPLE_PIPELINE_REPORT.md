@@ -1,5 +1,16 @@
 # Simple pipeline website job
 
+## Current verified delivery and continuation — 2026-10-13T14:37:11+00:00
+
+B18 passed actual anonymous verification at 2026-10-13T14:35:31+00:00; normal proof records 28 papers, 43 records and 123 figures. Live totals are 819 contributing papers, 3,869 canonical records and 1,748 displayed pairs. Source PR36 merged as `8e4ef18c5ba0b2b44979a0582a202299f625bc88`; prepared Source `2c04ed4dbb81a4ace77e40ec64b1699d6b7bef09` and Site `7e0000cbf22a78b7dceb1f6c7edc533d08dbbcb7` remain the release bindings.
+
+Pages attempt 1 passed build-and-validate and failed deployment creation with HTTP 500. Its 1,426,494,915-byte artifact warning is retained; size causality was not established. The normal failed-job retry used unchanged Site content and gates; the successful anonymous receipt above supplies publication credit.
+
+B19 stays private: 26 prospective papers / 33 records / 105 figures. Root reported B31 private collection finished at 14:12:31 UTC with 16 candidates / 23 records / 100 figures; The rare scope contains 11 papers and 14 record ordinals; these are not ordinary-pair counts. Root reported B32 launched at 13:37 UTC, with 20 generation successes at 14:09 UTC and extraction ongoing at that observation. These cohorts have zero live credit; protected 32B/CUDA and running programmes remain preserved.
+
+Cleanup remains 324,947,723,133 logical bytes / 6,951,560 files, with 11,771,016,610 bytes separate lossless compression savings and locally retained original content. The 600 GB removal target remains unmet. The [actual cleanup report](https://github.com/cuiyist/mattersyn2/blob/cfeb450d48da74578269bf6e81e0a2dbced4f089/CLEANUP_REPORT_2026-10-12.md) observed C free space of 168,471,433,216 bytes at 2026-10-13T14:10:37.598852+00:00; this dated observation is distinct from removal accounting. Historical windows, audit questions, denominators and prior failures remain preserved.
+
+
 Owner instruction: October 10, 2026, evening. This report records only measured results. The audit lane stays paused; new contributions retain `source_extracted`. Source PDFs, full text, pass files and pair files with quotes remain local. Site records contain locators without quotes.
 
 ## Current verified delivery and next-batch status — 2026-10-13T12:28:18+00:00
@@ -915,6 +926,49 @@ Recorded pages run: [38383181560](https://github.com/cuiyist/mattersyn-site/acti
 | 10.1002/pssb.200880670 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/tribu2009-pssb-200880670-cdse-qd-in-znse-nanowire-1.html) |
 | 10.1007/s10832-007-9288-y | 2 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/wang2008-s10832-007-9288-y-znse-nanocrystalline-powders-as-milled-1.html) |
 | 10.1063/1.1445269 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/yeh2002-1-1445269-inas-gaas-quantum-dot-laser-with-ingap-c-1.html) |
+
+### simple-batch18-20261013
+
+Anonymous verification passed at 2026-10-13T14:35:31+00:00: 467 files, zero mismatches. [Source commit](https://github.com/cuiyist/mattersyn/commit/2c04ed4dbb81a4ace77e40ec64b1699d6b7bef09) and [Site commit](https://github.com/cuiyist/mattersyn-site/commit/7e0000cbf22a78b7dceb1f6c7edc533d08dbbcb7). This batch contains 28 source groups, 43 records and 123 source figure crops; 28 distinct newly contributing primary papers after DOI deduplication. Every new contribution remains machine extracted and not independently audited. The final built site is 1,976,400,311 bytes / 35,015 files.
+
+Live counter: **244 audited + 575 machine extracted = 819 papers**, 3,869 canonical records, 410 direct material families, 484 material/component pages and 1748 displayed recipe–structure pairs (6 more comprehensive; 1742 partial). These display counts do not establish extraction accuracy, measured atomic coordinates or training eligibility.
+
+Recorded source pr: [36](https://github.com/cuiyist/mattersyn/pull/36).
+
+Recorded source ci run: [38402371557](https://github.com/cuiyist/mattersyn/actions/runs/38402371557).
+
+Recorded pages run: [38410589131](https://github.com/cuiyist/mattersyn-site/actions/runs/38410589131).
+
+| Primary DOI | Records | Figure crops | Public page |
+| --- | ---: | ---: | --- |
+| 10.1063/1.2968211 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/akahane2008-1-2968211-30-layer-stacked-inas-qd-laser-structure-1.html) |
+| 10.1007/s11082-006-0037-2 | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/al-s11082-006-0037-2-inas-inp-113-b-dc-qd-sample-1.html) |
+| 10.1021/nl300164z | 1 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/anthony2012-nl300164z-plasma-synthesized-silicon-nanocrystals-1.html) |
+| 10.1021/nl400113t | 2 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/author2013-nl400113t-cdse-qds-capped-with-oleic-acid-1.html) |
+| 10.1021/nn204350w | 3 | 7 | [Open](https://cuiyist.github.io/mattersyn-site/records/bang2011-nn204350w-cdse-qd-large-c60-nanocomposite-1.html) |
+| 10.1103/physrevb.73.193311 | 3 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/cooke2006-physrevb-73-193311-si-nc-film-ta-900-c-1.html) |
+| 10.1116/1.1771671 | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/eyink2004-1-1771671-inas-quantum-dots-qds-formed-from-planar-1.html) |
+| 10.1103/physrevb.79.035324 | 1 | 8 | [Open](https://cuiyist.github.io/mattersyn-site/records/holy2009-physrevb-79-035324-3d-sige-quantum-dot-crystal-1.html) |
+| 10.1063/1.2191409 | 1 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/huh2006-1-2191409-nc-si-embedded-in-silicon-nitride-film-1.html) |
+| 10.1063/1.1530717 | 1 | 2 | [Open](https://cuiyist.github.io/mattersyn-site/records/ji2003-1-1530717-inas-gaas-quantum-dots-1.html) |
+| 10.1063/1.1470262 | 2 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/kapetanakis2002-1-1470262-si-nanocrystals-in-gate-oxide-low-dose-1-1.html) |
+| 10.1021/acsaelm.0c01107 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/kelley2021-acsaelm-0c01107-agbis2-ink-1.html) |
+| 10.1063/1.2917800 | 1 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/klem2008-1-2917800-pbs-colloidal-quantum-dot-cqd-films-1.html) |
+| 10.1063/1.2821121 | 2 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/liang2007-1-2821121-sample-a-inas-quantum-dot-clusters-1.html) |
+| 10.1116/1.590681 | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/lu1999-1-590681-oxidized-nanocrystalline-si-h-film-1.html) |
+| 10.1063/1.120973 | 1 | 2 | [Open](https://cuiyist.github.io/mattersyn-site/records/otobe1998-1-120973-surface-oxidized-nanocrystalline-silicon-1.html) |
+| 10.1063/1.2193466 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/pala2006-1-2193466-50-period-inas-gaas-quantum-dot-device-w-1.html) |
+| 10.1063/1.2081123 | 1 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/richter2005-1-2081123-hgte-ps-composite-tubes-1.html) |
+| 10.1021/nl902186v | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/sheldon2009-nl902186v-cdse-nanorods-1.html) |
+| 10.1116/1.1385916 | 6 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/shen2001-1-1385916-inas-quantum-dots-2-ml-multilayer-struct-1.html) |
+| 10.1063/1.1598645 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/tokranov2003-1-1598645-truncated-inas-quantum-dots-qds-with-6-n-1.html) |
+| 10.1002/anie.200703648 | 2 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/wang2008-anie-200703648-g-qd-c1-1.html) |
+| 10.1007/s11671-006-9003-y | 1 | 2 | [Open](https://cuiyist.github.io/mattersyn-site/records/x2006-s11671-006-9003-y-inas-qdms-1.html) |
+| 10.1063/1.2192288 | 1 | 10 | [Open](https://cuiyist.github.io/mattersyn-site/records/yu2006-1-2192288-cdse-nanocrystal-thin-film-treated-with-1.html) |
+| 10.1039/b914213d | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/zhang2009-b914213d-cdteps-composite-films-1.html) |
+| 10.1149/2.0171906jss | 3 | 7 | [Open](https://cuiyist.github.io/mattersyn-site/records/zheng2019-2-0171906jss-cds-qds-1.html) |
+| 10.1063/1.3204669 | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/zhou2009-1-3204669-surface-oxidized-si-nanocrystals-1.html) |
+| 10.1021/ja3029679 | 1 | 7 | [Open](https://cuiyist.github.io/mattersyn-site/records/zidek2012-ja3029679-cdse-qds-3-1-nm-on-zno-nws-1.html) |
 
 ## Latest continuation checkpoint
 
