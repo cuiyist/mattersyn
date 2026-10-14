@@ -1,0 +1,287 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "walters2006-physrevb-73-132302-silicon-nanocrystals-in-sio2-sample-a-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "R. J. Walters et al. (2006): Silicon nanocrystals in SiO2 (Sample A)",
+  "material": {
+    "formula": "Si",
+    "family": "Si nanocrystals",
+    "elements": [
+      "Si"
+    ],
+    "components": [
+      "Si"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Ion implantation",
+  "sources": [
+    {
+      "id": "walters2006-physrevb-73-132302",
+      "doi": "10.1103/physrevb.73.132302",
+      "title": "Photoluminescence quantum efficiency of dense silicon nanocrystal ensembles inSiO2",
+      "authors": "R. J. Walters, J. Kalkman, A. Polman, H. A. Atwater, and M. J. A. de Dood",
+      "year": 2006,
+      "url": "https://doi.org/10.1103/physrevb.73.132302",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "walters2006-physrevb-73-132302",
+    "recipe_family": "walters2006-physrevb-73-132302-silicon-nanocrystals-in-sio2-sample-a-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Si",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "walters2006-physrevb-73-132302",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "not specified",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "walters2006-physrevb-73-132302",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "walters2006-physrevb-73-132302-silicon-nanocrystals-in-sio2-sample-a-1--sio2",
+      "name": "SiO2",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "walters2006-physrevb-73-132302",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "walters2006-physrevb-73-132302-silicon-nanocrystals-in-sio2-sample-a-1--28si",
+      "name": "28Si+",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "walters2006-physrevb-73-132302",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "walters2006-physrevb-73-132302-silicon-nanocrystals-in-sio2-sample-a-1--after-s01-anneal",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "walters2006-physrevb-73-132302-silicon-nanocrystals-in-sio2-sample-a-1--sio2"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-anneal",
+      "action": "anneal",
+      "label": "Anneal to passivate surface defects",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "walters2006-physrevb-73-132302-silicon-nanocrystals-in-sio2-sample-a-1--sio2"
+      ],
+      "outputs": [
+        "walters2006-physrevb-73-132302-silicon-nanocrystals-in-sio2-sample-a-1--after-s01-anneal"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 450,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "450 °C",
+          "evidence": [
+            {
+              "source_id": "walters2006-physrevb-73-132302",
+              "locator": "Main PDF p.1"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 30,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "30 min",
+          "evidence": [
+            {
+              "source_id": "walters2006-physrevb-73-132302",
+              "locator": "Main PDF p.1"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Anneal to passivate surface defects",
+      "evidence": [
+        {
+          "source_id": "walters2006-physrevb-73-132302",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "walters2006-physrevb-73-132302-silicon-nanocrystals-in-sio2-sample-a-1--product",
+      "source_sample_label": "Silicon nanocrystals in SiO2 (Sample A)",
+      "batch_id": null,
+      "material_state_id": "walters2006-physrevb-73-132302-silicon-nanocrystals-in-sio2-sample-a-1--after-s01-anneal",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Si",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "walters2006-physrevb-73-132302",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": "not specified",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "walters2006-physrevb-73-132302",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": "not specified",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "walters2006-physrevb-73-132302",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "walters2006-physrevb-73-132302",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of SiO2 not reported in the extracted text.",
+      "Amount of 28Si+ not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

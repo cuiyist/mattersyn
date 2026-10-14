@@ -864,6 +864,8 @@ def _sanitize_content_uncached(path: str, raw: bytes, config: dict[str, Any] | N
 # by every caller. No cache is read from or written to disk.
 from collections import OrderedDict
 from threading import RLock
+from contextvars import ContextVar
+from functools import wraps
 
 _SANITATION_GUARD_VERSION = hashlib.sha256(Path(__file__).read_bytes()).hexdigest()
 _SANITATION_MEMO = OrderedDict()
@@ -874,6 +876,58 @@ _SANITATION_MEMO_OUTPUT_BYTES = 0
 _SANITATION_MEMO_ENABLED = True
 _SANITATION_MEMO_HITS = 0
 _SANITATION_MEMO_MISSES = 0
+_OPAQUE_SANITATION_SCOPE = ContextVar("opaque_sanitation_scope", default=None)
+_OPAQUE_SANITATION_ACTIVE = set()
+
+
+def _opaque_image_invocation(function):
+    """Keep opaque-image sanitation reuse inside this one export invocation."""
+    @wraps(function)
+    def invoke(*args, **kwargs):
+        global _SANITATION_MEMO_OUTPUT_BYTES
+        scope = object()
+        token = _OPAQUE_SANITATION_SCOPE.set(scope)
+        with _SANITATION_MEMO_LOCK:
+            _OPAQUE_SANITATION_ACTIVE.add(scope)
+        try:
+            return function(*args, **kwargs)
+        finally:
+            with _SANITATION_MEMO_LOCK:
+                _OPAQUE_SANITATION_ACTIVE.discard(scope)
+                for key in list(_SANITATION_MEMO):
+                    context = key[-1]
+                    if isinstance(context, tuple) and context and context[0] is scope:
+                        value = _SANITATION_MEMO.pop(key)
+                        if isinstance(value[1], bytes):
+                            _SANITATION_MEMO_OUTPUT_BYTES -= len(value[1])
+            _OPAQUE_SANITATION_SCOPE.reset(token)
+    return invoke
+
+
+def _opaque_image_context(path, raw, config):
+    scope = _OPAQUE_SANITATION_SCOPE.get()
+    if type(scope) is not object:
+        return None
+    with _SANITATION_MEMO_LOCK:
+        if scope not in _OPAQUE_SANITATION_ACTIVE:
+            return None
+    if (type(raw) is not bytes or
+            (config is not None and type(config) is not dict) or
+            type(_SECRET_PATTERNS) is not dict or
+            any(type(values) is not set for values in (IMAGE_SUFFIXES, TEXT_SUFFIXES, TEXT_FILENAMES))):
+        return None
+    suffix = PurePosixPath(path).suffix.casefold()
+    if (suffix not in IMAGE_SUFFIXES or suffix in TEXT_SUFFIXES or
+            PurePosixPath(path).name.casefold() in TEXT_FILENAMES):
+        return None
+    patterns = tuple(_SECRET_PATTERNS.items())
+    if any(type(name) is not str or type(pattern) is not re.Pattern for name, pattern in patterns):
+        return None
+    # Ordered immutable regexes retain the first failing pattern's exact reason.
+    # No rule, rights, review, filesystem identity or release verdict is cached.
+    return (scope, "opaque-image-v1", _sanitation_context(config), patterns,
+            frozenset(IMAGE_SUFFIXES), frozenset(TEXT_SUFFIXES), frozenset(TEXT_FILENAMES),
+            _sanitize_content_uncached, _is_image, PurePosixPath)
 
 
 def sanitation_memo_state(*, clear=False, enabled=None):
@@ -905,13 +959,13 @@ def _sanitize_content(path, raw, config=None, repo=None):
     global _SANITATION_MEMO_OUTPUT_BYTES
     if not _SANITATION_MEMO_ENABLED or not isinstance(raw, bytes):
         return _sanitize_content_uncached(path, raw, config, repo)
-    # Restrict the memo to the configuration-independent JSON branch. In
-    # particular CIF/SDF/XYZ with mutable exact COD exceptions always execute
-    # the original sanitizer: no raced or type-collapsed exception verdict can
-    # enter the memo or be inherited by a later call.
-    if PurePosixPath(path).suffix.casefold() not in {".json", ".jsonl", ".ndjson"}:
+    # JSON behavior is unchanged. Opaque images may reuse only the pure byte
+    # sanitation result inside one export; text/SVG and exact COD exceptions
+    # still execute the original sanitizer every time.
+    opaque = PurePosixPath(path).suffix.casefold() not in {".json", ".jsonl", ".ndjson"}
+    context = _opaque_image_context(path, raw, config) if opaque else _sanitation_context(config)
+    if opaque and context is None:
         return _sanitize_content_uncached(path, raw, config, repo)
-    context = _sanitation_context(config)
     try:
         key = (_SANITATION_GUARD_VERSION, repo, path, sha256(raw), len(raw), context)
         hash(key)
@@ -920,6 +974,8 @@ def _sanitize_content(path, raw, config=None, repo=None):
     with _SANITATION_MEMO_LOCK:
         hit = _SANITATION_MEMO.get(key)
         if hit is not None:
+            if opaque and _opaque_image_context(path, raw, config) != context:
+                return _sanitize_content_uncached(path, raw, config, repo)
             _SANITATION_MEMO.move_to_end(key)
             _SANITATION_MEMO_HITS += 1
             unchanged, output, reason, stats = hit
@@ -932,6 +988,8 @@ def _sanitize_content(path, raw, config=None, repo=None):
     if weight <= _SANITATION_MEMO_MAX_OUTPUT_BYTES:
         value = (unchanged, retained, reason, tuple(stats.items()))
         with _SANITATION_MEMO_LOCK:
+            if opaque and _opaque_image_context(path, raw, config) != context:
+                return output, reason, dict(stats)
             former = _SANITATION_MEMO.pop(key, None)
             if former and isinstance(former[1], bytes):
                 _SANITATION_MEMO_OUTPUT_BYTES -= len(former[1])
@@ -1314,6 +1372,7 @@ def validate_stage(root: str | Path, allowlist_path: str | Path, config: dict[st
     return manifest, report
 
 
+@_opaque_image_invocation
 def export_public_release(source_root: str | Path, destination: str | Path, allowlist_path: str | Path,
                           config: dict[str, Any], repo: str, manifest_path: str | Path,
                           report_path: str | Path) -> tuple[dict[str, Any], dict[str, Any]]:

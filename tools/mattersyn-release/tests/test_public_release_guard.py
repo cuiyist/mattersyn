@@ -1043,5 +1043,311 @@ class ScopedNamedCropTests(unittest.TestCase):
                         self.assertEqual(reason, "user_directed_display_source_path_ineligible")
 
 
+
+# BEGIN same-invocation opaque-image sanitation regressions; invented inputs only.
+import os
+import sys
+from unittest.mock import patch
+import public_release_guard as g
+HERE = Path(__file__).resolve().parent
+
+def opaque_config(path='assets/a.png', raw=b'PNG synthetic opaque fixture'):
+    asset = {'asset_hash': g.sha256(raw), 'classification': 'authored_diagram', 'source_bindings': [],
+             'delivery_paths': [{'repo': 'mattersyn-site', 'path': path, 'bytes': len(raw)}],
+             'rights': {'status': 'not_source_derived', 'attribution': 'Invented test fixture'}}
+    config = make_config(registry_assets=[asset])
+    config['path_rules'][0]['content_class'] = 'site_asset'
+    config['exact_blob_approval_classes'] = []
+    return config, asset, allow_entry(path, raw, content_class='site_asset')
+
+
+def within(function):
+    return g._opaque_image_invocation(function)()
+
+
+def entrypoint(source, config):
+    raw = b'<p>Invented test entrypoint</p>'
+    (source / 'index.html').write_bytes(raw)
+    rule = copy.deepcopy(config['path_rules'][0])
+    config['path_rules'][0]['path_glob'] = 'assets/*'
+    rule.update(path_glob='index.html', content_class='site_code', rule_id='invented-entrypoint')
+    config['path_rules'].append(rule)
+    return allow_entry('index.html', raw, content_class='site_code')
+
+
+class OpaqueMemoTests(unittest.TestCase):
+    def setUp(self):
+        g.sanitation_memo_state(clear=True, enabled=True)
+
+    def tearDown(self):
+        g.sanitation_memo_state(clear=True, enabled=True)
+
+    def test_opaque_cache_disabled_outside_single_invocation(self):
+        config, _, _ = opaque_config()
+        for _ in range(2): g._sanitize_content('assets/a.png', b'fixture', config, 'mattersyn-site')
+        self.assertEqual(g.sanitation_memo_state()['entries'], 0)
+        self.assertEqual(g.sanitation_memo_state()['hits'], 0)
+
+    def test_one_scope_reuses_exact_opaque_bytes_and_discards_entries(self):
+        config, _, _ = opaque_config()
+        def run():
+            expected = g._sanitize_content_uncached('assets/a.png', b'fixture', config, 'mattersyn-site')
+            self.assertEqual(expected, g._sanitize_content('assets/a.png', b'fixture', config, 'mattersyn-site'))
+            self.assertEqual(expected, g._sanitize_content('assets/a.png', b'fixture', config, 'mattersyn-site'))
+            state = g.sanitation_memo_state()
+            self.assertEqual((state['entries'], state['misses'], state['hits'], state['retained_output_bytes']), (1, 1, 1, 0))
+        within(run)
+        self.assertEqual(g.sanitation_memo_state()['entries'], 0)
+
+    def test_distinct_invocations_do_not_share_opaque_results(self):
+        config, _, _ = opaque_config()
+        for _ in range(2): within(lambda: g._sanitize_content('a.png', b'fixture', config, 'mattersyn-site'))
+        state = g.sanitation_memo_state()
+        self.assertEqual((state['entries'], state['hits'], state['misses']), (0, 0, 2))
+
+    def test_copied_context_after_export_lifetime_cannot_admit_or_reuse(self):
+        from contextvars import copy_context
+        saved = []
+        def run():
+            saved.append(copy_context())
+            g._sanitize_content('a.png', b'fixture')
+        within(run)
+        before = g.sanitation_memo_state()
+        for _ in range(2): saved[0].run(g._sanitize_content, 'a.png', b'fixture')
+        self.assertEqual(g.sanitation_memo_state(), before)
+        self.assertEqual(g.sanitation_memo_state()['entries'], 0)
+        self.assertEqual(g._OPAQUE_SANITATION_ACTIVE, set())
+
+    def test_exception_clears_scope_and_only_its_entries(self):
+        g._sanitize_content('a.json', b'{}')
+        def run():
+            g._sanitize_content('a.png', b'fixture')
+            raise RuntimeError('invented failure')
+        with self.assertRaisesRegex(RuntimeError, 'invented failure'): within(run)
+        self.assertIsNone(g._OPAQUE_SANITATION_SCOPE.get())
+        self.assertEqual(g.sanitation_memo_state()['entries'], 1)
+
+    def test_owner_exit_before_copied_context_store_leaves_no_dead_entry(self):
+        from contextvars import copy_context
+        import inspect
+        import threading
+        paused, resume = threading.Event(), threading.Event()
+        errors, workers = [], []
+        lines, first_line = inspect.getsourcelines(g._sanitize_content)
+        target = first_line + next(i for i, line in enumerate(lines) if 'value = (unchanged, retained' in line)
+        code = g._sanitize_content.__code__
+        def trace(frame, event, arg):
+            if frame.f_code is code and event == 'line' and frame.f_lineno == target:
+                paused.set()
+                if not resume.wait(5): raise RuntimeError('invented race timeout')
+                sys.settrace(None)
+            return trace
+        def consume(context):
+            try:
+                sys.settrace(trace)
+                context.run(g._sanitize_content, 'a.png', b'fixture')
+            except BaseException as error: errors.append(repr(error))
+            finally: sys.settrace(None)
+        def owner():
+            worker = threading.Thread(target=consume, args=(copy_context(),))
+            workers.append(worker); worker.start()
+            self.assertTrue(paused.wait(5))
+        try:
+            within(owner)
+            self.assertEqual(g._OPAQUE_SANITATION_ACTIVE, set())
+        finally:
+            resume.set()
+            for worker in workers: worker.join(5)
+        self.assertTrue(all(not worker.is_alive() for worker in workers))
+        self.assertEqual(errors, [])
+        self.assertEqual(g.sanitation_memo_state()['entries'], 0)
+
+    def test_nested_scope_keeps_outer_entry_until_outer_exit(self):
+        def outer():
+            g._sanitize_content('a.png', b'fixture')
+            within(lambda: g._sanitize_content('a.png', b'fixture'))
+            self.assertEqual(g.sanitation_memo_state()['entries'], 1)
+            g._sanitize_content('a.png', b'fixture')
+            self.assertEqual(g.sanitation_memo_state()['hits'], 1)
+        within(outer)
+        self.assertEqual(g.sanitation_memo_state()['entries'], 0)
+
+    def test_byte_path_repo_code_and_policy_pins_separate_keys(self):
+        config, _, _ = opaque_config()
+        def run():
+            for path, raw, repo in [('a.png', b'aaa', 'mattersyn-site'), ('a.png', b'bbb', 'mattersyn-site'),
+                                   ('b.png', b'aaa', 'mattersyn-site'), ('a.png', b'aaa', 'mattersyn')]:
+                g._sanitize_content(path, raw, config, repo)
+            config['policy_sha256'] = '1' * 64
+            g._sanitize_content('a.png', b'aaa', config, 'mattersyn-site')
+            config['asset_rights_registry_sha256'] = '2' * 64
+            g._sanitize_content('a.png', b'aaa', config, 'mattersyn-site')
+            with patch.object(g, '_SANITATION_GUARD_VERSION', 'different code'):
+                g._sanitize_content('a.png', b'aaa', config, 'mattersyn-site')
+            self.assertEqual(g.sanitation_memo_state()['misses'], 7)
+        within(run)
+
+    def test_pdf_disguise_and_every_secret_predicate_match_uncached(self):
+        samples = [b' \n%PDF-1.7 synthetic', b'-----BEGIN ' + b'PRIVATE KEY-----',
+                   b'ghp_' + b'A' * 40, b'sk-' + b'B' * 40, b'AKIA' + b'C' * 16,
+                   b'xoxb-' + b'D' * 25]
+        def run():
+            for i, raw in enumerate(samples):
+                path = str(i) + '.png'
+                expected = g._sanitize_content_uncached(path, raw)
+                self.assertIsNone(expected[0])
+                self.assertEqual(expected, g._sanitize_content(path, raw))
+                self.assertEqual(expected, g._sanitize_content(path, raw))
+        within(run)
+
+    def test_ordered_secret_patterns_flags_and_in_place_changes_invalidate(self):
+        raw = b'UPPER fixture'; config, _, _ = opaque_config()
+        patterns = {'one': re.compile(b'lower'), 'two': re.compile(b'other')}
+        with patch.object(g, '_SECRET_PATTERNS', patterns):
+            def run():
+                first = g._sanitize_content('a.png', raw, config)
+                self.assertIsNotNone(first[0])
+                patterns['one'] = re.compile(b'upper', re.I)
+                second = g._sanitize_content('a.png', raw, config)
+                self.assertEqual(second[1], 'credential_pattern_one')
+                patterns['two'] = re.compile(b'upper', re.I)
+                g._SECRET_PATTERNS = dict(reversed(list(patterns.items())))
+                third = g._sanitize_content('a.png', raw, config)
+                self.assertEqual(third[1], 'credential_pattern_two')
+                self.assertEqual(g.sanitation_memo_state()['misses'], 3)
+            within(run)
+
+    def test_changed_suffix_sets_or_text_filename_bypass_opaque_cache(self):
+        def run():
+            g._sanitize_content('a.png', b'normal')
+            with patch.object(g, 'IMAGE_SUFFIXES', set()):
+                self.assertEqual(g._sanitize_content('a.png', b'normal')[1], 'unclassified_binary_content')
+            with patch.object(g, 'TEXT_SUFFIXES', g.TEXT_SUFFIXES | {'.png'}):
+                self.assertEqual(g._sanitize_content('a.png', b'\xff')[1], 'invalid_text_encoding')
+            with patch.object(g, 'TEXT_FILENAMES', g.TEXT_FILENAMES | {'a.png'}):
+                self.assertEqual(g._sanitize_content('a.png', b'\xff')[1], 'invalid_text_encoding')
+            self.assertEqual(g.sanitation_memo_state()['entries'], 1)
+        within(run)
+
+    def test_raced_hit_pattern_change_cannot_reuse_old_safe_result(self):
+        from collections import OrderedDict
+        patterns = {'initial': re.compile(b'not-present')}
+        class RacedCache(OrderedDict):
+            armed = False
+            def get(self, key, default=None):
+                if self.armed:
+                    self.armed = False
+                    patterns['sentinel'] = re.compile(b'SENTINEL')
+                return super().get(key, default)
+        cache = RacedCache()
+        with patch.object(g, '_SECRET_PATTERNS', patterns), patch.object(g, '_SANITATION_MEMO', cache):
+            def run():
+                self.assertEqual(g._sanitize_content('a.png', b'SENTINEL')[1], 'unchanged')
+                cache.armed = True
+                self.assertEqual(g._sanitize_content('a.png', b'SENTINEL')[1], 'credential_pattern_sentinel')
+            within(run)
+
+    def test_raced_miss_pattern_change_is_not_stored_under_old_context(self):
+        patterns = {'initial': re.compile(b'not-present')}
+        original = g._sanitize_content_uncached
+        def changed(path, raw, config, repo):
+            patterns['sentinel'] = re.compile(b'SENTINEL')
+            return original(path, raw, config, repo)
+        with patch.object(g, '_SECRET_PATTERNS', patterns), patch.object(g, '_sanitize_content_uncached', side_effect=changed):
+            def run():
+                self.assertEqual(g._sanitize_content('a.png', b'SENTINEL')[1], 'credential_pattern_sentinel')
+                self.assertEqual(g.sanitation_memo_state()['entries'], 0)
+            within(run)
+
+    def test_svg_and_structure_still_uncached(self):
+        def run():
+            for path in ('a.svg', 'a.cif', 'a.sdf', 'a.xyz'):
+                for _ in range(2): g._sanitize_content(path, b'invented fixture')
+            self.assertEqual(g.sanitation_memo_state()['entries'], 0)
+        within(run)
+
+    def test_mutated_stats_do_not_change_cached_result_and_limits_hold(self):
+        def run():
+            with patch.object(g, '_SANITATION_MEMO_MAX_ENTRIES', 2):
+                for i in range(3): g._sanitize_content(str(i) + '.png', b'fixture')
+                result = g._sanitize_content('2.png', b'fixture')
+                result[2]['source_text_fields_removed'] = 100
+                self.assertEqual(g._sanitize_content('2.png', b'fixture')[2]['source_text_fields_removed'], 0)
+                self.assertEqual(g.sanitation_memo_state()['entries'], 2)
+                self.assertEqual(g.sanitation_memo_state()['retained_output_bytes'], 0)
+        within(run)
+
+    def test_rule_review_identity_and_rights_gates_remain_live(self):
+        path, raw = 'assets/a.png', b'PNG synthetic opaque fixture'
+        config, asset, entry = opaque_config(path, raw)
+        def run():
+            self.assertEqual(g.validate_allowlist_entry(path, raw, entry, config, 'mattersyn-site'), (raw, None))
+            self.assertEqual(g.validate_allowlist_entry(path, raw, entry, config, 'mattersyn-site'), (raw, None))
+            self.assertEqual(g.sanitation_memo_state()['hits'], 1)
+            asset['rights']['status'] = 'withheld'
+            self.assertEqual(g.validate_allowlist_entry(path, raw, entry, config, 'mattersyn-site')[1], 'asset_rights_withheld')
+            asset['rights']['status'] = 'not_source_derived'
+            entry['reviewer'] = ''
+            self.assertEqual(g.validate_allowlist_entry(path, raw, entry, config, 'mattersyn-site')[1], 'release_entry_review_incomplete')
+            entry['reviewer'] = 'synthetic-test-reviewer'
+            entry['sha256'] = 'f' * 64
+            self.assertEqual(g.validate_allowlist_entry(path, raw, entry, config, 'mattersyn-site')[1], 'source_file_hash_or_size_mismatch')
+            entry['sha256'] = g.sha256(raw)
+            config['path_rules'][0]['decision'] = 'omit'
+            self.assertIsNotNone(g.validate_allowlist_entry(path, raw, entry, config, 'mattersyn-site')[1])
+        within(run)
+
+    def test_source_crop_provenance_is_checked_after_cache_hit(self):
+        path, raw = 'assets/figures/example/figure-2.png', b'synthetic source figure'
+        asset = user_directed_figure(path, raw)
+        config = make_config(registry_assets=[asset]); config['exact_blob_approval_classes'] = []
+        config['path_rules'][0]['content_class'] = 'site_asset'
+        def run():
+            self.assertEqual(g.history_project('mattersyn-site', path, raw, config)['action'], 'allow')
+            self.assertEqual(g.history_project('mattersyn-site', path, raw, config)['action'], 'allow')
+            asset['source_bindings'] = []
+            self.assertEqual(g.history_project('mattersyn-site', path, raw, config)['action'], 'omit')
+        within(run)
+
+    def test_full_export_receipts_and_files_equal_disabled_cache(self):
+        with tempfile.TemporaryDirectory(dir=HERE) as td:
+            top = Path(td); source = top / 'source'; source.mkdir()
+            path, raw = 'assets/a.png', b'PNG synthetic opaque fixture'
+            config, _, entry = opaque_config(path, raw)
+            (source / 'assets').mkdir(); (source / path).write_bytes(raw)
+            allow = make_allowlist([entry, entrypoint(source, config)]); allow['asset_rights_registry_sha256'] = config['asset_rights_registry_sha256']
+            al = top / 'allowlist.json'; al.write_text(json.dumps(allow), encoding='utf-8')
+            g.sanitation_memo_state(enabled=False)
+            cold = g.export_public_release(source, top / 'cold', al, config, 'mattersyn-site', top / 'cold-manifest.json', top / 'cold-report.json')
+            g.sanitation_memo_state(clear=True, enabled=True)
+            warm = g.export_public_release(source, top / 'warm', al, config, 'mattersyn-site', top / 'warm-manifest.json', top / 'warm-report.json')
+            self.assertEqual(cold, warm)
+            self.assertEqual((top / 'cold-manifest.json').read_bytes(), (top / 'warm-manifest.json').read_bytes())
+            self.assertEqual((top / 'cold-report.json').read_bytes(), (top / 'warm-report.json').read_bytes())
+            self.assertEqual((top / 'cold' / path).read_bytes(), (top / 'warm' / path).read_bytes())
+            self.assertEqual((g.sanitation_memo_state()['hits'], g.sanitation_memo_state()['misses']), (1, 1))
+            self.assertEqual(g.sanitation_memo_state()['entries'], 0)
+
+    def test_export_stage_rereads_same_size_mutated_bytes(self):
+        with tempfile.TemporaryDirectory(dir=HERE) as td:
+            top = Path(td); source = top / 'source'; source.mkdir()
+            path, raw = 'assets/a.png', b'PNG synthetic opaque fixture'
+            config, _, entry = opaque_config(path, raw)
+            (source / 'assets').mkdir(); (source / path).write_bytes(raw)
+            allow = make_allowlist([entry, entrypoint(source, config)]); allow['asset_rights_registry_sha256'] = config['asset_rights_registry_sha256']
+            al = top / 'allowlist.json'; al.write_text(json.dumps(allow), encoding='utf-8')
+            actual = g.validate_stage
+            def tamper(root, *args):
+                target = Path(root) / path; stat = target.stat()
+                target.write_bytes(b'Z' + raw[1:]); os.utime(target, ns=(stat.st_atime_ns, stat.st_mtime_ns))
+                return actual(root, *args)
+            with patch.object(g, 'validate_stage', side_effect=tamper):
+                _, report = g.export_public_release(source, top / 'out', al, config, 'mattersyn-site', top / 'manifest.json', top / 'report.json')
+            self.assertEqual(report['status'], 'failed')
+            self.assertEqual(report['failures'][0]['reason_code'], 'staged_sha256_mismatch')
+            self.assertEqual(g.sanitation_memo_state()['entries'], 0)
+
+# END same-invocation opaque-image sanitation regressions.
+
 if __name__ == "__main__":
     unittest.main()
