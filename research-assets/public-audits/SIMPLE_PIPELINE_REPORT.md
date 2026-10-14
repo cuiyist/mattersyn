@@ -1,5 +1,27 @@
 # Simple pipeline website job
 
+## Dated private continuation update — 2026-10-14T04:13:35+00:00
+
+Root reports that normal B24 Source integration completed all integration phases PASS at 2026-10-14T04:13:35+00:00 (native execution reference 59743 returned exit 0), with status awaiting_root_asset_dry_run_review. The actual integration has 44 new records from 26 papers and 123 figures, 4,109 total records, and all 4,065 old records verified byte-identical. These are private integration results, not publication or independent scientific-audit credit. Strict bibliography/title/captions/assets and the normal Source/build/browser/CI/merge/deployment/anonymous gates remain next; B24 publication credit remains zero. B23 remains the latest verified publication, and the current machine index remains 712 papers / 1,080 records / 199 rare-read papers.
+
+Preserved dated continuation observation — 2026-10-14T04:11:41Z: Root reported B24 import (i) running under native execution reference 59743 at its start. The later 04:13:35 completion above does not rewrite that earlier observation. No new B40 process-presence/completion, model, training or audited-lane claim is inferred.
+
+
+## Current verified delivery and continuation — 2026-10-14T03:19:30+00:00
+
+B23 passed actual anonymous verification at 2026-10-14T03:13:08+00:00; normal proof records 26 papers, 37 records and 108 figures. Live totals are 956 contributing papers, 4,065 canonical records and 1,944 displayed pairs. Source PR41 merged as `7305fc3b52db15243982061d01f95465bd613472`; prepared Source `2759a043bd2d048f3939a277e145380565636c98` and Site `e047fa480d3e6a14d5010ff240960397793c3384` remain the release bindings.
+
+B24 remains private pending its own normal preparation and publication proof; final retained counts are unset. Prior extraction, caption and recovery observations remain dated history and add zero current live credit. No new completion, accuracy, scientific-audit or training claim is inferred. Protected 32B/CUDA and programme holdings remain preserved.
+
+Cleanup remains 324,947,723,133 logical bytes / 6,951,560 files, with 11,771,016,610 bytes separate lossless compression savings and locally retained original content. The 600 GB removal target remains unmet. The [actual cleanup report](https://github.com/cuiyist/mattersyn2/blob/be70d196b43d50ccde89922366d7c197ab1c666b/CLEANUP_REPORT_2026-10-12.md) observed C free space of 98,200,895,488 bytes at 2026-10-13T20:22:30.561219+00:00; this dated observation is distinct from removal accounting. The saved private preview register has 24 owner rows, without a fresh PID-presence or native CWD claim. Historical windows, audit questions, denominators and prior failures remain preserved.
+
+Latest separate cleanup attempt completed at 2026-10-14T02:30:03+00:00: all 12 B18-B21 generated-output scopes were held by the named/opaque programme-folder guard before complete target preflight. It removed 0 files/0 bytes, added 0 compression credit and stopped 0 programmes; the prior removal and separate compression totals remain unchanged. The historical culprit identity was not established; current diagnostics do not retroactively identify it.
+
+The [latest dated cleanup report](https://github.com/cuiyist/mattersyn2/blob/f494a70e9740ef2771a09b37d85e05862ff8515a/CLEANUP_REPORT_2026-10-12.md) preserves its cc039900 predecessor/history and records C free 24,146,292,736 bytes at 2026-10-14T02:59:55Z. This separate dated observation adds zero cleanup credit; earlier report/free-space observations remain history.
+
+
+Current private continuation checkpoint — 2026-10-14T03:19:30+00:00: Root reports B39 finished at 2026-10-14T03:14:59Z with 50 cohort papers, 38 successful two-pass papers, 36 checked files, 34 nonempty papers, 50 pairs, 204 checked crops and 221 generated figures; the original native OS exit is unknown and the saved checker exit is 0. B40 was actually launched at 2026-10-14T03:18:54.0840954Z for 41 supported inputs/nine identity holds under controller 27720 and the unchanged server 32512. This launch receipt does not establish current process presence or completion. B24 rare reads and integration remain private; finish the ready batch through all normal preparation, build, browser, CI, deployment and anonymous gates while B40 extraction proceeds. B39/B40 add zero publication, independent-audit or training credit. The audit lane, owner questions, denominator, prior failures and training status remain unchanged.
+
 ## Current verified delivery and continuation — 2026-10-14T00:39:45+00:00
 
 B22 passed actual anonymous verification at 2026-10-14T00:35:33+00:00; normal proof records 25 papers, 36 records and 103 figures. Live totals are 930 contributing papers, 4,028 canonical records and 1,907 displayed pairs. Source PR40 merged as `ac828b57a1540be3bc94eaae487b8947c50a8728`; prepared Source `1b1d78ddf2abbf916ff12fd682c1aff42aa248fa` and Site `c1bf287bf89584728a2808e805fd6727d813f6ae` remain the release bindings.
@@ -1190,6 +1212,47 @@ Recorded pages run: [38490190188](https://github.com/cuiyist/mattersyn-site/acti
 | 10.1063/1.1842861 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/xu2005-1-1842861-inas-quantum-dot-molecules-qdms-1.html) |
 | 10.1063/1.2834734 | 2 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/zhu2008-1-2834734-5-nm-diameter-cdse-zns-nqds-green-1.html) |
 
+### simple-batch23-20261013
+
+Anonymous verification passed at 2026-10-14T03:13:08+00:00: 425 files, zero mismatches. [Source commit](https://github.com/cuiyist/mattersyn/commit/2759a043bd2d048f3939a277e145380565636c98) and [Site commit](https://github.com/cuiyist/mattersyn-site/commit/e047fa480d3e6a14d5010ff240960397793c3384). This batch contains 26 source groups, 37 records and 108 source figure crops; 26 distinct newly contributing primary papers after DOI deduplication. Every new contribution remains machine extracted and not independently audited. The final built site is 2,095,408,719 bytes / 36,886 files.
+
+Live counter: **244 audited + 712 machine extracted = 956 papers**, 4,065 canonical records, 439 direct material families, 524 material/component pages and 1944 displayed recipe–structure pairs (6 more comprehensive; 1938 partial). These display counts do not establish extraction accuracy, measured atomic coordinates or training eligibility.
+
+Recorded source pr: [41](https://github.com/cuiyist/mattersyn/pull/41).
+
+Recorded source ci run: [38498407632](https://github.com/cuiyist/mattersyn/actions/runs/38498407632).
+
+Recorded pages run: [38504259265](https://github.com/cuiyist/mattersyn-site/actions/runs/38504259265).
+
+| Primary DOI | Records | Figure crops | Public page |
+| --- | ---: | ---: | --- |
+| 10.1021/bc900047n | 3 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/al-jamal2009-bc900047n-l-qd-hybrid-vesicles-dotap-dope-chol-1.html) |
+| 10.1021/jp3056009 | 2 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/benehkohal2012-jp3056009-pbses-800-nm-qds-1.html) |
+| 10.1021/la501692h | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/chen2014-la501692h-core-shell-microparticles-with-qd-tagged-1.html) |
+| 10.1039/c0cc02702b | 2 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/choi2010-c0cc02702b-qd-dpa-1.html) |
+| 10.1063/1.3243688 | 2 | 2 | [Open](https://cuiyist.github.io/mattersyn-site/records/dasika2009-1-3243688-inas-gaas-quantum-dots-qds-1.html) |
+| 10.1021/nn203227t | 1 | 2 | [Open](https://cuiyist.github.io/mattersyn-site/records/dorn2011-nn203227t-cdse-cds-nanocrystal-film-2.html) |
+| 10.1021/ja809436y | 2 | 7 | [Open](https://cuiyist.github.io/mattersyn-site/records/fritzinger2009-ja809436y-q-pbse-oa-1.html) |
+| 10.1021/jp301103f | 1 | 6 | [Open](https://cuiyist.github.io/mattersyn-site/records/gaponik2012-jp301103f-inp-zns-qd-chlorin-e6-hybrid-1.html) |
+| 10.1039/b921602b | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/jin2010-b921602b-fitcqd-1.html) |
+| 10.1103/physrevlett.101.227203 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/kioseoglou2008-physrevlett-101-227203-inas-quantum-dots-1.html) |
+| 10.1063/1.114701 | 2 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/leobandung1995-1-114701-si-quantum-dot-transistor-qdt-with-20-nm-1.html) |
+| 10.1063/1.1515881 | 1 | 2 | [Open](https://cuiyist.github.io/mattersyn-site/records/lin2002-1-1515881-cds-nanocrystal-coated-pmmapmaa-microsph-1.html) |
+| 10.1063/1.2778352 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/lina2007-1-2778352-nc-si-based-mosled-on-si-nanopillar-arra-1.html) |
+| 10.1063/1.1771460 | 1 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/lippen2004-1-1771460-inas-quantum-dot-qd-groups-on-gaas-311-b-1.html) |
+| 10.1889/1.1833941 | 4 | 9 | [Open](https://cuiyist.github.io/mattersyn-site/records/m-ihara1999-1-1833941-zns-tb-1.html) |
+| 10.1021/la202726g | 1 | 6 | [Open](https://cuiyist.github.io/mattersyn-site/records/norris2011-la202726g-cdse-nanocrystals-1.html) |
+| 10.1021/nl103906f | 2 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/ratchford2011-nl103906f-cdse-zns-quantum-dot-1.html) |
+| 10.1063/1.1566463 | 1 | 2 | [Open](https://cuiyist.github.io/mattersyn-site/records/seravalli2003-1-1566463-inas-quantum-dots-embedded-in-in0-15ga0-1.html) |
+| 10.1021/jz1002555 | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/shalom2010-jz1002555-tio2-cds-qd-amorphous-tio2-n719-dye-1.html) |
+| 10.1021/jz3010078 | 1 | 7 | [Open](https://cuiyist.github.io/mattersyn-site/records/shalom2012-jz3010078-cdse-qd-sensitized-solar-cell-with-multi-1.html) |
+| 10.1063/1.3491245 | 1 | 2 | [Open](https://cuiyist.github.io/mattersyn-site/records/shen2010-1-3491245-cdse-qd-sensitized-tio2-nanotube-solar-c-1.html) |
+| 10.1021/ja057959c | 1 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/shi2006-ja057959c-cdte-tspp-nanocomposites-1.html) |
+| 10.1021/nl100854e | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/text2010-nl100854e-pbse-nc-arrays-1.html) |
+| 10.1021/nl500043c | 1 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/wark2014-nl500043c-cds-nanorods-1.html) |
+| 10.1002/pssc.201000476 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/yamamoto2011-pssc-201000476-9-stacked-inas-ingaas-qd-laser-diode-wit-1.html) |
+| 10.1116/1.1949215 | 1 | 6 | [Open](https://cuiyist.github.io/mattersyn-site/records/ye2005-1-1949215-inas-gaas-quantum-dot-superlattices-sls-1.html) |
+
 ## Latest continuation checkpoint
 
 At 2026-10-11T06:09:34+00:00, Batch01 is live and anonymously verified; Batch02 remains in local processing with 47/49 two-pass-complete papers at its last saved checkpoint. These are processing counts, not additional published papers. The audited lane stays paused.
@@ -1813,3 +1876,20 @@ The [verified current cleanup report](https://github.com/cuiyist/mattersyn2/blob
 
 
 - 2026-10-14T01:31:25.939762+00:00: B23 first exact local q failed only in the full build: seven Slejko material-key errors from a primary-only test fixture and one synthetic serialization fixture missing the real source_paths dependency. Root updated four test modules to load the complete fixed registry and supplied the real dependency; every existing assertion remains, with one added split-output regression. Independent code-only review found no blocking issue. All 15 affected targeted tests passed; canonical records, both Reader parts, crops, rights, scientific predicates and release gates are unchanged. The failed q is preserved. A fresh normal preparation, commit and all-13-phase q are required; B23 still has zero publication credit.
+
+
+## Actual finalized B18 output cleanup R2 — 2026-10-14T04:10:42.0596927+00:00
+
+The admitted b18-stage, b18-candidate and b18-final cleanup completed its disposition loop with normal native exit 0, completed=true, aborted=false and no failure. Its final receipt confirms 20,200 files / 628,779,452 logical bytes actually removed; 84,845 files remained held, zero were missing, and no whole-scope hold was recorded. The other candidate batches were not admitted by this attempt. No directories or programmes were removed or stopped, and no Source/Site/private-original/model change was recorded. Retained output members add no removal credit.
+
+Confirmed cumulative logical removal is now 325,576,502,585 bytes / 6,971,760 files. Separate lossless compression remains 11,771,016,610 bytes with content retained locally; this attempt adds zero compression credit. The 600 GB removal target remains unmet. Original PDFs, page text, passes, quoted pairs, private audits, training originals, models/CUDA and active programme/preview holdings remain protected; this result grants no further cleanup admission.
+
+The executor observed C free space of 23,451,021,312 bytes before and 23,449,452,544 bytes after, an observed change of -1,568,768 bytes during concurrent work. This physical delta is not attributed to the cleanup; logical removal and observed free space are separate measurements. The earlier zero-removal/twelve-hold attempt and every prior dated cleanup observation remain unchanged history.
+
+The [latest remotely verified cleanup report](https://github.com/cuiyist/mattersyn2/blob/bb3658e8af9181a940fa8a933d3976dc660da015/CLEANUP_REPORT_2026-10-12.md) preserves the entire f494a70e9740ef2771a09b37d85e05862ff8515a report prefix; its report SHA256 is 985f4be1048b470ee33f8e300411989907adae5b5d7811ec36e2cad8aba71a47. This administrative update adds no publication, accuracy, training or independent-audit credit. Paused owner questions, denominators, histories and machine-index rows are unchanged.
+
+
+- 2026-10-14T15:12:08.821727+00:00: Batch 24 is privately integrated with 44 new source_extracted records; 123 of 123 retained figure captions are bound. Corrected 14 new title prefixes and their exact dependent labels/hash pointers. All 4,065 prior canonical records and scientific fields are unchanged. Normal Source/build/visual/CI and Site deployment/anonymous checks remain pending. This checkpoint adds zero publication or independent audit credit.
+
+
+- 2026-10-14T15:15:53.292636+00:00: Root observed no local8080 listener and absent prior server/controller at the morning progress check; the last saved B41 state was 2026-10-14T04:28:24Z, with zero completed papers. No uninterrupted overnight activity is claimed. Restored the same approved two-slot local Qwen CUDA configuration (server21160) and resumed the unchanged B41 controller14752 with47 identity-supported papers/3 holds; original partial payloads and failures are preserved. B24 actual captions123/123 and ordinary assets44records/233checked/222new pass, preserving4065 prior canonical records. Fixed only a missing json wrapper global, Windows/POSIX pin serialization, and owned-lock hashing through its held handle; normal scientific/check/release rules are unchanged. B23 remains latest live956papers/1944pairs; B24 earns zero publication credit until deployment/anonymous verification.
