@@ -796,12 +796,52 @@ def _unique_json_object(pairs: list[tuple[str, Any]]) -> dict[str, Any]:
     return out
 
 
+def _secret_literal_prefix_absent(name, pattern, raw, _known=(
+    ("github_token", _SECRET_PATTERNS["github_token"],
+     rb"\b(?:gh[pousr]_[A-Za-z0-9]{30,}|github_pat_[A-Za-z0-9_]{50,})", 0, (b"gh", b"github_pat_")),
+    ("openai_key_shape", _SECRET_PATTERNS["openai_key_shape"],
+     rb"\bsk-(?:proj-|svcacct-)?[A-Za-z0-9_-]{35,}", 0, (b"sk-",)),
+    ("aws_key_shape", _SECRET_PATTERNS["aws_key_shape"],
+     rb"\b(?:AKIA|ASIA)[A-Z0-9]{16}\b", 0, (b"AKIA", b"ASIA")),
+    ("slack_token_shape", _SECRET_PATTERNS["slack_token_shape"],
+     rb"\bxox[baprs]-[A-Za-z0-9-]{20,}", 0, (b"xox",)),
+)):
+    """False is always safe fallback; True only proves every branch impossible."""
+    if type(name) is not str or type(pattern) is not re.Pattern or type(raw) is not bytes:
+        return False
+    for known_name, original, expression, flags, prefixes in _known:
+        if name == known_name and pattern is original and pattern.pattern == expression and pattern.flags == flags:
+            return all(prefix not in raw for prefix in prefixes)
+    return False
+
+
+_SECRET_PREFIX_HELPER = _secret_literal_prefix_absent
+_SECRET_PREFIX_CODE = _secret_literal_prefix_absent.__code__
+_SECRET_PREFIX_DEFAULTS = _secret_literal_prefix_absent.__defaults__
+_SECRET_PREFIX_IMAGE_HELPER = _is_image
+_SECRET_PREFIX_PATH_CLASS = PurePosixPath
+
+
 def _sanitize_content_uncached(path: str, raw: bytes, config: dict[str, Any] | None = None, repo: str | None = None) -> tuple[bytes | None, str, dict[str, int]]:
     ext = PurePosixPath(path).suffix.casefold()
     if raw.lstrip().startswith(b"%PDF-"):
         return None, "original_source_document_or_archive", {}
+    # Only exact known case-sensitive image predicates get a necessary-prefix
+    # negative shortcut. Unknown/mutated code, patterns or types use old search.
     for secret_name, pattern in _SECRET_PATTERNS.items():
-        if pattern.search(raw):
+        # Recheck after every earlier fallback search; it may mutate helpers or configuration.
+        prefix_check = (_secret_literal_prefix_absent
+            if type(path) is str and type(raw) is bytes and
+            ext in (".png", ".jpg", ".jpeg", ".webp", ".gif", ".avif", ".tif", ".tiff", ".bmp") and
+            _is_image is _SECRET_PREFIX_IMAGE_HELPER and PurePosixPath is _SECRET_PREFIX_PATH_CLASS and
+            type(_SECRET_PATTERNS) is dict and
+            all(type(values) is set for values in (IMAGE_SUFFIXES, TEXT_SUFFIXES, TEXT_FILENAMES)) and
+            ext in IMAGE_SUFFIXES and ext not in TEXT_SUFFIXES and
+            PurePosixPath(path).name.casefold() not in TEXT_FILENAMES and
+            _secret_literal_prefix_absent is _SECRET_PREFIX_HELPER and
+            _secret_literal_prefix_absent.__code__ is _SECRET_PREFIX_CODE and
+            _secret_literal_prefix_absent.__defaults__ is _SECRET_PREFIX_DEFAULTS else None)
+        if (prefix_check is None or not prefix_check(secret_name, pattern, raw)) and pattern.search(raw):
             return None, "credential_pattern_" + secret_name, {}
     stats = {
         "source_text_fields_removed": 0,

@@ -1,3 +1,13 @@
+## Current verified delivery — B26
+
+Reports: [MACHINE_EXTRACTED_PAPERS.md](research-assets/public-audits/MACHINE_EXTRACTED_PAPERS.md), [single cumulative job report](research-assets/public-audits/SIMPLE_PIPELINE_REPORT.md), and [control](research-assets/curation-control.json).
+
+## Current verified delivery and continuation — B26, 2026-10-14T21:48:30+00:00
+
+B26 passed actual anonymous verification at 2026-10-14T21:43:41+00:00; normal proof records 23 papers, 31 records and 82 figures. Live totals are 1,038 contributing papers, 4,185 canonical records and 2,064 displayed pairs. Source PR44 merged as `af9111059c7487987b8b31bce105b0139e9e5116`; prepared Source `c6772925bdb56a9bd27ebf2769fe01a87f40378e` and Site `0fd2e50493187407b8ed10ebd94be9725d8c3ada` remain the release bindings. The actual built site is 2,165,483,354 bytes.
+
+Next simple-pipeline batches require their own normal release and anonymous proof; no future publication or current model/process state is asserted. The audited lane, open owner questions, sampled-record window/denominator, earlier failures, training exclusions and all dated cleanup observations remain unchanged. These source_extracted records add no independent-audit or training-ready credit, and this checkpoint makes no uninterrupted-work or measured-throughput claim.
+
 ## Current verified delivery — B25
 
 Reports: [MACHINE_EXTRACTED_PAPERS.md](research-assets/public-audits/MACHINE_EXTRACTED_PAPERS.md), [single cumulative job report](research-assets/public-audits/SIMPLE_PIPELINE_REPORT.md), and [control](research-assets/curation-control.json).
@@ -3622,3 +3632,6 @@ The [latest remotely verified cleanup report](https://github.com/cuiyist/matters
 
 
 - 2026-10-14T19:49:09.675417+00:00: Batch 26 is privately integrated with 31 new source_extracted records; 82 of 82 retained figure captions are bound. Corrected 9 new title prefixes and their exact dependent labels/hash pointers. All 4,154 prior canonical records and scientific fields are unchanged. Normal Source/build/visual/CI and Site deployment/anonymous checks remain pending. This checkpoint adds zero publication or independent audit credit.
+
+
+- 2026-10-14T22:09:05.687045+00:00: Batch 27 is privately integrated with 23 new source_extracted records; 60 of 60 retained figure captions are bound. Corrected 5 new title prefixes and their exact dependent labels/hash pointers. All 4,185 prior canonical records and scientific fields are unchanged. Normal Source/build/visual/CI and Site deployment/anonymous checks remain pending. This checkpoint adds zero publication or independent audit credit.

@@ -1,0 +1,680 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "al2004-pssc-200404766-inas-quantum-dots-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "C. Schulhauser et al. (2004): InAs quantum dots",
+  "material": {
+    "formula": "InAs",
+    "family": "InAs nanocrystals",
+    "elements": [
+      "In",
+      "As"
+    ],
+    "components": [
+      "InAs"
+    ],
+    "architecture": "heterostructure"
+  },
+  "method": "Molecular beam epitaxy",
+  "sources": [
+    {
+      "id": "al2004-pssc-200404766",
+      "doi": "10.1002/pssc.200404766",
+      "title": "Electronic quantum dot states induced through photon emission",
+      "authors": "C. Schulhauser; A. Högele; R. J. Warburton; A. O. Govorov; K. Karrai; J. M. Garcia; B. D. Gerardot; P. M. Petroff",
+      "year": 2004,
+      "url": "https://doi.org/10.1002/pssc.200404766",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "al2004-pssc-200404766",
+    "recipe_family": "al2004-pssc-200404766-inas-quantum-dots-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "InAs",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "al2004-pssc-200404766",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "crystal",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "al2004-pssc-200404766",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": 6.0,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "6 nm",
+      "evidence": [
+        {
+          "source_id": "al2004-pssc-200404766",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "island",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "al2004-pssc-200404766",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "al2004-pssc-200404766-inas-quantum-dots-1--inas",
+      "name": "InAs",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "al2004-pssc-200404766",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "al2004-pssc-200404766-inas-quantum-dots-1--gaas",
+      "name": "GaAs",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "al2004-pssc-200404766",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "al2004-pssc-200404766-inas-quantum-dots-1--si",
+      "name": "Si",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "al2004-pssc-200404766",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "al2004-pssc-200404766-inas-quantum-dots-1--after-s01-grow",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "al2004-pssc-200404766-inas-quantum-dots-1--after-s02-grow",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "al2004-pssc-200404766-inas-quantum-dots-1--after-s01-grow",
+        "al2004-pssc-200404766-inas-quantum-dots-1--si"
+      ]
+    },
+    {
+      "id": "al2004-pssc-200404766-inas-quantum-dots-1--after-s03-grow",
+      "name": "mixture after step 3",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "al2004-pssc-200404766-inas-quantum-dots-1--after-s02-grow"
+      ]
+    },
+    {
+      "id": "al2004-pssc-200404766-inas-quantum-dots-1--after-s04-grow",
+      "name": "mixture after step 4",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "al2004-pssc-200404766-inas-quantum-dots-1--after-s03-grow",
+        "al2004-pssc-200404766-inas-quantum-dots-1--inas"
+      ]
+    },
+    {
+      "id": "al2004-pssc-200404766-inas-quantum-dots-1--after-s05-anneal",
+      "name": "mixture after step 5",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "al2004-pssc-200404766-inas-quantum-dots-1--after-s04-grow",
+        "al2004-pssc-200404766-inas-quantum-dots-1--gaas"
+      ]
+    },
+    {
+      "id": "al2004-pssc-200404766-inas-quantum-dots-1--after-s06-grow",
+      "name": "mixture after step 6",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "al2004-pssc-200404766-inas-quantum-dots-1--after-s05-anneal",
+        "al2004-pssc-200404766-inas-quantum-dots-1--gaas"
+      ]
+    },
+    {
+      "id": "al2004-pssc-200404766-inas-quantum-dots-1--after-s07-grow",
+      "name": "mixture after step 7",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "al2004-pssc-200404766-inas-quantum-dots-1--after-s06-grow",
+        "al2004-pssc-200404766-inas-quantum-dots-1--gaas"
+      ]
+    },
+    {
+      "id": "al2004-pssc-200404766-inas-quantum-dots-1--after-s08-grow",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "al2004-pssc-200404766-inas-quantum-dots-1--after-s07-grow",
+        "al2004-pssc-200404766-inas-quantum-dots-1--gaas"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-grow",
+      "action": "grow",
+      "label": "Grow GaAs buffer layer",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "al2004-pssc-200404766-inas-quantum-dots-1--after-s01-grow"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Grow GaAs buffer layer",
+      "evidence": [
+        {
+          "source_id": "al2004-pssc-200404766",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-grow",
+      "action": "grow",
+      "label": "Grow n+ doped GaAs layer",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-grow"
+      ],
+      "inputs": [
+        "al2004-pssc-200404766-inas-quantum-dots-1--after-s01-grow",
+        "al2004-pssc-200404766-inas-quantum-dots-1--si"
+      ],
+      "outputs": [
+        "al2004-pssc-200404766-inas-quantum-dots-1--after-s02-grow"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Grow n+ doped GaAs layer",
+      "evidence": [
+        {
+          "source_id": "al2004-pssc-200404766",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-grow",
+      "action": "grow",
+      "label": "Grow undoped GaAs barrier layer",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-grow"
+      ],
+      "inputs": [
+        "al2004-pssc-200404766-inas-quantum-dots-1--after-s02-grow"
+      ],
+      "outputs": [
+        "al2004-pssc-200404766-inas-quantum-dots-1--after-s03-grow"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Grow undoped GaAs barrier layer",
+      "evidence": [
+        {
+          "source_id": "al2004-pssc-200404766",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s04-grow",
+      "action": "grow",
+      "label": "Grow InAs quantum dots",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s03-grow"
+      ],
+      "inputs": [
+        "al2004-pssc-200404766-inas-quantum-dots-1--after-s03-grow",
+        "al2004-pssc-200404766-inas-quantum-dots-1--inas"
+      ],
+      "outputs": [
+        "al2004-pssc-200404766-inas-quantum-dots-1--after-s04-grow"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Grow InAs quantum dots",
+      "evidence": [
+        {
+          "source_id": "al2004-pssc-200404766",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s05-anneal",
+      "action": "anneal",
+      "label": "Anneal GaAs layer",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s04-grow"
+      ],
+      "inputs": [
+        "al2004-pssc-200404766-inas-quantum-dots-1--after-s04-grow",
+        "al2004-pssc-200404766-inas-quantum-dots-1--gaas"
+      ],
+      "outputs": [
+        "al2004-pssc-200404766-inas-quantum-dots-1--after-s05-anneal"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 520,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "520 °C",
+          "evidence": [
+            {
+              "source_id": "al2004-pssc-200404766",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1 min",
+          "evidence": [
+            {
+              "source_id": "al2004-pssc-200404766",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Anneal GaAs layer",
+      "evidence": [
+        {
+          "source_id": "al2004-pssc-200404766",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s06-grow",
+      "action": "grow",
+      "label": "Grow GaAs capping layer",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s05-anneal"
+      ],
+      "inputs": [
+        "al2004-pssc-200404766-inas-quantum-dots-1--after-s05-anneal",
+        "al2004-pssc-200404766-inas-quantum-dots-1--gaas"
+      ],
+      "outputs": [
+        "al2004-pssc-200404766-inas-quantum-dots-1--after-s06-grow"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Grow GaAs capping layer",
+      "evidence": [
+        {
+          "source_id": "al2004-pssc-200404766",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s07-grow",
+      "action": "grow",
+      "label": "Grow AlAs/GaAs superlattice",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s06-grow"
+      ],
+      "inputs": [
+        "al2004-pssc-200404766-inas-quantum-dots-1--after-s06-grow",
+        "al2004-pssc-200404766-inas-quantum-dots-1--gaas"
+      ],
+      "outputs": [
+        "al2004-pssc-200404766-inas-quantum-dots-1--after-s07-grow"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Grow AlAs/GaAs superlattice",
+      "evidence": [
+        {
+          "source_id": "al2004-pssc-200404766",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s08-grow",
+      "action": "grow",
+      "label": "Grow GaAs layer",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s07-grow"
+      ],
+      "inputs": [
+        "al2004-pssc-200404766-inas-quantum-dots-1--after-s07-grow",
+        "al2004-pssc-200404766-inas-quantum-dots-1--gaas"
+      ],
+      "outputs": [
+        "al2004-pssc-200404766-inas-quantum-dots-1--after-s08-grow"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Grow GaAs layer",
+      "evidence": [
+        {
+          "source_id": "al2004-pssc-200404766",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "al2004-pssc-200404766-inas-quantum-dots-1--product",
+      "source_sample_label": "InAs quantum dots",
+      "batch_id": null,
+      "material_state_id": "al2004-pssc-200404766-inas-quantum-dots-1--after-s08-grow",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "InAs",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "al2004-pssc-200404766",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "crystal",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "al2004-pssc-200404766",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "island",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "al2004-pssc-200404766",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "al2004-pssc-200404766",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [
+    {
+      "id": "al2004-pssc-200404766-inas-quantum-dots-1--size",
+      "sample_id": "al2004-pssc-200404766-inas-quantum-dots-1--product",
+      "property": "particle_size",
+      "technique": "not reported",
+      "value": {
+        "value": 6.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "6 nm",
+        "evidence": [
+          {
+            "source_id": "al2004-pssc-200404766",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "al2004-pssc-200404766",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Ligand not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of InAs not reported in the extracted text.",
+      "Amount of GaAs not reported in the extracted text.",
+      "Amount of Si not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
