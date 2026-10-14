@@ -1,0 +1,392 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "ishikawa2000-1-125691-inas-single-quantum-dot-array-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Tomonori Ishikawa (2000): InAs single quantum-dot array",
+  "material": {
+    "formula": "InAs",
+    "family": "InAs nanocrystals",
+    "elements": [
+      "In",
+      "As"
+    ],
+    "components": [
+      "InAs"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "In situ electron-beam lithography and self-organized molecular-beam epitaxy",
+  "sources": [
+    {
+      "id": "ishikawa2000-1-125691",
+      "doi": "10.1063/1.125691",
+      "title": "Site-controlled InAs single quantum-dot structures on GaAs surfaces patterned by in situ electron-beam lithography",
+      "authors": "Tomonori Ishikawa, Tetsuya Nishimura, Shigeru Kohmoto, and Kiyoshi Asakawa",
+      "year": 2000,
+      "url": "https://doi.org/10.1063/1.125691",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "ishikawa2000-1-125691",
+    "recipe_family": "ishikawa2000-1-125691-inas-single-quantum-dot-array-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": 30,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "30 nm",
+      "evidence": [
+        {
+          "source_id": "ishikawa2000-1-125691",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "ishikawa2000-1-125691-inas-single-quantum-dot-array-1--gaas",
+      "name": "GaAs",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "ishikawa2000-1-125691",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "ishikawa2000-1-125691-inas-single-quantum-dot-array-1--after-s01-grow",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "ishikawa2000-1-125691-inas-single-quantum-dot-array-1--gaas"
+      ]
+    },
+    {
+      "id": "ishikawa2000-1-125691-inas-single-quantum-dot-array-1--after-s02-grow",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "ishikawa2000-1-125691-inas-single-quantum-dot-array-1--after-s01-grow",
+        "ishikawa2000-1-125691-inas-single-quantum-dot-array-1--gaas"
+      ]
+    },
+    {
+      "id": "ishikawa2000-1-125691-inas-single-quantum-dot-array-1--after-s03-supply",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "ishikawa2000-1-125691-inas-single-quantum-dot-array-1--after-s02-grow"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-grow",
+      "action": "grow",
+      "label": "Grow GaAs buffer layer by molecular-beam epitaxy",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "ishikawa2000-1-125691-inas-single-quantum-dot-array-1--gaas"
+      ],
+      "outputs": [
+        "ishikawa2000-1-125691-inas-single-quantum-dot-array-1--after-s01-grow"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "ultra-high vacuum",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ishikawa2000-1-125691",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Grow GaAs buffer layer by molecular-beam epitaxy",
+      "evidence": [
+        {
+          "source_id": "ishikawa2000-1-125691",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-grow",
+      "action": "grow",
+      "label": "Grow second GaAs buffer layer",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-grow"
+      ],
+      "inputs": [
+        "ishikawa2000-1-125691-inas-single-quantum-dot-array-1--after-s01-grow",
+        "ishikawa2000-1-125691-inas-single-quantum-dot-array-1--gaas"
+      ],
+      "outputs": [
+        "ishikawa2000-1-125691-inas-single-quantum-dot-array-1--after-s02-grow"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 550,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "550 °C",
+          "evidence": [
+            {
+              "source_id": "ishikawa2000-1-125691",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "ultra-high vacuum",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ishikawa2000-1-125691",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Grow second GaAs buffer layer",
+      "evidence": [
+        {
+          "source_id": "ishikawa2000-1-125691",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-supply",
+      "action": "supply",
+      "label": "Supply InAs for SK growth",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-grow"
+      ],
+      "inputs": [
+        "ishikawa2000-1-125691-inas-single-quantum-dot-array-1--after-s02-grow"
+      ],
+      "outputs": [
+        "ishikawa2000-1-125691-inas-single-quantum-dot-array-1--after-s03-supply"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 460,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "460 °C",
+          "evidence": [
+            {
+              "source_id": "ishikawa2000-1-125691",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "ultra-high vacuum",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ishikawa2000-1-125691",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Supply InAs for SK growth",
+      "evidence": [
+        {
+          "source_id": "ishikawa2000-1-125691",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "ishikawa2000-1-125691-inas-single-quantum-dot-array-1--product",
+      "source_sample_label": "InAs single quantum-dot array",
+      "batch_id": null,
+      "material_state_id": "ishikawa2000-1-125691-inas-single-quantum-dot-array-1--after-s03-supply",
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "ishikawa2000-1-125691",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reactor: molecular-beam epitaxy system (Main PDF p.2).",
+        "Reaction temperature: 460 degC (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "ishikawa2000-1-125691-inas-single-quantum-dot-array-1--size",
+      "sample_id": "ishikawa2000-1-125691-inas-single-quantum-dot-array-1--product",
+      "property": "particle_size",
+      "technique": "not reported",
+      "value": {
+        "value": 30,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "30 nm",
+        "evidence": [
+          {
+            "source_id": "ishikawa2000-1-125691",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "ishikawa2000-1-125691",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of GaAs not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
