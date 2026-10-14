@@ -1,0 +1,282 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "kioseoglou2008-physrevlett-101-227203-inas-quantum-dots-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "G. Kioseoglou (2008): InAs quantum dots",
+  "material": {
+    "formula": "InAs",
+    "family": "InAs nanocrystals",
+    "elements": [
+      "In",
+      "As"
+    ],
+    "components": [
+      "InAs"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Synthesis as described in the source",
+  "sources": [
+    {
+      "id": "kioseoglou2008-physrevlett-101-227203",
+      "doi": "10.1103/physrevlett.101.227203",
+      "title": "Intershell Exchange and Sequential Electrically Injected Spin Populations of InAs Quantum-Dot Shell States",
+      "authors": "G. Kioseoglou, M. Yasar, C. H. Li, M. Korkusinski, M. Diaz-Avila, A. T. Hanbicki, P. Hawrylak, A. Petrou, and B. T. Jonker",
+      "year": 2008,
+      "url": "https://doi.org/10.1103/physrevlett.101.227203",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "kioseoglou2008-physrevlett-101-227203",
+    "recipe_family": "kioseoglou2008-physrevlett-101-227203-inas-quantum-dots-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "InAs",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "kioseoglou2008-physrevlett-101-227203",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "kioseoglou2008-physrevlett-101-227203-inas-quantum-dots-1--inas",
+      "name": "InAs",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "kioseoglou2008-physrevlett-101-227203",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "kioseoglou2008-physrevlett-101-227203-inas-quantum-dots-1--after-s01-grow",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "kioseoglou2008-physrevlett-101-227203-inas-quantum-dots-1--after-s02-grow",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "kioseoglou2008-physrevlett-101-227203-inas-quantum-dots-1--after-s01-grow",
+        "kioseoglou2008-physrevlett-101-227203-inas-quantum-dots-1--inas"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-grow",
+      "action": "grow",
+      "label": "Grow quantum well structure",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "kioseoglou2008-physrevlett-101-227203-inas-quantum-dots-1--after-s01-grow"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Grow quantum well structure",
+      "evidence": [
+        {
+          "source_id": "kioseoglou2008-physrevlett-101-227203",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "s02-grow",
+      "action": "grow",
+      "label": "Grow InAs quantum dot layer",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-grow"
+      ],
+      "inputs": [
+        "kioseoglou2008-physrevlett-101-227203-inas-quantum-dots-1--after-s01-grow",
+        "kioseoglou2008-physrevlett-101-227203-inas-quantum-dots-1--inas"
+      ],
+      "outputs": [
+        "kioseoglou2008-physrevlett-101-227203-inas-quantum-dots-1--after-s02-grow"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 500,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "500 °C",
+          "evidence": [
+            {
+              "source_id": "kioseoglou2008-physrevlett-101-227203",
+              "locator": "Main PDF p.1"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Grow InAs quantum dot layer",
+      "evidence": [
+        {
+          "source_id": "kioseoglou2008-physrevlett-101-227203",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "kioseoglou2008-physrevlett-101-227203-inas-quantum-dots-1--product",
+      "source_sample_label": "InAs quantum dots",
+      "batch_id": null,
+      "material_state_id": "kioseoglou2008-physrevlett-101-227203-inas-quantum-dots-1--after-s02-grow",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "InAs",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "kioseoglou2008-physrevlett-101-227203",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "kioseoglou2008-physrevlett-101-227203",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "notes": [
+        "Reaction temperature: 500 degC (Main PDF p.1)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of InAs not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

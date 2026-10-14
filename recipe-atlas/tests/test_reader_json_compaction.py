@@ -20,6 +20,7 @@ def load(name, relative):
 
 CONVERTER = load('compaction_converter', 'tools/simple-pipeline/to_site.py')
 CAPTIONS = load('compaction_captions', 'tools/simple-pipeline/local_caption_backfill.py')
+REGISTRY = load('compaction_registry', 'recipe-atlas/scripts/reader_presentation_registry.py')
 
 
 def sample():
@@ -66,7 +67,8 @@ def emit_build_projection(target, source, data, view):
         raise AssertionError('Expected one unchanged identity/filtered serialization branch')
     code = compile(ast.fix_missing_locations(ast.Module(body=[copy.deepcopy(candidates[0])], type_ignores=[])),
                    '<synthetic-reader-serialization>', 'exec')
-    exec(code, {'target': target, 'source': source, 'data': data, 'view': view, 'json': json})
+    exec(code, {'target': target, 'source': source, 'data': data, 'view': view,
+                'json': json, 'source_paths': REGISTRY.source_paths})
 
 
 class ReaderJsonCompactionTests(unittest.TestCase):
@@ -141,7 +143,9 @@ class ReaderJsonCompactionTests(unittest.TestCase):
 
     def test_unfiltered_build_keeps_exact_source_bytes(self):
         with tempfile.TemporaryDirectory(prefix='mattersyn-reader-compact-') as tmp:
-            source, target = Path(tmp) / 'source.json', Path(tmp) / 'reader-presentation.json'
+            folder = Path(tmp) / 'data'
+            folder.mkdir()
+            source, target = folder / REGISTRY.BASE, Path(tmp) / 'reader-presentation.json'
             data = sample()
             source.write_bytes((json.dumps(data, ensure_ascii=False, separators=(',', ':')) + '\n').encode())
             emit_build_projection(target, source, data, data)
@@ -149,7 +153,9 @@ class ReaderJsonCompactionTests(unittest.TestCase):
 
     def test_filtered_build_compacts_only_existing_display_view(self):
         with tempfile.TemporaryDirectory(prefix='mattersyn-reader-compact-') as tmp:
-            source, target = Path(tmp) / 'source.json', Path(tmp) / 'reader-presentation.json'
+            folder = Path(tmp) / 'data'
+            folder.mkdir()
+            source, target = folder / REGISTRY.BASE, Path(tmp) / 'reader-presentation.json'
             data = sample()
             source.write_bytes((json.dumps(data, ensure_ascii=False, indent=2) + '\n').encode())
             original = source.read_bytes()
@@ -159,6 +165,23 @@ class ReaderJsonCompactionTests(unittest.TestCase):
             assert_same(self, target.read_bytes(), view)
             self.assertEqual(target.read_bytes(), (json.dumps(view, ensure_ascii=False, separators=(',', ':')) + '\n').encode())
             self.assertEqual(source.read_bytes(), original)
+
+    def test_split_build_emits_complete_unfiltered_combination(self):
+        with tempfile.TemporaryDirectory(prefix='mattersyn-reader-split-projection-') as tmp:
+            source = Path(tmp) / 'data' / REGISTRY.BASE
+            target = Path(tmp) / 'reader-presentation.json'
+            data = sample()
+            REGISTRY.write_reviewed_reader(source, data, True)
+            originals = {p: p.read_bytes() for p in REGISTRY.source_paths(source)}
+            self.assertEqual(len(originals), 2)
+            combined = REGISTRY.load_reviewed_reader(source)
+            emit_build_projection(target, source, combined, combined)
+            assert_same(self, target.read_bytes(), data)
+            self.assertNotIn(REGISTRY.MARKER, json.loads(target.read_bytes()))
+            self.assertEqual(target.read_bytes(),
+                             (json.dumps(data, ensure_ascii=False, separators=(',', ':')) + '\n').encode())
+            for path, raw in originals.items():
+                self.assertEqual(path.read_bytes(), raw)
 
 
 if __name__ == '__main__':

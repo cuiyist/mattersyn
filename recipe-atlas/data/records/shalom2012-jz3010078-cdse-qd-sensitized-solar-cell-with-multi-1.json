@@ -1,0 +1,331 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "shalom2012-jz3010078-cdse-qd-sensitized-solar-cell-with-multi-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Menny Shalom (2012): CdSe QD-sensitized solar cell with multilayer QDs deposited on large TiO2 particles",
+  "material": {
+    "formula": "CdSe",
+    "family": "CdSe nanocrystals",
+    "elements": [
+      "Cd",
+      "Se"
+    ],
+    "components": [
+      "CdSe"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Chemical bath deposition",
+  "sources": [
+    {
+      "id": "shalom2012-jz3010078",
+      "doi": "10.1021/jz3010078",
+      "title": "Design Rules for High-Efficiency Quantum-Dot-Sensitized Solar Cells: A Multilayer Approach",
+      "authors": "Menny Shalom, Sophia Buhbut, Shay Tirosh, and Arie Zaban",
+      "year": 2012,
+      "url": "https://doi.org/10.1021/jz3010078",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "shalom2012-jz3010078",
+    "recipe_family": "shalom2012-jz3010078-cdse-qd-sensitized-solar-cell-with-multi-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "shalom2012-jz3010078-cdse-qd-sensitized-solar-cell-with-multi-1--cd-clo4-2",
+      "name": "Cd(ClO4)2",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "concentration": {
+          "value": 0.1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "M",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0.1 M",
+          "evidence": [
+            {
+              "source_id": "shalom2012-jz3010078",
+              "locator": "Main PDF p.4"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "shalom2012-jz3010078",
+          "locator": "Main PDF p.4"
+        }
+      ]
+    },
+    {
+      "id": "shalom2012-jz3010078-cdse-qd-sensitized-solar-cell-with-multi-1--na2s",
+      "name": "Na2S",
+      "formula": null,
+      "role": "chalcogen_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "concentration": {
+          "value": 0.1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "M",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0.1 M",
+          "evidence": [
+            {
+              "source_id": "shalom2012-jz3010078",
+              "locator": "Main PDF p.4"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "shalom2012-jz3010078",
+          "locator": "Main PDF p.4"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "shalom2012-jz3010078-cdse-qd-sensitized-solar-cell-with-multi-1--after-s01-dip",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "shalom2012-jz3010078-cdse-qd-sensitized-solar-cell-with-multi-1--cd-clo4-2"
+      ]
+    },
+    {
+      "id": "shalom2012-jz3010078-cdse-qd-sensitized-solar-cell-with-multi-1--after-s02-dip",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "shalom2012-jz3010078-cdse-qd-sensitized-solar-cell-with-multi-1--after-s01-dip",
+        "shalom2012-jz3010078-cdse-qd-sensitized-solar-cell-with-multi-1--na2s"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-dip",
+      "action": "dip",
+      "label": "TiO2 electrodes dipped into Cd(ClO4)2 solution",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "shalom2012-jz3010078-cdse-qd-sensitized-solar-cell-with-multi-1--cd-clo4-2"
+      ],
+      "outputs": [
+        "shalom2012-jz3010078-cdse-qd-sensitized-solar-cell-with-multi-1--after-s01-dip"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1 min",
+          "evidence": [
+            {
+              "source_id": "shalom2012-jz3010078",
+              "locator": "Main PDF p.4"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "TiO2 electrodes dipped into Cd(ClO4)2 solution",
+      "evidence": [
+        {
+          "source_id": "shalom2012-jz3010078",
+          "locator": "Main PDF p.4"
+        }
+      ]
+    },
+    {
+      "id": "s02-dip",
+      "action": "dip",
+      "label": "TiO2 electrodes immersed into Na2S solution",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-dip"
+      ],
+      "inputs": [
+        "shalom2012-jz3010078-cdse-qd-sensitized-solar-cell-with-multi-1--after-s01-dip",
+        "shalom2012-jz3010078-cdse-qd-sensitized-solar-cell-with-multi-1--na2s"
+      ],
+      "outputs": [
+        "shalom2012-jz3010078-cdse-qd-sensitized-solar-cell-with-multi-1--after-s02-dip"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "TiO2 electrodes immersed into Na2S solution",
+      "evidence": [
+        {
+          "source_id": "shalom2012-jz3010078",
+          "locator": "Main PDF p.4"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "shalom2012-jz3010078-cdse-qd-sensitized-solar-cell-with-multi-1--product",
+      "source_sample_label": "CdSe QD-sensitized solar cell with multilayer QDs deposited on large TiO2 particles",
+      "batch_id": null,
+      "material_state_id": "shalom2012-jz3010078-cdse-qd-sensitized-solar-cell-with-multi-1--after-s02-dip",
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "shalom2012-jz3010078",
+          "locator": "Main PDF p.4"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

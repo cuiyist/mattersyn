@@ -1,16 +1,19 @@
 """A figure-level illustration must stay attached to its actual displayed source."""
 import hashlib
 import json
+import sys
 from pathlib import Path
 import unittest
 import xml.etree.ElementTree as ET
 
 ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / 'scripts'))
+from reader_presentation_registry import load_reviewed_reader
 
 class FigureMorphologyTests(unittest.TestCase):
     def test_every_interpretation_is_hash_bound_and_separate_from_recipe_evidence(self):
         data=json.loads((ROOT/'static/data/reader-figure-morphology.json').read_text(encoding='utf-8'))
-        presentation=json.loads((ROOT/'data/reader-presentation-reviewed.json').read_text(encoding='utf-8'))['records']
+        presentation=load_reviewed_reader(ROOT/'data/reader-presentation-reviewed.json')['records']
         seen=set()
         for entry in data['entries']:
             with self.subTest(entry=entry['id']):

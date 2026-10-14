@@ -13,6 +13,8 @@ automatically, not yet reviewed by an expert. They are never marked as reviewed.
 from __future__ import annotations
 import argparse, json, re, sys, unicodedata
 from pathlib import Path
+sys.path.insert(0,str(Path(__file__).resolve().parents[2]/'recipe-atlas/scripts'))
+from reader_presentation_registry import load_reviewed_reader, source_paths, write_reviewed_reader
 
 REVIEW_SCOPE = ('Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was '
                 'produced by two separate local-model extraction passes that agree. It has not been independently audited.')
@@ -34,6 +36,8 @@ def public_figure_caption(figure):
 
 def dump_like(path, data):
     """Write JSON in the style the file already has (line endings, final newline), so only real changes show up."""
+    if Path(path).name=='reader-presentation-reviewed.json' and Path(path).parent.name=='data' and Path(path).is_file() and len(source_paths(path))==2:
+        write_reviewed_reader(path,data);return
     raw = Path(path).read_bytes() if Path(path).is_file() else b'\n'
     # Compact only the large Reader sidecar; canonical/generic JSON stays unchanged.
     options = {'separators': (',', ':')} if Path(path).name == 'reader-presentation-reviewed.json' else {'indent': 2}
@@ -336,7 +340,7 @@ def cmd_sync(a):
     """Write step diagrams, figures and the Reader entries for extracted records; align material pages with a build's hubs."""
     import hashlib, shutil
     repo = Path(a.repo); atlas = repo / 'recipe-atlas'; pairs_dir = Path(a.pairs)
-    side_path = atlas / 'data/reader-presentation-reviewed.json'; side = json.loads(side_path.read_text(encoding='utf-8-sig'))
+    side_path = atlas / 'data/reader-presentation-reviewed.json'; side = load_reviewed_reader(side_path)
     new_assets = []
     side_changed = False
     inventory = json.loads((atlas / 'data/inventory-evidence.json').read_text(encoding='utf-8'))

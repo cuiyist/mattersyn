@@ -1,0 +1,266 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "m-ihara1999-1-1833941-zns-euf3-4",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "M.Ihara (1999): ZnS:EuF3",
+  "material": {
+    "formula": "ZnS:EuF3",
+    "family": "ZnS:EuF3 nanocrystals",
+    "elements": [
+      "Zn",
+      "S",
+      "Eu",
+      "F"
+    ],
+    "components": [
+      "ZnS:EuF3"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Precipitation",
+  "sources": [
+    {
+      "id": "m-ihara1999-1-1833941",
+      "doi": "10.1889/1.1833941",
+      "title": "49.3: Preparation and Characterization of Rare Earth Activators Doped Nanocrystal Phosphors",
+      "authors": "M.Ihara, T.Igarashi, T.Kusunoki, K.Ohno",
+      "year": 1999,
+      "url": "https://doi.org/10.1889/1.1833941",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "m-ihara1999-1-1833941",
+    "recipe_family": "m-ihara1999-1-1833941-zns-euf3-4",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "ZnS:EuF3",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "m-ihara1999-1-1833941",
+          "locator": "Main PDF p.4"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "m-ihara1999-1-1833941-zns-euf3-4--zinc-acetate",
+      "name": "zinc acetate",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "m-ihara1999-1-1833941",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "m-ihara1999-1-1833941-zns-euf3-4--after-s01-mix",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "m-ihara1999-1-1833941-zns-euf3-4--zinc-acetate"
+      ]
+    },
+    {
+      "id": "m-ihara1999-1-1833941-zns-euf3-4--after-s02-centrifuge",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "m-ihara1999-1-1833941-zns-euf3-4--after-s01-mix"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-mix",
+      "action": "mix",
+      "label": "Mix europium nitrate, sodium fluoride, and zinc acetate",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "m-ihara1999-1-1833941-zns-euf3-4--zinc-acetate"
+      ],
+      "outputs": [
+        "m-ihara1999-1-1833941-zns-euf3-4--after-s01-mix"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Mix europium nitrate, sodium fluoride, and zinc acetate",
+      "evidence": [
+        {
+          "source_id": "m-ihara1999-1-1833941",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-centrifuge",
+      "action": "centrifuge",
+      "label": "Separate precipitates",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-mix"
+      ],
+      "inputs": [
+        "m-ihara1999-1-1833941-zns-euf3-4--after-s01-mix"
+      ],
+      "outputs": [
+        "m-ihara1999-1-1833941-zns-euf3-4--after-s02-centrifuge"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Separate precipitates",
+      "evidence": [
+        {
+          "source_id": "m-ihara1999-1-1833941",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "m-ihara1999-1-1833941-zns-euf3-4--product",
+      "source_sample_label": "ZnS:EuF3",
+      "batch_id": null,
+      "material_state_id": "m-ihara1999-1-1833941-zns-euf3-4--after-s02-centrifuge",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "ZnS:EuF3",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "m-ihara1999-1-1833941",
+            "locator": "Main PDF p.4"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "m-ihara1999-1-1833941",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of zinc acetate not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
