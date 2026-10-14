@@ -1,0 +1,485 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "chia2007-1-2724776-2-5-ml-inas-gaas-quantum-dots-2",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "C. K. Chia et al. (2007): 2.5 ML InAs/GaAs quantum dots",
+  "material": {
+    "formula": "InAs/GaAs",
+    "family": "InAs/GaAs nanocrystals",
+    "elements": [
+      "In",
+      "As",
+      "Ga"
+    ],
+    "components": [],
+    "architecture": "single_material"
+  },
+  "method": "Solid source molecular beam epitaxy",
+  "sources": [
+    {
+      "id": "chia2007-1-2724776",
+      "doi": "10.1063/1.2724776",
+      "title": "Saturated dot density of InAs∕GaAs self-assembled quantum dots grown at high growth rate",
+      "authors": "C. K. Chia, Y. W. Zhang, S. S. Wong, A. M. Yong, S. Y. Chow, S. J. Chua, J. Guo",
+      "year": 2007,
+      "url": "https://doi.org/10.1063/1.2724776",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "chia2007-1-2724776",
+    "recipe_family": "chia2007-1-2724776-2-5-ml-inas-gaas-quantum-dots-2",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "InAs/GaAs",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "chia2007-1-2724776",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "zinc blende",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "chia2007-1-2724776",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": 16.85,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "16.85 nm",
+      "evidence": [
+        {
+          "source_id": "chia2007-1-2724776",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "dome",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "chia2007-1-2724776",
+          "locator": "Main PDF p.4"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "chia2007-1-2724776-2-5-ml-inas-gaas-quantum-dots-2--inas",
+      "name": "InAs",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "chia2007-1-2724776",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "chia2007-1-2724776-2-5-ml-inas-gaas-quantum-dots-2--after-s01-deoxidize",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "chia2007-1-2724776-2-5-ml-inas-gaas-quantum-dots-2--after-s02-grow",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "chia2007-1-2724776-2-5-ml-inas-gaas-quantum-dots-2--after-s01-deoxidize"
+      ]
+    },
+    {
+      "id": "chia2007-1-2724776-2-5-ml-inas-gaas-quantum-dots-2--after-s03-ramp",
+      "name": "mixture after step 3",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "chia2007-1-2724776-2-5-ml-inas-gaas-quantum-dots-2--after-s02-grow"
+      ]
+    },
+    {
+      "id": "chia2007-1-2724776-2-5-ml-inas-gaas-quantum-dots-2--after-s04-deposit",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "chia2007-1-2724776-2-5-ml-inas-gaas-quantum-dots-2--after-s03-ramp",
+        "chia2007-1-2724776-2-5-ml-inas-gaas-quantum-dots-2--inas"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-deoxidize",
+      "action": "deoxidize",
+      "label": "Deoxidize GaAs substrate",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "chia2007-1-2724776-2-5-ml-inas-gaas-quantum-dots-2--after-s01-deoxidize"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 600,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "600 °C",
+          "evidence": [
+            {
+              "source_id": "chia2007-1-2724776",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "arsenic pressure",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "chia2007-1-2724776",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Deoxidize GaAs substrate",
+      "evidence": [
+        {
+          "source_id": "chia2007-1-2724776",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-grow",
+      "action": "grow",
+      "label": "Grow GaAs buffer layer",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-deoxidize"
+      ],
+      "inputs": [
+        "chia2007-1-2724776-2-5-ml-inas-gaas-quantum-dots-2--after-s01-deoxidize"
+      ],
+      "outputs": [
+        "chia2007-1-2724776-2-5-ml-inas-gaas-quantum-dots-2--after-s02-grow"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 580,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "580 °C",
+          "evidence": [
+            {
+              "source_id": "chia2007-1-2724776",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "arsenic pressure",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "chia2007-1-2724776",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Grow GaAs buffer layer",
+      "evidence": [
+        {
+          "source_id": "chia2007-1-2724776",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-ramp",
+      "action": "ramp",
+      "label": "Ramp down substrate temperature",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-grow"
+      ],
+      "inputs": [
+        "chia2007-1-2724776-2-5-ml-inas-gaas-quantum-dots-2--after-s02-grow"
+      ],
+      "outputs": [
+        "chia2007-1-2724776-2-5-ml-inas-gaas-quantum-dots-2--after-s03-ramp"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 510,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "510 °C",
+          "evidence": [
+            {
+              "source_id": "chia2007-1-2724776",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "arsenic pressure",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "chia2007-1-2724776",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Ramp down substrate temperature",
+      "evidence": [
+        {
+          "source_id": "chia2007-1-2724776",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s04-deposit",
+      "action": "deposit",
+      "label": "Deposit InAs quantum dots",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s03-ramp"
+      ],
+      "inputs": [
+        "chia2007-1-2724776-2-5-ml-inas-gaas-quantum-dots-2--after-s03-ramp",
+        "chia2007-1-2724776-2-5-ml-inas-gaas-quantum-dots-2--inas"
+      ],
+      "outputs": [
+        "chia2007-1-2724776-2-5-ml-inas-gaas-quantum-dots-2--after-s04-deposit"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "arsenic pressure",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "chia2007-1-2724776",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Deposit InAs quantum dots",
+      "evidence": [
+        {
+          "source_id": "chia2007-1-2724776",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "chia2007-1-2724776-2-5-ml-inas-gaas-quantum-dots-2--product",
+      "source_sample_label": "2.5 ML InAs/GaAs quantum dots",
+      "batch_id": null,
+      "material_state_id": "chia2007-1-2724776-2-5-ml-inas-gaas-quantum-dots-2--after-s04-deposit",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "InAs/GaAs",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "chia2007-1-2724776",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "zinc blende",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "chia2007-1-2724776",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "dome",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "chia2007-1-2724776",
+            "locator": "Main PDF p.4"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "chia2007-1-2724776",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reaction temperature: 510 degC (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "chia2007-1-2724776-2-5-ml-inas-gaas-quantum-dots-2--size",
+      "sample_id": "chia2007-1-2724776-2-5-ml-inas-gaas-quantum-dots-2--product",
+      "property": "diameter",
+      "technique": "TEM",
+      "value": {
+        "value": 16.85,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "16.85 nm",
+        "evidence": [
+          {
+            "source_id": "chia2007-1-2724776",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "chia2007-1-2724776",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Ligand not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of InAs not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
