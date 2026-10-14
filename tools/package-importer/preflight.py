@@ -448,11 +448,12 @@ def run(candidate, base, new_ids, scoped_manifest=None):
     from dataset_lib import validate_record
     from build_atlas import synthesis_route, slug, COMPONENT_ELEMENTS, SYMBOLS
     from build_reader_metadata import validate_reader_view
+    from reader_presentation_registry import load_reviewed_reader, source_paths
     from review_scope import source_review_scope
     def checked(path):
         inputs[path.relative_to(candidate).as_posix()]=sha(path)
         return read(path)
-    for name in ('dataset_lib.py','schema_definition.py','build_atlas.py','build_reader_metadata.py','review_scope.py'):
+    for name in ('dataset_lib.py','schema_definition.py','build_atlas.py','build_reader_metadata.py','review_scope.py','reader_presentation_registry.py'):
         p=root/'scripts'/name;inputs[p.relative_to(candidate).as_posix()]=sha(p)
     new_ids=set(new_ids)
     if not new_ids or not all(isinstance(rid,str) and re.fullmatch(r'[a-z0-9][a-z0-9-]*',rid) for rid in new_ids):
@@ -466,7 +467,9 @@ def run(candidate, base, new_ids, scoped_manifest=None):
             errors.append('Prior canonical record changed: '+rid)
     records={rid:checked(path) for rid,path in current_paths.items()}
     inventory=checked(root/'data/inventory-evidence.json')
-    reader=checked(root/'data/reader-presentation-reviewed.json')
+    reader_path=root/'data/reader-presentation-reviewed.json'
+    reader=load_reviewed_reader(reader_path)
+    for part in source_paths(reader_path):checked(part)
     bindings=checked(root/'static/assets/chemical-registry/bindings.json')
     registry=checked(root/'static/assets/chemical-registry/registry.json')
     registry_ids={x['id'] for x in registry['entries']}

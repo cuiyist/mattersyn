@@ -27,6 +27,8 @@ from pathlib import Path, PurePosixPath
 # The checkout is input-only. Never create __pycache__ files there, even when
 # this CLI is run without Python's -B flag.
 sys.dont_write_bytecode = True
+sys.path.insert(0,str(Path(__file__).resolve().parents[2]/'recipe-atlas/scripts'))
+from reader_presentation_registry import load_reviewed_reader, source_paths, serialized_parts
 
 
 HERE = Path(__file__).resolve().parent
@@ -46,6 +48,7 @@ def digest_file(path: Path) -> str:
 
 
 def read_json(path: Path):
+    if path.name=="reader-presentation-reviewed.json" and path.parent.name=="data":return load_reviewed_reader(path)
     return json.loads(path.read_text(encoding="utf-8-sig"))
 
 
@@ -604,6 +607,11 @@ def build_overlay(checkout: Path, package_dir: Path, evidence_root: Path, source
         "recipe-atlas/static/assets/chemical-registry/solution-components.json": solutions_path,
         "publication/asset-rights-registry.json": rights_path,
     }
+    reader_parts=source_paths(presentation_path)
+    for part in reader_parts[1:]:
+        rel=part.relative_to(checkout).as_posix()
+        if rel not in expected_base:raise ImportRejected('Frozen Reader contract must pin every source part')
+        base_paths[rel]=part
     for rel, path in base_paths.items():
         assert_hash(path, expected_base[rel], f"merge base {rel}")
 
@@ -708,16 +716,19 @@ def build_overlay(checkout: Path, package_dir: Path, evidence_root: Path, source
 
     # Proposed public paths are exact output paths only. The public policy itself
     # is not edited here; its allowlist must be merged and rerun by the release owner.
+    reader_payloads=serialized_parts(reader_merged,True) if len(reader_parts)==2 else {"reader-presentation-reviewed.json":json_bytes(reader_merged)}
     staged = {
         f"recipe-atlas/data/records/{p['record_id']}.json": record_raw,
         f"recipe-atlas/data/paper-reviews/{p['paper_id']}.json": review_raw,
-        "recipe-atlas/data/reader-presentation-reviewed.json": json_bytes(reader_merged),
+        "recipe-atlas/data/reader-presentation-reviewed.json": reader_payloads["reader-presentation-reviewed.json"],
         "recipe-atlas/static/assets/chemical-registry/registry.json": json_bytes(registry_merged),
         "recipe-atlas/static/assets/chemical-registry/bindings.json": json_bytes(bindings_merged),
         "recipe-atlas/static/assets/chemical-registry/solution-components.json": json_bytes(solutions_merged),
         "recipe-atlas/static/protocol-visuals.mjs": patched_router,
         module_rel: module_bytes,
     }
+    for name,raw in reader_payloads.items():
+        staged["recipe-atlas/data/"+name]=raw
     staged["publication/asset-rights-registry.json"] = json_bytes(proposed_rights)
     staged.update({
         rel: raw for rel, (raw, _) in assets_to_stage.items()
@@ -779,6 +790,9 @@ def build_overlay(checkout: Path, package_dir: Path, evidence_root: Path, source
         "recipe-atlas/static/protocol-visuals.mjs": expected_base["recipe-atlas/static/protocol-visuals.mjs"],
         "publication/asset-rights-registry.json": expected_base["publication/asset-rights-registry.json"],
     }
+    for part in reader_parts[1:]:
+        rel=part.relative_to(checkout).as_posix()
+        base_replacements[rel]=expected_base[rel]
     operations = []
     for rel, raw in sorted(staged.items()):
         if is_control_artifact(rel):

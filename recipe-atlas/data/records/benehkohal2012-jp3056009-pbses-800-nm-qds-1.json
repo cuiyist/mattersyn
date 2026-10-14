@@ -1,0 +1,321 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "benehkohal2012-jp3056009-pbses-800-nm-qds-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Nima Parsi Benehkohal (2012): PbSeS 800 nm QDs",
+  "material": {
+    "formula": "PbSeS",
+    "family": "PbSeS nanocrystals",
+    "elements": [
+      "Pb",
+      "Se",
+      "S"
+    ],
+    "components": [
+      "PbSeS"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Electrophoretic deposition",
+  "sources": [
+    {
+      "id": "benehkohal2012-jp3056009",
+      "doi": "10.1021/jp3056009",
+      "title": "Colloidal PbS and PbSeS Quantum Dot Sensitized Solar Cells Prepared by Electrophoretic Deposition",
+      "authors": "Nima Parsi Benehkohal, Victoria González-Pedro, Pablo P. Boix, Sudam Chavhan, Ramón Tena-Zaera, George P. Demopoulos, Iván Mora-Seró",
+      "year": 2012,
+      "url": "https://doi.org/10.1021/jp3056009",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "benehkohal2012-jp3056009",
+    "recipe_family": "benehkohal2012-jp3056009-pbses-800-nm-qds-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "benehkohal2012-jp3056009-pbses-800-nm-qds-1--toluene",
+      "name": "toluene",
+      "formula": null,
+      "role": "solvent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "benehkohal2012-jp3056009",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "benehkohal2012-jp3056009-pbses-800-nm-qds-1--after-s01-dissolve",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "benehkohal2012-jp3056009-pbses-800-nm-qds-1--toluene"
+      ]
+    },
+    {
+      "id": "benehkohal2012-jp3056009-pbses-800-nm-qds-1--after-s02-deposit",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "benehkohal2012-jp3056009-pbses-800-nm-qds-1--after-s01-dissolve"
+      ]
+    },
+    {
+      "id": "benehkohal2012-jp3056009-pbses-800-nm-qds-1--after-s03-coat",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "benehkohal2012-jp3056009-pbses-800-nm-qds-1--after-s02-deposit"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-dissolve",
+      "action": "dissolve",
+      "label": "Dissolve PbSeS QDs in toluene",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "benehkohal2012-jp3056009-pbses-800-nm-qds-1--toluene"
+      ],
+      "outputs": [
+        "benehkohal2012-jp3056009-pbses-800-nm-qds-1--after-s01-dissolve"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Dissolve PbSeS QDs in toluene",
+      "evidence": [
+        {
+          "source_id": "benehkohal2012-jp3056009",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-deposit",
+      "action": "deposit",
+      "label": "Electrophoretic deposition of QDs on TiO2 electrodes",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-dissolve"
+      ],
+      "inputs": [
+        "benehkohal2012-jp3056009-pbses-800-nm-qds-1--after-s01-dissolve"
+      ],
+      "outputs": [
+        "benehkohal2012-jp3056009-pbses-800-nm-qds-1--after-s02-deposit"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "5 min",
+          "evidence": [
+            {
+              "source_id": "benehkohal2012-jp3056009",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Electrophoretic deposition of QDs on TiO2 electrodes",
+      "evidence": [
+        {
+          "source_id": "benehkohal2012-jp3056009",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-coat",
+      "action": "coat",
+      "label": "Coat with CdS using SILAR",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-deposit"
+      ],
+      "inputs": [
+        "benehkohal2012-jp3056009-pbses-800-nm-qds-1--after-s02-deposit"
+      ],
+      "outputs": [
+        "benehkohal2012-jp3056009-pbses-800-nm-qds-1--after-s03-coat"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Coat with CdS using SILAR",
+      "evidence": [
+        {
+          "source_id": "benehkohal2012-jp3056009",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "benehkohal2012-jp3056009-pbses-800-nm-qds-1--product",
+      "source_sample_label": "PbSeS 800 nm QDs",
+      "batch_id": null,
+      "material_state_id": "benehkohal2012-jp3056009-pbses-800-nm-qds-1--after-s03-coat",
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "benehkohal2012-jp3056009",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reactor: electrophoretic cell (Main PDF p.2).",
+        "Reaction time: 5 min (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Amount of toluene not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

@@ -1,0 +1,338 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "shen2010-1-3491245-cdse-qd-sensitized-tio2-nanotube-solar-c-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Qing Shen et al. (2010): CdSe QD-sensitized TiO2 nanotube solar cell",
+  "material": {
+    "formula": "CdSe",
+    "family": "CdSe nanocrystals",
+    "elements": [
+      "Cd",
+      "Se"
+    ],
+    "components": [
+      "CdSe"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Chemical bath deposition",
+  "sources": [
+    {
+      "id": "shen2010-1-3491245",
+      "doi": "10.1063/1.3491245",
+      "title": "CdSe quantum dot-sensitized solar cell employing TiO2 nanotube working-electrode and Cu2S counter-electrode",
+      "authors": "Qing Shen; Akari Yamada; Satoru Tamura; Taro Toyoda",
+      "year": 2010,
+      "url": "https://doi.org/10.1063/1.3491245",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "shen2010-1-3491245",
+    "recipe_family": "shen2010-1-3491245-cdse-qd-sensitized-tio2-nanotube-solar-c-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdSe",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "shen2010-1-3491245",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "nanotube",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "shen2010-1-3491245",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "shen2010-1-3491245-cdse-qd-sensitized-tio2-nanotube-solar-c-1--cdse",
+      "name": "CdSe",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "shen2010-1-3491245",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "shen2010-1-3491245-cdse-qd-sensitized-tio2-nanotube-solar-c-1--zns",
+      "name": "ZnS",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "shen2010-1-3491245",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "shen2010-1-3491245-cdse-qd-sensitized-tio2-nanotube-solar-c-1--after-s01-anodize",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "shen2010-1-3491245-cdse-qd-sensitized-tio2-nanotube-solar-c-1--after-s02-coat",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "shen2010-1-3491245-cdse-qd-sensitized-tio2-nanotube-solar-c-1--after-s01-anodize",
+        "shen2010-1-3491245-cdse-qd-sensitized-tio2-nanotube-solar-c-1--zns"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-anodize",
+      "action": "anodize",
+      "label": "Electrochemical anodization of Ti foils",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "shen2010-1-3491245-cdse-qd-sensitized-tio2-nanotube-solar-c-1--after-s01-anodize"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 30,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "30 °C",
+          "evidence": [
+            {
+              "source_id": "shen2010-1-3491245",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1 h",
+          "evidence": [
+            {
+              "source_id": "shen2010-1-3491245",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "dark",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "shen2010-1-3491245",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Electrochemical anodization of Ti foils",
+      "evidence": [
+        {
+          "source_id": "shen2010-1-3491245",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "s02-coat",
+      "action": "coat",
+      "label": "Surface modification with ZnS coating",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-anodize"
+      ],
+      "inputs": [
+        "shen2010-1-3491245-cdse-qd-sensitized-tio2-nanotube-solar-c-1--after-s01-anodize",
+        "shen2010-1-3491245-cdse-qd-sensitized-tio2-nanotube-solar-c-1--zns"
+      ],
+      "outputs": [
+        "shen2010-1-3491245-cdse-qd-sensitized-tio2-nanotube-solar-c-1--after-s02-coat"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "dark",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "shen2010-1-3491245",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Surface modification with ZnS coating",
+      "evidence": [
+        {
+          "source_id": "shen2010-1-3491245",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "shen2010-1-3491245-cdse-qd-sensitized-tio2-nanotube-solar-c-1--product",
+      "source_sample_label": "CdSe QD-sensitized TiO2 nanotube solar cell",
+      "batch_id": null,
+      "material_state_id": "shen2010-1-3491245-cdse-qd-sensitized-tio2-nanotube-solar-c-1--after-s02-coat",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdSe",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "shen2010-1-3491245",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": "nanotube",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "shen2010-1-3491245",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "shen2010-1-3491245",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "notes": [
+        "Reaction temperature: 10 degC (Main PDF p.3)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of CdSe not reported in the extracted text.",
+      "Amount of ZnS not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

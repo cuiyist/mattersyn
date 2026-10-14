@@ -12,6 +12,9 @@ import importlib.util
 import json
 from pathlib import Path, PurePosixPath
 import re
+import sys
+sys.path.insert(0,str(Path(__file__).resolve().parents[2]/'recipe-atlas/scripts'))
+from reader_presentation_registry import load_reviewed_reader
 
 
 def digest(raw):
@@ -47,7 +50,7 @@ def register(repo, record_ids, recorded_at, direction_id, reviewer, guard, apply
     if policy.get('asset_rights_registry_sha256') != digest(registry_path.read_bytes()):
         raise ValueError('existing registry checksum is not pinned')
     guard._registry_assets(registry)
-    side = read(atlas / 'data/reader-presentation-reviewed.json')
+    side = load_reviewed_reader(atlas / 'data/reader-presentation-reviewed.json')
     chemical_base = atlas / 'static/assets/chemical-registry'
     chemistry = {e['id']: e for e in read(chemical_base / 'registry.json')['entries']}
     chemical_bindings = read(chemical_base / 'bindings.json')['recordBindings']
