@@ -1,5 +1,16 @@
 # Simple pipeline website job
 
+## Current verified delivery and continuation — B24, 2026-10-14T17:33:44+00:00
+
+B24 passed actual anonymous verification at 2026-10-14T17:14:07+00:00; normal proof records 26 papers, 44 records and 123 figures. Live totals are 982 contributing papers, 4,109 canonical records and 1,988 displayed pairs. Source PR42 merged as `17fa5c4539e2a7ad21f61fe09f104a3ad17e18a3`; prepared Source `b10a810cb88b76edee6ffb4a9edcc39ea686d77b` and Site `b4e96d6c1154ffce0397c14b55ea876781341618` remain the release bindings. The actual built site is 2,120,302,019 bytes.
+
+Next simple-pipeline batches require their own normal release and anonymous proof; no future publication or current model/process state is asserted. The audited lane, open owner questions, sampled-record window/denominator, earlier failures, training exclusions and all dated cleanup observations remain unchanged. These source_extracted records add no independent-audit or training-ready credit, and this checkpoint makes no uninterrupted-work or measured-throughput claim.
+
+## Dated actual continuation — 2026-10-14T17:22:23+00:00
+
+Batch 24 passed the normal publication path and anonymous verification at 2026-10-14 17:14:07 UTC: 26 distinct papers, 44 records and 123 figure crops; 449 deployed files were checked with zero mismatches. The actual final build contains 37,267 files totaling 2,120,302,019 bytes. Batch 25 subsequently completed all seven guarded preparation phases at 17:22:23 UTC, retaining 33 papers, 45 new records and 162 figure crops while preserving all 4,109 prior canonical records. Its seven rare-material reads produced deletion-only corrections: 26 scientific values or objects and three coupled unit fields, 29 paths in total; no facts were added and the original quoted pair files remain unchanged. Asset registration is a dry run only at this point: 45 records and 309 assets checked, with 286 new assets and no new exact exceptions. Two bounded private transport repairs preceded successful preparation: the second Reader filename was corrected from the nonexistent part-2 spelling to the installed .part2.json spelling in four private helpers or templates, with dependent hash literals updated and inverse proofs preserved; three scalar category labels were normalized in new private deletion proposals without changing deletion paths, facts, the original proposals or guard logic. Earlier failed attempts remain on record. Batch 25 has zero publication credit and zero independent-audit credit; its citations, titles, retained captions, normal asset application and full release checks remain pending. Source-extracted records remain excluded from audited training exports. The paused audited lane, its owner questions and sampled-record window are unchanged. Local generation continues under the already approved controller arrangement; no continuous-work or target-throughput claim is made.
+
+
 ## Dated private continuation update — 2026-10-14T04:13:35+00:00
 
 Root reports that normal B24 Source integration completed all integration phases PASS at 2026-10-14T04:13:35+00:00 (native execution reference 59743 returned exit 0), with status awaiting_root_asset_dry_run_review. The actual integration has 44 new records from 26 papers and 123 figures, 4,109 total records, and all 4,065 old records verified byte-identical. These are private integration results, not publication or independent scientific-audit credit. Strict bibliography/title/captions/assets and the normal Source/build/browser/CI/merge/deployment/anonymous gates remain next; B24 publication credit remains zero. B23 remains the latest verified publication, and the current machine index remains 712 papers / 1,080 records / 199 rare-read papers.
@@ -1253,6 +1264,47 @@ Recorded pages run: [38504259265](https://github.com/cuiyist/mattersyn-site/acti
 | 10.1002/pssc.201000476 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/yamamoto2011-pssc-201000476-9-stacked-inas-ingaas-qd-laser-diode-wit-1.html) |
 | 10.1116/1.1949215 | 1 | 6 | [Open](https://cuiyist.github.io/mattersyn-site/records/ye2005-1-1949215-inas-gaas-quantum-dot-superlattices-sls-1.html) |
 
+### simple-batch24-20261014
+
+Anonymous verification passed at 2026-10-14T17:14:07+00:00: 449 files, zero mismatches. [Source commit](https://github.com/cuiyist/mattersyn/commit/b10a810cb88b76edee6ffb4a9edcc39ea686d77b) and [Site commit](https://github.com/cuiyist/mattersyn-site/commit/b4e96d6c1154ffce0397c14b55ea876781341618). This batch contains 26 source groups, 44 records and 123 source figure crops; 26 distinct newly contributing primary papers after DOI deduplication. Every new contribution remains machine extracted and not independently audited. The final built site is 2,120,302,019 bytes / 37,267 files.
+
+Live counter: **244 audited + 738 machine extracted = 982 papers**, 4,109 canonical records, 440 direct material families, 525 material/component pages and 1988 displayed recipe–structure pairs (6 more comprehensive; 1982 partial). These display counts do not establish extraction accuracy, measured atomic coordinates or training eligibility.
+
+Recorded source pr: [42](https://github.com/cuiyist/mattersyn/pull/42).
+
+Recorded source ci run: [38593436796](https://github.com/cuiyist/mattersyn/actions/runs/38593436796).
+
+Recorded pages run: [38603402158](https://github.com/cuiyist/mattersyn-site/actions/runs/38603402158).
+
+| Primary DOI | Records | Figure crops | Public page |
+| --- | ---: | ---: | --- |
+| 10.1021/jp051337w | 1 | 2 | [Open](https://cuiyist.github.io/mattersyn-site/records/amirav2005-jp051337w-cds-nanocrystals-1.html) |
+| 10.1063/1.2733992 | 8 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/chan2007-1-2733992-sample-a-1.html) |
+| 10.1063/1.2724776 | 2 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/chia2007-1-2724776-1-8-ml-inas-gaas-quantum-dots-1.html) |
+| 10.1063/1.124253 | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/fafard1999-1-124253-inas-gaas-quantum-dot-stacks-with-indium-1.html) |
+| 10.1063/1.3496036 | 1 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/fairfield2010-1-3496036-cdse-zns-core-shell-nanocrystal-arrays-1.html) |
+| 10.1021/nl803196f | 1 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/fuhrer2009-nl803196f-in-plane-gated-donor-quantum-dot-in-sili-1.html) |
+| 10.1002/pssa.200306681 | 2 | 1 | [Open](https://cuiyist.github.io/mattersyn-site/records/ilahi2003-pssa-200306681-s1-ds-10-ml-1.html) |
+| 10.1063/1.2436633 | 1 | 2 | [Open](https://cuiyist.github.io/mattersyn-site/records/kita2007-1-2436633-inas-quantum-dot-qd-embedded-in-gaas-mat-1.html) |
+| 10.1063/1.2081108 | 3 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/lee2005-1-2081108-inas-qd-sample-s1-1.html) |
+| 10.1063/1.1794379 | 2 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/lewis2004-1-1794379-inp-quantum-dots-grown-at-high-growth-ra-1.html) |
+| 10.1116/1.1942510 | 1 | 10 | [Open](https://cuiyist.github.io/mattersyn-site/records/lippen2005-1-1942510-inas-qd-molecules-on-in-ga-as-gaas-sl-te-1.html) |
+| 10.1063/1.1773378 | 1 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/liu2004-1-1773378-5-layer-inas-gaas-qd-structure-with-50-n-1.html) |
+| 10.1063/1.2434156 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/liu2007-1-2434156-p-doped-ten-layer-inas-ingaas-gaas-quant-1.html) |
+| 10.1063/1.2872781 | 1 | 7 | [Open](https://cuiyist.github.io/mattersyn-site/records/mazur2008-1-2872781-inas-inp-quantum-dots-qds-1.html) |
+| 10.1063/1.2779270 | 1 | 9 | [Open](https://cuiyist.github.io/mattersyn-site/records/passow2007-1-2779270-inas-gaas-quantum-dots-qds-with-2-4-ml-i-1.html) |
+| 10.1063/1.1606501 | 1 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/qiu2003-1-1606501-inas-quantum-dot-qd-laser-on-001-inp-sub-1.html) |
+| 10.1103/physrevb.67.165321 | 4 | 7 | [Open](https://cuiyist.github.io/mattersyn-site/records/raab2003-physrevb-67-165321-pbse-quantum-dot-superlattices-with-410-1.html) |
+| 10.1063/1.2365387 | 1 | 12 | [Open](https://cuiyist.github.io/mattersyn-site/records/ray2006-1-2365387-inas-gaas-1-3-m-quantum-dot-superlumines-1.html) |
+| 10.1021/nl303081m | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/text2012-nl303081m-inp-nanowire-with-inasp-quantum-dot-1.html) |
+| 10.1063/1.1480118 | 2 | 6 | [Open](https://cuiyist.github.io/mattersyn-site/records/touskova2002-1-1480118-sample-a-1.html) |
+| 10.1063/1.2741608 | 2 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/ulloa2007-1-2741608-inas-gaas-quantum-dots-qds-capped-with-g-1.html) |
+| 10.1021/nl9024209 | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/willis2009-nl9024209-cdse-zns-core-shell-nanocrystals-1.html) |
+| 10.1002/pssc.200983861 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/x2010-pssc-200983861-inas-qds-capped-with-ingaas-strain-reduc-1.html) |
+| 10.1021/nl304433m | 1 | 6 | [Open](https://cuiyist.github.io/mattersyn-site/records/x2013-nl304433m-zno-coreshell-structure-1.html) |
+| 10.1063/1.120340 | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/zhang1997-1-120340-znse-quantum-dot-arrays-qdas-1.html) |
+| 10.1063/1.1629803 | 2 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/zhang2003-1-1629803-inas-quantum-dots-capped-with-gaas-layer-1.html) |
+
 ## Latest continuation checkpoint
 
 At 2026-10-11T06:09:34+00:00, Batch01 is live and anonymously verified; Batch02 remains in local processing with 47/49 two-pass-complete papers at its last saved checkpoint. These are processing counts, not additional published papers. The audited lane stays paused.
@@ -1893,3 +1945,9 @@ The [latest remotely verified cleanup report](https://github.com/cuiyist/matters
 
 
 - 2026-10-14T15:15:53.292636+00:00: Root observed no local8080 listener and absent prior server/controller at the morning progress check; the last saved B41 state was 2026-10-14T04:28:24Z, with zero completed papers. No uninterrupted overnight activity is claimed. Restored the same approved two-slot local Qwen CUDA configuration (server21160) and resumed the unchanged B41 controller14752 with47 identity-supported papers/3 holds; original partial payloads and failures are preserved. B24 actual captions123/123 and ordinary assets44records/233checked/222new pass, preserving4065 prior canonical records. Fixed only a missing json wrapper global, Windows/POSIX pin serialization, and owned-lock hashing through its held handle; normal scientific/check/release rules are unchanged. B23 remains latest live956papers/1944pairs; B24 earns zero publication credit until deployment/anonymous verification.
+
+
+- 2026-10-14T17:41:49.050677+00:00: Batch25 citation/title application and all162 retained captions completed; all4,109 older canonical records remain unchanged. A third bounded compatibility repair added the manual_paraphrase flag to a new copy whose existing manual_origin=true and explicit manual statuses were verified; all caption, figure, page and source bindings are identical and original/failed evidence remains local. Choice: invoke the normal title-apply once after plan review because it already runs the exact prewrite checked_title validation; no duplicate standalone invocation, predicate or release gate was removed. B43 was genuinely launched at17:24:19UTC on existing server21160 with controller19780; B42 private processing produced31 two-pass papers,26 nonempty papers,49 pairs and177 crops. These private batches add zero publication credit. Normal B25 assets, build, visual, CI, merge and anonymous checks remain pending; audit lane unchanged.
+
+
+- 2026-10-14T17:41:59.342833+00:00: Batch 25 is privately integrated with 45 new source_extracted records; 162 of 162 retained figure captions are bound. Corrected 12 new title prefixes and their exact dependent labels/hash pointers. All 4,109 prior canonical records and scientific fields are unchanged. Normal Source/build/visual/CI and Site deployment/anonymous checks remain pending. This checkpoint adds zero publication or independent audit credit.

@@ -1,0 +1,341 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "lippen2005-1-1994256-inas-quantum-dot-qd-groups-on-in-ga-as-g-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "T. v. Lippen (2005): InAs quantum dot (QD) groups on (In,Ga)As/GaAs superlattice template",
+  "material": {
+    "formula": "InAs",
+    "family": "InAs nanocrystals",
+    "elements": [
+      "In",
+      "As"
+    ],
+    "components": [
+      "InAs"
+    ],
+    "architecture": "heterostructure"
+  },
+  "method": "Molecular-beam epitaxy",
+  "sources": [
+    {
+      "id": "lippen2005-1-1994256",
+      "doi": "10.1063/1.1994256",
+      "title": "Self-Organized Lattice of Ordered Quantum Dot Molecules",
+      "authors": "T. v. Lippen, R. Nötzel, G.J. Hamhuis, J.H. Wolter",
+      "year": 2005,
+      "url": "https://doi.org/10.1063/1.1994256",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "lippen2005-1-1994256",
+    "recipe_family": "lippen2005-1-1994256-inas-quantum-dot-qd-groups-on-in-ga-as-g-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "InAs",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "lippen2005-1-1994256",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "crystal",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "lippen2005-1-1994256",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": 0.5,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "0.5 nm",
+      "evidence": [
+        {
+          "source_id": "lippen2005-1-1994256",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "dot",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "lippen2005-1-1994256",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "lippen2005-1-1994256-inas-quantum-dot-qd-groups-on-in-ga-as-g-1--in-ga-as",
+      "name": "(In,Ga)As",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "lippen2005-1-1994256",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "lippen2005-1-1994256-inas-quantum-dot-qd-groups-on-in-ga-as-g-1--gaas",
+      "name": "GaAs",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "lippen2005-1-1994256",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "lippen2005-1-1994256-inas-quantum-dot-qd-groups-on-in-ga-as-g-1--after-s01-grow",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "lippen2005-1-1994256-inas-quantum-dot-qd-groups-on-in-ga-as-g-1--in-ga-as",
+        "lippen2005-1-1994256-inas-quantum-dot-qd-groups-on-in-ga-as-g-1--gaas"
+      ]
+    },
+    {
+      "id": "lippen2005-1-1994256-inas-quantum-dot-qd-groups-on-in-ga-as-g-1--after-s02-grow",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "lippen2005-1-1994256-inas-quantum-dot-qd-groups-on-in-ga-as-g-1--after-s01-grow"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-grow",
+      "action": "grow",
+      "label": "Grow (In,Ga)As/GaAs superlattice template",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "lippen2005-1-1994256-inas-quantum-dot-qd-groups-on-in-ga-as-g-1--in-ga-as",
+        "lippen2005-1-1994256-inas-quantum-dot-qd-groups-on-in-ga-as-g-1--gaas"
+      ],
+      "outputs": [
+        "lippen2005-1-1994256-inas-quantum-dot-qd-groups-on-in-ga-as-g-1--after-s01-grow"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Grow (In,Ga)As/GaAs superlattice template",
+      "evidence": [
+        {
+          "source_id": "lippen2005-1-1994256",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-grow",
+      "action": "grow",
+      "label": "Grow InAs QDs on the superlattice template",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-grow"
+      ],
+      "inputs": [
+        "lippen2005-1-1994256-inas-quantum-dot-qd-groups-on-in-ga-as-g-1--after-s01-grow"
+      ],
+      "outputs": [
+        "lippen2005-1-1994256-inas-quantum-dot-qd-groups-on-in-ga-as-g-1--after-s02-grow"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Grow InAs QDs on the superlattice template",
+      "evidence": [
+        {
+          "source_id": "lippen2005-1-1994256",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "lippen2005-1-1994256-inas-quantum-dot-qd-groups-on-in-ga-as-g-1--product",
+      "source_sample_label": "InAs quantum dot (QD) groups on (In,Ga)As/GaAs superlattice template",
+      "batch_id": null,
+      "material_state_id": "lippen2005-1-1994256-inas-quantum-dot-qd-groups-on-in-ga-as-g-1--after-s02-grow",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "InAs",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "lippen2005-1-1994256",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "crystal",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "lippen2005-1-1994256",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "dot",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "lippen2005-1-1994256",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "lippen2005-1-1994256",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [
+    {
+      "id": "lippen2005-1-1994256-inas-quantum-dot-qd-groups-on-in-ga-as-g-1--size",
+      "sample_id": "lippen2005-1-1994256-inas-quantum-dot-qd-groups-on-in-ga-as-g-1--product",
+      "property": "particle_size",
+      "technique": "not reported",
+      "value": {
+        "value": 0.5,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "0.5 nm",
+        "evidence": [
+          {
+            "source_id": "lippen2005-1-1994256",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "lippen2005-1-1994256",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Ligand not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of (In,Ga)As not reported in the extracted text.",
+      "Amount of GaAs not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

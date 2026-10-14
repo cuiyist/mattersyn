@@ -1,0 +1,356 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "lin2003-1-1594285-ten-stacked-self-assembled-inas-gaas-qua-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Shih-Yen Lin (2003): ten-stacked self-assembled InAs/GaAs quantum dot (QD) infrared photodetector",
+  "material": {
+    "formula": "InAs/GaAs",
+    "family": "InAs/GaAs nanocrystals",
+    "elements": [
+      "In",
+      "As",
+      "Ga"
+    ],
+    "components": [
+      "InAs",
+      "GaAs"
+    ],
+    "architecture": "unresolved"
+  },
+  "method": "MBE",
+  "sources": [
+    {
+      "id": "lin2003-1-1594285",
+      "doi": "10.1063/1.1594285",
+      "title": "Transport characteristics of InAs/GaAs quantum-dot infrared photodetectors",
+      "authors": "Shih-Yen Lin, Yao-Jen Tsai, Si-Chen Lee",
+      "year": 2003,
+      "url": "https://doi.org/10.1063/1.1594285",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "lin2003-1-1594285",
+    "recipe_family": "lin2003-1-1594285-ten-stacked-self-assembled-inas-gaas-qua-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "InAs/GaAs",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "lin2003-1-1594285",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": 6.0,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "6 nm",
+      "evidence": [
+        {
+          "source_id": "lin2003-1-1594285",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "dot",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "lin2003-1-1594285",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "lin2003-1-1594285-ten-stacked-self-assembled-inas-gaas-qua-1--inas",
+      "name": "InAs",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "lin2003-1-1594285",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "lin2003-1-1594285-ten-stacked-self-assembled-inas-gaas-qua-1--gaas",
+      "name": "GaAs",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "lin2003-1-1594285",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "lin2003-1-1594285-ten-stacked-self-assembled-inas-gaas-qua-1--after-s01-grow",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "lin2003-1-1594285-ten-stacked-self-assembled-inas-gaas-qua-1--inas",
+        "lin2003-1-1594285-ten-stacked-self-assembled-inas-gaas-qua-1--gaas"
+      ]
+    },
+    {
+      "id": "lin2003-1-1594285-ten-stacked-self-assembled-inas-gaas-qua-1--after-s02-grow",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "lin2003-1-1594285-ten-stacked-self-assembled-inas-gaas-qua-1--after-s01-grow",
+        "lin2003-1-1594285-ten-stacked-self-assembled-inas-gaas-qua-1--gaas"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-grow",
+      "action": "grow",
+      "label": "Grow InAs quantum dots on GaAs substrate using MBE",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "lin2003-1-1594285-ten-stacked-self-assembled-inas-gaas-qua-1--inas",
+        "lin2003-1-1594285-ten-stacked-self-assembled-inas-gaas-qua-1--gaas"
+      ],
+      "outputs": [
+        "lin2003-1-1594285-ten-stacked-self-assembled-inas-gaas-qua-1--after-s01-grow"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 510,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "510 °C",
+          "evidence": [
+            {
+              "source_id": "lin2003-1-1594285",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Grow InAs quantum dots on GaAs substrate using MBE",
+      "evidence": [
+        {
+          "source_id": "lin2003-1-1594285",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-grow",
+      "action": "grow",
+      "label": "Grow GaAs barrier layers and contact layers",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-grow"
+      ],
+      "inputs": [
+        "lin2003-1-1594285-ten-stacked-self-assembled-inas-gaas-qua-1--after-s01-grow",
+        "lin2003-1-1594285-ten-stacked-self-assembled-inas-gaas-qua-1--gaas"
+      ],
+      "outputs": [
+        "lin2003-1-1594285-ten-stacked-self-assembled-inas-gaas-qua-1--after-s02-grow"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Grow GaAs barrier layers and contact layers",
+      "evidence": [
+        {
+          "source_id": "lin2003-1-1594285",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "lin2003-1-1594285-ten-stacked-self-assembled-inas-gaas-qua-1--product",
+      "source_sample_label": "ten-stacked self-assembled InAs/GaAs quantum dot (QD) infrared photodetector",
+      "batch_id": null,
+      "material_state_id": "lin2003-1-1594285-ten-stacked-self-assembled-inas-gaas-qua-1--after-s02-grow",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "InAs/GaAs",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "lin2003-1-1594285",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": "dot",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "lin2003-1-1594285",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "lin2003-1-1594285",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reactor: VG 80H solid source MBE (Main PDF p.2).",
+        "Reaction temperature: 510 degC (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "lin2003-1-1594285-ten-stacked-self-assembled-inas-gaas-qua-1--size",
+      "sample_id": "lin2003-1-1594285-ten-stacked-self-assembled-inas-gaas-qua-1--product",
+      "property": "particle_size",
+      "technique": "not reported",
+      "value": {
+        "value": 6.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "6 nm",
+        "evidence": [
+          {
+            "source_id": "lin2003-1-1594285",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "lin2003-1-1594285",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of InAs not reported in the extracted text.",
+      "Amount of GaAs not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
