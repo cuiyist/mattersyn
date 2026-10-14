@@ -1,11 +1,14 @@
 """Li 1999 reductant must be a typed input in each published route."""
 import hashlib
 import json
+import sys
 import unittest
 from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / 'scripts'))
+from reader_presentation_registry import load_reviewed_reader
 SOURCE = "li1999-ag-dbs-jcis5879"
 
 
@@ -15,7 +18,7 @@ def read(path):
 
 class Li1999ReductantStockTests(unittest.TestCase):
     def test_reductant_stock_is_prepared_and_consumed(self):
-        reader = read(ROOT / "data/reader-presentation-reviewed.json")
+        reader = load_reviewed_reader(ROOT / "data/reader-presentation-reviewed.json")
         bindings = read(ROOT / "static/assets/chemical-registry/bindings.json")
         for suffix, dbs in [("no-dbs", False), ("dbs-fresh", True), ("dbs-aged-3mo", True)]:
             with self.subTest(suffix=suffix):

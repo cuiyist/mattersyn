@@ -8,6 +8,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 from build_atlas import material_alias_ids, slug
+from reader_presentation_registry import load_reviewed_reader
 
 SOURCE = "chemmater2017-cdse-cald-7b01873"
 VARIANTS = {
@@ -28,7 +29,7 @@ def load(path):
 class SlejkoShellNotationTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.reader = load(ROOT / "data/reader-presentation-reviewed.json")
+        cls.reader = load_reviewed_reader(ROOT / "data/reader-presentation-reviewed.json")
         cls.registry_dir = ROOT / "static/assets/chemical-registry"
         cls.registry = load(cls.registry_dir / "registry.json")
         cls.bindings = load(cls.registry_dir / "bindings.json")
