@@ -1,5 +1,16 @@
 # Simple pipeline website job
 
+## Current verified delivery and continuation — B25, 2026-10-14T19:39:40+00:00
+
+B25 passed actual anonymous verification at 2026-10-14T19:31:39+00:00; normal proof records 33 papers, 45 records and 162 figures. Live totals are 1,015 contributing papers, 4,154 canonical records and 2,033 displayed pairs. Source PR43 merged as `2bb12e3cd2698947a0d6e4edbc82ab759b802ebf`; prepared Source `612640fd4e00a9b656d2d3c31a58a98351f57e66` and Site `33521591b9ffd780b5be93a8f57ae9009aac5328` remain the release bindings. The actual built site is 2,146,119,661 bytes.
+
+Next simple-pipeline batches require their own normal release and anonymous proof; no future publication or current model/process state is asserted. The audited lane, open owner questions, sampled-record window/denominator, earlier failures, training exclusions and all dated cleanup observations remain unchanged. These source_extracted records add no independent-audit or training-ready credit, and this checkpoint makes no uninterrupted-work or measured-throughput claim.
+
+## Dated actual continuation — 2026-10-14T19:39:33+00:00
+
+Batch 26 completed the ordinary guarded import with 31 new source_extracted records from 23 papers and 82 selected figures. All 4,154 earlier canonical records remain byte-identical. Seven completed rare-material reads removed 14 unsupported or misassigned scientific objects and one coupled unit field; no facts were added and original quoted pairs remain unchanged. The ordinary dry run checked 178 assets, found 165 new assets and required no new exact path rules. Citations, titles, retained captions, asset application and full release checks remain pending; B26 adds zero publication or independent-audit credit. Batch45 was actually launched under controller40644/server21160 for39 supported inputs and11 identity holds; this launch does not establish later completion or continuous activity. The audited lane and its questions, denominator, prior findings and training exclusions remain unchanged. No cleanup was performed in this continuation and the600GB removal target remains unmet.
+
+
 ## Current verified delivery and continuation — B24, 2026-10-14T17:33:44+00:00
 
 B24 passed actual anonymous verification at 2026-10-14T17:14:07+00:00; normal proof records 26 papers, 44 records and 123 figures. Live totals are 982 contributing papers, 4,109 canonical records and 1,988 displayed pairs. Source PR42 merged as `17fa5c4539e2a7ad21f61fe09f104a3ad17e18a3`; prepared Source `b10a810cb88b76edee6ffb4a9edcc39ea686d77b` and Site `b4e96d6c1154ffce0397c14b55ea876781341618` remain the release bindings. The actual built site is 2,120,302,019 bytes.
@@ -1305,6 +1316,54 @@ Recorded pages run: [38603402158](https://github.com/cuiyist/mattersyn-site/acti
 | 10.1063/1.120340 | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/zhang1997-1-120340-znse-quantum-dot-arrays-qdas-1.html) |
 | 10.1063/1.1629803 | 2 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/zhang2003-1-1629803-inas-quantum-dots-capped-with-gaas-layer-1.html) |
 
+### simple-batch25-20261014
+
+Anonymous verification passed at 2026-10-14T19:31:39+00:00: 526 files, zero mismatches. [Source commit](https://github.com/cuiyist/mattersyn/commit/612640fd4e00a9b656d2d3c31a58a98351f57e66) and [Site commit](https://github.com/cuiyist/mattersyn-site/commit/33521591b9ffd780b5be93a8f57ae9009aac5328). This batch contains 33 source groups, 45 records and 162 source figure crops; 33 distinct newly contributing primary papers after DOI deduplication. Every new contribution remains machine extracted and not independently audited. The final built site is 2,146,119,661 bytes / 37,729 files.
+
+Live counter: **244 audited + 771 machine extracted = 1015 papers**, 4,154 canonical records, 445 direct material families, 533 material/component pages and 2033 displayed recipe–structure pairs (6 more comprehensive; 2027 partial). These display counts do not establish extraction accuracy, measured atomic coordinates or training eligibility.
+
+Recorded source pr: [43](https://github.com/cuiyist/mattersyn/pull/43).
+
+Recorded source ci run: [38613414423](https://github.com/cuiyist/mattersyn/actions/runs/38613414423).
+
+Recorded pages run: [38623233172](https://github.com/cuiyist/mattersyn-site/actions/runs/38623233172).
+
+| Primary DOI | Records | Figure crops | Public page |
+| --- | ---: | ---: | --- |
+| 10.1063/1.126693 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/cao2000-1-126693-inas-quantum-dot-embedded-gaas-microdisk-1.html) |
+| 10.1063/1.2976551 | 1 | 2 | [Open](https://cuiyist.github.io/mattersyn-site/records/carrington2008-1-2976551-insb-inas-quantum-dot-light-emitting-dio-1.html) |
+| 10.1063/1.1356430 | 1 | 11 | [Open](https://cuiyist.github.io/mattersyn-site/records/chen2001-1-1356430-inas-algaas-qdip-with-undoped-active-reg-1.html) |
+| 10.1103/physrevb.68.165307 | 2 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/child2003-physrevb-68-165307-insb-gasb-quantum-dots-sample-a-1.html) |
+| 10.1116/1.1900730 | 2 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/chou2005-1-1900730-device-a-10-period-inas-gaas-qdip-1.html) |
+| 10.1063/1.124854 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/fafard1999-1-124854-inas-gaas-quantum-dots-qds-1.html) |
+| 10.1063/1.2168025 | 1 | 7 | [Open](https://cuiyist.github.io/mattersyn-site/records/fekete2006-1-2168025-inas-self-assembled-quantum-dots-qds-wit-1.html) |
+| 10.1063/1.3428956 | 2 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/gilfert2010-1-3428956-inas-quantum-dashes-1.html) |
+| 10.1116/1.1388209 | 2 | 6 | [Open](https://cuiyist.github.io/mattersyn-site/records/guo2001-1-1388209-cdse-qds-on-znbese-1.html) |
+| 10.1116/1.2008271 | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/huang2005-1-2008271-30-period-undoped-inas-gaas-quantum-dot-1.html) |
+| 10.1063/1.1787157 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/ide2004-1-1787157-inas-quantum-dot-microdisk-laser-with-fi-1.html) |
+| 10.1063/1.125691 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/ishikawa2000-1-125691-inas-single-quantum-dot-array-1.html) |
+| 10.1063/1.2168494 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/kiravittaya2006-1-2168494-qdc11-1.html) |
+| 10.1063/1.1594285 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/lin2003-1-1594285-ten-stacked-self-assembled-inas-gaas-qua-1.html) |
+| 10.1063/1.1994256 | 1 | 1 | [Open](https://cuiyist.github.io/mattersyn-site/records/lippen2005-1-1994256-inas-quantum-dot-qd-groups-on-in-ga-as-g-1.html) |
+| 10.1103/physrevb.75.115414 | 2 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/lippen2007-physrevb-75-115414-inas-quantum-dot-molecules-qdms-with-an-1.html) |
+| 10.1063/1.1337649 | 3 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/liu2001-1-1337649-inas-gaas-qdip-sample-a-1.html) |
+| 10.1063/1.2336998 | 2 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/liu2006-1-2336998-seven-layer-p-doped-inas-gaas-quantum-do-1.html) |
+| 10.1103/physrevb.69.205325 | 2 | 10 | [Open](https://cuiyist.github.io/mattersyn-site/records/mackowski2004-physrevb-69-205325-cdte-qd-sample-with-2-ml-nominal-thickne-1.html) |
+| 10.1063/1.2039271 | 1 | 8 | [Open](https://cuiyist.github.io/mattersyn-site/records/mazur2005-1-2039271-inas-gaas-bilayer-quantum-dot-structure-1.html) |
+| 10.1103/physrevb.70.085314 | 2 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/milekhin2004-physrevb-70-085314-sample-a-1.html) |
+| 10.1063/1.2245195 | 1 | 7 | [Open](https://cuiyist.github.io/mattersyn-site/records/ouattara2006-1-2245195-inas-ingaas-quantum-dots-in-a-qdip-struc-1.html) |
+| 10.1116/1.591411 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/petitprez2000-1-591411-inas-quantum-dot-superlattices-1.html) |
+| 10.1103/physrevb.68.125319 | 1 | 6 | [Open](https://cuiyist.github.io/mattersyn-site/records/qi2003-physrevb-68-125319-rod-shaped-cds-qd-ensembles-2.html) |
+| 10.1063/1.1421428 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/qiu2001-1-1421428-inas-quantum-dots-embedded-in-strained-i-1.html) |
+| 10.1063/1.1382622 | 1 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/ryou2001-1-1382622-inp-in0-5al0-3ga0-2p-self-assembled-quan-1.html) |
+| 10.1063/1.2409612 | 2 | 8 | [Open](https://cuiyist.github.io/mattersyn-site/records/sears2007-1-2409612-three-stack-inas-gaas-quantum-dot-laser-1.html) |
+| 10.1063/1.127012 | 2 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/shchekin2000-1-127012-inas-quantum-dot-qd-laser-one-stack-1.html) |
+| 10.1063/1.1569992 | 1 | 2 | [Open](https://cuiyist.github.io/mattersyn-site/records/songmuang2003-1-1569992-inas-quantum-dot-bimolecule-1.html) |
+| 10.1063/1.1582229 | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/xin2003-1-1582229-inas-quantum-dot-laser-1.html) |
+| 10.1063/1.1517750 | 1 | 11 | [Open](https://cuiyist.github.io/mattersyn-site/records/ye2002-1-1517750-inas-in0-15ga0-85as-gaas-quantum-dot-inf-1.html) |
+| 10.1063/1.126097 | 1 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/yeh2000-1-126097-inas-quantum-dots-with-in0-16al0-84as-sr-2.html) |
+| 10.1063/1.1923176 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/zhang2005-1-1923176-inas-quantum-dots-in-inas-gaas-alinas-in-1.html) |
+
 ## Latest continuation checkpoint
 
 At 2026-10-11T06:09:34+00:00, Batch01 is live and anonymously verified; Batch02 remains in local processing with 47/49 two-pass-complete papers at its last saved checkpoint. These are processing counts, not additional published papers. The audited lane stays paused.
@@ -1951,3 +2010,9 @@ The [latest remotely verified cleanup report](https://github.com/cuiyist/matters
 
 
 - 2026-10-14T17:41:59.342833+00:00: Batch 25 is privately integrated with 45 new source_extracted records; 162 of 162 retained figure captions are bound. Corrected 12 new title prefixes and their exact dependent labels/hash pointers. All 4,109 prior canonical records and scientific fields are unchanged. Normal Source/build/visual/CI and Site deployment/anonymous checks remain pending. This checkpoint adds zero publication or independent audit credit.
+
+
+- 2026-10-14T19:49:09.675417+00:00: Batch 26 is privately integrated with 31 new source_extracted records; 82 of 82 retained figure captions are bound. Corrected 9 new title prefixes and their exact dependent labels/hash pointers. All 4,154 prior canonical records and scientific fields are unchanged. Normal Source/build/visual/CI and Site deployment/anonymous checks remain pending. This checkpoint adds zero publication or independent audit credit.
+
+
+- 2026-10-14T20:02:55.632684+00:00: Batch26 includes two independently reviewed release-tool optimizations: opaque image-byte scans are reused only within one export invocation, and anonymous paper/material route requests run with at most eight workers while preserving every request, phase barrier, hash check and ordered result. All79 publication-boundary tests and all7 public live-route tests passed on the actual Source changes. Added19 boundary regressions and3 route regressions; existing release gates, rights rules, extraction predicates and scientific data are unchanged. Earlier failed prototypes remain preserved locally. No production speed improvement or20-papers/hour achievement is claimed before measurement. Batch26 remains unpublished at23 retained papers /31 records /82 fully captioned figures; all4,154 earlier canonical records remain preserved. The last verified live checkpoint is Batch25:1,015 papers /2,033 displayed pairs. The audit lane and its questions remain paused.

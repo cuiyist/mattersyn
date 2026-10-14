@@ -1,3 +1,17 @@
+## Current verified delivery — B25
+
+Reports: [MACHINE_EXTRACTED_PAPERS.md](research-assets/public-audits/MACHINE_EXTRACTED_PAPERS.md), [single cumulative job report](research-assets/public-audits/SIMPLE_PIPELINE_REPORT.md), and [control](research-assets/curation-control.json).
+
+## Current verified delivery and continuation — B25, 2026-10-14T19:39:40+00:00
+
+B25 passed actual anonymous verification at 2026-10-14T19:31:39+00:00; normal proof records 33 papers, 45 records and 162 figures. Live totals are 1,015 contributing papers, 4,154 canonical records and 2,033 displayed pairs. Source PR43 merged as `2bb12e3cd2698947a0d6e4edbc82ab759b802ebf`; prepared Source `612640fd4e00a9b656d2d3c31a58a98351f57e66` and Site `33521591b9ffd780b5be93a8f57ae9009aac5328` remain the release bindings. The actual built site is 2,146,119,661 bytes.
+
+Next simple-pipeline batches require their own normal release and anonymous proof; no future publication or current model/process state is asserted. The audited lane, open owner questions, sampled-record window/denominator, earlier failures, training exclusions and all dated cleanup observations remain unchanged. These source_extracted records add no independent-audit or training-ready credit, and this checkpoint makes no uninterrupted-work or measured-throughput claim.
+
+## Dated actual continuation — 2026-10-14T19:39:33+00:00
+
+Batch 26 completed the ordinary guarded import with 31 new source_extracted records from 23 papers and 82 selected figures. All 4,154 earlier canonical records remain byte-identical. Seven completed rare-material reads removed 14 unsupported or misassigned scientific objects and one coupled unit field; no facts were added and original quoted pairs remain unchanged. The ordinary dry run checked 178 assets, found 165 new assets and required no new exact path rules. Citations, titles, retained captions, asset application and full release checks remain pending; B26 adds zero publication or independent-audit credit. Batch45 was actually launched under controller40644/server21160 for39 supported inputs and11 identity holds; this launch does not establish later completion or continuous activity. The audited lane and its questions, denominator, prior findings and training exclusions remain unchanged. No cleanup was performed in this continuation and the600GB removal target remains unmet.
+
 ## Current verified delivery — B24
 
 Reports: [MACHINE_EXTRACTED_PAPERS.md](research-assets/public-audits/MACHINE_EXTRACTED_PAPERS.md), [single cumulative job report](research-assets/public-audits/SIMPLE_PIPELINE_REPORT.md), and [control](research-assets/curation-control.json).
@@ -3605,3 +3619,6 @@ The [latest remotely verified cleanup report](https://github.com/cuiyist/matters
 
 
 - 2026-10-14T17:41:59.342833+00:00: Batch 25 is privately integrated with 45 new source_extracted records; 162 of 162 retained figure captions are bound. Corrected 12 new title prefixes and their exact dependent labels/hash pointers. All 4,109 prior canonical records and scientific fields are unchanged. Normal Source/build/visual/CI and Site deployment/anonymous checks remain pending. This checkpoint adds zero publication or independent audit credit.
+
+
+- 2026-10-14T19:49:09.675417+00:00: Batch 26 is privately integrated with 31 new source_extracted records; 82 of 82 retained figure captions are bound. Corrected 9 new title prefixes and their exact dependent labels/hash pointers. All 4,154 prior canonical records and scientific fields are unchanged. Normal Source/build/visual/CI and Site deployment/anonymous checks remain pending. This checkpoint adds zero publication or independent audit credit.

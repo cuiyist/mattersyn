@@ -391,13 +391,22 @@ def verify_live(site_url, dist, source_commit, paper_routes=None, material_route
         return page_ok and data_ok and inventory_ok
 
     checked_routes, failed_routes = [], []
-    for source, binding in sorted((paper_routes or {}).items()):
-        (checked_routes if check_route(binding) else failed_routes).append(source)
-    checked_materials, failed_materials = [], []
-    for source, bindings in sorted((material_routes or {}).items()):
-        for binding in bindings:
+    # Each route still performs its own anonymous page/data/inventory GETs.
+    # Only independent routes run concurrently; map preserves receipt order
+    # and duplicate bindings remain separate checks, without a content cache.
+    with ThreadPoolExecutor(max_workers=8) as executor:
+        paper_rows = sorted((paper_routes or {}).items())
+        for (source, _), matches in zip(paper_rows, executor.map(
+                check_route, (binding for _, binding in paper_rows))):
+            (checked_routes if matches else failed_routes).append(source)
+        checked_materials, failed_materials = [], []
+        material_rows = [(source, binding)
+                         for source, bindings in sorted((material_routes or {}).items())
+                         for binding in bindings]
+        for (source, binding), matches in zip(material_rows, executor.map(
+                check_route, (binding for _, binding in material_rows))):
             label = f"{source}:{binding['id']}"
-            (checked_materials if check_route(binding) else failed_materials).append(label)
+            (checked_materials if matches else failed_materials).append(label)
     return {'passed': not mismatched and not failed_routes and not failed_materials and bool(checked), 'anonymous': True,
             'checked_files': len(checked), 'mismatched_files': mismatched,
             'checked_changed_files': sorted(set(changed_paths)&set(checked)),

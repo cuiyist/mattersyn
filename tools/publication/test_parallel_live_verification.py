@@ -71,7 +71,7 @@ class ParallelLiveVerificationTest(unittest.TestCase):
 
     def verify(self, **kwargs):
         return rb.verify_live('https://example.test/site/', self.dist, self.commit,
-                              sample=kwargs.pop('sample', 0), timeout_s=0, opener=self.opener,
+                              sample=kwargs.pop('sample', 0), timeout_s=0, opener=kwargs.pop('opener', self.opener),
                               sleep=lambda _: None, changed_paths=self.changed, **kwargs)
 
     def test_every_changed_file_is_checked_with_at_most_eight_parallel_workers(self):
@@ -119,12 +119,97 @@ class ParallelLiveVerificationTest(unittest.TestCase):
         self.assertFalse(report['passed'])
         self.assertEqual(report['checked_paper_routes'], ['new-paper'])
         self.assertEqual(report['failed_material_routes'], ['new-paper:new-material'])
-        last_parallel = max(i for i, (_, _, parallel) in enumerate(self.calls) if parallel)
-        route_calls = self.calls[last_parallel + 1:]
+        first_route = next(i for i, (_, query, _) in enumerate(self.calls) if 'method=new' in query)
+        file_probes = [name for name, _, parallel in self.calls[:first_route] if parallel]
+        self.assertEqual(set(file_probes), set(self.changed) | {
+            'index.html', 'data/dataset-manifest.json', 'data/release-snapshot.json', 'data/materials-index.json'})
+        route_calls = self.calls[first_route:]
         self.assertTrue(route_calls)
-        self.assertTrue(all(not parallel for _, _, parallel in route_calls))
+        self.assertTrue(all(parallel for _, _, parallel in route_calls))
         self.assertIn('method=new', route_calls[0][1])
-        self.assertIn('data/materials-index.json', [name for name, _, parallel in self.calls if parallel])
+
+
+    def route_fixture(self):
+        self.write('reader.html', b'invented Reader page')
+        self.write('data/reader-a.json', b'invented Reader A')
+        self.write('data/reader-b.json', b'invented Reader B')
+        self.write('data/records.jsonl', b'invented record inventory')
+        self.write('data/materials-index.json', b'invented material inventory')
+        papers = {f'p{i:02}': {'route': f'reader.html?method=p{i:02}', 'page': 'reader.html',
+                  'data': f'data/reader-{chr(97 + i % 2)}.json', 'inventory': 'data/records.jsonl'}
+                  for i in reversed(range(16))}
+        materials = {}
+        for i in reversed(range(8)):
+            self.write(f'data/materials/m{i}.json', f'invented material {i}'.encode())
+            materials[f'p{i:02}'] = [{'id': f'm{i}', 'route': f'reader.html?id=m{i}',
+                                    'page': 'reader.html', 'data': f'data/materials/m{i}.json',
+                                    'inventory': 'data/materials-index.json'}]
+        materials['p02'].append(dict(materials['p02'][0]))
+        self.route_active = self.route_peak = 0
+        self.route_page_failures = set()
+        return papers, materials
+
+    def route_opener(self, request, timeout):
+        query = parse_qs(urlsplit(request.full_url).query)
+        label = (query.get('method') or query.get('id') or [None])[0]
+        if label is None:
+            return self.opener(request, timeout)
+        with self.lock:
+            self.route_active += 1
+            self.route_peak = max(self.route_peak, self.route_active)
+        try:
+            # Slow early labels so completion order differs from source order.
+            time.sleep(0.006 + (15 - int(label[1:])) * 0.0002)
+            response = self.opener(request, timeout)
+            if label in self.route_page_failures:
+                response.close()
+                raise URLError('invented route-page failure')
+            return response
+        finally:
+            with self.lock:
+                self.route_active -= 1
+
+    def test_route_workers_are_bounded_and_receipts_keep_binding_order(self):
+        papers, materials = self.route_fixture()
+        report = self.verify(paper_routes=papers, material_routes=materials, opener=self.route_opener)
+        self.assertTrue(report['passed'])
+        self.assertEqual(report['checked_paper_routes'], sorted(papers))
+        self.assertEqual(report['checked_material_routes'],
+                         [f"{source}:{binding['id']}" for source, bindings in sorted(materials.items())
+                          for binding in bindings])
+        self.assertGreater(self.route_peak, 1)
+        self.assertLessEqual(self.route_peak, 8)
+        paper_positions = [i for i, (_, query, _) in enumerate(self.calls) if 'method=' in query]
+        material_positions = [i for i, (_, query, _) in enumerate(self.calls) if 'id=' in query]
+        self.assertLess(max(paper_positions), min(material_positions))
+
+    def test_repeated_route_GETs_are_not_cached_or_deduplicated(self):
+        papers, materials = self.route_fixture()
+        report = self.verify(paper_routes=papers, material_routes=materials, opener=self.route_opener)
+        self.assertTrue(report['passed'])
+        names = [name for name, _, _ in self.calls]
+        self.assertEqual(names.count('data/reader-a.json'), 8)
+        self.assertEqual(names.count('data/reader-b.json'), 8)
+        self.assertEqual(names.count('data/records.jsonl'), 16)
+        self.assertEqual(names.count('data/materials-index.json'), 10)  # one file probe and nine routes
+        self.assertEqual(names.count('data/materials/m2.json'), 2)
+        self.assertEqual(report['checked_material_routes'].count('p02:m2'), 2)
+
+    def test_route_failures_keep_exact_order_and_check_remaining_bindings(self):
+        papers, materials = self.route_fixture()
+        self.route_page_failures = {'p03'}
+        self.failures = {'data/reader-b.json'}
+        self.stale = {'data/materials/m2.json'}
+        report = self.verify(paper_routes=papers, material_routes=materials, opener=self.route_opener)
+        self.assertFalse(report['passed'])
+        self.assertEqual(report['failed_paper_routes'], [f'p{i:02}' for i in range(16) if i % 2])
+        self.assertEqual(report['checked_paper_routes'], [f'p{i:02}' for i in range(16) if not i % 2])
+        self.assertEqual(report['failed_material_routes'], ['p02:m2', 'p02:m2'])
+        self.assertEqual(len(report['checked_material_routes']) + len(report['failed_material_routes']), 9)
+        route_queries = [query for _, query, _ in self.calls if 'method=' in query or 'id=' in query]
+        self.assertEqual(len(route_queries), 25)
+        self.assertLessEqual(self.route_peak, 8)
+
 
 
 if __name__ == '__main__': unittest.main(verbosity=2)
