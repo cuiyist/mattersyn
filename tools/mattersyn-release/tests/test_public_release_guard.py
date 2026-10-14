@@ -1351,3 +1351,200 @@ class OpaqueMemoTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+# BEGIN exact opaque-image credential-prefix equivalence tests; invented bytes only.
+class OpaqueCredentialPrefixTests(unittest.TestCase):
+    def setUp(self):
+        g.sanitation_memo_state(clear=True, enabled=True)
+
+    def tearDown(self):
+        g.sanitation_memo_state(clear=True, enabled=True)
+
+    def baseline(self, path, raw, config=None):
+        # Mutated/unknown helper must take the exact old regex path.
+        with patch.object(g, '_secret_literal_prefix_absent', None):
+            return g._sanitize_content_uncached(path, raw, config)
+
+    def compare(self, raw, path='assets/invented.png', config=None):
+        expected = self.baseline(path, raw, config)
+        actual = g._sanitize_content_uncached(path, raw, config)
+        self.assertEqual(actual, expected)
+        return actual
+
+    def samples(self):
+        samples = []
+        for letter in b'pousr':
+            samples.append(('github_token', b'gh' + bytes([letter]) + b'_' + b'A' * 40))
+        samples.append(('github_token', b'github_pat_' + b'A' * 60))
+        for optional in (b'', b'proj-', b'svcacct-'):
+            samples.append(('openai_key_shape', b'sk-' + optional + b'B' * 40))
+        for prefix in (b'AKIA', b'ASIA'):
+            samples.append(('aws_key_shape', prefix + b'C' * 16))
+        for kind in (b'', b'RSA ', b'EC ', b'OPENSSH ', b'DSA '):
+            samples.append(('private_key_header', b'-----BEGIN ' + kind + b'PRIVATE KEY-----'))
+        for letter in b'baprs':
+            samples.append(('slack_token_shape', b'xox' + bytes([letter]) + b'-' + b'D' * 25))
+        return samples
+
+    def test_every_pattern_branch_positive_and_binary_boundaries(self):
+        for name, payload in self.samples():
+            for prefix in (b'', b'\x00\xff ', b'PNG\r\n'):
+                with self.subTest(name=name, prefix=prefix):
+                    result = self.compare(prefix + payload + b'\x00')
+                    self.assertIsNone(result[0])
+                    self.assertEqual(result[1], 'credential_pattern_' + name)
+
+    def test_case_near_misses_NUL_and_binary_negatives_match(self):
+        samples = [b'', bytes(range(256)) * 8, b'\x00\xffGHP_' + b'A' * 40,
+                   b'SK-' + b'B' * 40, b'akia' + b'C' * 16,
+                   b'XOXB-' + b'D' * 25, b's\x00k-' + b'B' * 40,
+                   b'ghp_' + b'A' * 29, b'github_pat_' + b'A' * 49,
+                   b'-----begin PRIVATE KEY-----', b'wordsk-' + b'B' * 40]
+        for raw in samples:
+            with self.subTest(raw_bytes=len(raw)):
+                self.compare(raw)
+
+    def test_known_absence_is_only_a_necessary_condition(self):
+        for name, pattern in g._SECRET_PATTERNS.items():
+            if name == 'private_key_header':
+                self.assertFalse(g._secret_literal_prefix_absent(name, pattern, b'clean'))
+            else:
+                self.assertTrue(g._secret_literal_prefix_absent(name, pattern, b'\x00invented clean\xff'))
+        for name, raw in self.samples():
+            self.assertFalse(g._secret_literal_prefix_absent(name, g._SECRET_PATTERNS[name], raw))
+        # A present prefix does not approve a payload or replace regex matching.
+        self.compare(b'gh, github_pat_, sk-, AKIA, ASIA, xox')
+
+    def test_all_patterns_keep_original_first_failure_order(self):
+        raw = b' '.join(payload for _, payload in reversed(self.samples()))
+        self.assertEqual(self.compare(raw)[1], 'credential_pattern_github_token')
+        with patch.object(g, '_SECRET_PATTERNS', dict(reversed(list(g._SECRET_PATTERNS.items())))):
+            self.assertEqual(self.compare(raw)[1], 'credential_pattern_slack_token_shape')
+
+    def test_unknown_expression_or_ignorecase_flags_fall_back(self):
+        for pattern, raw in ((re.compile(b'INVENTED', re.I), b'invented'),
+                             (re.compile(g._SECRET_PATTERNS['openai_key_shape'].pattern, re.I), b'SK-' + b'B' * 40)):
+            patterns = dict(g._SECRET_PATTERNS)
+            patterns['openai_key_shape'] = pattern
+            with patch.object(g, '_SECRET_PATTERNS', patterns):
+                self.assertFalse(g._secret_literal_prefix_absent('openai_key_shape', pattern, raw))
+                self.assertEqual(self.compare(raw)[1], 'credential_pattern_openai_key_shape')
+
+    def test_equal_recompiled_pattern_identity_falls_back(self):
+        original = g._SECRET_PATTERNS['github_token']
+        re.purge()
+        other = re.compile(original.pattern, original.flags)
+        self.assertIsNot(other, original)
+        patterns = dict(g._SECRET_PATTERNS); patterns['github_token'] = other
+        with patch.object(g, '_SECRET_PATTERNS', patterns):
+            self.assertFalse(g._secret_literal_prefix_absent('github_token', other, b'clean'))
+            self.compare(b'ghp_' + b'A' * 40)
+
+    def test_helper_identity_code_and_defaults_mutations_fall_back(self):
+        raw = b'ghp_' + b'A' * 40
+        expected = self.baseline('x.png', raw)
+        original = g._secret_literal_prefix_absent
+        with patch.object(g, '_secret_literal_prefix_absent', lambda *args: True):
+            self.assertEqual(g._sanitize_content_uncached('x.png', raw), expected)
+        saved_code = original.__code__
+        try:
+            original.__code__ = (lambda *args: True).__code__
+            self.assertEqual(g._sanitize_content_uncached('x.png', raw), expected)
+        finally:
+            original.__code__ = saved_code
+        saved_defaults = original.__defaults__
+        try:
+            original.__defaults__ = ((),)
+            self.assertEqual(g._sanitize_content_uncached('x.png', raw), expected)
+        finally:
+            original.__defaults__ = saved_defaults
+
+    def test_unknown_matcher_and_key_types_preserve_search_and_error_order(self):
+        calls = []
+        class Matcher:
+            def search(self, raw):
+                calls.append(raw)
+                return False
+        class UnusualName(str):
+            __hash__ = str.__hash__
+            def __eq__(self, other):
+                raise AssertionError('Unknown key comparison must not run')
+        patterns = {UnusualName('github_token'): Matcher()}
+        with patch.object(g, '_SECRET_PATTERNS', patterns):
+            result = g._sanitize_content_uncached('x.png', b'invented')
+            self.assertIsNotNone(result[0]); self.assertEqual(calls, [b'invented'])
+        class Broken:
+            def search(self, raw):
+                raise RuntimeError('invented matcher error')
+        with patch.object(g, '_SECRET_PATTERNS', {'unknown': Broken()}):
+            with self.assertRaisesRegex(RuntimeError, 'invented matcher error'):
+                g._sanitize_content_uncached('x.png', b'invented')
+            self.assertEqual(g._sanitize_content_uncached('x.png', b'%PDF-1.7')[1],
+                             'original_source_document_or_archive')
+
+    def test_nonimages_and_text_svg_and_unusual_types_keep_old_path(self):
+        for path, raw in [('x.txt', b'invented'), ('x.svg', b'<svg/>'), ('x.json', b'{}'),
+                          ('x.bin', b'\x00invented'), ('x.png', bytearray(b'invented'))]:
+            with self.subTest(path=path): self.compare(raw, path)
+        raw = b'ghp_' + b'A' * 40
+        for key, replacement in (('_is_image', lambda path: False),
+                                 ('TEXT_SUFFIXES', set(g.TEXT_SUFFIXES) | {'.png'}),
+                                 ('TEXT_FILENAMES', set(g.TEXT_FILENAMES) | {'x.png'})):
+            with patch.object(g, key, replacement): self.compare(raw, 'x.png')
+
+    def test_R4_context_pattern_and_live_mutation_invalidation_still_hold(self):
+        raw = b'invented binary'; config, _, _ = opaque_config('x.png', raw)
+        def run():
+            self.assertIsNotNone(g._sanitize_content('x.png', raw, config)[0])
+            self.assertIsNotNone(g._sanitize_content('x.png', raw, config)[0])
+            changed = dict(g._SECRET_PATTERNS); changed['new'] = re.compile(b'invented')
+            with patch.object(g, '_SECRET_PATTERNS', changed):
+                self.assertEqual(g._sanitize_content('x.png', raw, config)[1], 'credential_pattern_new')
+            config['policy_sha256'] = '1' * 64
+            self.assertIsNotNone(g._sanitize_content('x.png', raw, config)[0])
+        within(run)
+        self.assertEqual(g.sanitation_memo_state()['entries'], 0)
+
+    def test_deterministic_invented_binary_fuzz_equivalence(self):
+        import random
+        rng = random.Random(372914)
+        positives = [raw for _, raw in self.samples()]
+        for index in range(160):
+            raw = bytes(rng.randrange(256) for _ in range(rng.randrange(0, 2048)))
+            if index % 3 == 0:
+                at = rng.randrange(len(raw) + 1)
+                raw = raw[:at] + b'\x00' + positives[index % len(positives)] + b'\x00' + raw[at:]
+            self.compare(raw)
+# END exact opaque-image credential-prefix equivalence tests.
+
+
+class OpaqueCredentialInLoopMutationTests(unittest.TestCase):
+    def test_earlier_unknown_search_mutations_cannot_disable_later_credential_search(self):
+        raw = b'ghp_' + b'A' * 40  # Invented fixture only.
+        for mutation in ('code', 'defaults', 'identity'):
+            with self.subTest(mutation=mutation):
+                original = g._secret_literal_prefix_absent
+                old_code, old_defaults = original.__code__, original.__defaults__
+                github = g._SECRET_PATTERNS['github_token']
+                calls = []
+                class Matcher:
+                    def search(self, payload):
+                        calls.append(payload)
+                        if mutation == 'code':
+                            original.__code__ = (lambda *args: True).__code__
+                        elif mutation == 'defaults':
+                            # Keep a known pattern but lie about its necessary prefix.
+                            original.__defaults__ = ((('github_token', github, github.pattern,
+                                github.flags, (b'never-in-invented-payload',)),),)
+                        else:
+                            g._secret_literal_prefix_absent = lambda *args: True
+                        return False
+                try:
+                    with patch.object(g, '_SECRET_PATTERNS', {'unknown_before': Matcher(), 'github_token': github}):
+                        result = g._sanitize_content_uncached('invented.png', raw)
+                    self.assertEqual(result, (None, 'credential_pattern_github_token', {}))
+                    self.assertEqual(calls, [raw])
+                finally:
+                    original.__code__, original.__defaults__ = old_code, old_defaults
+                    g._secret_literal_prefix_absent = original

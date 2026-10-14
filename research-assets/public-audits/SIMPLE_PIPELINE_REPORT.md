@@ -1,5 +1,12 @@
 # Simple pipeline website job
 
+## Current verified delivery and continuation — B26, 2026-10-14T21:48:30+00:00
+
+B26 passed actual anonymous verification at 2026-10-14T21:43:41+00:00; normal proof records 23 papers, 31 records and 82 figures. Live totals are 1,038 contributing papers, 4,185 canonical records and 2,064 displayed pairs. Source PR44 merged as `af9111059c7487987b8b31bce105b0139e9e5116`; prepared Source `c6772925bdb56a9bd27ebf2769fe01a87f40378e` and Site `0fd2e50493187407b8ed10ebd94be9725d8c3ada` remain the release bindings. The actual built site is 2,165,483,354 bytes.
+
+Next simple-pipeline batches require their own normal release and anonymous proof; no future publication or current model/process state is asserted. The audited lane, open owner questions, sampled-record window/denominator, earlier failures, training exclusions and all dated cleanup observations remain unchanged. These source_extracted records add no independent-audit or training-ready credit, and this checkpoint makes no uninterrupted-work or measured-throughput claim.
+
+
 ## Current verified delivery and continuation — B25, 2026-10-14T19:39:40+00:00
 
 B25 passed actual anonymous verification at 2026-10-14T19:31:39+00:00; normal proof records 33 papers, 45 records and 162 figures. Live totals are 1,015 contributing papers, 4,154 canonical records and 2,033 displayed pairs. Source PR43 merged as `2bb12e3cd2698947a0d6e4edbc82ab759b802ebf`; prepared Source `612640fd4e00a9b656d2d3c31a58a98351f57e66` and Site `33521591b9ffd780b5be93a8f57ae9009aac5328` remain the release bindings. The actual built site is 2,146,119,661 bytes.
@@ -1364,6 +1371,44 @@ Recorded pages run: [38623233172](https://github.com/cuiyist/mattersyn-site/acti
 | 10.1063/1.126097 | 1 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/yeh2000-1-126097-inas-quantum-dots-with-in0-16al0-84as-sr-2.html) |
 | 10.1063/1.1923176 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/zhang2005-1-1923176-inas-quantum-dots-in-inas-gaas-alinas-in-1.html) |
 
+### simple-batch26-20261014
+
+Anonymous verification passed at 2026-10-14T21:43:41+00:00: 358 files, zero mismatches. [Source commit](https://github.com/cuiyist/mattersyn/commit/c6772925bdb56a9bd27ebf2769fe01a87f40378e) and [Site commit](https://github.com/cuiyist/mattersyn-site/commit/0fd2e50493187407b8ed10ebd94be9725d8c3ada). This batch contains 23 source groups, 31 records and 82 source figure crops; 23 distinct newly contributing primary papers after DOI deduplication. Every new contribution remains machine extracted and not independently audited. The final built site is 2,165,483,354 bytes / 38,018 files.
+
+Live counter: **244 audited + 794 machine extracted = 1038 papers**, 4,185 canonical records, 454 direct material families, 543 material/component pages and 2064 displayed recipe–structure pairs (6 more comprehensive; 2058 partial). These display counts do not establish extraction accuracy, measured atomic coordinates or training eligibility.
+
+Recorded source pr: [44](https://github.com/cuiyist/mattersyn/pull/44).
+
+Recorded source ci run: [38632396496](https://github.com/cuiyist/mattersyn/actions/runs/38632396496).
+
+Recorded pages run: [38640994067](https://github.com/cuiyist/mattersyn-site/actions/runs/38640994067).
+
+| Primary DOI | Records | Figure crops | Public page |
+| --- | ---: | ---: | --- |
+| 10.1116/1.1894417 | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/1-1894417-inas-quantum-dot-molecules-qdms-regrown-1.html) |
+| 10.1063/1.2790498 | 1 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/1-2790498-inas-qds-on-gaas-pyramids-type-a-1.html) |
+| 10.1021/nl903534n | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/akopian2010-nl903534n-inp-nanowire-with-crystal-phase-heterost-1.html) |
+| 10.1002/pssc.200460449 | 1 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/al2005-pssc-200460449-gaas-inas-quantum-dot-qd-structure-1.html) |
+| 10.1002/pssb.200671547 | 2 | 2 | [Open](https://cuiyist.github.io/mattersyn-site/records/al2006-pssb-200671547-cdse-zns-core-shell-nanocrystals-in-pmma-1.html) |
+| 10.1002/pssc.200671569 | 1 | 0 | [Open](https://cuiyist.github.io/mattersyn-site/records/al2006-pssc-200671569-inas-in0-18ga0-82as-quantum-dots-qds-in-1.html) |
+| 10.1063/1.2827177 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/alghoraibi2007-1-2827177-inas-algainas-quantum-dot-lasers-1.html) |
+| 10.1116/1.2167085 | 1 | 2 | [Open](https://cuiyist.github.io/mattersyn-site/records/aslan2006-1-2167085-inas-quantum-dot-layer-1.html) |
+| 10.1021/jp9017458 | 1 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/bothun2009-jp9017458-cationic-qd-ls-with-green-hydrophobic-an-1.html) |
+| 10.1016/j.infrared.2010.12.031 | 3 | 7 | [Open](https://cuiyist.github.io/mattersyn-site/records/gustafsson2011-j-infrared-2010-12-031-gaas-qd-inas-heterostructure-1.html) |
+| 10.1063/1.126830 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/hahn2000-1-126830-inas-self-organized-quantum-dot-soqd-on-1.html) |
+| 10.1063/1.3354064 | 1 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/kim2010-1-3354064-cdse-znse-quantum-dots-1-5-ml-coverage-1.html) |
+| 10.1063/1.2905239 | 1 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/larsson2008-1-2905239-etched-trench-defined-quantum-dot-in-ing-1.html) |
+| 10.1116/1.1701857 | 2 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/lin2004-1-1701857-inas-gaas-qd-heterostructure-with-6-s-gr-1.html) |
+| 10.1063/1.3100191 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/lin2009-1-3100191-gaas0-7sb0-3-gaas-type-ii-quantum-well-w-1.html) |
+| 10.1016/j.jcrysgro.2010.10.136 | 2 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/liu2011-j-jcrysgro-2010-10-136-inas-gaassb-quantum-dot-qd-stacks-with-g-1.html) |
+| 10.1007/s11671-010-9771-2 | 2 | 2 | [Open](https://cuiyist.github.io/mattersyn-site/records/s11671-010-9771-2-qd1-inas-quantum-dot-layer-1-1.html) |
+| 10.1103/physrevb.80.085310 | 1 | 7 | [Open](https://cuiyist.github.io/mattersyn-site/records/sallen2009-physrevb-80-085310-cdse-quantum-dot-embedded-in-a-znse-nano-1.html) |
+| 10.1063/1.3097016 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/schneider2009-1-3097016-scqd-micropillar-cavity-system-1.html) |
+| 10.1002/pssb.200880650 | 1 | 2 | [Open](https://cuiyist.github.io/mattersyn-site/records/sritirawisarn2009-pssb-200880650-2-6-ml-inas-qd-arrays-with-0-8-ml-gaas-i-1.html) |
+| 10.1103/physrevb.73.132302 | 2 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/walters2006-physrevb-73-132302-silicon-nanocrystals-in-sio2-sample-a-1.html) |
+| 10.1021/ma200591w | 2 | 6 | [Open](https://cuiyist.github.io/mattersyn-site/records/yan2011-ma200591w-paa2-capped-cdse-zns-quantum-dots-1.html) |
+| 10.1116/1.2201452 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/zhang2006-1-2201452-ten-period-inas-quantum-dot-multilayer-s-1.html) |
+
 ## Latest continuation checkpoint
 
 At 2026-10-11T06:09:34+00:00, Batch01 is live and anonymously verified; Batch02 remains in local processing with 47/49 two-pass-complete papers at its last saved checkpoint. These are processing counts, not additional published papers. The audited lane stays paused.
@@ -2016,3 +2061,15 @@ The [latest remotely verified cleanup report](https://github.com/cuiyist/matters
 
 
 - 2026-10-14T20:02:55.632684+00:00: Batch26 includes two independently reviewed release-tool optimizations: opaque image-byte scans are reused only within one export invocation, and anonymous paper/material route requests run with at most eight workers while preserving every request, phase barrier, hash check and ordered result. All79 publication-boundary tests and all7 public live-route tests passed on the actual Source changes. Added19 boundary regressions and3 route regressions; existing release gates, rights rules, extraction predicates and scientific data are unchanged. Earlier failed prototypes remain preserved locally. No production speed improvement or20-papers/hour achievement is claimed before measurement. Batch26 remains unpublished at23 retained papers /31 records /82 fully captioned figures; all4,154 earlier canonical records remain preserved. The last verified live checkpoint is Batch25:1,015 papers /2,033 displayed pairs. The audit lane and its questions remain paused.
+
+
+- 2026-10-14T22:09:05.687045+00:00: Batch 27 is privately integrated with 23 new source_extracted records; 60 of 60 retained figure captions are bound. Corrected 5 new title prefixes and their exact dependent labels/hash pointers. All 4,185 prior canonical records and scientific fields are unchanged. Normal Source/build/visual/CI and Site deployment/anonymous checks remain pending. This checkpoint adds zero publication or independent audit credit.
+
+
+### B27 release-check performance change (local validation; publication pending)
+
+The credential scan now uses exact byte-prefix absence to avoid four impossible credential regex searches in opaque image bytes. Every original regex, error, search order, rights check and full-search fallback remains; unexpected matcher/helper/code/flag/type changes fall back to the original search. Eligibility is checked at each search so an earlier matcher cannot mutate a later check into being skipped. The previous private proposal that missed this mutation case was rejected and remains on record; it was never deployed.
+
+Root ran all 91 release-guard tests successfully with the unchanged suite and added regression cases. An earlier attempt failed because its working directory and sandbox temporary folder were unsuitable; the original failure is retained, and the retry changed the harness location only. The normal full source/build/browser/CI/release checks still apply to this source change. No production speed or publication-rate gain is inferred from synthetic timing tests.
+
+Local generation: B46 completed its two-pass processing on 50 supported papers with checker exit 0; B47 launched on 46 supported papers with four technical identity holds under the existing Qwen server. These processing stages add no publication credit. The audited lane, its questions and denominators remain paused and unchanged. No cleanup deletion is claimed by this addendum.
