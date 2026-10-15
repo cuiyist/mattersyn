@@ -1,5 +1,7 @@
 # Published machine-extracted papers
 
+Current verified index after B31 (2026-10-15T15:42:06+00:00): **890 distinct source_extracted papers / 1,325 records**. B31 adds 12 papers / 18 records. Nine papers had scoped rare reads; seven are among the twelve published papers and are marked below. Every prior row and receipt/footer remains verbatim. No independent-audit or training-ready credit.
+
 Current verified index after B30 (2026-10-15T11:25:58+00:00): **878 distinct source_extracted papers / 1,307 records**. B30 adds 22 papers / 24 records, with no independent-audit or training-ready credit. All earlier index rows and historical summaries below are preserved verbatim.
 
 
@@ -930,3 +932,22 @@ Publication proof mapping:
 | 10.1063/1.2889938 | `zhao2008-1-2889938-inas-gaas-quantum-dot-heterostructure-1` | B30 | 2026-10-15T11:25:58+00:00 | no |
 
 B30 keeps its source_extracted status. Rare-read markers refer only to scoped deletion-only checks; no common-paper reread, independent audit or accuracy credit is implied. Saved Maingault detector coverage is zero figures.
+
+## B31 verified additions — 2026-10-15T15:42:06+00:00
+
+| Primary DOI | Record IDs | Batch | Anonymous live (UTC) | Rare read |
+| --- | --- | --- | --- | --- |
+| 10.1002/adfm.200600053 | `yi2006-adfm-200600053-nayf4-20-yb-2-er-1`, `yi2006-adfm-200600053-nayf4-20-yb-2-tm-2` | B31 | 2026-10-15T15:42:06+00:00 | yes |
+| 10.1002/adma.200501088 | `fan2005-adma-200501088-gold-ncmicelles-1` | B31 | 2026-10-15T15:42:06+00:00 | no |
+| 10.1002/anie.200460610 | `aravind2004-anie-200460610-in2o3-nanoparticles-2` | B31 | 2026-10-15T15:42:06+00:00 | yes |
+| 10.1002/crat.200710987 | `anandakumar2008-crat-200710987-nanocrystalline-cawo4-sample-code-ct1-1`, `anandakumar2008-crat-200710987-nanocrystalline-cawo4-sample-code-ct2-2`, `anandakumar2008-crat-200710987-nanocrystalline-cawo4-sample-code-ct3-3` | B31 | 2026-10-15T15:42:06+00:00 | yes |
+| 10.1002/crat.201000105 | `su2010-crat-201000105-ln500-1` | B31 | 2026-10-15T15:42:06+00:00 | yes |
+| 10.1002/pssa.200669630 | `isobe2006-pssa-200669630-yag-ce3-nanocrystals-1` | B31 | 2026-10-15T15:42:06+00:00 | yes |
+| 10.1002/pssb.200776158 | `frank2007-pssb-200776158-mwcnt-tio2-anatase-heterostructure-from-3`, `frank2007-pssb-200776158-mwcnt-tio2-anatase-mixture-from-ti-butox-2`, `frank2007-pssb-200776158-swcnt-tio2-anatase-heterostructure-1` | B31 | 2026-10-15T15:42:06+00:00 | no |
+| 10.1002/pssc.201000461 | `oshima2011-pssc-201000461-inas-ganas-qdsc-50-layer-stacked-sample-1` | B31 | 2026-10-15T15:42:06+00:00 | yes |
+| 10.1007/s00339-006-3631-z | `guo12006-s00339-006-3631-z-monoclinic-zirconia-70-with-some-tetrago-1` | B31 | 2026-10-15T15:42:06+00:00 | no |
+| 10.1021/am500197n | `prins2014-am500197n-acceptor-on-donor-qd-heterostructure-1` | B31 | 2026-10-15T15:42:06+00:00 | yes |
+| 10.1063/1.117614 | `solomon1996-1-117614-inas-quantum-dot-columns-with-1-5-and-10-1` | B31 | 2026-10-15T15:42:06+00:00 | no |
+| 10.1063/1.2903699 | `hubbard2008-1-2903699-gaas-solar-cell-with-five-layer-inas-qd-1`, `hubbard2008-1-2903699-gaas-solar-cell-with-five-layer-inas-qd-2` | B31 | 2026-10-15T15:42:06+00:00 | no |
+
+These twelve papers retain source_extracted status. Seven have a recorded limited rare read; two additional read but nonretained DOI histories remain preserved without publication credit. No common-paper reread, independent audit or accuracy credit is implied.

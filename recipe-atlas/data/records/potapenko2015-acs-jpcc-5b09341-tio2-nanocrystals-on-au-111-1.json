@@ -1,0 +1,527 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "potapenko2015-acs-jpcc-5b09341-tio2-nanocrystals-on-au-111-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Denis V. Potapenko (2015): TiO2 nanocrystals on Au(111)",
+  "material": {
+    "formula": "TiO2",
+    "family": "TiO2 nanocrystals",
+    "elements": [
+      "Ti",
+      "O"
+    ],
+    "components": [
+      "TiO2"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Ti−Au surface alloy-assisted",
+  "sources": [
+    {
+      "id": "potapenko2015-acs-jpcc-5b09341",
+      "doi": "10.1021/acs.jpcc.5b09341",
+      "title": "Photoreactions on a Single Isolated TiO2 Nanocrystal on Au(111): Photodecomposition of TMAA",
+      "authors": "Denis V. Potapenko, Zhisheng Li, and Richard M. Osgood, Jr.",
+      "year": 2015,
+      "url": "https://doi.org/10.1021/acs.jpcc.5b09341",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "potapenko2015-acs-jpcc-5b09341",
+    "recipe_family": "potapenko2015-acs-jpcc-5b09341-tio2-nanocrystals-on-au-111-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "TiO2",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "potapenko2015-acs-jpcc-5b09341",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "rutile",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "potapenko2015-acs-jpcc-5b09341",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "hexagonal",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "potapenko2015-acs-jpcc-5b09341",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "potapenko2015-acs-jpcc-5b09341-tio2-nanocrystals-on-au-111-1--titanium",
+      "name": "titanium",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "potapenko2015-acs-jpcc-5b09341",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "potapenko2015-acs-jpcc-5b09341-tio2-nanocrystals-on-au-111-1--oxygen",
+      "name": "oxygen",
+      "formula": null,
+      "role": "nonmetal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "potapenko2015-acs-jpcc-5b09341",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "potapenko2015-acs-jpcc-5b09341-tio2-nanocrystals-on-au-111-1--after-s01-deposit",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "potapenko2015-acs-jpcc-5b09341-tio2-nanocrystals-on-au-111-1--titanium"
+      ]
+    },
+    {
+      "id": "potapenko2015-acs-jpcc-5b09341-tio2-nanocrystals-on-au-111-1--after-s02-anneal",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "potapenko2015-acs-jpcc-5b09341-tio2-nanocrystals-on-au-111-1--after-s01-deposit"
+      ]
+    },
+    {
+      "id": "potapenko2015-acs-jpcc-5b09341-tio2-nanocrystals-on-au-111-1--after-s03-expose",
+      "name": "mixture after step 3",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "potapenko2015-acs-jpcc-5b09341-tio2-nanocrystals-on-au-111-1--after-s02-anneal",
+        "potapenko2015-acs-jpcc-5b09341-tio2-nanocrystals-on-au-111-1--oxygen"
+      ]
+    },
+    {
+      "id": "potapenko2015-acs-jpcc-5b09341-tio2-nanocrystals-on-au-111-1--after-s04-anneal",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "potapenko2015-acs-jpcc-5b09341-tio2-nanocrystals-on-au-111-1--after-s03-expose"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-deposit",
+      "action": "deposit",
+      "label": "Physical-vapor-deposited titanium onto Au(111) surface",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "potapenko2015-acs-jpcc-5b09341-tio2-nanocrystals-on-au-111-1--titanium"
+      ],
+      "outputs": [
+        "potapenko2015-acs-jpcc-5b09341-tio2-nanocrystals-on-au-111-1--after-s01-deposit"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "UHV",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "potapenko2015-acs-jpcc-5b09341",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Physical-vapor-deposited titanium onto Au(111) surface",
+      "evidence": [
+        {
+          "source_id": "potapenko2015-acs-jpcc-5b09341",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-anneal",
+      "action": "anneal",
+      "label": "Annealed at 900 K in UHV for 5 min",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-deposit"
+      ],
+      "inputs": [
+        "potapenko2015-acs-jpcc-5b09341-tio2-nanocrystals-on-au-111-1--after-s01-deposit"
+      ],
+      "outputs": [
+        "potapenko2015-acs-jpcc-5b09341-tio2-nanocrystals-on-au-111-1--after-s02-anneal"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 900,
+          "minimum": null,
+          "maximum": null,
+          "unit": "K",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "900 K",
+          "evidence": [
+            {
+              "source_id": "potapenko2015-acs-jpcc-5b09341",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "5 min",
+          "evidence": [
+            {
+              "source_id": "potapenko2015-acs-jpcc-5b09341",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "UHV",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "potapenko2015-acs-jpcc-5b09341",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Annealed at 900 K in UHV for 5 min",
+      "evidence": [
+        {
+          "source_id": "potapenko2015-acs-jpcc-5b09341",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-expose",
+      "action": "expose",
+      "label": "Exposed to O2 flow with a local pressure of ∼10−6 Torr for 10 min",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-anneal"
+      ],
+      "inputs": [
+        "potapenko2015-acs-jpcc-5b09341-tio2-nanocrystals-on-au-111-1--after-s02-anneal",
+        "potapenko2015-acs-jpcc-5b09341-tio2-nanocrystals-on-au-111-1--oxygen"
+      ],
+      "outputs": [
+        "potapenko2015-acs-jpcc-5b09341-tio2-nanocrystals-on-au-111-1--after-s03-expose"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 850,
+          "minimum": null,
+          "maximum": null,
+          "unit": "K",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "850 K",
+          "evidence": [
+            {
+              "source_id": "potapenko2015-acs-jpcc-5b09341",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "10 min",
+          "evidence": [
+            {
+              "source_id": "potapenko2015-acs-jpcc-5b09341",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "UHV",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "potapenko2015-acs-jpcc-5b09341",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Exposed to O2 flow with a local pressure of ∼10−6 Torr for 10 min",
+      "evidence": [
+        {
+          "source_id": "potapenko2015-acs-jpcc-5b09341",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s04-anneal",
+      "action": "anneal",
+      "label": "Postannealed in UHV for another 5 min at 900 K",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s03-expose"
+      ],
+      "inputs": [
+        "potapenko2015-acs-jpcc-5b09341-tio2-nanocrystals-on-au-111-1--after-s03-expose"
+      ],
+      "outputs": [
+        "potapenko2015-acs-jpcc-5b09341-tio2-nanocrystals-on-au-111-1--after-s04-anneal"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 900,
+          "minimum": null,
+          "maximum": null,
+          "unit": "K",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "900 K",
+          "evidence": [
+            {
+              "source_id": "potapenko2015-acs-jpcc-5b09341",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "5 min",
+          "evidence": [
+            {
+              "source_id": "potapenko2015-acs-jpcc-5b09341",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "UHV",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "potapenko2015-acs-jpcc-5b09341",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Postannealed in UHV for another 5 min at 900 K",
+      "evidence": [
+        {
+          "source_id": "potapenko2015-acs-jpcc-5b09341",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "potapenko2015-acs-jpcc-5b09341-tio2-nanocrystals-on-au-111-1--product",
+      "source_sample_label": "TiO2 nanocrystals on Au(111)",
+      "batch_id": null,
+      "material_state_id": "potapenko2015-acs-jpcc-5b09341-tio2-nanocrystals-on-au-111-1--after-s04-anneal",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "TiO2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "potapenko2015-acs-jpcc-5b09341",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "rutile",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "potapenko2015-acs-jpcc-5b09341",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "hexagonal",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "potapenko2015-acs-jpcc-5b09341",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "potapenko2015-acs-jpcc-5b09341",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reactor: UHV chamber (Main PDF p.2).",
+        "Reaction temperature: 900 K (Main PDF p.2).",
+        "Reaction time: 5 min (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Amount of titanium not reported in the extracted text.",
+      "Amount of oxygen not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
