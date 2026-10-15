@@ -1,3 +1,21 @@
+Current continuation (2026-10-15T15:59:14.224164+00:00): B32 has 30 papers / 40 new records / 191 crops integrated locally, pending metadata/captions and normal release checks. B74 controller36488 is active; B75 metadata is ready. These add no publication credit. The audit lane remains paused.
+
+## Latest verified delivery — B31 (2026-10-15T15:42:06+00:00)
+
+B31 is live and anonymously verified: **12 source_extracted papers / 18 new records / 51 captioned crops**. Live totals are **1,134 contributing papers / 4,310 canonical records / 2,189 recipe–structure display pairs**. Existing tiers remain separate: 244 audited and 890 source_extracted contributing papers; 864 audited and 1,325 source_extracted display pairs. There are 471 directly synthesized material systems, 568 public material/component hubs and 597 dataset material families under their separate definitions. Six display pairs are more comprehensive and 2,183 are partial; these do not establish independent experiments or training readiness.
+
+Prepared Source `a90e9c6dfd17a1c7883c77333827dc8ec8c69b62` passed all 13 ordinary local phases and three required CI jobs in run [38742740150](https://github.com/cuiyist/mattersyn/actions/runs/38742740150). PR [51](https://github.com/cuiyist/mattersyn/pull/51) merged as `c06732bdaa77bf2a10353c61226067ed6470d34b`. Site `3fd088503279a03b269dd5a7cc06e67298cb4594` passed Pages run [38761086510](https://github.com/cuiyist/mattersyn-site/actions/runs/38761086510). Anonymous verification at 2026-10-15T15:42:06+00:00 checked 247 files with zero mismatches; all 12 paper and 16 material bindings passed. The final artifact contains 39,192 files / 2,219,290,232 bytes. Twelve source_extracted publication events were recorded once.
+
+Nine limited rare-material reads produced 23 scientific-object/scalar deletions, zero coupled-unit or locator deletions and no additions. Seven read DOIs are among the twelve published papers. The read but nonretained DOIs 10.1002/adfm.200600256 and 10.1002/adma.200602333 retain their original reading/deletion history without publication credit. The index therefore adds twelve DOI rows with seven rare-read markers. Common papers were not reread; the earlier fixed held-paper decisions remain historical holds, not synthesis skips.
+
+The final-build and later export disk-capacity failures remain preserved. Forward continuation reused the genuine completed candidate/final while retaining ordinary full-byte comparison, clean-role, current CI, rights/privacy boundary, browser, Pages and anonymous gates. Reused stage times remain unmeasured; no speedup or uninterrupted-activity claim is made. Caption coverage is 51/51 public paraphrases. Figure rights remain as recorded; display does not establish separate publisher permission or scientific accuracy.
+
+The independent-audit lane, four owner questions, original denominator and measurement window, training exclusions, legacy audited publication fields and all prior failures remain paused or unchanged as recorded. B32 final-scope planning and integration are separate; this checkpoint gives B32 no publication credit.
+
+Processing only: B73 completed 34 two-pass papers / 34 checked outputs / 25 nonempty papers / 30 pairs / 122 checked crops, with zero metadata conflicts. B74 has metadata for 50 papers: 32 supported inputs / 18 technical identity holds, with 840 metadata candidates remaining. No B74 launch or native idle state is asserted here. These processing facts add no publication or audit credit.
+
+Root-reported cumulative cleanup is **400,611,068,738 logical bytes / 8,211,238 file copies removed**. The 600 GB target remains unmet by 199,388,931,262 logical bytes. Latest supplied C-drive observations were 15,582,679,040 bytes before and 22,574,600,192 after: a net change of 6,991,921,152 bytes during concurrent work, not an isolated physical-recovery measurement. This documentation step removes nothing and adds no cleanup credit. Compression remains separate; original PDFs, text, passes, pairs, private audits, working checkouts and the active model/runtime remain protected.
+
 Index: [machine-paper inventory](research-assets/public-audits/MACHINE_EXTRACTED_PAPERS.md).
 
 ## Latest verified delivery — B30 (2026-10-15T11:25:58+00:00)
