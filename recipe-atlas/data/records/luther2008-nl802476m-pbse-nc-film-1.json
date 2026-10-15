@@ -1,0 +1,374 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "luther2008-nl802476m-pbse-nc-film-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Joseph M. Luther (2008): PbSe NC film",
+  "material": {
+    "formula": "PbSe",
+    "family": "PbSe nanocrystals",
+    "elements": [
+      "Pb",
+      "Se"
+    ],
+    "components": [
+      "PbSe"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Layer-by-layer dip coating",
+  "sources": [
+    {
+      "id": "luther2008-nl802476m",
+      "doi": "10.1021/nl802476m",
+      "title": "Schottky Solar Cells Based on Colloidal Nanocrystal Films",
+      "authors": "Joseph M. Luther, Matt Law, Matthew C. Beard, Qing Song, Matthew O. Reese, Randy J. Ellingson, and Arthur J. Nozik",
+      "year": 2008,
+      "url": "https://doi.org/10.1021/nl802476m",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "luther2008-nl802476m",
+    "recipe_family": "luther2008-nl802476m-pbse-nc-film-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "PbSe",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "luther2008-nl802476m",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": 65,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "65 nm",
+      "evidence": [
+        {
+          "source_id": "luther2008-nl802476m",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "sphere",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "luther2008-nl802476m",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "luther2008-nl802476m-pbse-nc-film-1--1-2-ethanedithiol-edt",
+      "name": "1,2-ethanedithiol (EDT)",
+      "formula": null,
+      "role": "reagent",
+      "stage": "workup",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "concentration": {
+          "value": 0.01,
+          "minimum": null,
+          "maximum": null,
+          "unit": "M",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0.01 M",
+          "evidence": [
+            {
+              "source_id": "luther2008-nl802476m",
+              "locator": "Main PDF p.1"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "luther2008-nl802476m",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "luther2008-nl802476m-pbse-nc-film-1--hexane",
+      "name": "hexane",
+      "formula": null,
+      "role": "solvent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "luther2008-nl802476m",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "luther2008-nl802476m-pbse-nc-film-1--acetonitrile",
+      "name": "acetonitrile",
+      "formula": null,
+      "role": "solvent",
+      "stage": "workup",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "luther2008-nl802476m",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "luther2008-nl802476m-pbse-nc-film-1--after-s01-wash",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "luther2008-nl802476m-pbse-nc-film-1--1-2-ethanedithiol-edt",
+        "luther2008-nl802476m-pbse-nc-film-1--acetonitrile"
+      ]
+    },
+    {
+      "id": "luther2008-nl802476m-pbse-nc-film-1--after-s02-evaporate",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "luther2008-nl802476m-pbse-nc-film-1--after-s01-wash"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-wash",
+      "action": "wash",
+      "label": "Remove oleate ligands with EDT in acetonitrile",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "luther2008-nl802476m-pbse-nc-film-1--1-2-ethanedithiol-edt",
+        "luther2008-nl802476m-pbse-nc-film-1--acetonitrile"
+      ],
+      "outputs": [
+        "luther2008-nl802476m-pbse-nc-film-1--after-s01-wash"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Remove oleate ligands with EDT in acetonitrile",
+      "evidence": [
+        {
+          "source_id": "luther2008-nl802476m",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "s02-evaporate",
+      "action": "evaporate",
+      "label": "Deposit top metal contact",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-wash"
+      ],
+      "inputs": [
+        "luther2008-nl802476m-pbse-nc-film-1--after-s01-wash"
+      ],
+      "outputs": [
+        "luther2008-nl802476m-pbse-nc-film-1--after-s02-evaporate"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Deposit top metal contact",
+      "evidence": [
+        {
+          "source_id": "luther2008-nl802476m",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "luther2008-nl802476m-pbse-nc-film-1--product",
+      "source_sample_label": "PbSe NC film",
+      "batch_id": null,
+      "material_state_id": "luther2008-nl802476m-pbse-nc-film-1--after-s02-evaporate",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "PbSe",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "luther2008-nl802476m",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": "sphere",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "luther2008-nl802476m",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": "oleate",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "luther2008-nl802476m",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "luther2008-nl802476m",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [
+    {
+      "id": "luther2008-nl802476m-pbse-nc-film-1--size",
+      "sample_id": "luther2008-nl802476m-pbse-nc-film-1--product",
+      "property": "crystallite_size",
+      "technique": "XRD",
+      "value": {
+        "value": 65,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "65 nm",
+        "evidence": [
+          {
+            "source_id": "luther2008-nl802476m",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "luther2008-nl802476m",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of hexane not reported in the extracted text.",
+      "Amount of acetonitrile not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
