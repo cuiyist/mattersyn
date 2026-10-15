@@ -1,0 +1,387 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "frank2007-pssb-200776158-swcnt-tio2-anatase-heterostructure-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Otakar Frank et al. (2007): SWCNT-TiO2 (anatase) heterostructure",
+  "material": {
+    "formula": "TiO2",
+    "family": "TiO2 nanocrystals",
+    "elements": [
+      "Ti",
+      "O"
+    ],
+    "components": [
+      "TiO2"
+    ],
+    "architecture": "heterostructure"
+  },
+  "method": "Electrochemical deposition",
+  "sources": [
+    {
+      "id": "frank2007-pssb-200776158",
+      "doi": "10.1002/pssb.200776158",
+      "title": "Structural properties and electrochemical behavior of CNT‐TiO2 nanocrystal heterostructures",
+      "authors": "Otakar Frank; Martin Kalbac; Ladislav Kavan; Marketa Zukalova; Jan Prochazka; Mariana Klementova; Lothar Dunsch",
+      "year": 2007,
+      "url": "https://doi.org/10.1002/pssb.200776158",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "frank2007-pssb-200776158",
+    "recipe_family": "frank2007-pssb-200776158-swcnt-tio2-anatase-heterostructure-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "TiO2",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "frank2007-pssb-200776158",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "anatase",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "frank2007-pssb-200776158",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": 8,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "8 nm",
+      "evidence": [
+        {
+          "source_id": "frank2007-pssb-200776158",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "nanoparticle",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "frank2007-pssb-200776158",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "frank2007-pssb-200776158-swcnt-tio2-anatase-heterostructure-1--swcnt-buckypaper",
+      "name": "SWCNT buckypaper",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "frank2007-pssb-200776158",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "frank2007-pssb-200776158-swcnt-tio2-anatase-heterostructure-1--na2co3",
+      "name": "Na2CO3",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "frank2007-pssb-200776158",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "frank2007-pssb-200776158-swcnt-tio2-anatase-heterostructure-1--after-s01-deposit",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "frank2007-pssb-200776158-swcnt-tio2-anatase-heterostructure-1--na2co3"
+      ]
+    },
+    {
+      "id": "frank2007-pssb-200776158-swcnt-tio2-anatase-heterostructure-1--after-s02-calcine",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "frank2007-pssb-200776158-swcnt-tio2-anatase-heterostructure-1--after-s01-deposit"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-deposit",
+      "action": "deposit",
+      "label": "Electrochemical oxidation of TiCl3",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "frank2007-pssb-200776158-swcnt-tio2-anatase-heterostructure-1--na2co3"
+      ],
+      "outputs": [
+        "frank2007-pssb-200776158-swcnt-tio2-anatase-heterostructure-1--after-s01-deposit"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 3.5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "3.5 hours",
+          "evidence": [
+            {
+              "source_id": "frank2007-pssb-200776158",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "frank2007-pssb-200776158",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Electrochemical oxidation of TiCl3",
+      "evidence": [
+        {
+          "source_id": "frank2007-pssb-200776158",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-calcine",
+      "action": "calcine",
+      "label": "Calcination in air",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-deposit"
+      ],
+      "inputs": [
+        "frank2007-pssb-200776158-swcnt-tio2-anatase-heterostructure-1--after-s01-deposit"
+      ],
+      "outputs": [
+        "frank2007-pssb-200776158-swcnt-tio2-anatase-heterostructure-1--after-s02-calcine"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 450,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "450 °C",
+          "evidence": [
+            {
+              "source_id": "frank2007-pssb-200776158",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "frank2007-pssb-200776158",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Calcination in air",
+      "evidence": [
+        {
+          "source_id": "frank2007-pssb-200776158",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "frank2007-pssb-200776158-swcnt-tio2-anatase-heterostructure-1--product",
+      "source_sample_label": "SWCNT-TiO2 (anatase) heterostructure",
+      "batch_id": null,
+      "material_state_id": "frank2007-pssb-200776158-swcnt-tio2-anatase-heterostructure-1--after-s02-calcine",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "TiO2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "frank2007-pssb-200776158",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "anatase",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "frank2007-pssb-200776158",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "nanoparticle",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "frank2007-pssb-200776158",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "frank2007-pssb-200776158",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reaction temperature: 450 degC (Main PDF p.2).",
+        "Reaction time: 3.5 h (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "frank2007-pssb-200776158-swcnt-tio2-anatase-heterostructure-1--size",
+      "sample_id": "frank2007-pssb-200776158-swcnt-tio2-anatase-heterostructure-1--product",
+      "property": "particle_size",
+      "technique": "not reported",
+      "value": {
+        "value": 8,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "8 nm",
+        "evidence": [
+          {
+            "source_id": "frank2007-pssb-200776158",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "frank2007-pssb-200776158",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Ligand not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Amount of SWCNT buckypaper not reported in the extracted text.",
+      "Amount of Na2CO3 not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

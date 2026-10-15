@@ -1,5 +1,8 @@
 # Published machine-extracted papers
 
+Current verified index after B30 (2026-10-15T11:25:58+00:00): **878 distinct source_extracted papers / 1,307 records**. B30 adds 22 papers / 24 records, with no independent-audit or training-ready credit. All earlier index rows and historical summaries below are preserved verbatim.
+
+
 Current verified index after B29 (2026-10-15T06:14:34+00:00): **856 distinct source_extracted papers / 1283 records**. No independent-audit or training-ready credit. The earlier summary below is retained verbatim as historical context; all earlier DOI rows and receipt footers remain unchanged.
 
 
@@ -897,3 +900,33 @@ Publication proof mapping:
 - batch27: Source `5ed80cde2e3ab123fd6d46d81df381b59650818d`, Site `50b3abe7629e4de5aa769f391530cba2f1a01101`, anonymous pass 2026-10-15T01:29:00+00:00; live receipt SHA256 `03649836bc8aa55f5493f14d60c48cbac82e75e51baecb4f7cc72aa1268c074f`.
 - batch28: Source `68b8e4e9efaa4c53334ff659944e318223181887`, Site `f13c7986d1c317395d0ae7c77cdcdb67cbf8e0a8`, anonymous pass 2026-10-15T03:47:07+00:00; live receipt SHA256 `8365ee2276d41c2ddf7e266bf005d11d2673e9f29983e8cfca45c84e8b2c42e8`.
 - batch29: Source `ff7ef6008cdb77d3b84f3beada733a7838950e15`, Site `d8ccf50be34db49e6b726f11a146b8720b202ad1`, anonymous pass 2026-10-15T06:14:34+00:00; live receipt SHA256 `92a05cc28d4e2db72244a79a2ab5192f139574b0cc355761391c741adcfd6b2d`.
+
+
+## B30 verified additions — 2026-10-15T11:25:58+00:00
+
+| Primary DOI | Record IDs | Batch | Anonymous live UTC | Rare read |
+| --- | --- | --- | --- | --- |
+| 10.1007/s00339-010-6152-8 | `al-s00339-010-6152-8-sample-a-1` | B30 | 2026-10-15T11:25:58+00:00 | yes |
+| 10.1063/1.1459622 | `cassabois2002-1-1459622-inas-gaas-quantum-dots-qds-1` | B30 | 2026-10-15T11:25:58+00:00 | no |
+| 10.1103/physrevlett.102.077402 | `chanyawadee2009-physrevlett-102-077402-cdse-cds-colloidal-nqds-1` | B30 | 2026-10-15T11:25:58+00:00 | no |
+| 10.1063/1.3042216 | `eisele2008-1-3042216-inas-gaas-quantum-dots-1` | B30 | 2026-10-15T11:25:58+00:00 | no |
+| 10.1063/1.2780120 | `ishi-hayase2007-1-2780120-strain-compensated-inas-quantum-dots-1` | B30 | 2026-10-15T11:25:58+00:00 | no |
+| 10.1103/physrevb.78.045309 | `koudinov2008-physrevb-78-045309-cdse-znse-quantum-dots-1` | B30 | 2026-10-15T11:25:58+00:00 | no |
+| 10.1063/1.2956672 | `ma2008-1-2956672-inas-gaas-quantum-dot-infrared-photodete-1` | B30 | 2026-10-15T11:25:58+00:00 | no |
+| 10.1002/pssc.200671617 | `maingault2006-pssc-200671617-cdte-qd-doped-with-a-single-mn-ion-1` | B30 | 2026-10-15T11:25:58+00:00 | no |
+| 10.1063/1.119276 | `narihiro1997-1-119276-inas-quantum-dot-qd-embedded-in-alas-bar-1` | B30 | 2026-10-15T11:25:58+00:00 | no |
+| 10.1063/1.3109151 | `nizamoglu2009-1-3109151-cdse-zns-core-shell-nc-solid-film-pl-in-1` | B30 | 2026-10-15T11:25:58+00:00 | no |
+| 10.1116/1.1881572 | `pala2005-1-1881572-inas-gaas-quantum-dot-detector-structure-1` | B30 | 2026-10-15T11:25:58+00:00 | no |
+| 10.1021/nl401217q | `pierz2013-nl401217q-inas-quantum-dot-embedded-in-alas-matrix-1` | B30 | 2026-10-15T11:25:58+00:00 | no |
+| 10.1063/1.3117193 | `qi2009-1-3117193-cdse-qd-monolayer-1` | B30 | 2026-10-15T11:25:58+00:00 | no |
+| 10.1063/1.1447319 | `raab2002-1-1447319-pbse-pb1-xeuxte-quantum-dot-superlattice-1` | B30 | 2026-10-15T11:25:58+00:00 | yes |
+| 10.1063/1.2186078 | `sandall2006-1-2186078-inas-quantum-dot-laser-p-doped-15-accept-2`, `sandall2006-1-2186078-inas-quantum-dot-laser-p-doped-50-accept-3`, `sandall2006-1-2186078-inas-quantum-dot-laser-undoped-1` | B30 | 2026-10-15T11:25:58+00:00 | no |
+| 10.1002/pssb.200304237 | `schmidt2004-pssb-200304237-cdse-znsse-quantum-dot-layers-1` | B30 | 2026-10-15T11:25:58+00:00 | yes |
+| 10.1021/jp8108682 | `shalom2009-jp8108682-cds-qd-sensitized-mesoporous-tio2-electr-1` | B30 | 2026-10-15T11:25:58+00:00 | no |
+| 10.1002/pssc.200777647 | `shamirzaev2008-pssc-200777647-inas-alas-quantum-dot-1` | B30 | 2026-10-15T11:25:58+00:00 | yes |
+| 10.1063/1.3409223 | `sun2010-1-3409223-ingaas-inp-double-quantum-dot-with-integ-1` | B30 | 2026-10-15T11:25:58+00:00 | yes |
+| 10.1063/1.1605809 | `ulrich2003-1-1605809-cdse-quantum-dot-1` | B30 | 2026-10-15T11:25:58+00:00 | no |
+| 10.1063/1.1347006 | `wang2001-1-1347006-inas-gaas-quantum-dot-infrared-photodete-1` | B30 | 2026-10-15T11:25:58+00:00 | no |
+| 10.1063/1.2889938 | `zhao2008-1-2889938-inas-gaas-quantum-dot-heterostructure-1` | B30 | 2026-10-15T11:25:58+00:00 | no |
+
+B30 keeps its source_extracted status. Rare-read markers refer only to scoped deletion-only checks; no common-paper reread, independent audit or accuracy credit is implied. Saved Maingault detector coverage is zero figures.

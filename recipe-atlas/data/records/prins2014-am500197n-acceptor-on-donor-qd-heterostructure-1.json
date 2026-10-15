@@ -1,0 +1,395 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "prins2014-am500197n-acceptor-on-donor-qd-heterostructure-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Ferry Prins (2014): acceptor-on-donor QD heterostructure",
+  "material": {
+    "formula": "CdSe/CdZnS",
+    "family": "CdSe/CdZnS nanocrystals",
+    "elements": [
+      "Cd",
+      "Se",
+      "Zn",
+      "S"
+    ],
+    "components": [
+      "CdSe",
+      "CdZnS"
+    ],
+    "architecture": "heterostructure"
+  },
+  "method": "Synthesis as described in the source",
+  "sources": [
+    {
+      "id": "prins2014-am500197n",
+      "doi": "10.1021/am500197n",
+      "title": "Spatially Resolved Energy Transfer in Patterned Colloidal Quantum Dot Heterostructures",
+      "authors": "Ferry Prins, Areza Sumitro, Mark C. Weidman, and William A. Tisdale",
+      "year": 2014,
+      "url": "https://doi.org/10.1021/am500197n",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "prins2014-am500197n",
+    "recipe_family": "prins2014-am500197n-acceptor-on-donor-qd-heterostructure-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdSe/CdZnS",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "prins2014-am500197n",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "prins2014-am500197n-acceptor-on-donor-qd-heterostructure-1--diethylene-glycol",
+      "name": "diethylene glycol",
+      "formula": null,
+      "role": "solvent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "volume": {
+          "value": 2.5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "2.5 mL",
+          "evidence": [
+            {
+              "source_id": "prins2014-am500197n",
+              "locator": "Main PDF p.1"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "prins2014-am500197n",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "prins2014-am500197n-acceptor-on-donor-qd-heterostructure-1--cdse-cdzns-qds",
+      "name": "CdSe/CdZnS QDs",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "prins2014-am500197n",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "prins2014-am500197n-acceptor-on-donor-qd-heterostructure-1--after-s01-deposit",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "prins2014-am500197n-acceptor-on-donor-qd-heterostructure-1--diethylene-glycol",
+        "prins2014-am500197n-acceptor-on-donor-qd-heterostructure-1--cdse-cdzns-qds"
+      ]
+    },
+    {
+      "id": "prins2014-am500197n-acceptor-on-donor-qd-heterostructure-1--after-s02-ink",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "prins2014-am500197n-acceptor-on-donor-qd-heterostructure-1--after-s01-deposit",
+        "prins2014-am500197n-acceptor-on-donor-qd-heterostructure-1--cdse-cdzns-qds"
+      ]
+    },
+    {
+      "id": "prins2014-am500197n-acceptor-on-donor-qd-heterostructure-1--after-s03-transfer",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "prins2014-am500197n-acceptor-on-donor-qd-heterostructure-1--after-s02-ink",
+        "prins2014-am500197n-acceptor-on-donor-qd-heterostructure-1--cdse-cdzns-qds"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-deposit",
+      "action": "deposit",
+      "label": "Deposit QDs on DEG surface",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "prins2014-am500197n-acceptor-on-donor-qd-heterostructure-1--diethylene-glycol",
+        "prins2014-am500197n-acceptor-on-donor-qd-heterostructure-1--cdse-cdzns-qds"
+      ],
+      "outputs": [
+        "prins2014-am500197n-acceptor-on-donor-qd-heterostructure-1--after-s01-deposit"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "prins2014-am500197n",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Deposit QDs on DEG surface",
+      "evidence": [
+        {
+          "source_id": "prins2014-am500197n",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "s02-ink",
+      "action": "ink",
+      "label": "Ink PDMS stamp with QD monolayer",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-deposit"
+      ],
+      "inputs": [
+        "prins2014-am500197n-acceptor-on-donor-qd-heterostructure-1--after-s01-deposit",
+        "prins2014-am500197n-acceptor-on-donor-qd-heterostructure-1--cdse-cdzns-qds"
+      ],
+      "outputs": [
+        "prins2014-am500197n-acceptor-on-donor-qd-heterostructure-1--after-s02-ink"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "prins2014-am500197n",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Ink PDMS stamp with QD monolayer",
+      "evidence": [
+        {
+          "source_id": "prins2014-am500197n",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-transfer",
+      "action": "transfer",
+      "label": "Transfer QD monolayer to spin-cast QD layer",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-ink"
+      ],
+      "inputs": [
+        "prins2014-am500197n-acceptor-on-donor-qd-heterostructure-1--after-s02-ink",
+        "prins2014-am500197n-acceptor-on-donor-qd-heterostructure-1--cdse-cdzns-qds"
+      ],
+      "outputs": [
+        "prins2014-am500197n-acceptor-on-donor-qd-heterostructure-1--after-s03-transfer"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 30,
+          "minimum": null,
+          "maximum": null,
+          "unit": "s",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "30 s",
+          "evidence": [
+            {
+              "source_id": "prins2014-am500197n",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "prins2014-am500197n",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Transfer QD monolayer to spin-cast QD layer",
+      "evidence": [
+        {
+          "source_id": "prins2014-am500197n",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "prins2014-am500197n-acceptor-on-donor-qd-heterostructure-1--product",
+      "source_sample_label": "acceptor-on-donor QD heterostructure",
+      "batch_id": null,
+      "material_state_id": "prins2014-am500197n-acceptor-on-donor-qd-heterostructure-1--after-s03-transfer",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdSe/CdZnS",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "prins2014-am500197n",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": "short aromatic ligands",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "prins2014-am500197n",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "prins2014-am500197n",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "notes": [
+        "Reactor: 20 × 20 × 20 mm3 Teﬂon cup (Main PDF p.1)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Shape not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of CdSe/CdZnS QDs not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
