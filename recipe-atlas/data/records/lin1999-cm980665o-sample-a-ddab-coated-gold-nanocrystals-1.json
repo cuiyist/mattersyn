@@ -1,0 +1,404 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "lin1999-cm980665o-sample-a-ddab-coated-gold-nanocrystals-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "X. M. Lin and C. M. Sorensen (1999): Sample A (DDAB-coated gold nanocrystals)",
+  "material": {
+    "formula": "Au",
+    "family": "Au nanocrystals",
+    "elements": [
+      "Au"
+    ],
+    "components": [
+      "Au"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Synthesis as described in the source",
+  "sources": [
+    {
+      "id": "lin1999-cm980665o",
+      "doi": "10.1021/cm980665o",
+      "title": "Ligand-Induced Gold Nanocrystal Superlattice Formation in Colloidal Solution",
+      "authors": "X. M. Lin and C. M. Sorensen, K. J. Klabunde",
+      "year": 1999,
+      "url": "https://doi.org/10.1021/cm980665o",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "lin1999-cm980665o",
+    "recipe_family": "lin1999-cm980665o-sample-a-ddab-coated-gold-nanocrystals-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Au",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "lin1999-cm980665o",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "lin1999-cm980665o-sample-a-ddab-coated-gold-nanocrystals-1--didodecyldimethylammonium-bromide-ddab",
+      "name": "didodecyldimethylammonium bromide (DDAB)",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "mass": {
+          "value": 0.75,
+          "minimum": null,
+          "maximum": null,
+          "unit": "g",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0.75 g",
+          "evidence": [
+            {
+              "source_id": "lin1999-cm980665o",
+              "locator": "Main PDF p.1"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "lin1999-cm980665o",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "lin1999-cm980665o-sample-a-ddab-coated-gold-nanocrystals-1--gold-chloride",
+      "name": "gold chloride",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "mass": {
+          "value": 15,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mg",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "15 mg",
+          "evidence": [
+            {
+              "source_id": "lin1999-cm980665o",
+              "locator": "Main PDF p.1"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "lin1999-cm980665o",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "lin1999-cm980665o-sample-a-ddab-coated-gold-nanocrystals-1--after-s01-dissolve",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "lin1999-cm980665o-sample-a-ddab-coated-gold-nanocrystals-1--didodecyldimethylammonium-bromide-ddab"
+      ]
+    },
+    {
+      "id": "lin1999-cm980665o-sample-a-ddab-coated-gold-nanocrystals-1--after-s02-dissolve",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "lin1999-cm980665o-sample-a-ddab-coated-gold-nanocrystals-1--after-s01-dissolve",
+        "lin1999-cm980665o-sample-a-ddab-coated-gold-nanocrystals-1--gold-chloride"
+      ]
+    },
+    {
+      "id": "lin1999-cm980665o-sample-a-ddab-coated-gold-nanocrystals-1--after-s03-stir",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "lin1999-cm980665o-sample-a-ddab-coated-gold-nanocrystals-1--after-s02-dissolve"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-dissolve",
+      "action": "dissolve",
+      "label": "Dissolve DDAB in toluene",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "lin1999-cm980665o-sample-a-ddab-coated-gold-nanocrystals-1--didodecyldimethylammonium-bromide-ddab"
+      ],
+      "outputs": [
+        "lin1999-cm980665o-sample-a-ddab-coated-gold-nanocrystals-1--after-s01-dissolve"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "Ar",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "lin1999-cm980665o",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Dissolve DDAB in toluene",
+      "evidence": [
+        {
+          "source_id": "lin1999-cm980665o",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "s02-dissolve",
+      "action": "dissolve",
+      "label": "Dissolve gold chloride in micelle solution",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-dissolve"
+      ],
+      "inputs": [
+        "lin1999-cm980665o-sample-a-ddab-coated-gold-nanocrystals-1--after-s01-dissolve",
+        "lin1999-cm980665o-sample-a-ddab-coated-gold-nanocrystals-1--gold-chloride"
+      ],
+      "outputs": [
+        "lin1999-cm980665o-sample-a-ddab-coated-gold-nanocrystals-1--after-s02-dissolve"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "Ar",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "lin1999-cm980665o",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Dissolve gold chloride in micelle solution",
+      "evidence": [
+        {
+          "source_id": "lin1999-cm980665o",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "s03-stir",
+      "action": "stir",
+      "label": "Stir the solution",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-dissolve"
+      ],
+      "inputs": [
+        "lin1999-cm980665o-sample-a-ddab-coated-gold-nanocrystals-1--after-s02-dissolve"
+      ],
+      "outputs": [
+        "lin1999-cm980665o-sample-a-ddab-coated-gold-nanocrystals-1--after-s03-stir"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 15,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "15 min",
+          "evidence": [
+            {
+              "source_id": "lin1999-cm980665o",
+              "locator": "Main PDF p.1"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "Ar",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "lin1999-cm980665o",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Stir the solution",
+      "evidence": [
+        {
+          "source_id": "lin1999-cm980665o",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "lin1999-cm980665o-sample-a-ddab-coated-gold-nanocrystals-1--product",
+      "source_sample_label": "Sample A (DDAB-coated gold nanocrystals)",
+      "batch_id": null,
+      "material_state_id": "lin1999-cm980665o-sample-a-ddab-coated-gold-nanocrystals-1--after-s03-stir",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Au",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "lin1999-cm980665o",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": "DDAB",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "lin1999-cm980665o",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "lin1999-cm980665o",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Shape not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

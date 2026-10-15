@@ -1,0 +1,297 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "lin1999-cm980665o-sample-b-dodecanethiol-ligated-gold-nano-2",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "X. M. Lin and C. M. Sorensen (1999): Sample B (dodecanethiol-ligated gold nanocrystals)",
+  "material": {
+    "formula": "Au",
+    "family": "Au nanocrystals",
+    "elements": [
+      "Au"
+    ],
+    "components": [
+      "Au"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Synthesis as described in the source",
+  "sources": [
+    {
+      "id": "lin1999-cm980665o",
+      "doi": "10.1021/cm980665o",
+      "title": "Ligand-Induced Gold Nanocrystal Superlattice Formation in Colloidal Solution",
+      "authors": "X. M. Lin and C. M. Sorensen, K. J. Klabunde",
+      "year": 1999,
+      "url": "https://doi.org/10.1021/cm980665o",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "lin1999-cm980665o",
+    "recipe_family": "lin1999-cm980665o-sample-b-dodecanethiol-ligated-gold-nano-2",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Au",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "lin1999-cm980665o",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": 6.0,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "6 nm",
+      "evidence": [
+        {
+          "source_id": "lin1999-cm980665o",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "sphere",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "lin1999-cm980665o",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "lin1999-cm980665o-sample-b-dodecanethiol-ligated-gold-nano-2--after-s01-stir",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "lin1999-cm980665o-sample-b-dodecanethiol-ligated-gold-nano-2--after-s02-add",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "lin1999-cm980665o-sample-b-dodecanethiol-ligated-gold-nano-2--after-s01-stir"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-stir",
+      "action": "stir",
+      "label": "Stir the solution",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "lin1999-cm980665o-sample-b-dodecanethiol-ligated-gold-nano-2--after-s01-stir"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "Ar",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "lin1999-cm980665o",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Stir the solution",
+      "evidence": [
+        {
+          "source_id": "lin1999-cm980665o",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-add",
+      "action": "add",
+      "label": "Add ethanol",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-stir"
+      ],
+      "inputs": [
+        "lin1999-cm980665o-sample-b-dodecanethiol-ligated-gold-nano-2--after-s01-stir"
+      ],
+      "outputs": [
+        "lin1999-cm980665o-sample-b-dodecanethiol-ligated-gold-nano-2--after-s02-add"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "Ar",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "lin1999-cm980665o",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Add ethanol",
+      "evidence": [
+        {
+          "source_id": "lin1999-cm980665o",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "lin1999-cm980665o-sample-b-dodecanethiol-ligated-gold-nano-2--product",
+      "source_sample_label": "Sample B (dodecanethiol-ligated gold nanocrystals)",
+      "batch_id": null,
+      "material_state_id": "lin1999-cm980665o-sample-b-dodecanethiol-ligated-gold-nano-2--after-s02-add",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Au",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "lin1999-cm980665o",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": "sphere",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "lin1999-cm980665o",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": "dodecanethiol",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "lin1999-cm980665o",
+            "locator": "Main PDF p.4"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "lin1999-cm980665o",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [
+    {
+      "id": "lin1999-cm980665o-sample-b-dodecanethiol-ligated-gold-nano-2--size",
+      "sample_id": "lin1999-cm980665o-sample-b-dodecanethiol-ligated-gold-nano-2--product",
+      "property": "diameter",
+      "technique": "TEM",
+      "value": {
+        "value": 6.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "6 nm",
+        "evidence": [
+          {
+            "source_id": "lin1999-cm980665o",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "lin1999-cm980665o",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

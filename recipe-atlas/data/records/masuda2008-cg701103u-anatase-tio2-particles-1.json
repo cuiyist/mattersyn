@@ -1,0 +1,468 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "masuda2008-cg701103u-anatase-tio2-particles-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Yoshitake Masuda and Kazumi Kato (2008): anatase TiO2 particles",
+  "material": {
+    "formula": "TiO2",
+    "family": "TiO2 nanocrystals",
+    "elements": [
+      "Ti",
+      "O"
+    ],
+    "components": [
+      "TiO2"
+    ],
+    "architecture": "composite"
+  },
+  "method": "Liquid phase crystal deposition",
+  "sources": [
+    {
+      "id": "masuda2008-cg701103u",
+      "doi": "10.1021/cg701103u",
+      "title": "Nanocrystal Assembled TiO2 Particles Prepared from Aqueous Solution",
+      "authors": "Yoshitake Masuda and Kazumi Kato",
+      "year": 2008,
+      "url": "https://doi.org/10.1021/cg701103u",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "masuda2008-cg701103u",
+    "recipe_family": "masuda2008-cg701103u-anatase-tio2-particles-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "TiO2",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "masuda2008-cg701103u",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "anatase",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "masuda2008-cg701103u",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "acicular",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "masuda2008-cg701103u",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "masuda2008-cg701103u-anatase-tio2-particles-1--ammonium-hexafluorotitanate",
+      "name": "ammonium hexafluorotitanate",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "mass": {
+          "value": 12.372,
+          "minimum": null,
+          "maximum": null,
+          "unit": "g",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "12.372 g",
+          "evidence": [
+            {
+              "source_id": "masuda2008-cg701103u",
+              "locator": "Main PDF p.1"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "masuda2008-cg701103u",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "masuda2008-cg701103u-anatase-tio2-particles-1--boric-acid",
+      "name": "boric acid",
+      "formula": null,
+      "role": "nonmetal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "mass": {
+          "value": 11.1852,
+          "minimum": null,
+          "maximum": null,
+          "unit": "g",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "11.1852 g",
+          "evidence": [
+            {
+              "source_id": "masuda2008-cg701103u",
+              "locator": "Main PDF p.1"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "masuda2008-cg701103u",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "masuda2008-cg701103u-anatase-tio2-particles-1--after-s01-add",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "masuda2008-cg701103u-anatase-tio2-particles-1--boric-acid"
+      ]
+    },
+    {
+      "id": "masuda2008-cg701103u-anatase-tio2-particles-1--after-s02-heat",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "masuda2008-cg701103u-anatase-tio2-particles-1--after-s01-add"
+      ]
+    },
+    {
+      "id": "masuda2008-cg701103u-anatase-tio2-particles-1--after-s03-dry",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "masuda2008-cg701103u-anatase-tio2-particles-1--after-s02-heat"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-add",
+      "action": "add",
+      "label": "Boric acid solution added to ammonium hexafluorotitanate solution.",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "masuda2008-cg701103u-anatase-tio2-particles-1--boric-acid"
+      ],
+      "outputs": [
+        "masuda2008-cg701103u-anatase-tio2-particles-1--after-s01-add"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "masuda2008-cg701103u",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Boric acid solution added to ammonium hexafluorotitanate solution.",
+      "evidence": [
+        {
+          "source_id": "masuda2008-cg701103u",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "s02-heat",
+      "action": "heat",
+      "label": "Solution kept at 50 °C for 30 min.",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-add"
+      ],
+      "inputs": [
+        "masuda2008-cg701103u-anatase-tio2-particles-1--after-s01-add"
+      ],
+      "outputs": [
+        "masuda2008-cg701103u-anatase-tio2-particles-1--after-s02-heat"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 50,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "50 °C",
+          "evidence": [
+            {
+              "source_id": "masuda2008-cg701103u",
+              "locator": "Main PDF p.1"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 30,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "30 min",
+          "evidence": [
+            {
+              "source_id": "masuda2008-cg701103u",
+              "locator": "Main PDF p.1"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "masuda2008-cg701103u",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Solution kept at 50 °C for 30 min.",
+      "evidence": [
+        {
+          "source_id": "masuda2008-cg701103u",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "s03-dry",
+      "action": "dry",
+      "label": "Precipitates dried at 60 °C for 12 h.",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-heat"
+      ],
+      "inputs": [
+        "masuda2008-cg701103u-anatase-tio2-particles-1--after-s02-heat"
+      ],
+      "outputs": [
+        "masuda2008-cg701103u-anatase-tio2-particles-1--after-s03-dry"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 60,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "60 °C",
+          "evidence": [
+            {
+              "source_id": "masuda2008-cg701103u",
+              "locator": "Main PDF p.1"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 12,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "12 h",
+          "evidence": [
+            {
+              "source_id": "masuda2008-cg701103u",
+              "locator": "Main PDF p.1"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Precipitates dried at 60 °C for 12 h.",
+      "evidence": [
+        {
+          "source_id": "masuda2008-cg701103u",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "masuda2008-cg701103u-anatase-tio2-particles-1--product",
+      "source_sample_label": "anatase TiO2 particles",
+      "batch_id": null,
+      "material_state_id": "masuda2008-cg701103u-anatase-tio2-particles-1--after-s03-dry",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "TiO2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "masuda2008-cg701103u",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "anatase",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "masuda2008-cg701103u",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "acicular",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "masuda2008-cg701103u",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "masuda2008-cg701103u",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "notes": [
+        "Reactor: 600 mL solution in a water bath (Main PDF p.1).",
+        "Reaction temperature: 50 degC (Main PDF p.1).",
+        "Reaction time: 30 min (Main PDF p.1)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
