@@ -1,0 +1,393 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "liu2006-jp0648238-wurtzite-coo-nanocrystals-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "J. F. Liu (2006): wurtzite CoO nanocrystals",
+  "material": {
+    "formula": "CoO",
+    "family": "CoO nanocrystals",
+    "elements": [
+      "Co",
+      "O"
+    ],
+    "components": [
+      "CoO"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Synthesis as described in the source",
+  "sources": [
+    {
+      "id": "liu2006-jp0648238",
+      "doi": "10.1021/jp0648238",
+      "title": "Wurtzite-to-Rocksalt Structural Transformation in Nanocrystalline CoO",
+      "authors": "J. F. Liu, S. Yin, H. P. Wu, Y. W. Zeng, X. R. Hu, Y. W. Wang, G. L. Lv, and J. Z. Jiang",
+      "year": 2006,
+      "url": "https://doi.org/10.1021/jp0648238",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "liu2006-jp0648238",
+    "recipe_family": "liu2006-jp0648238-wurtzite-coo-nanocrystals-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CoO",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "liu2006-jp0648238",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "wurtzite",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "liu2006-jp0648238",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": 50,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "50 nm",
+      "evidence": [
+        {
+          "source_id": "liu2006-jp0648238",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "pyramid",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "liu2006-jp0648238",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "liu2006-jp0648238-wurtzite-coo-nanocrystals-1--co-acac-3",
+      "name": "Co(acac)3",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "liu2006-jp0648238",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "liu2006-jp0648238-wurtzite-coo-nanocrystals-1--oleylamine",
+      "name": "oleylamine",
+      "formula": null,
+      "role": "ligand",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "liu2006-jp0648238",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "liu2006-jp0648238-wurtzite-coo-nanocrystals-1--after-s01-heat",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "liu2006-jp0648238-wurtzite-coo-nanocrystals-1--co-acac-3",
+        "liu2006-jp0648238-wurtzite-coo-nanocrystals-1--oleylamine"
+      ]
+    },
+    {
+      "id": "liu2006-jp0648238-wurtzite-coo-nanocrystals-1--after-s02-flash-heat",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "liu2006-jp0648238-wurtzite-coo-nanocrystals-1--after-s01-heat",
+        "liu2006-jp0648238-wurtzite-coo-nanocrystals-1--co-acac-3",
+        "liu2006-jp0648238-wurtzite-coo-nanocrystals-1--oleylamine"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-heat",
+      "action": "heat",
+      "label": "Heating at 135 °C in Ar atmosphere",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "liu2006-jp0648238-wurtzite-coo-nanocrystals-1--co-acac-3",
+        "liu2006-jp0648238-wurtzite-coo-nanocrystals-1--oleylamine"
+      ],
+      "outputs": [
+        "liu2006-jp0648238-wurtzite-coo-nanocrystals-1--after-s01-heat"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 135,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "135 °C",
+          "evidence": [
+            {
+              "source_id": "liu2006-jp0648238",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "Ar",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "liu2006-jp0648238",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Heating at 135 °C in Ar atmosphere",
+      "evidence": [
+        {
+          "source_id": "liu2006-jp0648238",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-flash-heat",
+      "action": "flash-heat",
+      "label": "Flash-heating to 200 °C",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-heat"
+      ],
+      "inputs": [
+        "liu2006-jp0648238-wurtzite-coo-nanocrystals-1--after-s01-heat",
+        "liu2006-jp0648238-wurtzite-coo-nanocrystals-1--co-acac-3",
+        "liu2006-jp0648238-wurtzite-coo-nanocrystals-1--oleylamine"
+      ],
+      "outputs": [
+        "liu2006-jp0648238-wurtzite-coo-nanocrystals-1--after-s02-flash-heat"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 200,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "200 °C",
+          "evidence": [
+            {
+              "source_id": "liu2006-jp0648238",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "Ar",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "liu2006-jp0648238",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Flash-heating to 200 °C",
+      "evidence": [
+        {
+          "source_id": "liu2006-jp0648238",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "liu2006-jp0648238-wurtzite-coo-nanocrystals-1--product",
+      "source_sample_label": "wurtzite CoO nanocrystals",
+      "batch_id": null,
+      "material_state_id": "liu2006-jp0648238-wurtzite-coo-nanocrystals-1--after-s02-flash-heat",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CoO",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "liu2006-jp0648238",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "wurtzite",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "liu2006-jp0648238",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "pyramid",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "liu2006-jp0648238",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "liu2006-jp0648238",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reaction temperature: 200 degC (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "liu2006-jp0648238-wurtzite-coo-nanocrystals-1--size",
+      "sample_id": "liu2006-jp0648238-wurtzite-coo-nanocrystals-1--product",
+      "property": "diameter",
+      "technique": "TEM",
+      "value": {
+        "value": 50,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "50 nm",
+        "evidence": [
+          {
+            "source_id": "liu2006-jp0648238",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "liu2006-jp0648238",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Ligand not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of Co(acac)3 not reported in the extracted text.",
+      "Amount of oleylamine not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

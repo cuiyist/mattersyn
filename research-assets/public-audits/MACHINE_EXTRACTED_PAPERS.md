@@ -1,5 +1,8 @@
 # Published machine-extracted papers
 
+Current verified index after B33 (2026-10-15T20:57:04+00:00): **953source_extracted primary paper contributions /1,417display pairs**. B33 adds33DOI rows/52recordIDs with15saved rare-read markers. All19original read histories remain preserved, including four nonretained papers without credit. Public totals are1,197primary source IDs, comprising1,196literature primary DOI groups and1benchmark group. No independent-audit or training-ready credit. Every prior row/membership/footer remains verbatim.
+
+
 Current verified index after B32 (2026-10-15T18:38:18+00:00): **920 source_extracted primary paper contributions / 1,365 display pairs**. B32 adds 30 DOI rows / 40 record IDs with 20 saved rare-read markers. All 24 original read histories remain preserved, including four nonretained papers without credit. Public totals distinguish 1,164 primary paper IDs from 1,163 normalized DOIs. These rows have no independent-audit or training-ready credit. Every earlier row, membership and footer remains verbatim.
 
 Current verified index after B31 (2026-10-15T15:42:06+00:00): **890 distinct source_extracted papers / 1,325 records**. B31 adds 12 papers / 18 records. Nine papers had scoped rare reads; seven are among the twelve published papers and are marked below. Every prior row and receipt/footer remains verbatim. No independent-audit or training-ready credit.
@@ -991,3 +994,44 @@ These twelve papers retain source_extracted status. Seven have a recorded limite
 | 10.1021/acsomega.0c03336 | `kumar2020-acsomega-0c03336-cufes2-nanocrystal-1` | B32 | 2026-10-15T18:38:18+00:00 | yes |
 
 These thirty source_extracted contributions add no independent-audit or training-ready credit. Rare-read markers describe the preserved limited deletion-only reading, not a full paper audit.
+
+
+## B33 verified additions
+
+| Primary DOI | Record IDs | Batch | Anonymous live (UTC) | Rare read |
+| --- | --- | --- | --- | --- |
+| 10.1021/acssuschemeng.1c08002 | `kumar2022-acssuschemeng-1c08002-nonpolar-graphene-quantum-dots-gqds-1` | B33 | 2026-10-15T20:57:04+00:00 | no |
+| 10.1021/am3005237 | `lee2012-am3005237-snsno2-nanocrystal-graphite-composites-1` | B33 | 2026-10-15T20:57:04+00:00 | yes |
+| 10.1021/am3023898 | `kwon2013-am3023898-hda-cqds-1` | B33 | 2026-10-15T20:57:04+00:00 | no |
+| 10.1021/am401247h | `kinsinger2013-am401247h-80-anatase20-rutile-tio2-1` | B33 | 2026-10-15T20:57:04+00:00 | no |
+| 10.1021/am500209f | `tian2014-am500209f-zno-nrs-1` | B33 | 2026-10-15T20:57:04+00:00 | no |
+| 10.1021/am505086e | `shen2014-am505086e-nagdf4-eu3-nanocrystals-1` | B33 | 2026-10-15T20:57:04+00:00 | yes |
+| 10.1021/am8001583 | `hanrath2009-am8001583-pbse-nanocrystals-4-nm-1` | B33 | 2026-10-15T20:57:04+00:00 | no |
+| 10.1021/am900237d | `patel2009-am900237d-fept-nanocrystals-1` | B33 | 2026-10-15T20:57:04+00:00 | yes |
+| 10.1021/cg060747m | `hou2007-cg060747m-hexagonal-boron-nitride-hbn-nanocrystals-1` | B33 | 2026-10-15T20:57:04+00:00 | yes |
+| 10.1021/cg100560s | `datta2010-cg100560s-at-2`, `datta2010-cg100560s-bt-1` | B33 | 2026-10-15T20:57:04+00:00 | yes |
+| 10.1021/cg100708q | `niesz2010-cg100708q-ceria-nanocrystals-1` | B33 | 2026-10-15T20:57:04+00:00 | no |
+| 10.1021/cg2009286 | `nistor2011-cg2009286-zno-nanocrystals-annealed-in-air-up-to-2-1`, `nistor2011-cg2009286-zno-nanocrystals-annealed-in-vacuum-up-t-2` | B33 | 2026-10-15T20:57:04+00:00 | no |
+| 10.1021/cg401047a | `x2014-cg401047a-chitosan-zinc-hydroxide-carbonate-czhc-1` | B33 | 2026-10-15T20:57:04+00:00 | yes |
+| 10.1021/cg701103u | `masuda2008-cg701103u-anatase-tio2-particles-1` | B33 | 2026-10-15T20:57:04+00:00 | no |
+| 10.1021/cm000244i | `rogach2000-cm000244i-cdse-cds-sio2-composite-spheres-3`, `rogach2000-cm000244i-cdse-sio2-composite-spheres-2` | B33 | 2026-10-15T20:57:04+00:00 | no |
+| 10.1021/cm011590i | `carnes2002-cm011590i-nc-al2o3-mgo-2` | B33 | 2026-10-15T20:57:04+00:00 | yes |
+| 10.1021/cm0208509 | `fan2003-cm0208509-snox-thin-film-o-sno2-phase-1`, `fan2003-cm0208509-snox-thin-film-r-sno2-phase-2` | B33 | 2026-10-15T20:57:04+00:00 | yes |
+| 10.1021/cm0499139 | `rajesh2004-cm0499139-cerium-phosphate-precursor-sol-1` | B33 | 2026-10-15T20:57:04+00:00 | yes |
+| 10.1021/cm050672u | `shchukin2005-cm050672u-la0-65sr0-3coo3-la1-sample-1`, `shchukin2005-cm050672u-nico2o4-ni1-sample-2` | B33 | 2026-10-15T20:57:04+00:00 | yes |
+| 10.1021/cm200708q | `wang2011-cm200708q-aucu2o-coreshell-face-raised-cube-1`, `wang2011-cm200708q-aucu2o-coreshell-face-raised-octahedron-2`, `wang2011-cm200708q-aucu2o-coreshell-stellated-icosahedron-3` | B33 | 2026-10-15T20:57:04+00:00 | yes |
+| 10.1021/cm200863q | `yu2012-cm200863q-cerium-oxide-nanocrystal-3-6-0-4-nm-1`, `yu2012-cm200863q-cerium-oxide-nanocrystal-6-2-1-0-nm-2`, `yu2012-cm200863q-cerium-oxide-nanocrystal-9-7-2-6-nm-3`, `yu2012-cm200863q-star-shaped-cerium-oxide-nanocrystal-18-4` | B33 | 2026-10-15T20:57:04+00:00 | no |
+| 10.1021/cm3040505 | `cho2013-cm3040505-cdse-cds-zns-core-shell-shell-quantum-do-1` | B33 | 2026-10-15T20:57:04+00:00 | no |
+| 10.1021/cm503611q | `unspecified2015-cm503611q-cdse-qds-1` | B33 | 2026-10-15T20:57:04+00:00 | no |
+| 10.1021/cm503666y | `herron2014-cm503666y-sns-nanosheets-1` | B33 | 2026-10-15T20:57:04+00:00 | yes |
+| 10.1021/cm801423r | `roullier2008-cm801423r-fe2o3-qd605-hybrid-micelles-1` | B33 | 2026-10-15T20:57:04+00:00 | no |
+| 10.1021/cm980665o | `lin1999-cm980665o-sample-a-ddab-coated-gold-nanocrystals-1`, `lin1999-cm980665o-sample-b-dodecanethiol-ligated-gold-nano-2` | B33 | 2026-10-15T20:57:04+00:00 | no |
+| 10.1021/es049194z | `song2005-es049194z-nay-23-nm-1`, `song2005-es049194z-nay-50-nm-2` | B33 | 2026-10-15T20:57:04+00:00 | yes |
+| 10.1021/ic200485v | `wang2011-ic200485v-copd2-nanocrystals-4` | B33 | 2026-10-15T20:57:04+00:00 | yes |
+| 10.1021/ic302328e | `moezzi2013-ic302328e-zno-nanocrystals-1` | B33 | 2026-10-15T20:57:04+00:00 | no |
+| 10.1021/ie051060m | `tayade2006-ie051060m-nct-1023-4`, `tayade2006-ie051060m-nct-393-1`, `tayade2006-ie051060m-nct-583-2`, `tayade2006-ie051060m-nct-753-3` | B33 | 2026-10-15T20:57:04+00:00 | no |
+| 10.1021/ja0012974 | `al2000-ja0012974-au-tio2-dp-1`, `al2000-ja0012974-au-tio2-i-2`, `al2000-ja0012974-au-tio2-sg-3`, `al2000-ja0012974-au-zro2-f-4` | B33 | 2026-10-15T20:57:04+00:00 | no |
+| 10.1021/ja016887w | `jun2002-ja016887w-cd0-88mn0-12s-nanorods-2`, `jun2002-ja016887w-mns-nanowires-branched-1` | B33 | 2026-10-15T20:57:04+00:00 | yes |
+| 10.1021/ja029937l | `shevchenko2003-ja029937l-copt3-nanocrystals-1` | B33 | 2026-10-15T20:57:04+00:00 | no |
+
+These33source_extracted contributions add no independent-audit or training-ready credit. Fifteen markers denote limited preserved deletion-only reading, not full paper audits; all19read histories remain retained.
