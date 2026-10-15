@@ -136,7 +136,7 @@ def summary(documents, checks, known_dois=(), known_sources=None, existing_route
             if protected and (protected.get('status') != 'source_extracted' or protected.get('doi') != row['doi']):
                 row['status'] = 'protected_source_identity'; continue
             row['generated_records'] = len(records)
-            usable_pairs = [p for p in doc.get('pairs') or [] if (p.get('recipe') or {}).get('steps') or (p.get('recipe') or {}).get('chemicals')]
+            usable_pairs = [p for p in doc.get('pairs') or [] if ((p.get('recipe') or {}).get('steps') or (p.get('recipe') or {}).get('chemicals')) and to_site._composition_from(p) is not None]
             for record, pair in zip(records, usable_pairs):
                 errors = checks.errors(record)
                 formula = record['material']['formula']
