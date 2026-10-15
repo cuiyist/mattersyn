@@ -97,3 +97,41 @@ test('ordinary core/shell library assets remain unchanged for their audited cont
  assert.deepEqual(result.map(ref=>ref.name),entries.map(ref=>ref.name));
  assert.equal(JSON.stringify(entries),before);
 });
+
+
+test('generic crystallinity is unspecified phase for bulk composition references',()=>{
+ for(const phase of ['crystal','crystalline','Crystal','  CRYSTALLINE  ']){
+  const r=rec(phase,phase),before=JSON.stringify(r),refs=defaultCrystalReferences([ordered,fcc],r);
+  assert.deepEqual(reportedPhases(r),[]);
+  assert.deepEqual(refs.map(ref=>ref.id),['ordered','fcc']);
+  assert.ok(refs.every(ref=>ref.defaultByComposition&&ref.scope.includes('not a structure of the synthesized sample')));
+  assert.equal(JSON.stringify(r),before);
+ }
+});
+test('generic product crystallinity retains the existing intended-phase fallback',()=>{
+ const r=rec('crystal','fcc');
+ assert.deepEqual(reportedPhases(r),['fcc']);
+ assert.deepEqual(defaultCrystalReferences([ordered,fcc],r).map(ref=>ref.id),['fcc']);
+});
+test('a specific product phase still overrides generic or differing target phases',()=>{
+ const r=rec('fcc','crystal');r.products.push({phase:{value:'crystalline'}});
+ assert.deepEqual(reportedPhases(r),['fcc']);
+ assert.deepEqual(defaultCrystalReferences([ordered,fcc],r).map(ref=>ref.id),['fcc']);
+});
+test('unknown named phases containing crystal words remain suppressed',()=>{
+ for(const phase of ['unknown crystal phase','icosahedral crystal','quasicrystal','amorphous','crystal-like phase'])
+  assert.deepEqual(defaultCrystalReferences([ordered,fcc],rec(phase)),[],phase);
+});
+test('crystal words do not remove recognized phase qualifiers',()=>{
+ for(const phase of ['fcc crystal','crystalline cubic fcc'])
+  assert.deepEqual(defaultCrystalReferences([ordered,fcc],rec(phase)).map(ref=>ref.id),['fcc']);
+});
+test('InAs generic crystal receives only an independent matching composition reference',()=>{
+ const inas=entry('inas-bulk','InAs','InAs zinc blende reference',216);
+ const r={...rec('crystal','crystal'),quality:{review_status:'source_extracted'},material:{formula:'InAs',components:['InAs'],architecture:'heterostructure'}};
+ const refs=defaultCrystalReferences([inas,entry('other','AlAs','AlAs reference',216)],r);
+ assert.deepEqual(refs.map(ref=>ref.id),['inas-bulk']);
+ assert.equal(refs[0].displayPolicy,'independent_reference');
+ assert.equal(refs[0].roleByRecord[r.record_id],'Reference by composition');
+ assert.ok(refs[0].scope.includes('not a structure of the synthesized sample'));
+});

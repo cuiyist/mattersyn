@@ -27,9 +27,11 @@ export function compositionParts(r){
  return [...new Set(listed.map(part=>tidy(String(part).split(':')[0])).filter(Boolean))];
 }
 export function reportedPhases(r){
- const productFacts=(r?.products||[]).map(p=>p?.phase?.value).filter(value=>typeof value==='string'&&value.trim());
+ // Crystallinity alone does not name a phase or constrain a bulk comparison.
+ const specific=value=>typeof value==='string'&&value.trim()&&!/^(?:crystal|crystalline)$/i.test(value.trim());
+ const productFacts=(r?.products||[]).map(p=>p?.phase?.value).filter(specific);
  // The reported product phase, if present, takes precedence over an intended target.
- return productFacts.length?productFacts:[r?.intended_target?.phase?.value].filter(value=>typeof value==='string'&&value.trim());
+ return productFacts.length?productFacts:[r?.intended_target?.phase?.value].filter(specific);
 }
 export function defaultCrystalReferences(entries,r,excluded=[]){
  if(!r||CUSTOM_VIEWER_SOURCES.has(r.lineage?.source_group))return [];
