@@ -1,0 +1,388 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "gonza-lez2000-1-126659-inas-quantum-dot-multilayer-with-n-50-pe-3",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "J. C. Gonza´lez (2000): InAs quantum-dot multilayer with n=50 periods",
+  "material": {
+    "formula": "InAs",
+    "family": "InAs nanocrystals",
+    "elements": [
+      "In",
+      "As"
+    ],
+    "components": [
+      "InAs"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Molecular beam epitaxy",
+  "sources": [
+    {
+      "id": "gonza-lez2000-1-126659",
+      "doi": "10.1063/1.126659",
+      "title": "On three dimensional self-organization and optical properties of InAs quantum-dot multilayers",
+      "authors": "J. C. Gonza´lez, F. M. Matinaga, W. N. Rodrigues, M. V. B. Moreira, A. G. de Oliveira, M. I. N. da Silva, J. M. C. Vilela, M. S. Andrade, D. Ugarte, P. C. Silva",
+      "year": 2000,
+      "url": "https://doi.org/10.1063/1.126659",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "gonza-lez2000-1-126659",
+    "recipe_family": "gonza-lez2000-1-126659-inas-quantum-dot-multilayer-with-n-50-pe-3",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "InAs",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "gonza-lez2000-1-126659",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "gonza-lez2000-1-126659-inas-quantum-dot-multilayer-with-n-50-pe-3--inas",
+      "name": "InAs",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "amount": {
+          "value": 1.9,
+          "minimum": null,
+          "maximum": null,
+          "unit": "monolayers",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1.9 monolayers",
+          "evidence": [
+            {
+              "source_id": "gonza-lez2000-1-126659",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "gonza-lez2000-1-126659",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "gonza-lez2000-1-126659-inas-quantum-dot-multilayer-with-n-50-pe-3--gaas",
+      "name": "GaAs",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "gonza-lez2000-1-126659",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "gonza-lez2000-1-126659-inas-quantum-dot-multilayer-with-n-50-pe-3--after-s01-deposit",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "gonza-lez2000-1-126659-inas-quantum-dot-multilayer-with-n-50-pe-3--inas"
+      ]
+    },
+    {
+      "id": "gonza-lez2000-1-126659-inas-quantum-dot-multilayer-with-n-50-pe-3--after-s02-deposit",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "gonza-lez2000-1-126659-inas-quantum-dot-multilayer-with-n-50-pe-3--after-s01-deposit",
+        "gonza-lez2000-1-126659-inas-quantum-dot-multilayer-with-n-50-pe-3--gaas"
+      ]
+    },
+    {
+      "id": "gonza-lez2000-1-126659-inas-quantum-dot-multilayer-with-n-50-pe-3--after-s03-repeat",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "gonza-lez2000-1-126659-inas-quantum-dot-multilayer-with-n-50-pe-3--after-s02-deposit",
+        "gonza-lez2000-1-126659-inas-quantum-dot-multilayer-with-n-50-pe-3--inas",
+        "gonza-lez2000-1-126659-inas-quantum-dot-multilayer-with-n-50-pe-3--gaas"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-deposit",
+      "action": "deposit",
+      "label": "Deposit InAs layer",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "gonza-lez2000-1-126659-inas-quantum-dot-multilayer-with-n-50-pe-3--inas"
+      ],
+      "outputs": [
+        "gonza-lez2000-1-126659-inas-quantum-dot-multilayer-with-n-50-pe-3--after-s01-deposit"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 510,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "510 °C",
+          "evidence": [
+            {
+              "source_id": "gonza-lez2000-1-126659",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "As4",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "gonza-lez2000-1-126659",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Deposit InAs layer",
+      "evidence": [
+        {
+          "source_id": "gonza-lez2000-1-126659",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-deposit",
+      "action": "deposit",
+      "label": "Deposit GaAs spacer layer",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-deposit"
+      ],
+      "inputs": [
+        "gonza-lez2000-1-126659-inas-quantum-dot-multilayer-with-n-50-pe-3--after-s01-deposit",
+        "gonza-lez2000-1-126659-inas-quantum-dot-multilayer-with-n-50-pe-3--gaas"
+      ],
+      "outputs": [
+        "gonza-lez2000-1-126659-inas-quantum-dot-multilayer-with-n-50-pe-3--after-s02-deposit"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "As4",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "gonza-lez2000-1-126659",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Deposit GaAs spacer layer",
+      "evidence": [
+        {
+          "source_id": "gonza-lez2000-1-126659",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-repeat",
+      "action": "repeat",
+      "label": "Repeat bilayer deposition 50 times",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-deposit"
+      ],
+      "inputs": [
+        "gonza-lez2000-1-126659-inas-quantum-dot-multilayer-with-n-50-pe-3--after-s02-deposit",
+        "gonza-lez2000-1-126659-inas-quantum-dot-multilayer-with-n-50-pe-3--inas",
+        "gonza-lez2000-1-126659-inas-quantum-dot-multilayer-with-n-50-pe-3--gaas"
+      ],
+      "outputs": [
+        "gonza-lez2000-1-126659-inas-quantum-dot-multilayer-with-n-50-pe-3--after-s03-repeat"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "As4",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "gonza-lez2000-1-126659",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Repeat bilayer deposition 50 times",
+      "evidence": [
+        {
+          "source_id": "gonza-lez2000-1-126659",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "gonza-lez2000-1-126659-inas-quantum-dot-multilayer-with-n-50-pe-3--product",
+      "source_sample_label": "InAs quantum-dot multilayer with n=50 periods",
+      "batch_id": null,
+      "material_state_id": "gonza-lez2000-1-126659-inas-quantum-dot-multilayer-with-n-50-pe-3--after-s03-repeat",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "InAs",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "gonza-lez2000-1-126659",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "gonza-lez2000-1-126659",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reaction temperature: 510 degC (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of GaAs not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

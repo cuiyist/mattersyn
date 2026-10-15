@@ -1,3 +1,7 @@
+## Current verified delivery — B28
+
+Batch 28 passed normal deployment and anonymous verification at 2026-10-15T03:47:07+00:00: 18 distinct papers, 25 records and 69 figures; live totals are 1,074 papers, 4,233 canonical records and 2,112 displayed pairs. Source PR 47 and exact CI 38671932995 passed; Site `f13c7986d1c317395d0ae7c77cdcdb67cbf8e0a8` and Pages 38677264524 are verified. The built site is 2,186,390,375 bytes. These records remain source_extracted and add no independent-audit or training-ready credit. The audited lane, questions and original denominator remain paused and unchanged.
+
 ## Current verified delivery — B27
 
 Reports: [MACHINE_EXTRACTED_PAPERS.md](research-assets/public-audits/MACHINE_EXTRACTED_PAPERS.md), [single cumulative job report](research-assets/public-audits/SIMPLE_PIPELINE_REPORT.md), and [control](research-assets/curation-control.json).
@@ -3660,3 +3664,6 @@ The [latest remotely verified cleanup report](https://github.com/cuiyist/matters
 - 2026-10-15T02:06:32.875390+00:00: Batch28 metadata/captions/assets complete privately:18 papers,25 new source_extracted records,69/69 retained captions,146 asset references checked/129 new assets;4208 older canonical files byte-preserved. Full Source/build/visual/CI and Site deployment/anonymous checks are still pending; no Batch28 publication credit. B51 completed26 two-pass/26checked/22nonempty papers,36pairs/182crops; one launched paper did not produce accepted two-pass output. B52 launched locally with37 generation papers and13 technical identity holds; the existing Qwen server21160 was not restarted. No held-out generation, machine accuracy claim or audited-lane resumption.
 - Removed six fully public-Git/manifest-verified obsolete B24/B26 dist/site-stage copies:225855 files/12857356119 logical bytes. C free69556756480→83036639232 bytes, net13479882752 during concurrent work; net free-space change is not isolated deletion recovery. No program stopped or held. Cumulative verified removed logical copies355214807560 bytes/7493333 files; the600GB target is not met. Protected papers, page text, passes, quoted pairs, private audits, working checkouts and active model/server were kept.
 - Choice: renamed the unpushed B28 local branch to the existing transport's expected simple-website-20261014-batch28 name; no release-code or gate change was needed. The temporary i-generated baseline is saved privately and restored from HEAD before the ordinary source-control generator recreates it.
+
+
+- 2026-10-15T04:25:05.869493+00:00: Batch 29 is privately integrated with 35 new source_extracted records; 72 of 72 retained figure captions are bound. Corrected 7 new title prefixes and their exact dependent labels/hash pointers. All 4,233 prior canonical records and scientific fields are unchanged. Normal Source/build/visual/CI and Site deployment/anonymous checks remain pending. This checkpoint adds zero publication or independent audit credit.

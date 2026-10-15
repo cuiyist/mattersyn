@@ -1,0 +1,397 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "ugur2008-1-2996004-inp-quantum-dots-in-ingap-matrix-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "A. Ugur (2008): InP quantum dots in InGaP matrix",
+  "material": {
+    "formula": "InP",
+    "family": "InP nanocrystals",
+    "elements": [
+      "In",
+      "P"
+    ],
+    "components": [
+      "InP"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Gas-source molecular beam epitaxy",
+  "sources": [
+    {
+      "id": "ugur2008-1-2996004",
+      "doi": "10.1063/1.2996004",
+      "title": "Single-dot optical emission from ultralow density well-isolated InP quantum dots",
+      "authors": "A. Ugur, F. Hatami, W. T. Masselink, A. N. Vamivakas, L. Lombez, and M. Atatüre",
+      "year": 2008,
+      "url": "https://doi.org/10.1063/1.2996004",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "ugur2008-1-2996004",
+    "recipe_family": "ugur2008-1-2996004-inp-quantum-dots-in-ingap-matrix-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "InP",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "ugur2008-1-2996004",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "zinc blende",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "ugur2008-1-2996004",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "ugur2008-1-2996004-inp-quantum-dots-in-ingap-matrix-1--inp",
+      "name": "InP",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "ugur2008-1-2996004",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "ugur2008-1-2996004-inp-quantum-dots-in-ingap-matrix-1--in0-48ga0-52p",
+      "name": "In0.48Ga0.52P",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "ugur2008-1-2996004",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "ugur2008-1-2996004-inp-quantum-dots-in-ingap-matrix-1--after-s01-grow",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "ugur2008-1-2996004-inp-quantum-dots-in-ingap-matrix-1--after-s02-grow",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "ugur2008-1-2996004-inp-quantum-dots-in-ingap-matrix-1--after-s01-grow",
+        "ugur2008-1-2996004-inp-quantum-dots-in-ingap-matrix-1--in0-48ga0-52p"
+      ]
+    },
+    {
+      "id": "ugur2008-1-2996004-inp-quantum-dots-in-ingap-matrix-1--after-s03-grow",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "ugur2008-1-2996004-inp-quantum-dots-in-ingap-matrix-1--after-s02-grow",
+        "ugur2008-1-2996004-inp-quantum-dots-in-ingap-matrix-1--inp"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-grow",
+      "action": "grow",
+      "label": "Grow GaAs buffer layer",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "ugur2008-1-2996004-inp-quantum-dots-in-ingap-matrix-1--after-s01-grow"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 550,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "550 °C",
+          "evidence": [
+            {
+              "source_id": "ugur2008-1-2996004",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Grow GaAs buffer layer",
+      "evidence": [
+        {
+          "source_id": "ugur2008-1-2996004",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-grow",
+      "action": "grow",
+      "label": "Grow In0.48Ga0.52P layer",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-grow"
+      ],
+      "inputs": [
+        "ugur2008-1-2996004-inp-quantum-dots-in-ingap-matrix-1--after-s01-grow",
+        "ugur2008-1-2996004-inp-quantum-dots-in-ingap-matrix-1--in0-48ga0-52p"
+      ],
+      "outputs": [
+        "ugur2008-1-2996004-inp-quantum-dots-in-ingap-matrix-1--after-s02-grow"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 440,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "440 °C",
+          "evidence": [
+            {
+              "source_id": "ugur2008-1-2996004",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Grow In0.48Ga0.52P layer",
+      "evidence": [
+        {
+          "source_id": "ugur2008-1-2996004",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-grow",
+      "action": "grow",
+      "label": "Grow InP quantum dots",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-grow"
+      ],
+      "inputs": [
+        "ugur2008-1-2996004-inp-quantum-dots-in-ingap-matrix-1--after-s02-grow",
+        "ugur2008-1-2996004-inp-quantum-dots-in-ingap-matrix-1--inp"
+      ],
+      "outputs": [
+        "ugur2008-1-2996004-inp-quantum-dots-in-ingap-matrix-1--after-s03-grow"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 410,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "410 °C",
+          "evidence": [
+            {
+              "source_id": "ugur2008-1-2996004",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Grow InP quantum dots",
+      "evidence": [
+        {
+          "source_id": "ugur2008-1-2996004",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "ugur2008-1-2996004-inp-quantum-dots-in-ingap-matrix-1--product",
+      "source_sample_label": "InP quantum dots in InGaP matrix",
+      "batch_id": null,
+      "material_state_id": "ugur2008-1-2996004-inp-quantum-dots-in-ingap-matrix-1--after-s03-grow",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "InP",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ugur2008-1-2996004",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "zinc blende",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ugur2008-1-2996004",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "ugur2008-1-2996004",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reactor: RIBER 21T MBE system (Main PDF p.2).",
+        "Reaction temperature: 410 degC (Main PDF p.2).",
+        "Reaction time: 27 s (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Amount of InP not reported in the extracted text.",
+      "Amount of In0.48Ga0.52P not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
