@@ -55,7 +55,7 @@ def unit_name(unit):
     return UNITS.get(unit.lower().replace(' ', ''), unit)
 
 
-def formula_from(text):
+def _formula_token(text):
     """The formula inside a composition phrase; preserve grouped composition punctuation."""
     phrase = re.sub(r'\s*([/@])\s*', r'\1', str(text))
     grouped = []
@@ -91,7 +91,21 @@ def formula_from(text):
         solo = token in ('Au', 'Ag', 'Pt', 'Pd', 'Si', 'Ge', 'Cu', 'Ni', 'Co', 'Fe', 'Bi', 'Sn', 'Te', 'Se', 'Ru', 'Rh', 'Ir')
         if bare and re.fullmatch(rf'(?:(?:{ELEMENT})(?![a-z]))+', bare) and (len(elements_of(token)) > 1 or solo or token == phrase.strip()):
             return token
-    return str(text).strip()
+    return None
+
+
+def formula_from(text):
+    """Keep the original text fallback when no formula token is found."""
+    token = _formula_token(text)
+    return token if token is not None else str(text).strip()
+
+
+def _composition_from(pair):
+    """Explicit retained composition, or an existing-parser product formula only."""
+    value = ((pair.get('structure') or {}).get('composition') or {}).get('value')
+    if value is not None and str(value).strip():
+        return formula_from(value)
+    return _formula_token(pair.get('product') or '')
 
 
 def first_upper(text):
@@ -141,7 +155,9 @@ class Builder:
 
     def record(self, pair, index):
         st, rc = pair.get('structure') or {}, pair.get('recipe') or {}
-        composition = formula_from((st.get('composition') or {}).get('value') or pair.get('product') or 'unspecified')
+        composition = _composition_from(pair)
+        if composition is None:
+            return None
         rid = f'{self.source_id}-{slug(pair.get("product") or composition, 40)}-{index}'
         ident = lambda name: f'{rid}--{slug(name, 40)}'
         materials, by_name = [], {}
@@ -228,7 +244,15 @@ def records_of(doc, include_optical=False):
     """(builder, [records]) for the pairs that describe a synthesis."""
     builder = Builder(doc, include_optical)
     usable = [(n, p) for n, p in enumerate(doc.get('pairs') or [], 1) if (p.get('recipe') or {}).get('steps') or (p.get('recipe') or {}).get('chemicals')]
-    return builder, [builder.record(p, n) for n, p in usable]
+    records = []
+    builder.omitted_composition_indices = []
+    for n, pair in usable:
+        record = builder.record(pair, n)
+        if record is None:
+            builder.omitted_composition_indices.append(n)
+        else:
+            records.append(record)
+    return builder, records
 
 
 def sha_file(path):
@@ -379,7 +403,8 @@ def cmd_sync(a):
         sid = builder.source_id
         if source_collision(inventory, sid, doc.get('doi')):
             print(f'{sid}: protected source identity; no presentation changed'); continue
-        reactors = [((p.get('recipe') or {}).get('reactor') or {}).get('value') for p in doc.get('pairs') or [] if (p.get('recipe') or {}).get('steps') or (p.get('recipe') or {}).get('chemicals')]
+        reactors = [((p.get('recipe') or {}).get('reactor') or {}).get('value') for p in doc.get('pairs') or []
+                    if ((p.get('recipe') or {}).get('steps') or (p.get('recipe') or {}).get('chemicals')) and _composition_from(p) is not None]
         reactor_by_record = dict(zip((r['record_id'] for r in records), reactors))
         accepted = []
         for record in records:
@@ -498,7 +523,7 @@ def cmd_records(a):
     from schema_definition import SCHEMA
     import jsonschema
     validator = jsonschema.Draft202012Validator(SCHEMA)
-    written = 0
+    written = 0; omitted_composition = 0
     inventory_path = repo / 'recipe-atlas/data/inventory-evidence.json'; inventory = json.loads(inventory_path.read_text(encoding='utf-8'))
     on_site = {p['doi'].lower() for p in inventory['per_paper'] if p.get('doi') and p.get('review_status') != 'source_extracted'}
     for f in sorted(Path(a.pairs).glob('*.pairs.json')):
@@ -510,6 +535,9 @@ def cmd_records(a):
             print(f'{doc["id"]}: {doc["doi"]} is already on the site as a reviewed paper; skipped'); continue
         if source_collision(inventory, builder.source_id, doc.get('doi')):
             print(f'{builder.source_id}: protected source identity; no records changed'); continue
+        for index in getattr(builder, 'omitted_composition_indices', []):
+            print(f'{builder.source_id}: pair {index} left out: missing composition and no chemical formula in product')
+            omitted_composition += 1
         for record in records:
             errors = sorted(validator.iter_errors(record), key=lambda e: list(e.path))
             if errors:
@@ -526,6 +554,8 @@ def cmd_records(a):
             inventory['per_paper'].append(inventory_entry(builder, doc, ids))
     dump_like(inventory_path, inventory)
     print(f'{written} records written to {out}')
+    if omitted_composition:
+        print(f'{omitted_composition} pairs left out: missing composition and no chemical formula in product')
 
 
 def main():
