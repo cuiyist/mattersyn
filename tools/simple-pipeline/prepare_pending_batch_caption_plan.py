@@ -53,7 +53,7 @@ def prepare(batch,out):
 def bind(source,updates,out):
     m=source_adapter(source)
     side=m.read(source/'recipe-atlas/data/reader-presentation-reviewed.json');bydoi={}
-    for p in (source/'recipe-atlas/data/records').glob('*.json'):
+    for p in sorted((source/'recipe-atlas/data/records').glob('*.json')):
         r=m.read(p)
         if r.get('quality',{}).get('review_status')!='source_extracted':continue
         sid=r['lineage']['source_group'];s=next((s for s in r['sources'] if s['id']==sid),{})
