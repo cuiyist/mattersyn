@@ -1,5 +1,7 @@
 # Published machine-extracted papers
 
+Current verified index after B32 (2026-10-15T18:38:18+00:00): **920 source_extracted primary paper contributions / 1,365 display pairs**. B32 adds 30 DOI rows / 40 record IDs with 20 saved rare-read markers. All 24 original read histories remain preserved, including four nonretained papers without credit. Public totals distinguish 1,164 primary paper IDs from 1,163 normalized DOIs. These rows have no independent-audit or training-ready credit. Every earlier row, membership and footer remains verbatim.
+
 Current verified index after B31 (2026-10-15T15:42:06+00:00): **890 distinct source_extracted papers / 1,325 records**. B31 adds 12 papers / 18 records. Nine papers had scoped rare reads; seven are among the twelve published papers and are marked below. Every prior row and receipt/footer remains verbatim. No independent-audit or training-ready credit.
 
 Current verified index after B30 (2026-10-15T11:25:58+00:00): **878 distinct source_extracted papers / 1,307 records**. B30 adds 22 papers / 24 records, with no independent-audit or training-ready credit. All earlier index rows and historical summaries below are preserved verbatim.
@@ -951,3 +953,41 @@ B30 keeps its source_extracted status. Rare-read markers refer only to scoped de
 | 10.1063/1.2903699 | `hubbard2008-1-2903699-gaas-solar-cell-with-five-layer-inas-qd-1`, `hubbard2008-1-2903699-gaas-solar-cell-with-five-layer-inas-qd-2` | B31 | 2026-10-15T15:42:06+00:00 | no |
 
 These twelve papers retain source_extracted status. Seven have a recorded limited rare read; two additional read but nonretained DOI histories remain preserved without publication credit. No common-paper reread, independent audit or accuracy credit is implied.
+
+
+## B32 verified additions
+
+| Primary DOI | Record IDs | Batch | Anonymous live (UTC) | Rare read |
+| --- | --- | --- | --- | --- |
+| 10.1007/s10008-010-1055-3 | `valles2010-s10008-010-1055-3-copt-film-with-59-6-wt-pt-1`, `valles2010-s10008-010-1055-3-coptp-film-with-40-8-wt-pt-and-3-4-wt-p-2` | B32 | 2026-10-15T18:38:18+00:00 | yes |
+| 10.1007/s11051-018-4415-z | `fang2018-s11051-018-4415-z-m-sio2-qd-znpc-hollow-nanorods-1` | B32 | 2026-10-15T18:38:18+00:00 | no |
+| 10.1007/s12274-009-9027-6 | `zhang2009-s12274-009-9027-6-ordered-rare-earth-fluoride-nanotube-arr-1` | B32 | 2026-10-15T18:38:18+00:00 | yes |
+| 10.1007/s12274-010-0076-7 | `liu12011-s12274-010-0076-7-cdse-qd-sensitized-au-tio2-hybrid-mesopo-1` | B32 | 2026-10-15T18:38:18+00:00 | no |
+| 10.1007/s12540-010-0813-1 | `sanosh2010-s12540-010-0813-1-hydroxyapatite-ha-sintered-at-1200-c-2`, `sanosh2010-s12540-010-0813-1-hydroxyapatite-ha-sintered-at-900-c-1` | B32 | 2026-10-15T18:38:18+00:00 | yes |
+| 10.1016/j.bios.2017.03.046 | `adegokea2017-j-bios-2017-03-046-gsh-cdses-qdot646-5` | B32 | 2026-10-15T18:38:18+00:00 | no |
+| 10.1016/j.cej.2024.150840 | `al2024-j-cej-2024-150840-sio2-ag-20-2` | B32 | 2026-10-15T18:38:18+00:00 | yes |
+| 10.1016/j.electacta.2017.08.134 | `wang2017-j-electacta-2017-08-134-co-sxse1-x-2-nras-1` | B32 | 2026-10-15T18:38:18+00:00 | yes |
+| 10.1016/j.jallcom.2019.01.317 | `kim2019-j-jallcom-2019-01-317-oa-zno-qd-layer-1` | B32 | 2026-10-15T18:38:18+00:00 | no |
+| 10.1016/j.saa.2022.121028 | `ruiyi2022-j-saa-2022-121028-hspb-gqd-1` | B32 | 2026-10-15T18:38:18+00:00 | yes |
+| 10.1016/j.solener.2020.02.010 | `kottayi2020-j-solener-2020-02-010-cu2aginse4-qds-1` | B32 | 2026-10-15T18:38:18+00:00 | yes |
+| 10.1021/acs.inorgchem.5c04321 | `yang2025-acs-inorgchem-5c04321-cs2nayb0-99mn0-01cl6-ncs-1` | B32 | 2026-10-15T18:38:18+00:00 | yes |
+| 10.1021/acs.inorgchem.7b01192 | `ohtani2017-acs-inorgchem-7b01192-porous-co-mn-nanocrystal-assemblies-1` | B32 | 2026-10-15T18:38:18+00:00 | yes |
+| 10.1021/acs.jpcc.2c04384 | `guarino-hotz2022-acs-jpcc-2c04384-mapbbr3-msc20a-1` | B32 | 2026-10-15T18:38:18+00:00 | yes |
+| 10.1021/acs.jpcc.4c00103 | `tarannum2024-acs-jpcc-4c00103-corundum-v2o3-nanocrystals-1` | B32 | 2026-10-15T18:38:18+00:00 | yes |
+| 10.1021/acs.jpcc.5b00634 | `cano2015-acs-jpcc-5b00634-fe2o3-nanocrystals-1` | B32 | 2026-10-15T18:38:18+00:00 | yes |
+| 10.1021/acs.jpcc.5b09341 | `potapenko2015-acs-jpcc-5b09341-tio2-nanocrystals-on-au-111-1` | B32 | 2026-10-15T18:38:18+00:00 | no |
+| 10.1021/acs.jpcc.5b10100 | `peng2016-acs-jpcc-5b10100-1d-colloidal-superparamagnetic-fe3o4-nan-1` | B32 | 2026-10-15T18:38:18+00:00 | no |
+| 10.1021/acsaem.6c00876 | `text2026-acsaem-6c00876-as-cqd-3`, `text2026-acsaem-6c00876-s-cqd-2` | B32 | 2026-10-15T18:38:18+00:00 | yes |
+| 10.1021/acsami.1c23282 | `kang2022-acsami-1c23282-bwo-vb1-1`, `kang2022-acsami-1c23282-bwo-vb2-2`, `kang2022-acsami-1c23282-bwo-vb3-3`, `kang2022-acsami-1c23282-bwo-vb4-4` | B32 | 2026-10-15T18:38:18+00:00 | yes |
+| 10.1021/acsami.5b10373 | `huang2015-acsami-5b10373-ch3nh3pbbr3-quantum-dots-1` | B32 | 2026-10-15T18:38:18+00:00 | yes |
+| 10.1021/acsami.5c23166 | `gong2026-acsami-5c23166-mto-400-1` | B32 | 2026-10-15T18:38:18+00:00 | no |
+| 10.1021/acsanm.5c03261 | `remadevi2025-acsanm-5c03261-blue-emitting-carbon-quantum-dots-bcqds-1`, `remadevi2025-acsanm-5c03261-green-emitting-carbon-quantum-dots-gcqds-2`, `remadevi2025-acsanm-5c03261-nabi-1x-f4-xeu3-nanophosphors-x-0-010-5-3` | B32 | 2026-10-15T18:38:18+00:00 | yes |
+| 10.1021/acsanm.8b00210 | `anh2018-acsanm-8b00210-au-s-gqd-1` | B32 | 2026-10-15T18:38:18+00:00 | yes |
+| 10.1021/acsanm.9b02065 | `pandey2020-acsanm-9b02065-mos2-quantum-dots-mos2-qds-1` | B32 | 2026-10-15T18:38:18+00:00 | no |
+| 10.1021/acsmaterialsau.5c00106 | `kovacs2025-acsmaterialsau-5c00106-au-cu2s-heterostructures-2`, `kovacs2025-acsmaterialsau-5c00106-cu2s-quantum-dot-superstructures-1` | B32 | 2026-10-15T18:38:18+00:00 | no |
+| 10.1021/acsnano.1c11130 | `text2022-acsnano-1c11130-pbse-qd-epi-sls-photobase-triggered-1` | B32 | 2026-10-15T18:38:18+00:00 | no |
+| 10.1021/acsnano.6b02796 | `jansons2016-acsnano-6b02796-in2o3-ito-in2o3-core-shell-shell-nanocry-2`, `jansons2016-acsnano-6b02796-in2o3-nanocrystals-1` | B32 | 2026-10-15T18:38:18+00:00 | yes |
+| 10.1021/acsnano.7b04683 | `zhang2017-acsnano-7b04683-cs3sb2br9-ipqds-1` | B32 | 2026-10-15T18:38:18+00:00 | yes |
+| 10.1021/acsomega.0c03336 | `kumar2020-acsomega-0c03336-cufes2-nanocrystal-1` | B32 | 2026-10-15T18:38:18+00:00 | yes |
+
+These thirty source_extracted contributions add no independent-audit or training-ready credit. Rare-read markers describe the preserved limited deletion-only reading, not a full paper audit.

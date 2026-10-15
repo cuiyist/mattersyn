@@ -1,0 +1,475 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "al2000-ja0012974-au-tio2-dp-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Peter Claus et al. (2000): Au/TiO2-DP",
+  "material": {
+    "formula": "Au",
+    "family": "Au nanocrystals",
+    "elements": [
+      "Au"
+    ],
+    "components": [
+      "Au"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Deposition-precipitation",
+  "sources": [
+    {
+      "id": "al2000-ja0012974",
+      "doi": "10.1021/ja0012974",
+      "title": "Supported Gold Nanoparticles from Quantum Dot to Mesoscopic Size Scale: Effect of Electronic and Structural Properties on Catalytic Hydrogenation of Conjugated Functional Groups",
+      "authors": "Peter Claus; Angelika Brückner; Christian Mohr; Herbert Hofmeister",
+      "year": 2000,
+      "url": "https://doi.org/10.1021/ja0012974",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "al2000-ja0012974",
+    "recipe_family": "al2000-ja0012974-au-tio2-dp-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Au",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "al2000-ja0012974",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "metallic",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "al2000-ja0012974",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "al2000-ja0012974-au-tio2-dp-1--degussa-p25-titania",
+      "name": "Degussa P25 titania",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "al2000-ja0012974",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "al2000-ja0012974-au-tio2-dp-1--haucl4",
+      "name": "HAuCl4",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "al2000-ja0012974",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "al2000-ja0012974-au-tio2-dp-1--ammonia",
+      "name": "ammonia",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "al2000-ja0012974",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "al2000-ja0012974-au-tio2-dp-1--after-s01-dry",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "al2000-ja0012974-au-tio2-dp-1--after-s02-calcine",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "al2000-ja0012974-au-tio2-dp-1--after-s01-dry"
+      ]
+    },
+    {
+      "id": "al2000-ja0012974-au-tio2-dp-1--after-s03-reduce",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "al2000-ja0012974-au-tio2-dp-1--after-s02-calcine"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-dry",
+      "action": "dry",
+      "label": "Dry the catalyst",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "al2000-ja0012974-au-tio2-dp-1--after-s01-dry"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 373,
+          "minimum": null,
+          "maximum": null,
+          "unit": "K",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "373 K",
+          "evidence": [
+            {
+              "source_id": "al2000-ja0012974",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 12,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "12 h",
+          "evidence": [
+            {
+              "source_id": "al2000-ja0012974",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Dry the catalyst",
+      "evidence": [
+        {
+          "source_id": "al2000-ja0012974",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "s02-calcine",
+      "action": "calcine",
+      "label": "Calcine in flowing air",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-dry"
+      ],
+      "inputs": [
+        "al2000-ja0012974-au-tio2-dp-1--after-s01-dry"
+      ],
+      "outputs": [
+        "al2000-ja0012974-au-tio2-dp-1--after-s02-calcine"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 573,
+          "minimum": null,
+          "maximum": null,
+          "unit": "K",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "573 K",
+          "evidence": [
+            {
+              "source_id": "al2000-ja0012974",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 8,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "8 h",
+          "evidence": [
+            {
+              "source_id": "al2000-ja0012974",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "al2000-ja0012974",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Calcine in flowing air",
+      "evidence": [
+        {
+          "source_id": "al2000-ja0012974",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "s03-reduce",
+      "action": "reduce",
+      "label": "Reduce in flowing hydrogen",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-calcine"
+      ],
+      "inputs": [
+        "al2000-ja0012974-au-tio2-dp-1--after-s02-calcine"
+      ],
+      "outputs": [
+        "al2000-ja0012974-au-tio2-dp-1--after-s03-reduce"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 573,
+          "minimum": null,
+          "maximum": null,
+          "unit": "K",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "573 K",
+          "evidence": [
+            {
+              "source_id": "al2000-ja0012974",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 3,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "3 h",
+          "evidence": [
+            {
+              "source_id": "al2000-ja0012974",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "al2000-ja0012974",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Reduce in flowing hydrogen",
+      "evidence": [
+        {
+          "source_id": "al2000-ja0012974",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "al2000-ja0012974-au-tio2-dp-1--product",
+      "source_sample_label": "Au/TiO2-DP",
+      "batch_id": null,
+      "material_state_id": "al2000-ja0012974-au-tio2-dp-1--after-s03-reduce",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Au",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "al2000-ja0012974",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "metallic",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "al2000-ja0012974",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "al2000-ja0012974",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "notes": [
+        "Reactor: 50 mL three-neck flask (Main PDF p.2).",
+        "Reaction temperature: 573 K (Main PDF p.3)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of Degussa P25 titania not reported in the extracted text.",
+      "Amount of HAuCl4 not reported in the extracted text.",
+      "Amount of ammonia not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

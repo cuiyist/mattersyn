@@ -1,0 +1,536 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "rajesh2004-cm0499139-cerium-phosphate-precursor-sol-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "K. Rajesh et al. (2004): cerium phosphate precursor sol",
+  "material": {
+    "formula": "CePO4",
+    "family": "CePO4 nanocrystals",
+    "elements": [
+      "Ce",
+      "P",
+      "O"
+    ],
+    "components": [
+      "CePO4"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Sol-gel",
+  "sources": [
+    {
+      "id": "rajesh2004-cm0499139",
+      "doi": "10.1021/cm0499139",
+      "title": "High-Surface-Area Nanocrystalline Cerium Phosphate through Aqueous Sol−Gel Route",
+      "authors": "K. Rajesh, P. Mukundan, P. Krishna Pillai, V. R. Nair, and K. G. K. Warrier",
+      "year": 2004,
+      "url": "https://doi.org/10.1021/cm0499139",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "rajesh2004-cm0499139",
+    "recipe_family": "rajesh2004-cm0499139-cerium-phosphate-precursor-sol-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CePO4",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "rajesh2004-cm0499139",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": 50,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "50 nm",
+      "evidence": [
+        {
+          "source_id": "rajesh2004-cm0499139",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "rajesh2004-cm0499139-cerium-phosphate-precursor-sol-1--cerium-nitrate",
+      "name": "cerium nitrate",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "concentration": {
+          "value": 0.03,
+          "minimum": null,
+          "maximum": null,
+          "unit": "M",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0.03 M",
+          "evidence": [
+            {
+              "source_id": "rajesh2004-cm0499139",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "rajesh2004-cm0499139",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "rajesh2004-cm0499139-cerium-phosphate-precursor-sol-1--orthophosphoric-acid",
+      "name": "orthophosphoric acid",
+      "formula": null,
+      "role": "nonmetal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "volume": {
+          "value": 1.191,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1.191 mL",
+          "evidence": [
+            {
+              "source_id": "rajesh2004-cm0499139",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "rajesh2004-cm0499139",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "rajesh2004-cm0499139-cerium-phosphate-precursor-sol-1--after-s01-dissolve",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "rajesh2004-cm0499139-cerium-phosphate-precursor-sol-1--cerium-nitrate"
+      ]
+    },
+    {
+      "id": "rajesh2004-cm0499139-cerium-phosphate-precursor-sol-1--after-s02-add",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "rajesh2004-cm0499139-cerium-phosphate-precursor-sol-1--after-s01-dissolve",
+        "rajesh2004-cm0499139-cerium-phosphate-precursor-sol-1--orthophosphoric-acid"
+      ]
+    },
+    {
+      "id": "rajesh2004-cm0499139-cerium-phosphate-precursor-sol-1--after-s03-filter",
+      "name": "mixture after step 3",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "rajesh2004-cm0499139-cerium-phosphate-precursor-sol-1--after-s02-add"
+      ]
+    },
+    {
+      "id": "rajesh2004-cm0499139-cerium-phosphate-precursor-sol-1--after-s04-peptize",
+      "name": "mixture after step 4",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "rajesh2004-cm0499139-cerium-phosphate-precursor-sol-1--after-s03-filter"
+      ]
+    },
+    {
+      "id": "rajesh2004-cm0499139-cerium-phosphate-precursor-sol-1--after-s05-ultrasonicate",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "rajesh2004-cm0499139-cerium-phosphate-precursor-sol-1--after-s04-peptize"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-dissolve",
+      "action": "dissolve",
+      "label": "Dissolve cerium nitrate in deionized water",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "rajesh2004-cm0499139-cerium-phosphate-precursor-sol-1--cerium-nitrate"
+      ],
+      "outputs": [
+        "rajesh2004-cm0499139-cerium-phosphate-precursor-sol-1--after-s01-dissolve"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Dissolve cerium nitrate in deionized water",
+      "evidence": [
+        {
+          "source_id": "rajesh2004-cm0499139",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-add",
+      "action": "add",
+      "label": "Add orthophosphoric acid to cerium nitrate solution",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-dissolve"
+      ],
+      "inputs": [
+        "rajesh2004-cm0499139-cerium-phosphate-precursor-sol-1--after-s01-dissolve",
+        "rajesh2004-cm0499139-cerium-phosphate-precursor-sol-1--orthophosphoric-acid"
+      ],
+      "outputs": [
+        "rajesh2004-cm0499139-cerium-phosphate-precursor-sol-1--after-s02-add"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Add orthophosphoric acid to cerium nitrate solution",
+      "evidence": [
+        {
+          "source_id": "rajesh2004-cm0499139",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-filter",
+      "action": "filter",
+      "label": "Filter and wash the precipitate",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-add"
+      ],
+      "inputs": [
+        "rajesh2004-cm0499139-cerium-phosphate-precursor-sol-1--after-s02-add"
+      ],
+      "outputs": [
+        "rajesh2004-cm0499139-cerium-phosphate-precursor-sol-1--after-s03-filter"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Filter and wash the precipitate",
+      "evidence": [
+        {
+          "source_id": "rajesh2004-cm0499139",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s04-peptize",
+      "action": "peptize",
+      "label": "Add nitric acid for electrostatic stabilization",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s03-filter"
+      ],
+      "inputs": [
+        "rajesh2004-cm0499139-cerium-phosphate-precursor-sol-1--after-s03-filter"
+      ],
+      "outputs": [
+        "rajesh2004-cm0499139-cerium-phosphate-precursor-sol-1--after-s04-peptize"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 4,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "4 h",
+          "evidence": [
+            {
+              "source_id": "rajesh2004-cm0499139",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Add nitric acid for electrostatic stabilization",
+      "evidence": [
+        {
+          "source_id": "rajesh2004-cm0499139",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s05-ultrasonicate",
+      "action": "ultrasonicate",
+      "label": "Ultrasonicate the sol for 15 min",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s04-peptize"
+      ],
+      "inputs": [
+        "rajesh2004-cm0499139-cerium-phosphate-precursor-sol-1--after-s04-peptize"
+      ],
+      "outputs": [
+        "rajesh2004-cm0499139-cerium-phosphate-precursor-sol-1--after-s05-ultrasonicate"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 15,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "15 min",
+          "evidence": [
+            {
+              "source_id": "rajesh2004-cm0499139",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Ultrasonicate the sol for 15 min",
+      "evidence": [
+        {
+          "source_id": "rajesh2004-cm0499139",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "rajesh2004-cm0499139-cerium-phosphate-precursor-sol-1--product",
+      "source_sample_label": "cerium phosphate precursor sol",
+      "batch_id": null,
+      "material_state_id": "rajesh2004-cm0499139-cerium-phosphate-precursor-sol-1--after-s05-ultrasonicate",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CePO4",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "rajesh2004-cm0499139",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "rajesh2004-cm0499139",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [
+    {
+      "id": "rajesh2004-cm0499139-cerium-phosphate-precursor-sol-1--size",
+      "sample_id": "rajesh2004-cm0499139-cerium-phosphate-precursor-sol-1--product",
+      "property": "particle_size",
+      "technique": "not reported",
+      "value": {
+        "value": 50,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "50 nm",
+        "evidence": [
+          {
+            "source_id": "rajesh2004-cm0499139",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "rajesh2004-cm0499139",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
