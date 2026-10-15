@@ -1750,8 +1750,8 @@
       "counts_in_live_homepage": false
     }
   },
-  "current_task": "Batch 27 metadata and retained captions are bound across both Reader source parts: normal Source preparation, full checks and publication next.",
-  "next_step": "Complete exact Source file-list/CI/merge and normal Site deployment/anonymous verification for Batch 27.",
+  "current_task": "Batch27 alloy display correction and all128 simple-pipeline tests are complete locally; preparing the exact Source commit and full release checks. Batch48 finished local processing and Batch49 was launched on the unchanged local model server.",
+  "next_step": "Publish corrected Batch27 through the unchanged Source/CI/build/browser/anonymous path while Batch49 reads locally, then bind and integrate Batch28 against the actual published inventory.",
   "machine_extracted_paper_list": {
     "path": "research-assets/public-audits/MACHINE_EXTRACTED_PAPERS.md",
     "sha256": "11aae0b833bdf6136cc6ff06777ccb3cd111fe05561db1c1d11732dd2041f19d",
@@ -1918,7 +1918,7 @@
     "result_receipt_sha256": "9a4e26a112197d8976482a6f9d843509f982b85a86b85bd49c4aa25b4776d4cd",
     "status": "parked; generation completed but strict whole-attempt coverage failed"
   },
-  "updated_at": "2026-10-14T22:09:05.687045+00:00",
+  "updated_at": "2026-10-14T23:58:35.998117+00:00",
   "last_verified_publication": {
     "source_commit": "5f567a5c3704ebe75fe512eaed10b92292f8499e",
     "site_commit": "334aa56ccff3a6c29f4d133fe934ff27ac0a3f9e",
@@ -35782,5 +35782,37 @@
     "scientific_fields_changed": 0,
     "normal_release_checks_pending": true,
     "publication_credit": 0
+  },
+  "latest_simple_pipeline_display_correction": {
+    "batch": 27,
+    "paper_count_affected": 1,
+    "required_routes_observed": 37,
+    "defect_routes": 2,
+    "reason": "Comma inside an alloy formula was treated as a separator by the converter; the complete product composition was already preserved.",
+    "old_audited_records_rewritten": 0,
+    "site_deployed": false,
+    "new_publication_credit": 0
+  },
+  "latest_simple_pipeline_local_processing": {
+    "batch48": {
+      "phase": "batch processing complete",
+      "successful_two_pass_papers": 31,
+      "checked_pair_files": 30,
+      "nonempty_checked_papers": 27,
+      "retained_pairs_before_site_integration": 31,
+      "checked_crops": 134,
+      "generation_papers_left_out": 1,
+      "identity_holds": 18,
+      "publication_credit": 0
+    },
+    "batch49": {
+      "launch_performed": true,
+      "launch_date_utc": "2026-10-14",
+      "generation_papers": 39,
+      "identity_holds": 11,
+      "cohort_papers": 50,
+      "server_restarted": false,
+      "publication_credit": 0
+    }
   }
 }
