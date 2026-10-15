@@ -1,5 +1,17 @@
 # Simple pipeline website job
 
+## Storage cleanup, 2026-10-15
+
+At 2026-10-15T01:41:49Z, six old Batch 22/23 generated public dist/site-stage copies were removed after exact manifest and GitHub-backed blob verification: 220,260 files and 12,488,709,534 logical bytes. C-drive free space measured 57,061,253,120 bytes before and 70,154,395,648 after, a net increase of 13,093,142,528 bytes during concurrent work; this is not an isolated physical-recovery measurement. Cumulative logged logical removal is 342,357,451,441 bytes, so the requested 600 GB target remains unmet. No target was held, no program was stopped, and papers, quoted training files, receipts, working checkouts and the active model were outside this cleanup.
+
+
+## Current verified delivery and continuation — B27, 2026-10-15T01:36:04+00:00
+
+B27 passed actual anonymous verification at 2026-10-15T01:29:00+00:00; normal proof records 18 papers, 23 records and 60 figures. Live totals are 1,056 contributing papers, 4,208 canonical records and 2,087 displayed pairs. Source PR46 merged as `14c64ecb3d1305146f0a5f710a35b9029725b678`; prepared Source `5ed80cde2e3ab123fd6d46d81df381b59650818d` and Site `50b3abe7629e4de5aa769f391530cba2f1a01101` remain the release bindings. The actual built site is 2,173,969,493 bytes.
+
+Next simple-pipeline batches require their own normal release and anonymous proof; no future publication or current model/process state is asserted. The audited lane, open owner questions, sampled-record window/denominator, earlier failures, training exclusions and all dated cleanup observations remain unchanged. These source_extracted records add no independent-audit or training-ready credit, and this checkpoint makes no uninterrupted-work or measured-throughput claim.
+
+
 ## Current verified delivery and continuation — B26, 2026-10-14T21:48:30+00:00
 
 B26 passed actual anonymous verification at 2026-10-14T21:43:41+00:00; normal proof records 23 papers, 31 records and 82 figures. Live totals are 1,038 contributing papers, 4,185 canonical records and 2,064 displayed pairs. Source PR44 merged as `af9111059c7487987b8b31bce105b0139e9e5116`; prepared Source `c6772925bdb56a9bd27ebf2769fe01a87f40378e` and Site `0fd2e50493187407b8ed10ebd94be9725d8c3ada` remain the release bindings. The actual built site is 2,165,483,354 bytes.
@@ -1409,6 +1421,39 @@ Recorded pages run: [38640994067](https://github.com/cuiyist/mattersyn-site/acti
 | 10.1021/ma200591w | 2 | 6 | [Open](https://cuiyist.github.io/mattersyn-site/records/yan2011-ma200591w-paa2-capped-cdse-zns-quantum-dots-1.html) |
 | 10.1116/1.2201452 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/zhang2006-1-2201452-ten-period-inas-quantum-dot-multilayer-s-1.html) |
 
+### simple-batch27-20261014
+
+Anonymous verification passed at 2026-10-15T01:29:00+00:00: 287 files, zero mismatches. [Source commit](https://github.com/cuiyist/mattersyn/commit/5ed80cde2e3ab123fd6d46d81df381b59650818d) and [Site commit](https://github.com/cuiyist/mattersyn-site/commit/50b3abe7629e4de5aa769f391530cba2f1a01101). This batch contains 18 source groups, 23 records and 60 source figure crops; 18 distinct newly contributing primary papers after DOI deduplication. Every new contribution remains machine extracted and not independently audited. The final built site is 2,173,969,493 bytes / 38,239 files.
+
+Live counter: **244 audited + 812 machine extracted = 1056 papers**, 4,208 canonical records, 459 direct material families, 551 material/component pages and 2087 displayed recipe–structure pairs (6 more comprehensive; 2081 partial). These display counts do not establish extraction accuracy, measured atomic coordinates or training eligibility.
+
+Recorded source pr: [46](https://github.com/cuiyist/mattersyn/pull/46).
+
+Recorded source ci run: [38659670505](https://github.com/cuiyist/mattersyn/actions/runs/38659670505).
+
+Recorded pages run: [38665076927](https://github.com/cuiyist/mattersyn-site/actions/runs/38665076927).
+
+| Primary DOI | Records | Figure crops | Public page |
+| --- | ---: | ---: | --- |
+| 10.1002/pssc.200404766 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/al2004-pssc-200404766-inas-quantum-dots-1.html) |
+| 10.1063/1.1329157 | 1 | 2 | [Open](https://cuiyist.github.io/mattersyn-site/records/artu-s2000-1-1329157-inas-gaas-self-assembled-quantum-dots-1.html) |
+| 10.1063/1.1994326 | 1 | 2 | [Open](https://cuiyist.github.io/mattersyn-site/records/bagaev2005-1-1994326-b12-1.html) |
+| 10.1002/pssb.200460780 | 2 | 2 | [Open](https://cuiyist.github.io/mattersyn-site/records/besombes2005-pssb-200460780-mn-doped-cdte-znte-quantum-dot-qd2-1.html) |
+| 10.1063/1.2193460 | 1 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/bogaart2006-1-2193460-inas-gaas-quantum-dot-clusters-1.html) |
+| 10.1063/1.123993 | 1 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/davydov1999-1-123993-inp-self-assembled-quantum-dots-qdp1779-1.html) |
+| 10.1063/1.53475 | 1 | 1 | [Open](https://cuiyist.github.io/mattersyn-site/records/greenham1997-1-53475-cdse-nanocrystal-meh-ppv-composite-1.html) |
+| 10.1063/1.2435957 | 1 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/hamaya2007-1-2435957-co-inas-co-lateral-double-barrier-magnet-1.html) |
+| 10.1063/1.2206126 | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/kita2006-1-2206126-columnar-inas-gaas-quantum-dots-with-sln-1.html) |
+| 10.1063/1.2926663 | 2 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/ling2008-1-2926663-ce-dwell-qdip-1.html) |
+| 10.1063/1.1776631 | 1 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/liu2004-1-1776631-inas-ingaas-dot-in-a-well-dwell-laser-wi-1.html) |
+| 10.1063/1.1844600 | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/lutti2005-1-1844600-inp-algainp-quantum-dot-laser-structure-1.html) |
+| 10.1063/1.1339846 | 1 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/saito2001-1-1339846-inas-quantum-dots-qds-on-inalgaas-inp-31-1.html) |
+| 10.1063/1.1580632 | 1 | 2 | [Open](https://cuiyist.github.io/mattersyn-site/records/seufert2003-1-1580632-cdse-znse-quantum-dot-1.html) |
+| 10.1063/1.2355439 | 1 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/toropov2006-1-2355439-cd-te-se-znse-quantum-dots-1.html) |
+| 10.1007/s00340-005-1975-2 | 1 | 7 | [Open](https://cuiyist.github.io/mattersyn-site/records/wang12005-s00340-005-1975-2-electronic-vertically-coupled-inas-gaas-1.html) |
+| 10.1021/nl025624c | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/wang2002-nl025624c-pe3-cdte-qd-3-pe4-fitc-anti-igg-1.html) |
+| 10.1063/1.3222856 | 4 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/yamanaka2009-1-3222856-qdwip-with-5-periods-1.html) |
+
 ## Latest continuation checkpoint
 
 At 2026-10-11T06:09:34+00:00, Batch01 is live and anonymously verified; Batch02 remains in local processing with 47/49 two-pass-complete papers at its last saved checkpoint. These are processing counts, not additional published papers. The audited lane stays paused.
@@ -2084,3 +2129,11 @@ The two obsolete Batch25 public build directories were removed after exact remot
 The bounded correction is applied locally: one new canonical record's five derived material fields, its Reader name and exact input-hash links, four material-map membership changes, and chemical/protocol byte bindings. All4,185 previously published canonical records and all4,207 other current canonical records remain byte-identical. Existing captions and figure payloads remain unchanged. The converter now preserves grouped alloy commas, parentheses and spacing; extractor, prompt and all three check predicates are unchanged. All128 simple-pipeline tests pass. An initial test run encountered three temporary-directory permission errors; the complete rerun in the workspace test directory passed. The normal Source, full build, CI, browser and deployment gates remain required; no new publication is claimed.
 
 Local processing milestone: Batch48 completed with31 two-pass successes,30 checked pair files,27 nonempty checked papers,31 pairs and134 crops; one generation paper was left out after its failed retry, and18 cohort papers remained technical identity holds. These are processing counts, with no website publication credit. Batch49 then launched on the unchanged protected local server:39 generation papers and11 technical identity holds out of50. No model/server restart or new PDF payload copy was needed. The source snapshot is refreshed before its single corrective commit to include this completed handoff and actual new launch; the first preparation receipt remains retained and was not committed.
+
+
+- 2026-10-15T02:03:03.607996+00:00: Batch 28 is privately integrated with 25 new source_extracted records; 69 of 69 retained figure captions are bound. Corrected 6 new title prefixes and their exact dependent labels/hash pointers. All 4,208 prior canonical records and scientific fields are unchanged. Normal Source/build/visual/CI and Site deployment/anonymous checks remain pending. This checkpoint adds zero publication or independent audit credit.
+
+
+- 2026-10-15T02:06:32.875390+00:00: Batch28 metadata/captions/assets complete privately:18 papers,25 new source_extracted records,69/69 retained captions,146 asset references checked/129 new assets;4208 older canonical files byte-preserved. Full Source/build/visual/CI and Site deployment/anonymous checks are still pending; no Batch28 publication credit. B51 completed26 two-pass/26checked/22nonempty papers,36pairs/182crops; one launched paper did not produce accepted two-pass output. B52 launched locally with37 generation papers and13 technical identity holds; the existing Qwen server21160 was not restarted. No held-out generation, machine accuracy claim or audited-lane resumption.
+- Removed six fully public-Git/manifest-verified obsolete B24/B26 dist/site-stage copies:225855 files/12857356119 logical bytes. C free69556756480→83036639232 bytes, net13479882752 during concurrent work; net free-space change is not isolated deletion recovery. No program stopped or held. Cumulative verified removed logical copies355214807560 bytes/7493333 files; the600GB target is not met. Protected papers, page text, passes, quoted pairs, private audits, working checkouts and active model/server were kept.
+- Choice: renamed the unpushed B28 local branch to the existing transport's expected simple-website-20261014-batch28 name; no release-code or gate change was needed. The temporary i-generated baseline is saved privately and restored from HEAD before the ordinary source-control generator recreates it.

@@ -1,3 +1,17 @@
+## Current verified delivery — B27
+
+Reports: [MACHINE_EXTRACTED_PAPERS.md](research-assets/public-audits/MACHINE_EXTRACTED_PAPERS.md), [single cumulative job report](research-assets/public-audits/SIMPLE_PIPELINE_REPORT.md), and [control](research-assets/curation-control.json).
+
+## Latest storage cleanup, 2026-10-15
+
+Six old B22/B23 public build copies were removed (220,260 files; 12,488,709,534 logical bytes). C free space measured 57.06 to 70.15 GB during this operation and concurrent work. Cumulative logical removal is 342.36 GB; the 600 GB goal remains unmet. See the cumulative report for exact figures. No paper/training file, working checkout or running model was removed.
+
+## Current verified delivery and continuation — B27, 2026-10-15T01:36:04+00:00
+
+B27 passed actual anonymous verification at 2026-10-15T01:29:00+00:00; normal proof records 18 papers, 23 records and 60 figures. Live totals are 1,056 contributing papers, 4,208 canonical records and 2,087 displayed pairs. Source PR46 merged as `14c64ecb3d1305146f0a5f710a35b9029725b678`; prepared Source `5ed80cde2e3ab123fd6d46d81df381b59650818d` and Site `50b3abe7629e4de5aa769f391530cba2f1a01101` remain the release bindings. The actual built site is 2,173,969,493 bytes.
+
+Next simple-pipeline batches require their own normal release and anonymous proof; no future publication or current model/process state is asserted. The audited lane, open owner questions, sampled-record window/denominator, earlier failures, training exclusions and all dated cleanup observations remain unchanged. These source_extracted records add no independent-audit or training-ready credit, and this checkpoint makes no uninterrupted-work or measured-throughput claim.
+
 ## Current verified delivery — B26
 
 Reports: [MACHINE_EXTRACTED_PAPERS.md](research-assets/public-audits/MACHINE_EXTRACTED_PAPERS.md), [single cumulative job report](research-assets/public-audits/SIMPLE_PIPELINE_REPORT.md), and [control](research-assets/curation-control.json).
@@ -3638,3 +3652,11 @@ The [latest remotely verified cleanup report](https://github.com/cuiyist/matters
 
 
 - 2026-10-14T22:09:05.687045+00:00: Batch 27 is privately integrated with 23 new source_extracted records; 60 of 60 retained figure captions are bound. Corrected 5 new title prefixes and their exact dependent labels/hash pointers. All 4,185 prior canonical records and scientific fields are unchanged. Normal Source/build/visual/CI and Site deployment/anonymous checks remain pending. This checkpoint adds zero publication or independent audit credit.
+
+
+- 2026-10-15T02:03:03.607996+00:00: Batch 28 is privately integrated with 25 new source_extracted records; 69 of 69 retained figure captions are bound. Corrected 6 new title prefixes and their exact dependent labels/hash pointers. All 4,208 prior canonical records and scientific fields are unchanged. Normal Source/build/visual/CI and Site deployment/anonymous checks remain pending. This checkpoint adds zero publication or independent audit credit.
+
+
+- 2026-10-15T02:06:32.875390+00:00: Batch28 metadata/captions/assets complete privately:18 papers,25 new source_extracted records,69/69 retained captions,146 asset references checked/129 new assets;4208 older canonical files byte-preserved. Full Source/build/visual/CI and Site deployment/anonymous checks are still pending; no Batch28 publication credit. B51 completed26 two-pass/26checked/22nonempty papers,36pairs/182crops; one launched paper did not produce accepted two-pass output. B52 launched locally with37 generation papers and13 technical identity holds; the existing Qwen server21160 was not restarted. No held-out generation, machine accuracy claim or audited-lane resumption.
+- Removed six fully public-Git/manifest-verified obsolete B24/B26 dist/site-stage copies:225855 files/12857356119 logical bytes. C free69556756480→83036639232 bytes, net13479882752 during concurrent work; net free-space change is not isolated deletion recovery. No program stopped or held. Cumulative verified removed logical copies355214807560 bytes/7493333 files; the600GB target is not met. Protected papers, page text, passes, quoted pairs, private audits, working checkouts and active model/server were kept.
+- Choice: renamed the unpushed B28 local branch to the existing transport's expected simple-website-20261014-batch28 name; no release-code or gate change was needed. The temporary i-generated baseline is saved privately and restored from HEAD before the ordinary source-control generator recreates it.
