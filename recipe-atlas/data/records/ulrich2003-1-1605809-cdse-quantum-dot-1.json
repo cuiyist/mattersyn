@@ -1,0 +1,286 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "ulrich2003-1-1605809-cdse-quantum-dot-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "S. M. Ulrich (2003): CdSe quantum dot",
+  "material": {
+    "formula": "CdSe",
+    "family": "CdSe nanocrystals",
+    "elements": [
+      "Cd",
+      "Se"
+    ],
+    "components": [
+      "CdSe"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Migration enhanced epitaxy",
+  "sources": [
+    {
+      "id": "ulrich2003-1-1605809",
+      "doi": "10.1063/1.1605809",
+      "title": "Triggered polarization-correlated photon pairs from a single CdSe quantum dot",
+      "authors": "S. M. Ulrich, S. Strauf, P. Michler, G. Bacher, A. Forchel",
+      "year": 2003,
+      "url": "https://doi.org/10.1063/1.1605809",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "ulrich2003-1-1605809",
+    "recipe_family": "ulrich2003-1-1605809-cdse-quantum-dot-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdSe",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "ulrich2003-1-1605809",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "ulrich2003-1-1605809-cdse-quantum-dot-1--cdse",
+      "name": "CdSe",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "ulrich2003-1-1605809",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "ulrich2003-1-1605809-cdse-quantum-dot-1--znse",
+      "name": "ZnSe",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "ulrich2003-1-1605809",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "ulrich2003-1-1605809-cdse-quantum-dot-1--after-s01-grow",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "ulrich2003-1-1605809-cdse-quantum-dot-1--cdse",
+        "ulrich2003-1-1605809-cdse-quantum-dot-1--znse"
+      ]
+    },
+    {
+      "id": "ulrich2003-1-1605809-cdse-quantum-dot-1--after-s02-structure",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "ulrich2003-1-1605809-cdse-quantum-dot-1--after-s01-grow"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-grow",
+      "action": "grow",
+      "label": "Grow CdSe quantum dots by molecular beam and migration enhanced epitaxy",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "ulrich2003-1-1605809-cdse-quantum-dot-1--cdse",
+        "ulrich2003-1-1605809-cdse-quantum-dot-1--znse"
+      ],
+      "outputs": [
+        "ulrich2003-1-1605809-cdse-quantum-dot-1--after-s01-grow"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Grow CdSe quantum dots by molecular beam and migration enhanced epitaxy",
+      "evidence": [
+        {
+          "source_id": "ulrich2003-1-1605809",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-structure",
+      "action": "structure",
+      "label": "Structure mesas using electron-beam lithography and chemical wet etching",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-grow"
+      ],
+      "inputs": [
+        "ulrich2003-1-1605809-cdse-quantum-dot-1--after-s01-grow"
+      ],
+      "outputs": [
+        "ulrich2003-1-1605809-cdse-quantum-dot-1--after-s02-structure"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Structure mesas using electron-beam lithography and chemical wet etching",
+      "evidence": [
+        {
+          "source_id": "ulrich2003-1-1605809",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "ulrich2003-1-1605809-cdse-quantum-dot-1--product",
+      "source_sample_label": "CdSe quantum dot",
+      "batch_id": null,
+      "material_state_id": "ulrich2003-1-1605809-cdse-quantum-dot-1--after-s02-structure",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdSe",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ulrich2003-1-1605809",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "ulrich2003-1-1605809",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of CdSe not reported in the extracted text.",
+      "Amount of ZnSe not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

@@ -1,3 +1,13 @@
+## Latest verified delivery — B29
+
+Reports: [machine index](research-assets/public-audits/MACHINE_EXTRACTED_PAPERS.md), [cumulative report](research-assets/public-audits/SIMPLE_PIPELINE_REPORT.md), and [control](research-assets/curation-control.json).
+
+## Current verified delivery — B29, 2026-10-15T06:21:22.787968+00:00
+
+B29 passed anonymous verification at 2026-10-15T06:14:34+00:00: 26 papers, 35 new records and 72 figures; 388 files, zero mismatches, all 26 paper and 60 material bindings passed. Live totals: 1,100 papers, 4,268 canonical records and 2,147 displayed pairs. Prepared Source `ff7ef6008cdb77d3b84f3beada733a7838950e15`, ordinary merge `c5f9214ab5c96af28c2164dff3a502bfba04b9b0` (PR48, CI38683542110), Site `d8ccf50be34db49e6b726f11a146b8720b202ad1`, successful Pages run38690360538. Actual final build: 2,198,172,359 bytes / 38,779 files.
+
+All new records remain source_extracted, not independently audited and not training ready. The next batch has no publication credit. The paused audit lane, owner questions, denominators, earlier failures, training exclusions and dated cleanup history remain unchanged. No throughput, continuous activity, or new cleanup gain is claimed.
+
 ## Current verified delivery — B28
 
 Batch 28 passed normal deployment and anonymous verification at 2026-10-15T03:47:07+00:00: 18 distinct papers, 25 records and 69 figures; live totals are 1,074 papers, 4,233 canonical records and 2,112 displayed pairs. Source PR 47 and exact CI 38671932995 passed; Site `f13c7986d1c317395d0ae7c77cdcdb67cbf8e0a8` and Pages 38677264524 are verified. The built site is 2,186,390,375 bytes. These records remain source_extracted and add no independent-audit or training-ready credit. The audited lane, questions and original denominator remain paused and unchanged.
@@ -3667,3 +3677,11 @@ The [latest remotely verified cleanup report](https://github.com/cuiyist/matters
 
 
 - 2026-10-15T04:25:05.869493+00:00: Batch 29 is privately integrated with 35 new source_extracted records; 72 of 72 retained figure captions are bound. Corrected 7 new title prefixes and their exact dependent labels/hash pointers. All 4,233 prior canonical records and scientific fields are unchanged. Normal Source/build/visual/CI and Site deployment/anonymous checks remain pending. This checkpoint adds zero publication or independent audit credit.
+
+
+- 2026-10-15T06:55:08.813818+00:00: Batch 30 is privately integrated with 25 new source_extracted records; 64 of 64 retained figure captions are bound. Corrected 11 new title prefixes and their exact dependent labels/hash pointers. All 4,268 prior canonical records and scientific fields are unchanged. Normal Source/build/visual/CI and Site deployment/anonymous checks remain pending. This checkpoint adds zero publication or independent audit credit.
+
+
+- 2026-10-15T07:31:02.144422+00:00: Pre-push desktop review of Batch 30 found two new-paper citation author mismatches against the existing exact-DOI Crossref authority: 10.1021/nl401217q and 10.1116/1.1881572. The two source-extracted author fields and dependent record-hash pointers were corrected; all 4,268 earlier canonical records, scientific fields, stable IDs, source figures and 64 bound captions are unchanged. The initial unpushed prepared Source 0bcdb2266e8f72e885978e804d42577ddc5e605b passed all 13 local check phases but failed this visual citation-consistency review; its records, checks and failure observation are preserved. A normal substantive corrective commit, fresh complete checks and normal Source/Site publication are required. This adds no publication, scientific-audit or training credit. The audited lane and original denominator remain paused and unchanged.
+
+B30 waiting-batch display correction: exact generic phase words crystal/crystalline now permit independent composition-reference cells; named unsupported phases remain suppressed, with no sample-structure claim or record-data change. The InAs reproduction selects one existing reference instead of zero; all 26 crystal-default regressions pass. Citation preflight now compares ordered author identities against the existing DOI authority and its eight regressions are in ordinary test discovery. These bounded changes require fresh complete Source checks and normal release; they add no publication, scientific-audit or training credit.

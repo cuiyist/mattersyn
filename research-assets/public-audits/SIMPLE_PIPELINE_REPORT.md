@@ -1,5 +1,18 @@
 # Simple pipeline website job
 
+## B30 preparation and staging change, 2026-10-15T06:36:39.863127+00:00
+
+B30 normal private selection and import completed:22 pending papers,25 new source_extracted records and64 figures. All4,268 prior canonical records matched their baseline; five retained rare reads removed two scientific objects and one coupled unit, with no additions. The known-wrong newly common paper10.1002/pssb.200983255 is held as a whole; its original three deletion objects remain in history. This is not a synthesis skip or publication credit.
+
+Root applied the independently reviewed staging optimization and five persistent tests: one destination/source SHA256 pair runs concurrently in a shared two-worker pool; the next file is not submitted until the current comparison and any copy finish. All full-byte, control-path, alias, ordering, release and publication checks remain. Focused and independent fixtures passed; the complete mandatory module will run once through the normal pre-push q checks. Production benefit is unmeasured. The actual9000 consumer has separately reviewed B30/B31 adapters; previous adapters and results remain preserved. No policy, quality status or training gate changed.
+
+## Current verified delivery — B29, 2026-10-15T06:21:22.787968+00:00
+
+B29 passed anonymous verification at 2026-10-15T06:14:34+00:00: 26 papers, 35 new records and 72 figures; 388 files, zero mismatches, all 26 paper and 60 material bindings passed. Live totals: 1,100 papers, 4,268 canonical records and 2,147 displayed pairs. Prepared Source `ff7ef6008cdb77d3b84f3beada733a7838950e15`, ordinary merge `c5f9214ab5c96af28c2164dff3a502bfba04b9b0` (PR48, CI38683542110), Site `d8ccf50be34db49e6b726f11a146b8720b202ad1`, successful Pages run38690360538. Actual final build: 2,198,172,359 bytes / 38,779 files.
+
+All new records remain source_extracted, not independently audited and not training ready. The next batch has no publication credit. The paused audit lane, owner questions, denominators, earlier failures, training exclusions and dated cleanup history remain unchanged. No throughput, continuous activity, or new cleanup gain is claimed.
+
+
 ## Storage cleanup, 2026-10-15
 
 At 2026-10-15T01:41:49Z, six old Batch 22/23 generated public dist/site-stage copies were removed after exact manifest and GitHub-backed blob verification: 220,260 files and 12,488,709,534 logical bytes. C-drive free space measured 57,061,253,120 bytes before and 70,154,395,648 after, a net increase of 13,093,142,528 bytes during concurrent work; this is not an isolated physical-recovery measurement. Cumulative logged logical removal is 342,357,451,441 bytes, so the requested 600 GB target remains unmet. No target was held, no program was stopped, and papers, quoted training files, receipts, working checkouts and the active model were outside this cleanup.
@@ -1500,6 +1513,77 @@ Recorded pages run: [38677264524](https://github.com/cuiyist/mattersyn-site/acti
 | 10.1063/1.1377851 | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/yoshie2001-1-1377851-inas-self-assembled-quantum-dot-qd-embed-1.html) |
 | 10.1063/1.3309411 | 1 | 2 | [Open](https://cuiyist.github.io/mattersyn-site/records/zhou2010-1-3309411-inas-gaas-quantum-dot-solar-cell-sample-1.html) |
 
+### simple-batch29-20261015
+
+Anonymous verification passed at 2026-10-15T06:14:34+00:00: 388 files, zero mismatches. [Source commit](https://github.com/cuiyist/mattersyn/commit/ff7ef6008cdb77d3b84f3beada733a7838950e15) and [Site commit](https://github.com/cuiyist/mattersyn-site/commit/d8ccf50be34db49e6b726f11a146b8720b202ad1). This batch contains 26 source groups, 35 records and 72 source figure crops; 26 distinct newly contributing primary papers after DOI deduplication. Every new contribution remains machine extracted and not independently audited. The final built site is 2,198,172,359 bytes / 38,779 files.
+
+Live counter: **244 audited + 856 machine extracted = 1100 papers**, 4,268 canonical records, 465 direct material families, 560 material/component pages and 2147 displayed recipe–structure pairs (6 more comprehensive; 2141 partial). These display counts do not establish extraction accuracy, measured atomic coordinates or training eligibility.
+
+Recorded source pr: [48](https://github.com/cuiyist/mattersyn/pull/48).
+
+Recorded source ci run: [38683542110](https://github.com/cuiyist/mattersyn/actions/runs/38683542110).
+
+Recorded pages run: [38690360538](https://github.com/cuiyist/mattersyn-site/actions/runs/38690360538).
+
+| Primary DOI | Records | Figure crops | Public page |
+| --- | ---: | ---: | --- |
+| 10.1002/pssc.200460752 | 1 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/al2005-pssc-200460752-inas-ingaas-inp-qdip-structure-with-10-i-1.html) |
+| 10.1063/1.2372593 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/amano2006-1-2372593-five-layered-1-3-m-inas-quantum-dot-qd-1.html) |
+| 10.1063/1.2132533 | 1 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/bhattacharyya2005-1-2132533-inas-gaas-001-quantum-dot-ensembles-1.html) |
+| 10.1063/1.3079674 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/chia2009-1-3079674-inas-inp-quantum-dot-avalanche-photodiod-1.html) |
+| 10.1002/pssb.200303036 | 1 | 0 | [Open](https://cuiyist.github.io/mattersyn-site/records/child2003-pssb-200303036-insb-quantum-dot-qd-in-gasb-coupled-to-i-1.html) |
+| 10.1103/physrevlett.98.266801 | 1 | 2 | [Open](https://cuiyist.github.io/mattersyn-site/records/fasth2007-physrevlett-98-266801-inas-nanowire-quantum-dot-1.html) |
+| 10.1002/pssa.200460323 | 1 | 1 | [Open](https://cuiyist.github.io/mattersyn-site/records/flissikowski2005-pssa-200460323-cdse-znse-quantum-dot-1.html) |
+| 10.1063/1.2965804 | 1 | 2 | [Open](https://cuiyist.github.io/mattersyn-site/records/gebhard2008-1-2965804-inas-ingaalas-inp-quantum-dot-structure-1.html) |
+| 10.1063/1.126659 | 4 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/gonza-lez2000-1-126659-inas-quantum-dot-multilayer-with-n-0-per-1.html) |
+| 10.1063/1.2837453 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/inoue2008-1-2837453-inas-quantum-dot-embedded-in-gaas-1.html) |
+| 10.1021/jp9083376 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/jun2010-jp9083376-cdse-zns-qds-1.html) |
+| 10.1063/1.1719259 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/kim2004-1-1719259-ten-layer-undoped-inas-ingaas-gaas-quant-1.html) |
+| 10.1063/1.2730145 | 1 | 0 | [Open](https://cuiyist.github.io/mattersyn-site/records/kim2007-1-2730145-ingaas-ingaasp-inp-quantum-dots-qds-1.html) |
+| 10.1063/1.117419 | 1 | 2 | [Open](https://cuiyist.github.io/mattersyn-site/records/kirstaedter1996-1-117419-inas-gaas-quantum-dot-injection-laser-1.html) |
+| 10.1063/1.2768884 | 1 | 2 | [Open](https://cuiyist.github.io/mattersyn-site/records/li2007-1-2768884-alas-in0-53ga0-47as-alas-double-barrier-1.html) |
+| 10.1063/1.3186081 | 1 | 2 | [Open](https://cuiyist.github.io/mattersyn-site/records/lumb2009-1-3186081-sample-a-1.html) |
+| 10.1063/1.2200395 | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/matsuura2006-1-2200395-inas-quantum-dot-with-gainas-cover-using-1.html) |
+| 10.1063/1.2730039 | 1 | 0 | [Open](https://cuiyist.github.io/mattersyn-site/records/nauka2007-1-2730039-pfo-cdse-zns-hybrid-film-1.html) |
+| 10.1063/1.3462960 | 1 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/nevou2010-1-3462960-inas-quantum-dot-under-a-well-photodetec-1.html) |
+| 10.1063/1.3176903 | 4 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/okada2009-1-3176903-inas-ganxas1x-strain-compensated-quantum-1.html) |
+| 10.1116/1.2190675 | 1 | 6 | [Open](https://cuiyist.github.io/mattersyn-site/records/pal2006-1-2190675-inas-gaas-quantum-dot-photodetector-with-1.html) |
+| 10.1063/1.2937209 | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/pang2008-1-2937209-cdse-zns-core-shell-qd-embedded-polystyr-1.html) |
+| 10.1103/physrevlett.105.227403 | 1 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/tanaka2010-physrevlett-105-227403-pbs-quantum-dots-qds-hybridized-with-pla-1.html) |
+| 10.1063/1.2996004 | 1 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/ugur2008-1-2996004-inp-quantum-dots-in-ingap-matrix-1.html) |
+| 10.1021/nl3033069 | 2 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/x2012-nl3033069-ptn36-clusters-on-cds-nanorods-1.html) |
+| 10.1063/1.2220477 | 3 | 2 | [Open](https://cuiyist.github.io/mattersyn-site/records/yin2006-1-2220477-inas-qds-on-in0-53ga0-47as-inp-matrix-1.html) |
+
+
+B29 ordinary batch accounting: the unchanged checker produced47 original checked files. Normal deletion-only consolidation selected26 papers /35 records /72 figures after7 retained rare-material reads deleted17 unsupported or misassigned whole scientific objects, with zero fact additions, wrong-page deletions or separate coupled-unit deletions. Original inputs remain unchanged. DOI10.1002/pssc.200564689, now common but with previously found wrong fields, was omitted through its fixed original-pair checksum as a known-error hold; it is not an insufficient-synthesis skip and earns no paper credit. The other20 automatic non-admissions comprise17 no-usable-pair and3 no-route-eligible outcomes; these are not source-supported synthesis skips.
+
+All72 retained captions are bound:63 original accepted +7 recovered +2 manual, over23 figure-bearing papers;3 retained papers have no selected figures. Normal Source preparation, thirteen-phase q-native-r2, all three exact-head CI checks/ordinary merge, candidate/final/browser checks, exact-Site Pages and anonymous verification passed. This release adds no cleanup credit, independent-audit credit or training eligibility.
+
+Measured calendar publication interval: B28 anonymous verification03:47:07Z to B29 verification06:14:34Z on October15 is147minutes27seconds (8,847seconds).26 newly published primary papers /2.4575calendar hours =10.58papers/hour. This is a CALENDAR interval rate, not continuous agent activity or active processing time; the target20published papers/hour has not been demonstrated.
+
+| Automatically not admitted DOI | Pipeline outcome |
+| --- | --- |
+| 10.1002/pssa.200675673 | No usable checked pairs; no source-supported synthesis-skip credit |
+| 10.1002/pssc.200671570 | No usable checked pairs; no source-supported synthesis-skip credit |
+| 10.1002/pssc.200671586 | No usable checked pairs; no source-supported synthesis-skip credit |
+| 10.1002/pssc.200671612 | No usable checked pairs; no source-supported synthesis-skip credit |
+| 10.1002/pssc.200673201 | No usable checked pairs; no source-supported synthesis-skip credit |
+| 10.1007/s11128-006-0027-0 | No usable checked pairs; no source-supported synthesis-skip credit |
+| 10.1021/ja048792a | No route-eligible checked record; no source-supported synthesis-skip credit |
+| 10.1021/nl303008y | No usable checked pairs; no source-supported synthesis-skip credit |
+| 10.1063/1.119160 | No usable checked pairs; no source-supported synthesis-skip credit |
+| 10.1063/1.1476387 | No usable checked pairs; no source-supported synthesis-skip credit |
+| 10.1063/1.2036710 | No usable checked pairs; no source-supported synthesis-skip credit |
+| 10.1063/1.2387116 | No usable checked pairs; no source-supported synthesis-skip credit |
+| 10.1063/1.3095844 | No usable checked pairs; no source-supported synthesis-skip credit |
+| 10.1063/1.3194151 | No route-eligible checked record; no source-supported synthesis-skip credit |
+| 10.1063/1.3216807 | No usable checked pairs; no source-supported synthesis-skip credit |
+| 10.1103/physrevb.78.115316 | No usable checked pairs; no source-supported synthesis-skip credit |
+| 10.1103/physrevb.82.054512 | No usable checked pairs; no source-supported synthesis-skip credit |
+| 10.1103/physrevlett.89.036801 | No route-eligible checked record; no source-supported synthesis-skip credit |
+| 10.1103/physrevlett.92.227401 | No usable checked pairs; no source-supported synthesis-skip credit |
+| 10.1103/physrevlett.99.036801 | No usable checked pairs; no source-supported synthesis-skip credit |
+
 ## Latest continuation checkpoint
 
 At 2026-10-11T06:09:34+00:00, Batch01 is live and anonymously verified; Batch02 remains in local processing with 47/49 two-pass-complete papers at its last saved checkpoint. These are processing counts, not additional published papers. The audited lane stays paused.
@@ -2189,3 +2273,16 @@ Local processing milestone: Batch48 completed with31 two-pass successes,30 check
 
 
 - 2026-10-15T04:25:05.869493+00:00: Batch 29 is privately integrated with 35 new source_extracted records; 72 of 72 retained figure captions are bound. Corrected 7 new title prefixes and their exact dependent labels/hash pointers. All 4,233 prior canonical records and scientific fields are unchanged. Normal Source/build/visual/CI and Site deployment/anonymous checks remain pending. This checkpoint adds zero publication or independent audit credit.
+
+
+### Scoped-output privacy incident
+
+During B34 group2 schema inspection, two older quote-bearing before objects exposed25 quoted words/173 UTF-8 bytes to Codex. No full paper or file was transferred and nothing was uploaded to GitHub. The pattern stopped; subsequent pair/proposal output uses explicit fact-value/unit/locator/pointer whitelists.
+
+
+- 2026-10-15T06:55:08.813818+00:00: Batch 30 is privately integrated with 25 new source_extracted records; 64 of 64 retained figure captions are bound. Corrected 11 new title prefixes and their exact dependent labels/hash pointers. All 4,268 prior canonical records and scientific fields are unchanged. Normal Source/build/visual/CI and Site deployment/anonymous checks remain pending. This checkpoint adds zero publication or independent audit credit.
+
+
+- 2026-10-15T07:31:02.144422+00:00: Pre-push desktop review of Batch 30 found two new-paper citation author mismatches against the existing exact-DOI Crossref authority: 10.1021/nl401217q and 10.1116/1.1881572. The two source-extracted author fields and dependent record-hash pointers were corrected; all 4,268 earlier canonical records, scientific fields, stable IDs, source figures and 64 bound captions are unchanged. The initial unpushed prepared Source 0bcdb2266e8f72e885978e804d42577ddc5e605b passed all 13 local check phases but failed this visual citation-consistency review; its records, checks and failure observation are preserved. A normal substantive corrective commit, fresh complete checks and normal Source/Site publication are required. This adds no publication, scientific-audit or training credit. The audited lane and original denominator remain paused and unchanged.
+
+B30 waiting-batch display correction: exact generic phase words crystal/crystalline now permit independent composition-reference cells; named unsupported phases remain suppressed, with no sample-structure claim or record-data change. The InAs reproduction selects one existing reference instead of zero; all 26 crystal-default regressions pass. Citation preflight now compares ordered author identities against the existing DOI authority and its eight regressions are in ordinary test discovery. These bounded changes require fresh complete Source checks and normal release; they add no publication, scientific-audit or training credit.

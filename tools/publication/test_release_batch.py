@@ -57,6 +57,92 @@ class StageTests(unittest.TestCase):
         self.assertEqual(rb.new_papers(self.site, self.dist), {'paper-b': ['b', 'b2']})
 
 
+    def test_stage_hash_pair_uses_two_reads_without_cross_file_prefetch(self):
+        import collections, threading
+        original_hash = rb.sha256
+        barrier = threading.Barrier(2)
+        lock = threading.Lock()
+        active, peak, calls = 0, 0, []
+        def paired_hash(path):
+            nonlocal active, peak
+            with lock:
+                active += 1; peak = max(peak, active); calls.append(Path(path))
+            try:
+                barrier.wait(timeout=5)
+                return original_hash(path)
+            finally:
+                with lock: active -= 1
+        with mock.patch.object(rb, 'sha256', side_effect=paired_hash):
+            result = rb.stage_dist(self.dist, self.site)
+        self.assertEqual(peak, 2)
+        self.assertEqual(collections.Counter(calls), collections.Counter({
+            self.site/'index.html': 1, self.dist/'index.html': 1,
+            self.site/'same.txt': 1, self.dist/'same.txt': 1}))
+        self.assertEqual(result, (['data/records/b.json'], ['index.html'], ['stale/old.html']))
+
+    def test_stage_hash_failures_keep_destination_error_and_mutation_prefix(self):
+        import threading
+        original_hash, original_tree = rb.sha256, rb.tree_files
+        source_failed = threading.Event()
+        def ordered_tree(root, skip_top=()):
+            files = original_tree(root, skip_top)
+            return dict(sorted(files.items(), key=lambda row: (['index.html', 'same.txt'].index(row[0])
+                if row[0] in ('index.html', 'same.txt') else 2, row[0])))
+        def failing_hash(path):
+            if Path(path) == self.dist/'same.txt':
+                source_failed.set(); raise OSError('source-hash-failure')
+            if Path(path) == self.site/'same.txt':
+                if not source_failed.wait(timeout=5): raise AssertionError('pair did not overlap')
+                raise OSError('destination-hash-failure')
+            return original_hash(path)
+        with mock.patch.object(rb, 'tree_files', side_effect=ordered_tree), \
+                mock.patch.object(rb, 'sha256', side_effect=failing_hash):
+            with self.assertRaisesRegex(OSError, '^destination-hash-failure$'):
+                rb.stage_dist(self.dist, self.site)
+        self.assertEqual((self.site/'index.html').read_text(), 'new home')
+        self.assertEqual((self.site/'same.txt').read_text(), 'same')
+        self.assertFalse((self.site/'data/records/b.json').exists())
+        self.assertFalse((self.site/'stale/old.html').exists())
+
+    def test_stage_linked_destinations_compare_after_each_sequential_copy(self):
+        import os
+        write(self.dist, 'a.txt', 'new shared bytes')
+        write(self.dist, 'b.txt', 'new shared bytes')
+        write(self.site, 'a.txt', 'old shared bytes')
+        os.link(self.site/'a.txt', self.site/'b.txt')
+        added, changed, removed = rb.stage_dist(self.dist, self.site)
+        self.assertEqual(changed, ['a.txt', 'index.html'])
+        self.assertEqual((self.site/'a.txt').read_text(), 'new shared bytes')
+        self.assertEqual((self.site/'b.txt').read_text(), 'new shared bytes')
+        self.assertEqual(added, ['data/records/b.json'])
+        self.assertEqual(removed, ['stale/old.html'])
+
+    def test_stage_control_paths_are_never_hashed_or_copied(self):
+        original_hash = rb.sha256
+        write(self.dist, 'tools/rejected.txt', 'not public output')
+        calls = []
+        def ordinary_hash(path):
+            calls.append(Path(path))
+            return original_hash(path)
+        with mock.patch.object(rb, 'sha256', side_effect=ordinary_hash):
+            with self.assertRaisesRegex(SystemExit, 'site control path: tools/rejected.txt'):
+                rb.stage_dist(self.dist, self.site)
+        self.assertFalse(any('tools' in path.relative_to(self.dist if path.is_relative_to(self.dist) else self.site).parts for path in calls))
+        self.assertEqual((self.site/'tools/mattersyn-release/gate.py').read_text(), 'control')
+        self.assertFalse((self.site/'tools/rejected.txt').exists())
+
+    def test_stage_copies_stay_on_calling_thread(self):
+        import threading
+        caller = threading.get_ident()
+        original_copy = rb.shutil.copyfile
+        mutation_threads = []
+        def sequential_copy(source, destination):
+            mutation_threads.append(threading.get_ident())
+            return original_copy(source, destination)
+        with mock.patch.object(rb.shutil, 'copyfile', side_effect=sequential_copy):
+            rb.stage_dist(self.dist, self.site)
+        self.assertEqual(mutation_threads, [caller, caller])
+
 class SiteHistoryTests(unittest.TestCase):
     def test_papers_added_by_last_site_commit(self):
         import subprocess
