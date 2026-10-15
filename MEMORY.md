@@ -2,6 +2,9 @@
 
 Reports: [MACHINE_EXTRACTED_PAPERS.md](research-assets/public-audits/MACHINE_EXTRACTED_PAPERS.md), [single cumulative job report](research-assets/public-audits/SIMPLE_PIPELINE_REPORT.md), and [control](research-assets/curation-control.json).
 
+Current pre-deployment correction (October14): Batch27 alloy label and grouping are corrected locally and all128 simple-pipeline tests pass. Site remains at verified Batch26 until the corrected Source and fresh normal release pass all checks. No Batch27 publication credit yet. Batch48 local processing is complete; Batch49 launched on the unchanged local server. The audited lane remains paused.
+
+
 ## Current verified delivery and continuation — B26, 2026-10-14T21:48:30+00:00
 
 B26 passed actual anonymous verification at 2026-10-14T21:43:41+00:00; normal proof records 23 papers, 31 records and 82 figures. Live totals are 1,038 contributing papers, 4,185 canonical records and 2,064 displayed pairs. Source PR44 merged as `af9111059c7487987b8b31bce105b0139e9e5116`; prepared Source `c6772925bdb56a9bd27ebf2769fe01a87f40378e` and Site `0fd2e50493187407b8ed10ebd94be9725d8c3ada` remain the release bindings. The actual built site is 2,165,483,354 bytes.

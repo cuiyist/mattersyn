@@ -56,13 +56,40 @@ def unit_name(unit):
 
 
 def formula_from(text):
-    """The formula inside a composition phrase; the phrase itself if no formula is found."""
-    for token in str(text).replace(',', ' ').split():
-        token = token.strip('.;()[]')
-        if token in {'NC', 'NCs', 'QD', 'QDs'}: continue  # product abbreviations are not chemical formulas
-        bare = re.sub(r'[\d.()xyz\u2212\u2013\u2014\-/@:+δ]', '', token)
-        solo = token in ('Au', 'Ag', 'Pt', 'Pd', 'Si', 'Ge', 'Cu', 'Ni', 'Co', 'Fe', 'Bi', 'Sn', 'Te', 'Se', 'Ru', 'Rh', 'Ir')  # elements made as nanocrystals; not words like "In" or "As"
-        if bare and re.fullmatch(rf'(?:(?:{ELEMENT})(?![a-z]))+', bare) and (len(elements_of(token)) > 1 or solo or token == str(text).strip()):
+    """The formula inside a composition phrase; preserve grouped composition punctuation."""
+    phrase = re.sub(r'\s*([/@])\s*', r'\1', str(text))
+    grouped = []
+    depth = 0
+    for char in phrase:
+        if char in '([':
+            depth += 1
+        elif char in ')]':
+            depth = max(0, depth - 1)
+        if char.isspace() and depth > 0:
+            continue
+        grouped.append(' ' if char == ',' and depth == 0 else char)
+    for token in ''.join(grouped).split():
+        token = token.strip('.;')
+        for left, right in (('(', ')'), ('[', ']')):
+            while token.startswith(left) and token.count(left) > token.count(right):
+                token = token[1:]
+            while token.endswith(right) and token.count(right) > token.count(left):
+                token = token[:-1]
+        while len(token) > 1 and token[0] in '([' and token[-1] == {'(': ')', '[': ']'}[token[0]]:
+            level = 0
+            grouped_comma = False
+            for index, char in enumerate(token):
+                if char == token[0]: level += 1
+                elif char == token[-1]: level -= 1
+                elif char == ',' and level == 1: grouped_comma = True
+                if level == 0: break
+            if index != len(token) - 1 or grouped_comma: break
+            token = token[1:-1]
+        if token in {'NC', 'NCs', 'QD', 'QDs'}: continue
+        if any(token.count(left) != token.count(right) for left, right in (('(', ')'), ('[', ']'))): continue
+        bare = re.sub(r'[\d.()\[\],xyz\u2212\u2013\u2014\-/@:+δ]', '', token)
+        solo = token in ('Au', 'Ag', 'Pt', 'Pd', 'Si', 'Ge', 'Cu', 'Ni', 'Co', 'Fe', 'Bi', 'Sn', 'Te', 'Se', 'Ru', 'Rh', 'Ir')
+        if bare and re.fullmatch(rf'(?:(?:{ELEMENT})(?![a-z]))+', bare) and (len(elements_of(token)) > 1 or solo or token == phrase.strip()):
             return token
     return str(text).strip()
 
