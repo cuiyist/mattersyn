@@ -82,18 +82,21 @@ def stage_dist(dist, site):
     for rel, path in site_files.items():
         if rel not in dist_files:
             path.unlink(); removed.append(rel)
-    for rel, src in dist_files.items():
-        if rel.split('/')[0] in SITE_CONTROL:
-            raise SystemExit(f'build output must not contain site control path: {rel}')
-        dst = Path(site) / rel
-        if dst.exists():
-            if sha256(dst) == sha256(src):
-                continue
-            changed.append(rel)
-        else:
-            added.append(rel)
-        dst.parent.mkdir(parents=True, exist_ok=True)
-        shutil.copyfile(src, dst)
+    with ThreadPoolExecutor(max_workers=2) as executor:
+        for rel, src in dist_files.items():
+            if rel.split('/')[0] in SITE_CONTROL:
+                raise SystemExit(f'build output must not contain site control path: {rel}')
+            dst = Path(site) / rel
+            if dst.exists():
+                # One file pair at a time: no future comparison crosses a copy.
+                destination_hash, source_hash = executor.map(sha256, (dst, src))
+                if destination_hash == source_hash:
+                    continue
+                changed.append(rel)
+            else:
+                added.append(rel)
+            dst.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copyfile(src, dst)
     for d in sorted({p for p in Path(site).rglob('*') if p.is_dir()}, key=lambda p: -len(p.parts)):
         if d.relative_to(site).parts[0] not in SITE_CONTROL and not any(d.iterdir()):
             d.rmdir()

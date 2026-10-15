@@ -1,0 +1,334 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "nizamoglu2009-1-3109151-cdse-zns-core-shell-nc-solid-film-pl-in-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Sedat Nizamoglu et al. (2009): CdSe/ZnS core/shell NC solid film (PL in solution=622 nm)",
+  "material": {
+    "formula": "CdSe/ZnS",
+    "family": "CdSe/ZnS nanocrystals",
+    "elements": [
+      "Cd",
+      "Se",
+      "Zn",
+      "S"
+    ],
+    "components": [
+      "CdSe",
+      "ZnS"
+    ],
+    "architecture": "core_shell"
+  },
+  "method": "Synthesis as described in the source",
+  "sources": [
+    {
+      "id": "nizamoglu2009-1-3109151",
+      "doi": "10.1063/1.3109151",
+      "title": "Excitation resolved color conversion of CdSe/ZnS core/shell quantum dot solids for hybrid white light emitting diodes",
+      "authors": "S. Nizamoglu and H. V. Demir",
+      "year": 2009,
+      "url": "https://doi.org/10.1063/1.3109151",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "nizamoglu2009-1-3109151",
+    "recipe_family": "nizamoglu2009-1-3109151-cdse-zns-core-shell-nc-solid-film-pl-in-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdSe/ZnS",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "nizamoglu2009-1-3109151",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": 5.8,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "5.8 nm",
+      "evidence": [
+        {
+          "source_id": "nizamoglu2009-1-3109151",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "sphere",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "nizamoglu2009-1-3109151",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "nizamoglu2009-1-3109151-cdse-zns-core-shell-nc-solid-film-pl-in-1--cdse-zns-ncs",
+      "name": "CdSe/ZnS NCs",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "nizamoglu2009-1-3109151",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "nizamoglu2009-1-3109151-cdse-zns-core-shell-nc-solid-film-pl-in-1--after-s01-drop-cast",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "nizamoglu2009-1-3109151-cdse-zns-core-shell-nc-solid-film-pl-in-1--cdse-zns-ncs"
+      ]
+    },
+    {
+      "id": "nizamoglu2009-1-3109151-cdse-zns-core-shell-nc-solid-film-pl-in-1--after-s02-bake",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "nizamoglu2009-1-3109151-cdse-zns-core-shell-nc-solid-film-pl-in-1--after-s01-drop-cast",
+        "nizamoglu2009-1-3109151-cdse-zns-core-shell-nc-solid-film-pl-in-1--cdse-zns-ncs"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-drop-cast",
+      "action": "drop cast",
+      "label": "Drop casting the NC-toluene solution on quartz",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "nizamoglu2009-1-3109151-cdse-zns-core-shell-nc-solid-film-pl-in-1--cdse-zns-ncs"
+      ],
+      "outputs": [
+        "nizamoglu2009-1-3109151-cdse-zns-core-shell-nc-solid-film-pl-in-1--after-s01-drop-cast"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Drop casting the NC-toluene solution on quartz",
+      "evidence": [
+        {
+          "source_id": "nizamoglu2009-1-3109151",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "s02-bake",
+      "action": "bake",
+      "label": "Evaporate the toluene solution of NCs",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-drop-cast"
+      ],
+      "inputs": [
+        "nizamoglu2009-1-3109151-cdse-zns-core-shell-nc-solid-film-pl-in-1--after-s01-drop-cast",
+        "nizamoglu2009-1-3109151-cdse-zns-core-shell-nc-solid-film-pl-in-1--cdse-zns-ncs"
+      ],
+      "outputs": [
+        "nizamoglu2009-1-3109151-cdse-zns-core-shell-nc-solid-film-pl-in-1--after-s02-bake"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 70,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "70 °C",
+          "evidence": [
+            {
+              "source_id": "nizamoglu2009-1-3109151",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Evaporate the toluene solution of NCs",
+      "evidence": [
+        {
+          "source_id": "nizamoglu2009-1-3109151",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "nizamoglu2009-1-3109151-cdse-zns-core-shell-nc-solid-film-pl-in-1--product",
+      "source_sample_label": "CdSe/ZnS core/shell NC solid film (PL in solution=622 nm)",
+      "batch_id": null,
+      "material_state_id": "nizamoglu2009-1-3109151-cdse-zns-core-shell-nc-solid-film-pl-in-1--after-s02-bake",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdSe/ZnS",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "nizamoglu2009-1-3109151",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": "sphere",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "nizamoglu2009-1-3109151",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "nizamoglu2009-1-3109151",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [
+    {
+      "id": "nizamoglu2009-1-3109151-cdse-zns-core-shell-nc-solid-film-pl-in-1--size",
+      "sample_id": "nizamoglu2009-1-3109151-cdse-zns-core-shell-nc-solid-film-pl-in-1--product",
+      "property": "diameter",
+      "technique": "TEM",
+      "value": {
+        "value": 5.8,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "5.8 nm",
+        "evidence": [
+          {
+            "source_id": "nizamoglu2009-1-3109151",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nizamoglu2009-1-3109151",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of CdSe/ZnS NCs not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

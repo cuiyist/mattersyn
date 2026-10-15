@@ -1,0 +1,313 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "zhao2008-1-2889938-inas-gaas-quantum-dot-heterostructure-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Z. Y. Zhao et al. (2008): InAs/GaAs quantum dot heterostructure",
+  "material": {
+    "formula": "InAs/GaAs",
+    "family": "InAs/GaAs nanocrystals",
+    "elements": [
+      "In",
+      "As",
+      "Ga"
+    ],
+    "components": [
+      "InAs",
+      "GaAs"
+    ],
+    "architecture": "heterostructure"
+  },
+  "method": "Solid source molecular beam epitaxy",
+  "sources": [
+    {
+      "id": "zhao2008-1-2889938",
+      "doi": "10.1063/1.2889938",
+      "title": "Doping characterization of InAs∕GaAs quantum dot heterostructure by cross-sectional scanning capacitance microscopy",
+      "authors": "Z. Y. Zhao, W. M. Zhang, C. Yi, A. D. Stiff-Roberts, B. J. Rodriguez, and A. P. Baddorf",
+      "year": 2008,
+      "url": "https://doi.org/10.1063/1.2889938",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "zhao2008-1-2889938",
+    "recipe_family": "zhao2008-1-2889938-inas-gaas-quantum-dot-heterostructure-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "InAs/GaAs",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "zhao2008-1-2889938",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "zhao2008-1-2889938-inas-gaas-quantum-dot-heterostructure-1--inas",
+      "name": "InAs",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "zhao2008-1-2889938",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "zhao2008-1-2889938-inas-gaas-quantum-dot-heterostructure-1--gaas",
+      "name": "GaAs",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "zhao2008-1-2889938",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "zhao2008-1-2889938-inas-gaas-quantum-dot-heterostructure-1--al0-5ga0-5as",
+      "name": "Al0.5Ga0.5As",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "zhao2008-1-2889938",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "zhao2008-1-2889938-inas-gaas-quantum-dot-heterostructure-1--after-s01-grow",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "zhao2008-1-2889938-inas-gaas-quantum-dot-heterostructure-1--gaas",
+        "zhao2008-1-2889938-inas-gaas-quantum-dot-heterostructure-1--al0-5ga0-5as"
+      ]
+    },
+    {
+      "id": "zhao2008-1-2889938-inas-gaas-quantum-dot-heterostructure-1--after-s02-grow",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "zhao2008-1-2889938-inas-gaas-quantum-dot-heterostructure-1--after-s01-grow",
+        "zhao2008-1-2889938-inas-gaas-quantum-dot-heterostructure-1--inas",
+        "zhao2008-1-2889938-inas-gaas-quantum-dot-heterostructure-1--gaas"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-grow",
+      "action": "grow",
+      "label": "Grow undoped 50 nm Al0.5Ga0.5As marker layer between two undoped 120 nm GaAs buffer layers",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "zhao2008-1-2889938-inas-gaas-quantum-dot-heterostructure-1--gaas",
+        "zhao2008-1-2889938-inas-gaas-quantum-dot-heterostructure-1--al0-5ga0-5as"
+      ],
+      "outputs": [
+        "zhao2008-1-2889938-inas-gaas-quantum-dot-heterostructure-1--after-s01-grow"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Grow undoped 50 nm Al0.5Ga0.5As marker layer between two undoped 120 nm GaAs buffer layers",
+      "evidence": [
+        {
+          "source_id": "zhao2008-1-2889938",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-grow",
+      "action": "grow",
+      "label": "Grow six single InAs QD layers with different doping schemes and concentrations",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-grow"
+      ],
+      "inputs": [
+        "zhao2008-1-2889938-inas-gaas-quantum-dot-heterostructure-1--after-s01-grow",
+        "zhao2008-1-2889938-inas-gaas-quantum-dot-heterostructure-1--inas",
+        "zhao2008-1-2889938-inas-gaas-quantum-dot-heterostructure-1--gaas"
+      ],
+      "outputs": [
+        "zhao2008-1-2889938-inas-gaas-quantum-dot-heterostructure-1--after-s02-grow"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Grow six single InAs QD layers with different doping schemes and concentrations",
+      "evidence": [
+        {
+          "source_id": "zhao2008-1-2889938",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "zhao2008-1-2889938-inas-gaas-quantum-dot-heterostructure-1--product",
+      "source_sample_label": "InAs/GaAs quantum dot heterostructure",
+      "batch_id": null,
+      "material_state_id": "zhao2008-1-2889938-inas-gaas-quantum-dot-heterostructure-1--after-s02-grow",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "InAs/GaAs",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "zhao2008-1-2889938",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "zhao2008-1-2889938",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reactor: Riber 2300 system (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of InAs not reported in the extracted text.",
+      "Amount of GaAs not reported in the extracted text.",
+      "Amount of Al0.5Ga0.5As not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
