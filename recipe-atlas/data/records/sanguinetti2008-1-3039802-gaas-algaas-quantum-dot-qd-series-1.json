@@ -1,0 +1,498 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "sanguinetti2008-1-3039802-gaas-algaas-quantum-dot-qd-series-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "S. Sanguinetti (2008): GaAs/AlGaAs quantum dot (QD) series",
+  "material": {
+    "formula": "GaAs/AlGaAs",
+    "family": "GaAs/AlGaAs nanocrystals",
+    "elements": [
+      "Ga",
+      "As",
+      "Al"
+    ],
+    "components": [
+      "GaAs",
+      "AlGaAs"
+    ],
+    "architecture": "unresolved"
+  },
+  "method": "Droplet epitaxy",
+  "sources": [
+    {
+      "id": "sanguinetti2008-1-3039802",
+      "doi": "10.1063/1.3039802",
+      "title": "Rapid thermal annealing effects on self-assembled quantum dot and quantum ring structures",
+      "authors": "S. Sanguinetti, T. Mano, A. Gerosa, C. Somaschini, S. Bietti, N. Koguchi, E. Grilli, M. Guzzi, M. Gurioli, and M. Abbarchi",
+      "year": 2008,
+      "url": "https://doi.org/10.1063/1.3039802",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "sanguinetti2008-1-3039802",
+    "recipe_family": "sanguinetti2008-1-3039802-gaas-algaas-quantum-dot-qd-series-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "GaAs/AlGaAs",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "sanguinetti2008-1-3039802",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": 7.0,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "7 nm",
+      "evidence": [
+        {
+          "source_id": "sanguinetti2008-1-3039802",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "cone",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "sanguinetti2008-1-3039802",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "sanguinetti2008-1-3039802-gaas-algaas-quantum-dot-qd-series-1--ga",
+      "name": "Ga",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "volume": {
+          "value": 3.75,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "3.75 mL",
+          "evidence": [
+            {
+              "source_id": "sanguinetti2008-1-3039802",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "sanguinetti2008-1-3039802",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "sanguinetti2008-1-3039802-gaas-algaas-quantum-dot-qd-series-1--after-s01-cool",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "sanguinetti2008-1-3039802-gaas-algaas-quantum-dot-qd-series-1--after-s02-deposit",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "sanguinetti2008-1-3039802-gaas-algaas-quantum-dot-qd-series-1--after-s01-cool",
+        "sanguinetti2008-1-3039802-gaas-algaas-quantum-dot-qd-series-1--ga"
+      ]
+    },
+    {
+      "id": "sanguinetti2008-1-3039802-gaas-algaas-quantum-dot-qd-series-1--after-s03-arsenize",
+      "name": "mixture after step 3",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "sanguinetti2008-1-3039802-gaas-algaas-quantum-dot-qd-series-1--after-s02-deposit",
+        "sanguinetti2008-1-3039802-gaas-algaas-quantum-dot-qd-series-1--ga"
+      ]
+    },
+    {
+      "id": "sanguinetti2008-1-3039802-gaas-algaas-quantum-dot-qd-series-1--after-s04-anneal",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "sanguinetti2008-1-3039802-gaas-algaas-quantum-dot-qd-series-1--after-s03-arsenize"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-cool",
+      "action": "cool",
+      "label": "Lowering the substrate temperature",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "sanguinetti2008-1-3039802-gaas-algaas-quantum-dot-qd-series-1--after-s01-cool"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 200,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "200 °C",
+          "evidence": [
+            {
+              "source_id": "sanguinetti2008-1-3039802",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "As flux",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "sanguinetti2008-1-3039802",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Lowering the substrate temperature",
+      "evidence": [
+        {
+          "source_id": "sanguinetti2008-1-3039802",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-deposit",
+      "action": "deposit",
+      "label": "Ga droplet formation",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-cool"
+      ],
+      "inputs": [
+        "sanguinetti2008-1-3039802-gaas-algaas-quantum-dot-qd-series-1--after-s01-cool",
+        "sanguinetti2008-1-3039802-gaas-algaas-quantum-dot-qd-series-1--ga"
+      ],
+      "outputs": [
+        "sanguinetti2008-1-3039802-gaas-algaas-quantum-dot-qd-series-1--after-s02-deposit"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "As flux",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "sanguinetti2008-1-3039802",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Ga droplet formation",
+      "evidence": [
+        {
+          "source_id": "sanguinetti2008-1-3039802",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-arsenize",
+      "action": "arsenize",
+      "label": "Ga droplet arsenization",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-deposit"
+      ],
+      "inputs": [
+        "sanguinetti2008-1-3039802-gaas-algaas-quantum-dot-qd-series-1--after-s02-deposit",
+        "sanguinetti2008-1-3039802-gaas-algaas-quantum-dot-qd-series-1--ga"
+      ],
+      "outputs": [
+        "sanguinetti2008-1-3039802-gaas-algaas-quantum-dot-qd-series-1--after-s03-arsenize"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "As flux",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "sanguinetti2008-1-3039802",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Ga droplet arsenization",
+      "evidence": [
+        {
+          "source_id": "sanguinetti2008-1-3039802",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s04-anneal",
+      "action": "anneal",
+      "label": "Post-growth annealing",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s03-arsenize"
+      ],
+      "inputs": [
+        "sanguinetti2008-1-3039802-gaas-algaas-quantum-dot-qd-series-1--after-s03-arsenize"
+      ],
+      "outputs": [
+        "sanguinetti2008-1-3039802-gaas-algaas-quantum-dot-qd-series-1--after-s04-anneal"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 650,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "650 °C",
+          "evidence": [
+            {
+              "source_id": "sanguinetti2008-1-3039802",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "10 min",
+          "evidence": [
+            {
+              "source_id": "sanguinetti2008-1-3039802",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "As flux",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "sanguinetti2008-1-3039802",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Post-growth annealing",
+      "evidence": [
+        {
+          "source_id": "sanguinetti2008-1-3039802",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "sanguinetti2008-1-3039802-gaas-algaas-quantum-dot-qd-series-1--product",
+      "source_sample_label": "GaAs/AlGaAs quantum dot (QD) series",
+      "batch_id": null,
+      "material_state_id": "sanguinetti2008-1-3039802-gaas-algaas-quantum-dot-qd-series-1--after-s04-anneal",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "GaAs/AlGaAs",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "sanguinetti2008-1-3039802",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": "cone",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "sanguinetti2008-1-3039802",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "sanguinetti2008-1-3039802",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reactor: conventional molecular beam epitaxy (MBE) apparatus (Main PDF p.2).",
+        "Reaction temperature: 200 degC (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "sanguinetti2008-1-3039802-gaas-algaas-quantum-dot-qd-series-1--size",
+      "sample_id": "sanguinetti2008-1-3039802-gaas-algaas-quantum-dot-qd-series-1--product",
+      "property": "particle_size",
+      "technique": "not reported",
+      "value": {
+        "value": 7.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "7 nm",
+        "evidence": [
+          {
+            "source_id": "sanguinetti2008-1-3039802",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sanguinetti2008-1-3039802",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Reaction time not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

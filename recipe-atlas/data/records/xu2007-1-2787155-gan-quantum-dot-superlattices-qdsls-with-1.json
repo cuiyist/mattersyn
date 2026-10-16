@@ -1,0 +1,504 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "xu2007-1-2787155-gan-quantum-dot-superlattices-qdsls-with-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Tao Xu (2007): GaN quantum dot superlattices (QDSLs) with AlN barriers",
+  "material": {
+    "formula": "GaN",
+    "family": "GaN nanocrystals",
+    "elements": [
+      "Ga",
+      "N"
+    ],
+    "components": [
+      "GaN"
+    ],
+    "architecture": "heterostructure"
+  },
+  "method": "Modified Stranski-Krastanov",
+  "sources": [
+    {
+      "id": "xu2007-1-2787155",
+      "doi": "10.1063/1.2787155",
+      "title": "GaN quantum dot superlattices grown by molecular beam epitaxy at high temperature",
+      "authors": "Tao Xu, Lin Zhou, Yiyi Wang, Ahmet S. Özcan, K. F. Ludwig, David J. Smith, T. D. Moustakas",
+      "year": 2007,
+      "url": "https://doi.org/10.1063/1.2787155",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "xu2007-1-2787155",
+    "recipe_family": "xu2007-1-2787155-gan-quantum-dot-superlattices-qdsls-with-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "GaN",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "xu2007-1-2787155",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": 3.4,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "3.4 nm",
+      "evidence": [
+        {
+          "source_id": "xu2007-1-2787155",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "truncated pyramid",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "xu2007-1-2787155",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "xu2007-1-2787155-gan-quantum-dot-superlattices-qdsls-with-1--gallium",
+      "name": "Gallium",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "xu2007-1-2787155",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "xu2007-1-2787155-gan-quantum-dot-superlattices-qdsls-with-1--aluminum",
+      "name": "Aluminum",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "xu2007-1-2787155",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "xu2007-1-2787155-gan-quantum-dot-superlattices-qdsls-with-1--nitrogen",
+      "name": "Nitrogen",
+      "formula": null,
+      "role": "nonmetal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "xu2007-1-2787155",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "xu2007-1-2787155-gan-quantum-dot-superlattices-qdsls-with-1--after-s01-nitridate",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "xu2007-1-2787155-gan-quantum-dot-superlattices-qdsls-with-1--after-s02-deposit",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "xu2007-1-2787155-gan-quantum-dot-superlattices-qdsls-with-1--after-s01-nitridate",
+        "xu2007-1-2787155-gan-quantum-dot-superlattices-qdsls-with-1--aluminum",
+        "xu2007-1-2787155-gan-quantum-dot-superlattices-qdsls-with-1--nitrogen"
+      ]
+    },
+    {
+      "id": "xu2007-1-2787155-gan-quantum-dot-superlattices-qdsls-with-1--after-s03-cool",
+      "name": "mixture after step 3",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "xu2007-1-2787155-gan-quantum-dot-superlattices-qdsls-with-1--after-s02-deposit"
+      ]
+    },
+    {
+      "id": "xu2007-1-2787155-gan-quantum-dot-superlattices-qdsls-with-1--after-s04-deposit",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "xu2007-1-2787155-gan-quantum-dot-superlattices-qdsls-with-1--after-s03-cool",
+        "xu2007-1-2787155-gan-quantum-dot-superlattices-qdsls-with-1--gallium",
+        "xu2007-1-2787155-gan-quantum-dot-superlattices-qdsls-with-1--nitrogen"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-nitridate",
+      "action": "nitridate",
+      "label": "Nitridation of sapphire substrates",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "xu2007-1-2787155-gan-quantum-dot-superlattices-qdsls-with-1--after-s01-nitridate"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 870,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "870 °C",
+          "evidence": [
+            {
+              "source_id": "xu2007-1-2787155",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "N2 plasma",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "xu2007-1-2787155",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Nitridation of sapphire substrates",
+      "evidence": [
+        {
+          "source_id": "xu2007-1-2787155",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "s02-deposit",
+      "action": "deposit",
+      "label": "Deposition of AlN film",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-nitridate"
+      ],
+      "inputs": [
+        "xu2007-1-2787155-gan-quantum-dot-superlattices-qdsls-with-1--after-s01-nitridate",
+        "xu2007-1-2787155-gan-quantum-dot-superlattices-qdsls-with-1--aluminum",
+        "xu2007-1-2787155-gan-quantum-dot-superlattices-qdsls-with-1--nitrogen"
+      ],
+      "outputs": [
+        "xu2007-1-2787155-gan-quantum-dot-superlattices-qdsls-with-1--after-s02-deposit"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "N2 plasma",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "xu2007-1-2787155",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Deposition of AlN film",
+      "evidence": [
+        {
+          "source_id": "xu2007-1-2787155",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "s03-cool",
+      "action": "cool",
+      "label": "Cooling to GaN QDSL growth temperature",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-deposit"
+      ],
+      "inputs": [
+        "xu2007-1-2787155-gan-quantum-dot-superlattices-qdsls-with-1--after-s02-deposit"
+      ],
+      "outputs": [
+        "xu2007-1-2787155-gan-quantum-dot-superlattices-qdsls-with-1--after-s03-cool"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 770,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "770 °C",
+          "evidence": [
+            {
+              "source_id": "xu2007-1-2787155",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "N2 plasma",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "xu2007-1-2787155",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Cooling to GaN QDSL growth temperature",
+      "evidence": [
+        {
+          "source_id": "xu2007-1-2787155",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "s04-deposit",
+      "action": "deposit",
+      "label": "Deposition of GaN quantum dots using modified SK mode",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s03-cool"
+      ],
+      "inputs": [
+        "xu2007-1-2787155-gan-quantum-dot-superlattices-qdsls-with-1--after-s03-cool",
+        "xu2007-1-2787155-gan-quantum-dot-superlattices-qdsls-with-1--gallium",
+        "xu2007-1-2787155-gan-quantum-dot-superlattices-qdsls-with-1--nitrogen"
+      ],
+      "outputs": [
+        "xu2007-1-2787155-gan-quantum-dot-superlattices-qdsls-with-1--after-s04-deposit"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "N2 plasma",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "xu2007-1-2787155",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Deposition of GaN quantum dots using modified SK mode",
+      "evidence": [
+        {
+          "source_id": "xu2007-1-2787155",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "xu2007-1-2787155-gan-quantum-dot-superlattices-qdsls-with-1--product",
+      "source_sample_label": "GaN quantum dot superlattices (QDSLs) with AlN barriers",
+      "batch_id": null,
+      "material_state_id": "xu2007-1-2787155-gan-quantum-dot-superlattices-qdsls-with-1--after-s04-deposit",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "GaN",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "xu2007-1-2787155",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": "truncated pyramid",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "xu2007-1-2787155",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "xu2007-1-2787155",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "notes": [
+        "Reactor: Varian Gen II molecular beam epitaxy system (Main PDF p.3)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "xu2007-1-2787155-gan-quantum-dot-superlattices-qdsls-with-1--size",
+      "sample_id": "xu2007-1-2787155-gan-quantum-dot-superlattices-qdsls-with-1--product",
+      "property": "particle_size",
+      "technique": "not reported",
+      "value": {
+        "value": 3.4,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "3.4 nm",
+        "evidence": [
+          {
+            "source_id": "xu2007-1-2787155",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "xu2007-1-2787155",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of Gallium not reported in the extracted text.",
+      "Amount of Aluminum not reported in the extracted text.",
+      "Amount of Nitrogen not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

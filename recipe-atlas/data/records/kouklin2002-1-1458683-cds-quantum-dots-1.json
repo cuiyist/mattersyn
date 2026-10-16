@@ -1,0 +1,337 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "kouklin2002-1-1458683-cds-quantum-dots-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "N. Kouklin et al. (2002): CdS quantum dots",
+  "material": {
+    "formula": "CdS",
+    "family": "CdS nanocrystals",
+    "elements": [
+      "Cd",
+      "S"
+    ],
+    "components": [
+      "CdS"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Electrochemical self-assembly",
+  "sources": [
+    {
+      "id": "kouklin2002-1-1458683",
+      "doi": "10.1063/1.1458683",
+      "title": "Room-temperature single-electron charging in electrochemically synthesized semiconductor quantum dot and wire array",
+      "authors": "N. Kouklin; L. Menon; S. Bandyopadhyay",
+      "year": 2002,
+      "url": "https://doi.org/10.1063/1.1458683",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "kouklin2002-1-1458683",
+    "recipe_family": "kouklin2002-1-1458683-cds-quantum-dots-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdS",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "kouklin2002-1-1458683",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "single crystal",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "kouklin2002-1-1458683",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": 8.0,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "8 nm",
+      "evidence": [
+        {
+          "source_id": "kouklin2002-1-1458683",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "cylinder",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "kouklin2002-1-1458683",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "kouklin2002-1-1458683-cds-quantum-dots-1--cds",
+      "name": "CdS",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "kouklin2002-1-1458683",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "kouklin2002-1-1458683-cds-quantum-dots-1--after-s01-electropolish",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "kouklin2002-1-1458683-cds-quantum-dots-1--after-s02-electrodeposit",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "kouklin2002-1-1458683-cds-quantum-dots-1--after-s01-electropolish",
+        "kouklin2002-1-1458683-cds-quantum-dots-1--cds"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-electropolish",
+      "action": "electropolish",
+      "label": "Electropolishing an aluminum foil in a suitable electrolyte to clean and prepare the surface",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "kouklin2002-1-1458683-cds-quantum-dots-1--after-s01-electropolish"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Electropolishing an aluminum foil in a suitable electrolyte to clean and prepare the surface",
+      "evidence": [
+        {
+          "source_id": "kouklin2002-1-1458683",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-electrodeposit",
+      "action": "electrodeposit",
+      "label": "Electrodepositing CdS within the pores",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-electropolish"
+      ],
+      "inputs": [
+        "kouklin2002-1-1458683-cds-quantum-dots-1--after-s01-electropolish",
+        "kouklin2002-1-1458683-cds-quantum-dots-1--cds"
+      ],
+      "outputs": [
+        "kouklin2002-1-1458683-cds-quantum-dots-1--after-s02-electrodeposit"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "s",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "10 s",
+          "evidence": [
+            {
+              "source_id": "kouklin2002-1-1458683",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Electrodepositing CdS within the pores",
+      "evidence": [
+        {
+          "source_id": "kouklin2002-1-1458683",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "kouklin2002-1-1458683-cds-quantum-dots-1--product",
+      "source_sample_label": "CdS quantum dots",
+      "batch_id": null,
+      "material_state_id": "kouklin2002-1-1458683-cds-quantum-dots-1--after-s02-electrodeposit",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdS",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "kouklin2002-1-1458683",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "single crystal",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "kouklin2002-1-1458683",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "cylinder",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "kouklin2002-1-1458683",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "kouklin2002-1-1458683",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reaction time: 10 s (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "kouklin2002-1-1458683-cds-quantum-dots-1--size",
+      "sample_id": "kouklin2002-1-1458683-cds-quantum-dots-1--product",
+      "property": "particle_size",
+      "technique": "not reported",
+      "value": {
+        "value": 8.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "8 nm",
+        "evidence": [
+          {
+            "source_id": "kouklin2002-1-1458683",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "kouklin2002-1-1458683",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Ligand not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Amount of CdS not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

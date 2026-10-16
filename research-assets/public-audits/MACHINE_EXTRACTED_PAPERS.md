@@ -1,5 +1,7 @@
 # Published machine-extracted papers
 
+Current verified index after B35 (2026-10-16T04:44:19+00:00): **1,011 source_extracted primary paper contributions /1,506 display pairs**. B35 adds 24 DOI rows /44 record IDs with exactly 8 saved rare-read markers. All 11 read histories remain preserved, including 3 nonretained papers without credit. Public totals are 1,255 primary paper IDs /4,491 canonical records /2,370 display pairs. No independent-audit, gold, calibration or training-ready credit. Every prior row, membership, footer and historical status remains verbatim.
+
 Current verified index after B34 (2026-10-15T23:23:50+00:00): **987source_extracted primary paper contributions/1,462display pairs**. B34 adds34DOIrows/45recordIDs with19saved rare-read markers. All24historical reads remain preserved, including5nonretained histories without credit. Public1,231primary IDs distinguish1,230normalized literature DOI groups+1benchmark. No independent-audit or training-ready credit. Every prior row/membership/footer remains verbatim.
 
 
@@ -1080,3 +1082,34 @@ These33source_extracted contributions add no independent-audit or training-ready
 | 10.1021/jp905745w | `liu2009-jp905745w-sdc-sr-sm0-2ce0-8o1-9-1` | B34 | 2026-10-15T23:23:50+00:00 | yes |
 
 These34source_extracted contributions add no independent-audit or training-ready credit. Nineteen markers denote limited preserved deletion-only reading; all24read histories remain retained.
+
+## B35 — verified 2026-10-16T04:44:19+00:00
+
+| DOI | Record IDs | Batch | Live verification UTC | Limited saved rare read |
+| --- | --- | --- | --- | --- |
+| 10.1021/jp9103036 | `xu2010-jp9103036-fe3o4-sio2-cdse-zns-nanocomposite-iq-1` | B35 | 2026-10-16T04:44:19+00:00 | no |
+| 10.1021/jp981598o | `korgel1998-jp981598o-dodecanethiol-capped-silver-nanocrystals-1` | B35 | 2026-10-16T04:44:19+00:00 | no |
+| 10.1021/la046754z | `wu2005-la046754z-hydroxyapatite-hap-nanopowders-synthesiz-1` | B35 | 2026-10-16T04:44:19+00:00 | yes |
+| 10.1021/la200822b | `x2011-la200822b-bncs-3` | B35 | 2026-10-16T04:44:19+00:00 | no |
+| 10.1021/la300328c | `sun2012-la300328c-au-nanopolyhedron-coreresin-shell-struct-4`, `sun2012-la300328c-au-nanopolyhedronresincdte-nanocrystal-h-5`, `sun2012-la300328c-au-nanorod-coreresin-shell-structures-1`, `sun2012-la300328c-au-nanorod-coreresin-shell-structures-wi-2`, `sun2012-la300328c-au-nanorod-coreresin-shell-structures-wi-3` | B35 | 2026-10-16T04:44:19+00:00 | no |
+| 10.1021/la802120n | `dunphy2008-la802120n-au-nc-micelle-film-no-silica-2`, `dunphy2008-la802120n-au-nc-micelle-silica-film-1` | B35 | 2026-10-16T04:44:19+00:00 | no |
+| 10.1021/la901387q | `nguyen2009-la901387q-cevo4-nanocrystals-2`, `nguyen2009-la901387q-smvo4-nanocrystals-1` | B35 | 2026-10-16T04:44:19+00:00 | yes |
+| 10.1021/nl025538c | `english2002-nl025538c-octanethiol-capped-si-nanocrystals-1` | B35 | 2026-10-16T04:44:19+00:00 | no |
+| 10.1021/nl0351542 | `hao2004-nl0351542-branched-gold-nanocrystals-1` | B35 | 2026-10-16T04:44:19+00:00 | no |
+| 10.1021/nl048846e | `saunders2004-nl048846e-inverse-opal-macroporous-gold-nanocrysta-1` | B35 | 2026-10-16T04:44:19+00:00 | no |
+| 10.1021/nl200468p | `x2011-nl200468p-a2b3-type-bnsl-bilayer-self-assembled-fr-3`, `x2011-nl200468p-ab-type-bnsl-monolayer-self-assembled-fr-1`, `x2011-nl200468p-ab2-type-bnsl-monolayer-self-assembled-f-2`, `x2011-nl200468p-ab3-type-bnsl-bilayer-self-assembled-fro-4`, `x2011-nl200468p-abc2-type-tnsl-bilayer-self-assembled-fr-5` | B35 | 2026-10-16T04:44:19+00:00 | no |
+| 10.1021/nl503289a | `goubet2014-nl503289a-au-nanocrystal-superlattice-with-high-in-1`, `goubet2014-nl503289a-polycrystalline-au-nanocrystal-superlatt-2` | B35 | 2026-10-16T04:44:19+00:00 | no |
+| 10.1021/nn101708q | `al2010-nn101708q-ag2o-nanocrystal-coated-na-titanate-nano-1`, `al2010-nn101708q-tio2-b-core-anatase-shell-nanofibers-3` | B35 | 2026-10-16T04:44:19+00:00 | yes |
+| 10.1021/nn200265e | `al2011-nn200265e-11-nm-w-c-nc-superlattice-1`, `al2011-nn200265e-18-8-nm-in-ncs-5` | B35 | 2026-10-16T04:44:19+00:00 | yes |
+| 10.1021/nn3048439 | `kang2013-nn3048439-pt-cubes-3`, `kang2013-nn3048439-pt-icosahedra-2`, `kang2013-nn3048439-pt-octahedra-1` | B35 | 2026-10-16T04:44:19+00:00 | no |
+| 10.1021/nn3052617 | `chen2013-nn3052617-cofe2o4-ncs-6-8-nm-1`, `chen2013-nn3052617-fe3o4-ncs-12-8-nm-2`, `chen2013-nn3052617-fe3o4-ncs-9-2-nm-3`, `chen2013-nn3052617-mgzn2-type-cofe2o4-fe3o4-bnsls-5`, `chen2013-nn3052617-nazn13-type-cofe2o4-fe3o4-bnsls-4` | B35 | 2026-10-16T04:44:19+00:00 | yes |
+| 10.1021/nn3060219 | `trizio2013-nn3060219-cdse-cu3p-cdse-nanocorals-1` | B35 | 2026-10-16T04:44:19+00:00 | yes |
+| 10.1021/nn4001885 | `al2013-nn4001885-aunws-d-6-nm-1` | B35 | 2026-10-16T04:44:19+00:00 | no |
+| 10.1021/nn404272j | `chang2013-nn404272j-co9s8-nanocrystals-1` | B35 | 2026-10-16T04:44:19+00:00 | yes |
+| 10.1021/nn502829s | `al2014-nn502829s-cdse-cdcl2-pbu3-1` | B35 | 2026-10-16T04:44:19+00:00 | no |
+| 10.1021/nn503972v | `al2014-nn503972v-cu2xse-nanocrystals-1` | B35 | 2026-10-16T04:44:19+00:00 | yes |
+| 10.1021/nn800141e | `ratanatawanate2008-nn800141e-pbs-qds-inside-tio2-nanotubes-pbs-qds-in-2`, `ratanatawanate2008-nn800141e-pbs-qds-tio2-nanotubes-pbs-tnts-1` | B35 | 2026-10-16T04:44:19+00:00 | no |
+| 10.1021/nn800244k | `lu2008-nn800244k-pt-xgnp-glucose-biosensor-1` | B35 | 2026-10-16T04:44:19+00:00 | no |
+| 10.1038/nmat1251 | `park2004-nmat1251-12-nm-magnetite-nanocrystals-1` | B35 | 2026-10-16T04:44:19+00:00 | no |
+
+These 24 source_extracted contributions add no independent-audit or training-ready credit. Eight markers denote limited saved deletion-only reading; all 11 read histories remain retained, including 3 nonretained papers.
