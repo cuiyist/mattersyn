@@ -1,5 +1,16 @@
 ## B44/B45/B46 navigation correction, pending release — 2026-10-16T20:32:47.881929+00:00
 
+## Reader navigation consistency correction, pending release — 2026-10-16T21:07:08.420552+00:00
+
+The Ge/GeOx composite now has its normal derived Reader material row, and Ge's generated navigation hash is current. The installed Reader builder passed the private consistency test; all four unchanged Ge regression checks and both negative cases passed. This second correction changes only the two Reader files. All **4,901 canonical files**, all Reader scientific values and figures, protocol/chemical bindings, rights and policy are unchanged. The earlier failed local builds remain saved; the complete release checks must pass on the new prepared Source commit.
+
+B44/B45/B46 remain **68 papers /100 records /333 caption keys**, with **zero new publication credit**. Latest anonymously verified website: **1,461 papers /4,801 canonical records /2,680 display pairs**. The separate audited lane, its questions and denominators remain paused.
+
+Cleanup [R34](https://github.com/cuiyist/mattersyn2/blob/f8d869e52e0d872a1cb2333da74734e622d0af83/CLEANUP_REPORT_2026-10-12.md) is saved and anonymously verified: three completed scopes removed **103,903 copies /6,485,563,052 logical bytes**, with zero program stops or protected-input deletion. Cumulative copy accounting is **13,527,064 copies /731,538,904,995 logical bytes**. These totals do not establish isolated physical recovery. C: free bytes observed at this checkpoint: **55834333184**; the **100 GiB** aim remains unmet.
+
+Choice: use the normal Reader material projection for the explicitly named Ge/GeOx product so its recipe and material navigation remain consistent.
+
+
 The final complete local build at Source `e0c873298df188edbcda124698d7b6a1305b662a` caught two Ge routing checks. One new record now retains its explicitly named variable-oxide cladding in navigation as Ge/GeOx. Only its navigation metadata and exact dependent input hashes changed; reported compositions, quantities, source locators, figure crops and captions are unchanged. All **4,801 prior canonical files** and the **other 99 new files** remain raw-byte protected. The failed head and check logs remain saved. No converter, policy, rights rule or release gate changed. Choice: preserve the explicitly named variable cladding in navigation because the retained product identifies it.
 
 The batch remains **68 papers /100 records /333 caption keys**, with **zero new publication credit** until fresh local checks, browser review, exact-head CI, ordinary merge, deployment and anonymous verification pass. Latest verified website: **1,461 papers /4,801 canonical records /2,680 display pairs**. No independent audit, calibration or training eligibility is claimed; the audited lane stays paused.
