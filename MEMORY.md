@@ -1,5 +1,35 @@
 Owner revisit list: [Machine-extracted papers](research-assets/public-audits/MACHINE_EXTRACTED_PAPERS.md).
 
+## Reader navigation consistency correction, pending release — 2026-10-16T21:07:08.420552+00:00
+
+The Ge/GeOx composite now has its normal derived Reader material row, and Ge's generated navigation hash is current. The installed Reader builder passed the private consistency test; all four unchanged Ge regression checks and both negative cases passed. This second correction changes only the two Reader files. All **4,901 canonical files**, all Reader scientific values and figures, protocol/chemical bindings, rights and policy are unchanged. The earlier failed local builds remain saved; the complete release checks must pass on the new prepared Source commit.
+
+B44/B45/B46 remain **68 papers /100 records /333 caption keys**, with **zero new publication credit**. Latest anonymously verified website: **1,461 papers /4,801 canonical records /2,680 display pairs**. The separate audited lane, its questions and denominators remain paused.
+
+Cleanup [R34](https://github.com/cuiyist/mattersyn2/blob/f8d869e52e0d872a1cb2333da74734e622d0af83/CLEANUP_REPORT_2026-10-12.md) is saved and anonymously verified: three completed scopes removed **103,903 copies /6,485,563,052 logical bytes**, with zero program stops or protected-input deletion. Cumulative copy accounting is **13,527,064 copies /731,538,904,995 logical bytes**. These totals do not establish isolated physical recovery. C: free bytes observed at this checkpoint: **55834333184**; the **100 GiB** aim remains unmet.
+
+Choice: use the normal Reader material projection for the explicitly named Ge/GeOx product so its recipe and material navigation remain consistent.
+
+
+## B44/B45/B46 navigation correction, pending release — 2026-10-16T20:32:47.881929+00:00
+
+The final complete local build at Source `e0c873298df188edbcda124698d7b6a1305b662a` caught two Ge routing checks. One new record now retains its explicitly named variable-oxide cladding in navigation as Ge/GeOx. Only its navigation metadata and exact dependent input hashes changed; reported compositions, quantities, source locators, figure crops and captions are unchanged. All **4,801 prior canonical files** and the **other 99 new files** remain raw-byte protected. The failed head and check logs remain saved. No converter, policy, rights rule or release gate changed. Choice: preserve the explicitly named variable cladding in navigation because the retained product identifies it.
+
+The batch remains **68 papers /100 records /333 caption keys**, with **zero new publication credit** until fresh local checks, browser review, exact-head CI, ordinary merge, deployment and anonymous verification pass. Latest verified website: **1,461 papers /4,801 canonical records /2,680 display pairs**. No independent audit, calibration or training eligibility is claimed; the audited lane stays paused.
+
+The [cleanup report](https://github.com/cuiyist/mattersyn2/blob/main/CLEANUP_REPORT_2026-10-12.md) is saved through verified R33, commit `23cb63cd0190aa0ac933630d4ce851ff0fda63fa`. R33 records **135,131 additional redundant copies /7,919,229,808 logical bytes**, with no programs, originals or training data removed. C: free bytes observed now: **58756354048**; the 100 GiB aim remains unmet. Cumulative copy accounting is 13,423,161 copies /725,053,341,943 logical bytes, not isolated physical recovery. All earlier HOLDs and protected local evidence remain preserved.
+
+## B42/B43 pooled release verified — 2026-10-16T19:10:05+00:00
+
+**42 source_extracted papers /69 new canonical records /209 retained caption keys** are live and anonymously verified. Original contributions: B42 **18 papers/34 records/99 figures**, B43 **24 papers/35 records/110 figures**. Source `4d258d7df2fdc5c61c783bbce91eebbbf2f9deed` passed all three exact-head CI jobs and ordinary PR [60](https://github.com/cuiyist/mattersyn/pull/60), merge `f6e5b75ff9d6067567bacda9b0efc82807814e5f`. Site `92749b7af8920a2c507a301ba05739db98710f2f` passed [Pages 38950856165](https://github.com/cuiyist/mattersyn-site/actions/runs/38950856165). Anonymous verification checked 829 files, 42 planned paper routes and 61 material routes with zero failures. Final manifest 45164 files /2878322709 logical bytes.
+
+Actual build totals: **1461 primary paper IDs /4801 canonical records /2680 recipe–structure display pairs**. Audited contributions remain244 papers/864 pairs; SourceEx contributions 1217 papers/1816 pairs. No scientific accuracy, universal unit-cell completeness or training readiness is inferred.
+
+Original limited read history covers 23 papers /35 original ordinals /44 whole-object deletions, all retained before current selection. Exactly 20 of those DOI markers intersect this actual published42-paper scope; no independent audit or new source facts are inferred. All4,732 prior canonical record files remain raw-byte protected; this release makes0old-record corrections. Original saved deletion history and all prior routing/identity HOLD histories remain preserved. Owner questions, denominators/window and paused audit lane are unchanged.
+
+Storage carries the separately verified R29 Source checkpoint: 690725657488 cumulative logical copy bytes /12893114 copies, report `07ef064fd464ace8ebd4bc95210f721e70d54aa7`. This publication carries that independently completed cleanup checkpoint and establishes no isolated physical reclaim/free-space achievement. Later cleanup reports are separate. Saved private reads/captions add no publication credit before their own fresh admission.
+
+
 ## B42/B43 routing correction and release checks — 2026-10-16T16:45:05.763854+00:00
 
 The complete local build caught two new substrate-supported Ge routes under isolated Ge. Dutta's explicitly named Ge/SiO2 product now has component-aware navigation; its reported Ge composition, evidence and all other scientific values are unchanged. Oehme 2010 (DOI 10.1063/1.3462069) is held for product-system routing, preserving its private inputs and prior limited read; it is not classified as lacking synthesis. The converter has 30 passing regression tests. No release check, policy rule or audited record was changed.

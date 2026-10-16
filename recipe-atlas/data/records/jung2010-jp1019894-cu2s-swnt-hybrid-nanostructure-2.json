@@ -1,0 +1,360 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "jung2010-jp1019894-cu2s-swnt-hybrid-nanostructure-2",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Gyeong Bok Jung et al. (2010): Cu2S-SWNT hybrid nanostructure",
+  "material": {
+    "formula": "Cu2S",
+    "family": "Cu2S nanocrystals",
+    "elements": [
+      "Cu",
+      "S"
+    ],
+    "components": [
+      "Cu2S"
+    ],
+    "architecture": "composite"
+  },
+  "method": "Solvothermal",
+  "sources": [
+    {
+      "id": "jung2010-jp1019894",
+      "doi": "10.1021/jp1019894",
+      "title": "Terahertz Spectroscopy of Nanocrystal−Carbon Nanotube and −Graphene Oxide Hybrid Nanostructures",
+      "authors": "Gyeong Bok Jung, Yoon Myung, Yong Jae Cho, Yong Jae Sohn, Dong Myung Jang, Han Sung Kim, Chi-Woo Lee, and Jeunghee Park, Inhee Maeng and Joo-Hiuk Son, Chul Kang",
+      "year": 2010,
+      "url": "https://doi.org/10.1021/jp1019894",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "jung2010-jp1019894",
+    "recipe_family": "jung2010-jp1019894-cu2s-swnt-hybrid-nanostructure-2",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Cu2S",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "jung2010-jp1019894",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": 7.0,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "7 nm",
+      "evidence": [
+        {
+          "source_id": "jung2010-jp1019894",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "sphere",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "jung2010-jp1019894",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "jung2010-jp1019894-cu2s-swnt-hybrid-nanostructure-2--sodium",
+      "name": "sodium",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "mass": {
+          "value": 2.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "g",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "2 g",
+          "evidence": [
+            {
+              "source_id": "jung2010-jp1019894",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "jung2010-jp1019894",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "jung2010-jp1019894-cu2s-swnt-hybrid-nanostructure-2--ethanol",
+      "name": "ethanol",
+      "formula": null,
+      "role": "solvent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "volume": {
+          "value": 5.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "5 mL",
+          "evidence": [
+            {
+              "source_id": "jung2010-jp1019894",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "jung2010-jp1019894",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "jung2010-jp1019894-cu2s-swnt-hybrid-nanostructure-2--after-s01-heat",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "jung2010-jp1019894-cu2s-swnt-hybrid-nanostructure-2--sodium",
+        "jung2010-jp1019894-cu2s-swnt-hybrid-nanostructure-2--ethanol"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-heat",
+      "action": "heat",
+      "label": "Heating sodium and ethanol in a sealed reactor",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "jung2010-jp1019894-cu2s-swnt-hybrid-nanostructure-2--sodium",
+        "jung2010-jp1019894-cu2s-swnt-hybrid-nanostructure-2--ethanol"
+      ],
+      "outputs": [
+        "jung2010-jp1019894-cu2s-swnt-hybrid-nanostructure-2--after-s01-heat"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 220,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "220 °C",
+          "evidence": [
+            {
+              "source_id": "jung2010-jp1019894",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 72,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "72 h",
+          "evidence": [
+            {
+              "source_id": "jung2010-jp1019894",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Heating sodium and ethanol in a sealed reactor",
+      "evidence": [
+        {
+          "source_id": "jung2010-jp1019894",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "jung2010-jp1019894-cu2s-swnt-hybrid-nanostructure-2--product",
+      "source_sample_label": "Cu2S-SWNT hybrid nanostructure",
+      "batch_id": null,
+      "material_state_id": "jung2010-jp1019894-cu2s-swnt-hybrid-nanostructure-2--after-s01-heat",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Cu2S",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jung2010-jp1019894",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": "sphere",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jung2010-jp1019894",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "jung2010-jp1019894",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reactor: Teﬂon-lined reactor having a maximum volume of 23 mL (Main PDF p.2).",
+        "Reaction temperature: 220 degC (Main PDF p.2).",
+        "Reaction time: 72 h (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "jung2010-jp1019894-cu2s-swnt-hybrid-nanostructure-2--size",
+      "sample_id": "jung2010-jp1019894-cu2s-swnt-hybrid-nanostructure-2--product",
+      "property": "diameter",
+      "technique": "TEM",
+      "value": {
+        "value": 7.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "7 nm",
+        "evidence": [
+          {
+            "source_id": "jung2010-jp1019894",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "jung2010-jp1019894",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

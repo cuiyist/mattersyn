@@ -1,0 +1,466 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "tao2010-am9006726-non-prefabricated-nanocrystal-mesoporous-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Junchao Tao (2010): non-prefabricated nanocrystal mesoporous TiO2 film (20 layers, ~6.3 µm thick)",
+  "material": {
+    "formula": "TiO2",
+    "family": "TiO2 nanocrystals",
+    "elements": [
+      "Ti",
+      "O"
+    ],
+    "components": [
+      "TiO2"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Layer-by-layer spin-coating and rapid thermal process",
+  "sources": [
+    {
+      "id": "tao2010-am9006726",
+      "doi": "10.1021/am9006726",
+      "title": "Non-Prefabricated Nanocrystal Mesoporous TiO2-Based Photoanodes Tuned by A Layer-by-Layer and Rapid Thermal Process",
+      "authors": "Junchao Tao, Yan Sun, Meiying Ge, Xin Chen, Ning Dai",
+      "year": 2010,
+      "url": "https://doi.org/10.1021/am9006726",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "tao2010-am9006726",
+    "recipe_family": "tao2010-am9006726-non-prefabricated-nanocrystal-mesoporous-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "TiO2",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "tao2010-am9006726",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": 7,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "7 nm",
+      "evidence": [
+        {
+          "source_id": "tao2010-am9006726",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "film",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "tao2010-am9006726",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "tao2010-am9006726-non-prefabricated-nanocrystal-mesoporous-1--titanium-tetraisopropoxide-ttip",
+      "name": "titanium tetraisopropoxide (TTIP)",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "tao2010-am9006726",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "tao2010-am9006726-non-prefabricated-nanocrystal-mesoporous-1--hydrochloric-acid-hcl",
+      "name": "hydrochloric acid (HCl)",
+      "formula": null,
+      "role": "solvent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "volume": {
+          "value": 3,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "3 mL",
+          "evidence": [
+            {
+              "source_id": "tao2010-am9006726",
+              "locator": "Main PDF p.1"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "tao2010-am9006726",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "tao2010-am9006726-non-prefabricated-nanocrystal-mesoporous-1--after-s01-spin-coat",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "tao2010-am9006726-non-prefabricated-nanocrystal-mesoporous-1--after-s02-heat",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "tao2010-am9006726-non-prefabricated-nanocrystal-mesoporous-1--after-s01-spin-coat"
+      ]
+    },
+    {
+      "id": "tao2010-am9006726-non-prefabricated-nanocrystal-mesoporous-1--after-s03-anneal",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "tao2010-am9006726-non-prefabricated-nanocrystal-mesoporous-1--after-s02-heat"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-spin-coat",
+      "action": "spin-coat",
+      "label": "Spin-coat the precursor solution onto FTO glass",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "tao2010-am9006726-non-prefabricated-nanocrystal-mesoporous-1--after-s01-spin-coat"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 20,
+          "minimum": null,
+          "maximum": null,
+          "unit": "s",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "20 s",
+          "evidence": [
+            {
+              "source_id": "tao2010-am9006726",
+              "locator": "Main PDF p.1"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Spin-coat the precursor solution onto FTO glass",
+      "evidence": [
+        {
+          "source_id": "tao2010-am9006726",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "s02-heat",
+      "action": "heat",
+      "label": "Rapid thermal process at 400 °C for 5 min",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-spin-coat"
+      ],
+      "inputs": [
+        "tao2010-am9006726-non-prefabricated-nanocrystal-mesoporous-1--after-s01-spin-coat"
+      ],
+      "outputs": [
+        "tao2010-am9006726-non-prefabricated-nanocrystal-mesoporous-1--after-s02-heat"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 400,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "400 °C",
+          "evidence": [
+            {
+              "source_id": "tao2010-am9006726",
+              "locator": "Main PDF p.1"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "5 min",
+          "evidence": [
+            {
+              "source_id": "tao2010-am9006726",
+              "locator": "Main PDF p.1"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Rapid thermal process at 400 °C for 5 min",
+      "evidence": [
+        {
+          "source_id": "tao2010-am9006726",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "s03-anneal",
+      "action": "anneal",
+      "label": "Calcine the film at 500 °C for 2 h",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-heat"
+      ],
+      "inputs": [
+        "tao2010-am9006726-non-prefabricated-nanocrystal-mesoporous-1--after-s02-heat"
+      ],
+      "outputs": [
+        "tao2010-am9006726-non-prefabricated-nanocrystal-mesoporous-1--after-s03-anneal"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 2,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "2 h",
+          "evidence": [
+            {
+              "source_id": "tao2010-am9006726",
+              "locator": "Main PDF p.1"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Calcine the film at 500 °C for 2 h",
+      "evidence": [
+        {
+          "source_id": "tao2010-am9006726",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "tao2010-am9006726-non-prefabricated-nanocrystal-mesoporous-1--product",
+      "source_sample_label": "non-prefabricated nanocrystal mesoporous TiO2 film (20 layers, ~6.3 µm thick)",
+      "batch_id": null,
+      "material_state_id": "tao2010-am9006726-non-prefabricated-nanocrystal-mesoporous-1--after-s03-anneal",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "TiO2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "tao2010-am9006726",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": "film",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "tao2010-am9006726",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "tao2010-am9006726",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "notes": [
+        "Reaction temperature: 400 degC (Main PDF p.1).",
+        "Reaction time: 5 min (Main PDF p.1)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "tao2010-am9006726-non-prefabricated-nanocrystal-mesoporous-1--size",
+      "sample_id": "tao2010-am9006726-non-prefabricated-nanocrystal-mesoporous-1--product",
+      "property": "diameter",
+      "technique": "SEM",
+      "value": {
+        "value": 7,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "7 nm",
+        "evidence": [
+          {
+            "source_id": "tao2010-am9006726",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "tao2010-am9006726",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Amount of titanium tetraisopropoxide (TTIP) not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

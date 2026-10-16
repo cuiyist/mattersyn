@@ -1,0 +1,461 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "al2006-j-physe-2006-08-013-pbte-cdte-nanocrystal-quantum-dots-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "W. Heiss et al. (2006): PbTe/CdTe nanocrystal quantum dots",
+  "material": {
+    "formula": "PbTe/CdTe",
+    "family": "PbTe/CdTe nanocrystals",
+    "elements": [
+      "Pb",
+      "Te",
+      "Cd"
+    ],
+    "components": [
+      "PbTe",
+      "CdTe"
+    ],
+    "architecture": "heterostructure"
+  },
+  "method": "Solid source molecular beam epitaxy",
+  "sources": [
+    {
+      "id": "al2006-j-physe-2006-08-013",
+      "doi": "10.1016/j.physe.2006.08.013",
+      "title": "Highly luminescent nanocrystal quantum dots fabricated by lattice-type mismatched epitaxy",
+      "authors": "W. Heiss; E. Kaufmann; M. Böberl; T. Schwarzl; G. Springholz; G. Hesser; F. Schäffler; K. Koike; H. Harada; M. Yano; R. Leitsmann; L.E. Ramos; F. Bechstedt",
+      "year": 2006,
+      "url": "https://doi.org/10.1016/j.physe.2006.08.013",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "al2006-j-physe-2006-08-013",
+    "recipe_family": "al2006-j-physe-2006-08-013-pbte-cdte-nanocrystal-quantum-dots-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "PbTe/CdTe",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "al2006-j-physe-2006-08-013",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "rock salt (PbTe) / zincblende (CdTe)",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "al2006-j-physe-2006-08-013",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": 25,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "25 nm",
+      "evidence": [
+        {
+          "source_id": "al2006-j-physe-2006-08-013",
+          "locator": "Main PDF p.4"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "small-rhombo-cubo-octahedron",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "al2006-j-physe-2006-08-013",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "al2006-j-physe-2006-08-013-pbte-cdte-nanocrystal-quantum-dots-1--pbte",
+      "name": "PbTe",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "al2006-j-physe-2006-08-013",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "al2006-j-physe-2006-08-013-pbte-cdte-nanocrystal-quantum-dots-1--cdte",
+      "name": "CdTe",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "al2006-j-physe-2006-08-013",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "al2006-j-physe-2006-08-013-pbte-cdte-nanocrystal-quantum-dots-1--after-s01-deposit",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "al2006-j-physe-2006-08-013-pbte-cdte-nanocrystal-quantum-dots-1--cdte"
+      ]
+    },
+    {
+      "id": "al2006-j-physe-2006-08-013-pbte-cdte-nanocrystal-quantum-dots-1--after-s02-deposit",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "al2006-j-physe-2006-08-013-pbte-cdte-nanocrystal-quantum-dots-1--after-s01-deposit",
+        "al2006-j-physe-2006-08-013-pbte-cdte-nanocrystal-quantum-dots-1--pbte"
+      ]
+    },
+    {
+      "id": "al2006-j-physe-2006-08-013-pbte-cdte-nanocrystal-quantum-dots-1--after-s03-anneal",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "al2006-j-physe-2006-08-013-pbte-cdte-nanocrystal-quantum-dots-1--after-s02-deposit"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-deposit",
+      "action": "deposit",
+      "label": "Deposit CdTe buffer layer",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "al2006-j-physe-2006-08-013-pbte-cdte-nanocrystal-quantum-dots-1--cdte"
+      ],
+      "outputs": [
+        "al2006-j-physe-2006-08-013-pbte-cdte-nanocrystal-quantum-dots-1--after-s01-deposit"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 380,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "380 °C",
+          "evidence": [
+            {
+              "source_id": "al2006-j-physe-2006-08-013",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "inert gas",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "al2006-j-physe-2006-08-013",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Deposit CdTe buffer layer",
+      "evidence": [
+        {
+          "source_id": "al2006-j-physe-2006-08-013",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-deposit",
+      "action": "deposit",
+      "label": "Deposit 2D PbTe epilayer",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-deposit"
+      ],
+      "inputs": [
+        "al2006-j-physe-2006-08-013-pbte-cdte-nanocrystal-quantum-dots-1--after-s01-deposit",
+        "al2006-j-physe-2006-08-013-pbte-cdte-nanocrystal-quantum-dots-1--pbte"
+      ],
+      "outputs": [
+        "al2006-j-physe-2006-08-013-pbte-cdte-nanocrystal-quantum-dots-1--after-s02-deposit"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 250,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "250 °C",
+          "evidence": [
+            {
+              "source_id": "al2006-j-physe-2006-08-013",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "inert gas",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "al2006-j-physe-2006-08-013",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Deposit 2D PbTe epilayer",
+      "evidence": [
+        {
+          "source_id": "al2006-j-physe-2006-08-013",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-anneal",
+      "action": "anneal",
+      "label": "Post-growth annealing to form nanocrystals",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-deposit"
+      ],
+      "inputs": [
+        "al2006-j-physe-2006-08-013-pbte-cdte-nanocrystal-quantum-dots-1--after-s02-deposit"
+      ],
+      "outputs": [
+        "al2006-j-physe-2006-08-013-pbte-cdte-nanocrystal-quantum-dots-1--after-s03-anneal"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "10 min",
+          "evidence": [
+            {
+              "source_id": "al2006-j-physe-2006-08-013",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "inert gas",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "al2006-j-physe-2006-08-013",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Post-growth annealing to form nanocrystals",
+      "evidence": [
+        {
+          "source_id": "al2006-j-physe-2006-08-013",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "al2006-j-physe-2006-08-013-pbte-cdte-nanocrystal-quantum-dots-1--product",
+      "source_sample_label": "PbTe/CdTe nanocrystal quantum dots",
+      "batch_id": null,
+      "material_state_id": "al2006-j-physe-2006-08-013-pbte-cdte-nanocrystal-quantum-dots-1--after-s03-anneal",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "PbTe/CdTe",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "al2006-j-physe-2006-08-013",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "rock salt (PbTe) / zincblende (CdTe)",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "al2006-j-physe-2006-08-013",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "small-rhombo-cubo-octahedron",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "al2006-j-physe-2006-08-013",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "al2006-j-physe-2006-08-013",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "notes": [
+        "Reactor: solid source molecular beam epitaxy system (Main PDF p.2).",
+        "Reaction temperature: 350 degC (Main PDF p.3).",
+        "Reaction time: 10 min (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "al2006-j-physe-2006-08-013-pbte-cdte-nanocrystal-quantum-dots-1--size",
+      "sample_id": "al2006-j-physe-2006-08-013-pbte-cdte-nanocrystal-quantum-dots-1--product",
+      "property": "diameter",
+      "technique": "TEM",
+      "value": {
+        "value": 25,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "25 nm",
+        "evidence": [
+          {
+            "source_id": "al2006-j-physe-2006-08-013",
+            "locator": "Main PDF p.4"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "al2006-j-physe-2006-08-013",
+          "locator": "Main PDF p.4"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Ligand not reported in the extracted text.",
+      "Amount of PbTe not reported in the extracted text.",
+      "Amount of CdTe not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

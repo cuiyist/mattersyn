@@ -1,0 +1,466 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "s11664-009-0755-x-geox-cladded-ge-quantum-dots-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "F. C. Jain et al. (2009): GeOx-cladded Ge quantum dots",
+  "material": {
+    "formula": "Ge/GeOx",
+    "family": "Ge/GeOx nanocrystals",
+    "elements": [
+      "Ge",
+      "O"
+    ],
+    "components": [
+      "Ge",
+      "GeOx"
+    ],
+    "architecture": "core_shell"
+  },
+  "method": "Ball-milling and oxidative agent solution",
+  "sources": [
+    {
+      "id": "s11664-009-0755-x",
+      "doi": "10.1007/s11664-009-0755-x",
+      "title": "Novel Quantum Dot Gate FETs and Nonvolatile Memories Using Lattice-Matched II–VI Gate Insulators",
+      "authors": "F. C. Jain; E. Suarez; M. Gogna; F. Alamoody; D. Butkiewicus; R. Hohner; T. Liaskas; S. Karmakar; P.-Y. Chan; B. Miller; J. Chandy; E. Heller",
+      "year": 2009,
+      "url": "https://doi.org/10.1007/s11664-009-0755-x",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "s11664-009-0755-x",
+    "recipe_family": "s11664-009-0755-x-geox-cladded-ge-quantum-dots-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "GeOx-cladded Ge",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "s11664-009-0755-x",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": 2,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "2 nm",
+      "evidence": [
+        {
+          "source_id": "s11664-009-0755-x",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "dot",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "s11664-009-0755-x",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "s11664-009-0755-x-geox-cladded-ge-quantum-dots-1--polycrystalline-germanium-powder",
+      "name": "polycrystalline germanium powder",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "s11664-009-0755-x",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s11664-009-0755-x-geox-cladded-ge-quantum-dots-1--oxidative-agent-solution",
+      "name": "oxidative agent solution",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "s11664-009-0755-x",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "s11664-009-0755-x-geox-cladded-ge-quantum-dots-1--after-s01-ball-mill",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "s11664-009-0755-x-geox-cladded-ge-quantum-dots-1--polycrystalline-germanium-powder"
+      ]
+    },
+    {
+      "id": "s11664-009-0755-x-geox-cladded-ge-quantum-dots-1--after-s02-sonicate",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "s11664-009-0755-x-geox-cladded-ge-quantum-dots-1--after-s01-ball-mill",
+        "s11664-009-0755-x-geox-cladded-ge-quantum-dots-1--oxidative-agent-solution"
+      ]
+    },
+    {
+      "id": "s11664-009-0755-x-geox-cladded-ge-quantum-dots-1--after-s03-centrifuge",
+      "name": "mixture after step 3",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "s11664-009-0755-x-geox-cladded-ge-quantum-dots-1--after-s02-sonicate",
+        "s11664-009-0755-x-geox-cladded-ge-quantum-dots-1--oxidative-agent-solution"
+      ]
+    },
+    {
+      "id": "s11664-009-0755-x-geox-cladded-ge-quantum-dots-1--after-s04-self-assemble",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "s11664-009-0755-x-geox-cladded-ge-quantum-dots-1--after-s03-centrifuge"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-ball-mill",
+      "action": "ball-mill",
+      "label": "Ball-milling of polycrystalline germanium powder",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "s11664-009-0755-x-geox-cladded-ge-quantum-dots-1--polycrystalline-germanium-powder"
+      ],
+      "outputs": [
+        "s11664-009-0755-x-geox-cladded-ge-quantum-dots-1--after-s01-ball-mill"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Ball-milling of polycrystalline germanium powder",
+      "evidence": [
+        {
+          "source_id": "s11664-009-0755-x",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-sonicate",
+      "action": "sonicate",
+      "label": "Sonicated for 2 days",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-ball-mill"
+      ],
+      "inputs": [
+        "s11664-009-0755-x-geox-cladded-ge-quantum-dots-1--after-s01-ball-mill",
+        "s11664-009-0755-x-geox-cladded-ge-quantum-dots-1--oxidative-agent-solution"
+      ],
+      "outputs": [
+        "s11664-009-0755-x-geox-cladded-ge-quantum-dots-1--after-s02-sonicate"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 2,
+          "minimum": null,
+          "maximum": null,
+          "unit": "d",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "2 days",
+          "evidence": [
+            {
+              "source_id": "s11664-009-0755-x",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Sonicated for 2 days",
+      "evidence": [
+        {
+          "source_id": "s11664-009-0755-x",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-centrifuge",
+      "action": "centrifuge",
+      "label": "Centrifuged and further etched",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-sonicate"
+      ],
+      "inputs": [
+        "s11664-009-0755-x-geox-cladded-ge-quantum-dots-1--after-s02-sonicate",
+        "s11664-009-0755-x-geox-cladded-ge-quantum-dots-1--oxidative-agent-solution"
+      ],
+      "outputs": [
+        "s11664-009-0755-x-geox-cladded-ge-quantum-dots-1--after-s03-centrifuge"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Centrifuged and further etched",
+      "evidence": [
+        {
+          "source_id": "s11664-009-0755-x",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s04-self-assemble",
+      "action": "self-assemble",
+      "label": "Self-assembly on p-doped channel region",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s03-centrifuge"
+      ],
+      "inputs": [
+        "s11664-009-0755-x-geox-cladded-ge-quantum-dots-1--after-s03-centrifuge"
+      ],
+      "outputs": [
+        "s11664-009-0755-x-geox-cladded-ge-quantum-dots-1--after-s04-self-assemble"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 3,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "3 min",
+          "evidence": [
+            {
+              "source_id": "s11664-009-0755-x",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Self-assembly on p-doped channel region",
+      "evidence": [
+        {
+          "source_id": "s11664-009-0755-x",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "s11664-009-0755-x-geox-cladded-ge-quantum-dots-1--product",
+      "source_sample_label": "GeOx-cladded Ge quantum dots",
+      "batch_id": null,
+      "material_state_id": "s11664-009-0755-x-geox-cladded-ge-quantum-dots-1--after-s04-self-assemble",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "GeOx-cladded Ge",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "s11664-009-0755-x",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": "dot",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "s11664-009-0755-x",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "s11664-009-0755-x",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reactor: sealed Erlenmeyer flask (Main PDF p.2).",
+        "Reaction time: 3 min (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "s11664-009-0755-x-geox-cladded-ge-quantum-dots-1--size",
+      "sample_id": "s11664-009-0755-x-geox-cladded-ge-quantum-dots-1--product",
+      "property": "particle_size",
+      "technique": "not reported",
+      "value": {
+        "value": 2,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "2 nm",
+        "evidence": [
+          {
+            "source_id": "s11664-009-0755-x",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "s11664-009-0755-x",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Amount of polycrystalline germanium powder not reported in the extracted text.",
+      "Amount of oxidative agent solution not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

@@ -1,0 +1,367 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "zhang2008-ma800514a-pva-70-000-decorated-single-walled-cnts-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Fan Zhang et al. (2008): PVA 70 000 decorated single-walled CNTs",
+  "material": {
+    "formula": "PVA",
+    "family": "PVA nanocrystals",
+    "elements": [
+      "P",
+      "V"
+    ],
+    "components": [
+      "PVA"
+    ],
+    "architecture": "composite"
+  },
+  "method": "Synthesis as described in the source",
+  "sources": [
+    {
+      "id": "zhang2008-ma800514a",
+      "doi": "10.1021/ma800514a",
+      "title": "Modification of Carbon Nanotubes: Water-Soluble Polymers Nanocrystal Wrapping to Periodic Patterning with Assistance of Supercritical CO2",
+      "authors": "Fan Zhang, Hao Zhang, Zhiwei Zhang, Zhimin Chen, and Qun Xu",
+      "year": 2008,
+      "url": "https://doi.org/10.1021/ma800514a",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "zhang2008-ma800514a",
+    "recipe_family": "zhang2008-ma800514a-pva-70-000-decorated-single-walled-cnts-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "PVA",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "zhang2008-ma800514a",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "crystal",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "zhang2008-ma800514a",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "dot",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "zhang2008-ma800514a",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "zhang2008-ma800514a-pva-70-000-decorated-single-walled-cnts-1--single-walled-carbon-nanotubes",
+      "name": "single-walled carbon nanotubes",
+      "formula": null,
+      "role": "reagent",
+      "stage": "workup",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "zhang2008-ma800514a",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "zhang2008-ma800514a-pva-70-000-decorated-single-walled-cnts-1--dimethyl-sulfoxide",
+      "name": "dimethyl sulfoxide",
+      "formula": null,
+      "role": "solvent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "zhang2008-ma800514a",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "zhang2008-ma800514a-pva-70-000-decorated-single-walled-cnts-1--after-s01-purify",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "zhang2008-ma800514a-pva-70-000-decorated-single-walled-cnts-1--single-walled-carbon-nanotubes"
+      ]
+    },
+    {
+      "id": "zhang2008-ma800514a-pva-70-000-decorated-single-walled-cnts-1--after-s02-disperse",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "zhang2008-ma800514a-pva-70-000-decorated-single-walled-cnts-1--after-s01-purify",
+        "zhang2008-ma800514a-pva-70-000-decorated-single-walled-cnts-1--single-walled-carbon-nanotubes",
+        "zhang2008-ma800514a-pva-70-000-decorated-single-walled-cnts-1--dimethyl-sulfoxide"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-purify",
+      "action": "purify",
+      "label": "SWCNTs were sonicated in sulfuric acid and nitric acid and then washed and dried.",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "zhang2008-ma800514a-pva-70-000-decorated-single-walled-cnts-1--single-walled-carbon-nanotubes"
+      ],
+      "outputs": [
+        "zhang2008-ma800514a-pva-70-000-decorated-single-walled-cnts-1--after-s01-purify"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 120,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "120 °C",
+          "evidence": [
+            {
+              "source_id": "zhang2008-ma800514a",
+              "locator": "Main PDF p.1"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 3,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "3 h",
+          "evidence": [
+            {
+              "source_id": "zhang2008-ma800514a",
+              "locator": "Main PDF p.1"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "SWCNTs were sonicated in sulfuric acid and nitric acid and then washed and dried.",
+      "evidence": [
+        {
+          "source_id": "zhang2008-ma800514a",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "s02-disperse",
+      "action": "disperse",
+      "label": "SWCNTs were dispersed in DMSO and ultrasonicated.",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-purify"
+      ],
+      "inputs": [
+        "zhang2008-ma800514a-pva-70-000-decorated-single-walled-cnts-1--after-s01-purify",
+        "zhang2008-ma800514a-pva-70-000-decorated-single-walled-cnts-1--single-walled-carbon-nanotubes",
+        "zhang2008-ma800514a-pva-70-000-decorated-single-walled-cnts-1--dimethyl-sulfoxide"
+      ],
+      "outputs": [
+        "zhang2008-ma800514a-pva-70-000-decorated-single-walled-cnts-1--after-s02-disperse"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1 h",
+          "evidence": [
+            {
+              "source_id": "zhang2008-ma800514a",
+              "locator": "Main PDF p.1"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "SC CO2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "zhang2008-ma800514a",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "SWCNTs were dispersed in DMSO and ultrasonicated.",
+      "evidence": [
+        {
+          "source_id": "zhang2008-ma800514a",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "zhang2008-ma800514a-pva-70-000-decorated-single-walled-cnts-1--product",
+      "source_sample_label": "PVA 70 000 decorated single-walled CNTs",
+      "batch_id": null,
+      "material_state_id": "zhang2008-ma800514a-pva-70-000-decorated-single-walled-cnts-1--after-s02-disperse",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "PVA",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "zhang2008-ma800514a",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "crystal",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "zhang2008-ma800514a",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "dot",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "zhang2008-ma800514a",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "zhang2008-ma800514a",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "notes": [
+        "Reactor: SC CO2 apparatus (Main PDF p.1).",
+        "Reaction temperature: 110 degC (Main PDF p.1).",
+        "Reaction time: 3 h (Main PDF p.1)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Amount of single-walled carbon nanotubes not reported in the extracted text.",
+      "Amount of dimethyl sulfoxide not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

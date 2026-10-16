@@ -1,0 +1,402 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "fan2010-1-3313948-cdse-quantum-dots-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Sheng-Qiang Fan (2010): CdSe quantum dots",
+  "material": {
+    "formula": "CdSe",
+    "family": "CdSe nanocrystals",
+    "elements": [
+      "Cd",
+      "Se"
+    ],
+    "components": [
+      "CdSe"
+    ],
+    "architecture": "core_shell"
+  },
+  "method": "Chemical bath deposition",
+  "sources": [
+    {
+      "id": "fan2010-1-3313948",
+      "doi": "10.1063/1.3313948",
+      "title": "Hierarchical nanostructured spherical carbon with hollow core/mesoporous shell as a highly efficient counter electrode in CdSe quantum-dot-sensitized solar cells",
+      "authors": "Sheng-Qiang Fan, Baizeng Fang, Jung Ho Kim, Jeum-Jong Kim, Jong-Sung Yu, and Jaejung Ko",
+      "year": 2010,
+      "url": "https://doi.org/10.1063/1.3313948",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "fan2010-1-3313948",
+    "recipe_family": "fan2010-1-3313948-cdse-quantum-dots-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdSe",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "fan2010-1-3313948",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": 3.5,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "3.5 nm",
+      "evidence": [
+        {
+          "source_id": "fan2010-1-3313948",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "sphere",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "fan2010-1-3313948",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "fan2010-1-3313948-cdse-quantum-dots-1--cdse",
+      "name": "CdSe",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "fan2010-1-3313948",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "fan2010-1-3313948-cdse-quantum-dots-1--zns",
+      "name": "ZnS",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "fan2010-1-3313948",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "fan2010-1-3313948-cdse-quantum-dots-1--after-s01-assemble",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "fan2010-1-3313948-cdse-quantum-dots-1--cdse"
+      ]
+    },
+    {
+      "id": "fan2010-1-3313948-cdse-quantum-dots-1--after-s02-coat",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "fan2010-1-3313948-cdse-quantum-dots-1--after-s01-assemble",
+        "fan2010-1-3313948-cdse-quantum-dots-1--zns"
+      ]
+    },
+    {
+      "id": "fan2010-1-3313948-cdse-quantum-dots-1--after-s03-sinter",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "fan2010-1-3313948-cdse-quantum-dots-1--after-s02-coat",
+        "fan2010-1-3313948-cdse-quantum-dots-1--cdse",
+        "fan2010-1-3313948-cdse-quantum-dots-1--zns"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-assemble",
+      "action": "assemble",
+      "label": "Assemble CdSe QDs onto TiO2 matrix",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "fan2010-1-3313948-cdse-quantum-dots-1--cdse"
+      ],
+      "outputs": [
+        "fan2010-1-3313948-cdse-quantum-dots-1--after-s01-assemble"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Assemble CdSe QDs onto TiO2 matrix",
+      "evidence": [
+        {
+          "source_id": "fan2010-1-3313948",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-coat",
+      "action": "coat",
+      "label": "ZnS coating",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-assemble"
+      ],
+      "inputs": [
+        "fan2010-1-3313948-cdse-quantum-dots-1--after-s01-assemble",
+        "fan2010-1-3313948-cdse-quantum-dots-1--zns"
+      ],
+      "outputs": [
+        "fan2010-1-3313948-cdse-quantum-dots-1--after-s02-coat"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "ZnS coating",
+      "evidence": [
+        {
+          "source_id": "fan2010-1-3313948",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-sinter",
+      "action": "sinter",
+      "label": "Postsintering",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-coat"
+      ],
+      "inputs": [
+        "fan2010-1-3313948-cdse-quantum-dots-1--after-s02-coat",
+        "fan2010-1-3313948-cdse-quantum-dots-1--cdse",
+        "fan2010-1-3313948-cdse-quantum-dots-1--zns"
+      ],
+      "outputs": [
+        "fan2010-1-3313948-cdse-quantum-dots-1--after-s03-sinter"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 400,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "400 °C",
+          "evidence": [
+            {
+              "source_id": "fan2010-1-3313948",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Postsintering",
+      "evidence": [
+        {
+          "source_id": "fan2010-1-3313948",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "fan2010-1-3313948-cdse-quantum-dots-1--product",
+      "source_sample_label": "CdSe quantum dots",
+      "batch_id": null,
+      "material_state_id": "fan2010-1-3313948-cdse-quantum-dots-1--after-s03-sinter",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdSe",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "fan2010-1-3313948",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": "sphere",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "fan2010-1-3313948",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "fan2010-1-3313948",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reaction temperature: 400 degC (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "fan2010-1-3313948-cdse-quantum-dots-1--size",
+      "sample_id": "fan2010-1-3313948-cdse-quantum-dots-1--product",
+      "property": "particle_size",
+      "technique": "not reported",
+      "value": {
+        "value": 3.5,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "3.5 nm",
+        "evidence": [
+          {
+            "source_id": "fan2010-1-3313948",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "fan2010-1-3313948",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of CdSe not reported in the extracted text.",
+      "Amount of ZnS not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

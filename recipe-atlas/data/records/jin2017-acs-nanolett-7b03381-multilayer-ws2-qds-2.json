@@ -1,0 +1,412 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "jin2017-acs-nanolett-7b03381-multilayer-ws2-qds-2",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Ho Jin (2017): multilayer WS2 QDs",
+  "material": {
+    "formula": "WS2",
+    "family": "WS2 nanocrystals",
+    "elements": [
+      "W",
+      "S"
+    ],
+    "components": [
+      "WS2"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Liquid exfoliation",
+  "sources": [
+    {
+      "id": "jin2017-acs-nanolett-7b03381",
+      "doi": "10.1021/acs.nanolett.7b03381",
+      "title": "Effects of Direct Solvent-Quantum Dot Interaction on the Optical Properties of Colloidal Monolayer WS2 Quantum Dots",
+      "authors": "Ho Jin, Bongkwan Baek, Doyun Kim, Fanglue Wu, James D. Batteas, Jinwoo Cheon, and Dong Hee Son",
+      "year": 2017,
+      "url": "https://doi.org/10.1021/acs.nanolett.7b03381",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "jin2017-acs-nanolett-7b03381",
+    "recipe_family": "jin2017-acs-nanolett-7b03381-multilayer-ws2-qds-2",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "WS2",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "jin2017-acs-nanolett-7b03381",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "jin2017-acs-nanolett-7b03381-multilayer-ws2-qds-2--ws2-powder",
+      "name": "WS2 powder",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "jin2017-acs-nanolett-7b03381",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "jin2017-acs-nanolett-7b03381-multilayer-ws2-qds-2--dimethylformamide-dmf",
+      "name": "dimethylformamide (DMF)",
+      "formula": null,
+      "role": "solvent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "jin2017-acs-nanolett-7b03381",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "jin2017-acs-nanolett-7b03381-multilayer-ws2-qds-2--after-s01-degas",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "jin2017-acs-nanolett-7b03381-multilayer-ws2-qds-2--dimethylformamide-dmf"
+      ]
+    },
+    {
+      "id": "jin2017-acs-nanolett-7b03381-multilayer-ws2-qds-2--after-s02-sonicate",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "jin2017-acs-nanolett-7b03381-multilayer-ws2-qds-2--after-s01-degas",
+        "jin2017-acs-nanolett-7b03381-multilayer-ws2-qds-2--ws2-powder",
+        "jin2017-acs-nanolett-7b03381-multilayer-ws2-qds-2--dimethylformamide-dmf"
+      ]
+    },
+    {
+      "id": "jin2017-acs-nanolett-7b03381-multilayer-ws2-qds-2--after-s03-heat",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "jin2017-acs-nanolett-7b03381-multilayer-ws2-qds-2--after-s02-sonicate",
+        "jin2017-acs-nanolett-7b03381-multilayer-ws2-qds-2--dimethylformamide-dmf"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-degas",
+      "action": "degas",
+      "label": "Removal of dissolved O2 by bubbling inert gas",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "jin2017-acs-nanolett-7b03381-multilayer-ws2-qds-2--dimethylformamide-dmf"
+      ],
+      "outputs": [
+        "jin2017-acs-nanolett-7b03381-multilayer-ws2-qds-2--after-s01-degas"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 30,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "30 min",
+          "evidence": [
+            {
+              "source_id": "jin2017-acs-nanolett-7b03381",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jin2017-acs-nanolett-7b03381",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Removal of dissolved O2 by bubbling inert gas",
+      "evidence": [
+        {
+          "source_id": "jin2017-acs-nanolett-7b03381",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-sonicate",
+      "action": "sonicate",
+      "label": "Sonication of WS2 powder in DMF",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-degas"
+      ],
+      "inputs": [
+        "jin2017-acs-nanolett-7b03381-multilayer-ws2-qds-2--after-s01-degas",
+        "jin2017-acs-nanolett-7b03381-multilayer-ws2-qds-2--ws2-powder",
+        "jin2017-acs-nanolett-7b03381-multilayer-ws2-qds-2--dimethylformamide-dmf"
+      ],
+      "outputs": [
+        "jin2017-acs-nanolett-7b03381-multilayer-ws2-qds-2--after-s02-sonicate"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 3,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "3 h",
+          "evidence": [
+            {
+              "source_id": "jin2017-acs-nanolett-7b03381",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jin2017-acs-nanolett-7b03381",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Sonication of WS2 powder in DMF",
+      "evidence": [
+        {
+          "source_id": "jin2017-acs-nanolett-7b03381",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-heat",
+      "action": "heat",
+      "label": "Heating the solution to obtain final product",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-sonicate"
+      ],
+      "inputs": [
+        "jin2017-acs-nanolett-7b03381-multilayer-ws2-qds-2--after-s02-sonicate",
+        "jin2017-acs-nanolett-7b03381-multilayer-ws2-qds-2--dimethylformamide-dmf"
+      ],
+      "outputs": [
+        "jin2017-acs-nanolett-7b03381-multilayer-ws2-qds-2--after-s03-heat"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 140,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "140 °C",
+          "evidence": [
+            {
+              "source_id": "jin2017-acs-nanolett-7b03381",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jin2017-acs-nanolett-7b03381",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Heating the solution to obtain final product",
+      "evidence": [
+        {
+          "source_id": "jin2017-acs-nanolett-7b03381",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "jin2017-acs-nanolett-7b03381-multilayer-ws2-qds-2--product",
+      "source_sample_label": "multilayer WS2 QDs",
+      "batch_id": null,
+      "material_state_id": "jin2017-acs-nanolett-7b03381-multilayer-ws2-qds-2--after-s03-heat",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "WS2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jin2017-acs-nanolett-7b03381",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": "none",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jin2017-acs-nanolett-7b03381",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "jin2017-acs-nanolett-7b03381",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reaction temperature: 140 degC (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Shape not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of WS2 powder not reported in the extracted text.",
+      "Amount of dimethylformamide (DMF) not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

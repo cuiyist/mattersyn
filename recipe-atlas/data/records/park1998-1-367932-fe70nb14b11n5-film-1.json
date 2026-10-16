@@ -1,0 +1,298 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "park1998-1-367932-fe70nb14b11n5-film-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "J. Y. Park (1998): Fe70Nb14B11N5 film",
+  "material": {
+    "formula": "Fe70Nb14B11N5",
+    "family": "Fe70Nb14B11N5 nanocrystals",
+    "elements": [
+      "Fe",
+      "Nb",
+      "B",
+      "N"
+    ],
+    "components": [
+      "Fe70Nb14B11N5"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Rf magnetron sputtering",
+  "sources": [
+    {
+      "id": "park1998-1-367932",
+      "doi": "10.1063/1.367932",
+      "title": "An effect of nitrogen on magnetic properties and microstructure of Fe–Nb–B–N nanocrystalline thin films",
+      "authors": "J. Y. Park, S. J. Suh, T. H. Noh, K. Y. Kim, H. J. Kim",
+      "year": 1998,
+      "url": "https://doi.org/10.1063/1.367932",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "park1998-1-367932",
+    "recipe_family": "park1998-1-367932-fe70nb14b11n5-film-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "park1998-1-367932-fe70nb14b11n5-film-1--fe-10-at-b-disk",
+      "name": "Fe-10 at. % B disk",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "park1998-1-367932",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "park1998-1-367932-fe70nb14b11n5-film-1--nb",
+      "name": "Nb",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "park1998-1-367932",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "park1998-1-367932-fe70nb14b11n5-film-1--after-s01-sputter",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "park1998-1-367932-fe70nb14b11n5-film-1--fe-10-at-b-disk",
+        "park1998-1-367932-fe70nb14b11n5-film-1--nb"
+      ]
+    },
+    {
+      "id": "park1998-1-367932-fe70nb14b11n5-film-1--after-s02-anneal",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "park1998-1-367932-fe70nb14b11n5-film-1--after-s01-sputter"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-sputter",
+      "action": "sputter",
+      "label": "Fabricate Fe–Nb–B–N films",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "park1998-1-367932-fe70nb14b11n5-film-1--fe-10-at-b-disk",
+        "park1998-1-367932-fe70nb14b11n5-film-1--nb"
+      ],
+      "outputs": [
+        "park1998-1-367932-fe70nb14b11n5-film-1--after-s01-sputter"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Fabricate Fe–Nb–B–N films",
+      "evidence": [
+        {
+          "source_id": "park1998-1-367932",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-anneal",
+      "action": "anneal",
+      "label": "Anneal film",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-sputter"
+      ],
+      "inputs": [
+        "park1998-1-367932-fe70nb14b11n5-film-1--after-s01-sputter"
+      ],
+      "outputs": [
+        "park1998-1-367932-fe70nb14b11n5-film-1--after-s02-anneal"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 590,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "590 °C",
+          "evidence": [
+            {
+              "source_id": "park1998-1-367932",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Anneal film",
+      "evidence": [
+        {
+          "source_id": "park1998-1-367932",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "park1998-1-367932-fe70nb14b11n5-film-1--product",
+      "source_sample_label": "Fe70Nb14B11N5 film",
+      "batch_id": null,
+      "material_state_id": "park1998-1-367932-fe70nb14b11n5-film-1--after-s02-anneal",
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "park1998-1-367932",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "notes": [
+        "Reactor: rf magnetron sputtering apparatus (Main PDF p.2).",
+        "Reaction temperature: 590 degC (Main PDF p.3).",
+        "Reaction time: 1 h (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Amount of Fe-10 at. % B disk not reported in the extracted text.",
+      "Amount of Nb not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

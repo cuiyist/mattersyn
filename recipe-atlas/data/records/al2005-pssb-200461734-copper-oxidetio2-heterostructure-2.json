@@ -1,0 +1,410 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "al2005-pssb-200461734-copper-oxidetio2-heterostructure-2",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "E. Vigil et al. (2005): copper oxide–TiO2 heterostructure",
+  "material": {
+    "formula": "Cu2O",
+    "family": "Cu2O nanocrystals",
+    "elements": [
+      "Cu",
+      "O"
+    ],
+    "components": [
+      "Cu2O"
+    ],
+    "architecture": "heterostructure"
+  },
+  "method": "Photochemical",
+  "sources": [
+    {
+      "id": "al2005-pssb-200461734",
+      "doi": "10.1002/pssb.200461734",
+      "title": "Photovoltaic behavior of structures based on nanocrystalline semiconductor oxides",
+      "authors": "E. Vigil; I. Zumeta; J. A. Ayllón; B. González; X. Domènech; C. Domínguez",
+      "year": 2005,
+      "url": "https://doi.org/10.1002/pssb.200461734",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "al2005-pssb-200461734",
+    "recipe_family": "al2005-pssb-200461734-copper-oxidetio2-heterostructure-2",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Cu2O | TiO2",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "al2005-pssb-200461734",
+          "locator": "Main PDF p.4"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "porous film",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "al2005-pssb-200461734",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "al2005-pssb-200461734-copper-oxidetio2-heterostructure-2--water",
+      "name": "water",
+      "formula": null,
+      "role": "solvent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "al2005-pssb-200461734",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "al2005-pssb-200461734-copper-oxidetio2-heterostructure-2--hco2-2cu",
+      "name": "(HCO2)2Cu",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "concentration": {
+          "value": 4,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mM",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "4 mM",
+          "evidence": [
+            {
+              "source_id": "al2005-pssb-200461734",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "al2005-pssb-200461734",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "al2005-pssb-200461734-copper-oxidetio2-heterostructure-2--after-s01-irradiate",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "al2005-pssb-200461734-copper-oxidetio2-heterostructure-2--after-s02-heat-treat",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "al2005-pssb-200461734-copper-oxidetio2-heterostructure-2--after-s01-irradiate"
+      ]
+    },
+    {
+      "id": "al2005-pssb-200461734-copper-oxidetio2-heterostructure-2--after-s03-wash",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "al2005-pssb-200461734-copper-oxidetio2-heterostructure-2--after-s02-heat-treat"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-irradiate",
+      "action": "irradiate",
+      "label": "Irradiate with ultraviolet light",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "al2005-pssb-200461734-copper-oxidetio2-heterostructure-2--after-s01-irradiate"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 18,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "18 hour",
+          "evidence": [
+            {
+              "source_id": "al2005-pssb-200461734",
+              "locator": "Main PDF"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Irradiate with ultraviolet light",
+      "evidence": [
+        {
+          "source_id": "al2005-pssb-200461734",
+          "locator": "Main PDF"
+        }
+      ]
+    },
+    {
+      "id": "s02-heat-treat",
+      "action": "heat treat",
+      "label": "Heat treat samples",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-irradiate"
+      ],
+      "inputs": [
+        "al2005-pssb-200461734-copper-oxidetio2-heterostructure-2--after-s01-irradiate"
+      ],
+      "outputs": [
+        "al2005-pssb-200461734-copper-oxidetio2-heterostructure-2--after-s02-heat-treat"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 400,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "400 °C",
+          "evidence": [
+            {
+              "source_id": "al2005-pssb-200461734",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1 hour",
+          "evidence": [
+            {
+              "source_id": "al2005-pssb-200461734",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Heat treat samples",
+      "evidence": [
+        {
+          "source_id": "al2005-pssb-200461734",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-wash",
+      "action": "wash",
+      "label": "Wash samples in deionized water",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-heat-treat"
+      ],
+      "inputs": [
+        "al2005-pssb-200461734-copper-oxidetio2-heterostructure-2--after-s02-heat-treat"
+      ],
+      "outputs": [
+        "al2005-pssb-200461734-copper-oxidetio2-heterostructure-2--after-s03-wash"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Wash samples in deionized water",
+      "evidence": [
+        {
+          "source_id": "al2005-pssb-200461734",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "al2005-pssb-200461734-copper-oxidetio2-heterostructure-2--product",
+      "source_sample_label": "copper oxide–TiO2 heterostructure",
+      "batch_id": null,
+      "material_state_id": "al2005-pssb-200461734-copper-oxidetio2-heterostructure-2--after-s03-wash",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Cu2O | TiO2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "al2005-pssb-200461734",
+            "locator": "Main PDF p.4"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": "porous film",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "al2005-pssb-200461734",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "al2005-pssb-200461734",
+          "locator": "Main PDF p.4"
+        }
+      ],
+      "notes": [
+        "Reactor: open vessel (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of water not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
