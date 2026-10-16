@@ -1,5 +1,7 @@
 # Published machine-extracted papers
 
+Current verified index after B40/B41 (2026-10-16T15:27:11+00:00): **1175 source_extracted primary paper contributions /1747 display pairs**. This release adds56 DOI rows85IDs from original batchesB40/B41, with32 limited saved-read markers. Actual overall totals1419/4732/2611; audited244papers864pairs remain unchanged. Prior memberships, rows, histories and footer remain verbatim; no audit/gold/training credit.
+
 Current verified index after B38/B39 (2026-10-16T12:30:32+00:00): **1119 source_extracted primary paper contributions /1662 display pairs**. This release adds56 DOI rows86IDs from original batchesB38/B39, with33 limited saved-read markers. Actual overall totals1363/4647/2526; audited244papers864pairs remain unchanged. Prior memberships, rows, histories and footer remain verbatim; no audit/gold/training credit.
 
 Current verified index after B36/B37 (2026-10-16T08:47:23+00:00): **1063 source_extracted primary paper contributions /1576 display pairs**. This release adds52 DOI rows70IDs from original batchesB36/B37, with36 limited saved-read markers. Actual overall totals1307/4561/2440; audited244papers864pairs remain unchanged. Prior memberships, rows, histories and footer remain verbatim; no audit/gold/training credit.
@@ -1237,5 +1239,68 @@ Source-extracted display contributions only; saved read markers add no independe
 | 10.1063/1.3043846 | `zhu2008-1-3043846-nanocrystalline-sic-1` | B39 | 2026-10-16T12:30:32+00:00 | yes |
 | 10.1063/1.362408 | `1-362408-fe50al50-alloy-1` | B39 | 2026-10-16T12:30:32+00:00 | yes |
 | 10.1111/j.1551-2916.2005.00552.x | `polotai2005-j-1551-2916-2005-00552-x-nanocrystalline-barium-titanate-ceramic-2`, `polotai2005-j-1551-2916-2005-00552-x-nanocrystalline-barium-titanate-powder-1` | B39 | 2026-10-16T12:30:32+00:00 | no |
+
+Source-extracted display contributions only; saved read markers add no independent audit or training-ready credit. All earlier index rows remain unchanged.
+
+## B40/B41 — verified 2026-10-16T15:27:11+00:00
+
+| DOI | Record IDs | Original batch | Live verification UTC | Limited saved rare read |
+| --- | --- | --- | --- | --- |
+| 10.1006/jssc.2001.9090 | `reddy2001-jssc-2001-9090-nanocrystalline-anatase-tio2-0-05-m-2`, `reddy2001-jssc-2001-9090-nanocrystalline-anatase-tio2-1` | B40 | 2026-10-16T15:27:11+00:00 | no |
+| 10.1007/s00216-006-0814-6 | `ohkubo2006-s00216-006-0814-6-biotinylated-yag-ce3-nanoparticles-1` | B40 | 2026-10-16T15:27:11+00:00 | yes |
+| 10.1007/s10853-005-2957-9 | `rameshbabu2005-s10853-005-2957-9-hydroxyapatite-ha-nanoparticles-1` | B40 | 2026-10-16T15:27:11+00:00 | no |
+| 10.1007/s10853-007-2347-6 | `zakeri2008-s10853-007-2347-6-sb2te3-1` | B40 | 2026-10-16T15:27:11+00:00 | yes |
+| 10.1007/s10853-010-4569-2 | `chaudhari2010-s10853-010-4569-2-la0-6co0-4mn0-5ni0-5o3-1` | B40 | 2026-10-16T15:27:11+00:00 | yes |
+| 10.1007/s10856-007-3069-7 | `krishna2007-s10856-007-3069-7-oha-nanocrystalline-hydroxyapatite-from-1` | B40 | 2026-10-16T15:27:11+00:00 | yes |
+| 10.1007/s10971-009-1897-2 | `chen2009-s10971-009-1897-2-al2o313-wt-tio2-nanocrystalline-powder-1` | B40 | 2026-10-16T15:27:11+00:00 | yes |
+| 10.1007/s10971-009-1999-x | `ghosh2009-s10971-009-1999-x-cualo2-solgel-method-1`, `ghosh2009-s10971-009-1999-x-cualo2-solid-state-reaction-method-2` | B40 | 2026-10-16T15:27:11+00:00 | yes |
+| 10.1007/s11051-006-9171-9 | `fang2007-s11051-006-9171-9-nanocrystalline-sno2-1` | B40 | 2026-10-16T15:27:11+00:00 | no |
+| 10.1007/s12274-010-0014-8 | `radha2010-s12274-010-0014-8-au-nanocrystal-superlattices-1` | B40 | 2026-10-16T15:27:11+00:00 | no |
+| 10.1016/j.cej.2020.124525 | `feng2020-j-cej-2020-124525-fqd-coni-ldh-nf-1` | B40 | 2026-10-16T15:27:11+00:00 | yes |
+| 10.1016/j.electacta.2020.136207 | `rahimpour2020-j-electacta-2020-136207-gqd-fc-ppy-nanocomposite-1` | B40 | 2026-10-16T15:27:11+00:00 | yes |
+| 10.1016/j.jcat.2019.09.038 | `ye2019-j-jcat-2019-09-038-pt-dqs-fe-mof-nf-1` | B40 | 2026-10-16T15:27:11+00:00 | no |
+| 10.1016/j.jcis.2010.03.010 | `eerd2010-j-jcis-2010-03-010-cdses-qds-1`, `eerd2010-j-jcis-2010-03-010-qdbipycu-oh-2-4`, `eerd2010-j-jcis-2010-03-010-qdocacu-oh-2-5` | B40 | 2026-10-16T15:27:11+00:00 | no |
+| 10.1021/acs.chemmater.1c01836 | `barbieri2021-acs-chemmater-1c01836-ge0-92sn0-08-ncs-1`, `barbieri2021-acs-chemmater-1c01836-ge0-92sn0-08-qds-2` | B40 | 2026-10-16T15:27:11+00:00 | yes |
+| 10.1021/acs.chemmater.6b03850 | `balow2017-acs-chemmater-6b03850-cu3-sb1xasx-s4-nanocrystal-alloys-1` | B40 | 2026-10-16T15:27:11+00:00 | yes |
+| 10.1021/acsami.5c17962 | `jiang2025-acsami-5c17962-cspbbr3-cspbbr1i2-glass-pet-3`, `jiang2025-acsami-5c17962-cspbbr3-glass-1` | B40 | 2026-10-16T15:27:11+00:00 | yes |
+| 10.1021/acsami.6b02318 | `article2016-acsami-6b02318-hydroxyl-terminated-siqd-nps-1` | B40 | 2026-10-16T15:27:11+00:00 | no |
+| 10.1021/acsami.6b13113 | `tu2017-acsami-6b13113-amorphous-zno-qds-mpcbs-1` | B40 | 2026-10-16T15:27:11+00:00 | no |
+| 10.1021/acsanm.8b01799 | `hu2018-acsanm-8b01799-g1-1`, `hu2018-acsanm-8b01799-g2-2`, `hu2018-acsanm-8b01799-g5-3` | B40 | 2026-10-16T15:27:11+00:00 | yes |
+| 10.1021/am201397n | `durupthy2012-am201397n-lanthanum-doped-brookite-nanoparticles-1` | B40 | 2026-10-16T15:27:11+00:00 | no |
+| 10.1021/am301229w | `zhang2012-am301229w-ag-ncmwcnt-hybrid-structures-1` | B40 | 2026-10-16T15:27:11+00:00 | no |
+| 10.1021/am503388z | `song2014-am503388z-pt-g-140-6h-1`, `song2014-am503388z-pt-g-160-12h-2`, `song2014-am503388z-pt-g-180-6h-3` | B40 | 2026-10-16T15:27:11+00:00 | no |
+| 10.1021/am505473d | `choi2014-am505473d-cu1-12s-film-2`, `choi2014-am505473d-cu1-75s-film-3`, `choi2014-am505473d-cu1-8s-film-4`, `choi2014-am505473d-cus-film-1` | B40 | 2026-10-16T15:27:11+00:00 | yes |
+| 10.1021/cg201709c | `ibanez2012-cg201709c-cu2cdsnse4-nanocrystals-1` | B40 | 2026-10-16T15:27:11+00:00 | yes |
+| 10.1021/cm063024z | `scholes2007-cm063024z-ceo2-precipitate-cecl3-h2o2-molar-ratio-2`, `scholes2007-cm063024z-ceo2-precipitate-cecl3-h2o2-molar-ratio-3`, `scholes2007-cm063024z-ceo2-precipitate-cecl3-h2o2-molar-ratio-4`, `scholes2007-cm063024z-ceo2-precipitate-no-h2o2-1` | B40 | 2026-10-16T15:27:11+00:00 | no |
+| 10.1021/cm900710q | `al2009-cm900710q-anatase-nanocrystal-arrays-1` | B40 | 2026-10-16T15:27:11+00:00 | no |
+| 10.1021/ja211952z | `ibanez2012-ja211952z-cu2-15zn0-85gese3-9-nanocrystals-2`, `ibanez2012-ja211952z-cu2zngese4-nanocrystals-1` | B41 | 2026-10-16T15:27:11+00:00 | yes |
+| 10.1021/ja310737m | `santra2013-ja310737m-cdses-qds-se-s-1-50-1` | B41 | 2026-10-16T15:27:11+00:00 | no |
+| 10.1021/jp2003084 | `reddy2011-jp2003084-fe-ce-cu-2`, `reddy2011-jp2003084-fe-co-cu-4`, `reddy2011-jp2003084-fe-cr-cu-1`, `reddy2011-jp2003084-fe-mn-cu-5`, `reddy2011-jp2003084-fe-ni-cu-3`, `reddy2011-jp2003084-fe-zn-cu-6` | B41 | 2026-10-16T15:27:11+00:00 | yes |
+| 10.1021/jp3015436 | `smilgies2012-jp3015436-fept-nanocrystal-monolayer-1` | B41 | 2026-10-16T15:27:11+00:00 | yes |
+| 10.1021/jp307669k | `jirkovsky2012-jp307669k-nanocrystalline-cos2-with-pyrite-structu-1` | B41 | 2026-10-16T15:27:11+00:00 | yes |
+| 10.1021/jp4101174 | `mazzera2013-jp4101174-sio2-eu3-0-001-mol-1` | B41 | 2026-10-16T15:27:11+00:00 | yes |
+| 10.1021/jp411456m | `bernardo2014-jp411456m-cdse-zns-core-shell-quantum-dots-1`, `bernardo2014-jp411456m-cdte-quantum-dots-2` | B41 | 2026-10-16T15:27:11+00:00 | no |
+| 10.1021/jp505737u | `xu2014-jp505737u-h-cus-fto-ce-1` | B41 | 2026-10-16T15:27:11+00:00 | no |
+| 10.1021/jp508814y | `jin2014-jp508814y-cos2-nanocrystal-film-1` | B41 | 2026-10-16T15:27:11+00:00 | yes |
+| 10.1021/jp9015118 | `lunstroot2009-jp9015118-laf3-5-eu3-betaine-1`, `lunstroot2009-jp9015118-laf3-5-eu3-laf3-betaine-3`, `lunstroot2009-jp9015118-laf3-5-nd3-betaine-2`, `lunstroot2009-jp9015118-laf3-5-nd3-laf3-betaine-4` | B41 | 2026-10-16T15:27:11+00:00 | yes |
+| 10.1021/jp984129v | `santilli1999-jp984129v-sno2-xerogel-doped-with-0-7-mol-cu-1`, `santilli1999-jp984129v-sno2-xerogel-doped-with-5-0-mol-cu-2` | B41 | 2026-10-16T15:27:11+00:00 | no |
+| 10.1021/jz400642e | `caban-acevedo2013-jz400642e-cos2-film-on-borosilicate-glass-1` | B41 | 2026-10-16T15:27:11+00:00 | yes |
+| 10.1021/la403435v | `maestro2014-la403435v-gncs-4` | B41 | 2026-10-16T15:27:11+00:00 | no |
+| 10.1021/la403583q | `motamed2013-la403583q-au7-c12-2` | B41 | 2026-10-16T15:27:11+00:00 | no |
+| 10.1021/mz500765y | `urban2015-mz500765y-ps-b-p2vp-l-mgo-2`, `urban2015-mz500765y-ps-b-p2vp-s-mgo-1` | B41 | 2026-10-16T15:27:11+00:00 | yes |
+| 10.1021/nl3045316 | `galland2013-nl3045316-cdse-cds-dib-nc-r0-1-5-nm-h-8-5-nm-1` | B41 | 2026-10-16T15:27:11+00:00 | no |
+| 10.1021/nn400947e | `pan2013-nn400947e-cdse0-45te0-55-alloyed-quantum-dots-qds-1` | B41 | 2026-10-16T15:27:11+00:00 | yes |
+| 10.1021/nn406657b | `paek2014-nn406657b-mqd-go-1` | B41 | 2026-10-16T15:27:11+00:00 | no |
+| 10.1021/nn501479e | `gopalakrishnan2014-nn501479e-mos2-quantum-dot-interspersed-exfoliated-1` | B41 | 2026-10-16T15:27:11+00:00 | no |
+| 10.1038/ncomms5596 | `lan2014-ncomms5596-gqds-1` | B41 | 2026-10-16T15:27:11+00:00 | no |
+| 10.1038/s41598-022-16663-9 | `jafari2022-s41598-022-16663-9-cqd-1`, `jafari2022-s41598-022-16663-9-cqd-fe-2` | B41 | 2026-10-16T15:27:11+00:00 | yes |
+| 10.1039/b103461h | `purohita2002-b103461h-bati4o9-powder-1` | B41 | 2026-10-16T15:27:11+00:00 | yes |
+| 10.1039/b413338b | `guzman2004-b413338b-mesostructured-y2o3-1` | B41 | 2026-10-16T15:27:11+00:00 | yes |
+| 10.1039/c0jm00706d | `lei2010-c0jm00706d-oleic-acid-coated-nay78-f4-yb20-er2-nano-1` | B41 | 2026-10-16T15:27:11+00:00 | yes |
+| 10.1039/d5nj03311j | `xu2025-d5nj03311j-pd-try-gqd-npc-1` | B41 | 2026-10-16T15:27:11+00:00 | yes |
+| 10.1063/1.1407311 | `zhang2001-1-1407311-large-ring-structures-of-sige-alloy-2` | B41 | 2026-10-16T15:27:11+00:00 | yes |
+| 10.1063/1.1408262 | `que2001-1-1408262-neodymium-oxide-nanocrystals-titania-orm-1` | B41 | 2026-10-16T15:27:11+00:00 | yes |
+| 10.1063/1.1808420 | `chakradhar2004-1-1808420-zn2sio4-mn-1` | B41 | 2026-10-16T15:27:11+00:00 | yes |
+| 10.1063/1.1935136 | `kim2005-1-1935136-si-nanocrystals-in-siox-1` | B41 | 2026-10-16T15:27:11+00:00 | no |
 
 Source-extracted display contributions only; saved read markers add no independent audit or training-ready credit. All earlier index rows remain unchanged.

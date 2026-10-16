@@ -1,3 +1,17 @@
+
+## Active queue and storage checkpoint — 2026-10-16T15:55:00.879346+00:00
+
+B42/B43 have43 papers,70 records and212 caption keys integrated locally, pending normal release checks; publication credit remains zero. B40/B41 remain the latest verified live release (1419 papers,4732 records,2611 displayed pairs). Cleanup R24 is published in [the storage report](https://github.com/cuiyist/mattersyn2/blob/dffb58abc490bc8de47020b3e43572d5e5ac4d26/CLEANUP_REPORT_2026-10-12.md): cumulative656,024,962,352 logical copy bytes across12,321,710 removed file copies; this is not isolated physical recovery. C: currently has59403268096 free bytes, below107,374,182,400. Protected files, active servers, paused audit questions and training exports remain unchanged.
+## B40/B41 pooled release verified — 2026-10-16T15:27:11+00:00
+
+**56 source_extracted papers /85 new canonical records /337 retained caption keys** are live and anonymously verified. Original contributions: B40 **27 papers/43 records/163 figures**, B41 **29 papers/42 records/174 figures**. Source `84671ee15d20669ac6d07c1b70bb34751bcc4b3c` passed all three exact-head CI jobs and ordinary PR [59](https://github.com/cuiyist/mattersyn/pull/59), merge `6d19de2e2e731cdbeccf371113dab579b6db3f4b`. Site `e55ae599839638b3b953f625e62dda07c2e664e0` passed [Pages 38922323944](https://github.com/cuiyist/mattersyn-site/actions/runs/38922323944). Anonymous verification checked 1138 files, 56 planned paper routes and 88 material routes with zero failures. Final manifest 44422 files /2822446591 logical bytes.
+
+Actual build totals: **1419 primary paper IDs /4732 canonical records /2611 recipe–structure display pairs**. Audited contributions remain244 papers/864 pairs; SourceEx contributions 1175 papers/1747 pairs. No scientific accuracy, universal unit-cell completeness or training readiness is inferred.
+
+Original limited read history covers 36 papers /53 original ordinals /134 whole-object deletions, all retained before current selection. Exactly 32 of those DOI markers intersect this actual published56-paper scope; no independent audit or new source facts are inferred. All4,647 prior canonical record files remain raw-byte protected; this release makes0old-record corrections. Original B41 same-pass addendum and all prior routing/identity HOLD histories remain preserved. Owner questions, denominators/window and paused audit lane are unchanged.
+
+Storage remains the separately recorded Source checkpoint: 645054256131 cumulative logical copy bytes /12148151 copies, report `27a6a175d3d4263e958661e8743c92f41c25899e`. This publication does not update storage counters or establish isolated physical reclaim/free-space achievement. Later cleanup reports are separate. Saved private reads/captions add no publication credit before their own fresh admission.
+
 ## Integration and storage checkpoint — 2026-10-16T12:57:06.336502+00:00
 
 The latest anonymously verified B38/B39 website remains **1,363 primary paper IDs /4,647 canonical records /2,526 recipe–structure display pairs**, verified at 2026-10-16T12:30:32+00:00 on Site `48090279ddc2589619b857b423791125dc929963`, with [Pages 38899619710](https://github.com/cuiyist/mattersyn-site/actions/runs/38899619710) successful. Audited contributions remain **244 papers /864 pairs**; the paused audit lane and owner questions are unchanged.

@@ -1,0 +1,325 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "ohta2007-1-2769956-fe82-65cu1-35si2b14-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Motoki Ohta et al. (2007): Fe82.65Cu1.35Si2B14",
+  "material": {
+    "formula": "Fe82.65Cu1.35Si2B14",
+    "family": "Fe82.65Cu1.35Si2B14 nanocrystals",
+    "elements": [
+      "Fe",
+      "Cu",
+      "Si",
+      "B"
+    ],
+    "components": [
+      "Fe82.65Cu1.35Si2B14"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Melt spinning",
+  "sources": [
+    {
+      "id": "ohta2007-1-2769956",
+      "doi": "10.1063/1.2769956",
+      "title": "Magnetic properties of nanocrystalline Fe82.65Cu1.35SixB16−x alloys (x=–7)",
+      "authors": "Motoki Ohta and Yoshihito Yoshizawa",
+      "year": 2007,
+      "url": "https://doi.org/10.1063/1.2769956",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "ohta2007-1-2769956",
+    "recipe_family": "ohta2007-1-2769956-fe82-65cu1-35si2b14-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Fe82.65Cu1.35Si2B14",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "ohta2007-1-2769956",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "bcc",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "ohta2007-1-2769956",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": 20,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "20 nm",
+      "evidence": [
+        {
+          "source_id": "ohta2007-1-2769956",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "ohta2007-1-2769956-fe82-65cu1-35si2b14-1--after-s01-melt-spin",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "ohta2007-1-2769956-fe82-65cu1-35si2b14-1--after-s02-anneal",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "ohta2007-1-2769956-fe82-65cu1-35si2b14-1--after-s01-melt-spin"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-melt-spin",
+      "action": "melt spin",
+      "label": "Melt spinning to form ribbon",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "ohta2007-1-2769956-fe82-65cu1-35si2b14-1--after-s01-melt-spin"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Melt spinning to form ribbon",
+      "evidence": [
+        {
+          "source_id": "ohta2007-1-2769956",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-anneal",
+      "action": "anneal",
+      "label": "Annealing for nanocrystallization",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-melt-spin"
+      ],
+      "inputs": [
+        "ohta2007-1-2769956-fe82-65cu1-35si2b14-1--after-s01-melt-spin"
+      ],
+      "outputs": [
+        "ohta2007-1-2769956-fe82-65cu1-35si2b14-1--after-s02-anneal"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 410,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "410 °C",
+          "evidence": [
+            {
+              "source_id": "ohta2007-1-2769956",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 60,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "60 min",
+          "evidence": [
+            {
+              "source_id": "ohta2007-1-2769956",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Annealing for nanocrystallization",
+      "evidence": [
+        {
+          "source_id": "ohta2007-1-2769956",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "ohta2007-1-2769956-fe82-65cu1-35si2b14-1--product",
+      "source_sample_label": "Fe82.65Cu1.35Si2B14",
+      "batch_id": null,
+      "material_state_id": "ohta2007-1-2769956-fe82-65cu1-35si2b14-1--after-s02-anneal",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Fe82.65Cu1.35Si2B14",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ohta2007-1-2769956",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "bcc",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ohta2007-1-2769956",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "ohta2007-1-2769956",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reactor: single-roller melt spinner (Main PDF p.2).",
+        "Reaction temperature: 410 degC (Main PDF p.2).",
+        "Reaction time: 60 min (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "ohta2007-1-2769956-fe82-65cu1-35si2b14-1--size",
+      "sample_id": "ohta2007-1-2769956-fe82-65cu1-35si2b14-1--product",
+      "property": "particle_size",
+      "technique": "not reported",
+      "value": {
+        "value": 20,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "20 nm",
+        "evidence": [
+          {
+            "source_id": "ohta2007-1-2769956",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "ohta2007-1-2769956",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

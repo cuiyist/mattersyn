@@ -1,0 +1,373 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "baruwati2007-1-2404772-nife2o4-ph-7-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Babita Baruwati (2007): NiFe2O4 (pH 7)",
+  "material": {
+    "formula": "NiFe2O4",
+    "family": "NiFe2O4 nanocrystals",
+    "elements": [
+      "Ni",
+      "Fe",
+      "O"
+    ],
+    "components": [
+      "NiFe2O4"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Hydrothermal",
+  "sources": [
+    {
+      "id": "baruwati2007-1-2404772",
+      "doi": "10.1063/1.2404772",
+      "title": "Further insights in the conductivity behavior of nanocrystalline NiFe2O4",
+      "authors": "Babita Baruwati, Rohit Kumar Rana, and Sunkara V. Manorama",
+      "year": 2007,
+      "url": "https://doi.org/10.1063/1.2404772",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "baruwati2007-1-2404772",
+    "recipe_family": "baruwati2007-1-2404772-nife2o4-ph-7-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "NiFe2O4",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "baruwati2007-1-2404772",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "cubic spinel",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "baruwati2007-1-2404772",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "sphere",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "baruwati2007-1-2404772",
+          "locator": "Main PDF p.4"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "baruwati2007-1-2404772-nife2o4-ph-7-1--iron-iii-nitrate",
+      "name": "iron(III) nitrate",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "baruwati2007-1-2404772",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "baruwati2007-1-2404772-nife2o4-ph-7-1--nickel-ii-nitrate",
+      "name": "nickel(II) nitrate",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "baruwati2007-1-2404772",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "baruwati2007-1-2404772-nife2o4-ph-7-1--aqueous-ammonia",
+      "name": "aqueous ammonia",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "baruwati2007-1-2404772",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "baruwati2007-1-2404772-nife2o4-ph-7-1--after-s01-dissolve",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "baruwati2007-1-2404772-nife2o4-ph-7-1--iron-iii-nitrate",
+        "baruwati2007-1-2404772-nife2o4-ph-7-1--nickel-ii-nitrate"
+      ]
+    },
+    {
+      "id": "baruwati2007-1-2404772-nife2o4-ph-7-1--after-s02-adjust-ph",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "baruwati2007-1-2404772-nife2o4-ph-7-1--after-s01-dissolve",
+        "baruwati2007-1-2404772-nife2o4-ph-7-1--aqueous-ammonia"
+      ]
+    },
+    {
+      "id": "baruwati2007-1-2404772-nife2o4-ph-7-1--after-s03-cool",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "baruwati2007-1-2404772-nife2o4-ph-7-1--after-s02-adjust-ph"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-dissolve",
+      "action": "dissolve",
+      "label": "Dissolve iron(III) nitrate and nickel(II) nitrate in de-ionized water.",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "baruwati2007-1-2404772-nife2o4-ph-7-1--iron-iii-nitrate",
+        "baruwati2007-1-2404772-nife2o4-ph-7-1--nickel-ii-nitrate"
+      ],
+      "outputs": [
+        "baruwati2007-1-2404772-nife2o4-ph-7-1--after-s01-dissolve"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Dissolve iron(III) nitrate and nickel(II) nitrate in de-ionized water.",
+      "evidence": [
+        {
+          "source_id": "baruwati2007-1-2404772",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "s02-adjust-ph",
+      "action": "adjust ph",
+      "label": "Adjust pH to 7 using aqueous ammonia.",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-dissolve"
+      ],
+      "inputs": [
+        "baruwati2007-1-2404772-nife2o4-ph-7-1--after-s01-dissolve",
+        "baruwati2007-1-2404772-nife2o4-ph-7-1--aqueous-ammonia"
+      ],
+      "outputs": [
+        "baruwati2007-1-2404772-nife2o4-ph-7-1--after-s02-adjust-ph"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Adjust pH to 7 using aqueous ammonia.",
+      "evidence": [
+        {
+          "source_id": "baruwati2007-1-2404772",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "s03-cool",
+      "action": "cool",
+      "label": "Cool the autoclave.",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-adjust-ph"
+      ],
+      "inputs": [
+        "baruwati2007-1-2404772-nife2o4-ph-7-1--after-s02-adjust-ph"
+      ],
+      "outputs": [
+        "baruwati2007-1-2404772-nife2o4-ph-7-1--after-s03-cool"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Cool the autoclave.",
+      "evidence": [
+        {
+          "source_id": "baruwati2007-1-2404772",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "baruwati2007-1-2404772-nife2o4-ph-7-1--product",
+      "source_sample_label": "NiFe2O4 (pH 7)",
+      "batch_id": null,
+      "material_state_id": "baruwati2007-1-2404772-nife2o4-ph-7-1--after-s03-cool",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "NiFe2O4",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "baruwati2007-1-2404772",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "cubic spinel",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "baruwati2007-1-2404772",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "sphere",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "baruwati2007-1-2404772",
+            "locator": "Main PDF p.4"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "baruwati2007-1-2404772",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of iron(III) nitrate not reported in the extracted text.",
+      "Amount of nickel(II) nitrate not reported in the extracted text.",
+      "Amount of aqueous ammonia not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
