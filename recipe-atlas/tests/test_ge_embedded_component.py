@@ -56,15 +56,35 @@ class ProductEmbedding(unittest.TestCase):
     def test_other_chemistry_not_covered(self):
         for s in ['nanocrystalline GeO2 embedded in SiO2','Ge embedded in Si','Ge implanted in SiO2','SiO2 embedded in Ge']:
             self.assertIsNone(C['_embedded_product_formula'](pair(s)))
-    def test_explicit_composition_not_overwritten(self):
-        p=pair();p['structure']['composition']={'value':'Ge','page':1};r=converted(p)
-        self.assertEqual(r['material']['formula'],'Ge');self.assertEqual(r['products'][0]['composition']['value'],'Ge')
+    def test_explicit_component_fact_preserved_during_named_navigation(self):
+        p=pair();p['structure']['composition']={'value':'Ge','page':1};before=copy.deepcopy(p);r=converted(p)
+        self.assertEqual(r['material']['formula'],'Ge/SiO2')
+        self.assertEqual(r['products'][0]['composition']['value'],'Ge')
+        self.assertEqual(r['intended_target']['composition']['value'],'Ge')
+        self.assertEqual(p,before)
     def test_formula_case_is_exact(self):
         self.assertIsNone(C['_embedded_product_formula'](pair('nanocrystalline ge embedded in SiO2')))
     def test_word_case_only_is_flexible(self):
         self.assertEqual(C['_embedded_product_formula'](pair('Nanocrystalline Ge Embedded In SiO2')),'Ge/SiO2')
     def test_unrelated_grouped_formula_unchanged(self):
         self.assertEqual(C['_composition_from']({'product':'sample','structure':{'composition':{'value':'Ti(BO3)2'}}}),'Ti(BO3)2')
+
+    def test_named_dutta_variant_with_explicit_component_fact(self):
+        p=pair('Ge nanocrystal embedded in SiO2 matrix');p['structure']['composition']={'value':'Ge','page':1};before=copy.deepcopy(p);r=converted(p)
+        self.assertEqual(r['material'],{'formula':'Ge/SiO2','family':'Ge/SiO2 nanocrystals','elements':['Ge','Si','O'],'components':['Ge','SiO2'],'architecture':'composite'})
+        self.assertEqual(r['products'][0]['source_sample_label'],p['product'])
+        self.assertEqual(r['products'][0]['composition']['value'],'Ge');self.assertEqual(p,before)
+    def test_other_explicit_composition_not_overridden_by_label(self):
+        for value in ['GeO2','Ge/Si','SiO2']:
+            p=pair('Ge nanocrystal embedded in SiO2 matrix');p['structure']['composition']={'value':value,'page':1}
+            self.assertIsNone(C['_embedded_product_formula'](p));self.assertEqual(converted(p)['material']['formula'],value)
+    def test_generic_device_label_does_not_guess_a_host(self):
+        p=pair('Ge quantum dot tunneling diode');r=converted(p)
+        self.assertEqual(r['material']['formula'],'Ge');self.assertEqual(r['material']['components'],['Ge'])
+        self.assertIsNone(C['_embedded_product_formula'](p))
+    def test_word_variants_do_not_make_formula_case_insensitive(self):
+        self.assertEqual(C['_embedded_product_formula'](pair('Ge nanocrystals embedded in SiO2 matrix')),'Ge/SiO2')
+        self.assertIsNone(C['_embedded_product_formula'](pair('Ge nanocrystal embedded in sio2 matrix')))
 
 class GermaniumScope(unittest.TestCase):
     def setUp(self):self.rows,self.hub=fixtures();self.byid={x['record_id']:x for x in self.rows}

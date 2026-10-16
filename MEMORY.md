@@ -1,5 +1,13 @@
 Owner revisit list: [Machine-extracted papers](research-assets/public-audits/MACHINE_EXTRACTED_PAPERS.md).
 
+## B42/B43 routing correction and release checks — 2026-10-16T16:45:05.763854+00:00
+
+The complete local build caught two new substrate-supported Ge routes under isolated Ge. Dutta's explicitly named Ge/SiO2 product now has component-aware navigation; its reported Ge composition, evidence and all other scientific values are unchanged. Oehme 2010 (DOI 10.1063/1.3462069) is held for product-system routing, preserving its private inputs and prior limited read; it is not classified as lacking synthesis. The converter has 30 passing regression tests. No release check, policy rule or audited record was changed.
+
+The retained pending batch is **42 papers /69 new records /209 selected figure-caption keys**, with **4,801 canonical records** locally. The failed exact-head build and all earlier evidence remain saved; a corrective Source commit, fresh complete checks, browser review, exact-head CI, ordinary merge and anonymous verification remain required. **Zero new publication credit** is claimed. The latest verified website remains **1,419 papers /4,732 records /2,611 display pairs**.
+
+Two further completed site-stage copies were removed after fresh reconstruction and native-consumer checks: 72,055 file copies /4,068,827,281 logical copy bytes. C: was 54,976,966,656 bytes free before the first operation and 59,172,233,216 after the second; concurrent work prevents isolated physical-gain attribution. No programs, papers, private training inputs or active model/server were removed. The 100 GiB free-space aim remains unmet; cleanup continues.
+
 ## Active queue and storage checkpoint — 2026-10-16T15:55:00.879346+00:00
 
 B42/B43 have43 papers,70 records and212 caption keys integrated locally, pending normal release checks; publication credit remains zero. B40/B41 remain the latest verified live release (1419 papers,4732 records,2611 displayed pairs). Cleanup R24 is published in [the storage report](https://github.com/cuiyist/mattersyn2/blob/dffb58abc490bc8de47020b3e43572d5e5ac4d26/CLEANUP_REPORT_2026-10-12.md): cumulative656,024,962,352 logical copy bytes across12,321,710 removed file copies; this is not isolated physical recovery. C: currently has59403268096 free bytes, below107,374,182,400. Protected files, active servers, paused audit questions and training exports remain unchanged.

@@ -103,20 +103,23 @@ def formula_from(text):
 def _embedded_product_formula(pair):
     """Classify an explicit named Ge/SiO2 system; never fill a reported fact."""
     value = ((pair.get('structure') or {}).get('composition') or {}).get('value')
-    if value is not None and str(value).strip():
+    if value is not None and str(value).strip() not in ('', 'Ge'):
         return None
     label = str(pair.get('product') or '').strip()
-    if re.fullmatch(r'(?:(?i:nanocrystalline)\s+)?Ge\s+(?i:embedded\s+in)\s+SiO2', label):
+    if re.fullmatch(r'(?:(?i:nanocrystalline)\s+)?Ge(?:\s+(?i:nanocrystals?))?\s+(?i:embedded\s+in)\s+SiO2(?:\s+(?i:matrix))?', label):
         return 'Ge/SiO2'
     return None
 
 
 def _composition_from(pair):
-    """Explicit retained composition, or an existing-parser product formula only."""
+    """Keep reported facts; classify an explicit named embedded product system."""
+    embedded = _embedded_product_formula(pair)
+    if embedded is not None:
+        return embedded
     value = ((pair.get('structure') or {}).get('composition') or {}).get('value')
     if value is not None and str(value).strip():
         return formula_from(value)
-    return _embedded_product_formula(pair) or _formula_token(pair.get('product') or '')
+    return _formula_token(pair.get('product') or '')
 
 
 def first_upper(text):

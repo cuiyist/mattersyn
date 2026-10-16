@@ -1,3 +1,11 @@
+## B42/B43 routing correction and release checks — 2026-10-16T16:45:05.763854+00:00
+
+The complete local build caught two new substrate-supported Ge routes under isolated Ge. Dutta's explicitly named Ge/SiO2 product now has component-aware navigation; its reported Ge composition, evidence and all other scientific values are unchanged. Oehme 2010 (DOI 10.1063/1.3462069) is held for product-system routing, preserving its private inputs and prior limited read; it is not classified as lacking synthesis. The converter has 30 passing regression tests. No release check, policy rule or audited record was changed.
+
+The retained pending batch is **42 papers /69 new records /209 selected figure-caption keys**, with **4,801 canonical records** locally. The failed exact-head build and all earlier evidence remain saved; a corrective Source commit, fresh complete checks, browser review, exact-head CI, ordinary merge and anonymous verification remain required. **Zero new publication credit** is claimed. The latest verified website remains **1,419 papers /4,732 records /2,611 display pairs**.
+
+Two further completed site-stage copies were removed after fresh reconstruction and native-consumer checks: 72,055 file copies /4,068,827,281 logical copy bytes. C: was 54,976,966,656 bytes free before the first operation and 59,172,233,216 after the second; concurrent work prevents isolated physical-gain attribution. No programs, papers, private training inputs or active model/server were removed. The 100 GiB free-space aim remains unmet; cleanup continues.
+
 
 ## Active queue and storage checkpoint — 2026-10-16T15:55:00.879346+00:00
 
