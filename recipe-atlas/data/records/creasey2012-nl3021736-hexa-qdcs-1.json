@@ -1,0 +1,601 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "creasey2012-nl3021736-hexa-qdcs-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Megan Creasey (2012): hexa-QDCs",
+  "material": {
+    "formula": "InGaAs",
+    "family": "InGaAs nanocrystals",
+    "elements": [
+      "In",
+      "Ga",
+      "As"
+    ],
+    "components": [
+      "InGaAs"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "MBE",
+  "sources": [
+    {
+      "id": "creasey2012-nl3021736",
+      "doi": "10.1021/nl3021736",
+      "title": "Self-Assembled InGaAs Quantum Dot Clusters with Controlled Spatial and Spectral Properties",
+      "authors": "Megan Creasey, Ji-Hoon Lee, Zhiming Wang, Gregory J. Salamo, and Xiaoqin Li",
+      "year": 2012,
+      "url": "https://doi.org/10.1021/nl3021736",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "creasey2012-nl3021736",
+    "recipe_family": "creasey2012-nl3021736-hexa-qdcs-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "InGaAs",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "creasey2012-nl3021736",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "nanomound",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "creasey2012-nl3021736",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "creasey2012-nl3021736-hexa-qdcs-1--gaas",
+      "name": "GaAs",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "creasey2012-nl3021736",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "creasey2012-nl3021736-hexa-qdcs-1--inas",
+      "name": "InAs",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "amount": {
+          "value": 2.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "monolayers",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "2 monolayers",
+          "evidence": [
+            {
+              "source_id": "creasey2012-nl3021736",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "creasey2012-nl3021736",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "creasey2012-nl3021736-hexa-qdcs-1--after-s01-anneal",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "creasey2012-nl3021736-hexa-qdcs-1--gaas"
+      ]
+    },
+    {
+      "id": "creasey2012-nl3021736-hexa-qdcs-1--after-s02-grow",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "creasey2012-nl3021736-hexa-qdcs-1--after-s01-anneal",
+        "creasey2012-nl3021736-hexa-qdcs-1--gaas"
+      ]
+    },
+    {
+      "id": "creasey2012-nl3021736-hexa-qdcs-1--after-s03-anneal",
+      "name": "mixture after step 3",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "creasey2012-nl3021736-hexa-qdcs-1--after-s02-grow",
+        "creasey2012-nl3021736-hexa-qdcs-1--gaas"
+      ]
+    },
+    {
+      "id": "creasey2012-nl3021736-hexa-qdcs-1--after-s04-crystallize",
+      "name": "mixture after step 4",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "creasey2012-nl3021736-hexa-qdcs-1--after-s03-anneal",
+        "creasey2012-nl3021736-hexa-qdcs-1--gaas"
+      ]
+    },
+    {
+      "id": "creasey2012-nl3021736-hexa-qdcs-1--after-s05-deposit",
+      "name": "mixture after step 5",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "creasey2012-nl3021736-hexa-qdcs-1--after-s04-crystallize",
+        "creasey2012-nl3021736-hexa-qdcs-1--inas"
+      ]
+    },
+    {
+      "id": "creasey2012-nl3021736-hexa-qdcs-1--after-s06-grow",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "creasey2012-nl3021736-hexa-qdcs-1--after-s05-deposit",
+        "creasey2012-nl3021736-hexa-qdcs-1--gaas"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-anneal",
+      "action": "anneal",
+      "label": "Anneal GaAs substrate to remove oxides",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "creasey2012-nl3021736-hexa-qdcs-1--gaas"
+      ],
+      "outputs": [
+        "creasey2012-nl3021736-hexa-qdcs-1--after-s01-anneal"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 610,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "610 °C",
+          "evidence": [
+            {
+              "source_id": "creasey2012-nl3021736",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "10 min",
+          "evidence": [
+            {
+              "source_id": "creasey2012-nl3021736",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Anneal GaAs substrate to remove oxides",
+      "evidence": [
+        {
+          "source_id": "creasey2012-nl3021736",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-grow",
+      "action": "grow",
+      "label": "Grow GaAs buffer layer",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-anneal"
+      ],
+      "inputs": [
+        "creasey2012-nl3021736-hexa-qdcs-1--after-s01-anneal",
+        "creasey2012-nl3021736-hexa-qdcs-1--gaas"
+      ],
+      "outputs": [
+        "creasey2012-nl3021736-hexa-qdcs-1--after-s02-grow"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 610,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "610 °C",
+          "evidence": [
+            {
+              "source_id": "creasey2012-nl3021736",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Grow GaAs buffer layer",
+      "evidence": [
+        {
+          "source_id": "creasey2012-nl3021736",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-anneal",
+      "action": "anneal",
+      "label": "Anneal substrate to reduce surface dislocations",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-grow"
+      ],
+      "inputs": [
+        "creasey2012-nl3021736-hexa-qdcs-1--after-s02-grow",
+        "creasey2012-nl3021736-hexa-qdcs-1--gaas"
+      ],
+      "outputs": [
+        "creasey2012-nl3021736-hexa-qdcs-1--after-s03-anneal"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 3,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "3 min",
+          "evidence": [
+            {
+              "source_id": "creasey2012-nl3021736",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Anneal substrate to reduce surface dislocations",
+      "evidence": [
+        {
+          "source_id": "creasey2012-nl3021736",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s04-crystallize",
+      "action": "crystallize",
+      "label": "Crystallize Ga droplets into GaAs nanomounds",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s03-anneal"
+      ],
+      "inputs": [
+        "creasey2012-nl3021736-hexa-qdcs-1--after-s03-anneal",
+        "creasey2012-nl3021736-hexa-qdcs-1--gaas"
+      ],
+      "outputs": [
+        "creasey2012-nl3021736-hexa-qdcs-1--after-s04-crystallize"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Crystallize Ga droplets into GaAs nanomounds",
+      "evidence": [
+        {
+          "source_id": "creasey2012-nl3021736",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s05-deposit",
+      "action": "deposit",
+      "label": "Deposit InAs to form QDs",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s04-crystallize"
+      ],
+      "inputs": [
+        "creasey2012-nl3021736-hexa-qdcs-1--after-s04-crystallize",
+        "creasey2012-nl3021736-hexa-qdcs-1--inas"
+      ],
+      "outputs": [
+        "creasey2012-nl3021736-hexa-qdcs-1--after-s05-deposit"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 500,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "500 °C",
+          "evidence": [
+            {
+              "source_id": "creasey2012-nl3021736",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Deposit InAs to form QDs",
+      "evidence": [
+        {
+          "source_id": "creasey2012-nl3021736",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s06-grow",
+      "action": "grow",
+      "label": "Grow GaAs capping layer",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s05-deposit"
+      ],
+      "inputs": [
+        "creasey2012-nl3021736-hexa-qdcs-1--after-s05-deposit",
+        "creasey2012-nl3021736-hexa-qdcs-1--gaas"
+      ],
+      "outputs": [
+        "creasey2012-nl3021736-hexa-qdcs-1--after-s06-grow"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Grow GaAs capping layer",
+      "evidence": [
+        {
+          "source_id": "creasey2012-nl3021736",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "creasey2012-nl3021736-hexa-qdcs-1--product",
+      "source_sample_label": "hexa-QDCs",
+      "batch_id": null,
+      "material_state_id": "creasey2012-nl3021736-hexa-qdcs-1--after-s06-grow",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "InGaAs",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "creasey2012-nl3021736",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": "nanomound",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "creasey2012-nl3021736",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "creasey2012-nl3021736",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reactor: MBE chamber (Main PDF p.2).",
+        "Reaction temperature: 500 degC (Main PDF p.2).",
+        "Reaction time: 3 min (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Amount of GaAs not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

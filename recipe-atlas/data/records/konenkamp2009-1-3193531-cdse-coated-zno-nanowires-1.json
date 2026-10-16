@@ -1,0 +1,424 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "konenkamp2009-1-3193531-cdse-coated-zno-nanowires-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "R. Könenkamp (2009): CdSe-coated ZnO nanowires",
+  "material": {
+    "formula": "CdSe",
+    "family": "CdSe nanocrystals",
+    "elements": [
+      "Cd",
+      "Se"
+    ],
+    "components": [
+      "CdSe"
+    ],
+    "architecture": "heterostructure"
+  },
+  "method": "Synthesis as described in the source",
+  "sources": [
+    {
+      "id": "konenkamp2009-1-3193531",
+      "doi": "10.1063/1.3193531",
+      "title": "Nanostructured semiconductor heterojunctions from quantum dot layers",
+      "authors": "R. Könenkamp, A. Nadarajah, and Robert C. Word",
+      "year": 2009,
+      "url": "https://doi.org/10.1063/1.3193531",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "konenkamp2009-1-3193531",
+    "recipe_family": "konenkamp2009-1-3193531-cdse-coated-zno-nanowires-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdSe",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "konenkamp2009-1-3193531",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "wurtzite",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "konenkamp2009-1-3193531",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": 8,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "8 nm",
+      "evidence": [
+        {
+          "source_id": "konenkamp2009-1-3193531",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "konenkamp2009-1-3193531-cdse-coated-zno-nanowires-1--cdse-quantum-dots",
+      "name": "CdSe quantum dots",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "konenkamp2009-1-3193531",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "konenkamp2009-1-3193531-cdse-coated-zno-nanowires-1--toluene",
+      "name": "toluene",
+      "formula": null,
+      "role": "solvent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "konenkamp2009-1-3193531",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "konenkamp2009-1-3193531-cdse-coated-zno-nanowires-1--cdcl2",
+      "name": "CdCl2",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "konenkamp2009-1-3193531",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "konenkamp2009-1-3193531-cdse-coated-zno-nanowires-1--after-s01-deposit",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "konenkamp2009-1-3193531-cdse-coated-zno-nanowires-1--cdse-quantum-dots",
+        "konenkamp2009-1-3193531-cdse-coated-zno-nanowires-1--toluene"
+      ]
+    },
+    {
+      "id": "konenkamp2009-1-3193531-cdse-coated-zno-nanowires-1--after-s02-anneal",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "konenkamp2009-1-3193531-cdse-coated-zno-nanowires-1--after-s01-deposit",
+        "konenkamp2009-1-3193531-cdse-coated-zno-nanowires-1--cdcl2"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-deposit",
+      "action": "deposit",
+      "label": "CdSe quantum dots are deposited on ZnO nanowires using micro-pipettes, spray, spin coating, or dip coating.",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "konenkamp2009-1-3193531-cdse-coated-zno-nanowires-1--cdse-quantum-dots",
+        "konenkamp2009-1-3193531-cdse-coated-zno-nanowires-1--toluene"
+      ],
+      "outputs": [
+        "konenkamp2009-1-3193531-cdse-coated-zno-nanowires-1--after-s01-deposit"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 60,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "60 °C",
+          "evidence": [
+            {
+              "source_id": "konenkamp2009-1-3193531",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "konenkamp2009-1-3193531",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "CdSe quantum dots are deposited on ZnO nanowires using micro-pipettes, spray, spin coating, or dip coating.",
+      "evidence": [
+        {
+          "source_id": "konenkamp2009-1-3193531",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-anneal",
+      "action": "anneal",
+      "label": "Quantum dot layers are annealed in CdCl2/air ambient.",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-deposit"
+      ],
+      "inputs": [
+        "konenkamp2009-1-3193531-cdse-coated-zno-nanowires-1--after-s01-deposit",
+        "konenkamp2009-1-3193531-cdse-coated-zno-nanowires-1--cdcl2"
+      ],
+      "outputs": [
+        "konenkamp2009-1-3193531-cdse-coated-zno-nanowires-1--after-s02-anneal"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 380,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "380 °C",
+          "evidence": [
+            {
+              "source_id": "konenkamp2009-1-3193531",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 24,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "24 h",
+          "evidence": [
+            {
+              "source_id": "konenkamp2009-1-3193531",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "konenkamp2009-1-3193531",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Quantum dot layers are annealed in CdCl2/air ambient.",
+      "evidence": [
+        {
+          "source_id": "konenkamp2009-1-3193531",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "konenkamp2009-1-3193531-cdse-coated-zno-nanowires-1--product",
+      "source_sample_label": "CdSe-coated ZnO nanowires",
+      "batch_id": null,
+      "material_state_id": "konenkamp2009-1-3193531-cdse-coated-zno-nanowires-1--after-s02-anneal",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdSe",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "konenkamp2009-1-3193531",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "wurtzite",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "konenkamp2009-1-3193531",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": "octadecylamine",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "konenkamp2009-1-3193531",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "konenkamp2009-1-3193531",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reaction temperature: 380 degC (Main PDF p.2).",
+        "Reaction time: 24 h (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "konenkamp2009-1-3193531-cdse-coated-zno-nanowires-1--size",
+      "sample_id": "konenkamp2009-1-3193531-cdse-coated-zno-nanowires-1--product",
+      "property": "diameter",
+      "technique": "TEM",
+      "value": {
+        "value": 8,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "8 nm",
+        "evidence": [
+          {
+            "source_id": "konenkamp2009-1-3193531",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "konenkamp2009-1-3193531",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Shape not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Amount of CdSe quantum dots not reported in the extracted text.",
+      "Amount of toluene not reported in the extracted text.",
+      "Amount of CdCl2 not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

@@ -1,0 +1,416 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "hu2008-1-3021085-mgo-nanocrystalline-powders-annealed-at-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Jifan Hu (2008): MgO nanocrystalline powders (annealed at 500 °C)",
+  "material": {
+    "formula": "MgO",
+    "family": "MgO nanocrystals",
+    "elements": [
+      "Mg",
+      "O"
+    ],
+    "components": [
+      "MgO"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Sol-gel",
+  "sources": [
+    {
+      "id": "hu2008-1-3021085",
+      "doi": "10.1063/1.3021085",
+      "title": "Room-temperature ferromagnetism in MgO nanocrystalline powders",
+      "authors": "Jifan Hu, Zhongli Zhang, Ming Zhao, Hongwei Qin, and Minhua Jiang",
+      "year": 2008,
+      "url": "https://doi.org/10.1063/1.3021085",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "hu2008-1-3021085",
+    "recipe_family": "hu2008-1-3021085-mgo-nanocrystalline-powders-annealed-at-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "MgO",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "hu2008-1-3021085",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "rocksalt",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "hu2008-1-3021085",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": 24,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "24 nm",
+      "evidence": [
+        {
+          "source_id": "hu2008-1-3021085",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "hu2008-1-3021085-mgo-nanocrystalline-powders-annealed-at-1--after-s01-stir",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "hu2008-1-3021085-mgo-nanocrystalline-powders-annealed-at-1--after-s02-dry",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "hu2008-1-3021085-mgo-nanocrystalline-powders-annealed-at-1--after-s01-stir"
+      ]
+    },
+    {
+      "id": "hu2008-1-3021085-mgo-nanocrystalline-powders-annealed-at-1--after-s03-anneal",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "hu2008-1-3021085-mgo-nanocrystalline-powders-annealed-at-1--after-s02-dry"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-stir",
+      "action": "stir",
+      "label": "Solution stirred at 80 °C for several hours",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "hu2008-1-3021085-mgo-nanocrystalline-powders-annealed-at-1--after-s01-stir"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 80,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "80 °C",
+          "evidence": [
+            {
+              "source_id": "hu2008-1-3021085",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "hu2008-1-3021085",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Solution stirred at 80 °C for several hours",
+      "evidence": [
+        {
+          "source_id": "hu2008-1-3021085",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-dry",
+      "action": "dry",
+      "label": "Solution dried at 70 °C to form precursor",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-stir"
+      ],
+      "inputs": [
+        "hu2008-1-3021085-mgo-nanocrystalline-powders-annealed-at-1--after-s01-stir"
+      ],
+      "outputs": [
+        "hu2008-1-3021085-mgo-nanocrystalline-powders-annealed-at-1--after-s02-dry"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 70,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "70 °C",
+          "evidence": [
+            {
+              "source_id": "hu2008-1-3021085",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Solution dried at 70 °C to form precursor",
+      "evidence": [
+        {
+          "source_id": "hu2008-1-3021085",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-anneal",
+      "action": "anneal",
+      "label": "Precursor annealed at 500 °C for 3 h in air",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-dry"
+      ],
+      "inputs": [
+        "hu2008-1-3021085-mgo-nanocrystalline-powders-annealed-at-1--after-s02-dry"
+      ],
+      "outputs": [
+        "hu2008-1-3021085-mgo-nanocrystalline-powders-annealed-at-1--after-s03-anneal"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 500,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "500 °C",
+          "evidence": [
+            {
+              "source_id": "hu2008-1-3021085",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 3,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "3 h",
+          "evidence": [
+            {
+              "source_id": "hu2008-1-3021085",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "hu2008-1-3021085",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Precursor annealed at 500 °C for 3 h in air",
+      "evidence": [
+        {
+          "source_id": "hu2008-1-3021085",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "hu2008-1-3021085-mgo-nanocrystalline-powders-annealed-at-1--product",
+      "source_sample_label": "MgO nanocrystalline powders (annealed at 500 °C)",
+      "batch_id": null,
+      "material_state_id": "hu2008-1-3021085-mgo-nanocrystalline-powders-annealed-at-1--after-s03-anneal",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "MgO",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "hu2008-1-3021085",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "rocksalt",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "hu2008-1-3021085",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "hu2008-1-3021085",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reaction temperature: 500 degC (Main PDF p.2).",
+        "Reaction time: 3 h (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "hu2008-1-3021085-mgo-nanocrystalline-powders-annealed-at-1--size",
+      "sample_id": "hu2008-1-3021085-mgo-nanocrystalline-powders-annealed-at-1--product",
+      "property": "crystallite_size",
+      "technique": "XRD",
+      "value": {
+        "value": 24,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "24 nm",
+        "evidence": [
+          {
+            "source_id": "hu2008-1-3021085",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "hu2008-1-3021085",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Reactor not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
