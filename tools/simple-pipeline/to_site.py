@@ -113,6 +113,7 @@ def first_upper(text):
 
 
 def elements_of(formula):
+    formula = re.sub(r'(?<![A-Za-z0-9])TiO2\(B\)(?![A-Za-z0-9])', 'TiO2', formula or '')
     letters = re.sub(r'[^A-Za-z]', ' ', formula or '')
     letters = re.sub(r'([A-Za-z])[xyz](?=[A-Z]|$)', r'\1', letters)  # variable coefficient after an element
     found = re.findall(rf'({ELEMENT})(?![a-z])', letters)
