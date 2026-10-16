@@ -1,0 +1,530 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "zhang2012-am301229w-ag-ncmwcnt-hybrid-structures-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Shumao Cui et al. (2012): Ag NC−MWCNT hybrid structures",
+  "material": {
+    "formula": "Ag",
+    "family": "Ag nanocrystals",
+    "elements": [
+      "Ag"
+    ],
+    "components": [
+      "Ag"
+    ],
+    "architecture": "composite"
+  },
+  "method": "Physical vapor deposition",
+  "sources": [
+    {
+      "id": "zhang2012-am301229w",
+      "doi": "10.1021/am301229w",
+      "title": "Fast and Selective Room-Temperature Ammonia Sensors Using Silver Nanocrystal-Functionalized Carbon Nanotubes",
+      "authors": "Shumao Cui; Haihui Pu; Ganhua Lu; Zhenhai Wen; Eric C. Mattson; Carol Hirschmugl; Marija Gajdardziska-Josifovska; Michael Weinert; Junhong Chen",
+      "year": 2012,
+      "url": "https://doi.org/10.1021/am301229w",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "zhang2012-am301229w",
+    "recipe_family": "zhang2012-am301229w-ag-ncmwcnt-hybrid-structures-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Ag",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "zhang2012-am301229w",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "crystalline",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "zhang2012-am301229w",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": 10,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "10 nm",
+      "evidence": [
+        {
+          "source_id": "zhang2012-am301229w",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "nanocrystal",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "zhang2012-am301229w",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "zhang2012-am301229w-ag-ncmwcnt-hybrid-structures-1--ag",
+      "name": "Ag",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "zhang2012-am301229w",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "zhang2012-am301229w-ag-ncmwcnt-hybrid-structures-1--mwcnts",
+      "name": "MWCNTs",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "zhang2012-am301229w",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "zhang2012-am301229w-ag-ncmwcnt-hybrid-structures-1--after-s01-disperse",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "zhang2012-am301229w-ag-ncmwcnt-hybrid-structures-1--mwcnts"
+      ]
+    },
+    {
+      "id": "zhang2012-am301229w-ag-ncmwcnt-hybrid-structures-1--after-s02-anneal",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "zhang2012-am301229w-ag-ncmwcnt-hybrid-structures-1--after-s01-disperse",
+        "zhang2012-am301229w-ag-ncmwcnt-hybrid-structures-1--mwcnts"
+      ]
+    },
+    {
+      "id": "zhang2012-am301229w-ag-ncmwcnt-hybrid-structures-1--after-s03-deposit",
+      "name": "mixture after step 3",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "zhang2012-am301229w-ag-ncmwcnt-hybrid-structures-1--after-s02-anneal",
+        "zhang2012-am301229w-ag-ncmwcnt-hybrid-structures-1--mwcnts"
+      ]
+    },
+    {
+      "id": "zhang2012-am301229w-ag-ncmwcnt-hybrid-structures-1--after-s04-anneal",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "zhang2012-am301229w-ag-ncmwcnt-hybrid-structures-1--after-s03-deposit",
+        "zhang2012-am301229w-ag-ncmwcnt-hybrid-structures-1--mwcnts"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-disperse",
+      "action": "disperse",
+      "label": "MWCNTs dispersed in DMF",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "zhang2012-am301229w-ag-ncmwcnt-hybrid-structures-1--mwcnts"
+      ],
+      "outputs": [
+        "zhang2012-am301229w-ag-ncmwcnt-hybrid-structures-1--after-s01-disperse"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "Ar",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "zhang2012-am301229w",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "MWCNTs dispersed in DMF",
+      "evidence": [
+        {
+          "source_id": "zhang2012-am301229w",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-anneal",
+      "action": "anneal",
+      "label": "Annealing treatment at 200 oC for 1 h in Ar flow",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-disperse"
+      ],
+      "inputs": [
+        "zhang2012-am301229w-ag-ncmwcnt-hybrid-structures-1--after-s01-disperse",
+        "zhang2012-am301229w-ag-ncmwcnt-hybrid-structures-1--mwcnts"
+      ],
+      "outputs": [
+        "zhang2012-am301229w-ag-ncmwcnt-hybrid-structures-1--after-s02-anneal"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 200,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "200 °C",
+          "evidence": [
+            {
+              "source_id": "zhang2012-am301229w",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1 h",
+          "evidence": [
+            {
+              "source_id": "zhang2012-am301229w",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "Ar",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "zhang2012-am301229w",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Annealing treatment at 200 oC for 1 h in Ar flow",
+      "evidence": [
+        {
+          "source_id": "zhang2012-am301229w",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-deposit",
+      "action": "deposit",
+      "label": "Ag NCs deposited onto MWCNTs using electrostatic force directed assembly",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-anneal"
+      ],
+      "inputs": [
+        "zhang2012-am301229w-ag-ncmwcnt-hybrid-structures-1--after-s02-anneal",
+        "zhang2012-am301229w-ag-ncmwcnt-hybrid-structures-1--mwcnts"
+      ],
+      "outputs": [
+        "zhang2012-am301229w-ag-ncmwcnt-hybrid-structures-1--after-s03-deposit"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "Ar",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "zhang2012-am301229w",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Ag NCs deposited onto MWCNTs using electrostatic force directed assembly",
+      "evidence": [
+        {
+          "source_id": "zhang2012-am301229w",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s04-anneal",
+      "action": "anneal",
+      "label": "Annealing treatment at 200 oC for 1 h in Ar flow",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s03-deposit"
+      ],
+      "inputs": [
+        "zhang2012-am301229w-ag-ncmwcnt-hybrid-structures-1--after-s03-deposit",
+        "zhang2012-am301229w-ag-ncmwcnt-hybrid-structures-1--mwcnts"
+      ],
+      "outputs": [
+        "zhang2012-am301229w-ag-ncmwcnt-hybrid-structures-1--after-s04-anneal"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 200,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "200 °C",
+          "evidence": [
+            {
+              "source_id": "zhang2012-am301229w",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1 h",
+          "evidence": [
+            {
+              "source_id": "zhang2012-am301229w",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "Ar",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "zhang2012-am301229w",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Annealing treatment at 200 oC for 1 h in Ar flow",
+      "evidence": [
+        {
+          "source_id": "zhang2012-am301229w",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "zhang2012-am301229w-ag-ncmwcnt-hybrid-structures-1--product",
+      "source_sample_label": "Ag NC−MWCNT hybrid structures",
+      "batch_id": null,
+      "material_state_id": "zhang2012-am301229w-ag-ncmwcnt-hybrid-structures-1--after-s04-anneal",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Ag",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "zhang2012-am301229w",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "crystalline",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "zhang2012-am301229w",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "nanocrystal",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "zhang2012-am301229w",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "zhang2012-am301229w",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reactor: mini-arc plasma reactor (Main PDF p.2).",
+        "Reaction temperature: 200 degC (Main PDF p.2).",
+        "Reaction time: 1 h (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "zhang2012-am301229w-ag-ncmwcnt-hybrid-structures-1--size",
+      "sample_id": "zhang2012-am301229w-ag-ncmwcnt-hybrid-structures-1--product",
+      "property": "diameter",
+      "technique": "TEM",
+      "value": {
+        "value": 10,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "10 nm",
+        "evidence": [
+          {
+            "source_id": "zhang2012-am301229w",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "zhang2012-am301229w",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Ligand not reported in the extracted text.",
+      "Amount of Ag not reported in the extracted text.",
+      "Amount of MWCNTs not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

@@ -1,0 +1,361 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "song2014-am503388z-pt-g-180-6h-3",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Yang Song and Shaowei Chen (2014): Pt/G-180-6h",
+  "material": {
+    "formula": "Pt",
+    "family": "Pt nanocrystals",
+    "elements": [
+      "Pt"
+    ],
+    "components": [
+      "Pt"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Hydrothermal",
+  "sources": [
+    {
+      "id": "song2014-am503388z",
+      "doi": "10.1021/am503388z",
+      "title": "Graphene Quantum-Dot-Supported Platinum Nanoparticles: Defect-Mediated Electrocatalytic Activity in Oxygen Reduction",
+      "authors": "Yang Song and Shaowei Chen",
+      "year": 2014,
+      "url": "https://doi.org/10.1021/am503388z",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "song2014-am503388z",
+    "recipe_family": "song2014-am503388z-pt-g-180-6h-3",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Pt",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "song2014-am503388z",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "sphere",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "song2014-am503388z",
+          "locator": "Main PDF p.4"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "song2014-am503388z-pt-g-180-6h-3--ptcl2",
+      "name": "PtCl2",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "amount": {
+          "value": 0.025,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mmol",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0.025 mmol",
+          "evidence": [
+            {
+              "source_id": "song2014-am503388z",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "song2014-am503388z",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "song2014-am503388z-pt-g-180-6h-3--gqds",
+      "name": "GQDs",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "song2014-am503388z",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "song2014-am503388z-pt-g-180-6h-3--after-s01-dissolve",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "song2014-am503388z-pt-g-180-6h-3--ptcl2"
+      ]
+    },
+    {
+      "id": "song2014-am503388z-pt-g-180-6h-3--after-s02-add",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "song2014-am503388z-pt-g-180-6h-3--after-s01-dissolve",
+        "song2014-am503388z-pt-g-180-6h-3--ptcl2",
+        "song2014-am503388z-pt-g-180-6h-3--gqds"
+      ]
+    },
+    {
+      "id": "song2014-am503388z-pt-g-180-6h-3--after-s03-adjust-ph",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "song2014-am503388z-pt-g-180-6h-3--after-s02-add"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-dissolve",
+      "action": "dissolve",
+      "label": "Dissolve PtCl2 in HCl",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "song2014-am503388z-pt-g-180-6h-3--ptcl2"
+      ],
+      "outputs": [
+        "song2014-am503388z-pt-g-180-6h-3--after-s01-dissolve"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Dissolve PtCl2 in HCl",
+      "evidence": [
+        {
+          "source_id": "song2014-am503388z",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "s02-add",
+      "action": "add",
+      "label": "Add PtCl2 solution to GQD solution",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-dissolve"
+      ],
+      "inputs": [
+        "song2014-am503388z-pt-g-180-6h-3--after-s01-dissolve",
+        "song2014-am503388z-pt-g-180-6h-3--ptcl2",
+        "song2014-am503388z-pt-g-180-6h-3--gqds"
+      ],
+      "outputs": [
+        "song2014-am503388z-pt-g-180-6h-3--after-s02-add"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Add PtCl2 solution to GQD solution",
+      "evidence": [
+        {
+          "source_id": "song2014-am503388z",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "s03-adjust-ph",
+      "action": "adjust ph",
+      "label": "Adjust pH to 10",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-add"
+      ],
+      "inputs": [
+        "song2014-am503388z-pt-g-180-6h-3--after-s02-add"
+      ],
+      "outputs": [
+        "song2014-am503388z-pt-g-180-6h-3--after-s03-adjust-ph"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Adjust pH to 10",
+      "evidence": [
+        {
+          "source_id": "song2014-am503388z",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "song2014-am503388z-pt-g-180-6h-3--product",
+      "source_sample_label": "Pt/G-180-6h",
+      "batch_id": null,
+      "material_state_id": "song2014-am503388z-pt-g-180-6h-3--after-s03-adjust-ph",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Pt",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "song2014-am503388z",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": "sphere",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "song2014-am503388z",
+            "locator": "Main PDF p.4"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "song2014-am503388z",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "notes": [
+        "Reactor: Teﬂon-lined autoclave (Main PDF p.3)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of GQDs not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

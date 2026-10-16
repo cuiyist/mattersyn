@@ -1,5 +1,7 @@
 # Published machine-extracted papers
 
+Current verified index after B38/B39 (2026-10-16T12:30:32+00:00): **1119 source_extracted primary paper contributions /1662 display pairs**. This release adds56 DOI rows86IDs from original batchesB38/B39, with33 limited saved-read markers. Actual overall totals1363/4647/2526; audited244papers864pairs remain unchanged. Prior memberships, rows, histories and footer remain verbatim; no audit/gold/training credit.
+
 Current verified index after B36/B37 (2026-10-16T08:47:23+00:00): **1063 source_extracted primary paper contributions /1576 display pairs**. This release adds52 DOI rows70IDs from original batchesB36/B37, with36 limited saved-read markers. Actual overall totals1307/4561/2440; audited244papers864pairs remain unchanged. Prior memberships, rows, histories and footer remain verbatim; no audit/gold/training credit.
 
 Current verified index after B35 (2026-10-16T04:44:19+00:00): **1,011 source_extracted primary paper contributions /1,506 display pairs**. B35 adds 24 DOI rows /44 record IDs with exactly 8 saved rare-read markers. All 11 read histories remain preserved, including 3 nonretained papers without credit. Public totals are 1,255 primary paper IDs /4,491 canonical records /2,370 display pairs. No independent-audit, gold, calibration or training-ready credit. Every prior row, membership, footer and historical status remains verbatim.
@@ -1172,5 +1174,68 @@ These 24 source_extracted contributions add no independent-audit or training-rea
 | 10.1557/jmr.2005.0032 | `matsuda2005-jmr-2005-0032-100-16-5-sio216-5tio2-coating-with-anata-1`, `matsuda2005-jmr-2005-0032-100-25-sio225tio2-coating-with-anatase-n-2` | B37 | 2026-10-16T08:47:23+00:00 | yes |
 | 10.1557/jmr.2007.0012 | `wang2007-jmr-2007-0012-ysz-nanocrystals-2`, `wang2007-jmr-2007-0012-zro2-nanocrystals-1` | B37 | 2026-10-16T08:47:23+00:00 | yes |
 | 10.2351/1.1642632 | `tan2004-1-1642632-si-nanocrystal-films-1` | B37 | 2026-10-16T08:47:23+00:00 | no |
+
+Source-extracted display contributions only; saved read markers add no independent audit or training-ready credit. All earlier index rows remain unchanged.
+
+## B38/B39 — verified 2026-10-16T12:30:32+00:00
+
+| DOI | Record IDs | Original batch | Live verification UTC | Limited saved rare read |
+| --- | --- | --- | --- | --- |
+| 10.1021/am300524a | `aykut2012-am300524a-cdse-tio2-composite-nanofibers-1` | B38 | 2026-10-16T12:30:32+00:00 | yes |
+| 10.1021/am301641y | `huang2012-am301641y-mesoporous-single-crystalline-co3o4-nano-1` | B38 | 2026-10-16T12:30:32+00:00 | yes |
+| 10.1021/am3019806 | `zhang2013-am3019806-magnetic-mesoporous-fe2o3-nanocrystal-cl-1` | B38 | 2026-10-16T12:30:32+00:00 | yes |
+| 10.1021/am302522c | `provided2013-am302522c-cu2znsn-s1xsex-4-nanocrystals-x-0-2-0-5-2`, `provided2013-am302522c-cu2znsns4-nanocrystals-1` | B38 | 2026-10-16T12:30:32+00:00 | yes |
+| 10.1021/am401757y | `x2013-am401757y-silver-nanoplatelets-1` | B38 | 2026-10-16T12:30:32+00:00 | no |
+| 10.1021/am4035653 | `text2013-am4035653-macroporous-zn2sno4-film-1` | B38 | 2026-10-16T12:30:32+00:00 | yes |
+| 10.1021/am503558q | `cheng2014-am503558q-pbs-quantum-dots-in-porous-tio2-wells-1` | B38 | 2026-10-16T12:30:32+00:00 | no |
+| 10.1021/am900914h | `bedi2010-am900914h-cuo-nanocrystalline-powder-with-0-5m-cta-1` | B38 | 2026-10-16T12:30:32+00:00 | yes |
+| 10.1021/cg901116c | `meng2010-cg901116c-moniliforme-shaped-r-fe2o3-straight-chai-1` | B38 | 2026-10-16T12:30:32+00:00 | yes |
+| 10.1021/cm0005081 | `kumar2000-cm0005081-cu4o3-polyaniline-composite-1` | B38 | 2026-10-16T12:30:32+00:00 | yes |
+| 10.1021/cm203416x | `cicuendez2012-cm203416x-mg-ha-nanocomposite-1` | B38 | 2026-10-16T12:30:32+00:00 | yes |
+| 10.1021/cm301211e | `trizio2012-cm301211e-cu0-13in0-74zn0-59s2-6`, `trizio2012-cm301211e-cu0-26in0-8zn0-72s2-5`, `trizio2012-cm301211e-cu0-38ins2-3`, `trizio2012-cm301211e-cu0-45ins2-2`, `trizio2012-cm301211e-cu0-7in0-77zn0-85s2-4`, `trizio2012-cm301211e-cu1-0ins2-1` | B38 | 2026-10-16T12:30:32+00:00 | yes |
+| 10.1021/cs200085e | `zhu2011-cs200085e-zsm-5-hts-1` | B38 | 2026-10-16T12:30:32+00:00 | yes |
+| 10.1021/ie201549j | `rownaghi2011-ie201549j-con-zsm-5-3`, `rownaghi2011-ie201549j-meso-zsm-5-2`, `rownaghi2011-ie201549j-nano-zsm-5-1` | B38 | 2026-10-16T12:30:32+00:00 | yes |
+| 10.1021/ja0369515 | `jun2003-ja0369515-tio2-nanocrystals-branched-rods-4`, `jun2003-ja0369515-tio2-nanocrystals-bullet-and-diamond-sha-1`, `jun2003-ja0369515-tio2-nanocrystals-long-rods-3`, `jun2003-ja0369515-tio2-nanocrystals-short-rods-2` | B38 | 2026-10-16T12:30:32+00:00 | no |
+| 10.1021/ja047381r | `al2004-ja047381r-topo-capped-3-0-0-1-co2-tio2-ncs-nc1-1` | B38 | 2026-10-16T12:30:32+00:00 | yes |
+| 10.1021/ja0692478 | `kovalenko2007-ja0692478-bipyramidal-iron-oxide-ncs-3`, `kovalenko2007-ja0692478-monodisperse-cubic-iron-oxide-ncs-1`, `kovalenko2007-ja0692478-monodisperse-spherical-iron-oxide-ncs-2` | B38 | 2026-10-16T12:30:32+00:00 | no |
+| 10.1021/ja304487b | `liakakos2012-ja304487b-nc-a-1`, `liakakos2012-ja304487b-nc-b-2`, `liakakos2012-ja304487b-nc-c-3` | B38 | 2026-10-16T12:30:32+00:00 | no |
+| 10.1021/jacs.4c00678 | `goossens2024-jacs-4c00678-hfo2-nanocrystals-1` | B38 | 2026-10-16T12:30:32+00:00 | yes |
+| 10.1021/jacs.4c13568 | `zhou2025-jacs-4c13568-gaas-ncs-1`, `zhou2025-jacs-4c13568-gap-ncs-2`, `zhou2025-jacs-4c13568-in1xgaxp-ncs-4`, `zhou2025-jacs-4c13568-inp-ncs-3` | B38 | 2026-10-16T12:30:32+00:00 | yes |
+| 10.1021/jp069006m | `reddy2007-jp069006m-sno2-mwnt-3`, `reddy2007-jp069006m-tio2-mwnt-2` | B38 | 2026-10-16T12:30:32+00:00 | no |
+| 10.1021/jp201740q | `rao2011-jp201740q-nis2-nanocrystalline-film-prepared-at-30-1`, `rao2011-jp201740q-nis2-nanocrystalline-film-prepared-at-60-2` | B38 | 2026-10-16T12:30:32+00:00 | yes |
+| 10.1021/jp305131m | `han2012-jp305131m-a-stv-qdot-a-aunp-clusters-1` | B38 | 2026-10-16T12:30:32+00:00 | no |
+| 10.1021/jp4117529 | `authors2014-jp4117529-cus-ec-composite-1` | B38 | 2026-10-16T12:30:32+00:00 | no |
+| 10.1021/jp509849a | `xie2014-jp509849a-pdpt-coreshell-cubic-nanocrystals-1` | B38 | 2026-10-16T12:30:32+00:00 | yes |
+| 10.1021/jp803518y | `liu2008-jp803518y-bto-pc-composite-film-1`, `liu2008-jp803518y-pzt-pc-composite-film-2`, `liu2008-jp803518y-sbn-pc-composite-film-3` | B38 | 2026-10-16T12:30:32+00:00 | yes |
+| 10.1021/jp809028y | `he2009-jp809028y-nc-in2s3-1` | B38 | 2026-10-16T12:30:32+00:00 | yes |
+| 10.1021/la0477183 | `borchert2005-la0477183-copt3-nanocrystals-sample-a-1`, `borchert2005-la0477183-copt3-nanocrystals-sample-b-2` | B38 | 2026-10-16T12:30:32+00:00 | no |
+| 10.1021/la049516c | `song2004-la049516c-zsm-5-15-nm-1`, `song2004-la049516c-zsm-5-60-nm-2` | B38 | 2026-10-16T12:30:32+00:00 | yes |
+| 10.1021/la500876v | `schaeffer2014-la500876v-au5-c12-1`, `schaeffer2014-la500876v-au5-c14-2` | B38 | 2026-10-16T12:30:32+00:00 | no |
+| 10.1021/la702908y | `naoe2008-la702908y-palladium-nanocrystals-w-10-extracted-wi-1`, `naoe2008-la702908y-palladium-nanocrystals-w-20-extracted-wi-2` | B38 | 2026-10-16T12:30:32+00:00 | yes |
+| 10.1021/la901944x | `al2009-la901944x-wo3-nanoplatelets-anodized-at-20-v-for-1-1` | B38 | 2026-10-16T12:30:32+00:00 | yes |
+| 10.1021/nl0256661 | `konya2002-nl0256661-pt-nanoparticles-in-mesoporous-silica-sb-1` | B39 | 2026-10-16T12:30:32+00:00 | no |
+| 10.1021/nl500378k | `yin2014-nl500378k-tio2-nanocrystals-1` | B39 | 2026-10-16T12:30:32+00:00 | no |
+| 10.1021/nn1018208 | `salant2010-nn1018208-cdse-qds-2-5-nm-1` | B39 | 2026-10-16T12:30:32+00:00 | no |
+| 10.1021/nn103213y | `luo2011-nn103213y-mesoporous-magnetic-colloidal-nanocrysta-1` | B39 | 2026-10-16T12:30:32+00:00 | no |
+| 10.1038/nature09188 | `dong12010-nature09188-alb2-type-bnsl-membrane-1` | B39 | 2026-10-16T12:30:32+00:00 | no |
+| 10.1039/b009372f | `pethkar2001-b009372f-silver-quantum-dot-superlattice-1` | B39 | 2026-10-16T12:30:32+00:00 | no |
+| 10.1039/b309059k | `richards2003-b309059k-ap-mgo-1` | B39 | 2026-10-16T12:30:32+00:00 | yes |
+| 10.1039/b314397j | `qiu2004-b314397j-mwcnts-decorated-with-tin-nanoparticles-1` | B39 | 2026-10-16T12:30:32+00:00 | no |
+| 10.1039/b415044a | `luca2005-b415044a-sisb-150-0-1`, `luca2005-b415044a-sisb-150-15-3`, `luca2005-b415044a-sisb-150-5-2` | B39 | 2026-10-16T12:30:32+00:00 | yes |
+| 10.1039/b818825d | `kiyonaga2009-b818825d-au-d-6-0-nm-sno2-1` | B39 | 2026-10-16T12:30:32+00:00 | no |
+| 10.1039/b905256a | `mashford2009-b905256a-cdse-zns-coreshell-qds-1` | B39 | 2026-10-16T12:30:32+00:00 | no |
+| 10.1039/c000379d | `zhang2010-c000379d-a-nayf4-20-wt-yb3-2-wt-er3-nanocrystals-1` | B39 | 2026-10-16T12:30:32+00:00 | yes |
+| 10.1039/c0jm00726a | `c0jm00726a-magnetite-hollow-porous-nanocrystal-shel-1` | B39 | 2026-10-16T12:30:32+00:00 | no |
+| 10.1039/d2ra07726d | `zhang2023-d2ra07726d-bi2o3qds-biocl-heterojunction-1` | B39 | 2026-10-16T12:30:32+00:00 | yes |
+| 10.1063/1.109228 | `paine1993-1-109228-nanocrystalline-ge-embedded-in-sio2-1` | B39 | 2026-10-16T12:30:32+00:00 | yes |
+| 10.1063/1.1476388 | `wang2002-1-1476388-al85ni5y8co2-metallic-glass-with-quenche-1` | B39 | 2026-10-16T12:30:32+00:00 | yes |
+| 10.1063/1.1538181 | `peng2003-1-1538181-y2o3-eu3-ncs-4-nm-1` | B39 | 2026-10-16T12:30:32+00:00 | yes |
+| 10.1063/1.2240114 | `hanke2006-1-2240114-gaas-quantum-dot-molecules-qdms-1` | B39 | 2026-10-16T12:30:32+00:00 | no |
+| 10.1063/1.2400079 | `yue2006-1-2400079-bulk-nanocrystalline-gd-annealed-2`, `yue2006-1-2400079-bulk-nanocrystalline-gd-as-sintered-1` | B39 | 2026-10-16T12:30:32+00:00 | yes |
+| 10.1063/1.2817825 | `gopinadhan2007-1-2817825-sn0-90mn0-10o2-1` | B39 | 2026-10-16T12:30:32+00:00 | yes |
+| 10.1063/1.2890149 | `1-2890149-ingaas-qdms-1` | B39 | 2026-10-16T12:30:32+00:00 | no |
+| 10.1063/1.3043846 | `zhu2008-1-3043846-nanocrystalline-sic-1` | B39 | 2026-10-16T12:30:32+00:00 | yes |
+| 10.1063/1.362408 | `1-362408-fe50al50-alloy-1` | B39 | 2026-10-16T12:30:32+00:00 | yes |
+| 10.1111/j.1551-2916.2005.00552.x | `polotai2005-j-1551-2916-2005-00552-x-nanocrystalline-barium-titanate-ceramic-2`, `polotai2005-j-1551-2916-2005-00552-x-nanocrystalline-barium-titanate-powder-1` | B39 | 2026-10-16T12:30:32+00:00 | no |
 
 Source-extracted display contributions only; saved read markers add no independent audit or training-ready credit. All earlier index rows remain unchanged.

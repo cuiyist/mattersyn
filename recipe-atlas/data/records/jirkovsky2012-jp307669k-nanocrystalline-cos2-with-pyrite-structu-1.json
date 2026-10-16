@@ -1,0 +1,545 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "jirkovsky2012-jp307669k-nanocrystalline-cos2-with-pyrite-structu-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Jakub S. Jirkovský et al. (2012): nanocrystalline CoS2 with pyrite structure",
+  "material": {
+    "formula": "CoS2",
+    "family": "CoS2 nanocrystals",
+    "elements": [
+      "Co",
+      "S"
+    ],
+    "components": [
+      "CoS2"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Hydrothermal",
+  "sources": [
+    {
+      "id": "jirkovsky2012-jp307669k",
+      "doi": "10.1021/jp307669k",
+      "title": "Reduction of Oxygen on Dispersed Nanocrystalline CoS2",
+      "authors": "Jakub S. Jirkovský; Alexander Björling; Elisabet Ahlberg",
+      "year": 2012,
+      "url": "https://doi.org/10.1021/jp307669k",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "jirkovsky2012-jp307669k",
+    "recipe_family": "jirkovsky2012-jp307669k-nanocrystalline-cos2-with-pyrite-structu-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "phase": {
+      "value": "pyrite",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "jirkovsky2012-jp307669k",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": 30,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "30 nm",
+      "evidence": [
+        {
+          "source_id": "jirkovsky2012-jp307669k",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "spherical",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "jirkovsky2012-jp307669k",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "jirkovsky2012-jp307669k-nanocrystalline-cos2-with-pyrite-structu-1--cocl25h2o",
+      "name": "CoCl2·5H2O",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "jirkovsky2012-jp307669k",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "jirkovsky2012-jp307669k-nanocrystalline-cos2-with-pyrite-structu-1--na2s2o3",
+      "name": "Na2S2O3",
+      "formula": null,
+      "role": "chalcogen_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "jirkovsky2012-jp307669k",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "jirkovsky2012-jp307669k-nanocrystalline-cos2-with-pyrite-structu-1--after-s01-dissolve",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "jirkovsky2012-jp307669k-nanocrystalline-cos2-with-pyrite-structu-1--cocl25h2o",
+        "jirkovsky2012-jp307669k-nanocrystalline-cos2-with-pyrite-structu-1--na2s2o3"
+      ]
+    },
+    {
+      "id": "jirkovsky2012-jp307669k-nanocrystalline-cos2-with-pyrite-structu-1--after-s02-heat",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "jirkovsky2012-jp307669k-nanocrystalline-cos2-with-pyrite-structu-1--after-s01-dissolve"
+      ]
+    },
+    {
+      "id": "jirkovsky2012-jp307669k-nanocrystalline-cos2-with-pyrite-structu-1--after-s03-filter",
+      "name": "mixture after step 3",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "jirkovsky2012-jp307669k-nanocrystalline-cos2-with-pyrite-structu-1--after-s02-heat"
+      ]
+    },
+    {
+      "id": "jirkovsky2012-jp307669k-nanocrystalline-cos2-with-pyrite-structu-1--after-s04-dry",
+      "name": "mixture after step 4",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "jirkovsky2012-jp307669k-nanocrystalline-cos2-with-pyrite-structu-1--after-s03-filter"
+      ]
+    },
+    {
+      "id": "jirkovsky2012-jp307669k-nanocrystalline-cos2-with-pyrite-structu-1--after-s05-ball-mill",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "jirkovsky2012-jp307669k-nanocrystalline-cos2-with-pyrite-structu-1--after-s04-dry"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-dissolve",
+      "action": "dissolve",
+      "label": "Dissolve CoCl2·5H2O and Na2S2O3 in water",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "jirkovsky2012-jp307669k-nanocrystalline-cos2-with-pyrite-structu-1--cocl25h2o",
+        "jirkovsky2012-jp307669k-nanocrystalline-cos2-with-pyrite-structu-1--na2s2o3"
+      ],
+      "outputs": [
+        "jirkovsky2012-jp307669k-nanocrystalline-cos2-with-pyrite-structu-1--after-s01-dissolve"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Dissolve CoCl2·5H2O and Na2S2O3 in water",
+      "evidence": [
+        {
+          "source_id": "jirkovsky2012-jp307669k",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-heat",
+      "action": "heat",
+      "label": "Heat the autoclave at 150 °C for 12 h",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-dissolve"
+      ],
+      "inputs": [
+        "jirkovsky2012-jp307669k-nanocrystalline-cos2-with-pyrite-structu-1--after-s01-dissolve"
+      ],
+      "outputs": [
+        "jirkovsky2012-jp307669k-nanocrystalline-cos2-with-pyrite-structu-1--after-s02-heat"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 150,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "150 °C",
+          "evidence": [
+            {
+              "source_id": "jirkovsky2012-jp307669k",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 12,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "12 h",
+          "evidence": [
+            {
+              "source_id": "jirkovsky2012-jp307669k",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Heat the autoclave at 150 °C for 12 h",
+      "evidence": [
+        {
+          "source_id": "jirkovsky2012-jp307669k",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-filter",
+      "action": "filter",
+      "label": "Filter the black powder",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-heat"
+      ],
+      "inputs": [
+        "jirkovsky2012-jp307669k-nanocrystalline-cos2-with-pyrite-structu-1--after-s02-heat"
+      ],
+      "outputs": [
+        "jirkovsky2012-jp307669k-nanocrystalline-cos2-with-pyrite-structu-1--after-s03-filter"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Filter the black powder",
+      "evidence": [
+        {
+          "source_id": "jirkovsky2012-jp307669k",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s04-dry",
+      "action": "dry",
+      "label": "Dry the powder at 60 °C",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s03-filter"
+      ],
+      "inputs": [
+        "jirkovsky2012-jp307669k-nanocrystalline-cos2-with-pyrite-structu-1--after-s03-filter"
+      ],
+      "outputs": [
+        "jirkovsky2012-jp307669k-nanocrystalline-cos2-with-pyrite-structu-1--after-s04-dry"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 60,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "60 °C",
+          "evidence": [
+            {
+              "source_id": "jirkovsky2012-jp307669k",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Dry the powder at 60 °C",
+      "evidence": [
+        {
+          "source_id": "jirkovsky2012-jp307669k",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s05-ball-mill",
+      "action": "ball mill",
+      "label": "Ball mill the as-prepared CoS2 in water for 12 h",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s04-dry"
+      ],
+      "inputs": [
+        "jirkovsky2012-jp307669k-nanocrystalline-cos2-with-pyrite-structu-1--after-s04-dry"
+      ],
+      "outputs": [
+        "jirkovsky2012-jp307669k-nanocrystalline-cos2-with-pyrite-structu-1--after-s05-ball-mill"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 12,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "12 h",
+          "evidence": [
+            {
+              "source_id": "jirkovsky2012-jp307669k",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Ball mill the as-prepared CoS2 in water for 12 h",
+      "evidence": [
+        {
+          "source_id": "jirkovsky2012-jp307669k",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "jirkovsky2012-jp307669k-nanocrystalline-cos2-with-pyrite-structu-1--product",
+      "source_sample_label": "nanocrystalline CoS2 with pyrite structure",
+      "batch_id": null,
+      "material_state_id": "jirkovsky2012-jp307669k-nanocrystalline-cos2-with-pyrite-structu-1--after-s05-ball-mill",
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "phase": {
+        "value": "pyrite",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jirkovsky2012-jp307669k",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "spherical",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jirkovsky2012-jp307669k",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "jirkovsky2012-jp307669k",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reactor: 40 mL PEEK-lined stainless steel autoclave (Main PDF p.2).",
+        "Reaction temperature: 150 degC (Main PDF p.2).",
+        "Reaction time: 12 h (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "jirkovsky2012-jp307669k-nanocrystalline-cos2-with-pyrite-structu-1--size",
+      "sample_id": "jirkovsky2012-jp307669k-nanocrystalline-cos2-with-pyrite-structu-1--product",
+      "property": "crystallite_size",
+      "technique": "XRD",
+      "value": {
+        "value": 30,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "30 nm",
+        "evidence": [
+          {
+            "source_id": "jirkovsky2012-jp307669k",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "jirkovsky2012-jp307669k",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Ligand not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Amount of CoCl2·5H2O not reported in the extracted text.",
+      "Amount of Na2S2O3 not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

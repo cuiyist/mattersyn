@@ -1,0 +1,441 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "santilli1999-jp984129v-sno2-xerogel-doped-with-5-0-mol-cu-2",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "C. V. Santilli (1999): SnO2 xerogel doped with 5.0 mol % Cu",
+  "material": {
+    "formula": "SnO2",
+    "family": "SnO2 nanocrystals",
+    "elements": [
+      "Sn",
+      "O"
+    ],
+    "components": [
+      "SnO2"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Sol-gel",
+  "sources": [
+    {
+      "id": "santilli1999-jp984129v",
+      "doi": "10.1021/jp984129v",
+      "title": "Sintering and Crystallite Growth of Nanocrystalline Copper Doped Tin Oxide",
+      "authors": "C. V. Santilli, S. H. Pulcinelli, G. E. S. Brito, V. Briois",
+      "year": 1999,
+      "url": "https://doi.org/10.1021/jp984129v",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "santilli1999-jp984129v",
+    "recipe_family": "santilli1999-jp984129v-sno2-xerogel-doped-with-5-0-mol-cu-2",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "SnO2",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "santilli1999-jp984129v",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "cassiterite",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "santilli1999-jp984129v",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "santilli1999-jp984129v-sno2-xerogel-doped-with-5-0-mol-cu-2--sncl45h2o",
+      "name": "SnCl4·5H2O",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "workup",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "amount": {
+          "value": 0.42,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mol·L⁻¹",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0.42 mol·L⁻¹",
+          "evidence": [
+            {
+              "source_id": "santilli1999-jp984129v",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "santilli1999-jp984129v",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "santilli1999-jp984129v-sno2-xerogel-doped-with-5-0-mol-cu-2--cuco3cu-oh-2",
+      "name": "CuCO3·Cu(OH)2",
+      "formula": null,
+      "role": "reagent",
+      "stage": "workup",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "santilli1999-jp984129v",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "santilli1999-jp984129v-sno2-xerogel-doped-with-5-0-mol-cu-2--after-s01-precipitate",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "santilli1999-jp984129v-sno2-xerogel-doped-with-5-0-mol-cu-2--sncl45h2o",
+        "santilli1999-jp984129v-sno2-xerogel-doped-with-5-0-mol-cu-2--cuco3cu-oh-2"
+      ]
+    },
+    {
+      "id": "santilli1999-jp984129v-sno2-xerogel-doped-with-5-0-mol-cu-2--after-s02-dialyze",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "santilli1999-jp984129v-sno2-xerogel-doped-with-5-0-mol-cu-2--after-s01-precipitate",
+        "santilli1999-jp984129v-sno2-xerogel-doped-with-5-0-mol-cu-2--sncl45h2o",
+        "santilli1999-jp984129v-sno2-xerogel-doped-with-5-0-mol-cu-2--cuco3cu-oh-2"
+      ]
+    },
+    {
+      "id": "santilli1999-jp984129v-sno2-xerogel-doped-with-5-0-mol-cu-2--after-s03-evaporate",
+      "name": "mixture after step 3",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "santilli1999-jp984129v-sno2-xerogel-doped-with-5-0-mol-cu-2--after-s02-dialyze",
+        "santilli1999-jp984129v-sno2-xerogel-doped-with-5-0-mol-cu-2--sncl45h2o",
+        "santilli1999-jp984129v-sno2-xerogel-doped-with-5-0-mol-cu-2--cuco3cu-oh-2"
+      ]
+    },
+    {
+      "id": "santilli1999-jp984129v-sno2-xerogel-doped-with-5-0-mol-cu-2--after-s04-dry",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "santilli1999-jp984129v-sno2-xerogel-doped-with-5-0-mol-cu-2--after-s03-evaporate",
+        "santilli1999-jp984129v-sno2-xerogel-doped-with-5-0-mol-cu-2--sncl45h2o",
+        "santilli1999-jp984129v-sno2-xerogel-doped-with-5-0-mol-cu-2--cuco3cu-oh-2"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-precipitate",
+      "action": "precipitate",
+      "label": "Precipitation by aqueous ammonium at pH 11",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "santilli1999-jp984129v-sno2-xerogel-doped-with-5-0-mol-cu-2--sncl45h2o",
+        "santilli1999-jp984129v-sno2-xerogel-doped-with-5-0-mol-cu-2--cuco3cu-oh-2"
+      ],
+      "outputs": [
+        "santilli1999-jp984129v-sno2-xerogel-doped-with-5-0-mol-cu-2--after-s01-precipitate"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Precipitation by aqueous ammonium at pH 11",
+      "evidence": [
+        {
+          "source_id": "santilli1999-jp984129v",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-dialyze",
+      "action": "dialyze",
+      "label": "Dialysis against bidistilled water",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-precipitate"
+      ],
+      "inputs": [
+        "santilli1999-jp984129v-sno2-xerogel-doped-with-5-0-mol-cu-2--after-s01-precipitate",
+        "santilli1999-jp984129v-sno2-xerogel-doped-with-5-0-mol-cu-2--sncl45h2o",
+        "santilli1999-jp984129v-sno2-xerogel-doped-with-5-0-mol-cu-2--cuco3cu-oh-2"
+      ],
+      "outputs": [
+        "santilli1999-jp984129v-sno2-xerogel-doped-with-5-0-mol-cu-2--after-s02-dialyze"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Dialysis against bidistilled water",
+      "evidence": [
+        {
+          "source_id": "santilli1999-jp984129v",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-evaporate",
+      "action": "evaporate",
+      "label": "Partial evaporation of water at 45 °C",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-dialyze"
+      ],
+      "inputs": [
+        "santilli1999-jp984129v-sno2-xerogel-doped-with-5-0-mol-cu-2--after-s02-dialyze",
+        "santilli1999-jp984129v-sno2-xerogel-doped-with-5-0-mol-cu-2--sncl45h2o",
+        "santilli1999-jp984129v-sno2-xerogel-doped-with-5-0-mol-cu-2--cuco3cu-oh-2"
+      ],
+      "outputs": [
+        "santilli1999-jp984129v-sno2-xerogel-doped-with-5-0-mol-cu-2--after-s03-evaporate"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 45,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "45 °C",
+          "evidence": [
+            {
+              "source_id": "santilli1999-jp984129v",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Partial evaporation of water at 45 °C",
+      "evidence": [
+        {
+          "source_id": "santilli1999-jp984129v",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s04-dry",
+      "action": "dry",
+      "label": "Drying at room temperature",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s03-evaporate"
+      ],
+      "inputs": [
+        "santilli1999-jp984129v-sno2-xerogel-doped-with-5-0-mol-cu-2--after-s03-evaporate",
+        "santilli1999-jp984129v-sno2-xerogel-doped-with-5-0-mol-cu-2--sncl45h2o",
+        "santilli1999-jp984129v-sno2-xerogel-doped-with-5-0-mol-cu-2--cuco3cu-oh-2"
+      ],
+      "outputs": [
+        "santilli1999-jp984129v-sno2-xerogel-doped-with-5-0-mol-cu-2--after-s04-dry"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Drying at room temperature",
+      "evidence": [
+        {
+          "source_id": "santilli1999-jp984129v",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "santilli1999-jp984129v-sno2-xerogel-doped-with-5-0-mol-cu-2--product",
+      "source_sample_label": "SnO2 xerogel doped with 5.0 mol % Cu",
+      "batch_id": null,
+      "material_state_id": "santilli1999-jp984129v-sno2-xerogel-doped-with-5-0-mol-cu-2--after-s04-dry",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "SnO2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "santilli1999-jp984129v",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "cassiterite",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "santilli1999-jp984129v",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": "none",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "santilli1999-jp984129v",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "santilli1999-jp984129v",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "notes": [
+        "Reactor: Teflon beaker (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Shape not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of CuCO3·Cu(OH)2 not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

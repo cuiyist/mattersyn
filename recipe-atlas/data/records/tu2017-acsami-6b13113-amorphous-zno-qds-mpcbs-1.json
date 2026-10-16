@@ -1,0 +1,426 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "tu2017-acsami-6b13113-amorphous-zno-qds-mpcbs-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Zhiming Tu et al. (2017): amorphous ZnO QDs/MPCBs",
+  "material": {
+    "formula": "ZnO",
+    "family": "ZnO nanocrystals",
+    "elements": [
+      "Zn",
+      "O"
+    ],
+    "components": [
+      "ZnO"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Physical vapor deposition",
+  "sources": [
+    {
+      "id": "tu2017-acsami-6b13113",
+      "doi": "10.1021/acsami.6b13113",
+      "title": "Amorphous ZnO Quantum Dot/Mesoporous Carbon Bubble Composites for a High-Performance Lithium-Ion Battery Anode",
+      "authors": "Zhiming Tu, Gongzheng Yang, Huawei Song, Chengxin Wang",
+      "year": 2017,
+      "url": "https://doi.org/10.1021/acsami.6b13113",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "tu2017-acsami-6b13113",
+    "recipe_family": "tu2017-acsami-6b13113-amorphous-zno-qds-mpcbs-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "ZnO",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "tu2017-acsami-6b13113",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "amorphous",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "tu2017-acsami-6b13113",
+          "locator": "Main PDF p.4"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": 3.0,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "3 nm",
+      "evidence": [
+        {
+          "source_id": "tu2017-acsami-6b13113",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "quantum dot",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "tu2017-acsami-6b13113",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "tu2017-acsami-6b13113-amorphous-zno-qds-mpcbs-1--glucose",
+      "name": "glucose",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "mass": {
+          "value": 120,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mg",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "120 mg",
+          "evidence": [
+            {
+              "source_id": "tu2017-acsami-6b13113",
+              "locator": "Main PDF p.6"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "tu2017-acsami-6b13113",
+          "locator": "Main PDF p.6"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "tu2017-acsami-6b13113-amorphous-zno-qds-mpcbs-1--after-s01-heat",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "tu2017-acsami-6b13113-amorphous-zno-qds-mpcbs-1--glucose"
+      ]
+    },
+    {
+      "id": "tu2017-acsami-6b13113-amorphous-zno-qds-mpcbs-1--after-s02-anneal",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "tu2017-acsami-6b13113-amorphous-zno-qds-mpcbs-1--after-s01-heat",
+        "tu2017-acsami-6b13113-amorphous-zno-qds-mpcbs-1--glucose"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-heat",
+      "action": "heat",
+      "label": "Heating under vacuum",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "tu2017-acsami-6b13113-amorphous-zno-qds-mpcbs-1--glucose"
+      ],
+      "outputs": [
+        "tu2017-acsami-6b13113-amorphous-zno-qds-mpcbs-1--after-s01-heat"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 780,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "780 °C",
+          "evidence": [
+            {
+              "source_id": "tu2017-acsami-6b13113",
+              "locator": "Main PDF p.6"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 20,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "20 min",
+          "evidence": [
+            {
+              "source_id": "tu2017-acsami-6b13113",
+              "locator": "Main PDF p.6"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "vacuum",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "tu2017-acsami-6b13113",
+            "locator": "Main PDF p.6"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Heating under vacuum",
+      "evidence": [
+        {
+          "source_id": "tu2017-acsami-6b13113",
+          "locator": "Main PDF p.6"
+        }
+      ]
+    },
+    {
+      "id": "s02-anneal",
+      "action": "anneal",
+      "label": "Annealing under vacuum",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-heat"
+      ],
+      "inputs": [
+        "tu2017-acsami-6b13113-amorphous-zno-qds-mpcbs-1--after-s01-heat",
+        "tu2017-acsami-6b13113-amorphous-zno-qds-mpcbs-1--glucose"
+      ],
+      "outputs": [
+        "tu2017-acsami-6b13113-amorphous-zno-qds-mpcbs-1--after-s02-anneal"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 350,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "350 °C",
+          "evidence": [
+            {
+              "source_id": "tu2017-acsami-6b13113",
+              "locator": "Main PDF p.6"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 30,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "30 min",
+          "evidence": [
+            {
+              "source_id": "tu2017-acsami-6b13113",
+              "locator": "Main PDF p.6"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "vacuum",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "tu2017-acsami-6b13113",
+            "locator": "Main PDF p.6"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Annealing under vacuum",
+      "evidence": [
+        {
+          "source_id": "tu2017-acsami-6b13113",
+          "locator": "Main PDF p.6"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "tu2017-acsami-6b13113-amorphous-zno-qds-mpcbs-1--product",
+      "source_sample_label": "amorphous ZnO QDs/MPCBs",
+      "batch_id": null,
+      "material_state_id": "tu2017-acsami-6b13113-amorphous-zno-qds-mpcbs-1--after-s02-anneal",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "ZnO",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "tu2017-acsami-6b13113",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "amorphous",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "tu2017-acsami-6b13113",
+            "locator": "Main PDF p.4"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "quantum dot",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "tu2017-acsami-6b13113",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": "amorphous carbon matrix",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "tu2017-acsami-6b13113",
+            "locator": "Main PDF p.4"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "tu2017-acsami-6b13113",
+          "locator": "Main PDF p.6"
+        }
+      ],
+      "notes": [
+        "Reactor: tubular furnace (Main PDF p.6).",
+        "Reaction temperature: 780 degC (Main PDF p.6).",
+        "Reaction time: 20 min (Main PDF p.6)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "tu2017-acsami-6b13113-amorphous-zno-qds-mpcbs-1--size",
+      "sample_id": "tu2017-acsami-6b13113-amorphous-zno-qds-mpcbs-1--product",
+      "property": "particle_size",
+      "technique": "not reported",
+      "value": {
+        "value": 3.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "3 nm",
+        "evidence": [
+          {
+            "source_id": "tu2017-acsami-6b13113",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "tu2017-acsami-6b13113",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

@@ -1,0 +1,348 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "hu2018-acsanm-8b01799-g1-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Huawen Hu et al. (2018): G1",
+  "material": {
+    "formula": "C, O",
+    "family": "C, O nanocrystals",
+    "elements": [
+      "C",
+      "O"
+    ],
+    "components": [
+      "C, O"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Chemical reduction",
+  "sources": [
+    {
+      "id": "hu2018-acsanm-8b01799",
+      "doi": "10.1021/acsanm.8b01799",
+      "title": "A Reduced Graphene Oxide Quantum Dot-Based Adsorbent for Efficiently Binding with Organic Pollutants",
+      "authors": "Huawen Hu; Haiyan Quan; Biqi Zhong; Zheng Li; Yonghao Huang; Xiaowen Wang; Min Zhang; Dongchu Chen",
+      "year": 2018,
+      "url": "https://doi.org/10.1021/acsanm.8b01799",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "hu2018-acsanm-8b01799",
+    "recipe_family": "hu2018-acsanm-8b01799-g1-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "C, O",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "hu2018-acsanm-8b01799",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "hu2018-acsanm-8b01799-g1-1--l-ascorbic-acid",
+      "name": "L-(+)-Ascorbic acid",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "mass": {
+          "value": 2.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "g",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "2 g",
+          "evidence": [
+            {
+              "source_id": "hu2018-acsanm-8b01799",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "hu2018-acsanm-8b01799",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "hu2018-acsanm-8b01799-g1-1--after-s01-disperse",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "hu2018-acsanm-8b01799-g1-1--after-s02-add",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "hu2018-acsanm-8b01799-g1-1--after-s01-disperse",
+        "hu2018-acsanm-8b01799-g1-1--l-ascorbic-acid"
+      ]
+    },
+    {
+      "id": "hu2018-acsanm-8b01799-g1-1--after-s03-stir",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "hu2018-acsanm-8b01799-g1-1--after-s02-add",
+        "hu2018-acsanm-8b01799-g1-1--l-ascorbic-acid"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-disperse",
+      "action": "disperse",
+      "label": "The prepared GO powder was homogeneously dispersed in deionized water by ultrasonication",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "hu2018-acsanm-8b01799-g1-1--after-s01-disperse"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "The prepared GO powder was homogeneously dispersed in deionized water by ultrasonication",
+      "evidence": [
+        {
+          "source_id": "hu2018-acsanm-8b01799",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-add",
+      "action": "add",
+      "label": "VC powder was added to the dispersion",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-disperse"
+      ],
+      "inputs": [
+        "hu2018-acsanm-8b01799-g1-1--after-s01-disperse",
+        "hu2018-acsanm-8b01799-g1-1--l-ascorbic-acid"
+      ],
+      "outputs": [
+        "hu2018-acsanm-8b01799-g1-1--after-s02-add"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "VC powder was added to the dispersion",
+      "evidence": [
+        {
+          "source_id": "hu2018-acsanm-8b01799",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-stir",
+      "action": "stir",
+      "label": "The reaction was carried out by magnetic stirring at room temperature for 8 hours",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-add"
+      ],
+      "inputs": [
+        "hu2018-acsanm-8b01799-g1-1--after-s02-add",
+        "hu2018-acsanm-8b01799-g1-1--l-ascorbic-acid"
+      ],
+      "outputs": [
+        "hu2018-acsanm-8b01799-g1-1--after-s03-stir"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 8,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "8 h",
+          "evidence": [
+            {
+              "source_id": "hu2018-acsanm-8b01799",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "The reaction was carried out by magnetic stirring at room temperature for 8 hours",
+      "evidence": [
+        {
+          "source_id": "hu2018-acsanm-8b01799",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "hu2018-acsanm-8b01799-g1-1--product",
+      "source_sample_label": "G1",
+      "batch_id": null,
+      "material_state_id": "hu2018-acsanm-8b01799-g1-1--after-s03-stir",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "C, O",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "hu2018-acsanm-8b01799",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "hu2018-acsanm-8b01799",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reaction temperature: 25 degC (Main PDF p.2).",
+        "Reaction time: 8 h (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

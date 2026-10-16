@@ -1,0 +1,289 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "mazzera2013-jp4101174-sio2-eu3-0-001-mol-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Andrea Baraldi et al. (2013): SiO2:Eu3+ 0.001 mol %",
+  "material": {
+    "formula": "SiO2:Eu3+",
+    "family": "SiO2:Eu3+ nanocrystals",
+    "elements": [
+      "Si",
+      "O",
+      "Eu"
+    ],
+    "components": [
+      "SiO2:Eu3+"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Sol−gel",
+  "sources": [
+    {
+      "id": "mazzera2013-jp4101174",
+      "doi": "10.1021/jp4101174",
+      "title": "Eu Incorporation into Sol–Gel Silica for Photonic Applications: Spectroscopic and TEM Evidences of α-Quartz and Eu Pyrosilicate Nanocrystal Growth",
+      "authors": "Andrea Baraldi; Elisa Buffagni; Rosanna Capelletti; Margherita Mazzera; Mauro Fasoli; Alessandro Lauria; Federico Moretti; Anna Vedda; Mauro Gemmi",
+      "year": 2013,
+      "url": "https://doi.org/10.1021/jp4101174",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "mazzera2013-jp4101174",
+    "recipe_family": "mazzera2013-jp4101174-sio2-eu3-0-001-mol-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "phase": {
+      "value": "amorphous",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "mazzera2013-jp4101174",
+          "locator": "Main PDF p.15"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "mazzera2013-jp4101174-sio2-eu3-0-001-mol-1--tetraethyl-orthosilicate-teos",
+      "name": "tetraethyl orthosilicate (TEOS)",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "mazzera2013-jp4101174",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "mazzera2013-jp4101174-sio2-eu3-0-001-mol-1--after-s01-add",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "mazzera2013-jp4101174-sio2-eu3-0-001-mol-1--after-s02-heat",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "mazzera2013-jp4101174-sio2-eu3-0-001-mol-1--after-s01-add"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-add",
+      "action": "add",
+      "label": "Adding europium nitrate pentahydrate under stirring",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "mazzera2013-jp4101174-sio2-eu3-0-001-mol-1--after-s01-add"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "O2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "mazzera2013-jp4101174",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Adding europium nitrate pentahydrate under stirring",
+      "evidence": [
+        {
+          "source_id": "mazzera2013-jp4101174",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-heat",
+      "action": "heat",
+      "label": "Sintering at 1050 °C",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-add"
+      ],
+      "inputs": [
+        "mazzera2013-jp4101174-sio2-eu3-0-001-mol-1--after-s01-add"
+      ],
+      "outputs": [
+        "mazzera2013-jp4101174-sio2-eu3-0-001-mol-1--after-s02-heat"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 1050,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1050 °C",
+          "evidence": [
+            {
+              "source_id": "mazzera2013-jp4101174",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "O2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "mazzera2013-jp4101174",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Sintering at 1050 °C",
+      "evidence": [
+        {
+          "source_id": "mazzera2013-jp4101174",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "mazzera2013-jp4101174-sio2-eu3-0-001-mol-1--product",
+      "source_sample_label": "SiO2:Eu3+ 0.001 mol %",
+      "batch_id": null,
+      "material_state_id": "mazzera2013-jp4101174-sio2-eu3-0-001-mol-1--after-s02-heat",
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "phase": {
+        "value": "amorphous",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "mazzera2013-jp4101174",
+            "locator": "Main PDF p.15"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "mazzera2013-jp4101174",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reactor: polypropylene screw-cap flasks (Main PDF p.2).",
+        "Reaction temperature: 1050 degC (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of tetraethyl orthosilicate (TEOS) not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

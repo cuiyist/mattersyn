@@ -1,0 +1,334 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "fang2007-s11051-006-9171-9-nanocrystalline-sno2-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Zhen Fang (2007): nanocrystalline SnO2",
+  "material": {
+    "formula": "SnO2",
+    "family": "SnO2 nanocrystals",
+    "elements": [
+      "Sn",
+      "O"
+    ],
+    "components": [
+      "SnO2"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Supercritical water",
+  "sources": [
+    {
+      "id": "fang2007-s11051-006-9171-9",
+      "doi": "10.1007/s11051-006-9171-9",
+      "title": "Synthesis of nanocrystalline SnO2 in supercritical water",
+      "authors": "Zhen Fang, Hassane Assaaoudi, Hanbai Lin, Xiaoming Wang, Ian S. Butler, Janusz A. Kozinski",
+      "year": 2007,
+      "url": "https://doi.org/10.1007/s11051-006-9171-9",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "fang2007-s11051-006-9171-9",
+    "recipe_family": "fang2007-s11051-006-9171-9-nanocrystalline-sno2-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "SnO2",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "fang2007-s11051-006-9171-9",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "tetragonal",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "fang2007-s11051-006-9171-9",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": 3.7,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "3.7 nm",
+      "evidence": [
+        {
+          "source_id": "fang2007-s11051-006-9171-9",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "nanoparticle",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "fang2007-s11051-006-9171-9",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "fang2007-s11051-006-9171-9-nanocrystalline-sno2-1--sncl4",
+      "name": "SnCl4",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "concentration": {
+          "value": 0.1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "M",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0.1 M",
+          "evidence": [
+            {
+              "source_id": "fang2007-s11051-006-9171-9",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "fang2007-s11051-006-9171-9",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "fang2007-s11051-006-9171-9-nanocrystalline-sno2-1--after-s01-separate",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "fang2007-s11051-006-9171-9-nanocrystalline-sno2-1--after-s02-calcinate",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "fang2007-s11051-006-9171-9-nanocrystalline-sno2-1--after-s01-separate"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-separate",
+      "action": "separate",
+      "label": "Separate the effluent to obtain solid particles",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "fang2007-s11051-006-9171-9-nanocrystalline-sno2-1--after-s01-separate"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Separate the effluent to obtain solid particles",
+      "evidence": [
+        {
+          "source_id": "fang2007-s11051-006-9171-9",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-calcinate",
+      "action": "calcinate",
+      "label": "Calcinate the solid samples",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-separate"
+      ],
+      "inputs": [
+        "fang2007-s11051-006-9171-9-nanocrystalline-sno2-1--after-s01-separate"
+      ],
+      "outputs": [
+        "fang2007-s11051-006-9171-9-nanocrystalline-sno2-1--after-s02-calcinate"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Calcinate the solid samples",
+      "evidence": [
+        {
+          "source_id": "fang2007-s11051-006-9171-9",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "fang2007-s11051-006-9171-9-nanocrystalline-sno2-1--product",
+      "source_sample_label": "nanocrystalline SnO2",
+      "batch_id": null,
+      "material_state_id": "fang2007-s11051-006-9171-9-nanocrystalline-sno2-1--after-s02-calcinate",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "SnO2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "fang2007-s11051-006-9171-9",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "tetragonal",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "fang2007-s11051-006-9171-9",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "nanoparticle",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "fang2007-s11051-006-9171-9",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "fang2007-s11051-006-9171-9",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "notes": [
+        "Reactor: tubular flow reactor (Main PDF p.1)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "fang2007-s11051-006-9171-9-nanocrystalline-sno2-1--size",
+      "sample_id": "fang2007-s11051-006-9171-9-nanocrystalline-sno2-1--product",
+      "property": "diameter",
+      "technique": "TEM",
+      "value": {
+        "value": 3.7,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "3.7 nm",
+        "evidence": [
+          {
+            "source_id": "fang2007-s11051-006-9171-9",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "fang2007-s11051-006-9171-9",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Ligand not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
