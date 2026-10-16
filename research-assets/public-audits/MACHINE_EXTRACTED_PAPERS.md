@@ -1,5 +1,7 @@
 # Published machine-extracted papers
 
+Current verified index after B42/B43 (2026-10-16T19:10:05+00:00): **1217 source_extracted primary paper contributions /1816 display pairs**. This release adds42 DOI rows69IDs from original batchesB42/B43, with20 limited saved-read markers. Actual overall totals1461/4801/2680; audited244papers864pairs remain unchanged. Prior memberships, rows, histories and footer remain verbatim; no audit/gold/training credit.
+
 Current verified index after B40/B41 (2026-10-16T15:27:11+00:00): **1175 source_extracted primary paper contributions /1747 display pairs**. This release adds56 DOI rows85IDs from original batchesB40/B41, with32 limited saved-read markers. Actual overall totals1419/4732/2611; audited244papers864pairs remain unchanged. Prior memberships, rows, histories and footer remain verbatim; no audit/gold/training credit.
 
 Current verified index after B38/B39 (2026-10-16T12:30:32+00:00): **1119 source_extracted primary paper contributions /1662 display pairs**. This release adds56 DOI rows86IDs from original batchesB38/B39, with33 limited saved-read markers. Actual overall totals1363/4647/2526; audited244papers864pairs remain unchanged. Prior memberships, rows, histories and footer remain verbatim; no audit/gold/training credit.
@@ -1302,5 +1304,54 @@ Source-extracted display contributions only; saved read markers add no independe
 | 10.1063/1.1408262 | `que2001-1-1408262-neodymium-oxide-nanocrystals-titania-orm-1` | B41 | 2026-10-16T15:27:11+00:00 | yes |
 | 10.1063/1.1808420 | `chakradhar2004-1-1808420-zn2sio4-mn-1` | B41 | 2026-10-16T15:27:11+00:00 | yes |
 | 10.1063/1.1935136 | `kim2005-1-1935136-si-nanocrystals-in-siox-1` | B41 | 2026-10-16T15:27:11+00:00 | no |
+
+Source-extracted display contributions only; saved read markers add no independent audit or training-ready credit. All earlier index rows remain unchanged.
+
+## B42/B43 — verified 2026-10-16T19:10:05+00:00
+
+| DOI | Record IDs | Original batch | Live verification UTC | Limited saved rare read |
+| --- | --- | --- | --- | --- |
+| 10.1002/polb.21163 | `al2007-polb-21163-epoxy-a-zrp-nanocomposite-good-exfoliati-3`, `al2007-polb-21163-epoxy-a-zrp-nanocomposite-moderate-exfol-2`, `al2007-polb-21163-epoxy-a-zrp-nanocomposite-poor-exfoliati-1` | B42 | 2026-10-16T19:10:05+00:00 | yes |
+| 10.1007/s10008-006-0197-9 | `li2006-s10008-006-0197-9-co-oh-2ni-oh-2-usy-1` | B42 | 2026-10-16T19:10:05+00:00 | yes |
+| 10.1007/s10853-006-0098-4 | `patil2006-s10853-006-0098-4-nanocrystalline-pbs-thin-film-1` | B42 | 2026-10-16T19:10:05+00:00 | no |
+| 10.1007/s10853-006-0420-1 | `s10853-006-0420-1-eu2o3-nanocrystals-1` | B42 | 2026-10-16T19:10:05+00:00 | yes |
+| 10.1007/s11051-006-9177-3 | `zhang12007-s11051-006-9177-3-hydroxyapatite-hap-powder-spherical-morp-1` | B42 | 2026-10-16T19:10:05+00:00 | no |
+| 10.1007/s11434-006-2022-3 | `wanghe2006-s11434-006-2022-3-tio2-nanocrystalline-film-5-layers-1` | B42 | 2026-10-16T19:10:05+00:00 | no |
+| 10.1016/j.apsusc.2010.10.092 | `wu2011-j-apsusc-2010-10-092-zno-qd-mwcnt-hybrid-nanocomposite-1` | B42 | 2026-10-16T19:10:05+00:00 | no |
+| 10.1021/acs.cgd.7b01647 | `roslova2018-acs-cgd-7b01647-ni3bi2s2-flower-like-morphology-3`, `roslova2018-acs-cgd-7b01647-ni3bi2s2-rod-shaped-microstructures-1`, `roslova2018-acs-cgd-7b01647-ni3bi2s2-round-nanoparticles-2` | B42 | 2026-10-16T19:10:05+00:00 | yes |
+| 10.1021/acssuschemeng.8b02307 | `chen2018-acssuschemeng-8b02307-bhpfibers-pvp-laf3-eu3-composites-1` | B42 | 2026-10-16T19:10:05+00:00 | yes |
+| 10.1021/cm303022w | `zanella2013-cm303022w-au-nanocrystal-film-3`, `zanella2013-cm303022w-cdse-cds-nanocrystal-film-1`, `zanella2013-cm303022w-cdte-nanocrystal-film-2` | B42 | 2026-10-16T19:10:05+00:00 | no |
+| 10.1021/ja0002621 | `ryan2000-ja0002621-ag-1-1` | B43 | 2026-10-16T19:10:05+00:00 | no |
+| 10.1021/ja904981r | `guo2009-ja904981r-cztsse-nanocrystals-2` | B43 | 2026-10-16T19:10:05+00:00 | yes |
+| 10.1021/jacs.4c08565 | `livakas2024-jacs-4c08565-cspbcl3pbs-heterostructures-1` | B43 | 2026-10-16T19:10:05+00:00 | yes |
+| 10.1021/jacsau.1c00349 | `calcabrini2021-jacsau-1c00349-ceo2-x-ncs-1` | B43 | 2026-10-16T19:10:05+00:00 | yes |
+| 10.1021/jp9832950 | `aherne1999-jp9832950-au-i-ii-1` | B43 | 2026-10-16T19:10:05+00:00 | no |
+| 10.1021/jz300181a | `malkhandi2012-jz300181a-la0-6ca0-4coo3-1` | B43 | 2026-10-16T19:10:05+00:00 | yes |
+| 10.1021/la800091y | `smetana2008-la800091y-air-smad-silver-powder-3`, `smetana2008-la800091y-ligand-capped-silver-particles-3-mercapt-2`, `smetana2008-la800091y-smad-silver-powder-1` | B43 | 2026-10-16T19:10:05+00:00 | no |
+| 10.1021/la981659+ | `lim1999-la981659-hydroxyapatite-ha-powder-from-emulsion-s-1` | B43 | 2026-10-16T19:10:05+00:00 | no |
+| 10.1021/nl0259028 | `arabatzis2003-nl0259028-tio2-foam-1` | B43 | 2026-10-16T19:10:05+00:00 | no |
+| 10.1021/nl034312m | `sun2003-nl034312m-silver-nanowires-1` | B43 | 2026-10-16T19:10:05+00:00 | no |
+| 10.1021/nl048613n | `chakrabarti2005-nl048613n-inas-mn-quantum-dots-1` | B43 | 2026-10-16T19:10:05+00:00 | yes |
+| 10.1021/nl2034859 | `soni2012-nl2034859-bi2se3-nanoplatelet-composite-3`, `soni2012-nl2034859-bi2te2-7se0-3-nanoplatelet-composite-2`, `soni2012-nl2034859-bi2te3-nanoplatelet-composite-1` | B43 | 2026-10-16T19:10:05+00:00 | yes |
+| 10.1021/nl3021736 | `creasey2012-nl3021736-hexa-qdcs-1` | B43 | 2026-10-16T19:10:05+00:00 | no |
+| 10.1021/nn205029s | `al2012-nn205029s-pt-nanocrystal-superlattices-1` | B43 | 2026-10-16T19:10:05+00:00 | no |
+| 10.1021/nn4026806 | `lee2013-nn4026806-3-8-nm-ceo2-nanoparticles-coated-with-ol-1`, `lee2013-nn4026806-5-4-nm-ceo2-nanoparticles-coated-with-po-2`, `lee2013-nn4026806-8-2-nm-ceo2-nanoparticles-coated-with-po-3` | B43 | 2026-10-16T19:10:05+00:00 | no |
+| 10.1021/nn403872x | `al2013-nn403872x-530-nm-cdse-zns-qd-1`, `al2013-nn403872x-550-nm-cdse-zns-qd-2`, `al2013-nn403872x-580-nm-cdse-zns-qd-3`, `al2013-nn403872x-630-nm-cdse-cds-zns-qd-4` | B43 | 2026-10-16T19:10:05+00:00 | no |
+| 10.1021/nn5031302 | `jia2014-nn5031302-cnt-fe3o4-nanocomposite-1` | B43 | 2026-10-16T19:10:05+00:00 | no |
+| 10.1039/b412396d | `yun2004-b412396d-self-standing-mesoporous-nanocrystalline-1` | B43 | 2026-10-16T19:10:05+00:00 | yes |
+| 10.1039/c0nr00457j | `shi2010-c0nr00457j-pbse-nanocubes-on-peptide-nanotubes-1`, `shi2010-c0nr00457j-pbse-nanorods-on-peptide-nanotubes-2` | B43 | 2026-10-16T19:10:05+00:00 | no |
+| 10.1063/1.115964 | `dutta1996-1-115964-ge-nanocrystal-embedded-in-sio2-matrix-1` | B43 | 2026-10-16T19:10:05+00:00 | yes |
+| 10.1063/1.2404772 | `baruwati2007-1-2404772-nife2o4-ph-10-4`, `baruwati2007-1-2404772-nife2o4-ph-7-1`, `baruwati2007-1-2404772-nife2o4-ph-8-2`, `baruwati2007-1-2404772-nife2o4-ph-9-3` | B42 | 2026-10-16T19:10:05+00:00 | yes |
+| 10.1063/1.2769956 | `ohta2007-1-2769956-fe82-65cu1-35si2b14-1` | B42 | 2026-10-16T19:10:05+00:00 | yes |
+| 10.1063/1.2798502 | `lee2007-1-2798502-ordered-arrays-of-cobalt-nanocrystals-co-1` | B43 | 2026-10-16T19:10:05+00:00 | no |
+| 10.1063/1.3021085 | `hu2008-1-3021085-mgo-nanocrystalline-powders-annealed-at-1`, `hu2008-1-3021085-mgo-nanocrystalline-powders-annealed-at-2` | B42 | 2026-10-16T19:10:05+00:00 | yes |
+| 10.1063/1.3193531 | `konenkamp2009-1-3193531-cdse-coated-zno-nanowires-1` | B43 | 2026-10-16T19:10:05+00:00 | no |
+| 10.1063/1.357157 | `kawamura1994-1-357157-nanocrystalline-fe86zr7b6cu1-compact-1` | B42 | 2026-10-16T19:10:05+00:00 | yes |
+| 10.1063/1.368542 | `vossmeyer1998-1-368542-pt-nanocrystals-2` | B43 | 2026-10-16T19:10:05+00:00 | no |
+| 10.1063/1.370517 | `frase1999-1-370517-as-milled-ni3fe-1`, `frase1999-1-370517-ni3fe-annealed-at-265-c-2`, `frase1999-1-370517-ni3fe-annealed-at-600-c-3` | B42 | 2026-10-16T19:10:05+00:00 | yes |
+| 10.1103/physrevb.76.054406 | `prozorov2007-physrevb-76-054406-agarose-gel-magnetite-nanocrystals-5`, `prozorov2007-physrevb-76-054406-amb-1-magnetite-nanocrystals-1`, `prozorov2007-physrevb-76-054406-mc-1-magnetite-nanocrystals-2`, `prozorov2007-physrevb-76-054406-mms-1-magnetite-nanocrystals-3`, `prozorov2007-physrevb-76-054406-mv-1-magnetite-nanocrystals-4` | B42 | 2026-10-16T19:10:05+00:00 | no |
+| 10.1111/j.1365-2818.2009.03230.x | `dutkiewicz2010-j-1365-2818-2009-03230-x-ti25zr17ni29cu29-amorphous-nanocrystalli-1`, `dutkiewicz2010-j-1365-2818-2009-03230-x-ti25zr17ni29cu29-amorphous-nanocrystalli-2` | B43 | 2026-10-16T19:10:05+00:00 | yes |
+| 10.1111/j.1551-2916.2010.03691.x | `wang2010-j-1551-2916-2010-03691-x-pbtio3-pto-nanocrystals-calcined-at-450c-1` | B42 | 2026-10-16T19:10:05+00:00 | yes |
+| 10.1557/jmr.2005.0337 | `chavan2005-jmr-2005-0337-gdfeo3-propellant-ratio-1-1-66-1` | B42 | 2026-10-16T19:10:05+00:00 | no |
 
 Source-extracted display contributions only; saved read markers add no independent audit or training-ready credit. All earlier index rows remain unchanged.

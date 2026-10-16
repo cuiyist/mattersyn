@@ -1,0 +1,328 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "al2005-smll-200400019-sio2-qd-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Daniel E. Gómez et al. (2005): SiO2-QD",
+  "material": {
+    "formula": "CdSe@ZnS",
+    "family": "CdSe@ZnS nanocrystals",
+    "elements": [
+      "Cd",
+      "Se",
+      "Zn",
+      "S"
+    ],
+    "components": [
+      "CdSe",
+      "ZnS"
+    ],
+    "architecture": "core_shell"
+  },
+  "method": "Adsorption",
+  "sources": [
+    {
+      "id": "al2005-smll-200400019",
+      "doi": "10.1002/smll.200400019",
+      "title": "Tunable Whispering Gallery Mode Emission from Quantum‐Dot‐Doped Microspheres",
+      "authors": "Daniel E. Gómez; Isabel Pastoriza‐Santos; Paul Mulvaney",
+      "year": 2005,
+      "url": "https://doi.org/10.1002/smll.200400019",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "al2005-smll-200400019",
+    "recipe_family": "al2005-smll-200400019-sio2-qd-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdSe@ZnS",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "al2005-smll-200400019",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": 3.0,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "3 nm",
+      "evidence": [
+        {
+          "source_id": "al2005-smll-200400019",
+          "locator": "Main PDF p.4"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "al2005-smll-200400019-sio2-qd-1--cdse-zns-nanocrystals",
+      "name": "CdSe@ZnS nanocrystals",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "al2005-smll-200400019",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "al2005-smll-200400019-sio2-qd-1--polyethylenimine-pei",
+      "name": "polyethylenimine (PEI)",
+      "formula": null,
+      "role": "ligand",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "al2005-smll-200400019",
+          "locator": "Main PDF p.4"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "al2005-smll-200400019-sio2-qd-1--after-s01-adsorb",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "al2005-smll-200400019-sio2-qd-1--cdse-zns-nanocrystals"
+      ]
+    },
+    {
+      "id": "al2005-smll-200400019-sio2-qd-1--after-s02-wash",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "al2005-smll-200400019-sio2-qd-1--after-s01-adsorb"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-adsorb",
+      "action": "adsorb",
+      "label": "CdSe@ZnS nanocrystals were adsorbed onto PEI-coated silica particles by adding a suspension of NCs in chloroform directly to an aqueous solution of functionalized silica beads.",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "al2005-smll-200400019-sio2-qd-1--cdse-zns-nanocrystals"
+      ],
+      "outputs": [
+        "al2005-smll-200400019-sio2-qd-1--after-s01-adsorb"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "CdSe@ZnS nanocrystals were adsorbed onto PEI-coated silica particles by adding a suspension of NCs in chloroform directly to an aqueous solution of functionalized silica beads.",
+      "evidence": [
+        {
+          "source_id": "al2005-smll-200400019",
+          "locator": "Main PDF p.4"
+        }
+      ]
+    },
+    {
+      "id": "s02-wash",
+      "action": "wash",
+      "label": "The beads were washed by three centrifugation/redispersion cycles to remove non-adsorbed NCs.",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-adsorb"
+      ],
+      "inputs": [
+        "al2005-smll-200400019-sio2-qd-1--after-s01-adsorb"
+      ],
+      "outputs": [
+        "al2005-smll-200400019-sio2-qd-1--after-s02-wash"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "The beads were washed by three centrifugation/redispersion cycles to remove non-adsorbed NCs.",
+      "evidence": [
+        {
+          "source_id": "al2005-smll-200400019",
+          "locator": "Main PDF p.4"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "al2005-smll-200400019-sio2-qd-1--product",
+      "source_sample_label": "SiO2-QD",
+      "batch_id": null,
+      "material_state_id": "al2005-smll-200400019-sio2-qd-1--after-s02-wash",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdSe@ZnS",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "al2005-smll-200400019",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": "PEI",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "al2005-smll-200400019",
+            "locator": "Main PDF p.4"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "al2005-smll-200400019",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [
+    {
+      "id": "al2005-smll-200400019-sio2-qd-1--size",
+      "sample_id": "al2005-smll-200400019-sio2-qd-1--product",
+      "property": "particle_size",
+      "technique": "not reported",
+      "value": {
+        "value": 3.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "3 nm",
+        "evidence": [
+          {
+            "source_id": "al2005-smll-200400019",
+            "locator": "Main PDF p.4"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "al2005-smll-200400019",
+          "locator": "Main PDF p.4"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Shape not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of CdSe@ZnS nanocrystals not reported in the extracted text.",
+      "Amount of polyethylenimine (PEI) not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

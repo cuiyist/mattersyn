@@ -1,5 +1,16 @@
 Owner revisit list: [Machine-extracted papers](research-assets/public-audits/MACHINE_EXTRACTED_PAPERS.md).
 
+## B42/B43 pooled release verified — 2026-10-16T19:10:05+00:00
+
+**42 source_extracted papers /69 new canonical records /209 retained caption keys** are live and anonymously verified. Original contributions: B42 **18 papers/34 records/99 figures**, B43 **24 papers/35 records/110 figures**. Source `4d258d7df2fdc5c61c783bbce91eebbbf2f9deed` passed all three exact-head CI jobs and ordinary PR [60](https://github.com/cuiyist/mattersyn/pull/60), merge `f6e5b75ff9d6067567bacda9b0efc82807814e5f`. Site `92749b7af8920a2c507a301ba05739db98710f2f` passed [Pages 38950856165](https://github.com/cuiyist/mattersyn-site/actions/runs/38950856165). Anonymous verification checked 829 files, 42 planned paper routes and 61 material routes with zero failures. Final manifest 45164 files /2878322709 logical bytes.
+
+Actual build totals: **1461 primary paper IDs /4801 canonical records /2680 recipe–structure display pairs**. Audited contributions remain244 papers/864 pairs; SourceEx contributions 1217 papers/1816 pairs. No scientific accuracy, universal unit-cell completeness or training readiness is inferred.
+
+Original limited read history covers 23 papers /35 original ordinals /44 whole-object deletions, all retained before current selection. Exactly 20 of those DOI markers intersect this actual published42-paper scope; no independent audit or new source facts are inferred. All4,732 prior canonical record files remain raw-byte protected; this release makes0old-record corrections. Original saved deletion history and all prior routing/identity HOLD histories remain preserved. Owner questions, denominators/window and paused audit lane are unchanged.
+
+Storage carries the separately verified R29 Source checkpoint: 690725657488 cumulative logical copy bytes /12893114 copies, report `07ef064fd464ace8ebd4bc95210f721e70d54aa7`. This publication carries that independently completed cleanup checkpoint and establishes no isolated physical reclaim/free-space achievement. Later cleanup reports are separate. Saved private reads/captions add no publication credit before their own fresh admission.
+
+
 ## B42/B43 routing correction and release checks — 2026-10-16T16:45:05.763854+00:00
 
 The complete local build caught two new substrate-supported Ge routes under isolated Ge. Dutta's explicitly named Ge/SiO2 product now has component-aware navigation; its reported Ge composition, evidence and all other scientific values are unchanged. Oehme 2010 (DOI 10.1063/1.3462069) is held for product-system routing, preserving its private inputs and prior limited read; it is not classified as lacking synthesis. The converter has 30 passing regression tests. No release check, policy rule or audited record was changed.

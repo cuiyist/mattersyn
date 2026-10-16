@@ -1,0 +1,484 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "casula2006-ja056139x-iron-oxide-nanodisks-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Maria F. Casula (2006): iron oxide nanodisks",
+  "material": {
+    "formula": "Fe3O4",
+    "family": "Fe3O4 nanocrystals",
+    "elements": [
+      "Fe",
+      "O"
+    ],
+    "components": [
+      "Fe3O4"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Hot injection",
+  "sources": [
+    {
+      "id": "casula2006-ja056139x",
+      "doi": "10.1021/ja056139x",
+      "title": "The Concept of Delayed Nucleation in Nanocrystal Growth Demonstrated for the Case of Iron Oxide Nanodisks",
+      "authors": "Maria F. Casula, Young-wook Jun, David J. Zaziski, Emory M. Chan, Anna Corrias, A. Paul Alivisatos",
+      "year": 2006,
+      "url": "https://doi.org/10.1021/ja056139x",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "casula2006-ja056139x",
+    "recipe_family": "casula2006-ja056139x-iron-oxide-nanodisks-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Fe3O4",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "casula2006-ja056139x",
+          "locator": "Main PDF p.4"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "spinel",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "casula2006-ja056139x",
+          "locator": "Main PDF p.4"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "casula2006-ja056139x-iron-oxide-nanodisks-1--iron-pentacarbonyl",
+      "name": "iron pentacarbonyl",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "concentration": {
+          "value": 0.1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "M",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0.1 M",
+          "evidence": [
+            {
+              "source_id": "casula2006-ja056139x",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "casula2006-ja056139x",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "casula2006-ja056139x-iron-oxide-nanodisks-1--tridecanoic-acid",
+      "name": "tridecanoic acid",
+      "formula": null,
+      "role": "ligand",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "casula2006-ja056139x",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "casula2006-ja056139x-iron-oxide-nanodisks-1--mcpba",
+      "name": "mCPBA",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "casula2006-ja056139x",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "casula2006-ja056139x-iron-oxide-nanodisks-1--after-s01-heat",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "casula2006-ja056139x-iron-oxide-nanodisks-1--tridecanoic-acid"
+      ]
+    },
+    {
+      "id": "casula2006-ja056139x-iron-oxide-nanodisks-1--after-s02-inject",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "casula2006-ja056139x-iron-oxide-nanodisks-1--after-s01-heat",
+        "casula2006-ja056139x-iron-oxide-nanodisks-1--iron-pentacarbonyl",
+        "casula2006-ja056139x-iron-oxide-nanodisks-1--mcpba"
+      ]
+    },
+    {
+      "id": "casula2006-ja056139x-iron-oxide-nanodisks-1--after-s03-cool",
+      "name": "mixture after step 3",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "casula2006-ja056139x-iron-oxide-nanodisks-1--after-s02-inject"
+      ]
+    },
+    {
+      "id": "casula2006-ja056139x-iron-oxide-nanodisks-1--after-s04-precipitate",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "casula2006-ja056139x-iron-oxide-nanodisks-1--after-s03-cool"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-heat",
+      "action": "heat",
+      "label": "Heating the solution",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "casula2006-ja056139x-iron-oxide-nanodisks-1--tridecanoic-acid"
+      ],
+      "outputs": [
+        "casula2006-ja056139x-iron-oxide-nanodisks-1--after-s01-heat"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 293,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "293 °C",
+          "evidence": [
+            {
+              "source_id": "casula2006-ja056139x",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "Ar",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "casula2006-ja056139x",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Heating the solution",
+      "evidence": [
+        {
+          "source_id": "casula2006-ja056139x",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-inject",
+      "action": "inject",
+      "label": "Co-injecting iron pentacarbonyl and mCPBA",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-heat"
+      ],
+      "inputs": [
+        "casula2006-ja056139x-iron-oxide-nanodisks-1--after-s01-heat",
+        "casula2006-ja056139x-iron-oxide-nanodisks-1--iron-pentacarbonyl",
+        "casula2006-ja056139x-iron-oxide-nanodisks-1--mcpba"
+      ],
+      "outputs": [
+        "casula2006-ja056139x-iron-oxide-nanodisks-1--after-s02-inject"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "Ar",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "casula2006-ja056139x",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Co-injecting iron pentacarbonyl and mCPBA",
+      "evidence": [
+        {
+          "source_id": "casula2006-ja056139x",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-cool",
+      "action": "cool",
+      "label": "Cooling the solution",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-inject"
+      ],
+      "inputs": [
+        "casula2006-ja056139x-iron-oxide-nanodisks-1--after-s02-inject"
+      ],
+      "outputs": [
+        "casula2006-ja056139x-iron-oxide-nanodisks-1--after-s03-cool"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 40,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "40 °C",
+          "evidence": [
+            {
+              "source_id": "casula2006-ja056139x",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "Ar",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "casula2006-ja056139x",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Cooling the solution",
+      "evidence": [
+        {
+          "source_id": "casula2006-ja056139x",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s04-precipitate",
+      "action": "precipitate",
+      "label": "Precipitating nanoparticles with ethanol",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s03-cool"
+      ],
+      "inputs": [
+        "casula2006-ja056139x-iron-oxide-nanodisks-1--after-s03-cool"
+      ],
+      "outputs": [
+        "casula2006-ja056139x-iron-oxide-nanodisks-1--after-s04-precipitate"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Precipitating nanoparticles with ethanol",
+      "evidence": [
+        {
+          "source_id": "casula2006-ja056139x",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "casula2006-ja056139x-iron-oxide-nanodisks-1--product",
+      "source_sample_label": "iron oxide nanodisks",
+      "batch_id": null,
+      "material_state_id": "casula2006-ja056139x-iron-oxide-nanodisks-1--after-s04-precipitate",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Fe3O4",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "casula2006-ja056139x",
+            "locator": "Main PDF p.4"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "spinel",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "casula2006-ja056139x",
+            "locator": "Main PDF p.4"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": "tridecanoic acid",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "casula2006-ja056139x",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "casula2006-ja056139x",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reactor: 25 mL three-necked flask (Main PDF p.2).",
+        "Reaction temperature: 293 degC (Main PDF p.2).",
+        "Reaction time: 5 min (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Shape not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Amount of tridecanoic acid not reported in the extracted text.",
+      "Amount of mCPBA not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

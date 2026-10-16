@@ -1,0 +1,446 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "bi2011-nl202902z-fes2-ncs-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Yu Bi (2011): FeS2 NCs",
+  "material": {
+    "formula": "FeS2",
+    "family": "FeS2 nanocrystals",
+    "elements": [
+      "Fe",
+      "S"
+    ],
+    "components": [
+      "FeS2"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Hot injection",
+  "sources": [
+    {
+      "id": "bi2011-nl202902z",
+      "doi": "10.1021/nl202902z",
+      "title": "Air Stable, Photosensitive, Phase Pure Iron Pyrite Nanocrystal Thin Films for Photovoltaic Application",
+      "authors": "Yu Bi, Yongbo Yuan, Christopher L. Exstrom, Scott A. Darveau, and Jinsong Huang",
+      "year": 2011,
+      "url": "https://doi.org/10.1021/nl202902z",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "bi2011-nl202902z",
+    "recipe_family": "bi2011-nl202902z-fes2-ncs-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "FeS2",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "bi2011-nl202902z",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "cubic",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "bi2011-nl202902z",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": 100,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "100 nm",
+      "evidence": [
+        {
+          "source_id": "bi2011-nl202902z",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "cube",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "bi2011-nl202902z",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "bi2011-nl202902z-fes2-ncs-1--iron-precursor",
+      "name": "iron precursor",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "bi2011-nl202902z",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "bi2011-nl202902z-fes2-ncs-1--sulfur-stock-solution",
+      "name": "sulfur stock solution",
+      "formula": null,
+      "role": "chalcogen_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "bi2011-nl202902z",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "bi2011-nl202902z-fes2-ncs-1--trioctylphosphine-oxide-topo",
+      "name": "trioctylphosphine oxide (TOPO)",
+      "formula": null,
+      "role": "ligand",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "bi2011-nl202902z",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "bi2011-nl202902z-fes2-ncs-1--oleyamine-ola",
+      "name": "oleyamine (OLA)",
+      "formula": null,
+      "role": "ligand",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "bi2011-nl202902z",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "bi2011-nl202902z-fes2-ncs-1--after-s01-heat",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "bi2011-nl202902z-fes2-ncs-1--iron-precursor",
+        "bi2011-nl202902z-fes2-ncs-1--trioctylphosphine-oxide-topo",
+        "bi2011-nl202902z-fes2-ncs-1--oleyamine-ola"
+      ]
+    },
+    {
+      "id": "bi2011-nl202902z-fes2-ncs-1--after-s02-inject",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "bi2011-nl202902z-fes2-ncs-1--after-s01-heat",
+        "bi2011-nl202902z-fes2-ncs-1--sulfur-stock-solution"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-heat",
+      "action": "heat",
+      "label": "Heating to form Fe precursor",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "bi2011-nl202902z-fes2-ncs-1--iron-precursor",
+        "bi2011-nl202902z-fes2-ncs-1--trioctylphosphine-oxide-topo",
+        "bi2011-nl202902z-fes2-ncs-1--oleyamine-ola"
+      ],
+      "outputs": [
+        "bi2011-nl202902z-fes2-ncs-1--after-s01-heat"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 170,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "170 °C",
+          "evidence": [
+            {
+              "source_id": "bi2011-nl202902z",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Heating to form Fe precursor",
+      "evidence": [
+        {
+          "source_id": "bi2011-nl202902z",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-inject",
+      "action": "inject",
+      "label": "Injection of sulfur stock solution",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-heat"
+      ],
+      "inputs": [
+        "bi2011-nl202902z-fes2-ncs-1--after-s01-heat",
+        "bi2011-nl202902z-fes2-ncs-1--sulfur-stock-solution"
+      ],
+      "outputs": [
+        "bi2011-nl202902z-fes2-ncs-1--after-s02-inject"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 220,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "220 °C",
+          "evidence": [
+            {
+              "source_id": "bi2011-nl202902z",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 2,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "2 h",
+          "evidence": [
+            {
+              "source_id": "bi2011-nl202902z",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Injection of sulfur stock solution",
+      "evidence": [
+        {
+          "source_id": "bi2011-nl202902z",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "bi2011-nl202902z-fes2-ncs-1--product",
+      "source_sample_label": "FeS2 NCs",
+      "batch_id": null,
+      "material_state_id": "bi2011-nl202902z-fes2-ncs-1--after-s02-inject",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "FeS2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "bi2011-nl202902z",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "cubic",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "bi2011-nl202902z",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "cube",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "bi2011-nl202902z",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": "TOPO and oleylamine",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "bi2011-nl202902z",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "bi2011-nl202902z",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reaction temperature: 220 degC (Main PDF p.2).",
+        "Reaction time: 2 h (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "bi2011-nl202902z-fes2-ncs-1--size",
+      "sample_id": "bi2011-nl202902z-fes2-ncs-1--product",
+      "property": "diameter",
+      "technique": "SEM",
+      "value": {
+        "value": 100,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "100 nm",
+        "evidence": [
+          {
+            "source_id": "bi2011-nl202902z",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "bi2011-nl202902z",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Reactor not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Amount of iron precursor not reported in the extracted text.",
+      "Amount of sulfur stock solution not reported in the extracted text.",
+      "Amount of trioctylphosphine oxide (TOPO) not reported in the extracted text.",
+      "Amount of oleyamine (OLA) not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

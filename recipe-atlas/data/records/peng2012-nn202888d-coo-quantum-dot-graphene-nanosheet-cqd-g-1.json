@@ -1,0 +1,524 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "peng2012-nn202888d-coo-quantum-dot-graphene-nanosheet-cqd-g-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Chengxin Peng (2012): CoO quantum dot/graphene nanosheet (CQD/GN) composites",
+  "material": {
+    "formula": "CoO",
+    "family": "CoO nanocrystals",
+    "elements": [
+      "Co",
+      "O"
+    ],
+    "components": [
+      "CoO"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Synthesis as described in the source",
+  "sources": [
+    {
+      "id": "peng2012-nn202888d",
+      "doi": "10.1021/nn202888d",
+      "title": "Facile Ultrasonic Synthesis of CoO Quantum Dot/Graphene Nanosheet Composites with High Lithium Storage Capacity",
+      "authors": "Chengxin Peng, Bingdi Chen, Yao Qin, Shihe Yang, Chunzhong Li, Yuanhui Zuo, Siyang Liu, and Jinhu Yang",
+      "year": 2012,
+      "url": "https://doi.org/10.1021/nn202888d",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "peng2012-nn202888d",
+    "recipe_family": "peng2012-nn202888d-coo-quantum-dot-graphene-nanosheet-cqd-g-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CoO",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "peng2012-nn202888d",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": 5.0,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "5 nm",
+      "evidence": [
+        {
+          "source_id": "peng2012-nn202888d",
+          "locator": "Main PDF p.6"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "peng2012-nn202888d-coo-quantum-dot-graphene-nanosheet-cqd-g-1--co4-co-12",
+      "name": "Co4(CO)12",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "peng2012-nn202888d",
+          "locator": "Main PDF p.6"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "peng2012-nn202888d-coo-quantum-dot-graphene-nanosheet-cqd-g-1--after-s01-add",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "peng2012-nn202888d-coo-quantum-dot-graphene-nanosheet-cqd-g-1--co4-co-12"
+      ]
+    },
+    {
+      "id": "peng2012-nn202888d-coo-quantum-dot-graphene-nanosheet-cqd-g-1--after-s02-centrifuge",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "peng2012-nn202888d-coo-quantum-dot-graphene-nanosheet-cqd-g-1--after-s01-add"
+      ]
+    },
+    {
+      "id": "peng2012-nn202888d-coo-quantum-dot-graphene-nanosheet-cqd-g-1--after-s03-wash",
+      "name": "mixture after step 3",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "peng2012-nn202888d-coo-quantum-dot-graphene-nanosheet-cqd-g-1--after-s02-centrifuge"
+      ]
+    },
+    {
+      "id": "peng2012-nn202888d-coo-quantum-dot-graphene-nanosheet-cqd-g-1--after-s04-dry",
+      "name": "mixture after step 4",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "peng2012-nn202888d-coo-quantum-dot-graphene-nanosheet-cqd-g-1--after-s03-wash"
+      ]
+    },
+    {
+      "id": "peng2012-nn202888d-coo-quantum-dot-graphene-nanosheet-cqd-g-1--after-s05-anneal",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "peng2012-nn202888d-coo-quantum-dot-graphene-nanosheet-cqd-g-1--after-s04-dry"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-add",
+      "action": "add",
+      "label": "Add Co4(CO)12",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "peng2012-nn202888d-coo-quantum-dot-graphene-nanosheet-cqd-g-1--co4-co-12"
+      ],
+      "outputs": [
+        "peng2012-nn202888d-coo-quantum-dot-graphene-nanosheet-cqd-g-1--after-s01-add"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 1.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1 h",
+          "evidence": [
+            {
+              "source_id": "peng2012-nn202888d",
+              "locator": "Main PDF p.6"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "peng2012-nn202888d",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Add Co4(CO)12",
+      "evidence": [
+        {
+          "source_id": "peng2012-nn202888d",
+          "locator": "Main PDF p.6"
+        }
+      ]
+    },
+    {
+      "id": "s02-centrifuge",
+      "action": "centrifuge",
+      "label": "Collect products by centrifugation",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-add"
+      ],
+      "inputs": [
+        "peng2012-nn202888d-coo-quantum-dot-graphene-nanosheet-cqd-g-1--after-s01-add"
+      ],
+      "outputs": [
+        "peng2012-nn202888d-coo-quantum-dot-graphene-nanosheet-cqd-g-1--after-s02-centrifuge"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Collect products by centrifugation",
+      "evidence": [
+        {
+          "source_id": "peng2012-nn202888d",
+          "locator": "Main PDF p.6"
+        }
+      ]
+    },
+    {
+      "id": "s03-wash",
+      "action": "wash",
+      "label": "Wash with deionized water and ethanol",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-centrifuge"
+      ],
+      "inputs": [
+        "peng2012-nn202888d-coo-quantum-dot-graphene-nanosheet-cqd-g-1--after-s02-centrifuge"
+      ],
+      "outputs": [
+        "peng2012-nn202888d-coo-quantum-dot-graphene-nanosheet-cqd-g-1--after-s03-wash"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Wash with deionized water and ethanol",
+      "evidence": [
+        {
+          "source_id": "peng2012-nn202888d",
+          "locator": "Main PDF p.6"
+        }
+      ]
+    },
+    {
+      "id": "s04-dry",
+      "action": "dry",
+      "label": "Dry at 60°C in air",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s03-wash"
+      ],
+      "inputs": [
+        "peng2012-nn202888d-coo-quantum-dot-graphene-nanosheet-cqd-g-1--after-s03-wash"
+      ],
+      "outputs": [
+        "peng2012-nn202888d-coo-quantum-dot-graphene-nanosheet-cqd-g-1--after-s04-dry"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 60.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "60 °C",
+          "evidence": [
+            {
+              "source_id": "peng2012-nn202888d",
+              "locator": "Main PDF p.6"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Dry at 60°C in air",
+      "evidence": [
+        {
+          "source_id": "peng2012-nn202888d",
+          "locator": "Main PDF p.6"
+        }
+      ]
+    },
+    {
+      "id": "s05-anneal",
+      "action": "anneal",
+      "label": "Thermal treatment to crystallize CoO",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s04-dry"
+      ],
+      "inputs": [
+        "peng2012-nn202888d-coo-quantum-dot-graphene-nanosheet-cqd-g-1--after-s04-dry"
+      ],
+      "outputs": [
+        "peng2012-nn202888d-coo-quantum-dot-graphene-nanosheet-cqd-g-1--after-s05-anneal"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 550.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "550 °C",
+          "evidence": [
+            {
+              "source_id": "peng2012-nn202888d",
+              "locator": "Main PDF p.6"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 3.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "3 h",
+          "evidence": [
+            {
+              "source_id": "peng2012-nn202888d",
+              "locator": "Main PDF p.6"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "peng2012-nn202888d",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Thermal treatment to crystallize CoO",
+      "evidence": [
+        {
+          "source_id": "peng2012-nn202888d",
+          "locator": "Main PDF p.6"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "peng2012-nn202888d-coo-quantum-dot-graphene-nanosheet-cqd-g-1--product",
+      "source_sample_label": "CoO quantum dot/graphene nanosheet (CQD/GN) composites",
+      "batch_id": null,
+      "material_state_id": "peng2012-nn202888d-coo-quantum-dot-graphene-nanosheet-cqd-g-1--after-s05-anneal",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CoO",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "peng2012-nn202888d",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "peng2012-nn202888d",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "notes": [
+        "Reaction time: 1 h (Main PDF p.6)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "peng2012-nn202888d-coo-quantum-dot-graphene-nanosheet-cqd-g-1--size",
+      "sample_id": "peng2012-nn202888d-coo-quantum-dot-graphene-nanosheet-cqd-g-1--product",
+      "property": "diameter",
+      "technique": "TEM",
+      "value": {
+        "value": 5.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "5 nm",
+        "evidence": [
+          {
+            "source_id": "peng2012-nn202888d",
+            "locator": "Main PDF p.6"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "peng2012-nn202888d",
+          "locator": "Main PDF p.6"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Amount of Co4(CO)12 not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

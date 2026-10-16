@@ -1,0 +1,258 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "sma-tt2004-b405208k-co3o4-monolith-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Jan-Henrik Smått et al. (2004): Co3O4 monolith",
+  "material": {
+    "formula": "Co3O4",
+    "family": "Co3O4 nanocrystals",
+    "elements": [
+      "Co",
+      "O"
+    ],
+    "components": [
+      "Co3O4"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Synthesis as described in the source",
+  "sources": [
+    {
+      "id": "sma-tt2004-b405208k",
+      "doi": "10.1039/b405208k",
+      "title": "Hierachically porous nanocrystalline cobalt oxide monoliths through nanocasting",
+      "authors": "Jan-Henrik Smått; Bernd Spliethoff; Jarl B. Rosenholm; Mika Lindén",
+      "year": 2004,
+      "url": "https://doi.org/10.1039/b405208k",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "sma-tt2004-b405208k",
+    "recipe_family": "sma-tt2004-b405208k-co3o4-monolith-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Co3O4",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "sma-tt2004-b405208k",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "sma-tt2004-b405208k-co3o4-monolith-1--poly-ethylene-glycol",
+      "name": "poly(ethylene glycol)",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "sma-tt2004-b405208k",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "sma-tt2004-b405208k-co3o4-monolith-1--concentrated-sulfuric-acid",
+      "name": "concentrated sulfuric acid",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "sma-tt2004-b405208k",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "sma-tt2004-b405208k-co3o4-monolith-1--1-m-naoh",
+      "name": "1 M NaOH",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "sma-tt2004-b405208k",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "sma-tt2004-b405208k-co3o4-monolith-1--after-s01-leach",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "sma-tt2004-b405208k-co3o4-monolith-1--1-m-naoh"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-leach",
+      "action": "leach",
+      "label": "Leach out silica with NaOH",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "sma-tt2004-b405208k-co3o4-monolith-1--1-m-naoh"
+      ],
+      "outputs": [
+        "sma-tt2004-b405208k-co3o4-monolith-1--after-s01-leach"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Leach out silica with NaOH",
+      "evidence": [
+        {
+          "source_id": "sma-tt2004-b405208k",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "sma-tt2004-b405208k-co3o4-monolith-1--product",
+      "source_sample_label": "Co3O4 monolith",
+      "batch_id": null,
+      "material_state_id": "sma-tt2004-b405208k-co3o4-monolith-1--after-s01-leach",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Co3O4",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "sma-tt2004-b405208k",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "sma-tt2004-b405208k",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of poly(ethylene glycol) not reported in the extracted text.",
+      "Amount of concentrated sulfuric acid not reported in the extracted text.",
+      "Amount of 1 M NaOH not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

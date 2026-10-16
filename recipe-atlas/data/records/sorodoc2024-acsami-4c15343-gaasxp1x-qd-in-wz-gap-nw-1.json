@@ -1,0 +1,527 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "sorodoc2024-acsami-4c15343-gaasxp1x-qd-in-wz-gap-nw-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Robert Andrei Sorodoc et al. (2024): GaAsxP1−x QD in WZ GaP NW",
+  "material": {
+    "formula": "GaAsxP1−x",
+    "family": "GaAsxP1−x nanocrystals",
+    "elements": [
+      "Ga",
+      "As",
+      "P"
+    ],
+    "components": [
+      "GaAsxP1−x"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Vapor−liquid−solid",
+  "sources": [
+    {
+      "id": "sorodoc2024-acsami-4c15343",
+      "doi": "10.1021/acsami.4c15343",
+      "title": "Tunable GaAsxP1–x Quantum-Dot Emission in Wurtzite GaP Nanowires",
+      "authors": "Robert Andrei Sorodoc, Paolo De Vincenzi, Akant Sagar Sharma, Giada Bucci, Mario Roggi, Enrico Mugnaioli, Lucia Sorba, Marta De Luca, and Valentina Zannier",
+      "year": 2024,
+      "url": "https://doi.org/10.1021/acsami.4c15343",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "sorodoc2024-acsami-4c15343",
+    "recipe_family": "sorodoc2024-acsami-4c15343-gaasxp1x-qd-in-wz-gap-nw-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": 40,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "40 nm",
+      "evidence": [
+        {
+          "source_id": "sorodoc2024-acsami-4c15343",
+          "locator": "Main PDF p.5"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "prism",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "sorodoc2024-acsami-4c15343",
+          "locator": "Main PDF p.5"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "sorodoc2024-acsami-4c15343-gaasxp1x-qd-in-wz-gap-nw-1--after-s01-grow",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "sorodoc2024-acsami-4c15343-gaasxp1x-qd-in-wz-gap-nw-1--after-s02-ramp",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "sorodoc2024-acsami-4c15343-gaasxp1x-qd-in-wz-gap-nw-1--after-s01-grow"
+      ]
+    },
+    {
+      "id": "sorodoc2024-acsami-4c15343-gaasxp1x-qd-in-wz-gap-nw-1--after-s03-grow",
+      "name": "mixture after step 3",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "sorodoc2024-acsami-4c15343-gaasxp1x-qd-in-wz-gap-nw-1--after-s02-ramp"
+      ]
+    },
+    {
+      "id": "sorodoc2024-acsami-4c15343-gaasxp1x-qd-in-wz-gap-nw-1--after-s04-interrupt",
+      "name": "mixture after step 4",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "sorodoc2024-acsami-4c15343-gaasxp1x-qd-in-wz-gap-nw-1--after-s03-grow"
+      ]
+    },
+    {
+      "id": "sorodoc2024-acsami-4c15343-gaasxp1x-qd-in-wz-gap-nw-1--after-s05-grow",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "sorodoc2024-acsami-4c15343-gaasxp1x-qd-in-wz-gap-nw-1--after-s04-interrupt"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-grow",
+      "action": "grow",
+      "label": "Grow GaAs NW stem",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "sorodoc2024-acsami-4c15343-gaasxp1x-qd-in-wz-gap-nw-1--after-s01-grow"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 500,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "500 °C",
+          "evidence": [
+            {
+              "source_id": "sorodoc2024-acsami-4c15343",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 30,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "30 min",
+          "evidence": [
+            {
+              "source_id": "sorodoc2024-acsami-4c15343",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Grow GaAs NW stem",
+      "evidence": [
+        {
+          "source_id": "sorodoc2024-acsami-4c15343",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "s02-ramp",
+      "action": "ramp",
+      "label": "Ramp-up to GaP growth temperature",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-grow"
+      ],
+      "inputs": [
+        "sorodoc2024-acsami-4c15343-gaasxp1x-qd-in-wz-gap-nw-1--after-s01-grow"
+      ],
+      "outputs": [
+        "sorodoc2024-acsami-4c15343-gaasxp1x-qd-in-wz-gap-nw-1--after-s02-ramp"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 560,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "560 °C",
+          "evidence": [
+            {
+              "source_id": "sorodoc2024-acsami-4c15343",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "5 min",
+          "evidence": [
+            {
+              "source_id": "sorodoc2024-acsami-4c15343",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Ramp-up to GaP growth temperature",
+      "evidence": [
+        {
+          "source_id": "sorodoc2024-acsami-4c15343",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "s03-grow",
+      "action": "grow",
+      "label": "Grow GaP segment",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-ramp"
+      ],
+      "inputs": [
+        "sorodoc2024-acsami-4c15343-gaasxp1x-qd-in-wz-gap-nw-1--after-s02-ramp"
+      ],
+      "outputs": [
+        "sorodoc2024-acsami-4c15343-gaasxp1x-qd-in-wz-gap-nw-1--after-s03-grow"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 20,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "20 min",
+          "evidence": [
+            {
+              "source_id": "sorodoc2024-acsami-4c15343",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Grow GaP segment",
+      "evidence": [
+        {
+          "source_id": "sorodoc2024-acsami-4c15343",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "s04-interrupt",
+      "action": "interrupt",
+      "label": "Growth interruption for QD growth",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s03-grow"
+      ],
+      "inputs": [
+        "sorodoc2024-acsami-4c15343-gaasxp1x-qd-in-wz-gap-nw-1--after-s03-grow"
+      ],
+      "outputs": [
+        "sorodoc2024-acsami-4c15343-gaasxp1x-qd-in-wz-gap-nw-1--after-s04-interrupt"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 30,
+          "minimum": null,
+          "maximum": null,
+          "unit": "s",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "30 s",
+          "evidence": [
+            {
+              "source_id": "sorodoc2024-acsami-4c15343",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Growth interruption for QD growth",
+      "evidence": [
+        {
+          "source_id": "sorodoc2024-acsami-4c15343",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "s05-grow",
+      "action": "grow",
+      "label": "Grow GaP tip",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s04-interrupt"
+      ],
+      "inputs": [
+        "sorodoc2024-acsami-4c15343-gaasxp1x-qd-in-wz-gap-nw-1--after-s04-interrupt"
+      ],
+      "outputs": [
+        "sorodoc2024-acsami-4c15343-gaasxp1x-qd-in-wz-gap-nw-1--after-s05-grow"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Grow GaP tip",
+      "evidence": [
+        {
+          "source_id": "sorodoc2024-acsami-4c15343",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "sorodoc2024-acsami-4c15343-gaasxp1x-qd-in-wz-gap-nw-1--product",
+      "source_sample_label": "GaAsxP1−x QD in WZ GaP NW",
+      "batch_id": null,
+      "material_state_id": "sorodoc2024-acsami-4c15343-gaasxp1x-qd-in-wz-gap-nw-1--after-s05-grow",
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": "prism",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "sorodoc2024-acsami-4c15343",
+            "locator": "Main PDF p.5"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "sorodoc2024-acsami-4c15343",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "notes": [
+        "Reactor: Riber Compact-21 system (Main PDF p.9)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "sorodoc2024-acsami-4c15343-gaasxp1x-qd-in-wz-gap-nw-1--size",
+      "sample_id": "sorodoc2024-acsami-4c15343-gaasxp1x-qd-in-wz-gap-nw-1--product",
+      "property": "particle_size",
+      "technique": "not reported",
+      "value": {
+        "value": 40,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "40 nm",
+        "evidence": [
+          {
+            "source_id": "sorodoc2024-acsami-4c15343",
+            "locator": "Main PDF p.5"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sorodoc2024-acsami-4c15343",
+          "locator": "Main PDF p.5"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
