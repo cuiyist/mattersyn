@@ -1,0 +1,374 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "jafari2022-s41598-022-16663-9-cqd-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Farnaz Jafari (2022): CQD",
+  "material": {
+    "formula": "C",
+    "family": "C nanocrystals",
+    "elements": [
+      "C"
+    ],
+    "components": [
+      "C"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Hydrothermal",
+  "sources": [
+    {
+      "id": "jafari2022-s41598-022-16663-9",
+      "doi": "10.1038/s41598-022-16663-9",
+      "title": "Mass transfer intensification for carbon quantum dot nanofluid drops under pulsed electric fields",
+      "authors": "Farnaz Jafari, Javad Saien, Alimorad Rashidi",
+      "year": 2022,
+      "url": "https://doi.org/10.1038/s41598-022-16663-9",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "jafari2022-s41598-022-16663-9",
+    "recipe_family": "jafari2022-s41598-022-16663-9-cqd-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "C",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "jafari2022-s41598-022-16663-9",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "amorphous",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "jafari2022-s41598-022-16663-9",
+          "locator": "Main PDF p.6"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": 7.2,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "7.2 nm",
+      "evidence": [
+        {
+          "source_id": "jafari2022-s41598-022-16663-9",
+          "locator": "Main PDF p.6"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "sphere",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "jafari2022-s41598-022-16663-9",
+          "locator": "Main PDF p.6"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "jafari2022-s41598-022-16663-9-cqd-1--citric-acid",
+      "name": "citric acid",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "mass": {
+          "value": 2,
+          "minimum": null,
+          "maximum": null,
+          "unit": "g",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "2 g",
+          "evidence": [
+            {
+              "source_id": "jafari2022-s41598-022-16663-9",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "jafari2022-s41598-022-16663-9",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "jafari2022-s41598-022-16663-9-cqd-1--after-s01-dissolve",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "jafari2022-s41598-022-16663-9-cqd-1--citric-acid"
+      ]
+    },
+    {
+      "id": "jafari2022-s41598-022-16663-9-cqd-1--after-s02-heat",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "jafari2022-s41598-022-16663-9-cqd-1--after-s01-dissolve"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-dissolve",
+      "action": "dissolve",
+      "label": "Dissolve citric acid in deionized water",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "jafari2022-s41598-022-16663-9-cqd-1--citric-acid"
+      ],
+      "outputs": [
+        "jafari2022-s41598-022-16663-9-cqd-1--after-s01-dissolve"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Dissolve citric acid in deionized water",
+      "evidence": [
+        {
+          "source_id": "jafari2022-s41598-022-16663-9",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "s02-heat",
+      "action": "heat",
+      "label": "Heat mixture in Teflon autoclave",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-dissolve"
+      ],
+      "inputs": [
+        "jafari2022-s41598-022-16663-9-cqd-1--after-s01-dissolve"
+      ],
+      "outputs": [
+        "jafari2022-s41598-022-16663-9-cqd-1--after-s02-heat"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 200,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "200 °C",
+          "evidence": [
+            {
+              "source_id": "jafari2022-s41598-022-16663-9",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 8,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "8 h",
+          "evidence": [
+            {
+              "source_id": "jafari2022-s41598-022-16663-9",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Heat mixture in Teflon autoclave",
+      "evidence": [
+        {
+          "source_id": "jafari2022-s41598-022-16663-9",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "jafari2022-s41598-022-16663-9-cqd-1--product",
+      "source_sample_label": "CQD",
+      "batch_id": null,
+      "material_state_id": "jafari2022-s41598-022-16663-9-cqd-1--after-s02-heat",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "C",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jafari2022-s41598-022-16663-9",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "amorphous",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jafari2022-s41598-022-16663-9",
+            "locator": "Main PDF p.6"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "sphere",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jafari2022-s41598-022-16663-9",
+            "locator": "Main PDF p.6"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "jafari2022-s41598-022-16663-9",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "notes": [
+        "Reactor: Teflon autoclave (Main PDF p.3).",
+        "Reaction temperature: 200 degC (Main PDF p.3).",
+        "Reaction time: 8 h (Main PDF p.3)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "jafari2022-s41598-022-16663-9-cqd-1--size",
+      "sample_id": "jafari2022-s41598-022-16663-9-cqd-1--product",
+      "property": "crystallite_size",
+      "technique": "XRD",
+      "value": {
+        "value": 7.2,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "7.2 nm",
+        "evidence": [
+          {
+            "source_id": "jafari2022-s41598-022-16663-9",
+            "locator": "Main PDF p.6"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "jafari2022-s41598-022-16663-9",
+          "locator": "Main PDF p.6"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Ligand not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
