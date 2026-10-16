@@ -1,0 +1,352 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "gopinadhan2007-1-2817825-sn0-90mn0-10o2-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "K. Gopinadhan et al. (2007): Sn0.90Mn0.10O2−δ",
+  "material": {
+    "formula": "Sn0.90Mn0.10O2−δ",
+    "family": "Sn0.90Mn0.10O2−δ nanocrystals",
+    "elements": [
+      "Sn",
+      "Mn",
+      "O"
+    ],
+    "components": [
+      "Sn0.90Mn0.10O2−δ"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Spray pyrolysis",
+  "sources": [
+    {
+      "id": "gopinadhan2007-1-2817825",
+      "doi": "10.1063/1.2817825",
+      "title": "High temperature ferromagnetism in Mn-doped SnO2 nanocrystalline thin films",
+      "authors": "K. Gopinadhan; Subhash C. Kashyap; Dinesh K. Pandya; Sujeet Chaudhary",
+      "year": 2007,
+      "url": "https://doi.org/10.1063/1.2817825",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "gopinadhan2007-1-2817825",
+    "recipe_family": "gopinadhan2007-1-2817825-sn0-90mn0-10o2-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "phase": {
+      "value": "tetragonal rutile",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "gopinadhan2007-1-2817825",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "gopinadhan2007-1-2817825-sn0-90mn0-10o2-1--sncl45h2o",
+      "name": "SnCl4·5H2O",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "gopinadhan2007-1-2817825",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "gopinadhan2007-1-2817825-sn0-90mn0-10o2-1--ch3coo-2mn4h2o",
+      "name": "(CH3COO)2Mn·4H2O",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "gopinadhan2007-1-2817825",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "gopinadhan2007-1-2817825-sn0-90mn0-10o2-1--after-s01-spray-pyrolyze",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "gopinadhan2007-1-2817825-sn0-90mn0-10o2-1--sncl45h2o",
+        "gopinadhan2007-1-2817825-sn0-90mn0-10o2-1--ch3coo-2mn4h2o"
+      ]
+    },
+    {
+      "id": "gopinadhan2007-1-2817825-sn0-90mn0-10o2-1--after-s02-anneal",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "gopinadhan2007-1-2817825-sn0-90mn0-10o2-1--after-s01-spray-pyrolyze"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-spray-pyrolyze",
+      "action": "spray pyrolyze",
+      "label": "Spray pyrolysis of SnCl4·5H2O and (CH3COO)2Mn·4H2O solutions on quartz substrates",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "gopinadhan2007-1-2817825-sn0-90mn0-10o2-1--sncl45h2o",
+        "gopinadhan2007-1-2817825-sn0-90mn0-10o2-1--ch3coo-2mn4h2o"
+      ],
+      "outputs": [
+        "gopinadhan2007-1-2817825-sn0-90mn0-10o2-1--after-s01-spray-pyrolyze"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 450,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "450 °C",
+          "evidence": [
+            {
+              "source_id": "gopinadhan2007-1-2817825",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "gopinadhan2007-1-2817825",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Spray pyrolysis of SnCl4·5H2O and (CH3COO)2Mn·4H2O solutions on quartz substrates",
+      "evidence": [
+        {
+          "source_id": "gopinadhan2007-1-2817825",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-anneal",
+      "action": "anneal",
+      "label": "Annealing in air at 500 °C for 30 min",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-spray-pyrolyze"
+      ],
+      "inputs": [
+        "gopinadhan2007-1-2817825-sn0-90mn0-10o2-1--after-s01-spray-pyrolyze"
+      ],
+      "outputs": [
+        "gopinadhan2007-1-2817825-sn0-90mn0-10o2-1--after-s02-anneal"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 500,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "500 °C",
+          "evidence": [
+            {
+              "source_id": "gopinadhan2007-1-2817825",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 30,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "30 min",
+          "evidence": [
+            {
+              "source_id": "gopinadhan2007-1-2817825",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "gopinadhan2007-1-2817825",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Annealing in air at 500 °C for 30 min",
+      "evidence": [
+        {
+          "source_id": "gopinadhan2007-1-2817825",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "gopinadhan2007-1-2817825-sn0-90mn0-10o2-1--product",
+      "source_sample_label": "Sn0.90Mn0.10O2−δ",
+      "batch_id": null,
+      "material_state_id": "gopinadhan2007-1-2817825-sn0-90mn0-10o2-1--after-s02-anneal",
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "phase": {
+        "value": "tetragonal rutile",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "gopinadhan2007-1-2817825",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "gopinadhan2007-1-2817825",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reactor: spray pyrolysis setup (Main PDF p.2).",
+        "Reaction temperature: 450 degC (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of SnCl4·5H2O not reported in the extracted text.",
+      "Amount of (CH3COO)2Mn·4H2O not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

@@ -1,0 +1,563 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "he2009-jp809028y-nc-in2s3-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Yunhui He (2009): nc-In2S3",
+  "material": {
+    "formula": "In2S3",
+    "family": "In2S3 nanocrystals",
+    "elements": [
+      "In",
+      "S"
+    ],
+    "components": [
+      "In2S3"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Synthesis as described in the source",
+  "sources": [
+    {
+      "id": "he2009-jp809028y",
+      "doi": "10.1021/jp809028y",
+      "title": "A New Application of Nanocrystal In2S3 in Efficient Degradation of Organic Pollutants under Visible Light Irradiation",
+      "authors": "Yunhui He, Danzhen Li, Guangcan Xiao, Wei Chen, Yibin Chen, Meng Sun, Hanjie Huang, and Xianzhi Fu",
+      "year": 2009,
+      "url": "https://doi.org/10.1021/jp809028y",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "he2009-jp809028y",
+    "recipe_family": "he2009-jp809028y-nc-in2s3-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "In2S3",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "he2009-jp809028y",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "he2009-jp809028y-nc-in2s3-1--incl34h2o",
+      "name": "InCl3·4H2O",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "concentration": {
+          "value": 0.3,
+          "minimum": null,
+          "maximum": null,
+          "unit": "M",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0.3 M",
+          "evidence": [
+            {
+              "source_id": "he2009-jp809028y",
+              "locator": "Main PDF p.1"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "he2009-jp809028y",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "he2009-jp809028y-nc-in2s3-1--na2s",
+      "name": "Na2S",
+      "formula": null,
+      "role": "chalcogen_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "he2009-jp809028y",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "he2009-jp809028y-nc-in2s3-1--after-s01-dissolve",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "he2009-jp809028y-nc-in2s3-1--incl34h2o"
+      ]
+    },
+    {
+      "id": "he2009-jp809028y-nc-in2s3-1--after-s02-adjust-ph",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "he2009-jp809028y-nc-in2s3-1--after-s01-dissolve"
+      ]
+    },
+    {
+      "id": "he2009-jp809028y-nc-in2s3-1--after-s03-add",
+      "name": "mixture after step 3",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "he2009-jp809028y-nc-in2s3-1--after-s02-adjust-ph",
+        "he2009-jp809028y-nc-in2s3-1--na2s"
+      ]
+    },
+    {
+      "id": "he2009-jp809028y-nc-in2s3-1--after-s04-adjust-ph",
+      "name": "mixture after step 4",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "he2009-jp809028y-nc-in2s3-1--after-s03-add"
+      ]
+    },
+    {
+      "id": "he2009-jp809028y-nc-in2s3-1--after-s05-heat",
+      "name": "mixture after step 5",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "he2009-jp809028y-nc-in2s3-1--after-s04-adjust-ph"
+      ]
+    },
+    {
+      "id": "he2009-jp809028y-nc-in2s3-1--after-s06-dry",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "he2009-jp809028y-nc-in2s3-1--after-s05-heat"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-dissolve",
+      "action": "dissolve",
+      "label": "InCl3·4H2O dissolved in distilled water",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "he2009-jp809028y-nc-in2s3-1--incl34h2o"
+      ],
+      "outputs": [
+        "he2009-jp809028y-nc-in2s3-1--after-s01-dissolve"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "InCl3·4H2O dissolved in distilled water",
+      "evidence": [
+        {
+          "source_id": "he2009-jp809028y",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "s02-adjust-ph",
+      "action": "adjust ph",
+      "label": "PH adjusted to 1.0 with dilute hydrochloric acid",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-dissolve"
+      ],
+      "inputs": [
+        "he2009-jp809028y-nc-in2s3-1--after-s01-dissolve"
+      ],
+      "outputs": [
+        "he2009-jp809028y-nc-in2s3-1--after-s02-adjust-ph"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "PH adjusted to 1.0 with dilute hydrochloric acid",
+      "evidence": [
+        {
+          "source_id": "he2009-jp809028y",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "s03-add",
+      "action": "add",
+      "label": "Na2S solution added to the solution",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-adjust-ph"
+      ],
+      "inputs": [
+        "he2009-jp809028y-nc-in2s3-1--after-s02-adjust-ph",
+        "he2009-jp809028y-nc-in2s3-1--na2s"
+      ],
+      "outputs": [
+        "he2009-jp809028y-nc-in2s3-1--after-s03-add"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Na2S solution added to the solution",
+      "evidence": [
+        {
+          "source_id": "he2009-jp809028y",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "s04-adjust-ph",
+      "action": "adjust ph",
+      "label": "PH adjusted to 3.0 with dilute hydrochloric acid",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s03-add"
+      ],
+      "inputs": [
+        "he2009-jp809028y-nc-in2s3-1--after-s03-add"
+      ],
+      "outputs": [
+        "he2009-jp809028y-nc-in2s3-1--after-s04-adjust-ph"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "PH adjusted to 3.0 with dilute hydrochloric acid",
+      "evidence": [
+        {
+          "source_id": "he2009-jp809028y",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "s05-heat",
+      "action": "heat",
+      "label": "Sealed autoclave maintained at 160 °C for 24 h",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s04-adjust-ph"
+      ],
+      "inputs": [
+        "he2009-jp809028y-nc-in2s3-1--after-s04-adjust-ph"
+      ],
+      "outputs": [
+        "he2009-jp809028y-nc-in2s3-1--after-s05-heat"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 160,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "160 °C",
+          "evidence": [
+            {
+              "source_id": "he2009-jp809028y",
+              "locator": "Main PDF p.1"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 24,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "24 h",
+          "evidence": [
+            {
+              "source_id": "he2009-jp809028y",
+              "locator": "Main PDF p.1"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Sealed autoclave maintained at 160 °C for 24 h",
+      "evidence": [
+        {
+          "source_id": "he2009-jp809028y",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "s06-dry",
+      "action": "dry",
+      "label": "Product dried in vacuum at 100 °C for 4 h",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s05-heat"
+      ],
+      "inputs": [
+        "he2009-jp809028y-nc-in2s3-1--after-s05-heat"
+      ],
+      "outputs": [
+        "he2009-jp809028y-nc-in2s3-1--after-s06-dry"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 100,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "100 °C",
+          "evidence": [
+            {
+              "source_id": "he2009-jp809028y",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 4,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "4 h",
+          "evidence": [
+            {
+              "source_id": "he2009-jp809028y",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Product dried in vacuum at 100 °C for 4 h",
+      "evidence": [
+        {
+          "source_id": "he2009-jp809028y",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "he2009-jp809028y-nc-in2s3-1--product",
+      "source_sample_label": "nc-In2S3",
+      "batch_id": null,
+      "material_state_id": "he2009-jp809028y-nc-in2s3-1--after-s06-dry",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "In2S3",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "he2009-jp809028y",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "he2009-jp809028y",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "notes": [
+        "Reactor: 100 mL Teﬂon-lined autoclave (Main PDF p.1).",
+        "Reaction temperature: 160 degC (Main PDF p.1).",
+        "Reaction time: 24 h (Main PDF p.1)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Amount of Na2S not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

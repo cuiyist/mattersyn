@@ -1,0 +1,465 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "goossens2024-jacs-4c00678-hfo2-nanocrystals-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Eline Goossens et al. (2024): HfO2 nanocrystals",
+  "material": {
+    "formula": "HfO2",
+    "family": "HfO2 nanocrystals",
+    "elements": [
+      "Hf",
+      "O"
+    ],
+    "components": [
+      "HfO2"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Synthesis as described in the source",
+  "sources": [
+    {
+      "id": "goossens2024-jacs-4c00678",
+      "doi": "10.1021/jacs.4c00678",
+      "title": "From Gel to Crystal: Mechanism of HfO 2 and ZrO 2 Nanocrystal Synthesis in Benzyl Alcohol",
+      "authors": "Eline Goossens; Olivia Aalling-Frederiksen; Pieter Tack; Dietger Van den Eynden; Zarah Walsh-Korb; Kirsten M. Ø. Jensen; Klaartje De Buysser; Jonathan De Roo",
+      "year": 2024,
+      "url": "https://doi.org/10.1021/jacs.4c00678",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "goossens2024-jacs-4c00678",
+    "recipe_family": "goossens2024-jacs-4c00678-hfo2-nanocrystals-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "HfO2",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "goossens2024-jacs-4c00678",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "monoclinic",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "goossens2024-jacs-4c00678",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "ellipsoidal",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "goossens2024-jacs-4c00678",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "goossens2024-jacs-4c00678-hfo2-nanocrystals-1--hfcl42thf",
+      "name": "HfCl4·2THF",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "amount": {
+          "value": 0.8,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mmol",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0.8 mmol",
+          "evidence": [
+            {
+              "source_id": "goossens2024-jacs-4c00678",
+              "locator": "Main PDF p.8"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "goossens2024-jacs-4c00678",
+          "locator": "Main PDF p.8"
+        }
+      ]
+    },
+    {
+      "id": "goossens2024-jacs-4c00678-hfo2-nanocrystals-1--benzyl-alcohol",
+      "name": "benzyl alcohol",
+      "formula": null,
+      "role": "solvent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "goossens2024-jacs-4c00678",
+          "locator": "Main PDF p.8"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "goossens2024-jacs-4c00678-hfo2-nanocrystals-1--after-s01-heat",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "goossens2024-jacs-4c00678-hfo2-nanocrystals-1--after-s02-heat",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "goossens2024-jacs-4c00678-hfo2-nanocrystals-1--after-s01-heat"
+      ]
+    },
+    {
+      "id": "goossens2024-jacs-4c00678-hfo2-nanocrystals-1--after-s03-centrifuge",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "goossens2024-jacs-4c00678-hfo2-nanocrystals-1--after-s02-heat"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-heat",
+      "action": "heat",
+      "label": "The solution is heated to 80 °C.",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "goossens2024-jacs-4c00678-hfo2-nanocrystals-1--after-s01-heat"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 80,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "80 °C",
+          "evidence": [
+            {
+              "source_id": "goossens2024-jacs-4c00678",
+              "locator": "Main PDF p.8"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "5 min",
+          "evidence": [
+            {
+              "source_id": "goossens2024-jacs-4c00678",
+              "locator": "Main PDF p.8"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "goossens2024-jacs-4c00678",
+            "locator": "Main PDF p.8"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "The solution is heated to 80 °C.",
+      "evidence": [
+        {
+          "source_id": "goossens2024-jacs-4c00678",
+          "locator": "Main PDF p.8"
+        }
+      ]
+    },
+    {
+      "id": "s02-heat",
+      "action": "heat",
+      "label": "The solution is heated to 220 °C.",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-heat"
+      ],
+      "inputs": [
+        "goossens2024-jacs-4c00678-hfo2-nanocrystals-1--after-s01-heat"
+      ],
+      "outputs": [
+        "goossens2024-jacs-4c00678-hfo2-nanocrystals-1--after-s02-heat"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 220,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "220 °C",
+          "evidence": [
+            {
+              "source_id": "goossens2024-jacs-4c00678",
+              "locator": "Main PDF p.8"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 4,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "4 h",
+          "evidence": [
+            {
+              "source_id": "goossens2024-jacs-4c00678",
+              "locator": "Main PDF p.8"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "goossens2024-jacs-4c00678",
+            "locator": "Main PDF p.8"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "The solution is heated to 220 °C.",
+      "evidence": [
+        {
+          "source_id": "goossens2024-jacs-4c00678",
+          "locator": "Main PDF p.8"
+        }
+      ]
+    },
+    {
+      "id": "s03-centrifuge",
+      "action": "centrifuge",
+      "label": "The nanocrystals are centrifuged and precipitated.",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-heat"
+      ],
+      "inputs": [
+        "goossens2024-jacs-4c00678-hfo2-nanocrystals-1--after-s02-heat"
+      ],
+      "outputs": [
+        "goossens2024-jacs-4c00678-hfo2-nanocrystals-1--after-s03-centrifuge"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 2,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "2 min",
+          "evidence": [
+            {
+              "source_id": "goossens2024-jacs-4c00678",
+              "locator": "Main PDF p.8"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "The nanocrystals are centrifuged and precipitated.",
+      "evidence": [
+        {
+          "source_id": "goossens2024-jacs-4c00678",
+          "locator": "Main PDF p.8"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "goossens2024-jacs-4c00678-hfo2-nanocrystals-1--product",
+      "source_sample_label": "HfO2 nanocrystals",
+      "batch_id": null,
+      "material_state_id": "goossens2024-jacs-4c00678-hfo2-nanocrystals-1--after-s03-centrifuge",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "HfO2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "goossens2024-jacs-4c00678",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "monoclinic",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "goossens2024-jacs-4c00678",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "ellipsoidal",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "goossens2024-jacs-4c00678",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "goossens2024-jacs-4c00678",
+          "locator": "Main PDF p.8"
+        }
+      ],
+      "notes": [
+        "Reactor: 10 mL microwave vial (Main PDF p.8).",
+        "Reaction temperature: 220 degC (Main PDF p.8).",
+        "Reaction time: 4 h (Main PDF p.8)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Amount of benzyl alcohol not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

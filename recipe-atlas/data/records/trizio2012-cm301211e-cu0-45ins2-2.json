@@ -1,0 +1,287 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "trizio2012-cm301211e-cu0-45ins2-2",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Luca De Trizio et al. (2012): Cu0.45InS2",
+  "material": {
+    "formula": "Cu0.45InS2",
+    "family": "Cu0.45InS2 nanocrystals",
+    "elements": [
+      "Cu",
+      "In",
+      "S"
+    ],
+    "components": [
+      "Cu0.45InS2"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Heat-up",
+  "sources": [
+    {
+      "id": "trizio2012-cm301211e",
+      "doi": "10.1021/cm301211e",
+      "title": "Strongly Fluorescent Quaternary Cu–In–Zn–S Nanocrystals Prepared from Cu1-xInS2 Nanocrystals by Partial Cation Exchange",
+      "authors": "Luca De Trizio, Mirko Prato, Alessandro Genovese, Alberto Casu, Mauro Povia, Roberto Simonutti, Marcelo J. P. Alcocer, Cosimo D’Andrea, Francesco Tassone, and Liberato Manna",
+      "year": 2012,
+      "url": "https://doi.org/10.1021/cm301211e",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "trizio2012-cm301211e",
+    "recipe_family": "trizio2012-cm301211e-cu0-45ins2-2",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Cu0.45InS2",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "trizio2012-cm301211e",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "tetragonal chalcopyrite",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "trizio2012-cm301211e",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "trizio2012-cm301211e-cu0-45ins2-2--after-s01-heat",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "trizio2012-cm301211e-cu0-45ins2-2--after-s02-cool",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "trizio2012-cm301211e-cu0-45ins2-2--after-s01-heat"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-heat",
+      "action": "heat",
+      "label": "Heating to grow the particles",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "trizio2012-cm301211e-cu0-45ins2-2--after-s01-heat"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 230,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "230 °C",
+          "evidence": [
+            {
+              "source_id": "trizio2012-cm301211e",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 11,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "11 min",
+          "evidence": [
+            {
+              "source_id": "trizio2012-cm301211e",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Heating to grow the particles",
+      "evidence": [
+        {
+          "source_id": "trizio2012-cm301211e",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-cool",
+      "action": "cool",
+      "label": "Cooling the solution to room temperature",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-heat"
+      ],
+      "inputs": [
+        "trizio2012-cm301211e-cu0-45ins2-2--after-s01-heat"
+      ],
+      "outputs": [
+        "trizio2012-cm301211e-cu0-45ins2-2--after-s02-cool"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Cooling the solution to room temperature",
+      "evidence": [
+        {
+          "source_id": "trizio2012-cm301211e",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "trizio2012-cm301211e-cu0-45ins2-2--product",
+      "source_sample_label": "Cu0.45InS2",
+      "batch_id": null,
+      "material_state_id": "trizio2012-cm301211e-cu0-45ins2-2--after-s02-cool",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Cu0.45InS2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "trizio2012-cm301211e",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "tetragonal chalcopyrite",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "trizio2012-cm301211e",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "trizio2012-cm301211e",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reactor: three-neck flask (Main PDF p.2).",
+        "Reaction temperature: 230 degC (Main PDF p.2).",
+        "Reaction time: 11 min (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

@@ -1,5 +1,23 @@
 Owner revisit list: [Machine-extracted papers](research-assets/public-audits/MACHINE_EXTRACTED_PAPERS.md).
 
+## Active integration and cleanup checkpoint — 2026-10-16T09:06:28.933272+00:00
+
+B36/B37 is verified at **1,307 papers /4,561 canonical records /2,440 recipe–structure display pairs**. The next private B38/B39 selection contains **56 papers /86 records /328 crops** and remains unpublished. Its normal integration and new-asset registration have completed locally; citation/title metadata and caption binding come next. All 105 historical deletion-only corrections in those saved inputs are retained; no new independent audit or training credit is asserted.
+
+The [R15 cleanup report](https://github.com/cuiyist/mattersyn2/blob/56d7f84cea0efef2ede86f5a542614d9c1dcba1d/CLEANUP_REPORT_2026-10-12.md) is saved and anonymously verified. Two retired generated-copy subtrees removed 69,527 copies /4,692,474,925 logical bytes, bringing the cumulative ledger to 11,770,805 copies /618,755,032,504 logical bytes. C: readings during those removals ran from 83,428,397,056 to87,960,203,264 free bytes during concurrent work; this is not isolated physical recovery or completion of the100GiB aim. Protected sources, training files, model and working checkouts remain.
+
+
+## B36/B37 pooled release verified — 2026-10-16T08:47:23+00:00
+
+**52 source_extracted papers /70 new canonical records /292 retained caption keys** are live and anonymously verified. Original contributions are B36 **30 papers/40 records** and B37 **22 papers/30 records**. Source `171eb9445b7dcc09d29fc1a3b369a51cceabb845` passed all three CI checks for PR [57](https://github.com/cuiyist/mattersyn/pull/57), ordinarily merged as `d0016746c38c51274c592e02d438fa4394d98265`. Site `74741ef10dc479b12ac6ddee74bf32b3f0b53d78` passed [Pages 38874769298](https://github.com/cuiyist/mattersyn-site/actions/runs/38874769298). Anonymous verification checked 976 files, 52 paper routes and 73 material routes, with zero mismatches/failures. Final manifest: 42353 files /2620803106 logical bytes.
+
+Actual deployed totals: **1307 primary paper IDs /4561 canonical records /2440 recipe–structure display pairs**. Contributions are **244 audited +1063 source_extracted papers** and **864 audited +1576 source_extracted display pairs**. Direct synthesis families: 561; public material/component hubs: 664. These units do not count independent experiments or prove scientific accuracy, universal unit-cell completeness or training readiness.
+
+The duplicate German-edition Ge DOI `10.1002/ange.200700197` stays held; its already represented English DOI and old audited records remain unchanged. All 4,491 prior canonical record files and the other 70 new records were protected. 105 historical whole-object deletions from 37 limited rare-paper reads /47 original ordinals remain applied, including common/nonretained histories. There were no scientific additions or new audit passes. Exactly 36 published DOIs intersect those read scopes. Audited questions, original denominators/window and paused audit lane remain unchanged.
+
+Cleanup remains separately evidenced: **614,062,557,579 cumulative logical bytes /11,701,278 copies**, report [c2185134](https://github.com/cuiyist/mattersyn2/blob/c2185134e5d5af51e95ff07ab60e35883a41d1de/CLEANUP_REPORT_2026-10-12.md). These copy totals do not establish isolated physical recovery or a 100 GiB free-space result. Remaining private batches require fresh published-baseline admission before normal integration; saved reads and captions are not publication credit.
+
+
 ## B35 verified — 2026-10-16T04:44:19+00:00
 
 B35 is live and anonymously verified: **24 source_extracted papers /44 new canonical records /134 active captioned figure keys**. Source `b3a463e2f41dbf2fdde76b54be4ecf8432b01eac` passed all three required CI jobs in run [38843321132](https://github.com/cuiyist/mattersyn/actions/runs/38843321132); PR [56](https://github.com/cuiyist/mattersyn/pull/56) merged as `6f840c7053db1d5b257490b9078284e7d817841a`. Normal release r2 published Site `aabf55d63d7556839b3a41ba71c1e4cdecb75fe7`, and [Pages 38851251655](https://github.com/cuiyist/mattersyn-site/actions/runs/38851251655) succeeded. Anonymous verification at 2026-10-16T04:44:19+00:00 checked **565 files, 24 paper routes and 33 material bindings with zero mismatches or failures**. The saved final artifact contains **41,470 files /2,526,466,041 bytes**. The 24 source_extracted ledger events covering 44 IDs are already recorded once; this documentation adds no events or gold credit.
@@ -64,6 +82,12 @@ The independent-audit lane remains paused. The four owner questions, original de
 Confirmed cumulative cleanup is **511,371,132,639 logical bytes / 10,107,598 file copies**. C: free space measured **110,175,473,664 bytes at 2026-10-15T18:40:18.938335+00:00**, meeting the 100 GiB threshold at that reading. The 600 GB removal target remains unmet; physical recovery is not isolated from concurrent disk activity. The same cumulative [M2 cleanup report](https://github.com/cuiyist/mattersyn2/blob/ffed64b48e27651aedd74cf01bf46df7526b9ff8/CLEANUP_REPORT_2026-10-12.md) was anonymously verified with its expected raw hash. This documentation adds no cleanup credit; original/training inputs, active runtime and working checkouts remain protected.
 
 Owner paper index: [MACHINE_EXTRACTED_PAPERS.md](research-assets/public-audits/MACHINE_EXTRACTED_PAPERS.md).
+
+## Active release preparation and cleanup — 2026-10-16T09:33:08.291207+00:00
+
+B38/B39 has **56 papers /86 new records /328 figure captions** integrated locally. Citation/title updates and all328 caption bindings are complete; deployment remains pending. The narrow existing SourceEx Dobrovolsky correction removes a solvent incorrectly labelled as a reactor and records the vessel as unreported; the four figure captions, bibliography and all chemicals remain unchanged. It adds no paper or audit credit. Normal asset registration, one-commit Source preparation, complete local checks, CI, browser review, release and anonymous verification remain required. The latest verified website remains **1,307 papers /4,561 records /2,440 display pairs**. The audited lane and owner questions remain paused.
+
+The [R16 cleanup report](https://github.com/cuiyist/mattersyn2/blob/ba6f5ebc055348537636a8a214ea270b1287d492/CLEANUP_REPORT_2026-10-12.md) is saved and anonymously verified. Proper Git removal of the retired B36 preview removed42,364 rebuildable file copies /2,699,642,449 logical bytes; C: observations were86,843,191,296 before and89,670,021,120 after. Cumulative copy removal is11,813,169 files /621,454,674,953 logical bytes; this does not establish isolated physical recovery or the100GiB free-space aim. No programs were stopped or protected sources, training files, active model or working checkouts removed.
 
 ## Current identity hold — 2026-10-16T06:48:38.505980+00:00
 

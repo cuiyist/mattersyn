@@ -1,0 +1,444 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "richards2003-b309059k-ap-mgo-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Ryan M. Richards (2003): AP-MgO",
+  "material": {
+    "formula": "MgO",
+    "family": "MgO nanocrystals",
+    "elements": [
+      "Mg",
+      "O"
+    ],
+    "components": [
+      "MgO"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Aerogel",
+  "sources": [
+    {
+      "id": "richards2003-b309059k",
+      "doi": "10.1039/b309059k",
+      "title": "ESR study of nanocrystalline aerogel-prepared magnesium oxide",
+      "authors": "Ryan M. Richards, Alexander M. Volodin, Alexander F. Bedilo, Kenneth J. Klabunde",
+      "year": 2003,
+      "url": "https://doi.org/10.1039/b309059k",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "richards2003-b309059k",
+    "recipe_family": "richards2003-b309059k-ap-mgo-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "MgO",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "richards2003-b309059k",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": 4.0,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "4 nm",
+      "evidence": [
+        {
+          "source_id": "richards2003-b309059k",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "richards2003-b309059k-ap-mgo-1--mg-ribbon",
+      "name": "Mg ribbon",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "richards2003-b309059k",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "richards2003-b309059k-ap-mgo-1--methanol",
+      "name": "methanol",
+      "formula": null,
+      "role": "solvent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "richards2003-b309059k",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "richards2003-b309059k-ap-mgo-1--water",
+      "name": "water",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "richards2003-b309059k",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "richards2003-b309059k-ap-mgo-1--toluene",
+      "name": "toluene",
+      "formula": null,
+      "role": "solvent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "richards2003-b309059k",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "richards2003-b309059k-ap-mgo-1--after-s01-dissolve",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "richards2003-b309059k-ap-mgo-1--mg-ribbon",
+        "richards2003-b309059k-ap-mgo-1--methanol"
+      ]
+    },
+    {
+      "id": "richards2003-b309059k-ap-mgo-1--after-s02-hydrolysis",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "richards2003-b309059k-ap-mgo-1--after-s01-dissolve",
+        "richards2003-b309059k-ap-mgo-1--water",
+        "richards2003-b309059k-ap-mgo-1--methanol",
+        "richards2003-b309059k-ap-mgo-1--toluene"
+      ]
+    },
+    {
+      "id": "richards2003-b309059k-ap-mgo-1--after-s03-dry",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "richards2003-b309059k-ap-mgo-1--after-s02-hydrolysis"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-dissolve",
+      "action": "dissolve",
+      "label": "Mg ribbon dissolved in methanol",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "richards2003-b309059k-ap-mgo-1--mg-ribbon",
+        "richards2003-b309059k-ap-mgo-1--methanol"
+      ],
+      "outputs": [
+        "richards2003-b309059k-ap-mgo-1--after-s01-dissolve"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "vacuum",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "richards2003-b309059k",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Mg ribbon dissolved in methanol",
+      "evidence": [
+        {
+          "source_id": "richards2003-b309059k",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "s02-hydrolysis",
+      "action": "hydrolysis",
+      "label": "Hydrolysis of Mg(OCH3)2 with water in methanol–toluene mixture",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-dissolve"
+      ],
+      "inputs": [
+        "richards2003-b309059k-ap-mgo-1--after-s01-dissolve",
+        "richards2003-b309059k-ap-mgo-1--water",
+        "richards2003-b309059k-ap-mgo-1--methanol",
+        "richards2003-b309059k-ap-mgo-1--toluene"
+      ],
+      "outputs": [
+        "richards2003-b309059k-ap-mgo-1--after-s02-hydrolysis"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "vacuum",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "richards2003-b309059k",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Hydrolysis of Mg(OCH3)2 with water in methanol–toluene mixture",
+      "evidence": [
+        {
+          "source_id": "richards2003-b309059k",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "s03-dry",
+      "action": "dry",
+      "label": "Drying of Mg(OH)2 gel in autoclave",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-hydrolysis"
+      ],
+      "inputs": [
+        "richards2003-b309059k-ap-mgo-1--after-s02-hydrolysis"
+      ],
+      "outputs": [
+        "richards2003-b309059k-ap-mgo-1--after-s03-dry"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 265,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "265 °C",
+          "evidence": [
+            {
+              "source_id": "richards2003-b309059k",
+              "locator": "Main PDF p.1"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Drying of Mg(OH)2 gel in autoclave",
+      "evidence": [
+        {
+          "source_id": "richards2003-b309059k",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "richards2003-b309059k-ap-mgo-1--product",
+      "source_sample_label": "AP-MgO",
+      "batch_id": null,
+      "material_state_id": "richards2003-b309059k-ap-mgo-1--after-s03-dry",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "MgO",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "richards2003-b309059k",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "richards2003-b309059k",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "notes": [
+        "Reactor: autoclave (Main PDF p.1)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "richards2003-b309059k-ap-mgo-1--size",
+      "sample_id": "richards2003-b309059k-ap-mgo-1--product",
+      "property": "particle_size",
+      "technique": "not reported",
+      "value": {
+        "value": 4.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "4 nm",
+        "evidence": [
+          {
+            "source_id": "richards2003-b309059k",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "richards2003-b309059k",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of Mg ribbon not reported in the extracted text.",
+      "Amount of methanol not reported in the extracted text.",
+      "Amount of water not reported in the extracted text.",
+      "Amount of toluene not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
