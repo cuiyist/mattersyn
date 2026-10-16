@@ -61,6 +61,8 @@ class ProjectChecks:
             return ['schema_invalid']
         if not self.is_route(record):
             return ['no_synthesis_operation']
+        if (record.get('material') or {}).get('elements') == []:
+            return ['technical_unresolved_composition_for_navigation']
         try:
             self.elements(record)
         except (ValueError, KeyError, TypeError):
