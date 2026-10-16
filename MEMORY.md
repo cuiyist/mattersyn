@@ -1,5 +1,13 @@
 Owner revisit list: [Machine-extracted papers](research-assets/public-audits/MACHINE_EXTRACTED_PAPERS.md).
 
+## B44/B45/B46 navigation correction, pending release — 2026-10-16T20:32:47.881929+00:00
+
+The final complete local build at Source `e0c873298df188edbcda124698d7b6a1305b662a` caught two Ge routing checks. One new record now retains its explicitly named variable-oxide cladding in navigation as Ge/GeOx. Only its navigation metadata and exact dependent input hashes changed; reported compositions, quantities, source locators, figure crops and captions are unchanged. All **4,801 prior canonical files** and the **other 99 new files** remain raw-byte protected. The failed head and check logs remain saved. No converter, policy, rights rule or release gate changed. Choice: preserve the explicitly named variable cladding in navigation because the retained product identifies it.
+
+The batch remains **68 papers /100 records /333 caption keys**, with **zero new publication credit** until fresh local checks, browser review, exact-head CI, ordinary merge, deployment and anonymous verification pass. Latest verified website: **1,461 papers /4,801 canonical records /2,680 display pairs**. No independent audit, calibration or training eligibility is claimed; the audited lane stays paused.
+
+The [cleanup report](https://github.com/cuiyist/mattersyn2/blob/main/CLEANUP_REPORT_2026-10-12.md) is saved through verified R33, commit `23cb63cd0190aa0ac933630d4ce851ff0fda63fa`. R33 records **135,131 additional redundant copies /7,919,229,808 logical bytes**, with no programs, originals or training data removed. C: free bytes observed now: **58756354048**; the 100 GiB aim remains unmet. Cumulative copy accounting is 13,423,161 copies /725,053,341,943 logical bytes, not isolated physical recovery. All earlier HOLDs and protected local evidence remain preserved.
+
 ## B42/B43 pooled release verified — 2026-10-16T19:10:05+00:00
 
 **42 source_extracted papers /69 new canonical records /209 retained caption keys** are live and anonymously verified. Original contributions: B42 **18 papers/34 records/99 figures**, B43 **24 papers/35 records/110 figures**. Source `4d258d7df2fdc5c61c783bbce91eebbbf2f9deed` passed all three exact-head CI jobs and ordinary PR [60](https://github.com/cuiyist/mattersyn/pull/60), merge `f6e5b75ff9d6067567bacda9b0efc82807814e5f`. Site `92749b7af8920a2c507a301ba05739db98710f2f` passed [Pages 38950856165](https://github.com/cuiyist/mattersyn-site/actions/runs/38950856165). Anonymous verification checked 829 files, 42 planned paper routes and 61 material routes with zero failures. Final manifest 45164 files /2878322709 logical bytes.
