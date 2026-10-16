@@ -1,0 +1,584 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "yin2014-nl500378k-tio2-nanocrystals-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Wenshou Wang et al. (2014): TiO2 nanocrystals",
+  "material": {
+    "formula": "TiO2",
+    "family": "TiO2 nanocrystals",
+    "elements": [
+      "Ti",
+      "O"
+    ],
+    "components": [
+      "TiO2"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "High temperature hydrolysis",
+  "sources": [
+    {
+      "id": "yin2014-nl500378k",
+      "doi": "10.1021/nl500378k",
+      "title": "Nanocrystalline TiO2-Catalyzed Photoreversible Color Switching",
+      "authors": "Wenshou Wang; Miaomiao Ye; Le He; Yadong Yin",
+      "year": 2014,
+      "url": "https://doi.org/10.1021/nl500378k",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "yin2014-nl500378k",
+    "recipe_family": "yin2014-nl500378k-tio2-nanocrystals-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "TiO2",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "yin2014-nl500378k",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "anatase",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "yin2014-nl500378k",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": 5.0,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "5 nm",
+      "evidence": [
+        {
+          "source_id": "yin2014-nl500378k",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "elongated",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "yin2014-nl500378k",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "yin2014-nl500378k-tio2-nanocrystals-1--ticl4",
+      "name": "TiCl4",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "volume": {
+          "value": 1.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1 mL",
+          "evidence": [
+            {
+              "source_id": "yin2014-nl500378k",
+              "locator": "Main PDF p.6"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "yin2014-nl500378k",
+          "locator": "Main PDF p.6"
+        }
+      ]
+    },
+    {
+      "id": "yin2014-nl500378k-tio2-nanocrystals-1--nh4oh",
+      "name": "NH4OH",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "volume": {
+          "value": 1.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1 mL",
+          "evidence": [
+            {
+              "source_id": "yin2014-nl500378k",
+              "locator": "Main PDF p.6"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "yin2014-nl500378k",
+          "locator": "Main PDF p.6"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "yin2014-nl500378k-tio2-nanocrystals-1--after-s01-heat",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "yin2014-nl500378k-tio2-nanocrystals-1--ticl4",
+        "yin2014-nl500378k-tio2-nanocrystals-1--nh4oh"
+      ]
+    },
+    {
+      "id": "yin2014-nl500378k-tio2-nanocrystals-1--after-s02-cool",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "yin2014-nl500378k-tio2-nanocrystals-1--after-s01-heat"
+      ]
+    },
+    {
+      "id": "yin2014-nl500378k-tio2-nanocrystals-1--after-s03-precipitate",
+      "name": "mixture after step 3",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "yin2014-nl500378k-tio2-nanocrystals-1--after-s02-cool"
+      ]
+    },
+    {
+      "id": "yin2014-nl500378k-tio2-nanocrystals-1--after-s04-wash",
+      "name": "mixture after step 4",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "yin2014-nl500378k-tio2-nanocrystals-1--after-s03-precipitate"
+      ]
+    },
+    {
+      "id": "yin2014-nl500378k-tio2-nanocrystals-1--after-s05-redisperse",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "yin2014-nl500378k-tio2-nanocrystals-1--after-s04-wash"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-heat",
+      "action": "heat",
+      "label": "Heating the mixture to 220°C",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "yin2014-nl500378k-tio2-nanocrystals-1--ticl4",
+        "yin2014-nl500378k-tio2-nanocrystals-1--nh4oh"
+      ],
+      "outputs": [
+        "yin2014-nl500378k-tio2-nanocrystals-1--after-s01-heat"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 220,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "220 °C",
+          "evidence": [
+            {
+              "source_id": "yin2014-nl500378k",
+              "locator": "Main PDF p.6"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 3,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "3 h",
+          "evidence": [
+            {
+              "source_id": "yin2014-nl500378k",
+              "locator": "Main PDF p.6"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yin2014-nl500378k",
+            "locator": "Main PDF p.6"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Heating the mixture to 220°C",
+      "evidence": [
+        {
+          "source_id": "yin2014-nl500378k",
+          "locator": "Main PDF p.6"
+        }
+      ]
+    },
+    {
+      "id": "s02-cool",
+      "action": "cool",
+      "label": "Cooling to room temperature",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-heat"
+      ],
+      "inputs": [
+        "yin2014-nl500378k-tio2-nanocrystals-1--after-s01-heat"
+      ],
+      "outputs": [
+        "yin2014-nl500378k-tio2-nanocrystals-1--after-s02-cool"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yin2014-nl500378k",
+            "locator": "Main PDF p.6"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Cooling to room temperature",
+      "evidence": [
+        {
+          "source_id": "yin2014-nl500378k",
+          "locator": "Main PDF p.6"
+        }
+      ]
+    },
+    {
+      "id": "s03-precipitate",
+      "action": "precipitate",
+      "label": "Adding acetone and centrifuging",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-cool"
+      ],
+      "inputs": [
+        "yin2014-nl500378k-tio2-nanocrystals-1--after-s02-cool"
+      ],
+      "outputs": [
+        "yin2014-nl500378k-tio2-nanocrystals-1--after-s03-precipitate"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "10 min",
+          "evidence": [
+            {
+              "source_id": "yin2014-nl500378k",
+              "locator": "Main PDF p.6"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Adding acetone and centrifuging",
+      "evidence": [
+        {
+          "source_id": "yin2014-nl500378k",
+          "locator": "Main PDF p.6"
+        }
+      ]
+    },
+    {
+      "id": "s04-wash",
+      "action": "wash",
+      "label": "Washing with ethanol and acetone",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s03-precipitate"
+      ],
+      "inputs": [
+        "yin2014-nl500378k-tio2-nanocrystals-1--after-s03-precipitate"
+      ],
+      "outputs": [
+        "yin2014-nl500378k-tio2-nanocrystals-1--after-s04-wash"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Washing with ethanol and acetone",
+      "evidence": [
+        {
+          "source_id": "yin2014-nl500378k",
+          "locator": "Main PDF p.6"
+        }
+      ]
+    },
+    {
+      "id": "s05-redisperse",
+      "action": "redisperse",
+      "label": "Redispersing in water",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s04-wash"
+      ],
+      "inputs": [
+        "yin2014-nl500378k-tio2-nanocrystals-1--after-s04-wash"
+      ],
+      "outputs": [
+        "yin2014-nl500378k-tio2-nanocrystals-1--after-s05-redisperse"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Redispersing in water",
+      "evidence": [
+        {
+          "source_id": "yin2014-nl500378k",
+          "locator": "Main PDF p.6"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "yin2014-nl500378k-tio2-nanocrystals-1--product",
+      "source_sample_label": "TiO2 nanocrystals",
+      "batch_id": null,
+      "material_state_id": "yin2014-nl500378k-tio2-nanocrystals-1--after-s05-redisperse",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "TiO2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yin2014-nl500378k",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "anatase",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yin2014-nl500378k",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "elongated",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yin2014-nl500378k",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": "P123",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yin2014-nl500378k",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "yin2014-nl500378k",
+          "locator": "Main PDF p.6"
+        }
+      ],
+      "notes": [
+        "Reactor: 100 mL flask (Main PDF p.6).",
+        "Reaction temperature: 220 degC (Main PDF p.6).",
+        "Reaction time: 3 h (Main PDF p.6)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "yin2014-nl500378k-tio2-nanocrystals-1--size",
+      "sample_id": "yin2014-nl500378k-tio2-nanocrystals-1--product",
+      "property": "diameter",
+      "technique": "TEM",
+      "value": {
+        "value": 5.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "5 nm",
+        "evidence": [
+          {
+            "source_id": "yin2014-nl500378k",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "yin2014-nl500378k",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

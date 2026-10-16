@@ -1,0 +1,382 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "song2004-la049516c-zsm-5-15-nm-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "W. Song (2004): ZSM-5 (15 nm)",
+  "material": {
+    "formula": "Si/Al",
+    "family": "Si/Al nanocrystals",
+    "elements": [
+      "Si",
+      "Al"
+    ],
+    "components": [
+      "Si",
+      "Al"
+    ],
+    "architecture": "unresolved"
+  },
+  "method": "Hydrothermal",
+  "sources": [
+    {
+      "id": "song2004-la049516c",
+      "doi": "10.1021/la049516c",
+      "title": "Synthesis, Characterization, and Adsorption Properties of Nanocrystalline ZSM-5",
+      "authors": "W. Song, R. E. Justice, C. A. Jones, V. H. Grassian, S. C. Larsen",
+      "year": 2004,
+      "url": "https://doi.org/10.1021/la049516c",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "song2004-la049516c",
+    "recipe_family": "song2004-la049516c-zsm-5-15-nm-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Si/Al 20",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "song2004-la049516c",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "MFI framework",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "song2004-la049516c",
+          "locator": "Main PDF p.4"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": 15,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "15 nm",
+      "evidence": [
+        {
+          "source_id": "song2004-la049516c",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "song2004-la049516c-zsm-5-15-nm-1--sodium-hydroxide-naoh",
+      "name": "sodium hydroxide (NaOH)",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "song2004-la049516c",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "song2004-la049516c-zsm-5-15-nm-1--after-s01-heat",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "song2004-la049516c-zsm-5-15-nm-1--after-s02-centrifuge",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "song2004-la049516c-zsm-5-15-nm-1--after-s01-heat"
+      ]
+    },
+    {
+      "id": "song2004-la049516c-zsm-5-15-nm-1--after-s03-calcine",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "song2004-la049516c-zsm-5-15-nm-1--after-s02-centrifuge"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-heat",
+      "action": "heat",
+      "label": "Hydrothermal treatment",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "song2004-la049516c-zsm-5-15-nm-1--after-s01-heat"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "song2004-la049516c",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Hydrothermal treatment",
+      "evidence": [
+        {
+          "source_id": "song2004-la049516c",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-centrifuge",
+      "action": "centrifuge",
+      "label": "Recovery of ZSM-5 crystals",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-heat"
+      ],
+      "inputs": [
+        "song2004-la049516c-zsm-5-15-nm-1--after-s01-heat"
+      ],
+      "outputs": [
+        "song2004-la049516c-zsm-5-15-nm-1--after-s02-centrifuge"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Recovery of ZSM-5 crystals",
+      "evidence": [
+        {
+          "source_id": "song2004-la049516c",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-calcine",
+      "action": "calcine",
+      "label": "Removal of TPAOH template",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-centrifuge"
+      ],
+      "inputs": [
+        "song2004-la049516c-zsm-5-15-nm-1--after-s02-centrifuge"
+      ],
+      "outputs": [
+        "song2004-la049516c-zsm-5-15-nm-1--after-s03-calcine"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 600,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "600 °C",
+          "evidence": [
+            {
+              "source_id": "song2004-la049516c",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "song2004-la049516c",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Removal of TPAOH template",
+      "evidence": [
+        {
+          "source_id": "song2004-la049516c",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "song2004-la049516c-zsm-5-15-nm-1--product",
+      "source_sample_label": "ZSM-5 (15 nm)",
+      "batch_id": null,
+      "material_state_id": "song2004-la049516c-zsm-5-15-nm-1--after-s03-calcine",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Si/Al 20",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "song2004-la049516c",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "MFI framework",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "song2004-la049516c",
+            "locator": "Main PDF p.4"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "song2004-la049516c",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reactor: 25 mL autoclave with Teflon liner (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "song2004-la049516c-zsm-5-15-nm-1--size",
+      "sample_id": "song2004-la049516c-zsm-5-15-nm-1--product",
+      "property": "particle_size",
+      "technique": "not reported",
+      "value": {
+        "value": 15,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "15 nm",
+        "evidence": [
+          {
+            "source_id": "song2004-la049516c",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "song2004-la049516c",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of sodium hydroxide (NaOH) not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

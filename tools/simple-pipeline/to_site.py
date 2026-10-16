@@ -100,12 +100,23 @@ def formula_from(text):
     return token if token is not None else str(text).strip()
 
 
+def _embedded_product_formula(pair):
+    """Classify an explicit named Ge/SiO2 system; never fill a reported fact."""
+    value = ((pair.get('structure') or {}).get('composition') or {}).get('value')
+    if value is not None and str(value).strip():
+        return None
+    label = str(pair.get('product') or '').strip()
+    if re.fullmatch(r'(?:(?i:nanocrystalline)\s+)?Ge\s+(?i:embedded\s+in)\s+SiO2', label):
+        return 'Ge/SiO2'
+    return None
+
+
 def _composition_from(pair):
     """Explicit retained composition, or an existing-parser product formula only."""
     value = ((pair.get('structure') or {}).get('composition') or {}).get('value')
     if value is not None and str(value).strip():
         return formula_from(value)
-    return _formula_token(pair.get('product') or '')
+    return _embedded_product_formula(pair) or _formula_token(pair.get('product') or '')
 
 
 def first_upper(text):
@@ -219,6 +230,8 @@ class Builder:
         components = components_of(composition)
         reported_architecture = str((st.get('architecture') or {}).get('value') or '').strip().lower()
         architecture = ARCHITECTURE.get(reported_architecture, reported_architecture if reported_architecture in {'single_material', 'core_shell', 'heterostructure', 'alloy', 'composite', 'phase_mixture', 'unresolved'} else 'unresolved' if len(components) > 1 else 'single_material')
+        if _embedded_product_formula(pair) is not None:
+            architecture = 'composite'
         if architecture == 'single_material' and len(components) > 1:
             components = []  # A printed dopant separator does not establish separate product components.
         method = str((rc.get('method') or {}).get('value') or 'synthesis as described in the source')

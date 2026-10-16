@@ -119,6 +119,31 @@ def silicon_reviewed_regression_checks(hub, byid):
     ]
 
 
+def germanium_reviewed_regression_checks(hub, byid):
+    """Keep exact reviewed Heath scope; extracted Ge routes must be components."""
+    routes = set(hub.get("record_ids", []))
+    direct = set(hub.get("direct_record_ids", []))
+    reviewed = {rid for rid in routes
+                if byid.get(rid, {}).get("quality", {}).get("review_status") == "source_reviewed"}
+    extracted = {rid for rid in routes
+                 if byid.get(rid, {}).get("quality", {}).get("review_status") == "source_extracted"}
+    component_architectures = {"core_shell", "heterostructure", "composite", "alloy", "phase_mixture", "unresolved"}
+    return [
+        (hub.get("component_only") is True and not direct,
+         "Ge: substrate-supported routes became isolated Ge synthesis"),
+        (reviewed == HEATH_GE_SI_ROUTES,
+         "Ge: reviewed component routes must remain exactly the two Heath variants"),
+        (routes <= set(byid) and routes == reviewed | extracted,
+         "Ge: unknown or inadmissible-status route entered component scope"),
+        (all(byid[rid].get("material", {}).get("formula") != "Ge"
+             and "Ge" in byid[rid].get("material", {}).get("components", [])
+             and len(set(byid[rid].get("material", {}).get("components", []))) > 1
+             and byid[rid].get("material", {}).get("architecture") in component_architectures
+             for rid in extracted),
+         "Ge: extracted route must retain a named multi-component product, never isolated Ge"),
+    ]
+
+
 class Audit:
     def __init__(self, root):
         self.root = root.resolve()
@@ -249,7 +274,8 @@ class Audit:
         self.check(all(self.byid.get(rid, {}).get("material", {}).get("formula") == "Si/SiOx" for rid in LITTAU_SI_ROUTES), "Si: source surface-oxidized product identity was erased")
         self.check(all(self.byid.get(rid, {}).get("material", {}).get("formula") == "Ge/Si" for rid in HEATH_GE_SI_ROUTES), "Ge/Si: supported island identity was erased")
         germanium = self.hubs.get("Ge", {})
-        self.check(germanium.get("component_only") is True and set(germanium.get("record_ids", [])) == HEATH_GE_SI_ROUTES, "Ge: substrate-supported routes became isolated Ge synthesis")
+        for condition, message in germanium_reviewed_regression_checks(germanium, self.byid):
+            self.check(condition, message)
         self.check(set(self.hubs.get("Ge/Si", {}).get("direct_record_ids", [])) == HEATH_GE_SI_ROUTES, "Ge/Si: both reviewed template variants must remain direct routes")
         silver = self.hubs.get("Ag", {})
         shah_ag_routes = {"shah-2001-ag-" + letter for letter in "abcdefghi"}

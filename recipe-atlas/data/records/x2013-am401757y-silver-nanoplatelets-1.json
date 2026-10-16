@@ -1,0 +1,440 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "x2013-am401757y-silver-nanoplatelets-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Young-In Lee et al. (2013): silver nanoplatelets",
+  "material": {
+    "formula": "Ag",
+    "family": "Ag nanocrystals",
+    "elements": [
+      "Ag"
+    ],
+    "components": [
+      "Ag"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Solvothermal",
+  "sources": [
+    {
+      "id": "x2013-am401757y",
+      "doi": "10.1021/am401757y",
+      "title": "Enhanced Electrical and Mechanical Properties of Silver Nanoplatelet-Based Conductive Features Direct Printed on a Flexible Substrate",
+      "authors": "Young-In Lee; Seil Kim; Seung-Boo Jung; Nosang V. Myung; Yong-Ho Choa",
+      "year": 2013,
+      "url": "https://doi.org/10.1021/am401757y",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "x2013-am401757y",
+    "recipe_family": "x2013-am401757y-silver-nanoplatelets-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Ag",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "x2013-am401757y",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "face-centered cubic",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "x2013-am401757y",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": 517,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "517 nm",
+      "evidence": [
+        {
+          "source_id": "x2013-am401757y",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "triangular",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "x2013-am401757y",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "x2013-am401757y-silver-nanoplatelets-1--after-s01-dissolve",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "x2013-am401757y-silver-nanoplatelets-1--after-s02-add",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "x2013-am401757y-silver-nanoplatelets-1--after-s01-dissolve"
+      ]
+    },
+    {
+      "id": "x2013-am401757y-silver-nanoplatelets-1--after-s03-heat",
+      "name": "mixture after step 3",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "x2013-am401757y-silver-nanoplatelets-1--after-s02-add"
+      ]
+    },
+    {
+      "id": "x2013-am401757y-silver-nanoplatelets-1--after-s04-centrifuge",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "x2013-am401757y-silver-nanoplatelets-1--after-s03-heat"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-dissolve",
+      "action": "dissolve",
+      "label": "PVP dissolved in DMF",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "x2013-am401757y-silver-nanoplatelets-1--after-s01-dissolve"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "ambient",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "x2013-am401757y",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "PVP dissolved in DMF",
+      "evidence": [
+        {
+          "source_id": "x2013-am401757y",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-add",
+      "action": "add",
+      "label": "AgNO3 added to solution",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-dissolve"
+      ],
+      "inputs": [
+        "x2013-am401757y-silver-nanoplatelets-1--after-s01-dissolve"
+      ],
+      "outputs": [
+        "x2013-am401757y-silver-nanoplatelets-1--after-s02-add"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "ambient",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "x2013-am401757y",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "AgNO3 added to solution",
+      "evidence": [
+        {
+          "source_id": "x2013-am401757y",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-heat",
+      "action": "heat",
+      "label": "Solution transferred to reactor and incubated",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-add"
+      ],
+      "inputs": [
+        "x2013-am401757y-silver-nanoplatelets-1--after-s02-add"
+      ],
+      "outputs": [
+        "x2013-am401757y-silver-nanoplatelets-1--after-s03-heat"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 160,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "160 °C",
+          "evidence": [
+            {
+              "source_id": "x2013-am401757y",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 4,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "4 h",
+          "evidence": [
+            {
+              "source_id": "x2013-am401757y",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "ambient",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "x2013-am401757y",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Solution transferred to reactor and incubated",
+      "evidence": [
+        {
+          "source_id": "x2013-am401757y",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s04-centrifuge",
+      "action": "centrifuge",
+      "label": "Samples centrifuged and washed",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s03-heat"
+      ],
+      "inputs": [
+        "x2013-am401757y-silver-nanoplatelets-1--after-s03-heat"
+      ],
+      "outputs": [
+        "x2013-am401757y-silver-nanoplatelets-1--after-s04-centrifuge"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Samples centrifuged and washed",
+      "evidence": [
+        {
+          "source_id": "x2013-am401757y",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "x2013-am401757y-silver-nanoplatelets-1--product",
+      "source_sample_label": "silver nanoplatelets",
+      "batch_id": null,
+      "material_state_id": "x2013-am401757y-silver-nanoplatelets-1--after-s04-centrifuge",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Ag",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "x2013-am401757y",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "face-centered cubic",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "x2013-am401757y",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "triangular",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "x2013-am401757y",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": "PVP",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "x2013-am401757y",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "x2013-am401757y",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reactor: benchtop reactor (Model 4843, Parr Instrument Company) (Main PDF p.2).",
+        "Reaction temperature: 160 degC (Main PDF p.2).",
+        "Reaction time: 4 h (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "x2013-am401757y-silver-nanoplatelets-1--size",
+      "sample_id": "x2013-am401757y-silver-nanoplatelets-1--product",
+      "property": "particle_size",
+      "technique": "not reported",
+      "value": {
+        "value": 517,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "517 nm",
+        "evidence": [
+          {
+            "source_id": "x2013-am401757y",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "x2013-am401757y",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

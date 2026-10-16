@@ -1,0 +1,494 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "hanke2006-1-2240114-gaas-quantum-dot-molecules-qdms-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "M. Hanke (2006): GaAs quantum dot molecules (QDMs)",
+  "material": {
+    "formula": "GaAs",
+    "family": "GaAs nanocrystals",
+    "elements": [
+      "Ga",
+      "As"
+    ],
+    "components": [
+      "GaAs"
+    ],
+    "architecture": "heterostructure"
+  },
+  "method": "Droplet epitaxy",
+  "sources": [
+    {
+      "id": "hanke2006-1-2240114",
+      "doi": "10.1063/1.2240114",
+      "title": "Zero-strain GaAs quantum dot molecules as investigated by x-ray diffuse scattering",
+      "authors": "M. Hanke, M. Schmidbauer, D. Grigoriev, P. Schäfer, R. Köhler, T. H. Metzger, Zh. M. Wang, Yu. I. Mazur, G. J. Salamo",
+      "year": 2006,
+      "url": "https://doi.org/10.1063/1.2240114",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "hanke2006-1-2240114",
+    "recipe_family": "hanke2006-1-2240114-gaas-quantum-dot-molecules-qdms-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "GaAs",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "hanke2006-1-2240114",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": 35,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "35 nm",
+      "evidence": [
+        {
+          "source_id": "hanke2006-1-2240114",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "hanke2006-1-2240114-gaas-quantum-dot-molecules-qdms-1--gaas",
+      "name": "GaAs",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "hanke2006-1-2240114",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "hanke2006-1-2240114-gaas-quantum-dot-molecules-qdms-1--al0-3ga0-7as",
+      "name": "Al0.3Ga0.7As",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "hanke2006-1-2240114",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "hanke2006-1-2240114-gaas-quantum-dot-molecules-qdms-1--after-s01-deposit",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "hanke2006-1-2240114-gaas-quantum-dot-molecules-qdms-1--gaas"
+      ]
+    },
+    {
+      "id": "hanke2006-1-2240114-gaas-quantum-dot-molecules-qdms-1--after-s02-deposit",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "hanke2006-1-2240114-gaas-quantum-dot-molecules-qdms-1--after-s01-deposit",
+        "hanke2006-1-2240114-gaas-quantum-dot-molecules-qdms-1--al0-3ga0-7as"
+      ]
+    },
+    {
+      "id": "hanke2006-1-2240114-gaas-quantum-dot-molecules-qdms-1--after-s03-cool",
+      "name": "mixture after step 3",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "hanke2006-1-2240114-gaas-quantum-dot-molecules-qdms-1--after-s02-deposit"
+      ]
+    },
+    {
+      "id": "hanke2006-1-2240114-gaas-quantum-dot-molecules-qdms-1--after-s04-supply",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "hanke2006-1-2240114-gaas-quantum-dot-molecules-qdms-1--after-s03-cool",
+        "hanke2006-1-2240114-gaas-quantum-dot-molecules-qdms-1--gaas"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-deposit",
+      "action": "deposit",
+      "label": "Deposit GaAs buffer layer",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "hanke2006-1-2240114-gaas-quantum-dot-molecules-qdms-1--gaas"
+      ],
+      "outputs": [
+        "hanke2006-1-2240114-gaas-quantum-dot-molecules-qdms-1--after-s01-deposit"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 600,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "600 °C",
+          "evidence": [
+            {
+              "source_id": "hanke2006-1-2240114",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Deposit GaAs buffer layer",
+      "evidence": [
+        {
+          "source_id": "hanke2006-1-2240114",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-deposit",
+      "action": "deposit",
+      "label": "Deposit Al0.3Ga0.7As barrier layer",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-deposit"
+      ],
+      "inputs": [
+        "hanke2006-1-2240114-gaas-quantum-dot-molecules-qdms-1--after-s01-deposit",
+        "hanke2006-1-2240114-gaas-quantum-dot-molecules-qdms-1--al0-3ga0-7as"
+      ],
+      "outputs": [
+        "hanke2006-1-2240114-gaas-quantum-dot-molecules-qdms-1--after-s02-deposit"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 600,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "600 °C",
+          "evidence": [
+            {
+              "source_id": "hanke2006-1-2240114",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Deposit Al0.3Ga0.7As barrier layer",
+      "evidence": [
+        {
+          "source_id": "hanke2006-1-2240114",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-cool",
+      "action": "cool",
+      "label": "Cool to 550 °C",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-deposit"
+      ],
+      "inputs": [
+        "hanke2006-1-2240114-gaas-quantum-dot-molecules-qdms-1--after-s02-deposit"
+      ],
+      "outputs": [
+        "hanke2006-1-2240114-gaas-quantum-dot-molecules-qdms-1--after-s03-cool"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 550,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "550 °C",
+          "evidence": [
+            {
+              "source_id": "hanke2006-1-2240114",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Cool to 550 °C",
+      "evidence": [
+        {
+          "source_id": "hanke2006-1-2240114",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s04-supply",
+      "action": "supply",
+      "label": "Supply Ga atoms to form liquid droplets",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s03-cool"
+      ],
+      "inputs": [
+        "hanke2006-1-2240114-gaas-quantum-dot-molecules-qdms-1--after-s03-cool",
+        "hanke2006-1-2240114-gaas-quantum-dot-molecules-qdms-1--gaas"
+      ],
+      "outputs": [
+        "hanke2006-1-2240114-gaas-quantum-dot-molecules-qdms-1--after-s04-supply"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 550,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "550 °C",
+          "evidence": [
+            {
+              "source_id": "hanke2006-1-2240114",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Supply Ga atoms to form liquid droplets",
+      "evidence": [
+        {
+          "source_id": "hanke2006-1-2240114",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "hanke2006-1-2240114-gaas-quantum-dot-molecules-qdms-1--product",
+      "source_sample_label": "GaAs quantum dot molecules (QDMs)",
+      "batch_id": null,
+      "material_state_id": "hanke2006-1-2240114-gaas-quantum-dot-molecules-qdms-1--after-s04-supply",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "GaAs",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "hanke2006-1-2240114",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "hanke2006-1-2240114",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reaction time: 45 s (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "hanke2006-1-2240114-gaas-quantum-dot-molecules-qdms-1--size",
+      "sample_id": "hanke2006-1-2240114-gaas-quantum-dot-molecules-qdms-1--product",
+      "property": "particle_size",
+      "technique": "not reported",
+      "value": {
+        "value": 35,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "35 nm",
+        "evidence": [
+          {
+            "source_id": "hanke2006-1-2240114",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "hanke2006-1-2240114",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Amount of GaAs not reported in the extracted text.",
+      "Amount of Al0.3Ga0.7As not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

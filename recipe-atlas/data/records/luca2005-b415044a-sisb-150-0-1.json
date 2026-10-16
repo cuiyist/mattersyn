@@ -1,0 +1,339 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "luca2005-b415044a-sisb-150-0-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Vittorio Luca (2005): SiSb-150-0",
+  "material": {
+    "formula": "SiSb-150-0",
+    "family": "SiSb-150-0 nanocrystals",
+    "elements": [
+      "Si",
+      "Sb"
+    ],
+    "components": [
+      "SiSb-150-0"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Synthesis as described in the source",
+  "sources": [
+    {
+      "id": "luca2005-b415044a",
+      "doi": "10.1039/b415044a",
+      "title": "Structural and ion exchange properties of nanocrystalline Si-doped antimony pyrochlore",
+      "authors": "Vittorio Luca, Christopher S. Griffith, Mark G. Blackford and John V. Hanna",
+      "year": 2005,
+      "url": "https://doi.org/10.1039/b415044a",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "luca2005-b415044a",
+    "recipe_family": "luca2005-b415044a-sisb-150-0-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "rounded",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "luca2005-b415044a",
+          "locator": "Main PDF p.5"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "luca2005-b415044a-sisb-150-0-1--sbcl5",
+      "name": "SbCl5",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "mass": {
+          "value": 18,
+          "minimum": null,
+          "maximum": null,
+          "unit": "g",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "18 g",
+          "evidence": [
+            {
+              "source_id": "luca2005-b415044a",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "luca2005-b415044a",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "luca2005-b415044a-sisb-150-0-1--millipore-water",
+      "name": "Millipore water",
+      "formula": null,
+      "role": "solvent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "volume": {
+          "value": 15,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "15 mL",
+          "evidence": [
+            {
+              "source_id": "luca2005-b415044a",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "luca2005-b415044a",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "luca2005-b415044a-sisb-150-0-1--after-s01-add",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "luca2005-b415044a-sisb-150-0-1--millipore-water"
+      ]
+    },
+    {
+      "id": "luca2005-b415044a-sisb-150-0-1--after-s02-heat",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "luca2005-b415044a-sisb-150-0-1--after-s01-add"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-add",
+      "action": "add",
+      "label": "Millipore water is added to the mixture",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "luca2005-b415044a-sisb-150-0-1--millipore-water"
+      ],
+      "outputs": [
+        "luca2005-b415044a-sisb-150-0-1--after-s01-add"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Millipore water is added to the mixture",
+      "evidence": [
+        {
+          "source_id": "luca2005-b415044a",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-heat",
+      "action": "heat",
+      "label": "The suspension is heated in Teflon lined autoclaves",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-add"
+      ],
+      "inputs": [
+        "luca2005-b415044a-sisb-150-0-1--after-s01-add"
+      ],
+      "outputs": [
+        "luca2005-b415044a-sisb-150-0-1--after-s02-heat"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 150,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "150 °C",
+          "evidence": [
+            {
+              "source_id": "luca2005-b415044a",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "The suspension is heated in Teflon lined autoclaves",
+      "evidence": [
+        {
+          "source_id": "luca2005-b415044a",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "luca2005-b415044a-sisb-150-0-1--product",
+      "source_sample_label": "SiSb-150-0",
+      "batch_id": null,
+      "material_state_id": "luca2005-b415044a-sisb-150-0-1--after-s02-heat",
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": "rounded",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "luca2005-b415044a",
+            "locator": "Main PDF p.5"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "luca2005-b415044a",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reactor: 45 mL Teflon lined autoclaves (Main PDF p.2).",
+        "Reaction temperature: 150 degC (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction time not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

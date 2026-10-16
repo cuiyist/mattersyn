@@ -1,0 +1,457 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "schaeffer2014-la500876v-au5-c14-2",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Nicolas Schaeffer (2014): Au5_C14",
+  "material": {
+    "formula": "Au",
+    "family": "Au nanocrystals",
+    "elements": [
+      "Au"
+    ],
+    "components": [
+      "Au"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Precipitation",
+  "sources": [
+    {
+      "id": "schaeffer2014-la500876v",
+      "doi": "10.1021/la500876v",
+      "title": "Hierarchy in Au Nanocrystal Ordering in Supracrystals: III. Competition between van der Waals and Dynamic Processes",
+      "authors": "Nicolas Schaeffer, Yanfen Wan, and Marie-Paule Pileni",
+      "year": 2014,
+      "url": "https://doi.org/10.1021/la500876v",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "schaeffer2014-la500876v",
+    "recipe_family": "schaeffer2014-la500876v-au5-c14-2",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Au",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "schaeffer2014-la500876v",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "sphere",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "schaeffer2014-la500876v",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "schaeffer2014-la500876v-au5-c14-2--after-s01-dissolve",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "schaeffer2014-la500876v-au5-c14-2--after-s02-dissolve",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "schaeffer2014-la500876v-au5-c14-2--after-s01-dissolve"
+      ]
+    },
+    {
+      "id": "schaeffer2014-la500876v-au5-c14-2--after-s03-mix",
+      "name": "mixture after step 3",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "schaeffer2014-la500876v-au5-c14-2--after-s02-dissolve"
+      ]
+    },
+    {
+      "id": "schaeffer2014-la500876v-au5-c14-2--after-s04-dry",
+      "name": "mixture after step 4",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "schaeffer2014-la500876v-au5-c14-2--after-s03-mix"
+      ]
+    },
+    {
+      "id": "schaeffer2014-la500876v-au5-c14-2--after-s05-centrifuge",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "schaeffer2014-la500876v-au5-c14-2--after-s04-dry"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-dissolve",
+      "action": "dissolve",
+      "label": "Dissolve chlorotriphenylphosphine Au(I) and tetradecanthiol in toluene",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "schaeffer2014-la500876v-au5-c14-2--after-s01-dissolve"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 100,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "100 °C",
+          "evidence": [
+            {
+              "source_id": "schaeffer2014-la500876v",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "schaeffer2014-la500876v",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Dissolve chlorotriphenylphosphine Au(I) and tetradecanthiol in toluene",
+      "evidence": [
+        {
+          "source_id": "schaeffer2014-la500876v",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-dissolve",
+      "action": "dissolve",
+      "label": "Dissolve tert-butylamine borane complex in toluene",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-dissolve"
+      ],
+      "inputs": [
+        "schaeffer2014-la500876v-au5-c14-2--after-s01-dissolve"
+      ],
+      "outputs": [
+        "schaeffer2014-la500876v-au5-c14-2--after-s02-dissolve"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 100,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "100 °C",
+          "evidence": [
+            {
+              "source_id": "schaeffer2014-la500876v",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "schaeffer2014-la500876v",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Dissolve tert-butylamine borane complex in toluene",
+      "evidence": [
+        {
+          "source_id": "schaeffer2014-la500876v",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-mix",
+      "action": "mix",
+      "label": "Mix the two solutions",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-dissolve"
+      ],
+      "inputs": [
+        "schaeffer2014-la500876v-au5-c14-2--after-s02-dissolve"
+      ],
+      "outputs": [
+        "schaeffer2014-la500876v-au5-c14-2--after-s03-mix"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "schaeffer2014-la500876v",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Mix the two solutions",
+      "evidence": [
+        {
+          "source_id": "schaeffer2014-la500876v",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s04-dry",
+      "action": "dry",
+      "label": "Dry the colloidal solution under nitrogen flow",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s03-mix"
+      ],
+      "inputs": [
+        "schaeffer2014-la500876v-au5-c14-2--after-s03-mix"
+      ],
+      "outputs": [
+        "schaeffer2014-la500876v-au5-c14-2--after-s04-dry"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Dry the colloidal solution under nitrogen flow",
+      "evidence": [
+        {
+          "source_id": "schaeffer2014-la500876v",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s05-centrifuge",
+      "action": "centrifuge",
+      "label": "Centrifuge the solution to remove aggregates",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s04-dry"
+      ],
+      "inputs": [
+        "schaeffer2014-la500876v-au5-c14-2--after-s04-dry"
+      ],
+      "outputs": [
+        "schaeffer2014-la500876v-au5-c14-2--after-s05-centrifuge"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "5 min",
+          "evidence": [
+            {
+              "source_id": "schaeffer2014-la500876v",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Centrifuge the solution to remove aggregates",
+      "evidence": [
+        {
+          "source_id": "schaeffer2014-la500876v",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "schaeffer2014-la500876v-au5-c14-2--product",
+      "source_sample_label": "Au5_C14",
+      "batch_id": null,
+      "material_state_id": "schaeffer2014-la500876v-au5-c14-2--after-s05-centrifuge",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Au",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "schaeffer2014-la500876v",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": "sphere",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "schaeffer2014-la500876v",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "schaeffer2014-la500876v",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reactor: oil bath (Main PDF p.2).",
+        "Reaction temperature: 100 degC (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Reaction time not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
