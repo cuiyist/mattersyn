@@ -130,13 +130,37 @@ def elements_of(formula):
     formula = re.sub(r'(?<![A-Za-z0-9])TiO2\(B\)(?![A-Za-z0-9])', 'TiO2', formula or '')
     letters = re.sub(r'[^A-Za-z]', ' ', formula or '')
     letters = re.sub(r'([A-Za-z])[xyz](?=[A-Z]|$)', r'\1', letters)  # variable coefficient after an element
-    found = re.findall(rf'({ELEMENT})(?![a-z])', letters)
+    found = []
+    for token in letters.split():
+        matches = re.findall(rf'({ELEMENT})(?![a-z])', token)
+        unmatched = re.sub(rf'({ELEMENT})(?![a-z])', '', token)
+        if re.fullmatch('[xyz]*', unmatched):
+            found.extend(matches)
     return list(dict.fromkeys(found))
 
 
 def components_of(composition):
-    """Split printed compound separators, never a stoichiometric minus before x/y/z."""
-    return [x.strip() for x in re.split(r'[/@]|(?<=[A-Za-z0-9)])[-–—−](?=[A-Z])', composition) if x.strip()]
+    """Split only top-level separators; malformed groups remain one opaque label."""
+    separator = re.compile(r'[/@]|(?<=[A-Za-z0-9)])[-–—−](?=[A-Z])')
+    closers = {'(': ')', '[': ']', '{': '}'}
+    stack, parts, start = [], [], 0
+    for index, char in enumerate(composition):
+        if char in closers:
+            stack.append(closers[char])
+        elif char in ')]}':
+            if not stack or stack.pop() != char:
+                return [composition.strip()] if composition.strip() else []
+        elif not stack and separator.match(composition, index):
+            part = composition[start:index].strip()
+            if part:
+                parts.append(part)
+            start = index + 1
+    if stack:
+        return [composition.strip()] if composition.strip() else []
+    part = composition[start:].strip()
+    if part:
+        parts.append(part)
+    return parts
 
 
 class Builder:
@@ -556,6 +580,9 @@ def cmd_records(a):
             print(f'{builder.source_id}: pair {index} left out: missing composition and no chemical formula in product')
             omitted_composition += 1
         for record in records:
+            if (record.get('material') or {}).get('elements') == []:
+                print(f'{record["record_id"]}: left out: technical unresolved composition for navigation; original pair unchanged, not a source-absence decision')
+                continue
             errors = sorted(validator.iter_errors(record), key=lambda e: list(e.path))
             if errors:
                 print(f'{record["record_id"]}: NOT WRITTEN, {len(errors)} schema errors; first: {"/".join(map(str, errors[0].path))}: {errors[0].message[:160]}'); continue

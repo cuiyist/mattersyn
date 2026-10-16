@@ -1,3 +1,13 @@
+## B44/B45/B46 browser grouping corrections, pending release — 2026-10-16T23:09:29.669381+00:00
+
+The candidate passed its mechanical release checks, but browser review found malformed material navigation. Three new Bezinge records now retain their balanced whole formula and only supported element tokens. W2/W3 sample-label routes and one PVA acronym route are technical identity holds; their private extraction and prior read history remain preserved. No missing-synthesis claim or guessed composition is introduced. The converter now preserves nested groups and omits unresolved navigation before writing a record. All **4,801 prior canonical files** and **94 other new files** remain raw-byte unchanged; all retained quantities, evidence and captions are unchanged.
+
+The corrected pending scope is **67 papers /97 new records /329 visible caption keys**, with **zero publication credit**. Origins: B44 23/34/117; B45 20/28/83; B46 24/35/129. Registered archival assets belonging to held records remain intact and are excluded from visible contribution counts. The earlier 68-paper candidate and all failed checks remain historical evidence. Normal preparation, fresh complete checks, browser review, exact-head CI, ordinary merge, deployment and anonymous verification remain required. Latest verified website stays **1,461 papers /4,801 records /2,680 display pairs**. The audited lane, its questions, sampling window and six audited-only training exports remain unchanged.
+
+The owner-approved report-only [cleanup R35](https://github.com/cuiyist/mattersyn2/blob/4d8afe6e273557321c96f226c2e75b8fd9353a1e/CLEANUP_REPORT_2026-10-12.md) is saved and anonymously verified. It adds **83,943 removed redundant copies /5,076,495,068 logical bytes**, bringing cumulative accounting to **13,611,007 copies /736,615,400,063 logical bytes**; this does not establish isolated physical recovery. No programs or protected source/training inputs were removed. C: free bytes observed now: **118837739520**; the 100 GiB threshold is met at this dated observation.
+
+Choice: keep opaque formula tokens unresolved rather than guess chemistry; retain held-record archival assets and their rights entries while excluding the corresponding ordinary pages and counts.
+
 ## B44/B45/B46 navigation correction, pending release — 2026-10-16T20:32:47.881929+00:00
 
 ## Reader navigation consistency correction, pending release — 2026-10-16T21:07:08.420552+00:00
