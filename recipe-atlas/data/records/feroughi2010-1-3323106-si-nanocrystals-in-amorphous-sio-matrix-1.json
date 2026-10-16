@@ -1,0 +1,436 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "feroughi2010-1-3323106-si-nanocrystals-in-amorphous-sio-matrix-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "O. M. Feroughi (2010): Si nanocrystals in amorphous SiO matrix",
+  "material": {
+    "formula": "Si",
+    "family": "Si nanocrystals",
+    "elements": [
+      "Si"
+    ],
+    "components": [
+      "Si"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Annealing",
+  "sources": [
+    {
+      "id": "feroughi2010-1-3323106",
+      "doi": "10.1063/1.3323106",
+      "title": "Phase separation and Si nanocrystal formation in bulk SiO studied by x-ray scattering",
+      "authors": "O. M. Feroughi, C. Sternemann, Ch. J. Sahle, M. A. Schroer, H. Sternemann, H. Conrad, A. Hohl, G. T. Seidler, J. Bradley, T. T. Fister, M. Balasubramanian, A. Sakko, K. Pirkkalainen, K. Hämäläinen, and M. Tolan",
+      "year": 2010,
+      "url": "https://doi.org/10.1063/1.3323106",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "feroughi2010-1-3323106",
+    "recipe_family": "feroughi2010-1-3323106-si-nanocrystals-in-amorphous-sio-matrix-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Si",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "feroughi2010-1-3323106",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "crystalline",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "feroughi2010-1-3323106",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": 4.0,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "4 nm",
+      "evidence": [
+        {
+          "source_id": "feroughi2010-1-3323106",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "nanocrystal",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "feroughi2010-1-3323106",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "feroughi2010-1-3323106-si-nanocrystals-in-amorphous-sio-matrix-1--si-sio2-powder-mixture",
+      "name": "Si/SiO2 powder mixture",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "feroughi2010-1-3323106",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "feroughi2010-1-3323106-si-nanocrystals-in-amorphous-sio-matrix-1--after-s01-evaporate",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "feroughi2010-1-3323106-si-nanocrystals-in-amorphous-sio-matrix-1--si-sio2-powder-mixture"
+      ]
+    },
+    {
+      "id": "feroughi2010-1-3323106-si-nanocrystals-in-amorphous-sio-matrix-1--after-s02-deposit",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "feroughi2010-1-3323106-si-nanocrystals-in-amorphous-sio-matrix-1--after-s01-evaporate"
+      ]
+    },
+    {
+      "id": "feroughi2010-1-3323106-si-nanocrystals-in-amorphous-sio-matrix-1--after-s03-anneal",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "feroughi2010-1-3323106-si-nanocrystals-in-amorphous-sio-matrix-1--after-s02-deposit"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-evaporate",
+      "action": "evaporate",
+      "label": "Evaporation of a 1:1 Si/SiO2 powder mixture",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "feroughi2010-1-3323106-si-nanocrystals-in-amorphous-sio-matrix-1--si-sio2-powder-mixture"
+      ],
+      "outputs": [
+        "feroughi2010-1-3323106-si-nanocrystals-in-amorphous-sio-matrix-1--after-s01-evaporate"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 1400,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1400 °C",
+          "evidence": [
+            {
+              "source_id": "feroughi2010-1-3323106",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "feroughi2010-1-3323106",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Evaporation of a 1:1 Si/SiO2 powder mixture",
+      "evidence": [
+        {
+          "source_id": "feroughi2010-1-3323106",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-deposit",
+      "action": "deposit",
+      "label": "Deposition of bulk condensates on a cooled surface",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-evaporate"
+      ],
+      "inputs": [
+        "feroughi2010-1-3323106-si-nanocrystals-in-amorphous-sio-matrix-1--after-s01-evaporate"
+      ],
+      "outputs": [
+        "feroughi2010-1-3323106-si-nanocrystals-in-amorphous-sio-matrix-1--after-s02-deposit"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 600,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "600 °C",
+          "evidence": [
+            {
+              "source_id": "feroughi2010-1-3323106",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "feroughi2010-1-3323106",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Deposition of bulk condensates on a cooled surface",
+      "evidence": [
+        {
+          "source_id": "feroughi2010-1-3323106",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-anneal",
+      "action": "anneal",
+      "label": "Annealing for one hour using a tube furnace and nitrogen flow",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-deposit"
+      ],
+      "inputs": [
+        "feroughi2010-1-3323106-si-nanocrystals-in-amorphous-sio-matrix-1--after-s02-deposit"
+      ],
+      "outputs": [
+        "feroughi2010-1-3323106-si-nanocrystals-in-amorphous-sio-matrix-1--after-s03-anneal"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1 hour",
+          "evidence": [
+            {
+              "source_id": "feroughi2010-1-3323106",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "feroughi2010-1-3323106",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Annealing for one hour using a tube furnace and nitrogen flow",
+      "evidence": [
+        {
+          "source_id": "feroughi2010-1-3323106",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "feroughi2010-1-3323106-si-nanocrystals-in-amorphous-sio-matrix-1--product",
+      "source_sample_label": "Si nanocrystals in amorphous SiO matrix",
+      "batch_id": null,
+      "material_state_id": "feroughi2010-1-3323106-si-nanocrystals-in-amorphous-sio-matrix-1--after-s03-anneal",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Si",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "feroughi2010-1-3323106",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "crystalline",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "feroughi2010-1-3323106",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "nanocrystal",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "feroughi2010-1-3323106",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "feroughi2010-1-3323106",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "notes": [
+        "Reactor: tube furnace (Main PDF p.2).",
+        "Reaction temperature: 900 degC (Main PDF p.3).",
+        "Reaction time: 1 h (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "feroughi2010-1-3323106-si-nanocrystals-in-amorphous-sio-matrix-1--size",
+      "sample_id": "feroughi2010-1-3323106-si-nanocrystals-in-amorphous-sio-matrix-1--product",
+      "property": "crystallite_size",
+      "technique": "XRD",
+      "value": {
+        "value": 4.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "4 nm",
+        "evidence": [
+          {
+            "source_id": "feroughi2010-1-3323106",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "feroughi2010-1-3323106",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Ligand not reported in the extracted text.",
+      "Amount of Si/SiO2 powder mixture not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

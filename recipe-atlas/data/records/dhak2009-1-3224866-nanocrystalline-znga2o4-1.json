@@ -1,0 +1,394 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "dhak2009-1-3224866-nanocrystalline-znga2o4-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "P. Dhak (2009): nanocrystalline ZnGa2O4",
+  "material": {
+    "formula": "ZnGa2O4",
+    "family": "ZnGa2O4 nanocrystals",
+    "elements": [
+      "Zn",
+      "Ga",
+      "O"
+    ],
+    "components": [
+      "ZnGa2O4"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Chemical solution decomposition",
+  "sources": [
+    {
+      "id": "dhak2009-1-3224866",
+      "doi": "10.1063/1.3224866",
+      "title": "Optical emission spectra of chromium doped nanocrystalline zinc gallate",
+      "authors": "P. Dhak, U. K. Gayen, S. Mishra, P. Pramanik, and A. Roy",
+      "year": 2009,
+      "url": "https://doi.org/10.1063/1.3224866",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "dhak2009-1-3224866",
+    "recipe_family": "dhak2009-1-3224866-nanocrystalline-znga2o4-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "ZnGa2O4",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "dhak2009-1-3224866",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "spinel",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "dhak2009-1-3224866",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "nanoparticle",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "dhak2009-1-3224866",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "dhak2009-1-3224866-nanocrystalline-znga2o4-1--zn-no3-2",
+      "name": "Zn(NO3)2",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "dhak2009-1-3224866",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "dhak2009-1-3224866-nanocrystalline-znga2o4-1--triethanolamine-tea",
+      "name": "triethanolamine (TEA)",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "amount": {
+          "value": 4,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mol/mol",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "4 mol/mol",
+          "evidence": [
+            {
+              "source_id": "dhak2009-1-3224866",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "dhak2009-1-3224866",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "dhak2009-1-3224866-nanocrystalline-znga2o4-1--nh4oh",
+      "name": "NH4OH",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "dhak2009-1-3224866",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "dhak2009-1-3224866-nanocrystalline-znga2o4-1--after-s01-heat",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "dhak2009-1-3224866-nanocrystalline-znga2o4-1--after-s02-calcine",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "dhak2009-1-3224866-nanocrystalline-znga2o4-1--after-s01-heat"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-heat",
+      "action": "heat",
+      "label": "Heat the precursor solution",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "dhak2009-1-3224866-nanocrystalline-znga2o4-1--after-s01-heat"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 200,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "200 °C",
+          "evidence": [
+            {
+              "source_id": "dhak2009-1-3224866",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Heat the precursor solution",
+      "evidence": [
+        {
+          "source_id": "dhak2009-1-3224866",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "s02-calcine",
+      "action": "calcine",
+      "label": "Calcine the precursor at 650 °C",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-heat"
+      ],
+      "inputs": [
+        "dhak2009-1-3224866-nanocrystalline-znga2o4-1--after-s01-heat"
+      ],
+      "outputs": [
+        "dhak2009-1-3224866-nanocrystalline-znga2o4-1--after-s02-calcine"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 650,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "650 °C",
+          "evidence": [
+            {
+              "source_id": "dhak2009-1-3224866",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 2,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "2 h",
+          "evidence": [
+            {
+              "source_id": "dhak2009-1-3224866",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Calcine the precursor at 650 °C",
+      "evidence": [
+        {
+          "source_id": "dhak2009-1-3224866",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "dhak2009-1-3224866-nanocrystalline-znga2o4-1--product",
+      "source_sample_label": "nanocrystalline ZnGa2O4",
+      "batch_id": null,
+      "material_state_id": "dhak2009-1-3224866-nanocrystalline-znga2o4-1--after-s02-calcine",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "ZnGa2O4",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "dhak2009-1-3224866",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "spinel",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "dhak2009-1-3224866",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "nanoparticle",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "dhak2009-1-3224866",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "dhak2009-1-3224866",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "notes": [
+        "Reaction time: 2 h (Main PDF p.3)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Amount of Zn(NO3)2 not reported in the extracted text.",
+      "Amount of NH4OH not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
