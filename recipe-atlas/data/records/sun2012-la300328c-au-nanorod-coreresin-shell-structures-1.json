@@ -1,0 +1,409 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "sun2012-la300328c-au-nanorod-coreresin-shell-structures-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Zhenhua Sun et al. (2012): Au nanorod core−resin shell structures",
+  "material": {
+    "formula": "Au",
+    "family": "Au nanocrystals",
+    "elements": [
+      "Au"
+    ],
+    "components": [
+      "Au"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Hydrothermal",
+  "sources": [
+    {
+      "id": "sun2012-la300328c",
+      "doi": "10.1021/la300328c",
+      "title": "Formation of Different Gold Nanocrystal Core–Resin Shell Structures through the Control of the Core Assembly and Shell Polymerization",
+      "authors": "Zhenhua Sun; Zhihong Bao; Caihong Fang; Jianfang Wang",
+      "year": 2012,
+      "url": "https://doi.org/10.1021/la300328c",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "sun2012-la300328c",
+    "recipe_family": "sun2012-la300328c-au-nanorod-coreresin-shell-structures-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "sun2012-la300328c-au-nanorod-coreresin-shell-structures-1--4-mercaptophenol",
+      "name": "4-mercaptophenol",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "concentration": {
+          "value": 0.1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "M",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0.1 M",
+          "evidence": [
+            {
+              "source_id": "sun2012-la300328c",
+              "locator": "Main PDF p.9"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "sun2012-la300328c",
+          "locator": "Main PDF p.9"
+        }
+      ]
+    },
+    {
+      "id": "sun2012-la300328c-au-nanorod-coreresin-shell-structures-1--formaldehyde",
+      "name": "formaldehyde",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "concentration": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "M",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1 M",
+          "evidence": [
+            {
+              "source_id": "sun2012-la300328c",
+              "locator": "Main PDF p.9"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "sun2012-la300328c",
+          "locator": "Main PDF p.9"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "sun2012-la300328c-au-nanorod-coreresin-shell-structures-1--after-s01-mix",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "sun2012-la300328c-au-nanorod-coreresin-shell-structures-1--4-mercaptophenol",
+        "sun2012-la300328c-au-nanorod-coreresin-shell-structures-1--formaldehyde"
+      ]
+    },
+    {
+      "id": "sun2012-la300328c-au-nanorod-coreresin-shell-structures-1--after-s02-adjust-ph",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "sun2012-la300328c-au-nanorod-coreresin-shell-structures-1--after-s01-mix"
+      ]
+    },
+    {
+      "id": "sun2012-la300328c-au-nanorod-coreresin-shell-structures-1--after-s03-heat",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "sun2012-la300328c-au-nanorod-coreresin-shell-structures-1--after-s02-adjust-ph"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-mix",
+      "action": "mix",
+      "label": "Mix Au nanorod solution with MP and formaldehyde",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "sun2012-la300328c-au-nanorod-coreresin-shell-structures-1--4-mercaptophenol",
+        "sun2012-la300328c-au-nanorod-coreresin-shell-structures-1--formaldehyde"
+      ],
+      "outputs": [
+        "sun2012-la300328c-au-nanorod-coreresin-shell-structures-1--after-s01-mix"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "sun2012-la300328c",
+            "locator": "Main PDF p.9"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Mix Au nanorod solution with MP and formaldehyde",
+      "evidence": [
+        {
+          "source_id": "sun2012-la300328c",
+          "locator": "Main PDF p.9"
+        }
+      ]
+    },
+    {
+      "id": "s02-adjust-ph",
+      "action": "adjust ph",
+      "label": "Adjust pH to 8-9",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-mix"
+      ],
+      "inputs": [
+        "sun2012-la300328c-au-nanorod-coreresin-shell-structures-1--after-s01-mix"
+      ],
+      "outputs": [
+        "sun2012-la300328c-au-nanorod-coreresin-shell-structures-1--after-s02-adjust-ph"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "sun2012-la300328c",
+            "locator": "Main PDF p.9"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Adjust pH to 8-9",
+      "evidence": [
+        {
+          "source_id": "sun2012-la300328c",
+          "locator": "Main PDF p.9"
+        }
+      ]
+    },
+    {
+      "id": "s03-heat",
+      "action": "heat",
+      "label": "Hydrothermal treatment",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-adjust-ph"
+      ],
+      "inputs": [
+        "sun2012-la300328c-au-nanorod-coreresin-shell-structures-1--after-s02-adjust-ph"
+      ],
+      "outputs": [
+        "sun2012-la300328c-au-nanorod-coreresin-shell-structures-1--after-s03-heat"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 160,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "160 °C",
+          "evidence": [
+            {
+              "source_id": "sun2012-la300328c",
+              "locator": "Main PDF p.9"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 3,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "3 h",
+          "evidence": [
+            {
+              "source_id": "sun2012-la300328c",
+              "locator": "Main PDF p.9"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "sun2012-la300328c",
+            "locator": "Main PDF p.9"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Hydrothermal treatment",
+      "evidence": [
+        {
+          "source_id": "sun2012-la300328c",
+          "locator": "Main PDF p.9"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "sun2012-la300328c-au-nanorod-coreresin-shell-structures-1--product",
+      "source_sample_label": "Au nanorod core−resin shell structures",
+      "batch_id": null,
+      "material_state_id": "sun2012-la300328c-au-nanorod-coreresin-shell-structures-1--after-s03-heat",
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "sun2012-la300328c",
+          "locator": "Main PDF p.9"
+        }
+      ],
+      "notes": [
+        "Reactor: 25 mL stainless steel autoclave (Main PDF p.9).",
+        "Reaction temperature: 160 degC (Main PDF p.9).",
+        "Reaction time: 3 h (Main PDF p.9)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

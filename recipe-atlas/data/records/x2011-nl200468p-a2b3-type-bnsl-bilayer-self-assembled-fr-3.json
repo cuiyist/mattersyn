@@ -1,0 +1,342 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "x2011-nl200468p-a2b3-type-bnsl-bilayer-self-assembled-fr-3",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Angang Dong et al. (2011): A2B3-type BNSL bilayer self-assembled from 11.2 nm Fe3O4 and 6.4 nm Au NCs",
+  "material": {
+    "formula": "Fe3O4",
+    "family": "Fe3O4 nanocrystals",
+    "elements": [
+      "Fe",
+      "O"
+    ],
+    "components": [
+      "Fe3O4"
+    ],
+    "architecture": "heterostructure"
+  },
+  "method": "Liquid-air interfacial assembly",
+  "sources": [
+    {
+      "id": "x2011-nl200468p",
+      "doi": "10.1021/nl200468p",
+      "title": "Two-Dimensional Binary and Ternary Nanocrystal Superlattices: The Case of Monolayers and Bilayers",
+      "authors": "Angang Dong; Xingchen Ye; Jun Chen; Christopher B. Murray",
+      "year": 2011,
+      "url": "https://doi.org/10.1021/nl200468p",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "x2011-nl200468p",
+    "recipe_family": "x2011-nl200468p-a2b3-type-bnsl-bilayer-self-assembled-fr-3",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Fe3O4 and Au",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "x2011-nl200468p",
+          "locator": "Main PDF p.4"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "bilayer",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "x2011-nl200468p",
+          "locator": "Main PDF p.4"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": 11.2,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "11.2 nm",
+      "evidence": [
+        {
+          "source_id": "x2011-nl200468p",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "nanoparticle",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "x2011-nl200468p",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "x2011-nl200468p-a2b3-type-bnsl-bilayer-self-assembled-fr-3--au-ncs",
+      "name": "Au NCs",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "x2011-nl200468p",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "x2011-nl200468p-a2b3-type-bnsl-bilayer-self-assembled-fr-3--after-s01-dissolve",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "x2011-nl200468p-a2b3-type-bnsl-bilayer-self-assembled-fr-3--au-ncs"
+      ]
+    },
+    {
+      "id": "x2011-nl200468p-a2b3-type-bnsl-bilayer-self-assembled-fr-3--after-s02-evaporate",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "x2011-nl200468p-a2b3-type-bnsl-bilayer-self-assembled-fr-3--after-s01-dissolve"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-dissolve",
+      "action": "dissolve",
+      "label": "Dissolve NCs in hexane",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "x2011-nl200468p-a2b3-type-bnsl-bilayer-self-assembled-fr-3--au-ncs"
+      ],
+      "outputs": [
+        "x2011-nl200468p-a2b3-type-bnsl-bilayer-self-assembled-fr-3--after-s01-dissolve"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Dissolve NCs in hexane",
+      "evidence": [
+        {
+          "source_id": "x2011-nl200468p",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-evaporate",
+      "action": "evaporate",
+      "label": "Evaporate hexane to form membrane",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-dissolve"
+      ],
+      "inputs": [
+        "x2011-nl200468p-a2b3-type-bnsl-bilayer-self-assembled-fr-3--after-s01-dissolve"
+      ],
+      "outputs": [
+        "x2011-nl200468p-a2b3-type-bnsl-bilayer-self-assembled-fr-3--after-s02-evaporate"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "10 min",
+          "evidence": [
+            {
+              "source_id": "x2011-nl200468p",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Evaporate hexane to form membrane",
+      "evidence": [
+        {
+          "source_id": "x2011-nl200468p",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "x2011-nl200468p-a2b3-type-bnsl-bilayer-self-assembled-fr-3--product",
+      "source_sample_label": "A2B3-type BNSL bilayer self-assembled from 11.2 nm Fe3O4 and 6.4 nm Au NCs",
+      "batch_id": null,
+      "material_state_id": "x2011-nl200468p-a2b3-type-bnsl-bilayer-self-assembled-fr-3--after-s02-evaporate",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Fe3O4 and Au",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "x2011-nl200468p",
+            "locator": "Main PDF p.4"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "bilayer",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "x2011-nl200468p",
+            "locator": "Main PDF p.4"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "nanoparticle",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "x2011-nl200468p",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": "oleic acid and/or oleylamine",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "x2011-nl200468p",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "x2011-nl200468p",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [
+    {
+      "id": "x2011-nl200468p-a2b3-type-bnsl-bilayer-self-assembled-fr-3--size",
+      "sample_id": "x2011-nl200468p-a2b3-type-bnsl-bilayer-self-assembled-fr-3--product",
+      "property": "diameter",
+      "technique": "TEM",
+      "value": {
+        "value": 11.2,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "11.2 nm",
+        "evidence": [
+          {
+            "source_id": "x2011-nl200468p",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "x2011-nl200468p",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Reactor not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of Au NCs not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

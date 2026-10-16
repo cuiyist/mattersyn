@@ -1,5 +1,8 @@
 # Published machine-extracted papers
 
+Current verified index after B34 (2026-10-15T23:23:50+00:00): **987source_extracted primary paper contributions/1,462display pairs**. B34 adds34DOIrows/45recordIDs with19saved rare-read markers. All24historical reads remain preserved, including5nonretained histories without credit. Public1,231primary IDs distinguish1,230normalized literature DOI groups+1benchmark. No independent-audit or training-ready credit. Every prior row/membership/footer remains verbatim.
+
+
 Current verified index after B33 (2026-10-15T20:57:04+00:00): **953source_extracted primary paper contributions /1,417display pairs**. B33 adds33DOI rows/52recordIDs with15saved rare-read markers. All19original read histories remain preserved, including four nonretained papers without credit. Public totals are1,197primary source IDs, comprising1,196literature primary DOI groups and1benchmark group. No independent-audit or training-ready credit. Every prior row/membership/footer remains verbatim.
 
 
@@ -1035,3 +1038,45 @@ These thirty source_extracted contributions add no independent-audit or training
 | 10.1021/ja029937l | `shevchenko2003-ja029937l-copt3-nanocrystals-1` | B33 | 2026-10-15T20:57:04+00:00 | no |
 
 These33source_extracted contributions add no independent-audit or training-ready credit. Fifteen markers denote limited preserved deletion-only reading, not full paper audits; all19read histories remain retained.
+
+
+## B34 verified additions
+
+| Primary DOI | Record IDs | Batch | Anonymous live (UTC) | Rare read |
+| --- | --- | --- | --- | --- |
+| 10.1021/ja034258b | `joo2003-ja034258b-2-9-nm-zirconia-nanocrystals-2`, `joo2003-ja034258b-4-nm-zirconia-nanocrystals-1` | B34 | 2026-10-15T23:23:50+00:00 | no |
+| 10.1021/ja046044f | `ja046044f-feox-aerogel-260-arg-1` | B34 | 2026-10-15T23:23:50+00:00 | yes |
+| 10.1021/ja050006u | `yin2005-ja050006u-cu2o-nanocrystals-1` | B34 | 2026-10-15T23:23:50+00:00 | yes |
+| 10.1021/ja073804o | `al2007-ja073804o-80tio2-20sio2-1` | B34 | 2026-10-15T23:23:50+00:00 | yes |
+| 10.1021/ja0782706 | `al2008-ja0782706-cdse-quantum-dots-2-3-nm-4`, `al2008-ja0782706-cdse-quantum-dots-2-6-nm-3`, `al2008-ja0782706-cdse-quantum-dots-3-0-nm-2`, `al2008-ja0782706-cdse-quantum-dots-3-7-nm-1` | B34 | 2026-10-15T23:23:50+00:00 | no |
+| 10.1021/ja108948z | `ye2011-ja108948z-fe3o4-ncs-10-nm-1` | B34 | 2026-10-15T23:23:50+00:00 | no |
+| 10.1021/ja405203e | `biacchi2013-ja405203e-sns-cubes-2`, `biacchi2013-ja405203e-sns-sheets-3`, `biacchi2013-ja405203e-sns-spherical-polyhedra-1` | B34 | 2026-10-15T23:23:50+00:00 | yes |
+| 10.1021/ja4079804 | `wang2013-ja4079804-cdte-cdse-core-shell-qds-1` | B34 | 2026-10-15T23:23:50+00:00 | no |
+| 10.1021/ja801249z | `nag2008-ja801249z-zn0-49cd0-51s-ncs-doped-with-0-9-mn2-1` | B34 | 2026-10-15T23:23:50+00:00 | yes |
+| 10.1021/ja8018669 | `wu2008-ja8018669-citrate-stabilized-silver-nanoprisms-1` | B34 | 2026-10-15T23:23:50+00:00 | no |
+| 10.1021/ja8057309 | `brezesinski2009-ja8057309-kle22-templated-nanocrystal-based-tio2-f-3`, `brezesinski2009-ja8057309-kle22-templated-sol-gel-tio2-film-2` | B34 | 2026-10-15T23:23:50+00:00 | no |
+| 10.1021/ja9065333 | `kuo2009-ja9065333-au-cu2o-core-shell-heterostructures-1` | B34 | 2026-10-15T23:23:50+00:00 | yes |
+| 10.1021/ja981972y | `haber1998-ja981972y-nano-al-method-a-1`, `haber1998-ja981972y-nano-al-method-b-2` | B34 | 2026-10-15T23:23:50+00:00 | yes |
+| 10.1021/jacs.5c21040 | `text2026-jacs-5c21040-ptconicuzn-nanocrystals-1` | B34 | 2026-10-15T23:23:50+00:00 | yes |
+| 10.1021/jacs.6b05608 | `malgras2016-jacs-6b05608-ch3nh3pbbr3-nanocrystals-in-mesoporous-s-1` | B34 | 2026-10-15T23:23:50+00:00 | yes |
+| 10.1021/jp030013+ | `stoeva2003-jp030013-dodecanethiol-stabilized-au-nanoparticle-1`, `stoeva2003-jp030013-dodecanethiol-stabilized-au-nanoparticle-2` | B34 | 2026-10-15T23:23:50+00:00 | no |
+| 10.1021/jp0476646 | `hou2005-jp0476646-assembled-magnetite-spheres-sample-a-1` | B34 | 2026-10-15T23:23:50+00:00 | no |
+| 10.1021/jp048190d | `liu2004-jp048190d-nanocrystalline-zirconia-with-msu-mesost-1` | B34 | 2026-10-15T23:23:50+00:00 | yes |
+| 10.1021/jp048572j | `beecher2004-jp048572j-10-2-nm-diameter-copt3-nanocrystals-1` | B34 | 2026-10-15T23:23:50+00:00 | no |
+| 10.1021/jp0648238 | `liu2006-jp0648238-cubic-coo-nanocrystals-2`, `liu2006-jp0648238-wurtzite-coo-nanocrystals-1` | B34 | 2026-10-15T23:23:50+00:00 | no |
+| 10.1021/jp066993q | `chojnowski2007-jp066993q-as-prepared-nano-cr-1` | B34 | 2026-10-15T23:23:50+00:00 | yes |
+| 10.1021/jp067109z | `pol2007-jp067109z-zrti2o6-embedded-in-carbon-ztec-1` | B34 | 2026-10-15T23:23:50+00:00 | yes |
+| 10.1021/jp070452z | `baiju2007-jp070452z-sol-gel-derived-nanocrystalline-tio2-1` | B34 | 2026-10-15T23:23:50+00:00 | no |
+| 10.1021/jp077345p | `al2008-jp077345p-tio2-3-tga-cdse-1` | B34 | 2026-10-15T23:23:50+00:00 | yes |
+| 10.1021/jp109716q | `ratanatawanate2011-jp109716q-cus-qd-doped-tio2-nanotubes-1` | B34 | 2026-10-15T23:23:50+00:00 | no |
+| 10.1021/jp301877p | `rhinow2012-jp301877p-annealed-cnms-graphene-nanocrystals-1` | B34 | 2026-10-15T23:23:50+00:00 | no |
+| 10.1021/jp303182n | `yang2012-jp303182n-7-nm-co-nanocrystals-polycrystalline-fcc-1` | B34 | 2026-10-15T23:23:50+00:00 | no |
+| 10.1021/jp3046966 | `text2012-jp3046966-zn0-8cd0-2se-tio2-ntas-1` | B34 | 2026-10-15T23:23:50+00:00 | yes |
+| 10.1021/jp306628m | `xu2012-jp306628m-czts-microspheres-1` | B34 | 2026-10-15T23:23:50+00:00 | yes |
+| 10.1021/jp408360j | `kameyama2014-jp408360j-cu2znsns4-nanocrystals-1`, `kameyama2014-jp408360j-zno-nanocrystals-2` | B34 | 2026-10-15T23:23:50+00:00 | yes |
+| 10.1021/jp502194z | `yu2014-jp502194z-iron-oxide-cdse-zns-qd-complexes-2` | B34 | 2026-10-15T23:23:50+00:00 | yes |
+| 10.1021/jp7116054 | `zhu2008-jp7116054-in2o3-nccs-140-c-for-12-h-1` | B34 | 2026-10-15T23:23:50+00:00 | yes |
+| 10.1021/jp712054c | `zhao2008-jp712054c-au-ncs-tio2-nts-ti-1` | B34 | 2026-10-15T23:23:50+00:00 | no |
+| 10.1021/jp905745w | `liu2009-jp905745w-sdc-sr-sm0-2ce0-8o1-9-1` | B34 | 2026-10-15T23:23:50+00:00 | yes |
+
+These34source_extracted contributions add no independent-audit or training-ready credit. Nineteen markers denote limited preserved deletion-only reading; all24read histories remain retained.
