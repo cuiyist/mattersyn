@@ -119,6 +119,24 @@ def _named_ge_product_formula(pair):
     return None
 
 
+def _explicit_ge_matrix_navigation(pair):
+    """Navigation for three explicit whole-product matrices; reported facts stay exact."""
+    value = ((pair.get('structure') or {}).get('composition') or {}).get('value')
+    if value is not None and str(value).strip() not in ('', 'Ge'):
+        return None
+    label = re.sub(r'\s+', ' ', str(pair.get('product') or '')).strip()
+    named = {
+        'Ge nanocrystals embedded in GeO2 matrix': ['Ge', 'GeO2'],
+        'Ge nanocrystals embedded in Lu2O3/Al2O3 dielectric stack': ['Ge', 'Lu2O3', 'Al2O3'],
+        'nc-Ge (nanocrystalline germanium) embedded in SiO2 matrix': ['Ge', 'SiO2'],
+    }
+    components = named.get(label)
+    if components is None:
+        return None
+    elements = list(dict.fromkeys(element for component in components for element in elements_of(component)))
+    return components, elements
+
+
 def _embedded_product_formula(pair):
     """Classify an explicit named Ge assembly; never fill a reported fact."""
     named = _named_ge_product_formula(pair)
@@ -286,6 +304,13 @@ class Builder:
             family = str(pair['product']).strip()
         if architecture == 'single_material' and len(components) > 1:
             components = []  # A printed dopant separator does not establish separate product components.
+        navigation = _explicit_ge_matrix_navigation(pair)
+        elements = elements_of(composition)
+        if navigation is not None:
+            composition = family = str(pair['product']).strip()
+            components, elements = navigation
+            if architecture == 'single_material':
+                architecture = 'unresolved'
         method = str((rc.get('method') or {}).get('value') or 'synthesis as described in the source')
         notes = []
         if rc.get('reactor'): notes.append(f'Reactor: {rc["reactor"]["value"]} (Main PDF p.{rc["reactor"].get("page", "?")}).')
@@ -294,7 +319,7 @@ class Builder:
         product['notes'] = notes
         return {'schema_version': '1.3.0', 'record_id': rid, 'revision': 1, 'record_type': 'literature_protocol',
                 'title': f'{(self.doc.get("authors") or self.source_id).split(",")[0].strip()} ({self.doc.get("year") or "n.d."}): {pair.get("product") or composition}',
-                'material': {'formula': composition, 'family': family, 'elements': elements_of(composition), 'components': components, 'architecture': architecture},
+                'material': {'formula': composition, 'family': family, 'elements': elements, 'components': components, 'architecture': architecture},
                 'method': method[0].upper() + method[1:], 'sources': [self.source()],
                 'lineage': {'source_group': self.source_id, 'recipe_family': rid, 'parent_record_id': None, 'batch_id': None, 'duplicate_of': None},
                 'intended_target': {'composition': self.fact(st.get('composition')), 'phase': self.fact(st.get('phase')),

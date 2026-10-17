@@ -1,0 +1,381 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "choi2005-1-1891290-ge-nanocrystals-in-sio2-matrix-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "W. K. Choi (2005): Ge nanocrystals in SiO2 matrix",
+  "material": {
+    "formula": "Ge/SiO2",
+    "family": "Ge nanocrystals in SiO2 matrix",
+    "elements": [
+      "Ge",
+      "Si",
+      "O"
+    ],
+    "components": [
+      "Ge",
+      "SiO2"
+    ],
+    "architecture": "composite"
+  },
+  "method": "Rapid thermal annealing",
+  "sources": [
+    {
+      "id": "choi2005-1-1891290",
+      "doi": "10.1063/1.1891290",
+      "title": "Germanium diffusion and nanocrystal formation in silicon oxide on silicon substrate under rapid thermal annealing",
+      "authors": "W. K. Choi, V. Ho, V. Ng, Y. W. Ho, S. P. Ng, and W. K. Chim",
+      "year": 2005,
+      "url": "https://doi.org/10.1063/1.1891290",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "choi2005-1-1891290",
+    "recipe_family": "choi2005-1-1891290-ge-nanocrystals-in-sio2-matrix-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Ge",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "choi2005-1-1891290",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "crystalline",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "choi2005-1-1891290",
+          "locator": "Main PDF p.4"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": 6.0,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "6 nm",
+      "evidence": [
+        {
+          "source_id": "choi2005-1-1891290",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "choi2005-1-1891290-ge-nanocrystals-in-sio2-matrix-1--ge",
+      "name": "Ge",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "choi2005-1-1891290",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "choi2005-1-1891290-ge-nanocrystals-in-sio2-matrix-1--sio2",
+      "name": "SiO2",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "choi2005-1-1891290",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "choi2005-1-1891290-ge-nanocrystals-in-sio2-matrix-1--after-s01-cosputter",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "choi2005-1-1891290-ge-nanocrystals-in-sio2-matrix-1--ge",
+        "choi2005-1-1891290-ge-nanocrystals-in-sio2-matrix-1--sio2"
+      ]
+    },
+    {
+      "id": "choi2005-1-1891290-ge-nanocrystals-in-sio2-matrix-1--after-s02-anneal",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "choi2005-1-1891290-ge-nanocrystals-in-sio2-matrix-1--after-s01-cosputter"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-cosputter",
+      "action": "cosputter",
+      "label": "Cosputtered Ge plus SiO2 films",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "choi2005-1-1891290-ge-nanocrystals-in-sio2-matrix-1--ge",
+        "choi2005-1-1891290-ge-nanocrystals-in-sio2-matrix-1--sio2"
+      ],
+      "outputs": [
+        "choi2005-1-1891290-ge-nanocrystals-in-sio2-matrix-1--after-s01-cosputter"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "Ar",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "choi2005-1-1891290",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Cosputtered Ge plus SiO2 films",
+      "evidence": [
+        {
+          "source_id": "choi2005-1-1891290",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-anneal",
+      "action": "anneal",
+      "label": "Rapid thermal annealing in argon",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-cosputter"
+      ],
+      "inputs": [
+        "choi2005-1-1891290-ge-nanocrystals-in-sio2-matrix-1--after-s01-cosputter"
+      ],
+      "outputs": [
+        "choi2005-1-1891290-ge-nanocrystals-in-sio2-matrix-1--after-s02-anneal"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 800,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "800 °C",
+          "evidence": [
+            {
+              "source_id": "choi2005-1-1891290",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 300,
+          "minimum": null,
+          "maximum": null,
+          "unit": "s",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "300 s",
+          "evidence": [
+            {
+              "source_id": "choi2005-1-1891290",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "Ar",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "choi2005-1-1891290",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Rapid thermal annealing in argon",
+      "evidence": [
+        {
+          "source_id": "choi2005-1-1891290",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "choi2005-1-1891290-ge-nanocrystals-in-sio2-matrix-1--product",
+      "source_sample_label": "Ge nanocrystals in SiO2 matrix",
+      "batch_id": null,
+      "material_state_id": "choi2005-1-1891290-ge-nanocrystals-in-sio2-matrix-1--after-s02-anneal",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Ge",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "choi2005-1-1891290",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "crystalline",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "choi2005-1-1891290",
+            "locator": "Main PDF p.4"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "choi2005-1-1891290",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reaction temperature: 800 degC (Main PDF p.2).",
+        "Reaction time: 300 s (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "choi2005-1-1891290-ge-nanocrystals-in-sio2-matrix-1--size",
+      "sample_id": "choi2005-1-1891290-ge-nanocrystals-in-sio2-matrix-1--product",
+      "property": "particle_size",
+      "technique": "not reported",
+      "value": {
+        "value": 6.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "6 nm",
+        "evidence": [
+          {
+            "source_id": "choi2005-1-1891290",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "choi2005-1-1891290",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Amount of Ge not reported in the extracted text.",
+      "Amount of SiO2 not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

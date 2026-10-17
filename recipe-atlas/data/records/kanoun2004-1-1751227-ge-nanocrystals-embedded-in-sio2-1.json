@@ -1,0 +1,394 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "kanoun2004-1-1751227-ge-nanocrystals-embedded-in-sio2-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "M. Kanoun (2004): Ge nanocrystals embedded in SiO2",
+  "material": {
+    "formula": "Ge/SiO2",
+    "family": "Ge/SiO2 nanocrystals",
+    "elements": [
+      "Ge",
+      "Si",
+      "O"
+    ],
+    "components": [
+      "Ge",
+      "SiO2"
+    ],
+    "architecture": "composite"
+  },
+  "method": "Low pressure chemical vapor deposition",
+  "sources": [
+    {
+      "id": "kanoun2004-1-1751227",
+      "doi": "10.1063/1.1751227",
+      "title": "Electrical study of Ge-nanocrystal-based metal-oxide-semiconductor structures for p-type nonvolatile memory applications",
+      "authors": "M. Kanoun, A. Souiﬁ, T. Baron, F. Mazen",
+      "year": 2004,
+      "url": "https://doi.org/10.1063/1.1751227",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "kanoun2004-1-1751227",
+    "recipe_family": "kanoun2004-1-1751227-ge-nanocrystals-embedded-in-sio2-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Ge",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "kanoun2004-1-1751227",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "nanocrystalline",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "kanoun2004-1-1751227",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": 12,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "12 nm",
+      "evidence": [
+        {
+          "source_id": "kanoun2004-1-1751227",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "kanoun2004-1-1751227-ge-nanocrystals-embedded-in-sio2-1--sih4",
+      "name": "SiH4",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "kanoun2004-1-1751227",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "kanoun2004-1-1751227-ge-nanocrystals-embedded-in-sio2-1--geh4",
+      "name": "GeH4",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "kanoun2004-1-1751227",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "kanoun2004-1-1751227-ge-nanocrystals-embedded-in-sio2-1--after-s01-deposit",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "kanoun2004-1-1751227-ge-nanocrystals-embedded-in-sio2-1--sih4"
+      ]
+    },
+    {
+      "id": "kanoun2004-1-1751227-ge-nanocrystals-embedded-in-sio2-1--after-s02-deposit",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "kanoun2004-1-1751227-ge-nanocrystals-embedded-in-sio2-1--after-s01-deposit",
+        "kanoun2004-1-1751227-ge-nanocrystals-embedded-in-sio2-1--geh4"
+      ]
+    },
+    {
+      "id": "kanoun2004-1-1751227-ge-nanocrystals-embedded-in-sio2-1--after-s03-deposit",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "kanoun2004-1-1751227-ge-nanocrystals-embedded-in-sio2-1--after-s02-deposit"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-deposit",
+      "action": "deposit",
+      "label": "Deposit Si nuclei on SiO2 surface",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "kanoun2004-1-1751227-ge-nanocrystals-embedded-in-sio2-1--sih4"
+      ],
+      "outputs": [
+        "kanoun2004-1-1751227-ge-nanocrystals-embedded-in-sio2-1--after-s01-deposit"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "H2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "kanoun2004-1-1751227",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Deposit Si nuclei on SiO2 surface",
+      "evidence": [
+        {
+          "source_id": "kanoun2004-1-1751227",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "s02-deposit",
+      "action": "deposit",
+      "label": "Grow Ge nanocrystals on Si nuclei",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-deposit"
+      ],
+      "inputs": [
+        "kanoun2004-1-1751227-ge-nanocrystals-embedded-in-sio2-1--after-s01-deposit",
+        "kanoun2004-1-1751227-ge-nanocrystals-embedded-in-sio2-1--geh4"
+      ],
+      "outputs": [
+        "kanoun2004-1-1751227-ge-nanocrystals-embedded-in-sio2-1--after-s02-deposit"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "H2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "kanoun2004-1-1751227",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Grow Ge nanocrystals on Si nuclei",
+      "evidence": [
+        {
+          "source_id": "kanoun2004-1-1751227",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "s03-deposit",
+      "action": "deposit",
+      "label": "Deposit high temperature oxide as control oxide",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-deposit"
+      ],
+      "inputs": [
+        "kanoun2004-1-1751227-ge-nanocrystals-embedded-in-sio2-1--after-s02-deposit"
+      ],
+      "outputs": [
+        "kanoun2004-1-1751227-ge-nanocrystals-embedded-in-sio2-1--after-s03-deposit"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "H2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "kanoun2004-1-1751227",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Deposit high temperature oxide as control oxide",
+      "evidence": [
+        {
+          "source_id": "kanoun2004-1-1751227",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "kanoun2004-1-1751227-ge-nanocrystals-embedded-in-sio2-1--product",
+      "source_sample_label": "Ge nanocrystals embedded in SiO2",
+      "batch_id": null,
+      "material_state_id": "kanoun2004-1-1751227-ge-nanocrystals-embedded-in-sio2-1--after-s03-deposit",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Ge",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "kanoun2004-1-1751227",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "nanocrystalline",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "kanoun2004-1-1751227",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "kanoun2004-1-1751227",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [
+    {
+      "id": "kanoun2004-1-1751227-ge-nanocrystals-embedded-in-sio2-1--size",
+      "sample_id": "kanoun2004-1-1751227-ge-nanocrystals-embedded-in-sio2-1--product",
+      "property": "particle_size",
+      "technique": "not reported",
+      "value": {
+        "value": 12,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "12 nm",
+        "evidence": [
+          {
+            "source_id": "kanoun2004-1-1751227",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "kanoun2004-1-1751227",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of SiH4 not reported in the extracted text.",
+      "Amount of GeH4 not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
