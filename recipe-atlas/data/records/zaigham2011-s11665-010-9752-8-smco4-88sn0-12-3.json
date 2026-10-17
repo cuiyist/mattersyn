@@ -1,0 +1,348 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "zaigham2011-s11665-010-9752-8-smco4-88sn0-12-3",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Hamid Zaigham and F. Ahmad Khalid (2011): SmCo4.88Sn0.12",
+  "material": {
+    "formula": "SmCo4.88Sn0.12",
+    "family": "SmCo4.88Sn0.12 nanocrystals",
+    "elements": [
+      "Sm",
+      "Co",
+      "Sn"
+    ],
+    "components": [
+      "SmCo4.88Sn0.12"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Mechanical milling",
+  "sources": [
+    {
+      "id": "zaigham2011-s11665-010-9752-8",
+      "doi": "10.1007/s11665-010-9752-8",
+      "title": "Magnetic Properties and Nanocrystalline Phases in Sn Containing SmCo5 Alloys",
+      "authors": "Hamid Zaigham and F. Ahmad Khalid",
+      "year": 2011,
+      "url": "https://doi.org/10.1007/s11665-010-9752-8",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "zaigham2011-s11665-010-9752-8",
+    "recipe_family": "zaigham2011-s11665-010-9752-8-smco4-88sn0-12-3",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "SmCo4.88Sn0.12",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "zaigham2011-s11665-010-9752-8",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "1:5, 2:17",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "zaigham2011-s11665-010-9752-8",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "zaigham2011-s11665-010-9752-8-smco4-88sn0-12-3--after-s01-grind",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "zaigham2011-s11665-010-9752-8-smco4-88sn0-12-3--after-s02-cool",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "zaigham2011-s11665-010-9752-8-smco4-88sn0-12-3--after-s01-grind"
+      ]
+    },
+    {
+      "id": "zaigham2011-s11665-010-9752-8-smco4-88sn0-12-3--after-s03-milling",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "zaigham2011-s11665-010-9752-8-smco4-88sn0-12-3--after-s02-cool"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-grind",
+      "action": "grind",
+      "label": "Grinding to pass through 500 lm sieve",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "zaigham2011-s11665-010-9752-8-smco4-88sn0-12-3--after-s01-grind"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "argon",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "zaigham2011-s11665-010-9752-8",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Grinding to pass through 500 lm sieve",
+      "evidence": [
+        {
+          "source_id": "zaigham2011-s11665-010-9752-8",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-cool",
+      "action": "cool",
+      "label": "Cooling after milling",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-grind"
+      ],
+      "inputs": [
+        "zaigham2011-s11665-010-9752-8-smco4-88sn0-12-3--after-s01-grind"
+      ],
+      "outputs": [
+        "zaigham2011-s11665-010-9752-8-smco4-88sn0-12-3--after-s02-cool"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "10 min",
+          "evidence": [
+            {
+              "source_id": "zaigham2011-s11665-010-9752-8",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "argon",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "zaigham2011-s11665-010-9752-8",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Cooling after milling",
+      "evidence": [
+        {
+          "source_id": "zaigham2011-s11665-010-9752-8",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-milling",
+      "action": "milling",
+      "label": "Milling in ethanol",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-cool"
+      ],
+      "inputs": [
+        "zaigham2011-s11665-010-9752-8-smco4-88sn0-12-3--after-s02-cool"
+      ],
+      "outputs": [
+        "zaigham2011-s11665-010-9752-8-smco4-88sn0-12-3--after-s03-milling"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "10 min",
+          "evidence": [
+            {
+              "source_id": "zaigham2011-s11665-010-9752-8",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "argon",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "zaigham2011-s11665-010-9752-8",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Milling in ethanol",
+      "evidence": [
+        {
+          "source_id": "zaigham2011-s11665-010-9752-8",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "zaigham2011-s11665-010-9752-8-smco4-88sn0-12-3--product",
+      "source_sample_label": "SmCo4.88Sn0.12",
+      "batch_id": null,
+      "material_state_id": "zaigham2011-s11665-010-9752-8-smco4-88sn0-12-3--after-s03-milling",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "SmCo4.88Sn0.12",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "zaigham2011-s11665-010-9752-8",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "1:5, 2:17",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "zaigham2011-s11665-010-9752-8",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "zaigham2011-s11665-010-9752-8",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "notes": [
+        "Reactor: planetary ball mill (Main PDF p.2).",
+        "Reaction time: 240 min (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

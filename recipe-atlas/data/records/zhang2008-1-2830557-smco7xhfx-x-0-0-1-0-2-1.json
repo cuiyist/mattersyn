@@ -1,0 +1,342 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "zhang2008-1-2830557-smco7xhfx-x-0-0-1-0-2-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Dongtao Zhang (2008): SmCo7−xHfx (x=0, 0.1, 0.2)",
+  "material": {
+    "formula": "SmCo7−xHfx",
+    "family": "SmCo7−xHfx nanocrystals",
+    "elements": [
+      "Sm",
+      "Co",
+      "Hf"
+    ],
+    "components": [
+      "SmCo7−xHfx"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Synthesis as described in the source",
+  "sources": [
+    {
+      "id": "zhang2008-1-2830557",
+      "doi": "10.1063/1.2830557",
+      "title": "Structure and magnetic properties of bulk nanocrystalline SmCo7−xHfx sintered magnets",
+      "authors": "Dongtao Zhang, Ming Yue, Lijun Pan, Yangchao Li, Gang Xu, Weiqiang Liu, Jiuxing Zhang, Xubo Liu, Zaven Altounian",
+      "year": 2008,
+      "url": "https://doi.org/10.1063/1.2830557",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "zhang2008-1-2830557",
+    "recipe_family": "zhang2008-1-2830557-smco7xhfx-x-0-0-1-0-2-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "phase": {
+      "value": "TbCu7-type",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "zhang2008-1-2830557",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "zhang2008-1-2830557-smco7xhfx-x-0-0-1-0-2-1--after-s01-crush",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "zhang2008-1-2830557-smco7xhfx-x-0-0-1-0-2-1--after-s02-ball-mill",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "zhang2008-1-2830557-smco7xhfx-x-0-0-1-0-2-1--after-s01-crush"
+      ]
+    },
+    {
+      "id": "zhang2008-1-2830557-smco7xhfx-x-0-0-1-0-2-1--after-s03-sinter",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "zhang2008-1-2830557-smco7xhfx-x-0-0-1-0-2-1--after-s02-ball-mill"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-crush",
+      "action": "crush",
+      "label": "Crushing the ingots",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "zhang2008-1-2830557-smco7xhfx-x-0-0-1-0-2-1--after-s01-crush"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Crushing the ingots",
+      "evidence": [
+        {
+          "source_id": "zhang2008-1-2830557",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-ball-mill",
+      "action": "ball mill",
+      "label": "Ball milling for 10 h",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-crush"
+      ],
+      "inputs": [
+        "zhang2008-1-2830557-smco7xhfx-x-0-0-1-0-2-1--after-s01-crush"
+      ],
+      "outputs": [
+        "zhang2008-1-2830557-smco7xhfx-x-0-0-1-0-2-1--after-s02-ball-mill"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "10 h",
+          "evidence": [
+            {
+              "source_id": "zhang2008-1-2830557",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Ball milling for 10 h",
+      "evidence": [
+        {
+          "source_id": "zhang2008-1-2830557",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-sinter",
+      "action": "sinter",
+      "label": "Spark plasma sintering at 973 K for 5 min",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-ball-mill"
+      ],
+      "inputs": [
+        "zhang2008-1-2830557-smco7xhfx-x-0-0-1-0-2-1--after-s02-ball-mill"
+      ],
+      "outputs": [
+        "zhang2008-1-2830557-smco7xhfx-x-0-0-1-0-2-1--after-s03-sinter"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 973,
+          "minimum": null,
+          "maximum": null,
+          "unit": "K",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "973 K",
+          "evidence": [
+            {
+              "source_id": "zhang2008-1-2830557",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "5 min",
+          "evidence": [
+            {
+              "source_id": "zhang2008-1-2830557",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Spark plasma sintering at 973 K for 5 min",
+      "evidence": [
+        {
+          "source_id": "zhang2008-1-2830557",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "zhang2008-1-2830557-smco7xhfx-x-0-0-1-0-2-1--product",
+      "source_sample_label": "SmCo7−xHfx (x=0, 0.1, 0.2)",
+      "batch_id": null,
+      "material_state_id": "zhang2008-1-2830557-smco7xhfx-x-0-0-1-0-2-1--after-s03-sinter",
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "phase": {
+        "value": "TbCu7-type",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "zhang2008-1-2830557",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "zhang2008-1-2830557",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reactor: WC-Co mold (Main PDF p.2).",
+        "Reaction temperature: 973 K (Main PDF p.2).",
+        "Reaction time: 5 min (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
