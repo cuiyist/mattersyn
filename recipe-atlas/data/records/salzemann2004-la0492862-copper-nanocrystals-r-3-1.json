@@ -1,0 +1,296 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "salzemann2004-la0492862-copper-nanocrystals-r-3-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "C. Salzemann (2004): Copper nanocrystals (R = 3)",
+  "material": {
+    "formula": "Cu",
+    "family": "Cu nanocrystals",
+    "elements": [
+      "Cu"
+    ],
+    "components": [
+      "Cu"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Synthesis as described in the source",
+  "sources": [
+    {
+      "id": "salzemann2004-la0492862",
+      "doi": "10.1021/la0492862",
+      "title": "Anisotropic Copper Nanocrystals Synthesized in a Supersaturated Medium: Nanocrystal Growth",
+      "authors": "C. Salzemann, I. Lisiecki, J. Urban, M.-P. Pileni",
+      "year": 2004,
+      "url": "https://doi.org/10.1021/la0492862",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "salzemann2004-la0492862",
+    "recipe_family": "salzemann2004-la0492862-copper-nanocrystals-r-3-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Cu",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "salzemann2004-la0492862",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "face-centered cubic",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "salzemann2004-la0492862",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": 12,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "12 nm",
+      "evidence": [
+        {
+          "source_id": "salzemann2004-la0492862",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "sphere",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "salzemann2004-la0492862",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "salzemann2004-la0492862-copper-nanocrystals-r-3-1--copper-ii-bis-2-ethylhexyl-sulfosuccinat",
+      "name": "Copper(II) bis(2-ethylhexyl)sulfosuccinate",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "salzemann2004-la0492862",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "salzemann2004-la0492862-copper-nanocrystals-r-3-1--hydrazine",
+      "name": "Hydrazine",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "salzemann2004-la0492862",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "salzemann2004-la0492862-copper-nanocrystals-r-3-1--after-s01-reduce",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "salzemann2004-la0492862-copper-nanocrystals-r-3-1--hydrazine"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-reduce",
+      "action": "reduce",
+      "label": "Cu(AOT)2 is reduced by hydrazine.",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "salzemann2004-la0492862-copper-nanocrystals-r-3-1--hydrazine"
+      ],
+      "outputs": [
+        "salzemann2004-la0492862-copper-nanocrystals-r-3-1--after-s01-reduce"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "inert",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "salzemann2004-la0492862",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Cu(AOT)2 is reduced by hydrazine.",
+      "evidence": [
+        {
+          "source_id": "salzemann2004-la0492862",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "salzemann2004-la0492862-copper-nanocrystals-r-3-1--product",
+      "source_sample_label": "Copper nanocrystals (R = 3)",
+      "batch_id": null,
+      "material_state_id": "salzemann2004-la0492862-copper-nanocrystals-r-3-1--after-s01-reduce",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Cu",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "salzemann2004-la0492862",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "face-centered cubic",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "salzemann2004-la0492862",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "sphere",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "salzemann2004-la0492862",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "salzemann2004-la0492862",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [
+    {
+      "id": "salzemann2004-la0492862-copper-nanocrystals-r-3-1--size",
+      "sample_id": "salzemann2004-la0492862-copper-nanocrystals-r-3-1--product",
+      "property": "diameter",
+      "technique": "TEM",
+      "value": {
+        "value": 12,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "12 nm",
+        "evidence": [
+          {
+            "source_id": "salzemann2004-la0492862",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "salzemann2004-la0492862",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Ligand not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of Copper(II) bis(2-ethylhexyl)sulfosuccinate not reported in the extracted text.",
+      "Amount of Hydrazine not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

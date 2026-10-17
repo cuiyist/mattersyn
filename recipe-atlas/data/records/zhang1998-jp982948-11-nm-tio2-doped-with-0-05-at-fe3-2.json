@@ -1,0 +1,342 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "zhang1998-jp982948-11-nm-tio2-doped-with-0-05-at-fe3-2",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Zhibo Zhang et al. (1998): 11-nm TiO2 doped with 0.05 at. % Fe3+",
+  "material": {
+    "formula": "TiO2",
+    "family": "TiO2 nanocrystals",
+    "elements": [
+      "Ti",
+      "O"
+    ],
+    "components": [
+      "TiO2"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Sol-gel hydrolysis precipitation",
+  "sources": [
+    {
+      "id": "zhang1998-jp982948",
+      "doi": "10.1021/jp982948+",
+      "title": "Role of Particle Size in Nanocrystalline TiO 2 -Based Photocatalysts",
+      "authors": "Zhibo Zhang; Chen-Chi Wang; Rama Zakaria; Jackie Y. Ying",
+      "year": 1998,
+      "url": "https://doi.org/10.1021/jp982948+",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "zhang1998-jp982948",
+    "recipe_family": "zhang1998-jp982948-11-nm-tio2-doped-with-0-05-at-fe3-2",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "TiO2",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "zhang1998-jp982948",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "anatase",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "zhang1998-jp982948",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "zhang1998-jp982948-11-nm-tio2-doped-with-0-05-at-fe3-2--titanium-isopropoxide",
+      "name": "titanium isopropoxide",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "zhang1998-jp982948",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "zhang1998-jp982948-11-nm-tio2-doped-with-0-05-at-fe3-2--fe-no3-39h2o",
+      "name": "Fe(NO3)3·9H2O",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "zhang1998-jp982948",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "zhang1998-jp982948-11-nm-tio2-doped-with-0-05-at-fe3-2--after-s01-dissolve",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "zhang1998-jp982948-11-nm-tio2-doped-with-0-05-at-fe3-2--titanium-isopropoxide"
+      ]
+    },
+    {
+      "id": "zhang1998-jp982948-11-nm-tio2-doped-with-0-05-at-fe3-2--after-s02-add",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "zhang1998-jp982948-11-nm-tio2-doped-with-0-05-at-fe3-2--after-s01-dissolve",
+        "zhang1998-jp982948-11-nm-tio2-doped-with-0-05-at-fe3-2--titanium-isopropoxide"
+      ]
+    },
+    {
+      "id": "zhang1998-jp982948-11-nm-tio2-doped-with-0-05-at-fe3-2--after-s03-centrifuge",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "zhang1998-jp982948-11-nm-tio2-doped-with-0-05-at-fe3-2--after-s02-add"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-dissolve",
+      "action": "dissolve",
+      "label": "Titanium isopropoxide in ethanol",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "zhang1998-jp982948-11-nm-tio2-doped-with-0-05-at-fe3-2--titanium-isopropoxide"
+      ],
+      "outputs": [
+        "zhang1998-jp982948-11-nm-tio2-doped-with-0-05-at-fe3-2--after-s01-dissolve"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Titanium isopropoxide in ethanol",
+      "evidence": [
+        {
+          "source_id": "zhang1998-jp982948",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-add",
+      "action": "add",
+      "label": "Deionized water and ethanol",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-dissolve"
+      ],
+      "inputs": [
+        "zhang1998-jp982948-11-nm-tio2-doped-with-0-05-at-fe3-2--after-s01-dissolve",
+        "zhang1998-jp982948-11-nm-tio2-doped-with-0-05-at-fe3-2--titanium-isopropoxide"
+      ],
+      "outputs": [
+        "zhang1998-jp982948-11-nm-tio2-doped-with-0-05-at-fe3-2--after-s02-add"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Deionized water and ethanol",
+      "evidence": [
+        {
+          "source_id": "zhang1998-jp982948",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-centrifuge",
+      "action": "centrifuge",
+      "label": "Separate powder",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-add"
+      ],
+      "inputs": [
+        "zhang1998-jp982948-11-nm-tio2-doped-with-0-05-at-fe3-2--after-s02-add"
+      ],
+      "outputs": [
+        "zhang1998-jp982948-11-nm-tio2-doped-with-0-05-at-fe3-2--after-s03-centrifuge"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Separate powder",
+      "evidence": [
+        {
+          "source_id": "zhang1998-jp982948",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "zhang1998-jp982948-11-nm-tio2-doped-with-0-05-at-fe3-2--product",
+      "source_sample_label": "11-nm TiO2 doped with 0.05 at. % Fe3+",
+      "batch_id": null,
+      "material_state_id": "zhang1998-jp982948-11-nm-tio2-doped-with-0-05-at-fe3-2--after-s03-centrifuge",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "TiO2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "zhang1998-jp982948",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "anatase",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "zhang1998-jp982948",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "zhang1998-jp982948",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "notes": [
+        "Reactor: high-pressure tubes (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of titanium isopropoxide not reported in the extracted text.",
+      "Amount of Fe(NO3)3·9H2O not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
