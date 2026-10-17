@@ -1,0 +1,361 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "text2012-jp305098m-znscds-nc-tio2-fto-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Not explicitly listed in the provided text (2012): ZnS−CdS@nc-TiO2/FTO",
+  "material": {
+    "formula": "ZnS−CdS",
+    "family": "ZnS−CdS nanocrystals",
+    "elements": [
+      "Zn",
+      "S",
+      "Cd"
+    ],
+    "components": [
+      "ZnS",
+      "CdS"
+    ],
+    "architecture": "composite"
+  },
+  "method": "Synthesis as described in the source",
+  "sources": [
+    {
+      "id": "text2012-jp305098m",
+      "doi": "10.1021/jp305098m",
+      "title": "Photoactivated Fuel Cells with Quantum Dot Photosensitizers for Ethanol Oxidation",
+      "authors": "Not explicitly listed in the provided text",
+      "year": 2012,
+      "url": "https://doi.org/10.1021/jp305098m",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "text2012-jp305098m",
+    "recipe_family": "text2012-jp305098m-znscds-nc-tio2-fto-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "ZnS−CdS",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "text2012-jp305098m",
+          "locator": "Main PDF p.4"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "text2012-jp305098m-znscds-nc-tio2-fto-1--cd-no3-24h2o",
+      "name": "Cd(NO3)2·4H2O",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "text2012-jp305098m",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "text2012-jp305098m-znscds-nc-tio2-fto-1--zn-no3-26h2o",
+      "name": "Zn(NO3)2·6H2O",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "text2012-jp305098m",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "text2012-jp305098m-znscds-nc-tio2-fto-1--na2s9h2o",
+      "name": "Na2S·9H2O",
+      "formula": null,
+      "role": "chalcogen_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "text2012-jp305098m",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "text2012-jp305098m-znscds-nc-tio2-fto-1--after-s01-dissolve",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "text2012-jp305098m-znscds-nc-tio2-fto-1--cd-no3-24h2o",
+        "text2012-jp305098m-znscds-nc-tio2-fto-1--zn-no3-26h2o",
+        "text2012-jp305098m-znscds-nc-tio2-fto-1--na2s9h2o"
+      ]
+    },
+    {
+      "id": "text2012-jp305098m-znscds-nc-tio2-fto-1--after-s02-wash",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "text2012-jp305098m-znscds-nc-tio2-fto-1--after-s01-dissolve"
+      ]
+    },
+    {
+      "id": "text2012-jp305098m-znscds-nc-tio2-fto-1--after-s03-wash",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "text2012-jp305098m-znscds-nc-tio2-fto-1--after-s02-wash"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-dissolve",
+      "action": "dissolve",
+      "label": "Prepare aqueous solutions of Cd(NO3)2·4H2O, Zn(NO3)2·6H2O, and Na2S·9H2O",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "text2012-jp305098m-znscds-nc-tio2-fto-1--cd-no3-24h2o",
+        "text2012-jp305098m-znscds-nc-tio2-fto-1--zn-no3-26h2o",
+        "text2012-jp305098m-znscds-nc-tio2-fto-1--na2s9h2o"
+      ],
+      "outputs": [
+        "text2012-jp305098m-znscds-nc-tio2-fto-1--after-s01-dissolve"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Prepare aqueous solutions of Cd(NO3)2·4H2O, Zn(NO3)2·6H2O, and Na2S·9H2O",
+      "evidence": [
+        {
+          "source_id": "text2012-jp305098m",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "s02-wash",
+      "action": "wash",
+      "label": "Wash the electrode with triple-distilled water",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-dissolve"
+      ],
+      "inputs": [
+        "text2012-jp305098m-znscds-nc-tio2-fto-1--after-s01-dissolve"
+      ],
+      "outputs": [
+        "text2012-jp305098m-znscds-nc-tio2-fto-1--after-s02-wash"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Wash the electrode with triple-distilled water",
+      "evidence": [
+        {
+          "source_id": "text2012-jp305098m",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "s03-wash",
+      "action": "wash",
+      "label": "Wash the electrode with triple-distilled water",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-wash"
+      ],
+      "inputs": [
+        "text2012-jp305098m-znscds-nc-tio2-fto-1--after-s02-wash"
+      ],
+      "outputs": [
+        "text2012-jp305098m-znscds-nc-tio2-fto-1--after-s03-wash"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Wash the electrode with triple-distilled water",
+      "evidence": [
+        {
+          "source_id": "text2012-jp305098m",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "text2012-jp305098m-znscds-nc-tio2-fto-1--product",
+      "source_sample_label": "ZnS−CdS@nc-TiO2/FTO",
+      "batch_id": null,
+      "material_state_id": "text2012-jp305098m-znscds-nc-tio2-fto-1--after-s03-wash",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "ZnS−CdS",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "text2012-jp305098m",
+            "locator": "Main PDF p.4"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": "none",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "text2012-jp305098m",
+            "locator": "Main PDF p.4"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "text2012-jp305098m",
+          "locator": "Main PDF p.4"
+        }
+      ],
+      "notes": [
+        "Reaction time: 5 min (Main PDF p.3)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Shape not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Amount of Cd(NO3)2·4H2O not reported in the extracted text.",
+      "Amount of Zn(NO3)2·6H2O not reported in the extracted text.",
+      "Amount of Na2S·9H2O not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

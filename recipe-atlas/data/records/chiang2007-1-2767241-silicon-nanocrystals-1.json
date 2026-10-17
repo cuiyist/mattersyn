@@ -1,0 +1,320 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "chiang2007-1-2767241-silicon-nanocrystals-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Wen-Jen Chiang (2007): silicon nanocrystals",
+  "material": {
+    "formula": "Si",
+    "family": "Si nanocrystals",
+    "elements": [
+      "Si"
+    ],
+    "components": [
+      "Si"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Laser annealing",
+  "sources": [
+    {
+      "id": "chiang2007-1-2767241",
+      "doi": "10.1063/1.2767241",
+      "title": "Silicon nanocrystal-based photosensor on low-temperature polycrystalline-silicon panels",
+      "authors": "Wen-Jen Chiang, Chih-Yang Chen, Chrong-Jung Lin, Ya-Chin King, An-Thung Cho, Chia-Tian Peng, Chih-Wei Chao, Kun-Chih Lin, and Feng-Yuan Gan",
+      "year": 2007,
+      "url": "https://doi.org/10.1063/1.2767241",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "chiang2007-1-2767241",
+    "recipe_family": "chiang2007-1-2767241-silicon-nanocrystals-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Si",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "chiang2007-1-2767241",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "nanocrystalline",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "chiang2007-1-2767241",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": 5,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "5 nm",
+      "evidence": [
+        {
+          "source_id": "chiang2007-1-2767241",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "nanocrystal",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "chiang2007-1-2767241",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "chiang2007-1-2767241-silicon-nanocrystals-1--silicon-rich-oxide",
+      "name": "silicon-rich oxide",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "chiang2007-1-2767241",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "chiang2007-1-2767241-silicon-nanocrystals-1--after-s01-deposit",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "chiang2007-1-2767241-silicon-nanocrystals-1--silicon-rich-oxide"
+      ]
+    },
+    {
+      "id": "chiang2007-1-2767241-silicon-nanocrystals-1--after-s02-anneal",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "chiang2007-1-2767241-silicon-nanocrystals-1--after-s01-deposit",
+        "chiang2007-1-2767241-silicon-nanocrystals-1--silicon-rich-oxide"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-deposit",
+      "action": "deposit",
+      "label": "Deposit silicon-rich oxide film using PECVD",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "chiang2007-1-2767241-silicon-nanocrystals-1--silicon-rich-oxide"
+      ],
+      "outputs": [
+        "chiang2007-1-2767241-silicon-nanocrystals-1--after-s01-deposit"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Deposit silicon-rich oxide film using PECVD",
+      "evidence": [
+        {
+          "source_id": "chiang2007-1-2767241",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "s02-anneal",
+      "action": "anneal",
+      "label": "Laser annealing to form nanocrystals",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-deposit"
+      ],
+      "inputs": [
+        "chiang2007-1-2767241-silicon-nanocrystals-1--after-s01-deposit",
+        "chiang2007-1-2767241-silicon-nanocrystals-1--silicon-rich-oxide"
+      ],
+      "outputs": [
+        "chiang2007-1-2767241-silicon-nanocrystals-1--after-s02-anneal"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Laser annealing to form nanocrystals",
+      "evidence": [
+        {
+          "source_id": "chiang2007-1-2767241",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "chiang2007-1-2767241-silicon-nanocrystals-1--product",
+      "source_sample_label": "silicon nanocrystals",
+      "batch_id": null,
+      "material_state_id": "chiang2007-1-2767241-silicon-nanocrystals-1--after-s02-anneal",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Si",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "chiang2007-1-2767241",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "nanocrystalline",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "chiang2007-1-2767241",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "nanocrystal",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "chiang2007-1-2767241",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "chiang2007-1-2767241",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [
+    {
+      "id": "chiang2007-1-2767241-silicon-nanocrystals-1--size",
+      "sample_id": "chiang2007-1-2767241-silicon-nanocrystals-1--product",
+      "property": "particle_size",
+      "technique": "not reported",
+      "value": {
+        "value": 5,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "5 nm",
+        "evidence": [
+          {
+            "source_id": "chiang2007-1-2767241",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "chiang2007-1-2767241",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Ligand not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of silicon-rich oxide not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

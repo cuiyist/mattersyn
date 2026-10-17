@@ -5,10 +5,12 @@ import hashlib
 import importlib.util
 import json
 from pathlib import Path
+import sys
 import tempfile
 import unittest
 
 ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT / 'recipe-atlas/scripts'))
 
 
 def load(name, relative):
@@ -21,6 +23,7 @@ def load(name, relative):
 CONVERTER = load('compaction_converter', 'tools/simple-pipeline/to_site.py')
 CAPTIONS = load('compaction_captions', 'tools/simple-pipeline/local_caption_backfill.py')
 REGISTRY = load('compaction_registry', 'recipe-atlas/scripts/reader_presentation_registry.py')
+PUBLIC_REGISTRY = load('compaction_public_registry', 'recipe-atlas/scripts/public_reader_registry.py')
 
 
 def sample():
@@ -58,17 +61,31 @@ def emit_build_projection(target, source, data, view):
     """Execute only the real builder's serialization expression on fixtures."""
     tree = ast.parse((ROOT / 'recipe-atlas/scripts/build_reader_metadata.py').read_text(encoding='utf-8'))
     main = next(node for node in tree.body if isinstance(node, ast.FunctionDef) and node.name == 'main')
-    candidates = [node for node in main.body if isinstance(node, ast.Expr)
-                  and isinstance(node.value, ast.IfExp)
-                  and isinstance(node.value.body, ast.Call)
-                  and isinstance(node.value.body.func, ast.Attribute)
-                  and node.value.body.func.attr == 'write_bytes']
-    if len(candidates) != 1:
-        raise AssertionError('Expected one unchanged identity/filtered serialization branch')
-    code = compile(ast.fix_missing_locations(ast.Module(body=[copy.deepcopy(candidates[0])], type_ignores=[])),
+    starts = [index for index, node in enumerate(main.body)
+              if isinstance(node, ast.Assign) and len(node.targets) == 1
+              and isinstance(node.targets[0], ast.Name) and node.targets[0].id == 'legacy_raw']
+    if len(starts) != 1:
+        raise AssertionError('Expected one unchanged identity/filtered byte selection')
+    candidates = main.body[starts[0]:starts[0] + 3]
+    if (len(candidates) != 3 or not isinstance(candidates[1], ast.Assign)
+            or len(candidates[1].targets) != 1
+            or not isinstance(candidates[1].targets[0], ast.Name)
+            or candidates[1].targets[0].id != 'payloads'
+            or not isinstance(candidates[1].value, ast.Call)
+            or not isinstance(candidates[1].value.func, ast.Name)
+            or candidates[1].value.func.id != 'public_parts'
+            or not isinstance(candidates[2], ast.For)
+            or not isinstance(candidates[2].iter, ast.Call)
+            or not isinstance(candidates[2].iter.func, ast.Attribute)
+            or not isinstance(candidates[2].iter.func.value, ast.Name)
+            or candidates[2].iter.func.value.id != 'payloads'
+            or candidates[2].iter.func.attr != 'items'):
+        raise AssertionError('Expected the real public-parts serializer and writer loop')
+    code = compile(ast.fix_missing_locations(ast.Module(body=copy.deepcopy(candidates), type_ignores=[])),
                    '<synthetic-reader-serialization>', 'exec')
     exec(code, {'target': target, 'source': source, 'data': data, 'view': view,
-                'json': json, 'source_paths': REGISTRY.source_paths})
+                'json': json, 'source_paths': REGISTRY.source_paths,
+                'public_parts': PUBLIC_REGISTRY.public_parts})
 
 
 class ReaderJsonCompactionTests(unittest.TestCase):
