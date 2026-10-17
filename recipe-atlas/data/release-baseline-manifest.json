@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
   "dataset_version": "0.41.2",
-  "record_count": 5167,
-  "group_count": 1724,
+  "record_count": 5166,
+  "group_count": 1723,
   "families": [
     "(Cs/FA)Pb(Br/I)3 nanocrystals",
     "70SiO2-30ZrO2:Er nanocrystals",
@@ -414,9 +414,10 @@
     "Ge NCs in Ge/SiO2/Si sample",
     "Ge QD arrays on 20 nm Si nanowires",
     "Ge islands on Si(100) using SiGe relaxed template",
-    "Ge nanocrystals",
     "Ge nanocrystals (NCs) in SiO2",
     "Ge nanocrystals (nc-Ge) embedded in gate oxide",
+    "Ge nanocrystals embedded in GeO2 matrix",
+    "Ge nanocrystals embedded in Lu2O3/Al2O3 dielectric stack",
     "Ge nanocrystals in SiO2 matrix",
     "Ge quantum dots in amorphous SiO2 matrix",
     "Ge quantum dots with boron on Ge wetting layer",
@@ -861,6 +862,7 @@
     "magnetic oxide nanocrystals",
     "molecular precursor reference context",
     "nc-CdSe nanowires (60 nm × 200 nm) nanocrystals",
+    "nc-Ge (nanocrystalline germanium) embedded in SiO2 matrix",
     "nc-Si (sample 1) nanocrystals",
     "nc-Si (sample 2) nanocrystals",
     "nc-Si (sample 3) nanocrystals",
@@ -372371,15 +372373,15 @@
     {
       "record_id": "chan2009-1-3224188-ge-nanocrystals-embedded-in-lu2o3-al2o3-1",
       "title": "M. Y. Chan (2009): Ge nanocrystals embedded in Lu2O3/Al2O3 dielectric stack",
-      "formula": "Ge",
-      "family": "Ge nanocrystals",
+      "formula": "Ge nanocrystals embedded in Lu2O3/Al2O3 dielectric stack",
+      "family": "Ge nanocrystals embedded in Lu2O3/Al2O3 dielectric stack",
       "method": "Pulsed laser deposition",
       "record_type": "literature_protocol",
       "source_year": 2009,
       "source_doi": "10.1063/1.3224188",
       "revision": 1,
       "record_sha256": "384d3f8a658cd56978cee134a05e6a260bc96307787918c8c1bb3cdaf10b8a5c",
-      "recipe_signature": "5826357e23c177fea7ffd7161adf8740fb2b822daef9cb79f9429336ef6c1422",
+      "recipe_signature": "3853c796e61e839327192d36bf85f40ad5c480279379b9fbcee3da537491a45a",
       "group_id": "group-377b1c6277ad",
       "split": "train",
       "eligibility": {
@@ -372439,7 +372441,9 @@
       "missing_field_count": 4,
       "collection": "reviewed_literature",
       "components": [
-        "Ge"
+        "Ge",
+        "Lu2O3",
+        "Al2O3"
       ],
       "pair_ids": []
     },
@@ -373873,15 +373877,15 @@
     {
       "record_id": "kan2004-1-1645639-nc-ge-nanocrystalline-germanium-embedded-1",
       "title": "E. W. H. Kan et al. (2004): nc-Ge (nanocrystalline germanium) embedded in SiO2 matrix",
-      "formula": "SiO2",
-      "family": "SiO2 nanocrystals",
+      "formula": "nc-Ge (nanocrystalline germanium) embedded in SiO2 matrix",
+      "family": "nc-Ge (nanocrystalline germanium) embedded in SiO2 matrix",
       "method": "Wet oxidation",
       "record_type": "literature_protocol",
       "source_year": 2004,
       "source_doi": "10.1063/1.1645639",
       "revision": 1,
       "record_sha256": "7f484e312cecc3ce5438735975b10f3d2b10c32420216f8022e569091b035afe",
-      "recipe_signature": "f0adc722067904b77e4d3daa4b6d2d623bab4daf3fb4d2ab4dabc9200e9a44f4",
+      "recipe_signature": "533f8fc2d55e55f97f60b1a435b06e1f6e9111dc942266c179ce6ebd933c6511",
       "group_id": "group-b6357fe19804",
       "split": "train",
       "eligibility": {
@@ -373941,6 +373945,7 @@
       "missing_field_count": 5,
       "collection": "reviewed_literature",
       "components": [
+        "Ge",
         "SiO2"
       ],
       "pair_ids": []
@@ -374243,81 +374248,6 @@
       "collection": "reviewed_literature",
       "components": [
         "GaN"
-      ],
-      "pair_ids": []
-    },
-    {
-      "record_id": "li2006-1-2207494-ge-quantum-dot-single-hole-and-electron-1",
-      "title": "P. W. Li (2006): Ge quantum-dot single-hole and -electron transistors",
-      "formula": "Ge",
-      "family": "Ge nanocrystals",
-      "method": "Thermal oxidation",
-      "record_type": "literature_protocol",
-      "source_year": 2006,
-      "source_doi": "10.1063/1.2207494",
-      "revision": 1,
-      "record_sha256": "e8b57c8603784c3f86e4977ccdb56a7c9f508272c122b8b4be195dfb4d1ee6a2",
-      "recipe_signature": "514854f6be43cc82dcff6e0acd92e34c01cb543aed50633a0cd5dc03f9f607aa",
-      "group_id": "group-d0c8c76de0a8",
-      "split": "train",
-      "eligibility": {
-        "precursor_selection": {
-          "eligible": false,
-          "reason": "Source review required, or structured-data verification supports only a separately gated benchmark task."
-        },
-        "partial_protocol": {
-          "eligible": false,
-          "reason": "Source review required, or structured-data verification supports only a separately gated benchmark task."
-        },
-        "size_conditioned_recipe": {
-          "eligible": false,
-          "reason": "Source review required, or structured-data verification supports only a separately gated benchmark task."
-        },
-        "success_prediction": {
-          "eligible": false,
-          "reason": "Source review required, or structured-data verification supports only a separately gated benchmark task."
-        },
-        "optical_outcome": {
-          "eligible": false,
-          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
-        },
-        "exact_structure_recipe": {
-          "eligible": false,
-          "reason": "This record has not completed source review. Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
-          "reason_codes": [
-            "source_review_required",
-            "task_not_requested",
-            "no_sample_coordinate_asset",
-            "audited_task_profile_missing"
-          ],
-          "reasons": [
-            {
-              "code": "source_review_required",
-              "message": "This record has not completed source review."
-            },
-            {
-              "code": "task_not_requested",
-              "message": "Exact structure–recipe training has not been requested for this record."
-            },
-            {
-              "code": "no_sample_coordinate_asset",
-              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
-            },
-            {
-              "code": "audited_task_profile_missing",
-              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
-            }
-          ],
-          "profile_id": null,
-          "selected_asset_ids": []
-        }
-      },
-      "record_url": "data/records/li2006-1-2207494-ge-quantum-dot-single-hole-and-electron-1.json",
-      "page_url": "records/li2006-1-2207494-ge-quantum-dot-single-hole-and-electron-1.html",
-      "missing_field_count": 5,
-      "collection": "reviewed_literature",
-      "components": [
-        "Ge"
       ],
       "pair_ids": []
     },
@@ -375376,15 +375306,15 @@
     {
       "record_id": "sahle2009-1-3183581-ge-nanocrystals-embedded-in-geo2-matrix-1",
       "title": "Christoph J. Sahle (2009): Ge nanocrystals embedded in GeO2 matrix",
-      "formula": "Ge",
-      "family": "Ge nanocrystals",
+      "formula": "Ge nanocrystals embedded in GeO2 matrix",
+      "family": "Ge nanocrystals embedded in GeO2 matrix",
       "method": "Annealing",
       "record_type": "literature_protocol",
       "source_year": 2009,
       "source_doi": "10.1063/1.3183581",
       "revision": 1,
       "record_sha256": "555c071a5f0458f663daea253be0959784610ca007a5cad95a733b214d1bf850",
-      "recipe_signature": "06e364049a6c5f28e621dd5827c35f3771b477ede774099033ba294cddad5e56",
+      "recipe_signature": "61116a4b3d83999d25ecd92f73235e4d38e51302ce05cc14d83307006319739b",
       "group_id": "group-e2a51e9d64df",
       "split": "validation",
       "eligibility": {
@@ -375444,7 +375374,8 @@
       "missing_field_count": 3,
       "collection": "reviewed_literature",
       "components": [
-        "Ge"
+        "Ge",
+        "GeO2"
       ],
       "pair_ids": []
     },

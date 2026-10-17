@@ -48,6 +48,59 @@ class ExplicitGeNavigation(unittest.TestCase):
                 self.assertEqual(actual['quality']['review_status'],'source_extracted')
                 actual.pop('material');previous.pop('material');self.assertEqual(actual,previous)
 
+    def test_explicit_matrix_whole_labels_change_navigation_only(self):
+        cases = [
+            ('Ge nanocrystals embedded in GeO2 matrix', ['Ge', 'GeO2'], ['Ge', 'O'], 'Ge'),
+            ('Ge nanocrystals embedded in Lu2O3/Al2O3 dielectric stack', ['Ge', 'Lu2O3', 'Al2O3'], ['Ge', 'Lu', 'O', 'Al'], 'Ge'),
+            ('nc-Ge (nanocrystalline germanium) embedded in SiO2 matrix', ['Ge', 'SiO2'], ['Ge', 'Si', 'O'], None),
+        ]
+        for label, components, elements, composition in cases:
+            with self.subTest(label=label):
+                item = pair(label, composition=composition, steps=[])
+                if composition is None:
+                    item['structure']['composition'] = None
+                before = copy.deepcopy(item)
+                actual = record(item)
+                self.assertEqual(actual['material'], {'formula': label, 'family': label,
+                    'elements': elements, 'components': components, 'architecture': 'unresolved'})
+                with patch.object(to_site, '_explicit_ge_matrix_navigation', return_value=None):
+                    previous = record(item)
+                actual.pop('material'); previous.pop('material')
+                self.assertEqual(actual, previous)
+                self.assertEqual(list(actual), list(previous))
+                self.assertEqual(item, before)
+                self.assertEqual(actual['products'][0]['composition']['value'], composition)
+                self.assertEqual(actual['intended_target']['composition']['value'], composition)
+                self.assertEqual(actual['products'][0]['composition']['status'],
+                                 'not_reported' if composition is None else 'reported')
+
+    def test_explicit_matrix_preserves_existing_multicomponent_architecture(self):
+        label = 'Ge nanocrystals embedded in GeO2 matrix'
+        for architecture in ['core_shell', 'heterostructure', 'composite', 'alloy', 'phase_mixture', 'unresolved']:
+            with self.subTest(architecture=architecture):
+                item = pair(label, steps=[])
+                item['structure']['architecture'] = {'value': architecture, 'page': 2}
+                self.assertEqual(record(item)['material']['architecture'], architecture)
+        item = pair(label, steps=[])
+        item['structure']['architecture'] = {'value': 'single_material', 'page': 2}
+        self.assertEqual(record(item)['material']['architecture'], 'unresolved')
+
+    def test_explicit_matrix_never_infers_from_device_precursor_or_contradictory_fact(self):
+        labels = ['Ge', 'Ge quantum dots', 'Ge n-channel MOSFET with Schottky source/drain',
+                  'Ge nanocrystals embedded in gate oxide',
+                  'Ge nanocrystals embedded in GeO2 matrix device',
+                  'Ge nanocrystals embedded in geo2 matrix']
+        for label in labels:
+            with self.subTest(label=label):
+                item = pair(label, steps=[{'action': 'deposit',
+                    'description': 'GeO2 Lu2O3 Al2O3 SiO2 are mentioned', 'page': 2}])
+                item['recipe']['chemicals'] = [{'name': 'GeO2', 'page': 2}]
+                self.assertIsNone(to_site._explicit_ge_matrix_navigation(item))
+        for value in ['CdSe', 'SiO2', 'Ge/GeOx']:
+            item = pair('Ge nanocrystals embedded in GeO2 matrix', composition=value)
+            self.assertIsNone(to_site._explicit_ge_matrix_navigation(item))
+            self.assertEqual(record(item)['products'][0]['composition']['value'], value)
+
     def test_bare_ge_does_not_acquire_matrix_substrate_or_boron_from_operations(self):
         for label in ['Ge','Ge quantum dots','Ge quantum dots on Si substrate']:
             with self.subTest(label=label):

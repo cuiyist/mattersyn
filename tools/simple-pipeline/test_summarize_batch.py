@@ -45,6 +45,33 @@ class BatchSummaryTest(unittest.TestCase):
         self.assertEqual(record['existing_routes'], 2)
         self.assertFalse(result['five_field_completeness_is_admission_gate'])
 
+    def test_explicit_matrix_and_ordinary_record_share_converter_identity_and_route_counts(self):
+        labels = ['Ge nanocrystals embedded in GeO2 matrix',
+                  'Ge nanocrystals embedded in Lu2O3/Al2O3 dielectric stack',
+                  'nc-Ge (nanocrystalline germanium) embedded in SiO2 matrix']
+        for label in labels:
+            with self.subTest(label=label):
+                doc = self.doc()
+                doc['pairs'][0]['product'] = label
+                doc['pairs'][0]['structure']['composition'] = (None if label.startswith('nc-Ge') else
+                                                               {'value': 'Ge', 'page': 2})
+                ordinary = self.doc()['pairs'][0]
+                ordinary['product'] = 'CdS dots'
+                ordinary['structure']['composition']['value'] = 'CdS'
+                doc['pairs'].append(ordinary)
+                before = copy.deepcopy(doc)
+                converted = helper.to_site.records_of(doc)[1]
+                result = self.run_summary(doc, existing_routes={label: 3, 'CdS': 3})
+                rows = result['papers'][0]['records']
+                self.assertEqual([r['record_id'] for r in rows], [r['record_id'] for r in converted])
+                self.assertEqual([r['material']['formula'] for r in converted], [label, 'CdS'])
+                self.assertEqual([r['material_id'] for r in rows],
+                                 ['material-' + label.casefold(), 'material-cds'])
+                self.assertEqual([r['existing_routes'] for r in rows], [3, 3])
+                self.assertEqual([r['rare_material'] for r in rows], [False, False])
+                self.assertEqual([r['eligible'] for r in rows], [True, True])
+                self.assertEqual(doc, before)
+
     def test_optional_fields_and_missing_counter_fields_do_not_change_route(self):
         doc = self.doc()
         del doc['pairs'][0]['recipe']['reaction_time']
