@@ -1,5 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import {readFile} from 'node:fs/promises';
 import {figureMatchesCategory,sourceFigureRows} from '../static/reader-utils.mjs';
 
 // UI fixtures use the category combinations which caused reviewed crops to be
@@ -17,7 +18,21 @@ class Node {
 }
 globalThis.document={createElement:tag=>new Node(tag),body:new Node('body'),getElementById:()=>null};
 const {figureGallery}=await import('../static/reader-app.mjs');
-const {fallbackSources}=await import('../static/material-guide.mjs');
+// A guide import query alone does not isolate its fixed loader dependency. Evaluate
+// the actual guide with absolute imports and a fresh actual loader module per fixture.
+const guideURL=new URL('../static/material-guide.mjs',import.meta.url);
+const guideCode=await readFile(guideURL,'utf8');
+async function isolatedGuide(name){
+ const code=guideCode.replace(/\bfrom (['"])(\.\/[^'"]+)\1/g,(_match,quote,path)=>{
+  const url=new URL(path,guideURL);
+  if(url.pathname.endsWith('/reader-presentation-loader.mjs'))url.searchParams.set('fixture',name);
+  return 'from '+quote+url.href+quote;
+ }).replaceAll('import.meta.url',JSON.stringify(guideURL.href));
+ return import('data:text/javascript;base64,'+Buffer.from(code).toString('base64')+'#'+name);
+}
+const jsonResponse=value=>new Response(JSON.stringify(value));
+const presentationResponse=data=>jsonResponse({records:{},materials:{},figures_by_source:{},...data});
+const {fallbackSources}=await isolatedGuide('fallback-source-fixture');
 const walk=n=>[n,...n.children.flatMap(c=>c instanceof Node?walk(c):[])];
 const nodes=(n,tag)=>walk(n).filter(x=>x.tagName===tag);
 const freeze=o=>{if(o&&typeof o==='object'){for(const v of Object.values(o))freeze(v);Object.freeze(o);}return o;};
@@ -103,9 +118,9 @@ test('text-only figures remain disclosures and do not acquire fabricated image a
 
 
 test('source-extracted figure introduction stays neutral without changing source figures or status',async()=>{
- const {fallbackSources:neutralFallback}=await import('../static/material-guide.mjs?neutral-source-intro-fixture');
+ const {fallbackSources:neutralFallback}=await isolatedGuide('neutral-source-intro-fixture');
  const data=freeze({records:{'route-a':{figures:fixture}}});
- globalThis.fetch=async()=>({ok:true,json:async()=>data});
+ globalThis.fetch=async()=>presentationResponse(data);
  const r=freeze({...record,quality:{review_status:'source_extracted'},review_status:'source_reviewed'});
  const before=JSON.stringify({r,data}),h=host();
  assert.equal(await neutralFallback(h,r),true);
@@ -115,9 +130,9 @@ test('source-extracted figure introduction stays neutral without changing source
  assert.equal(JSON.stringify({r,data}),before);
 });
 test('audited and other existing figure introductions retain their exact wording and gallery',async()=>{
- const {fallbackSources:legacyFallback}=await import('../static/material-guide.mjs?legacy-source-intro-fixture');
+ const {fallbackSources:legacyFallback}=await isolatedGuide('legacy-source-intro-fixture');
  const data=freeze({records:{'route-a':{figures:fixture}}});
- globalThis.fetch=async()=>({ok:true,json:async()=>data});
+ globalThis.fetch=async()=>presentationResponse(data);
  const before=JSON.stringify(data);
  for(const status of ['source_reviewed','audited','pending',undefined]){
   const r=freeze({...record,quality:{review_status:status},review_status:'source_extracted'}),rBefore=JSON.stringify(r),h=host();
@@ -131,7 +146,7 @@ test('audited and other existing figure introductions retain their exact wording
 
 test('Data fallback reads only the exact record presentation without adding other paper or sample figures',async()=>{
  const data=freeze({records:{'route-a':{figures:fixture},'other-route':{figures:[figure('unrelated','protocol')]}}});
- const requests=[];globalThis.fetch=async url=>{requests.push(String(url));return {ok:true,json:async()=>data};};
+ const requests=[];globalThis.fetch=async url=>{requests.push(String(url));return presentationResponse(data);};
  const h=host(),before=JSON.stringify(data);assert.equal(await fallbackSources(h,record),true);
  assert.equal(nodes(h,'button').filter(n=>n.attributes.role==='tab').length,7);
  assert.doesNotMatch(h.textContent,/unrelated/);assert.match(h.textContent,/does not establish the same physical batch/);
@@ -141,11 +156,11 @@ test('Data fallback reads only the exact record presentation without adding othe
 });
 
 test('the core-scoped Data entrypoint renders the fallback and retains existing context links',async()=>{
- const {mountEvidence}=await import('../static/material-guide.mjs?data-entrypoint-fixture');
+ const {mountEvidence}=await isolatedGuide('data-entrypoint-fixture');
  const requests=[];globalThis.fetch=async url=>{const path=String(url);requests.push(path);
-  if(path.endsWith('/data/paper-review-index.json'))return {ok:true,json:async()=>({papers:[]})};
+  if(path.endsWith('/data/paper-review-index.json'))return jsonResponse({papers:[]});
   assert.ok(path.endsWith('/data/reader-presentation.json'));
-  return {ok:true,json:async()=>({records:{'route-a':{figures:fixture}}})};
+  return presentationResponse({records:{'route-a':{figures:fixture}}});
  };
  const h=host();await mountEvidence(h,{...record,context_links:[{label:'Reviewed source context',url:'data/fixture-context.json'}]});
  assert.equal(nodes(h,'button').filter(n=>n.attributes.role==='tab').length,7);

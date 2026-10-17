@@ -1,4 +1,13 @@
 
+### G local test-fixture correction — 2026-10-17T01:59:05.896475+00:00
+
+The first complete JavaScript phase on unpublished Source 8caf4eea52d10aab5ac979d35933142653212485 ran 218 tests: 211 passed and seven legacy fixture failures stopped q-r1 before any other release phase or push. The failures were missing loader injection and JSON-only mock responses after the byte-based Reader loader update. Both the original commit and failed check remain preserved.
+
+Two test harnesses now use realistic Response bytes, the required Reader tables and isolated actual loader instances. Assertions across HTTP JSON decoding compare full values; strict repeated-cache identity, selection identity within the decoded object, immutability, malformed inputs, record scope, neutral wording and request counts remain checked. Production code and every release check remain unchanged. Independent code review found no assertion weakening; a private targeted run passed 16/16 with zero skips, and Root's complete JavaScript suite passed 218/218 with zero skips. Choice: adapt the fixtures to the real byte-loader contract.
+
+A substantive corrective child commit, normal control regeneration and the complete q-r2 run follow. No amended history, force push, new paper integration, prior bookkeeping replay or G publication credit is claimed. All 87 new raw records and the three previously reviewed navigation corrections remain unchanged.
+
+
 ### G ready batch (model batches 47–50) — 2026-10-17T01:41:49.992576+00:00
 
 The next local integration contains 68 distinct primary papers, 87 new ordinary records and 301 captioned source-figure crops: B47 19/22/89, B48 19/21/85, B49 21/28/85 and B50 9/16/42 (papers/records/figures). These are prepared counts, with zero new G publication credit until deployment and anonymous verification. Every new record remains source_extracted; the paused audited lane, its owner questions and the six audited-only training exports remain unchanged. Existing rare-material reads were reused and all 105 historical deletion paths retained. The B49 German-language duplicate was omitted; existing acetate/Ac and unresolved B50 technical holds remain omitted.

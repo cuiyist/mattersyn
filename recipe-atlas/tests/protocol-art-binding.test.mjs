@@ -19,6 +19,7 @@ test('rejects ambiguous, unsupported or unattributed artwork',()=>{
 
 // Exercise the actual cached Reader accessor and Data mount with invented inputs.
 import {readFile} from 'node:fs/promises';
+import {createReaderPresentationLoader} from '../static/reader-presentation-loader.mjs';
 const readerCode=await readFile(new URL('../static/reader-app.mjs',import.meta.url),'utf8');
 const dataCode=await readFile(new URL('../static/illustrated-record.mjs',import.meta.url),'utf8');
 function cacheAccessor(payload){
@@ -26,15 +27,18 @@ function cacheAccessor(payload){
  const cache=readerCode.match(/^const cache=new Map\(\);$/m)[0];
  const json=readerCode.match(/^function json\(path\)\{[^\n]+\}$/m)[0];
  const accessor=readerCode.match(/^export async function reviewedProtocolArt\(r\)\{[\s\S]*?^\}/m)[0].replace('export ','');
- const fetch=async()=>{fetches++;return {ok:true,json:async()=>payload};};
- const get=new Function('fetch','siteURL',cache+'\n'+json+'\n'+accessor+'\nreturn reviewedProtocolArt;')(fetch,p=>'https://fixture.invalid/'+p);
+ // HTTP JSON is decoded from bytes, with an independent production loader cache per fixture.
+ const fetch=async()=>{fetches++;return new Response(JSON.stringify({records:{},materials:{},figures_by_source:{},...payload}));};
+ const loadReaderPresentations=createReaderPresentationLoader({fetcher:fetch});
+ const get=new Function('fetch','siteURL','loadReaderPresentations',cache+'\n'+json+'\n'+accessor+'\nreturn reviewedProtocolArt;')(fetch,p=>'https://fixture.invalid/'+p,loadReaderPresentations);
  return {get,fetches:()=>fetches};
 }
 test('Data uses the exact cached reviewed operation art without mutating inputs',async()=>{
  const payload={records:{[record.record_id]:{protocol_art:binding}}},before=JSON.stringify({record,payload}),c=cacheAccessor(payload);
  const first=await c.get(record),second=await c.get(record);
- assert.equal(first,binding);assert.equal(second,binding);assert.equal(c.fetches(),1);
- assert.equal(selectProtocolArt(first,record,operation),item);
+ assert.deepEqual(first,binding);assert.notEqual(first,binding);assert.equal(second,first);assert.equal(c.fetches(),1);
+ assert.deepEqual(selectProtocolArt(first,record,operation),item);
+ assert.equal(selectProtocolArt(first,record,operation),first.bindings[0]);
  assert.equal(selectProtocolArt(first,record,{id:'other'}),null);
  assert.equal(JSON.stringify({record,payload}),before);
 });
@@ -61,8 +65,9 @@ async function actualDataMount(payload,readerSelected=false){
 test('actual Data bootstrap passes the reviewed binding as the fourth mount argument',async()=>{
  const result=await actualDataMount({records:{[record.record_id]:{protocol_art:binding}}});
  assert.equal(result.calls.length,1);assert.equal(result.calls[0][0].id,'record-protocol-visual');
- assert.equal(result.calls[0][1],record);assert.equal(result.calls[0][2],'../');assert.equal(result.calls[0][3],binding);
- assert.equal(selectProtocolArt(result.calls[0][3],record,operation),item);
+ assert.equal(result.calls[0][1],record);assert.equal(result.calls[0][2],'../');assert.deepEqual(result.calls[0][3],binding);
+ assert.deepEqual(selectProtocolArt(result.calls[0][3],record,operation),item);
+ assert.equal(selectProtocolArt(result.calls[0][3],record,operation),result.calls[0][3].bindings[0]);
  const absent=await actualDataMount({records:{}});assert.equal(absent.calls[0][3],null);
  assert.equal(selectProtocolArt(absent.calls[0][3],record,operation),null);
  const reader=await actualDataMount({records:{[record.record_id]:{protocol_art:binding}}},true);assert.equal(reader.calls.length,0);assert.equal(reader.fetches,0);
