@@ -122,13 +122,18 @@ def _named_ge_product_formula(pair):
 def _explicit_ge_matrix_navigation(pair):
     """Navigation for three explicit whole-product matrices; reported facts stay exact."""
     value = ((pair.get('structure') or {}).get('composition') or {}).get('value')
+    label = re.sub(r'\s+', ' ', str(pair.get('product') or '')).strip()
+    if label == 'Ge/Si QDSL':
+        if value is not None and str(value).strip() not in ('', 'Ge/Si'):
+            return None
+        return ['Ge', 'Si'], ['Ge', 'Si']
     if value is not None and str(value).strip() not in ('', 'Ge'):
         return None
-    label = re.sub(r'\s+', ' ', str(pair.get('product') or '')).strip()
     named = {
         'Ge nanocrystals embedded in GeO2 matrix': ['Ge', 'GeO2'],
         'Ge nanocrystals embedded in Lu2O3/Al2O3 dielectric stack': ['Ge', 'Lu2O3', 'Al2O3'],
         'nc-Ge (nanocrystalline germanium) embedded in SiO2 matrix': ['Ge', 'SiO2'],
+        'Ge nanocrystals in SiOx:Ge/SiOx multilayers': ['Ge', 'SiOx'],
     }
     components = named.get(label)
     if components is None:
