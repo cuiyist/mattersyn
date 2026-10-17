@@ -1,0 +1,430 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "tschope1993-01418639308226403-nanocrystalline-platinum-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "A. Tschope and R. Birringer (1993): nanocrystalline platinum",
+  "material": {
+    "formula": "Pt",
+    "family": "Pt nanocrystals",
+    "elements": [
+      "Pt"
+    ],
+    "components": [
+      "Pt"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Condensation and consolidation",
+  "sources": [
+    {
+      "id": "tschope1993-01418639308226403",
+      "doi": "10.1080/01418639308226403",
+      "title": "On the origin of enhanced specific heat in nanocrystalline platinum",
+      "authors": "A. Tschope and R. Birringer",
+      "year": 1993,
+      "url": "https://doi.org/10.1080/01418639308226403",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "tschope1993-01418639308226403",
+    "recipe_family": "tschope1993-01418639308226403-nanocrystalline-platinum-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Pt",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "tschope1993-01418639308226403",
+          "locator": "Main PDF p.4"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": 12,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "12 nm",
+      "evidence": [
+        {
+          "source_id": "tschope1993-01418639308226403",
+          "locator": "Main PDF p.4"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "tschope1993-01418639308226403-nanocrystalline-platinum-1--platinum",
+      "name": "platinum",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "tschope1993-01418639308226403",
+          "locator": "Main PDF p.4"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "tschope1993-01418639308226403-nanocrystalline-platinum-1--after-s01-sputter",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "tschope1993-01418639308226403-nanocrystalline-platinum-1--platinum"
+      ]
+    },
+    {
+      "id": "tschope1993-01418639308226403-nanocrystalline-platinum-1--after-s02-collect",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "tschope1993-01418639308226403-nanocrystalline-platinum-1--after-s01-sputter"
+      ]
+    },
+    {
+      "id": "tschope1993-01418639308226403-nanocrystalline-platinum-1--after-s03-evacuate",
+      "name": "mixture after step 3",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "tschope1993-01418639308226403-nanocrystalline-platinum-1--after-s02-collect"
+      ]
+    },
+    {
+      "id": "tschope1993-01418639308226403-nanocrystalline-platinum-1--after-s04-consolidate",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "tschope1993-01418639308226403-nanocrystalline-platinum-1--after-s03-evacuate"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-sputter",
+      "action": "sputter",
+      "label": "Sputter platinum atoms from a target.",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "tschope1993-01418639308226403-nanocrystalline-platinum-1--platinum"
+      ],
+      "outputs": [
+        "tschope1993-01418639308226403-nanocrystalline-platinum-1--after-s01-sputter"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Sputter platinum atoms from a target.",
+      "evidence": [
+        {
+          "source_id": "tschope1993-01418639308226403",
+          "locator": "Main PDF p.4"
+        }
+      ]
+    },
+    {
+      "id": "s02-collect",
+      "action": "collect",
+      "label": "Collect the particles on a 'cold finger'.",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-sputter"
+      ],
+      "inputs": [
+        "tschope1993-01418639308226403-nanocrystalline-platinum-1--after-s01-sputter"
+      ],
+      "outputs": [
+        "tschope1993-01418639308226403-nanocrystalline-platinum-1--after-s02-collect"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Collect the particles on a 'cold finger'.",
+      "evidence": [
+        {
+          "source_id": "tschope1993-01418639308226403",
+          "locator": "Main PDF p.4"
+        }
+      ]
+    },
+    {
+      "id": "s03-evacuate",
+      "action": "evacuate",
+      "label": "Evacuate the chamber to the initial pressure.",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-collect"
+      ],
+      "inputs": [
+        "tschope1993-01418639308226403-nanocrystalline-platinum-1--after-s02-collect"
+      ],
+      "outputs": [
+        "tschope1993-01418639308226403-nanocrystalline-platinum-1--after-s03-evacuate"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Evacuate the chamber to the initial pressure.",
+      "evidence": [
+        {
+          "source_id": "tschope1993-01418639308226403",
+          "locator": "Main PDF p.4"
+        }
+      ]
+    },
+    {
+      "id": "s04-consolidate",
+      "action": "consolidate",
+      "label": "Consolidate the as-prepared particles at 80°C for 50h at a pressure of 2GPa.",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s03-evacuate"
+      ],
+      "inputs": [
+        "tschope1993-01418639308226403-nanocrystalline-platinum-1--after-s03-evacuate"
+      ],
+      "outputs": [
+        "tschope1993-01418639308226403-nanocrystalline-platinum-1--after-s04-consolidate"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 80,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "80 °C",
+          "evidence": [
+            {
+              "source_id": "tschope1993-01418639308226403",
+              "locator": "Main PDF p.4"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 50,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "50 h",
+          "evidence": [
+            {
+              "source_id": "tschope1993-01418639308226403",
+              "locator": "Main PDF p.4"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Consolidate the as-prepared particles at 80°C for 50h at a pressure of 2GPa.",
+      "evidence": [
+        {
+          "source_id": "tschope1993-01418639308226403",
+          "locator": "Main PDF p.4"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "tschope1993-01418639308226403-nanocrystalline-platinum-1--product",
+      "source_sample_label": "nanocrystalline platinum",
+      "batch_id": null,
+      "material_state_id": "tschope1993-01418639308226403-nanocrystalline-platinum-1--after-s04-consolidate",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Pt",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "tschope1993-01418639308226403",
+            "locator": "Main PDF p.4"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "tschope1993-01418639308226403",
+          "locator": "Main PDF p.4"
+        }
+      ],
+      "notes": [
+        "Reaction temperature: 80 degC (Main PDF p.4).",
+        "Reaction time: 50 h (Main PDF p.4)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "tschope1993-01418639308226403-nanocrystalline-platinum-1--size",
+      "sample_id": "tschope1993-01418639308226403-nanocrystalline-platinum-1--product",
+      "property": "particle_size",
+      "technique": "not reported",
+      "value": {
+        "value": 12,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "12 nm",
+        "evidence": [
+          {
+            "source_id": "tschope1993-01418639308226403",
+            "locator": "Main PDF p.4"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "tschope1993-01418639308226403",
+          "locator": "Main PDF p.4"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Amount of platinum not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

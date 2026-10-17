@@ -13,9 +13,10 @@ import {mountProtocol} from './protocol-visuals.mjs?v=0.40.3';
 
 import {mountReaderStructures} from './reader-structures.mjs?v=0.41.7';
 
+import {loadReaderPresentations} from './reader-presentation-loader.mjs?v=0.41.8';
 const cache=new Map();
 
-function json(path){if(!cache.has(path))cache.set(path,fetch(siteURL(path),{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Unavailable '+path);return r.json();}));return cache.get(path);}
+function json(path){if(path==='data/reader-presentation.json')return loadReaderPresentations(siteURL(path));if(!cache.has(path))cache.set(path,fetch(siteURL(path),{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Unavailable '+path);return r.json();}));return cache.get(path);}
 
 export async function reviewedProtocolArt(r){
  if(typeof r?.record_id!=='string')return null;

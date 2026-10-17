@@ -1,0 +1,690 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "nn1020067-cdse-qd-etptcdi-cnt-nanocomposite-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "nn1020067 (n.d.): CdSe QD-ETPTCDI-CNT nanocomposite",
+  "material": {
+    "formula": "CdSe",
+    "family": "CdSe nanocrystals",
+    "elements": [
+      "Cd",
+      "Se"
+    ],
+    "components": [
+      "CdSe"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Synthesis as described in the source",
+  "sources": [
+    {
+      "id": "nn1020067",
+      "doi": "10.1021/nn1020067",
+      "title": "10.1021_nn1020067",
+      "authors": "not reported",
+      "year": null,
+      "url": "https://doi.org/10.1021/nn1020067",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "nn1020067",
+    "recipe_family": "nn1020067-cdse-qd-etptcdi-cnt-nanocomposite-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdSe",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "nn1020067",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "nn1020067-cdse-qd-etptcdi-cnt-nanocomposite-1--octadecylamine",
+      "name": "octadecylamine",
+      "formula": null,
+      "role": "solvent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "mass": {
+          "value": 2.05,
+          "minimum": null,
+          "maximum": null,
+          "unit": "g",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "2.05 g",
+          "evidence": [
+            {
+              "source_id": "nn1020067",
+              "locator": "Main PDF p.9"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "nn1020067",
+          "locator": "Main PDF p.9"
+        }
+      ]
+    },
+    {
+      "id": "nn1020067-cdse-qd-etptcdi-cnt-nanocomposite-1--se-powder",
+      "name": "Se powder",
+      "formula": null,
+      "role": "chalcogen_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "nn1020067",
+          "locator": "Main PDF p.9"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "nn1020067-cdse-qd-etptcdi-cnt-nanocomposite-1--after-s01-heat",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "nn1020067-cdse-qd-etptcdi-cnt-nanocomposite-1--after-s02-heat",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "nn1020067-cdse-qd-etptcdi-cnt-nanocomposite-1--after-s01-heat"
+      ]
+    },
+    {
+      "id": "nn1020067-cdse-qd-etptcdi-cnt-nanocomposite-1--after-s03-inject",
+      "name": "mixture after step 3",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "nn1020067-cdse-qd-etptcdi-cnt-nanocomposite-1--after-s02-heat",
+        "nn1020067-cdse-qd-etptcdi-cnt-nanocomposite-1--se-powder"
+      ]
+    },
+    {
+      "id": "nn1020067-cdse-qd-etptcdi-cnt-nanocomposite-1--after-s04-cool",
+      "name": "mixture after step 4",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "nn1020067-cdse-qd-etptcdi-cnt-nanocomposite-1--after-s03-inject"
+      ]
+    },
+    {
+      "id": "nn1020067-cdse-qd-etptcdi-cnt-nanocomposite-1--after-s05-add",
+      "name": "mixture after step 5",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "nn1020067-cdse-qd-etptcdi-cnt-nanocomposite-1--after-s04-cool"
+      ]
+    },
+    {
+      "id": "nn1020067-cdse-qd-etptcdi-cnt-nanocomposite-1--after-s06-add",
+      "name": "mixture after step 6",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "nn1020067-cdse-qd-etptcdi-cnt-nanocomposite-1--after-s05-add"
+      ]
+    },
+    {
+      "id": "nn1020067-cdse-qd-etptcdi-cnt-nanocomposite-1--after-s07-centrifuge",
+      "name": "mixture after step 7",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "nn1020067-cdse-qd-etptcdi-cnt-nanocomposite-1--after-s06-add"
+      ]
+    },
+    {
+      "id": "nn1020067-cdse-qd-etptcdi-cnt-nanocomposite-1--after-s08-decant",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "nn1020067-cdse-qd-etptcdi-cnt-nanocomposite-1--after-s07-centrifuge"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-heat",
+      "action": "heat",
+      "label": "Heat octadecylamine to remove water",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "nn1020067-cdse-qd-etptcdi-cnt-nanocomposite-1--after-s01-heat"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 150,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "150 °C",
+          "evidence": [
+            {
+              "source_id": "nn1020067",
+              "locator": "Main PDF p.9"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 30,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "30 min",
+          "evidence": [
+            {
+              "source_id": "nn1020067",
+              "locator": "Main PDF p.9"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Heat octadecylamine to remove water",
+      "evidence": [
+        {
+          "source_id": "nn1020067",
+          "locator": "Main PDF p.9"
+        }
+      ]
+    },
+    {
+      "id": "s02-heat",
+      "action": "heat",
+      "label": "Heat the mixture under argon",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-heat"
+      ],
+      "inputs": [
+        "nn1020067-cdse-qd-etptcdi-cnt-nanocomposite-1--after-s01-heat"
+      ],
+      "outputs": [
+        "nn1020067-cdse-qd-etptcdi-cnt-nanocomposite-1--after-s02-heat"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 300,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "300 °C",
+          "evidence": [
+            {
+              "source_id": "nn1020067",
+              "locator": "Main PDF p.9"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Heat the mixture under argon",
+      "evidence": [
+        {
+          "source_id": "nn1020067",
+          "locator": "Main PDF p.9"
+        }
+      ]
+    },
+    {
+      "id": "s03-inject",
+      "action": "inject",
+      "label": "Inject Se solution into the flask",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-heat"
+      ],
+      "inputs": [
+        "nn1020067-cdse-qd-etptcdi-cnt-nanocomposite-1--after-s02-heat",
+        "nn1020067-cdse-qd-etptcdi-cnt-nanocomposite-1--se-powder"
+      ],
+      "outputs": [
+        "nn1020067-cdse-qd-etptcdi-cnt-nanocomposite-1--after-s03-inject"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 300,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "300 °C",
+          "evidence": [
+            {
+              "source_id": "nn1020067",
+              "locator": "Main PDF p.9"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Inject Se solution into the flask",
+      "evidence": [
+        {
+          "source_id": "nn1020067",
+          "locator": "Main PDF p.9"
+        }
+      ]
+    },
+    {
+      "id": "s04-cool",
+      "action": "cool",
+      "label": "Cool samples to 25 °C",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s03-inject"
+      ],
+      "inputs": [
+        "nn1020067-cdse-qd-etptcdi-cnt-nanocomposite-1--after-s03-inject"
+      ],
+      "outputs": [
+        "nn1020067-cdse-qd-etptcdi-cnt-nanocomposite-1--after-s04-cool"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 25,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "25 °C",
+          "evidence": [
+            {
+              "source_id": "nn1020067",
+              "locator": "Main PDF p.9"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Cool samples to 25 °C",
+      "evidence": [
+        {
+          "source_id": "nn1020067",
+          "locator": "Main PDF p.9"
+        }
+      ]
+    },
+    {
+      "id": "s05-add",
+      "action": "add",
+      "label": "Add chloroform to samples",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s04-cool"
+      ],
+      "inputs": [
+        "nn1020067-cdse-qd-etptcdi-cnt-nanocomposite-1--after-s04-cool"
+      ],
+      "outputs": [
+        "nn1020067-cdse-qd-etptcdi-cnt-nanocomposite-1--after-s05-add"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Add chloroform to samples",
+      "evidence": [
+        {
+          "source_id": "nn1020067",
+          "locator": "Main PDF p.9"
+        }
+      ]
+    },
+    {
+      "id": "s06-add",
+      "action": "add",
+      "label": "Add ethanol to samples",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s05-add"
+      ],
+      "inputs": [
+        "nn1020067-cdse-qd-etptcdi-cnt-nanocomposite-1--after-s05-add"
+      ],
+      "outputs": [
+        "nn1020067-cdse-qd-etptcdi-cnt-nanocomposite-1--after-s06-add"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Add ethanol to samples",
+      "evidence": [
+        {
+          "source_id": "nn1020067",
+          "locator": "Main PDF p.9"
+        }
+      ]
+    },
+    {
+      "id": "s07-centrifuge",
+      "action": "centrifuge",
+      "label": "Centrifuge to precipitate QDs",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s06-add"
+      ],
+      "inputs": [
+        "nn1020067-cdse-qd-etptcdi-cnt-nanocomposite-1--after-s06-add"
+      ],
+      "outputs": [
+        "nn1020067-cdse-qd-etptcdi-cnt-nanocomposite-1--after-s07-centrifuge"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1 min",
+          "evidence": [
+            {
+              "source_id": "nn1020067",
+              "locator": "Main PDF p.9"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Centrifuge to precipitate QDs",
+      "evidence": [
+        {
+          "source_id": "nn1020067",
+          "locator": "Main PDF p.9"
+        }
+      ]
+    },
+    {
+      "id": "s08-decant",
+      "action": "decant",
+      "label": "Decant excess solution",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s07-centrifuge"
+      ],
+      "inputs": [
+        "nn1020067-cdse-qd-etptcdi-cnt-nanocomposite-1--after-s07-centrifuge"
+      ],
+      "outputs": [
+        "nn1020067-cdse-qd-etptcdi-cnt-nanocomposite-1--after-s08-decant"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Decant excess solution",
+      "evidence": [
+        {
+          "source_id": "nn1020067",
+          "locator": "Main PDF p.9"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "nn1020067-cdse-qd-etptcdi-cnt-nanocomposite-1--product",
+      "source_sample_label": "CdSe QD-ETPTCDI-CNT nanocomposite",
+      "batch_id": null,
+      "material_state_id": "nn1020067-cdse-qd-etptcdi-cnt-nanocomposite-1--after-s08-decant",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdSe",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "nn1020067",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "nn1020067",
+          "locator": "Main PDF p.9"
+        }
+      ],
+      "notes": [
+        "Reactor: two neck 100 mL round-bottom flask (Main PDF p.9).",
+        "Reaction temperature: 300 degC (Main PDF p.9)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of Se powder not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

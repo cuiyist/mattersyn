@@ -1,4 +1,4 @@
-import {figureGallery} from './reader-app.mjs?v=0.41.7';
+import {figureGallery} from './reader-app.mjs?v=0.41.8';
 import {stockScope} from './stock-scope.mjs';
 import {quantityValue} from './quantity-value.mjs';
 import {sourceItemCard} from './source-evidence.mjs?v=0.41.7';
@@ -8,13 +8,14 @@ import {mountProtocol} from './protocol-visuals.mjs?v=0.39.1';
 import {chemicalRegistry,chemicalEntry,chemicalImage,openChemical,mountStockComponents,mountReagentComponents} from './chemical-viewer.mjs?v=0.34.1';
 const el=(tag,text,cls)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(cls)n.className=cls;return n;};
 const link=(text,url)=>{const a=el('a',text);a.href=new URL(url.startsWith('/')&&!url.startsWith('//')?url.slice(1):url,import.meta.url);return a;};
+import {loadReaderPresentations} from './reader-presentation-loader.mjs?v=0.41.8';
 let reviewIndex,readerPresentations,figureDialog;
 function enlargeFigure(f){if(!figureDialog){figureDialog=el('dialog',undefined,'guide-figure-dialog');document.body.append(figureDialog);}figureDialog.replaceChildren();const header=el('header'),close=el('button','Close ×');close.type='button';close.onclick=()=>figureDialog.close();header.append(el('h2',f.label||f.id),close);const view=el('div',undefined,'figure-zoom-area'),img=el('img');img.src=new URL(f.public_asset+'?sha='+f.public_asset_sha256,import.meta.url);img.alt=f.caption_paraphrase||f.summary||f.label;view.append(img);let scale=1;const controls=el('div',undefined,'protocol-controls');for(const [label,n] of [['−',1/1.25],['Reset',0],['+',1.25]]){const button=el('button',label);button.type='button';button.onclick=()=>{scale=n?Math.max(.5,Math.min(5,scale*n)):1;img.style.width=(scale*100)+'%';};controls.append(button);}figureDialog.append(header,view,controls,el('p',img.alt));figureDialog.showModal();}
 
 function quantity(q){if(!('unit' in q))return q.value===null?'Not reported':String(q.value);if(quantityValue(q)===null)return q.qualifier||'Not reported';return (q.approximate?'≈':'')+(quantityValue(q))+' '+q.unit+(q.qualifier?' · '+q.qualifier:'');}
 function flatten(v){if(v===null||v===undefined)return '';if(typeof v!=='object')return String(v);return Array.isArray(v)?v.map(flatten).join(' · '):Object.entries(v).map(([k,x])=>k.replaceAll('_',' ')+': '+flatten(x)).join('; ');}
 export async function fallbackSources(host,r){
- readerPresentations??=fetch(new URL('data/reader-presentation.json',import.meta.url),{cache:'no-store'}).then(response=>{if(!response.ok)throw Error('Reviewed presentation unavailable');return response.json();});
+ readerPresentations??=loadReaderPresentations(new URL('data/reader-presentation.json',import.meta.url));
  const presentation=(await readerPresentations).records?.[r.record_id];
  if(!Array.isArray(presentation?.figures)||!presentation.figures.length)return false;
  const recordScope=r.quality?.review_status==='source_extracted'?'record':'reviewed record';

@@ -1,5 +1,23 @@
 Owner revisit list: [Machine-extracted papers](research-assets/public-audits/MACHINE_EXTRACTED_PAPERS.md).
 
+### R38 storage checkpoint and G local integration — 2026-10-17T01:26:58.523369+00:00
+
+Verified [R38 cleanup report](https://raw.githubusercontent.com/cuiyist/mattersyn2/2e10af858aeb98d9a8e7edd96ec9b982c138d359/CLEANUP_REPORT_2026-10-12.md) records two additional removed static copies:60,134 file copies/4,834,856,734 logical bytes; cumulative13,851,037 copies/754,836,288,866 logical bytes. Report commit `2e10af858aeb98d9a8e7edd96ec9b982c138d359`, SHA-256 `dda21a598a361fd8756b885f143419bb9771a9517497fa01aaa9ba499cb5094f`. No programs were stopped. These logical totals and intervening free-space increases do not establish isolated physical recovery or600GB physical recovery. All previous HOLDs, private/protected inputs, audit history and owner questions remain preserved.
+
+Fresh C free space: 109573292032 bytes at 2026-10-17T01:26:58.523369+00:00. The100GiB soft threshold is met at this reading; no further cleanup is needed at that reading. G local normal integration is in progress with0new G publication/audit/training credit; F verified counters remain exact. Next: reviewed Reader code CAS third in this existing hook, then the ordinary records/build/sync and release gates. No new cleanup or source-audit lane is opened.
+
+
+## B44/B45/B46 pooled release verified — 2026-10-17T01:02:33+00:00
+
+**67 source_extracted papers /97 new canonical records /329 retained caption keys** are live and anonymously verified. Original contributions: B44 **23 papers/34 records/117 figures**, B45 **20 papers/28 records/83 figures**, B46 **24 papers/35 records/129 figures**. Source `2b90ea956d7b309fda2a414a950290a5ece6b882` passed all three exact-head CI jobs and ordinary PR [62](https://github.com/cuiyist/mattersyn/pull/62), merge `ce02eaf3616c7b8bb8bc34033629a19b1da75c53`. Site `6924e17c332ba1b8b80d53b04e47ea96ea0fe508` passed [Pages 38988205572](https://github.com/cuiyist/mattersyn-site/actions/runs/38988205572). Anonymous verification checked 1179 files, 67 planned paper routes and 106 material routes with zero failures. Final manifest 46217 files /2992739008 logical bytes.
+
+Actual build totals: **1528 primary paper IDs /4898 canonical records /2777 recipe–structure display pairs**. Audited contributions remain244 papers/864 pairs; SourceEx contributions 1284 papers/1913 pairs. No scientific accuracy, universal unit-cell completeness or training readiness is inferred.
+
+Original limited read history covers 50 papers /71 original ordinals /127 whole-object deletions, all retained before current selection. Exactly 40 of those DOI markers intersect this actual published67-paper scope; no independent audit or new source facts are inferred. All4,801 prior canonical record files remain raw-byte protected; this release makes0old-record corrections. Original saved deletion history and all prior routing/identity HOLD histories remain preserved. Owner questions, denominators/window and paused audit lane are unchanged.
+
+Storage preserves the separately verified R35 report checkpoint: 736615400063 cumulative logical copy bytes /13611007 copies, report `4d8afe6e273557321c96f226c2e75b8fd9353a1e`. This publication carries that independently completed cleanup checkpoint and establishes no isolated physical reclaim/free-space achievement. Later cleanup reports are separate. Saved private reads/captions add no publication credit before their own fresh admission.
+
+
 ## Reader navigation consistency correction, pending release — 2026-10-16T21:07:08.420552+00:00
 
 The Ge/GeOx composite now has its normal derived Reader material row, and Ge's generated navigation hash is current. The installed Reader builder passed the private consistency test; all four unchanged Ge regression checks and both negative cases passed. This second correction changes only the two Reader files. All **4,901 canonical files**, all Reader scientific values and figures, protocol/chemical bindings, rights and policy are unchanged. The earlier failed local builds remain saved; the complete release checks must pass on the new prepared Source commit.

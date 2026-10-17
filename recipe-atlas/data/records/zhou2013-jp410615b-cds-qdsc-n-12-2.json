@@ -1,0 +1,375 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "zhou2013-jp410615b-cds-qdsc-n-12-2",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Ru Zhou (2013): CdS QDSC (N-12)",
+  "material": {
+    "formula": "CdS",
+    "family": "CdS nanocrystals",
+    "elements": [
+      "Cd",
+      "S"
+    ],
+    "components": [
+      "CdS"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Synthesis as described in the source",
+  "sources": [
+    {
+      "id": "zhou2013-jp410615b",
+      "doi": "10.1021/jp410615b",
+      "title": "Influence of Cationic Precursors on CdS Quantum-Dot-Sensitized Solar Cell Prepared by Successive Ionic Layer Adsorption and Reaction",
+      "authors": "Ru Zhou, Qifeng Zhang, Jianjun Tian, Daniel Myers, Min Yin, Guozhong Cao",
+      "year": 2013,
+      "url": "https://doi.org/10.1021/jp410615b",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "zhou2013-jp410615b",
+    "recipe_family": "zhou2013-jp410615b-cds-qdsc-n-12-2",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "zhou2013-jp410615b-cds-qdsc-n-12-2--sodium-sulfide",
+      "name": "sodium sulfide",
+      "formula": null,
+      "role": "chalcogen_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "concentration": {
+          "value": 0.1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "M",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0.1 M",
+          "evidence": [
+            {
+              "source_id": "zhou2013-jp410615b",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "zhou2013-jp410615b",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "zhou2013-jp410615b-cds-qdsc-n-12-2--after-s01-dip",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "zhou2013-jp410615b-cds-qdsc-n-12-2--after-s02-dip",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "zhou2013-jp410615b-cds-qdsc-n-12-2--after-s01-dip",
+        "zhou2013-jp410615b-cds-qdsc-n-12-2--sodium-sulfide"
+      ]
+    },
+    {
+      "id": "zhou2013-jp410615b-cds-qdsc-n-12-2--after-s03-dip",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "zhou2013-jp410615b-cds-qdsc-n-12-2--after-s02-dip",
+        "zhou2013-jp410615b-cds-qdsc-n-12-2--sodium-sulfide"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-dip",
+      "action": "dip",
+      "label": "The TiO2 films were immersed in Cd(NO3)2 precursor for 1 min.",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "zhou2013-jp410615b-cds-qdsc-n-12-2--after-s01-dip"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1 min",
+          "evidence": [
+            {
+              "source_id": "zhou2013-jp410615b",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "The TiO2 films were immersed in Cd(NO3)2 precursor for 1 min.",
+      "evidence": [
+        {
+          "source_id": "zhou2013-jp410615b",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-dip",
+      "action": "dip",
+      "label": "The films were dipped into a 0.1 M Na2S precursor for 1 min.",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-dip"
+      ],
+      "inputs": [
+        "zhou2013-jp410615b-cds-qdsc-n-12-2--after-s01-dip",
+        "zhou2013-jp410615b-cds-qdsc-n-12-2--sodium-sulfide"
+      ],
+      "outputs": [
+        "zhou2013-jp410615b-cds-qdsc-n-12-2--after-s02-dip"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1 min",
+          "evidence": [
+            {
+              "source_id": "zhou2013-jp410615b",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "The films were dipped into a 0.1 M Na2S precursor for 1 min.",
+      "evidence": [
+        {
+          "source_id": "zhou2013-jp410615b",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-dip",
+      "action": "dip",
+      "label": "The electrodes were dipped twice alternately in 0.1 M Zn(Ac)2 and 0.1 M Na2S solutions for 1 min per dip.",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-dip"
+      ],
+      "inputs": [
+        "zhou2013-jp410615b-cds-qdsc-n-12-2--after-s02-dip",
+        "zhou2013-jp410615b-cds-qdsc-n-12-2--sodium-sulfide"
+      ],
+      "outputs": [
+        "zhou2013-jp410615b-cds-qdsc-n-12-2--after-s03-dip"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1 min",
+          "evidence": [
+            {
+              "source_id": "zhou2013-jp410615b",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "The electrodes were dipped twice alternately in 0.1 M Zn(Ac)2 and 0.1 M Na2S solutions for 1 min per dip.",
+      "evidence": [
+        {
+          "source_id": "zhou2013-jp410615b",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "zhou2013-jp410615b-cds-qdsc-n-12-2--product",
+      "source_sample_label": "CdS QDSC (N-12)",
+      "batch_id": null,
+      "material_state_id": "zhou2013-jp410615b-cds-qdsc-n-12-2--after-s03-dip",
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "zhou2013-jp410615b",
+          "locator": "Main PDF"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
