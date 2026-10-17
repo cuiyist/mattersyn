@@ -1,0 +1,350 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "text2014-nl5026634-c1-pbs-qds-on-sno2-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Hai Wang et al. (2014): C1 PbS QDs on SnO2",
+  "material": {
+    "formula": "PbS",
+    "family": "PbS nanocrystals",
+    "elements": [
+      "Pb",
+      "S"
+    ],
+    "components": [
+      "PbS"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Synthesis as described in the source",
+  "sources": [
+    {
+      "id": "text2014-nl5026634",
+      "doi": "10.1021/nl5026634",
+      "title": "Interplay Between Structure, Stoichiometry, and Electron Transfer Dynamics in SILAR-based Quantum Dot-Sensitized Oxides",
+      "authors": "Hai Wang; Irene Barceló; Teresa Lana-Villarreal; Roberto Gómez; Mischa Bonn; Enrique Cánovas",
+      "year": 2014,
+      "url": "https://doi.org/10.1021/nl5026634",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "text2014-nl5026634",
+    "recipe_family": "text2014-nl5026634-c1-pbs-qds-on-sno2-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "phase": {
+      "value": "crystal",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "text2014-nl5026634",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "cap-shaped",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "text2014-nl5026634",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "text2014-nl5026634-c1-pbs-qds-on-sno2-1--pb-no3-2",
+      "name": "Pb(NO3)2",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "text2014-nl5026634",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "text2014-nl5026634-c1-pbs-qds-on-sno2-1--na2s",
+      "name": "Na2S",
+      "formula": null,
+      "role": "chalcogen_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "text2014-nl5026634",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "text2014-nl5026634-c1-pbs-qds-on-sno2-1--after-s01-dip",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "text2014-nl5026634-c1-pbs-qds-on-sno2-1--after-s02-dip",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "text2014-nl5026634-c1-pbs-qds-on-sno2-1--after-s01-dip",
+        "text2014-nl5026634-c1-pbs-qds-on-sno2-1--na2s"
+      ]
+    },
+    {
+      "id": "text2014-nl5026634-c1-pbs-qds-on-sno2-1--after-s03-dip",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "text2014-nl5026634-c1-pbs-qds-on-sno2-1--after-s02-dip"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-dip",
+      "action": "dip",
+      "label": "Dipping the oxide film into pure MeOH solvent to remove excess cations",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "text2014-nl5026634-c1-pbs-qds-on-sno2-1--after-s01-dip"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "text2014-nl5026634",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Dipping the oxide film into pure MeOH solvent to remove excess cations",
+      "evidence": [
+        {
+          "source_id": "text2014-nl5026634",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-dip",
+      "action": "dip",
+      "label": "Dipping the oxide film into a MeOH-based Na2S solution",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-dip"
+      ],
+      "inputs": [
+        "text2014-nl5026634-c1-pbs-qds-on-sno2-1--after-s01-dip",
+        "text2014-nl5026634-c1-pbs-qds-on-sno2-1--na2s"
+      ],
+      "outputs": [
+        "text2014-nl5026634-c1-pbs-qds-on-sno2-1--after-s02-dip"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "text2014-nl5026634",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Dipping the oxide film into a MeOH-based Na2S solution",
+      "evidence": [
+        {
+          "source_id": "text2014-nl5026634",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-dip",
+      "action": "dip",
+      "label": "Dipping the oxide film into pure MeOH solvent to remove excess anions",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-dip"
+      ],
+      "inputs": [
+        "text2014-nl5026634-c1-pbs-qds-on-sno2-1--after-s02-dip"
+      ],
+      "outputs": [
+        "text2014-nl5026634-c1-pbs-qds-on-sno2-1--after-s03-dip"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "text2014-nl5026634",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Dipping the oxide film into pure MeOH solvent to remove excess anions",
+      "evidence": [
+        {
+          "source_id": "text2014-nl5026634",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "text2014-nl5026634-c1-pbs-qds-on-sno2-1--product",
+      "source_sample_label": "C1 PbS QDs on SnO2",
+      "batch_id": null,
+      "material_state_id": "text2014-nl5026634-c1-pbs-qds-on-sno2-1--after-s03-dip",
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "phase": {
+        "value": "crystal",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "text2014-nl5026634",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "cap-shaped",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "text2014-nl5026634",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "text2014-nl5026634",
+          "locator": "Main PDF"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of Pb(NO3)2 not reported in the extracted text.",
+      "Amount of Na2S not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

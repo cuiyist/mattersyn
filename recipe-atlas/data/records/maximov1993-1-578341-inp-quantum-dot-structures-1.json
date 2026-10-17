@@ -1,0 +1,317 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "maximov1993-1-578341-inp-quantum-dot-structures-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "I. Maximov (1993): InP quantum dot structures",
+  "material": {
+    "formula": "InP",
+    "family": "InP nanocrystals",
+    "elements": [
+      "In",
+      "P"
+    ],
+    "components": [
+      "InP"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Synthesis as described in the source",
+  "sources": [
+    {
+      "id": "maximov1993-1-578341",
+      "doi": "10.1116/1.578341",
+      "title": "Fabrication of quantum dot structures using aerosol deposition and plasma etching techniques",
+      "authors": "I. Maximov, A. Gustafsson, H.-C. Hansson, L. Samuelson, W. Seifert, A. Wiedensohler",
+      "year": 1993,
+      "url": "https://doi.org/10.1116/1.578341",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "maximov1993-1-578341",
+    "recipe_family": "maximov1993-1-578341-inp-quantum-dot-structures-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "InP",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "maximov1993-1-578341",
+          "locator": "Main PDF p.4"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": 80,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "80 nm",
+      "evidence": [
+        {
+          "source_id": "maximov1993-1-578341",
+          "locator": "Main PDF p.5"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "maximov1993-1-578341-inp-quantum-dot-structures-1--ag-particles",
+      "name": "Ag particles",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "maximov1993-1-578341",
+          "locator": "Main PDF p.4"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "maximov1993-1-578341-inp-quantum-dot-structures-1--after-s01-etch",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "maximov1993-1-578341-inp-quantum-dot-structures-1--after-s02-strip",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "maximov1993-1-578341-inp-quantum-dot-structures-1--after-s01-etch"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-etch",
+      "action": "etch",
+      "label": "Plasma etching using CH4/H2/Ar ECR plasma",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "maximov1993-1-578341-inp-quantum-dot-structures-1--after-s01-etch"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 40,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "40 min",
+          "evidence": [
+            {
+              "source_id": "maximov1993-1-578341",
+              "locator": "Main PDF p.6"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Plasma etching using CH4/H2/Ar ECR plasma",
+      "evidence": [
+        {
+          "source_id": "maximov1993-1-578341",
+          "locator": "Main PDF p.6"
+        }
+      ]
+    },
+    {
+      "id": "s02-strip",
+      "action": "strip",
+      "label": "Strip polymer using O2 plasma",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-etch"
+      ],
+      "inputs": [
+        "maximov1993-1-578341-inp-quantum-dot-structures-1--after-s01-etch"
+      ],
+      "outputs": [
+        "maximov1993-1-578341-inp-quantum-dot-structures-1--after-s02-strip"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Strip polymer using O2 plasma",
+      "evidence": [
+        {
+          "source_id": "maximov1993-1-578341",
+          "locator": "Main PDF p.6"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "maximov1993-1-578341-inp-quantum-dot-structures-1--product",
+      "source_sample_label": "InP quantum dot structures",
+      "batch_id": null,
+      "material_state_id": "maximov1993-1-578341-inp-quantum-dot-structures-1--after-s02-strip",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "InP",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "maximov1993-1-578341",
+            "locator": "Main PDF p.4"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "maximov1993-1-578341",
+          "locator": "Main PDF p.4"
+        }
+      ],
+      "notes": [
+        "Reaction time: 40 min (Main PDF p.6)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "maximov1993-1-578341-inp-quantum-dot-structures-1--size",
+      "sample_id": "maximov1993-1-578341-inp-quantum-dot-structures-1--product",
+      "property": "diameter",
+      "technique": "SEM",
+      "value": {
+        "value": 80,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "80 nm",
+        "evidence": [
+          {
+            "source_id": "maximov1993-1-578341",
+            "locator": "Main PDF p.5"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "maximov1993-1-578341",
+          "locator": "Main PDF p.5"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Amount of Ag particles not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

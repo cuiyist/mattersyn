@@ -1,4 +1,37 @@
+## B55/B56/B57 metadata and caption closure complete; release checks pending — 2026-10-17T13:02:15.421777+00:00
+
+The pending scope remains **45 papers /62 new source_extracted records /203 figure crops**. All seven normal integration phases passed. The normal asset tool checked395 assets and registered366 new assets, with0 new exact path rules. Trusted citation metadata corrected25 new records from18 flagged papers (24 distinct title/author field edits), and23 display-title prefixes were corrected. Nine zero-hold normal caption binds preserved all203 approved strings and origin flags. One normal apply attached203 caption keys to485 measured Reader instances (282 record views+203 source figures). The complete ordered Reader closure passed, all5,167 canonical raw files were unchanged by caption application, and all5,105 prior published raw records were preserved throughout.
+
+The first title-plan attempt stopped before any Source write because a private helper still required the historical integration-folder name. Four exact folder literals across the entry/core and their dependent code hash were bound to the actual i-r1 folder; the exact folder predicate, Source/Reader/CAS/rollback guards and all release checks remain intact. The failed attempt is preserved; the corrected title plan, verify and apply passed. No extraction prompt, scientific value or release policy was weakened.
+
+All10 Batch56 and13 Batch57 limited rare-material reads are now closed, with their original owners, source locators and deletion proposals preserved. The current45-paper cutoff is unchanged; later read results will be admitted only through a fresh subsequent scope. No scientific audit or training credit is assigned. The audit lane, owner questions and sampling denominator remain paused and unchanged.
+
+These45 papers are **not published**. Verified live totals remain **1,680 papers /5,105 canonical records /2,984 display pairs**. Exact file-list/source bindings, the complete build, visual review, CI/ordinary merge, deployment and anonymous verification are next. Final built size for this new batch is pending; the last verified built site was3,182,006,993 logical bytes.
+
+The approved R58 cleanup report remains [saved and anonymously verified](https://github.com/cuiyist/mattersyn2/blob/0b838f06e9b43246d1e2bc76bf160c52033d553d/CLEANUP_REPORT_2026-10-12.md):15,030,523 retired copies /841,769,765,184 cumulative logical bytes, not isolated physical recovery. Fresh C free bytes: 76803260416; the100 GiB aim remains unmet. The next exact completed-build cleanup is prepared privately and awaits a clean prepared Source context. Protected papers, page text, quoted passes/pairs/training data and the active Qwen runtime are retained. No additional cleanup or program stop is claimed.
+
+## B55/B56/B57 integrated; metadata, captions and release pending — 2026-10-17T12:46:29.637509+00:00
+
+The next pooled scope is **45 papers /62 new source_extracted records /203 figure crops** (B55:12/17/48; B56:12/16/64; B57 common-material selection:21/29/91). All seven normal integration phases passed. The asset tool checked395 assets and registered366 new assets with0 new exact path rules. Prior limited rare-material reads supplied33 whole-object deletions, with no new facts added; later completed reads are preserved for a later cohort. Citation preflight found18 flagged papers and0 unresolved authorities. Citation/title correction,203-caption binding, complete build/source/browser checks, CI and release are pending. These45 papers are **not published**. Live totals remain **1,680 papers /5,105 canonical records /2,984 displayed pairs**.
+
+The prior I49 release is now recorded once in the Source status, owner revisit index and local publication ledger:49 papers/66 records/220 captions, with all5,105 existing raw canonical files preserved by the next-integration hook. The audited lane, questions, stop window, training exports and earlier failed runs remain unchanged. No20-paper/hour achievement or continuous unattended work is asserted.
+
+The approved [R58 cleanup report](https://github.com/cuiyist/mattersyn2/blob/0b838f06e9b43246d1e2bc76bf160c52033d553d/CLEANUP_REPORT_2026-10-12.md) is published and anonymously byte-verified. The latest distinct q2 static retirement removed31,691 reconstructible copies /2,591,842,423 logical bytes. Cumulative accounting is15,030,523 copies /841,769,765,184 logical bytes; this is not isolated physical recovery. C was85,255,868,416 bytes before that scope and87,138,185,216 at its dated11:28:40 UTC summary. Fresh C free bytes at this update: 77080236032; the100 GiB aim remains unmet. Protected papers, page text, quoted pass/pair/training data and the active Qwen runtime remain local. Existing held cleanup scopes retain0 credit; dependent generated copies remain until their consumption is verified. No program was stopped.
+
+Choice: release the ready45-paper subset while later rare reads continue; do not hold it for all original batches to finish. No new extraction, scientific audit or release-rule change was needed for this integration.
+
 Owner revisit list: [Machine-extracted papers](research-assets/public-audits/MACHINE_EXTRACTED_PAPERS.md).
+
+## B53/B54 pooled release verified — 2026-10-17T12:09:33+00:00
+
+**49 source_extracted papers /66 new canonical records /220 retained caption keys** are live and anonymously verified. Original contributions: B53 **22 papers/34 records/106 figures**, B54 **27 papers/32 records/114 figures**. Source `bd19c91cf2af17650acb64f13cb227449abc0bbf` passed all three exact-head CI jobs and ordinary PR [65](https://github.com/cuiyist/mattersyn/pull/65), merge `3b615f19c43deda68aa0e45248a835bd47388a0c`. Site `87dd3b153337eac5ef4531c841688dc3d79e1e20` passed [Pages 39030660788](https://github.com/cuiyist/mattersyn-site/actions/runs/39030660788). Anonymous verification checked 791 files, 49 planned paper routes and 68 material routes with zero failures. Final manifest 48455 files /3182006993 logical bytes.
+
+Actual build totals: **1680 primary paper IDs /5105 canonical records /2984 recipe–structure display pairs**. Audited contributions remain244 papers/864 pairs; SourceEx contributions 1436 papers/2120 pairs. No scientific accuracy, universal unit-cell completeness or training readiness is inferred.
+
+Original limited read history16 papers/19 ordinals/11 whole-object deletions is preserved;14 saved DOI markers intersect this actual I scope. All5,039 old canonical raw files and all66 final I public raw files remain exact; retained citation/title corrections, five new navigation-only corrections and220approved caption keys/535Reader instances are preserved. Prior routing/identity HOLDs and all G68/H35 applied-once history remain unchanged. These saved reads are not independent audits. Owner questions, denominator/window and paused audit lane are unchanged.
+
+Storage carries independently verified report `2e2b0f3378c49daa15ccf9d2129a6da38446ab77`: 827947844129 cumulative logical copy bytes /14856928 copies. Whole prior Source storage object is retained; dated observations do not establish current free space or isolated physical recovery.
+
 
 ## B53/B54 Ge product navigation repaired; fresh checks pending — 2026-10-17T10:07:52.799183+00:00
 
