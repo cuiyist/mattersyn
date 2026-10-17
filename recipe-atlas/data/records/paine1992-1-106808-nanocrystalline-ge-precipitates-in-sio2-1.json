@@ -1,0 +1,256 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "paine1992-1-106808-nanocrystalline-ge-precipitates-in-sio2-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "David C. Paine et al. (1992): nanocrystalline Ge precipitates in SiO2 matrix",
+  "material": {
+    "formula": "nanocrystalline Ge precipitates in SiO2 matrix",
+    "family": "nanocrystalline Ge precipitates in SiO2 matrix",
+    "elements": [
+      "Ge",
+      "Si",
+      "O"
+    ],
+    "components": [
+      "Ge",
+      "SiO2"
+    ],
+    "architecture": "unresolved"
+  },
+  "method": "Hydrothermal oxidation",
+  "sources": [
+    {
+      "id": "paine1992-1-106808",
+      "doi": "10.1063/1.106808",
+      "title": "Nanocrystalline germanium synthesis from hydrothermally oxidized Si1−xGex alloys",
+      "authors": "David C. Paine, Christine Caragianis, and Yuzo Shigesato",
+      "year": 1992,
+      "url": "https://doi.org/10.1063/1.106808",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "paine1992-1-106808",
+    "recipe_family": "paine1992-1-106808-nanocrystalline-ge-precipitates-in-sio2-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "paine1992-1-106808-nanocrystalline-ge-precipitates-in-sio2-1--si0-8ge0-2-alloy",
+      "name": "Si0.8Ge0.2 alloy",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "paine1992-1-106808",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "paine1992-1-106808-nanocrystalline-ge-precipitates-in-sio2-1--deionized-water",
+      "name": "deionized water",
+      "formula": null,
+      "role": "solvent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "paine1992-1-106808",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "paine1992-1-106808-nanocrystalline-ge-precipitates-in-sio2-1--after-s01-heat",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "paine1992-1-106808-nanocrystalline-ge-precipitates-in-sio2-1--si0-8ge0-2-alloy",
+        "paine1992-1-106808-nanocrystalline-ge-precipitates-in-sio2-1--deionized-water"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-heat",
+      "action": "heat",
+      "label": "Heat reactor to 475 °C for 20 min.",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "paine1992-1-106808-nanocrystalline-ge-precipitates-in-sio2-1--si0-8ge0-2-alloy",
+        "paine1992-1-106808-nanocrystalline-ge-precipitates-in-sio2-1--deionized-water"
+      ],
+      "outputs": [
+        "paine1992-1-106808-nanocrystalline-ge-precipitates-in-sio2-1--after-s01-heat"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 20,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "20 min",
+          "evidence": [
+            {
+              "source_id": "paine1992-1-106808",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "oxygen",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "paine1992-1-106808",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Heat reactor to 475 °C for 20 min.",
+      "evidence": [
+        {
+          "source_id": "paine1992-1-106808",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "paine1992-1-106808-nanocrystalline-ge-precipitates-in-sio2-1--product",
+      "source_sample_label": "nanocrystalline Ge precipitates in SiO2 matrix",
+      "batch_id": null,
+      "material_state_id": "paine1992-1-106808-nanocrystalline-ge-precipitates-in-sio2-1--after-s01-heat",
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "paine1992-1-106808",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reaction temperature: 475 degC (Main PDF p.2).",
+        "Reaction time: 20 min (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Amount of Si0.8Ge0.2 alloy not reported in the extracted text.",
+      "Amount of deionized water not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

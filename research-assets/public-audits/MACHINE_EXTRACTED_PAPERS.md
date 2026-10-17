@@ -1,5 +1,7 @@
 # Published machine-extracted papers
 
+Current verified index after B56/B57/B58/B59 (2026-10-17T22:08:53+00:00): **1521 source_extracted primary paper contributions /2234 display pairs**. This release adds41 DOI rows53IDs from original batchesB56/B57/B58/B59, with26 limited saved-read markers. Actual overall totals1765/5219/3098; audited244papers864pairs remain unchanged. Prior memberships, rows, histories and footer remain verbatim; no audit/gold/training credit.
+
 Current verified index after B55/B56/B57 (2026-10-17T16:02:38+00:00): **1480 source_extracted primary paper contributions /2181 display pairs**. This release adds44 DOI rows61IDs from original batchesB55/B56/B57, with13 limited saved-read markers. Actual overall totals1724/5166/3045; audited244papers864pairs remain unchanged. Prior memberships, rows, histories and footer remain verbatim; no audit/gold/training credit.
 
 Current verified index after B53/B54 (2026-10-17T12:09:33+00:00): **1436 source_extracted primary paper contributions /2120 display pairs**. This release adds49 DOI rows66IDs from original batchesB53/B54, with14 limited saved-read markers. Actual overall totals1680/5105/2984; audited244papers864pairs remain unchanged. Prior memberships, rows, histories and footer remain verbatim; no audit/gold/training credit.
@@ -1661,5 +1663,53 @@ Source-extracted display contributions only; saved read markers add no independe
 | 10.1116/1.3392039 | `xu2010-1-3392039-lu3ga5o12-tb3-phosphor-film-1` | B55 | 2026-10-17T16:02:38+00:00 | yes |
 | 10.1116/1.578341 | `maximov1993-1-578341-inp-quantum-dot-structures-1` | B55 | 2026-10-17T16:02:38+00:00 | no |
 | 10.1557/jmr.2010.0048 | `qin2010-jmr-2010-0048-ni66-7-co-dual-phase-nanocrystalline-all-1` | B55 | 2026-10-17T16:02:38+00:00 | yes |
+
+Source-extracted display contributions only; saved read markers add no independent audit or training-ready credit. All earlier index rows remain unchanged.
+
+## B56/B57/B58/B59 — verified 2026-10-17T22:08:53+00:00
+
+| DOI | Record IDs | Original batch | Live verification UTC | Limited saved rare read |
+| --- | --- | --- | --- | --- |
+| 10.1002/pssa.200779439 | `loewenstein2008-pssa-200779439-znoeosiny-1` | B59 | 2026-10-17T22:08:53+00:00 | no |
+| 10.1002/pssc.200673233 | `dana2007-pssc-200673233-ge-nanocrystals-in-siox-ge-siox-multilay-1` | B59 | 2026-10-17T22:08:53+00:00 | no |
+| 10.1002/pssc.200880813 | `managaki2009-pssc-200880813-aln-grown-on-multistacked-gan-aln-quantu-1` | B59 | 2026-10-17T22:08:53+00:00 | no |
+| 10.1007/s10800-010-0118-6 | `liu2010-s10800-010-0118-6-nio-hollow-spheres-with-cmc-binder-1` | B59 | 2026-10-17T22:08:53+00:00 | yes |
+| 10.1007/s10853-007-2302-6 | `sheikh2008-s10853-007-2302-6-nife2o4-sample-a-1` | B59 | 2026-10-17T22:08:53+00:00 | no |
+| 10.1007/s10971-006-7996-4 | `li2006-s10971-006-7996-4-co2-mgal2o4-nanocrystal-1` | B59 | 2026-10-17T22:08:53+00:00 | yes |
+| 10.1007/s11665-010-9752-8 | `zaigham2011-s11665-010-9752-8-smco4-88sn0-12-3`, `zaigham2011-s11665-010-9752-8-smco4-94sn0-06-2`, `zaigham2011-s11665-010-9752-8-smco4-99sn0-01-1` | B59 | 2026-10-17T22:08:53+00:00 | yes |
+| 10.1007/s11671-006-9002-z | `s11671-006-9002-z-gaas-quantum-dot-pairs-on-gaas-hills-1` | B59 | 2026-10-17T22:08:53+00:00 | no |
+| 10.1007/s11671-006-9004-x | `x2006-s11671-006-9004-x-ge-si-qdsl-1` | B56 | 2026-10-17T22:08:53+00:00 | yes |
+| 10.1021/cm034246p | `zhang2003-cm034246p-tio2-fe-10-2`, `zhang2003-cm034246p-tio2-fe-30-3`, `zhang2003-cm034246p-tio2-fe-5-1` | B59 | 2026-10-17T22:08:53+00:00 | yes |
+| 10.1021/ie0701928 | `yang2007-ie0701928-20-wt-zn-al2o3-1` | B59 | 2026-10-17T22:08:53+00:00 | no |
+| 10.1021/ja2057314 | `x2011-ja2057314-fept-mno-bnsl-membrane-1` | B56 | 2026-10-17T22:08:53+00:00 | yes |
+| 10.1063/1.116532 | `krost1996-1-116532-in0-55ga0-45as-quantum-dot-structures-1` | B56 | 2026-10-17T22:08:53+00:00 | yes |
+| 10.1063/1.118872 | `huffaker1997-1-118872-in0-50ga0-35al0-15as-quantum-dot-active-1` | B56 | 2026-10-17T22:08:53+00:00 | yes |
+| 10.1063/1.120117 | `ballesteros1997-1-120117-cu-al2o3-nanocrystal-thin-film-1` | B56 | 2026-10-17T22:08:53+00:00 | yes |
+| 10.1063/1.122870 | `zhuang1998-1-122870-30-period-ingaas-gaas-quantum-dot-superl-1` | B57 | 2026-10-17T22:08:53+00:00 | yes |
+| 10.1063/1.1632020 | `rosa-cruz2003-1-1632020-zro2-er3-1` | B57 | 2026-10-17T22:08:53+00:00 | yes |
+| 10.1063/1.1884759 | `ray2005-1-1884759-nanocrystalline-y2o3-eu3-sample-a-1` | B57 | 2026-10-17T22:08:53+00:00 | yes |
+| 10.1063/1.2740351 | `1-2740351-ru-nanocrystals-10-cycles-2`, `1-2740351-ru-nanocrystals-5-cycles-1` | B57 | 2026-10-17T22:08:53+00:00 | yes |
+| 10.1063/1.2830557 | `zhang2008-1-2830557-smco7xhfx-x-0-0-1-0-2-1` | B57 | 2026-10-17T22:08:53+00:00 | yes |
+| 10.1063/1.2841827 | `mondal2008-1-2841827-nanocrystalline-nb3al-in-nbal-matrix-1` | B57 | 2026-10-17T22:08:53+00:00 | yes |
+| 10.1063/1.2890414 | `suh2008-1-2890414-erxy2xsio5-nanocrystal-aggregates-1` | B57 | 2026-10-17T22:08:53+00:00 | yes |
+| 10.1063/1.2976324 | `wang2008-1-2976324-ingan-qd-based-leds-1` | B57 | 2026-10-17T22:08:53+00:00 | yes |
+| 10.1063/1.3040316 | `song2009-1-3040316-nanocrystalline-sm2co17-bulk-1` | B57 | 2026-10-17T22:08:53+00:00 | yes |
+| 10.1063/1.3176504 | `patange2009-1-3176504-nicrxfe2xo4-x-0-01-0-1` | B57 | 2026-10-17T22:08:53+00:00 | yes |
+| 10.1063/1.3194315 | `anopchenko2009-1-3194315-nc-si-sio2-multilayer-led-w10-2`, `anopchenko2009-1-3194315-nc-si-sio2-multilayer-led-w9-1` | B57 | 2026-10-17T22:08:53+00:00 | yes |
+| 10.1063/1.3402775 | `daniil2010-1-3402775-fe63si17-5al6nb3b9cu1-2`, `daniil2010-1-3402775-fe68si15-5al3-5nb3b9cu1-1` | B57 | 2026-10-17T22:08:53+00:00 | yes |
+| 10.1063/1.3432113 | `zhang2010-1-3432113-lsmo-nw-1` | B57 | 2026-10-17T22:08:53+00:00 | yes |
+| 10.1063/1.362434 | `zheng1996-1-362434-nanocrystalline-sno2-thin-films-1` | B58 | 2026-10-17T22:08:53+00:00 | no |
+| 10.1063/1.369585 | `ghosha1999-1-369585-ga0-57in0-43p-alloy-layers-with-gap-2-in-1` | B58 | 2026-10-17T22:08:53+00:00 | yes |
+| 10.1080/13642819308217951 | `rickerby1993-13642819308217951-boron-nitride-film-ion-beam-assisted-dep-2`, `rickerby1993-13642819308217951-boron-nitride-film-rf-sputtered-1` | B58 | 2026-10-17T22:08:53+00:00 | yes |
+| 10.1103/physrevb.66.012401 | `gomez-polo2002-physrevb-66-012401-fe73-5si13-5b9cu1nb3-1` | B58 | 2026-10-17T22:08:53+00:00 | yes |
+| 10.1103/physrevb.66.144101 | `chen2002-physrevb-66-144101-nanocrystalline-g-al2o3-with-particle-si-1`, `chen2002-physrevb-66-144101-nanocrystalline-g-al2o3-with-particle-si-2` | B58 | 2026-10-17T22:08:53+00:00 | no |
+| 10.1103/physrevb.72.165404 | `garguilo2005-physrevb-72-165404-nitrogen-doped-ultrananocrystalline-diam-1` | B58 | 2026-10-17T22:08:53+00:00 | no |
+| 10.1103/physrevb.73.125317 | `lamaestre2006-physrevb-73-125317-cdse-nanocrystals-2`, `lamaestre2006-physrevb-73-125317-pbs-nanocrystals-1` | B58 | 2026-10-17T22:08:53+00:00 | no |
+| 10.1103/physrevlett.94.087405 | `sychugov2005-physrevlett-94-087405-silicon-quantum-dot-1` | B58 | 2026-10-17T22:08:53+00:00 | no |
+| 10.1103/physrevlett.95.076806 | `tran2005-physrevlett-95-076806-dodecanethiol-ligated-gold-nanoparticles-1` | B58 | 2026-10-17T22:08:53+00:00 | no |
+| 10.1111/j.1551-2916.2007.01591.x | `biswas2007-j-1551-2916-2007-01591-x-ktiopo4-ktp-powder-si-method-no-capping-3`, `biswas2007-j-1551-2916-2007-01591-x-ktiopo4-ktp-powder-sii-method-tea-1-1-1`, `biswas2007-j-1551-2916-2007-01591-x-ktiopo4-ktp-powder-siii-method-tetra-pot-2` | B58 | 2026-10-17T22:08:53+00:00 | yes |
+| 10.1116/1.1532025 | `booth2003-1-1532025-al-nanoislands-1` | B58 | 2026-10-17T22:08:53+00:00 | no |
+| 10.1116/1.1641059 | `lin2004-1-1641059-sige-quantum-dot-infrared-photodetector-1` | B58 | 2026-10-17T22:08:53+00:00 | no |
+| 10.1116/1.1688346 | `yau2004-1-1688346-nc-ti-al-n12x-a-siny-composite-film-1` | B58 | 2026-10-17T22:08:53+00:00 | no |
 
 Source-extracted display contributions only; saved read markers add no independent audit or training-ready credit. All earlier index rows remain unchanged.

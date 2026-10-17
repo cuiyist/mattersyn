@@ -140,6 +140,9 @@ def _explicit_ge_matrix_navigation(pair):
         'Ge nanocrystals embedded in Lu2O3/Al2O3 dielectric stack': ['Ge', 'Lu2O3', 'Al2O3'],
         'nc-Ge (nanocrystalline germanium) embedded in SiO2 matrix': ['Ge', 'SiO2'],
         'Ge nanocrystals in SiOx:Ge/SiOx multilayers': ['Ge', 'SiOx'],
+        'nanocrystalline Ge precipitates in SiO2 matrix': ['Ge', 'SiO2'],
+        'Ge nanocrystals in 4H–SiC': ['Ge', 'SiC'],
+        'Ge quantum dot (QD) in SiO2 matrix': ['Ge', 'SiO2'],
     }
     components = named.get(label)
     if components is None:

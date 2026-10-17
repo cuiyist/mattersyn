@@ -1,0 +1,369 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "li2006-1-2357550-ge-quantum-dot-qd-in-sio2-matrix-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "P. W. Li (2006): Ge quantum dot (QD) in SiO2 matrix",
+  "material": {
+    "formula": "Ge quantum dot (QD) in SiO2 matrix",
+    "family": "Ge quantum dot (QD) in SiO2 matrix",
+    "elements": [
+      "Ge",
+      "Si",
+      "O"
+    ],
+    "components": [
+      "Ge",
+      "SiO2"
+    ],
+    "architecture": "unresolved"
+  },
+  "method": "Thermal oxidation",
+  "sources": [
+    {
+      "id": "li2006-1-2357550",
+      "doi": "10.1063/1.2357550",
+      "title": "Photoexcitation effects on charge transports of Ge quantum-dot resonant tunneling diodes",
+      "authors": "P. W. Li, David M. T. Kuo, and Y. C. Hsu",
+      "year": 2006,
+      "url": "https://doi.org/10.1063/1.2357550",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "li2006-1-2357550",
+    "recipe_family": "li2006-1-2357550-ge-quantum-dot-qd-in-sio2-matrix-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Ge",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "li2006-1-2357550",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "li2006-1-2357550-ge-quantum-dot-qd-in-sio2-matrix-1--sige-si-nanowire",
+      "name": "SiGe/Si nanowire",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "li2006-1-2357550",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "li2006-1-2357550-ge-quantum-dot-qd-in-sio2-matrix-1--after-s01-grow",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "li2006-1-2357550-ge-quantum-dot-qd-in-sio2-matrix-1--sige-si-nanowire"
+      ]
+    },
+    {
+      "id": "li2006-1-2357550-ge-quantum-dot-qd-in-sio2-matrix-1--after-s02-pattern",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "li2006-1-2357550-ge-quantum-dot-qd-in-sio2-matrix-1--after-s01-grow",
+        "li2006-1-2357550-ge-quantum-dot-qd-in-sio2-matrix-1--sige-si-nanowire"
+      ]
+    },
+    {
+      "id": "li2006-1-2357550-ge-quantum-dot-qd-in-sio2-matrix-1--after-s03-oxidize",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "li2006-1-2357550-ge-quantum-dot-qd-in-sio2-matrix-1--after-s02-pattern",
+        "li2006-1-2357550-ge-quantum-dot-qd-in-sio2-matrix-1--sige-si-nanowire"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-grow",
+      "action": "grow",
+      "label": "Grow SiGe/Si nanowire trilayer",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "li2006-1-2357550-ge-quantum-dot-qd-in-sio2-matrix-1--sige-si-nanowire"
+      ],
+      "outputs": [
+        "li2006-1-2357550-ge-quantum-dot-qd-in-sio2-matrix-1--after-s01-grow"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 550,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "550 °C",
+          "evidence": [
+            {
+              "source_id": "li2006-1-2357550",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "H2/O2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "li2006-1-2357550",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Grow SiGe/Si nanowire trilayer",
+      "evidence": [
+        {
+          "source_id": "li2006-1-2357550",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-pattern",
+      "action": "pattern",
+      "label": "Pattern nanowires using electron beam lithography and plasma etching",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-grow"
+      ],
+      "inputs": [
+        "li2006-1-2357550-ge-quantum-dot-qd-in-sio2-matrix-1--after-s01-grow",
+        "li2006-1-2357550-ge-quantum-dot-qd-in-sio2-matrix-1--sige-si-nanowire"
+      ],
+      "outputs": [
+        "li2006-1-2357550-ge-quantum-dot-qd-in-sio2-matrix-1--after-s02-pattern"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "H2/O2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "li2006-1-2357550",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Pattern nanowires using electron beam lithography and plasma etching",
+      "evidence": [
+        {
+          "source_id": "li2006-1-2357550",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-oxidize",
+      "action": "oxidize",
+      "label": "Thermal oxidation to form Ge QDs in SiO2 matrix",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-pattern"
+      ],
+      "inputs": [
+        "li2006-1-2357550-ge-quantum-dot-qd-in-sio2-matrix-1--after-s02-pattern",
+        "li2006-1-2357550-ge-quantum-dot-qd-in-sio2-matrix-1--sige-si-nanowire"
+      ],
+      "outputs": [
+        "li2006-1-2357550-ge-quantum-dot-qd-in-sio2-matrix-1--after-s03-oxidize"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 900,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "900 °C",
+          "evidence": [
+            {
+              "source_id": "li2006-1-2357550",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "H2/O2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "li2006-1-2357550",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Thermal oxidation to form Ge QDs in SiO2 matrix",
+      "evidence": [
+        {
+          "source_id": "li2006-1-2357550",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "li2006-1-2357550-ge-quantum-dot-qd-in-sio2-matrix-1--product",
+      "source_sample_label": "Ge quantum dot (QD) in SiO2 matrix",
+      "batch_id": null,
+      "material_state_id": "li2006-1-2357550-ge-quantum-dot-qd-in-sio2-matrix-1--after-s03-oxidize",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Ge",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "li2006-1-2357550",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "li2006-1-2357550",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reaction temperature: 900 degC (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of SiGe/Si nanowire not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

@@ -1,0 +1,418 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "rastgar2013-jp308279m-hydrogen-terminated-silicon-nanocrystals-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Neema Rastgar (2013): Hydrogen-terminated silicon nanocrystals",
+  "material": {
+    "formula": "Si",
+    "family": "Si nanocrystals",
+    "elements": [
+      "Si"
+    ],
+    "components": [
+      "Si"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Plasma synthesis",
+  "sources": [
+    {
+      "id": "rastgar2013-jp308279m",
+      "doi": "10.1021/jp308279m",
+      "title": "Effects of Water Adsorption and Surface Oxidation on the Electrical Conductivity of Silicon Nanocrystal Films",
+      "authors": "Neema Rastgar, David J. Rowe, Rebecca J. Anthony, Brian A. Merritt, Uwe R. Kortshagen, and Eray S. Aydil",
+      "year": 2013,
+      "url": "https://doi.org/10.1021/jp308279m",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "rastgar2013-jp308279m",
+    "recipe_family": "rastgar2013-jp308279m-hydrogen-terminated-silicon-nanocrystals-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Si",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "rastgar2013-jp308279m",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "nanocrystalline",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "rastgar2013-jp308279m",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "rastgar2013-jp308279m-hydrogen-terminated-silicon-nanocrystals-1--silane",
+      "name": "silane",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "rastgar2013-jp308279m",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "rastgar2013-jp308279m-hydrogen-terminated-silicon-nanocrystals-1--argon",
+      "name": "argon",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "rastgar2013-jp308279m",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "rastgar2013-jp308279m-hydrogen-terminated-silicon-nanocrystals-1--hydrogen",
+      "name": "hydrogen",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "rastgar2013-jp308279m",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "rastgar2013-jp308279m-hydrogen-terminated-silicon-nanocrystals-1--after-s01-dissociate",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "rastgar2013-jp308279m-hydrogen-terminated-silicon-nanocrystals-1--silane",
+        "rastgar2013-jp308279m-hydrogen-terminated-silicon-nanocrystals-1--argon"
+      ]
+    },
+    {
+      "id": "rastgar2013-jp308279m-hydrogen-terminated-silicon-nanocrystals-1--after-s02-inject",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "rastgar2013-jp308279m-hydrogen-terminated-silicon-nanocrystals-1--after-s01-dissociate",
+        "rastgar2013-jp308279m-hydrogen-terminated-silicon-nanocrystals-1--hydrogen"
+      ]
+    },
+    {
+      "id": "rastgar2013-jp308279m-hydrogen-terminated-silicon-nanocrystals-1--after-s03-anneal",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "rastgar2013-jp308279m-hydrogen-terminated-silicon-nanocrystals-1--after-s02-inject"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-dissociate",
+      "action": "dissociate",
+      "label": "Electron impact dissociation of silane gas diluted with argon",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "rastgar2013-jp308279m-hydrogen-terminated-silicon-nanocrystals-1--silane",
+        "rastgar2013-jp308279m-hydrogen-terminated-silicon-nanocrystals-1--argon"
+      ],
+      "outputs": [
+        "rastgar2013-jp308279m-hydrogen-terminated-silicon-nanocrystals-1--after-s01-dissociate"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "argon",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "rastgar2013-jp308279m",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Electron impact dissociation of silane gas diluted with argon",
+      "evidence": [
+        {
+          "source_id": "rastgar2013-jp308279m",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "s02-inject",
+      "action": "inject",
+      "label": "Hydrogen gas injected into the afterglow of the SiH4/Ar plasma",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-dissociate"
+      ],
+      "inputs": [
+        "rastgar2013-jp308279m-hydrogen-terminated-silicon-nanocrystals-1--after-s01-dissociate",
+        "rastgar2013-jp308279m-hydrogen-terminated-silicon-nanocrystals-1--hydrogen"
+      ],
+      "outputs": [
+        "rastgar2013-jp308279m-hydrogen-terminated-silicon-nanocrystals-1--after-s02-inject"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "argon",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "rastgar2013-jp308279m",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Hydrogen gas injected into the afterglow of the SiH4/Ar plasma",
+      "evidence": [
+        {
+          "source_id": "rastgar2013-jp308279m",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "s03-anneal",
+      "action": "anneal",
+      "label": "Annealed at 300 °C for 1 h",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-inject"
+      ],
+      "inputs": [
+        "rastgar2013-jp308279m-hydrogen-terminated-silicon-nanocrystals-1--after-s02-inject"
+      ],
+      "outputs": [
+        "rastgar2013-jp308279m-hydrogen-terminated-silicon-nanocrystals-1--after-s03-anneal"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 300,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "300 °C",
+          "evidence": [
+            {
+              "source_id": "rastgar2013-jp308279m",
+              "locator": "Main PDF p.1"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1 h",
+          "evidence": [
+            {
+              "source_id": "rastgar2013-jp308279m",
+              "locator": "Main PDF p.1"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "argon",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "rastgar2013-jp308279m",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Annealed at 300 °C for 1 h",
+      "evidence": [
+        {
+          "source_id": "rastgar2013-jp308279m",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "rastgar2013-jp308279m-hydrogen-terminated-silicon-nanocrystals-1--product",
+      "source_sample_label": "Hydrogen-terminated silicon nanocrystals",
+      "batch_id": null,
+      "material_state_id": "rastgar2013-jp308279m-hydrogen-terminated-silicon-nanocrystals-1--after-s03-anneal",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Si",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "rastgar2013-jp308279m",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "nanocrystalline",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "rastgar2013-jp308279m",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": "hydrogen",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "rastgar2013-jp308279m",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "rastgar2013-jp308279m",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "notes": [
+        "Reactor: capacitively coupled nonthermal radio-frequency plasma reactor (Main PDF p.1).",
+        "Reaction temperature: 300 degC (Main PDF p.1).",
+        "Reaction time: 1 h (Main PDF p.1)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Shape not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Amount of silane not reported in the extracted text.",
+      "Amount of argon not reported in the extracted text.",
+      "Amount of hydrogen not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
