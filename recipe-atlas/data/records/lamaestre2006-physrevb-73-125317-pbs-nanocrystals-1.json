@@ -1,0 +1,323 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "lamaestre2006-physrevb-73-125317-pbs-nanocrystals-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "R. Espiau de Lamaëstre and H. Bernas (2006): PbS nanocrystals",
+  "material": {
+    "formula": "PbS",
+    "family": "PbS nanocrystals",
+    "elements": [
+      "Pb",
+      "S"
+    ],
+    "components": [
+      "PbS"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Ion implantation",
+  "sources": [
+    {
+      "id": "lamaestre2006-physrevb-73-125317",
+      "doi": "10.1103/physrevb.73.125317",
+      "title": "Significance of lognormal nanocrystal size distributions",
+      "authors": "R. Espiau de Lamaëstre and H. Bernas",
+      "year": 2006,
+      "url": "https://doi.org/10.1103/physrevb.73.125317",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "lamaestre2006-physrevb-73-125317",
+    "recipe_family": "lamaestre2006-physrevb-73-125317-pbs-nanocrystals-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "PbS",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "lamaestre2006-physrevb-73-125317",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": 4.8,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "4.8 nm",
+      "evidence": [
+        {
+          "source_id": "lamaestre2006-physrevb-73-125317",
+          "locator": "Main PDF p.4"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "lamaestre2006-physrevb-73-125317-pbs-nanocrystals-1--after-s01-implant",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "lamaestre2006-physrevb-73-125317-pbs-nanocrystals-1--after-s02-anneal",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "lamaestre2006-physrevb-73-125317-pbs-nanocrystals-1--after-s01-implant"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-implant",
+      "action": "implant",
+      "label": "Pb and S were sequentially implanted",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "lamaestre2006-physrevb-73-125317-pbs-nanocrystals-1--after-s01-implant"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "lamaestre2006-physrevb-73-125317",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Pb and S were sequentially implanted",
+      "evidence": [
+        {
+          "source_id": "lamaestre2006-physrevb-73-125317",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "s02-anneal",
+      "action": "anneal",
+      "label": "Postannealing to allow nanocrystal growth",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-implant"
+      ],
+      "inputs": [
+        "lamaestre2006-physrevb-73-125317-pbs-nanocrystals-1--after-s01-implant"
+      ],
+      "outputs": [
+        "lamaestre2006-physrevb-73-125317-pbs-nanocrystals-1--after-s02-anneal"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 900,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "900 °C",
+          "evidence": [
+            {
+              "source_id": "lamaestre2006-physrevb-73-125317",
+              "locator": "Main PDF p.5"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 8,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "8 h",
+          "evidence": [
+            {
+              "source_id": "lamaestre2006-physrevb-73-125317",
+              "locator": "Main PDF p.5"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "lamaestre2006-physrevb-73-125317",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Postannealing to allow nanocrystal growth",
+      "evidence": [
+        {
+          "source_id": "lamaestre2006-physrevb-73-125317",
+          "locator": "Main PDF p.5"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "lamaestre2006-physrevb-73-125317-pbs-nanocrystals-1--product",
+      "source_sample_label": "PbS nanocrystals",
+      "batch_id": null,
+      "material_state_id": "lamaestre2006-physrevb-73-125317-pbs-nanocrystals-1--after-s02-anneal",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "PbS",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "lamaestre2006-physrevb-73-125317",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "lamaestre2006-physrevb-73-125317",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "notes": [
+        "Reaction time: 8 h (Main PDF p.5)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "lamaestre2006-physrevb-73-125317-pbs-nanocrystals-1--size",
+      "sample_id": "lamaestre2006-physrevb-73-125317-pbs-nanocrystals-1--product",
+      "property": "particle_size",
+      "technique": "not reported",
+      "value": {
+        "value": 4.8,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "4.8 nm",
+        "evidence": [
+          {
+            "source_id": "lamaestre2006-physrevb-73-125317",
+            "locator": "Main PDF p.4"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "lamaestre2006-physrevb-73-125317",
+          "locator": "Main PDF p.4"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

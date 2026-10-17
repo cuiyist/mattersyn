@@ -1,0 +1,312 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "s11671-006-9002-z-gaas-quantum-dot-pairs-on-gaas-hills-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Zhiming M. Wang et al. (2006): GaAs quantum dot pairs on GaAs hills",
+  "material": {
+    "formula": "GaAs",
+    "family": "GaAs nanocrystals",
+    "elements": [
+      "Ga",
+      "As"
+    ],
+    "components": [
+      "GaAs"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Droplet epitaxy",
+  "sources": [
+    {
+      "id": "s11671-006-9002-z",
+      "doi": "10.1007/s11671-006-9002-z",
+      "title": "Self-organization of quantum-dot pairs by high-temperature droplet epitaxy",
+      "authors": "Zhiming M. Wang; Kyland Holmes; Yuriy I. Mazur; Kimberly A. Ramsey; Gregory J. Salamo",
+      "year": 2006,
+      "url": "https://doi.org/10.1007/s11671-006-9002-z",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "s11671-006-9002-z",
+    "recipe_family": "s11671-006-9002-z-gaas-quantum-dot-pairs-on-gaas-hills-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "GaAs",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "s11671-006-9002-z",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "crystal",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "s11671-006-9002-z",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "s11671-006-9002-z-gaas-quantum-dot-pairs-on-gaas-hills-1--ga",
+      "name": "Ga",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "s11671-006-9002-z",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "s11671-006-9002-z-gaas-quantum-dot-pairs-on-gaas-hills-1--after-s01-deposit",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "s11671-006-9002-z-gaas-quantum-dot-pairs-on-gaas-hills-1--ga"
+      ]
+    },
+    {
+      "id": "s11671-006-9002-z-gaas-quantum-dot-pairs-on-gaas-hills-1--after-s02-anneal",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "s11671-006-9002-z-gaas-quantum-dot-pairs-on-gaas-hills-1--after-s01-deposit"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-deposit",
+      "action": "deposit",
+      "label": "Ga deposited on Al0.3Ga0.7As layer",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "s11671-006-9002-z-gaas-quantum-dot-pairs-on-gaas-hills-1--ga"
+      ],
+      "outputs": [
+        "s11671-006-9002-z-gaas-quantum-dot-pairs-on-gaas-hills-1--after-s01-deposit"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "s",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "10 s",
+          "evidence": [
+            {
+              "source_id": "s11671-006-9002-z",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Ga deposited on Al0.3Ga0.7As layer",
+      "evidence": [
+        {
+          "source_id": "s11671-006-9002-z",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-anneal",
+      "action": "anneal",
+      "label": "Annealing under arsenic flux",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-deposit"
+      ],
+      "inputs": [
+        "s11671-006-9002-z-gaas-quantum-dot-pairs-on-gaas-hills-1--after-s01-deposit"
+      ],
+      "outputs": [
+        "s11671-006-9002-z-gaas-quantum-dot-pairs-on-gaas-hills-1--after-s02-anneal"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 45,
+          "minimum": null,
+          "maximum": null,
+          "unit": "s",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "45 s",
+          "evidence": [
+            {
+              "source_id": "s11671-006-9002-z",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Annealing under arsenic flux",
+      "evidence": [
+        {
+          "source_id": "s11671-006-9002-z",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "s11671-006-9002-z-gaas-quantum-dot-pairs-on-gaas-hills-1--product",
+      "source_sample_label": "GaAs quantum dot pairs on GaAs hills",
+      "batch_id": null,
+      "material_state_id": "s11671-006-9002-z-gaas-quantum-dot-pairs-on-gaas-hills-1--after-s02-anneal",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "GaAs",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "s11671-006-9002-z",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "crystal",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "s11671-006-9002-z",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "s11671-006-9002-z",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reaction temperature: 550 degC (Main PDF p.2).",
+        "Reaction time: 45 s (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Amount of Ga not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

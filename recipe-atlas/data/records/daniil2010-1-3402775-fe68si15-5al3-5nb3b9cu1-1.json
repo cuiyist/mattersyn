@@ -1,0 +1,272 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "daniil2010-1-3402775-fe68si15-5al3-5nb3b9cu1-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Maria Daniil et al. (2010): Fe68Si15.5Al3.5Nb3B9Cu1",
+  "material": {
+    "formula": "Fe68Si15.5Al3.5Nb3B9Cu1",
+    "family": "Fe68Si15.5Al3.5Nb3B9Cu1 nanocrystals",
+    "elements": [
+      "Fe",
+      "Si",
+      "Al",
+      "Nb",
+      "B",
+      "Cu"
+    ],
+    "components": [
+      "Fe68Si15.5Al3.5Nb3B9Cu1"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Synthesis as described in the source",
+  "sources": [
+    {
+      "id": "daniil2010-1-3402775",
+      "doi": "10.1063/1.3402775",
+      "title": "(Fe,Si,Al)-based nanocrystalline soft magnetic alloys for cryogenic applications",
+      "authors": "Maria Daniil, Michael S. Osofsky, Donald U. Gubser, Matthew A. Willard",
+      "year": 2010,
+      "url": "https://doi.org/10.1063/1.3402775",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "daniil2010-1-3402775",
+    "recipe_family": "daniil2010-1-3402775-fe68si15-5al3-5nb3b9cu1-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Fe68Si15.5Al3.5Nb3B9Cu1",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "daniil2010-1-3402775",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "Fe3(Si,Al) ordered phase",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "daniil2010-1-3402775",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "daniil2010-1-3402775-fe68si15-5al3-5nb3b9cu1-1--after-s01-melt-spin",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "daniil2010-1-3402775-fe68si15-5al3-5nb3b9cu1-1--after-s02-anneal",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "daniil2010-1-3402775-fe68si15-5al3-5nb3b9cu1-1--after-s01-melt-spin"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-melt-spin",
+      "action": "melt-spin",
+      "label": "Single roller melt-spinning in helium",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "daniil2010-1-3402775-fe68si15-5al3-5nb3b9cu1-1--after-s01-melt-spin"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Single roller melt-spinning in helium",
+      "evidence": [
+        {
+          "source_id": "daniil2010-1-3402775",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-anneal",
+      "action": "anneal",
+      "label": "Isothermal annealing in argon",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-melt-spin"
+      ],
+      "inputs": [
+        "daniil2010-1-3402775-fe68si15-5al3-5nb3b9cu1-1--after-s01-melt-spin"
+      ],
+      "outputs": [
+        "daniil2010-1-3402775-fe68si15-5al3-5nb3b9cu1-1--after-s02-anneal"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 823,
+          "minimum": null,
+          "maximum": null,
+          "unit": "K",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "823 K",
+          "evidence": [
+            {
+              "source_id": "daniil2010-1-3402775",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Isothermal annealing in argon",
+      "evidence": [
+        {
+          "source_id": "daniil2010-1-3402775",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "daniil2010-1-3402775-fe68si15-5al3-5nb3b9cu1-1--product",
+      "source_sample_label": "Fe68Si15.5Al3.5Nb3B9Cu1",
+      "batch_id": null,
+      "material_state_id": "daniil2010-1-3402775-fe68si15-5al3-5nb3b9cu1-1--after-s02-anneal",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Fe68Si15.5Al3.5Nb3B9Cu1",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "daniil2010-1-3402775",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "Fe3(Si,Al) ordered phase",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "daniil2010-1-3402775",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "daniil2010-1-3402775",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reactor: single roller melt-spinning setup (Main PDF p.2).",
+        "Reaction temperature: 823 K (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction time not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
