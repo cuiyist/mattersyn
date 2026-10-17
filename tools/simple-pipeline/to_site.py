@@ -100,8 +100,30 @@ def formula_from(text):
     return token if token is not None else str(text).strip()
 
 
+def _named_ge_product_formula(pair):
+    """Navigation for explicit whole-product Ge assemblies, not a reported formula."""
+    value = ((pair.get('structure') or {}).get('composition') or {}).get('value')
+    if value is not None and str(value).strip() not in ('', 'Ge'):
+        return None
+    label = str(pair.get('product') or '').strip()
+    if re.fullmatch(r'Ge\s+(?i:NCs|nanocrystals?)\s+(?i:in)\s+Ge\s*/\s*SiO2\s*/\s*Si\s+(?i:sample)', label):
+        return 'Ge/SiO2/Si'
+    if re.fullmatch(r'Ge\s+(?i:quantum\s+dots?|NCs|nanocrystals?)\s+(?i:in)\s+(?:(?i:amorphous)\s+)?SiO2\s+(?i:matrix)', label):
+        return 'Ge/SiO2'
+    if re.fullmatch(r'Ge\s+(?i:quantum\s+dots?\s+with\s+boron\s+on)\s+Ge\s+(?i:wetting\s+layer)', label):
+        descriptions = [re.sub(r'\s+', ' ', str(step.get('description') or '')).strip().casefold()
+                        for step in ((pair.get('recipe') or {}).get('steps') or []) if isinstance(step, dict)]
+        if any(value == 'deposition of boron' and 'deposition of ge top layer' in descriptions[index+1:]
+               for index, value in enumerate(descriptions)):
+            return 'Ge/B'
+    return None
+
+
 def _embedded_product_formula(pair):
-    """Classify an explicit named Ge/SiO2 system; never fill a reported fact."""
+    """Classify an explicit named Ge assembly; never fill a reported fact."""
+    named = _named_ge_product_formula(pair)
+    if named is not None:
+        return named
     value = ((pair.get('structure') or {}).get('composition') or {}).get('value')
     if value is not None and str(value).strip() not in ('', 'Ge'):
         return None
@@ -257,8 +279,11 @@ class Builder:
         components = components_of(composition)
         reported_architecture = str((st.get('architecture') or {}).get('value') or '').strip().lower()
         architecture = ARCHITECTURE.get(reported_architecture, reported_architecture if reported_architecture in {'single_material', 'core_shell', 'heterostructure', 'alloy', 'composite', 'phase_mixture', 'unresolved'} else 'unresolved' if len(components) > 1 else 'single_material')
+        family = f'{composition} nanocrystals'
         if _embedded_product_formula(pair) is not None:
             architecture = 'composite'
+        if _named_ge_product_formula(pair) is not None:
+            family = str(pair['product']).strip()
         if architecture == 'single_material' and len(components) > 1:
             components = []  # A printed dopant separator does not establish separate product components.
         method = str((rc.get('method') or {}).get('value') or 'synthesis as described in the source')
@@ -269,7 +294,7 @@ class Builder:
         product['notes'] = notes
         return {'schema_version': '1.3.0', 'record_id': rid, 'revision': 1, 'record_type': 'literature_protocol',
                 'title': f'{(self.doc.get("authors") or self.source_id).split(",")[0].strip()} ({self.doc.get("year") or "n.d."}): {pair.get("product") or composition}',
-                'material': {'formula': composition, 'family': f'{composition} nanocrystals', 'elements': elements_of(composition), 'components': components, 'architecture': architecture},
+                'material': {'formula': composition, 'family': family, 'elements': elements_of(composition), 'components': components, 'architecture': architecture},
                 'method': method[0].upper() + method[1:], 'sources': [self.source()],
                 'lineage': {'source_group': self.source_id, 'recipe_family': rid, 'parent_record_id': None, 'batch_id': None, 'duplicate_of': None},
                 'intended_target': {'composition': self.fact(st.get('composition')), 'phase': self.fact(st.get('phase')),

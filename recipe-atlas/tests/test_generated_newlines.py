@@ -49,19 +49,20 @@ class GeneratedNewlines(unittest.TestCase):
             root = Path(directory)
             for path in ('data/records', 'dist/data/materials'): (root / path).mkdir(parents=True)
             source = root / 'data/reader-presentation-reviewed.json'
-            raw = b'{\r\n  "records": {},\r\n  "materials": {}\r\n}\r\n'
+            raw = b'{\r\n  "records": {},\r\n  "materials": {},\r\n  "figures_by_source": {}\r\n}\r\n'
             source.write_bytes(raw)
             with patch.object(build_reader_metadata, 'ROOT', root):
                 build_reader_metadata.main()
             self.assertEqual((root / 'dist/data/reader-presentation.json').read_bytes(), raw)
+            self.assertEqual(source.read_bytes(), raw)
 
     def test_transformed_reader_output_is_lf_without_rewriting_source(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
             for path in ('data/records', 'dist/data/materials'): (root / path).mkdir(parents=True)
             source = root / 'data/reader-presentation-reviewed.json'
-            raw = b'{\r\n  "records": {},\r\n  "materials": {}\r\n}\r\n'; source.write_bytes(raw)
-            transformed = {'records': {}, 'materials': {}, 'display': 'Synthetic \u00c5'}
+            raw = b'{\r\n  "records": {},\r\n  "materials": {},\r\n  "figures_by_source": {}\r\n}\r\n'; source.write_bytes(raw)
+            transformed = {'records': {}, 'materials': {}, 'figures_by_source': {}, 'display': 'Synthetic \u00c5'}
             with patch.object(build_reader_metadata, 'ROOT', root), patch.object(build_reader_metadata, 'display_view', return_value=transformed):
                 build_reader_metadata.main()
             self.assertEqual(source.read_bytes(), raw)

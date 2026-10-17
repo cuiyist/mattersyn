@@ -1,5 +1,13 @@
 Owner revisit list: [Machine-extracted papers](research-assets/public-audits/MACHINE_EXTRACTED_PAPERS.md).
 
+## G68 correction and R39 report — 2026-10-17T02:44:38.692928+00:00
+
+G68 (68 papers/87 new source_extracted records/301 caption keys) remains unpublished.322Python,218JavaScript and205simple engineering tests pass after fixture/converter fixes; original failed q1/q2 logs remain. Three NEW Ge records now have supported assembly navigation Ge/B,Ge/SiO2/Si,Ge/SiO2; reported Ge facts, all other scientific values and captions stay exact.84new files are raw-unchanged; prior4898canonical files retain their accepted bytes. Normal hub regeneration, fresh complete Source checks/browser/CI and normal Site deployment/anonymous verification remain required.
+
+Fresh bounded cleanup at2026-10-17T02:58:14UTC removed69281reconstructible copies/5436541555logical bytes after exact retained-local-Git/raw-hash/native checks. Cfree107421806592bytes at closure met100GiB; later builds can consume space. Cumulative13950382copies/762690247524logical bytes is not isolated physical recovery. Earlier zero-deletion/HOLD attempts are preserved; R40 report-only publication is pending.
+
+The approved [R39 cleanup report](https://github.com/cuiyist/mattersyn2/blob/208f705b6a4a32659b05aee95987cf8d9938491b/CLEANUP_REPORT_2026-10-12.md) is publicly byte-verified. Cumulative confirmed redundant-copy removal:13881101files/757253705969logical bytes, not isolated physical recovery. Last removal read C99783798784→102283001856bytes; still below100GiB. Bounded reconstructible completed-build cleanup has priority; protected source/training files, active model/server and working checkouts stay. Audit lane/questions/history/denominators remain paused. See the single job report for current correction details.
+
 ### R38 storage checkpoint and G local integration — 2026-10-17T01:26:58.523369+00:00
 
 Verified [R38 cleanup report](https://raw.githubusercontent.com/cuiyist/mattersyn2/2e10af858aeb98d9a8e7edd96ec9b982c138d359/CLEANUP_REPORT_2026-10-12.md) records two additional removed static copies:60,134 file copies/4,834,856,734 logical bytes; cumulative13,851,037 copies/754,836,288,866 logical bytes. Report commit `2e10af858aeb98d9a8e7edd96ec9b982c138d359`, SHA-256 `dda21a598a361fd8756b885f143419bb9771a9517497fa01aaa9ba499cb5094f`. No programs were stopped. These logical totals and intervening free-space increases do not establish isolated physical recovery or600GB physical recovery. All previous HOLDs, private/protected inputs, audit history and owner questions remain preserved.
