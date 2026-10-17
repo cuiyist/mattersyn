@@ -55,6 +55,12 @@ def unit_name(unit):
     return UNITS.get(unit.lower().replace(' ', ''), unit)
 
 
+def temperature_unit_compatible(unit):
+    """Reject explicit power units; do not relabel them or reinterpret other units."""
+    written = unicodedata.normalize('NFKC', str(unit or '')).strip().casefold()
+    return re.search(r'(?<![a-z])(?:[pnumkmgµμ]?w(?:atts?)?|(?:pico|nano|micro|milli|kilo|mega|giga)watts?|power)(?![a-z])', written) is None
+
+
 def _formula_token(text):
     """The formula inside a composition phrase; preserve grouped composition punctuation."""
     phrase = re.sub(r'\s*([/@])\s*', r'\1', str(text))
@@ -140,6 +146,24 @@ def _explicit_ge_matrix_navigation(pair):
         return None
     elements = list(dict.fromkeys(element for component in components for element in elements_of(component)))
     return components, elements
+
+
+def _explicit_tialn_siny_navigation(pair):
+    """Finite whole-product navigation; reported composition and record identity stay exact."""
+    structure = pair.get('structure') or {}
+    value = (structure.get('composition') or {}).get('value')
+    if re.sub(r'\s+', '', str(value or '')) != 'Ti,Al,N,Si':
+        return None
+    label = re.sub(r'\s+', ' ', str(pair.get('product') or '')).strip()
+    if label not in ('nc-(Ti,Al)N12x/a-SiNy composite film',
+                     'nc-(Ti,Al)N1−x/a-SiNy composite film'):
+        return None
+    architecture = (structure.get('architecture') or {}).get('value')
+    if architecture is not None and architecture not in ('composite', 'unresolved'):
+        return None
+    named = 'nc-(Ti,Al)N1−x/a-SiNy composite film'
+    return {'formula': named, 'family': named, 'elements': ['Ti', 'Al', 'N', 'Si'],
+            'components': ['nc-(Ti,Al)N1−x', 'a-SiNy'], 'architecture': 'composite'}
 
 
 def _embedded_product_formula(pair):
@@ -271,7 +295,7 @@ class Builder:
             states.append(state)
             workup = (s.get('action') or '').lower() in WORKUP
             parameters = {}
-            if s.get('temperature') is not None: parameters['temperature'] = self.quantity(s['temperature'], s.get('temperature_unit') or '°C', s.get('page'))
+            if s.get('temperature') is not None and temperature_unit_compatible(s.get('temperature_unit')): parameters['temperature'] = self.quantity(s['temperature'], s.get('temperature_unit') or '°C', s.get('page'))
             if s.get('time') is not None: parameters['duration'] = self.quantity(s['time'], s.get('time_unit') or 'min', s.get('page'))
             for m in materials:  # a chemical first used in a workup step belongs to the workup
                 if m['id'] in state['parent_ids'] and workup and not any(m['id'] in o['inputs'] for o in operations): m['stage'] = 'workup'
@@ -316,11 +340,18 @@ class Builder:
             components, elements = navigation
             if architecture == 'single_material':
                 architecture = 'unresolved'
+        named_composite = _explicit_tialn_siny_navigation(pair)
+        if named_composite is not None:
+            composition = named_composite['formula']
+            family = named_composite['family']
+            components = named_composite['components']
+            elements = named_composite['elements']
+            architecture = named_composite['architecture']
         method = str((rc.get('method') or {}).get('value') or 'synthesis as described in the source')
         notes = []
         if rc.get('reactor'): notes.append(f'Reactor: {rc["reactor"]["value"]} (Main PDF p.{rc["reactor"].get("page", "?")}).')
         for key, label in (('reaction_temperature', 'Reaction temperature'), ('reaction_time', 'Reaction time')):
-            if rc.get(key): notes.append(f'{label}: {rc[key]["value"]:g} {unit_name(rc[key].get("unit"))} (Main PDF p.{rc[key].get("page", "?")}).')
+            if rc.get(key) and (key != 'reaction_temperature' or temperature_unit_compatible(rc[key].get('unit'))): notes.append(f'{label}: {rc[key]["value"]:g} {unit_name(rc[key].get("unit"))} (Main PDF p.{rc[key].get("page", "?")}).')
         product['notes'] = notes
         return {'schema_version': '1.3.0', 'record_id': rid, 'revision': 1, 'record_type': 'literature_protocol',
                 'title': f'{(self.doc.get("authors") or self.source_id).split(",")[0].strip()} ({self.doc.get("year") or "n.d."}): {pair.get("product") or composition}',
@@ -363,7 +394,7 @@ def step_svg(op, reactor):
     q = lambda k: op['parameters'].get(k)
     shown = lambda unit: {'degC': '°C'}.get(unit, unit)
     lines = [op['label'][:70]]
-    if q('temperature'): lines.append(f'temperature: {q("temperature")["value"]:g} {shown(q("temperature")["unit"])}')
+    if q('temperature') and temperature_unit_compatible(q('temperature').get('unit')): lines.append(f'temperature: {q("temperature")["value"]:g} {shown(q("temperature")["unit"])}')
     if q('duration'): lines.append(f'duration: {q("duration")["value"]:g} {shown(q("duration")["unit"])}')
     condition_lines = list(lines)
     if reactor:
