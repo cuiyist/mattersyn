@@ -1,0 +1,482 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "lepoutre2009-b912613a-mesoporous-zno-replica-thin-film-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Sophie Lepoutre et al. (2010): mesoporous ZnO replica thin film",
+  "material": {
+    "formula": "ZnO",
+    "family": "ZnO nanocrystals",
+    "elements": [
+      "Zn",
+      "O"
+    ],
+    "components": [
+      "ZnO"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Nanocasting",
+  "sources": [
+    {
+      "id": "lepoutre2009-b912613a",
+      "doi": "10.1039/b912613a",
+      "title": "Nanocasted mesoporous nanocrystalline ZnO thin films",
+      "authors": "Sophie Lepoutre; Béatrice Julián-López; Clément Sanchez; Heinz Amenitsch; Mika Linden; David Grosso",
+      "year": 2010,
+      "url": "https://doi.org/10.1039/b912613a",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "lepoutre2009-b912613a",
+    "recipe_family": "lepoutre2009-b912613a-mesoporous-zno-replica-thin-film-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "lepoutre2009-b912613a-mesoporous-zno-replica-thin-film-1--hcl",
+      "name": "HCl",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "lepoutre2009-b912613a",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "lepoutre2009-b912613a-mesoporous-zno-replica-thin-film-1--zncl2",
+      "name": "ZnCl2",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "lepoutre2009-b912613a",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "lepoutre2009-b912613a-mesoporous-zno-replica-thin-film-1--koh",
+      "name": "KOH",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "lepoutre2009-b912613a",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "lepoutre2009-b912613a-mesoporous-zno-replica-thin-film-1--after-s01-calcine",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "lepoutre2009-b912613a-mesoporous-zno-replica-thin-film-1--after-s02-impregnate",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "lepoutre2009-b912613a-mesoporous-zno-replica-thin-film-1--after-s01-calcine",
+        "lepoutre2009-b912613a-mesoporous-zno-replica-thin-film-1--zncl2"
+      ]
+    },
+    {
+      "id": "lepoutre2009-b912613a-mesoporous-zno-replica-thin-film-1--after-s03-heat",
+      "name": "mixture after step 3",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "lepoutre2009-b912613a-mesoporous-zno-replica-thin-film-1--after-s02-impregnate",
+        "lepoutre2009-b912613a-mesoporous-zno-replica-thin-film-1--zncl2"
+      ]
+    },
+    {
+      "id": "lepoutre2009-b912613a-mesoporous-zno-replica-thin-film-1--after-s04-leach",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "lepoutre2009-b912613a-mesoporous-zno-replica-thin-film-1--after-s03-heat",
+        "lepoutre2009-b912613a-mesoporous-zno-replica-thin-film-1--koh"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-calcine",
+      "action": "calcine",
+      "label": "Calcine the film at 450 °C for 5 min under an IR lamp.",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "lepoutre2009-b912613a-mesoporous-zno-replica-thin-film-1--after-s01-calcine"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 450,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "450 °C",
+          "evidence": [
+            {
+              "source_id": "lepoutre2009-b912613a",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "5 min",
+          "evidence": [
+            {
+              "source_id": "lepoutre2009-b912613a",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "lepoutre2009-b912613a",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Calcine the film at 450 °C for 5 min under an IR lamp.",
+      "evidence": [
+        {
+          "source_id": "lepoutre2009-b912613a",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-impregnate",
+      "action": "impregnate",
+      "label": "Impregnate the silica film with a 10% weight solution of ZnCl2 in EtOH.",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-calcine"
+      ],
+      "inputs": [
+        "lepoutre2009-b912613a-mesoporous-zno-replica-thin-film-1--after-s01-calcine",
+        "lepoutre2009-b912613a-mesoporous-zno-replica-thin-film-1--zncl2"
+      ],
+      "outputs": [
+        "lepoutre2009-b912613a-mesoporous-zno-replica-thin-film-1--after-s02-impregnate"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "lepoutre2009-b912613a",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Impregnate the silica film with a 10% weight solution of ZnCl2 in EtOH.",
+      "evidence": [
+        {
+          "source_id": "lepoutre2009-b912613a",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-heat",
+      "action": "heat",
+      "label": "Thermal treatment at 400 °C for 1 min in air under an IR lamp.",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-impregnate"
+      ],
+      "inputs": [
+        "lepoutre2009-b912613a-mesoporous-zno-replica-thin-film-1--after-s02-impregnate",
+        "lepoutre2009-b912613a-mesoporous-zno-replica-thin-film-1--zncl2"
+      ],
+      "outputs": [
+        "lepoutre2009-b912613a-mesoporous-zno-replica-thin-film-1--after-s03-heat"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 400,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "400 °C",
+          "evidence": [
+            {
+              "source_id": "lepoutre2009-b912613a",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1 min",
+          "evidence": [
+            {
+              "source_id": "lepoutre2009-b912613a",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "lepoutre2009-b912613a",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Thermal treatment at 400 °C for 1 min in air under an IR lamp.",
+      "evidence": [
+        {
+          "source_id": "lepoutre2009-b912613a",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s04-leach",
+      "action": "leach",
+      "label": "Leach the silica mold in a KOH aqueous solution.",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s03-heat"
+      ],
+      "inputs": [
+        "lepoutre2009-b912613a-mesoporous-zno-replica-thin-film-1--after-s03-heat",
+        "lepoutre2009-b912613a-mesoporous-zno-replica-thin-film-1--koh"
+      ],
+      "outputs": [
+        "lepoutre2009-b912613a-mesoporous-zno-replica-thin-film-1--after-s04-leach"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "lepoutre2009-b912613a",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Leach the silica mold in a KOH aqueous solution.",
+      "evidence": [
+        {
+          "source_id": "lepoutre2009-b912613a",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "lepoutre2009-b912613a-mesoporous-zno-replica-thin-film-1--product",
+      "source_sample_label": "mesoporous ZnO replica thin film",
+      "batch_id": null,
+      "material_state_id": "lepoutre2009-b912613a-mesoporous-zno-replica-thin-film-1--after-s04-leach",
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "lepoutre2009-b912613a",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reaction temperature: 400 degC (Main PDF p.2).",
+        "Reaction time: 1 min (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Amount of HCl not reported in the extracted text.",
+      "Amount of ZnCl2 not reported in the extracted text.",
+      "Amount of KOH not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

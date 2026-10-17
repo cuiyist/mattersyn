@@ -1,0 +1,346 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "yu2009-1-3120865-ncb-bi2te3-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Fengrong Yu (2009): NCB-Bi2Te3",
+  "material": {
+    "formula": "Bi2Te3",
+    "family": "Bi2Te3 nanocrystals",
+    "elements": [
+      "Bi",
+      "Te"
+    ],
+    "components": [
+      "Bi2Te3"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Ball milling, cold pressing, sintering",
+  "sources": [
+    {
+      "id": "yu2009-1-3120865",
+      "doi": "10.1063/1.3120865",
+      "title": "Enhanced thermoelectric figure of merit in nanocrystalline Bi2Te3 bulk",
+      "authors": "Fengrong Yu, Jianjun Zhang, Dongli Yu, Julong He, Zhongyuan Liu, Bo Xu, Yongjun Tian",
+      "year": 2009,
+      "url": "https://doi.org/10.1063/1.3120865",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "yu2009-1-3120865",
+    "recipe_family": "yu2009-1-3120865-ncb-bi2te3-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Bi2Te3",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "yu2009-1-3120865",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "rhombohedral",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "yu2009-1-3120865",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": 30,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "30 nm",
+      "evidence": [
+        {
+          "source_id": "yu2009-1-3120865",
+          "locator": "Main PDF p.4"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "yu2009-1-3120865-ncb-bi2te3-1--bi",
+      "name": "Bi",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "yu2009-1-3120865",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "yu2009-1-3120865-ncb-bi2te3-1--te",
+      "name": "Te",
+      "formula": null,
+      "role": "chalcogen_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "yu2009-1-3120865",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "yu2009-1-3120865-ncb-bi2te3-1--after-s01-weigh",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "yu2009-1-3120865-ncb-bi2te3-1--bi",
+        "yu2009-1-3120865-ncb-bi2te3-1--te"
+      ]
+    },
+    {
+      "id": "yu2009-1-3120865-ncb-bi2te3-1--after-s02-ball-mill",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "yu2009-1-3120865-ncb-bi2te3-1--after-s01-weigh",
+        "yu2009-1-3120865-ncb-bi2te3-1--bi",
+        "yu2009-1-3120865-ncb-bi2te3-1--te"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-weigh",
+      "action": "weigh",
+      "label": "Bi and Te powders were weighed according to their composition of Bi2Te3.",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "yu2009-1-3120865-ncb-bi2te3-1--bi",
+        "yu2009-1-3120865-ncb-bi2te3-1--te"
+      ],
+      "outputs": [
+        "yu2009-1-3120865-ncb-bi2te3-1--after-s01-weigh"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "Ar",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yu2009-1-3120865",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Bi and Te powders were weighed according to their composition of Bi2Te3.",
+      "evidence": [
+        {
+          "source_id": "yu2009-1-3120865",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-ball-mill",
+      "action": "ball mill",
+      "label": "Bi and Te powders were ball milled under Ar atmosphere.",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-weigh"
+      ],
+      "inputs": [
+        "yu2009-1-3120865-ncb-bi2te3-1--after-s01-weigh",
+        "yu2009-1-3120865-ncb-bi2te3-1--bi",
+        "yu2009-1-3120865-ncb-bi2te3-1--te"
+      ],
+      "outputs": [
+        "yu2009-1-3120865-ncb-bi2te3-1--after-s02-ball-mill"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "Ar",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yu2009-1-3120865",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Bi and Te powders were ball milled under Ar atmosphere.",
+      "evidence": [
+        {
+          "source_id": "yu2009-1-3120865",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "yu2009-1-3120865-ncb-bi2te3-1--product",
+      "source_sample_label": "NCB-Bi2Te3",
+      "batch_id": null,
+      "material_state_id": "yu2009-1-3120865-ncb-bi2te3-1--after-s02-ball-mill",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Bi2Te3",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yu2009-1-3120865",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "rhombohedral",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yu2009-1-3120865",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "yu2009-1-3120865",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reactor: stainless steel vial with balls (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "yu2009-1-3120865-ncb-bi2te3-1--size",
+      "sample_id": "yu2009-1-3120865-ncb-bi2te3-1--product",
+      "property": "particle_size",
+      "technique": "not reported",
+      "value": {
+        "value": 30,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "30 nm",
+        "evidence": [
+          {
+            "source_id": "yu2009-1-3120865",
+            "locator": "Main PDF p.4"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "yu2009-1-3120865",
+          "locator": "Main PDF p.4"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of Bi not reported in the extracted text.",
+      "Amount of Te not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

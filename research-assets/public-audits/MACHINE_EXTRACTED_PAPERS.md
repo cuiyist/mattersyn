@@ -1,5 +1,7 @@
 # Published machine-extracted papers
 
+Current verified index after B51/B52 (2026-10-17T08:23:15+00:00): **1387 source_extracted primary paper contributions /2054 display pairs**. This release adds35 DOI rows54IDs from original batchesB51/B52, with13 limited saved-read markers. Actual overall totals1631/5039/2918; audited244papers864pairs remain unchanged. Prior memberships, rows, histories and footer remain verbatim; no audit/gold/training credit.
+
 Current verified index after B47/B48/B49/B50 (2026-10-17T05:51:16+00:00): **1352 source_extracted primary paper contributions /2000 display pairs**. This release adds68 DOI rows87IDs from original batchesB47/B48/B49/B50, with32 limited saved-read markers. Actual overall totals1596/4985/2864; audited244papers864pairs remain unchanged. Prior memberships, rows, histories and footer remain verbatim; no audit/gold/training credit.
 
 Current verified index after B44/B45/B46 (2026-10-17T01:02:33+00:00): **1284 source_extracted primary paper contributions /1913 display pairs**. This release adds67 DOI rows97IDs from original batchesB44/B45/B46, with40 limited saved-read markers. Actual overall totals1528/4898/2777; audited244papers864pairs remain unchanged. Prior memberships, rows, histories and footer remain verbatim; no audit/gold/training credit.
@@ -1506,5 +1508,47 @@ Source-extracted display contributions only; saved read markers add no independe
 | 10.1103/physrevb.74.125308 | `pan2006-physrevb-74-125308-c-si-p-nc-si-h-n-heterostructure-rtd-1` | B47 | 2026-10-17T05:51:16+00:00 | no |
 | 10.1103/physrevb.81.085321 | `buljan2010-physrevb-81-085321-ge-quantum-dots-in-amorphous-sio2-matrix-1` | B47 | 2026-10-17T05:51:16+00:00 | yes |
 | 10.1111/j.1551-2916.2005.00359.x | `tsai2005-j-1551-2916-2005-00359-x-enstatite-fiber-1` | B48 | 2026-10-17T05:51:16+00:00 | yes |
+
+Source-extracted display contributions only; saved read markers add no independent audit or training-ready credit. All earlier index rows remain unchanged.
+
+## B51/B52 — verified 2026-10-17T08:23:15+00:00
+
+| DOI | Record IDs | Original batch | Live verification UTC | Limited saved rare read |
+| --- | --- | --- | --- | --- |
+| 10.1002/anie.200500037 | `kuemmel2005-anie-200500037-nanocrystalline-g-al2o3-layers-with-cont-1` | B51 | 2026-10-17T08:23:15+00:00 | no |
+| 10.1002/crat.201000351 | `soszynski2010-crat-201000351-sic-nanowires-sicnws-1` | B51 | 2026-10-17T08:23:15+00:00 | yes |
+| 10.1002/lpor.200910008 | `gu2010-lpor-200910008-3d-woodpile-photonic-crystal-infiltrated-1` | B51 | 2026-10-17T08:23:15+00:00 | no |
+| 10.1002/pssa.200566157 | `karimpoor2006-pssa-200566157-nanocrystalline-cobalt-1` | B51 | 2026-10-17T08:23:15+00:00 | no |
+| 10.1002/pssa.200723444 | `anandakumar2008-pssa-200723444-nanocrystalline-pbmoo4-sample-code-l1-1`, `anandakumar2008-pssa-200723444-nanocrystalline-pbmoo4-sample-code-l5-2` | B51 | 2026-10-17T08:23:15+00:00 | yes |
+| 10.1002/pssa.200925636 | `valdueza-felip2011-pssa-200925636-inn-film-deposited-at-450-8c-30-w-and-3-1` | B51 | 2026-10-17T08:23:15+00:00 | yes |
+| 10.1007/s10751-005-9165-5 | `al-s10751-005-9165-5-gamma-ferric-oxide-g-fe2o3-nanoparticles-1` | B51 | 2026-10-17T08:23:15+00:00 | no |
+| 10.1007/s10853-006-0433-9 | `garc-a-gan-a-n2006-s10853-006-0433-9-mwa-1400-1`, `garc-a-gan-a-n2006-s10853-006-0433-9-mwa-1500-2` | B51 | 2026-10-17T08:23:15+00:00 | yes |
+| 10.1007/s10853-009-3769-0 | `zeng2009-s10853-009-3769-0-bulk-nanocrystalline-gd-1` | B51 | 2026-10-17T08:23:15+00:00 | yes |
+| 10.1007/s10854-010-0071-5 | `patil2010-s10854-010-0071-5-zno-thin-film-annealed-at-600-c-1` | B51 | 2026-10-17T08:23:15+00:00 | no |
+| 10.1007/s10895-007-0191-3 | `jiang2007-s10895-007-0191-3-monoclinic-gd2-moo4-3-er3-yb3-1`, `jiang2007-s10895-007-0191-3-monoclinic-gd2moo6-er3-yb3-3`, `jiang2007-s10895-007-0191-3-orthorhombic-gd2-moo4-3-er3-yb3-2` | B51 | 2026-10-17T08:23:15+00:00 | yes |
+| 10.1007/s11434-008-0045-7 | `jianrong2008-s11434-008-0045-7-mn1-xznxfe2o4-thin-films-1` | B51 | 2026-10-17T08:23:15+00:00 | yes |
+| 10.1007/s11661-008-9593-3 | `rajulapati2008-s11661-008-9593-3-al-w-alloy-with-1-at-pct-w-1` | B52 | 2026-10-17T08:23:15+00:00 | yes |
+| 10.1007/s11664-008-0500-x | `lu2008-s11664-008-0500-x-sno2-nanocrystals-1`, `lu2008-s11664-008-0500-x-sno2cnt-hybrid-structures-2` | B52 | 2026-10-17T08:23:15+00:00 | yes |
+| 10.1007/s11671-010-9705-z | `sun2010-s11671-010-9705-z-fto-au-tio2-cds-photoanode-1` | B52 | 2026-10-17T08:23:15+00:00 | no |
+| 10.1021/acs.chemmater.5b00334 | `jeong2015-acs-chemmater-5b00334-pt-nanocrystals-1` | B52 | 2026-10-17T08:23:15+00:00 | no |
+| 10.1021/cm500791a | `chernomordik2014-cm500791a-czts-nanocrystal-films-1` | B52 | 2026-10-17T08:23:15+00:00 | no |
+| 10.1021/cm980272p | `blouin1998-cm980272p-ti2rufe-cp2-cscl-1` | B52 | 2026-10-17T08:23:15+00:00 | yes |
+| 10.1021/cm980322q | `scolan1998-cm980322q-anatase-tio2-nanoparticles-sa-sol-1` | B52 | 2026-10-17T08:23:15+00:00 | no |
+| 10.1021/ja002956f | `holmes2001-ja002956f-15-a-diameter-si-nanocrystals-1`, `holmes2001-ja002956f-25-40-a-diameter-si-nanocrystals-2` | B52 | 2026-10-17T08:23:15+00:00 | no |
+| 10.1021/ja201129n | `bodnarchuk2011-ja201129n-3d-alb2-type-binary-superlattice-of-20-n-4`, `bodnarchuk2011-ja201129n-3d-superlattice-of-10-nm-pbs-ncs-2`, `bodnarchuk2011-ja201129n-3d-superlattice-of-11-nm-cofe2o4-ncs-1`, `bodnarchuk2011-ja201129n-3d-superlattice-of-3-5-nm-cdse-ncs-3` | B52 | 2026-10-17T08:23:15+00:00 | no |
+| 10.1021/ja510120e | `kelly2014-ja510120e-1-octenyl-sincs-1`, `kelly2014-ja510120e-1-octyl-sincs-2` | B52 | 2026-10-17T08:23:15+00:00 | no |
+| 10.1021/ja9044168 | `riha2009-ja9044168-cu2znsns4-nanocrystals-1` | B52 | 2026-10-17T08:23:15+00:00 | no |
+| 10.1021/jp036135j | `ebenstein2004-jp036135j-cdse-zns-nanocrystals-functionalized-afm-1` | B52 | 2026-10-17T08:23:15+00:00 | no |
+| 10.1021/jp051262w | `taubert2005-jp051262w-cucl-nanoplatelets-1` | B52 | 2026-10-17T08:23:15+00:00 | yes |
+| 10.1021/jp205338r | `text2011-jp205338r-qd639-1`, `text2011-jp205338r-qd656-2` | B52 | 2026-10-17T08:23:15+00:00 | no |
+| 10.1021/jp212198j | `neubauer2012-jp212198j-inas-cdse-znse-core-shell-shell-nanocrys-2` | B52 | 2026-10-17T08:23:15+00:00 | yes |
+| 10.1021/jp811062m | `bhuvana2009-jp811062m-ag-nanoparticles-in-polystyrene-matrix-1` | B52 | 2026-10-17T08:23:15+00:00 | no |
+| 10.1021/jp9075756 | `wang2010-jp9075756-sns-film-1` | B52 | 2026-10-17T08:23:15+00:00 | no |
+| 10.1021/jp912052u | `salivati2010-jp912052u-si-nanocrystals-4-1-nm-diameter-exposed-2`, `salivati2010-jp912052u-si-nanocrystals-8-10-nm-diameter-exposed-1` | B52 | 2026-10-17T08:23:15+00:00 | no |
+| 10.1021/jp982948+ | `zhang1998-jp982948-11-nm-tio2-doped-with-0-05-at-fe3-2`, `zhang1998-jp982948-21-nm-tio2-doped-with-0-5-at-nb5-and-loa-3`, `zhang1998-jp982948-6-nm-tio2-doped-with-0-2-at-fe3-1` | B52 | 2026-10-17T08:23:15+00:00 | no |
+| 10.1021/jp9835014 | `sun1999-jp9835014-nanocrystalline-ag-metal-particles-in-pv-2`, `sun1999-jp9835014-nanocrystalline-ag2s-particles-in-pvp-po-1` | B52 | 2026-10-17T08:23:15+00:00 | no |
+| 10.1021/jp9836426 | `tran1999-jp9836426-zno-film-10-3-mbar-h2o-1`, `tran1999-jp9836426-zno-film-10-4-mbar-h2o-2`, `tran1999-jp9836426-zno-film-amorphous-3` | B52 | 2026-10-17T08:23:15+00:00 | no |
+| 10.1021/la020462l | `al2002-la020462l-tio2-nanoparticles-in-nafion-membrane-1` | B52 | 2026-10-17T08:23:15+00:00 | no |
+| 10.1021/la0492862 | `salzemann2004-la0492862-copper-nanocrystals-r-15-2`, `salzemann2004-la0492862-copper-nanocrystals-r-15-3`, `salzemann2004-la0492862-copper-nanocrystals-r-3-1` | B52 | 2026-10-17T08:23:15+00:00 | yes |
 
 Source-extracted display contributions only; saved read markers add no independent audit or training-ready credit. All earlier index rows remain unchanged.

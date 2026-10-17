@@ -1,0 +1,331 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "silly2005-1-2008375-fe-nanocrystals-on-srtio3-001-c-42-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Fabien Silly et al. (2005): Fe nanocrystals on SrTiO3(001)-c(4×2)",
+  "material": {
+    "formula": "Fe",
+    "family": "Fe nanocrystals",
+    "elements": [
+      "Fe"
+    ],
+    "components": [
+      "Fe"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "E-beam evaporation",
+  "sources": [
+    {
+      "id": "silly2005-1-2008375",
+      "doi": "10.1063/1.2008375",
+      "title": "Fe nanocrystal growth on SrTiO3(001)",
+      "authors": "Fabien Silly; Martin R. Castell",
+      "year": 2005,
+      "url": "https://doi.org/10.1063/1.2008375",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "silly2005-1-2008375",
+    "recipe_family": "silly2005-1-2008375-fe-nanocrystals-on-srtio3-001-c-42-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Fe",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "silly2005-1-2008375",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "bcc",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "silly2005-1-2008375",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": 18.55,
+      "minimum": null,
+      "maximum": null,
+      "unit": "Å",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "18.55 Å",
+      "evidence": [
+        {
+          "source_id": "silly2005-1-2008375",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "truncated pyramid",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "silly2005-1-2008375",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "silly2005-1-2008375-fe-nanocrystals-on-srtio3-001-c-42-1--after-s01-anneal",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "silly2005-1-2008375-fe-nanocrystals-on-srtio3-001-c-42-1--after-s02-anneal",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "silly2005-1-2008375-fe-nanocrystals-on-srtio3-001-c-42-1--after-s01-anneal"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-anneal",
+      "action": "anneal",
+      "label": "Anneal at 360 °C for 10 min",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "silly2005-1-2008375-fe-nanocrystals-on-srtio3-001-c-42-1--after-s01-anneal"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 360,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "360 °C",
+          "evidence": [
+            {
+              "source_id": "silly2005-1-2008375",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "10 min",
+          "evidence": [
+            {
+              "source_id": "silly2005-1-2008375",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Anneal at 360 °C for 10 min",
+      "evidence": [
+        {
+          "source_id": "silly2005-1-2008375",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-anneal",
+      "action": "anneal",
+      "label": "Anneal at 300 °C for 10 h",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-anneal"
+      ],
+      "inputs": [
+        "silly2005-1-2008375-fe-nanocrystals-on-srtio3-001-c-42-1--after-s01-anneal"
+      ],
+      "outputs": [
+        "silly2005-1-2008375-fe-nanocrystals-on-srtio3-001-c-42-1--after-s02-anneal"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Anneal at 300 °C for 10 h",
+      "evidence": [
+        {
+          "source_id": "silly2005-1-2008375",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "silly2005-1-2008375-fe-nanocrystals-on-srtio3-001-c-42-1--product",
+      "source_sample_label": "Fe nanocrystals on SrTiO3(001)-c(4×2)",
+      "batch_id": null,
+      "material_state_id": "silly2005-1-2008375-fe-nanocrystals-on-srtio3-001-c-42-1--after-s02-anneal",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Fe",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "silly2005-1-2008375",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "bcc",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "silly2005-1-2008375",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "truncated pyramid",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "silly2005-1-2008375",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "silly2005-1-2008375",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reaction temperature: 360 degC (Main PDF p.2).",
+        "Reaction time: 10 min (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "silly2005-1-2008375-fe-nanocrystals-on-srtio3-001-c-42-1--size",
+      "sample_id": "silly2005-1-2008375-fe-nanocrystals-on-srtio3-001-c-42-1--product",
+      "property": "particle_size",
+      "technique": "not reported",
+      "value": {
+        "value": 18.55,
+        "minimum": null,
+        "maximum": null,
+        "unit": "Å",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "18.55 Å",
+        "evidence": [
+          {
+            "source_id": "silly2005-1-2008375",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "silly2005-1-2008375",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Ligand not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

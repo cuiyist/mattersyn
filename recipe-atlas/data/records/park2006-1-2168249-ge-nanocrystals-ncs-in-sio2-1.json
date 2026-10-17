@@ -1,0 +1,328 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "park2006-1-2168249-ge-nanocrystals-ncs-in-sio2-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "C. J. Park (2006): Ge nanocrystals (NCs) in SiO2",
+  "material": {
+    "formula": "Ge",
+    "family": "Ge nanocrystals",
+    "elements": [
+      "Ge"
+    ],
+    "components": [
+      "Ge"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Ion implantation and annealing",
+  "sources": [
+    {
+      "id": "park2006-1-2168249",
+      "doi": "10.1063/1.2168249",
+      "title": "Annealing temperature dependence of capacitance-voltage characteristics in Ge-nanocrystal-based nonvolatile memory structures",
+      "authors": "C. J. Park, H. Y. Cho, S. Kim, Suk-Ho Choi, R. G. Elliman, J. H. Han, Chungwoo Kim, H. N. Hwang, C. C. Hwang",
+      "year": 2006,
+      "url": "https://doi.org/10.1063/1.2168249",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "park2006-1-2168249",
+    "recipe_family": "park2006-1-2168249-ge-nanocrystals-ncs-in-sio2-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Ge",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "park2006-1-2168249",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "metallic",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "park2006-1-2168249",
+          "locator": "Main PDF p.4"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "sphere",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "park2006-1-2168249",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "park2006-1-2168249-ge-nanocrystals-ncs-in-sio2-1--ge2",
+      "name": "Ge2-",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "amount": {
+          "value": 1.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "10^16 cm^-2",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1 10^16 cm^-2",
+          "evidence": [
+            {
+              "source_id": "park2006-1-2168249",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "park2006-1-2168249",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "park2006-1-2168249-ge-nanocrystals-ncs-in-sio2-1--after-s01-implant",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "park2006-1-2168249-ge-nanocrystals-ncs-in-sio2-1--ge2"
+      ]
+    },
+    {
+      "id": "park2006-1-2168249-ge-nanocrystals-ncs-in-sio2-1--after-s02-anneal",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "park2006-1-2168249-ge-nanocrystals-ncs-in-sio2-1--after-s01-implant"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-implant",
+      "action": "implant",
+      "label": "Implant Ge ions into SiO2",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "park2006-1-2168249-ge-nanocrystals-ncs-in-sio2-1--ge2"
+      ],
+      "outputs": [
+        "park2006-1-2168249-ge-nanocrystals-ncs-in-sio2-1--after-s01-implant"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "Ar",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "park2006-1-2168249",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Implant Ge ions into SiO2",
+      "evidence": [
+        {
+          "source_id": "park2006-1-2168249",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-anneal",
+      "action": "anneal",
+      "label": "Anneal in Ar atmosphere",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-implant"
+      ],
+      "inputs": [
+        "park2006-1-2168249-ge-nanocrystals-ncs-in-sio2-1--after-s01-implant"
+      ],
+      "outputs": [
+        "park2006-1-2168249-ge-nanocrystals-ncs-in-sio2-1--after-s02-anneal"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "10 min",
+          "evidence": [
+            {
+              "source_id": "park2006-1-2168249",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "Ar",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "park2006-1-2168249",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Anneal in Ar atmosphere",
+      "evidence": [
+        {
+          "source_id": "park2006-1-2168249",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "park2006-1-2168249-ge-nanocrystals-ncs-in-sio2-1--product",
+      "source_sample_label": "Ge nanocrystals (NCs) in SiO2",
+      "batch_id": null,
+      "material_state_id": "park2006-1-2168249-ge-nanocrystals-ncs-in-sio2-1--after-s02-anneal",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Ge",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "park2006-1-2168249",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "metallic",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "park2006-1-2168249",
+            "locator": "Main PDF p.4"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "sphere",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "park2006-1-2168249",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "park2006-1-2168249",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reactor: conventional furnace (Main PDF p.2).",
+        "Reaction temperature: 950 degC (Main PDF p.2).",
+        "Reaction time: 10 min (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

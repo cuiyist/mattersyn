@@ -1,0 +1,505 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "kawasaki2001-1-1405422-gan-quantum-dots-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Koji Kawasaki (2001): GaN quantum dots",
+  "material": {
+    "formula": "GaN",
+    "family": "GaN nanocrystals",
+    "elements": [
+      "Ga",
+      "N"
+    ],
+    "components": [
+      "GaN"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Self-assembling droplet epitaxy",
+  "sources": [
+    {
+      "id": "kawasaki2001-1-1405422",
+      "doi": "10.1063/1.1405422",
+      "title": "GaN quantum-dot formation by self-assembling droplet epitaxy and application to single-electron transistors",
+      "authors": "Koji Kawasaki, Daisuke Yamazaki, Atsuhiro Kinoshita, Hideki Hirayama, Kazuo Tsutsui, Yoshinobu Aoyagi",
+      "year": 2001,
+      "url": "https://doi.org/10.1063/1.1405422",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "kawasaki2001-1-1405422",
+    "recipe_family": "kawasaki2001-1-1405422-gan-quantum-dots-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "GaN",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "kawasaki2001-1-1405422",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "crystalline",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "kawasaki2001-1-1405422",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": 9.0,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "9 nm",
+      "evidence": [
+        {
+          "source_id": "kawasaki2001-1-1405422",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "dot",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "kawasaki2001-1-1405422",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "kawasaki2001-1-1405422-gan-quantum-dots-1--ammonia",
+      "name": "ammonia",
+      "formula": null,
+      "role": "nonmetal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "kawasaki2001-1-1405422",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "kawasaki2001-1-1405422-gan-quantum-dots-1--after-s01-clean",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "kawasaki2001-1-1405422-gan-quantum-dots-1--after-s02-cool",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "kawasaki2001-1-1405422-gan-quantum-dots-1--after-s01-clean"
+      ]
+    },
+    {
+      "id": "kawasaki2001-1-1405422-gan-quantum-dots-1--after-s03-deposit",
+      "name": "mixture after step 3",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "kawasaki2001-1-1405422-gan-quantum-dots-1--after-s02-cool"
+      ]
+    },
+    {
+      "id": "kawasaki2001-1-1405422-gan-quantum-dots-1--after-s04-anneal",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "kawasaki2001-1-1405422-gan-quantum-dots-1--after-s03-deposit",
+        "kawasaki2001-1-1405422-gan-quantum-dots-1--ammonia"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-clean",
+      "action": "clean",
+      "label": "Thermally clean the substrate in ultrahigh vacuum",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "kawasaki2001-1-1405422-gan-quantum-dots-1--after-s01-clean"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 660,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "660 °C",
+          "evidence": [
+            {
+              "source_id": "kawasaki2001-1-1405422",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "ammonia gas",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "kawasaki2001-1-1405422",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Thermally clean the substrate in ultrahigh vacuum",
+      "evidence": [
+        {
+          "source_id": "kawasaki2001-1-1405422",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-cool",
+      "action": "cool",
+      "label": "Cool the substrate to 300 °C",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-clean"
+      ],
+      "inputs": [
+        "kawasaki2001-1-1405422-gan-quantum-dots-1--after-s01-clean"
+      ],
+      "outputs": [
+        "kawasaki2001-1-1405422-gan-quantum-dots-1--after-s02-cool"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 300,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "300 °C",
+          "evidence": [
+            {
+              "source_id": "kawasaki2001-1-1405422",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "ammonia gas",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "kawasaki2001-1-1405422",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Cool the substrate to 300 °C",
+      "evidence": [
+        {
+          "source_id": "kawasaki2001-1-1405422",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-deposit",
+      "action": "deposit",
+      "label": "Supply Ga molecules to form Ga droplets",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-cool"
+      ],
+      "inputs": [
+        "kawasaki2001-1-1405422-gan-quantum-dots-1--after-s02-cool"
+      ],
+      "outputs": [
+        "kawasaki2001-1-1405422-gan-quantum-dots-1--after-s03-deposit"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 300,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "300 °C",
+          "evidence": [
+            {
+              "source_id": "kawasaki2001-1-1405422",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "ammonia gas",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "kawasaki2001-1-1405422",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Supply Ga molecules to form Ga droplets",
+      "evidence": [
+        {
+          "source_id": "kawasaki2001-1-1405422",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s04-anneal",
+      "action": "anneal",
+      "label": "Anneal under ammonia gas flow to crystallize Ga droplets",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s03-deposit"
+      ],
+      "inputs": [
+        "kawasaki2001-1-1405422-gan-quantum-dots-1--after-s03-deposit",
+        "kawasaki2001-1-1405422-gan-quantum-dots-1--ammonia"
+      ],
+      "outputs": [
+        "kawasaki2001-1-1405422-gan-quantum-dots-1--after-s04-anneal"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "10 min",
+          "evidence": [
+            {
+              "source_id": "kawasaki2001-1-1405422",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "ammonia gas",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "kawasaki2001-1-1405422",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Anneal under ammonia gas flow to crystallize Ga droplets",
+      "evidence": [
+        {
+          "source_id": "kawasaki2001-1-1405422",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "kawasaki2001-1-1405422-gan-quantum-dots-1--product",
+      "source_sample_label": "GaN quantum dots",
+      "batch_id": null,
+      "material_state_id": "kawasaki2001-1-1405422-gan-quantum-dots-1--after-s04-anneal",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "GaN",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "kawasaki2001-1-1405422",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "crystalline",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "kawasaki2001-1-1405422",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "dot",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "kawasaki2001-1-1405422",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "kawasaki2001-1-1405422",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "notes": [
+        "Reactor: gas-source molecular beam epitaxy chamber (Main PDF p.2).",
+        "Reaction temperature: 700 degC (Main PDF p.3).",
+        "Reaction time: 10 min (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "kawasaki2001-1-1405422-gan-quantum-dots-1--size",
+      "sample_id": "kawasaki2001-1-1405422-gan-quantum-dots-1--product",
+      "property": "diameter",
+      "technique": "SEM",
+      "value": {
+        "value": 9.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "9 nm",
+        "evidence": [
+          {
+            "source_id": "kawasaki2001-1-1405422",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "kawasaki2001-1-1405422",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Ligand not reported in the extracted text.",
+      "Amount of ammonia not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

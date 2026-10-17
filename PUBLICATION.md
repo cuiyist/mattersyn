@@ -1,3 +1,13 @@
+## B51/B52 pooled release verified — 2026-10-17T08:23:15+00:00
+
+**35 source_extracted papers /54 new canonical records /181 retained caption keys** are live and anonymously verified. Original contributions: B51 **12 papers/16 records/58 figures**, B52 **23 papers/38 records/123 figures**. Source `76f8214a53f85383ad092c744d32a3cdfb1277e9` passed all three exact-head CI jobs and ordinary PR [64](https://github.com/cuiyist/mattersyn/pull/64), merge `6a2060f9a20447bca32eac2f8b9d94fa62b8a829`. Site `4ab674bff0e5fb237b5eaeb9ceb22c07bb90128f` passed [Pages 39016560701](https://github.com/cuiyist/mattersyn-site/actions/runs/39016560701). Anonymous verification checked 630 files, 35 planned paper routes and 51 material routes with zero failures. Final manifest 47749 files /3120949119 logical bytes.
+
+Actual build totals: **1631 primary paper IDs /5039 canonical records /2918 recipe–structure display pairs**. Audited contributions remain244 papers/864 pairs; SourceEx contributions 1387 papers/2054 pairs. No scientific accuracy, universal unit-cell completeness or training readiness is inferred.
+
+Original limited read history18 papers/26 ordinals/46 whole-object deletions is preserved;13 saved DOI markers intersect this actual H scope. All4,985 old canonical raw files and all54 final H public raw files remain exact; accepted23citation/title-only corrections and181approved caption keys/459Reader instances are preserved. Prior routing/identity HOLDs and all G68 applied-once history remain unchanged. These saved reads are not independent audits. Owner questions, denominator/window and paused audit lane are unchanged.
+
+Storage carries independently verified report `5d1debb95ff09034da6b8a56217d7be1c8c1dcb5`: 812805615475 cumulative logical copy bytes /14635275 copies. Whole prior Source storage object is retained; dated observations do not establish current free space or isolated physical recovery.
+
 ## B51/B52 integration ready for full checks — 2026-10-17T06:17:04.594770+00:00
 
 The next pooled batch has **35 papers /54 new source_extracted records /181 figure crops** (B51:12/16/58; B52:23/38/123). All seven normal integration phases passed. The unchanged asset tool registered339 new assets out of355 checked, with0 new path rules. Six disjoint saved caption inputs were bound to actual DOI/source/page/label/crop identities; one normal apply added181 descriptive captions to459 measured Reader instances (278 record views +181 source figures). The complete ordered Reader inverse and all5,039 canonical raw files passed preservation checks. No new extraction, scientific audit, held-out test, machine training export or publication credit is inferred.

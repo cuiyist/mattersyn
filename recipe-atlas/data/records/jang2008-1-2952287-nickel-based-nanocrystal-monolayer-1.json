@@ -1,0 +1,348 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "jang2008-1-2952287-nickel-based-nanocrystal-monolayer-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Yoo-Sung Jang (2008): nickel-based nanocrystal monolayer",
+  "material": {
+    "formula": "NiSi2",
+    "family": "NiSi2 nanocrystals",
+    "elements": [
+      "Ni",
+      "Si"
+    ],
+    "components": [
+      "NiSi2"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Thermal annealing",
+  "sources": [
+    {
+      "id": "jang2008-1-2952287",
+      "doi": "10.1063/1.2952287",
+      "title": "Formation of nickel-based nanocrystal monolayers for nonvolatile memory applications",
+      "authors": "Yoo-Sung Jang, Jong-Hwan Yoon, Robert G. Elliman",
+      "year": 2008,
+      "url": "https://doi.org/10.1063/1.2952287",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "jang2008-1-2952287",
+    "recipe_family": "jang2008-1-2952287-nickel-based-nanocrystal-monolayer-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "NiSi2",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "jang2008-1-2952287",
+          "locator": "Main PDF p.4"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "single crystal",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "jang2008-1-2952287",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": 3.6,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "3.6 nm",
+      "evidence": [
+        {
+          "source_id": "jang2008-1-2952287",
+          "locator": "Main PDF p.4"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "nanocrystal",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "jang2008-1-2952287",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "jang2008-1-2952287-nickel-based-nanocrystal-monolayer-1--siox",
+      "name": "SiOx",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "jang2008-1-2952287",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "jang2008-1-2952287-nickel-based-nanocrystal-monolayer-1--after-s01-deposit",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "jang2008-1-2952287-nickel-based-nanocrystal-monolayer-1--siox"
+      ]
+    },
+    {
+      "id": "jang2008-1-2952287-nickel-based-nanocrystal-monolayer-1--after-s02-deposit",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "jang2008-1-2952287-nickel-based-nanocrystal-monolayer-1--after-s01-deposit"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-deposit",
+      "action": "deposit",
+      "label": "Deposit SiOx layers on silicon wafers",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "jang2008-1-2952287-nickel-based-nanocrystal-monolayer-1--siox"
+      ],
+      "outputs": [
+        "jang2008-1-2952287-nickel-based-nanocrystal-monolayer-1--after-s01-deposit"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 300,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "300 °C",
+          "evidence": [
+            {
+              "source_id": "jang2008-1-2952287",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jang2008-1-2952287",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Deposit SiOx layers on silicon wafers",
+      "evidence": [
+        {
+          "source_id": "jang2008-1-2952287",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-deposit",
+      "action": "deposit",
+      "label": "Deposit ultrathin Ni layer",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-deposit"
+      ],
+      "inputs": [
+        "jang2008-1-2952287-nickel-based-nanocrystal-monolayer-1--after-s01-deposit"
+      ],
+      "outputs": [
+        "jang2008-1-2952287-nickel-based-nanocrystal-monolayer-1--after-s02-deposit"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jang2008-1-2952287",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Deposit ultrathin Ni layer",
+      "evidence": [
+        {
+          "source_id": "jang2008-1-2952287",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "jang2008-1-2952287-nickel-based-nanocrystal-monolayer-1--product",
+      "source_sample_label": "nickel-based nanocrystal monolayer",
+      "batch_id": null,
+      "material_state_id": "jang2008-1-2952287-nickel-based-nanocrystal-monolayer-1--after-s02-deposit",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "NiSi2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jang2008-1-2952287",
+            "locator": "Main PDF p.4"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "single crystal",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jang2008-1-2952287",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "nanocrystal",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jang2008-1-2952287",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "jang2008-1-2952287",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reactor: quartz-tube furnace (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "jang2008-1-2952287-nickel-based-nanocrystal-monolayer-1--size",
+      "sample_id": "jang2008-1-2952287-nickel-based-nanocrystal-monolayer-1--product",
+      "property": "diameter",
+      "technique": "TEM",
+      "value": {
+        "value": 3.6,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "3.6 nm",
+        "evidence": [
+          {
+            "source_id": "jang2008-1-2952287",
+            "locator": "Main PDF p.4"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "jang2008-1-2952287",
+          "locator": "Main PDF p.4"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Ligand not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of SiOx not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

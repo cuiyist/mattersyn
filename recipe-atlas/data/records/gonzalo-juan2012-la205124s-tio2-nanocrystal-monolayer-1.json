@@ -1,0 +1,325 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "gonzalo-juan2012-la205124s-tio2-nanocrystal-monolayer-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "I. Gonzalo-Juan (2012): TiO2 nanocrystal monolayer",
+  "material": {
+    "formula": "TiO2",
+    "family": "TiO2 nanocrystals",
+    "elements": [
+      "Ti",
+      "O"
+    ],
+    "components": [
+      "TiO2"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Solvothermal",
+  "sources": [
+    {
+      "id": "gonzalo-juan2012-la205124s",
+      "doi": "10.1021/la205124s",
+      "title": "Toward Dynamic Control over TiO2 Nanocrystal Monolayer-by-Monolayer Film Formation by Electrophoretic Deposition in Nonpolar Solvents",
+      "authors": "I. Gonzalo-Juan, Alex J. Krejci, J. H. Dickerson",
+      "year": 2012,
+      "url": "https://doi.org/10.1021/la205124s",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "gonzalo-juan2012-la205124s",
+    "recipe_family": "gonzalo-juan2012-la205124s-tio2-nanocrystal-monolayer-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": 4.0,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "4 nm",
+      "evidence": [
+        {
+          "source_id": "gonzalo-juan2012-la205124s",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "sphere",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "gonzalo-juan2012-la205124s",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "gonzalo-juan2012-la205124s-tio2-nanocrystal-monolayer-1--after-s01-solvothermal-synthesis",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "gonzalo-juan2012-la205124s-tio2-nanocrystal-monolayer-1--after-s02-liquid-liquid-extraction",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "gonzalo-juan2012-la205124s-tio2-nanocrystal-monolayer-1--after-s01-solvothermal-synthesis"
+      ]
+    },
+    {
+      "id": "gonzalo-juan2012-la205124s-tio2-nanocrystal-monolayer-1--after-s03-electrophoretic-depositi",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "gonzalo-juan2012-la205124s-tio2-nanocrystal-monolayer-1--after-s02-liquid-liquid-extraction"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-solvothermal-synthesis",
+      "action": "solvothermal synthesis",
+      "label": "Synthesis of TiO2 nanocrystals",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "gonzalo-juan2012-la205124s-tio2-nanocrystal-monolayer-1--after-s01-solvothermal-synthesis"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Synthesis of TiO2 nanocrystals",
+      "evidence": [
+        {
+          "source_id": "gonzalo-juan2012-la205124s",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-liquid-liquid-extraction",
+      "action": "liquid-liquid extraction",
+      "label": "Removal of surfactant residues",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-solvothermal-synthesis"
+      ],
+      "inputs": [
+        "gonzalo-juan2012-la205124s-tio2-nanocrystal-monolayer-1--after-s01-solvothermal-synthesis"
+      ],
+      "outputs": [
+        "gonzalo-juan2012-la205124s-tio2-nanocrystal-monolayer-1--after-s02-liquid-liquid-extraction"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Removal of surfactant residues",
+      "evidence": [
+        {
+          "source_id": "gonzalo-juan2012-la205124s",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "s03-electrophoretic-depositi",
+      "action": "electrophoretic deposition",
+      "label": "Deposition of nanocrystals onto silicon electrodes",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-liquid-liquid-extraction"
+      ],
+      "inputs": [
+        "gonzalo-juan2012-la205124s-tio2-nanocrystal-monolayer-1--after-s02-liquid-liquid-extraction"
+      ],
+      "outputs": [
+        "gonzalo-juan2012-la205124s-tio2-nanocrystal-monolayer-1--after-s03-electrophoretic-depositi"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Deposition of nanocrystals onto silicon electrodes",
+      "evidence": [
+        {
+          "source_id": "gonzalo-juan2012-la205124s",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "gonzalo-juan2012-la205124s-tio2-nanocrystal-monolayer-1--product",
+      "source_sample_label": "TiO2 nanocrystal monolayer",
+      "batch_id": null,
+      "material_state_id": "gonzalo-juan2012-la205124s-tio2-nanocrystal-monolayer-1--after-s03-electrophoretic-depositi",
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": "sphere",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "gonzalo-juan2012-la205124s",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": "oleic acid and oleylamine",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "gonzalo-juan2012-la205124s",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "gonzalo-juan2012-la205124s",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [
+    {
+      "id": "gonzalo-juan2012-la205124s-tio2-nanocrystal-monolayer-1--size",
+      "sample_id": "gonzalo-juan2012-la205124s-tio2-nanocrystal-monolayer-1--product",
+      "property": "diameter",
+      "technique": "TEM",
+      "value": {
+        "value": 4.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "4 nm",
+        "evidence": [
+          {
+            "source_id": "gonzalo-juan2012-la205124s",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "gonzalo-juan2012-la205124s",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

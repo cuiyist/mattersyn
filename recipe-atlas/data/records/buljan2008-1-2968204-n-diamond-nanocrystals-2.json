@@ -1,0 +1,328 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "buljan2008-1-2968204-n-diamond-nanocrystals-2",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Maja Buljan (2008): n-diamond nanocrystals",
+  "material": {
+    "formula": "C",
+    "family": "C nanocrystals",
+    "elements": [
+      "C"
+    ],
+    "components": [
+      "C"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Ion implantation",
+  "sources": [
+    {
+      "id": "buljan2008-1-2968204",
+      "doi": "10.1063/1.2968204",
+      "title": "Implantation conditions for diamond nanocrystal formation in amorphous silica",
+      "authors": "Maja Buljan, Iva Bogdanović Radović, Uroš V. Desnica, Mile Ivanda, Milko Jakšić, Cecile Saguy, Rafi Kalish, Igor Djerdj, Anđelka Tonejc, and Ozren Gamulin",
+      "year": 2008,
+      "url": "https://doi.org/10.1063/1.2968204",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "buljan2008-1-2968204",
+    "recipe_family": "buljan2008-1-2968204-n-diamond-nanocrystals-2",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "C",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "buljan2008-1-2968204",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "buljan2008-1-2968204-n-diamond-nanocrystals-2--carbon-ions",
+      "name": "carbon ions",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "amount": {
+          "value": 5.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "×10¹⁶ C/cm²",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "5 ×10¹⁶ C/cm²",
+          "evidence": [
+            {
+              "source_id": "buljan2008-1-2968204",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "buljan2008-1-2968204",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "buljan2008-1-2968204-n-diamond-nanocrystals-2--after-s01-implant",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "buljan2008-1-2968204-n-diamond-nanocrystals-2--carbon-ions"
+      ]
+    },
+    {
+      "id": "buljan2008-1-2968204-n-diamond-nanocrystals-2--after-s02-anneal",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "buljan2008-1-2968204-n-diamond-nanocrystals-2--after-s01-implant"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-implant",
+      "action": "implant",
+      "label": "Carbon ions implanted into fused quartz substrates",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "buljan2008-1-2968204-n-diamond-nanocrystals-2--carbon-ions"
+      ],
+      "outputs": [
+        "buljan2008-1-2968204-n-diamond-nanocrystals-2--after-s01-implant"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "forming gas (4% H in Ar)",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "buljan2008-1-2968204",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Carbon ions implanted into fused quartz substrates",
+      "evidence": [
+        {
+          "source_id": "buljan2008-1-2968204",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "s02-anneal",
+      "action": "anneal",
+      "label": "Furnace annealing in forming gas",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-implant"
+      ],
+      "inputs": [
+        "buljan2008-1-2968204-n-diamond-nanocrystals-2--after-s01-implant"
+      ],
+      "outputs": [
+        "buljan2008-1-2968204-n-diamond-nanocrystals-2--after-s02-anneal"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 1000,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1000 °C",
+          "evidence": [
+            {
+              "source_id": "buljan2008-1-2968204",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1 h",
+          "evidence": [
+            {
+              "source_id": "buljan2008-1-2968204",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "forming gas (4% H in Ar)",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "buljan2008-1-2968204",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Furnace annealing in forming gas",
+      "evidence": [
+        {
+          "source_id": "buljan2008-1-2968204",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "buljan2008-1-2968204-n-diamond-nanocrystals-2--product",
+      "source_sample_label": "n-diamond nanocrystals",
+      "batch_id": null,
+      "material_state_id": "buljan2008-1-2968204-n-diamond-nanocrystals-2--after-s02-anneal",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "C",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "buljan2008-1-2968204",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "buljan2008-1-2968204",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "notes": [
+        "Reaction temperature: 1000 degC (Main PDF p.3).",
+        "Reaction time: 1 h (Main PDF p.3)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Reactor not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
