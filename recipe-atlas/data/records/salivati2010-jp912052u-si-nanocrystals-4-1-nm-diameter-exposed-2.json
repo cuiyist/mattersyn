@@ -1,0 +1,504 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "salivati2010-jp912052u-si-nanocrystals-4-1-nm-diameter-exposed-2",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Navneethakrishnan Salivati (2010): Si nanocrystals (∼4.1 nm diameter) exposed to ND3",
+  "material": {
+    "formula": "Si",
+    "family": "Si nanocrystals",
+    "elements": [
+      "Si"
+    ],
+    "components": [
+      "Si"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Hot wire chemical vapor deposition",
+  "sources": [
+    {
+      "id": "salivati2010-jp912052u",
+      "doi": "10.1021/jp912052u",
+      "title": "Chemistry of Silicon Nanocrystal Surfaces Exposed to Ammonia",
+      "authors": "Navneethakrishnan Salivati, Nimrod Shuall, Joseph M. McCrate, and John G. Ekerdt",
+      "year": 2010,
+      "url": "https://doi.org/10.1021/jp912052u",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "salivati2010-jp912052u",
+    "recipe_family": "salivati2010-jp912052u-si-nanocrystals-4-1-nm-diameter-exposed-2",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Si",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "salivati2010-jp912052u",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": 4.1,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "4.1 nm",
+      "evidence": [
+        {
+          "source_id": "salivati2010-jp912052u",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "salivati2010-jp912052u-si-nanocrystals-4-1-nm-diameter-exposed-2--disilane",
+      "name": "disilane",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "salivati2010-jp912052u",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "salivati2010-jp912052u-si-nanocrystals-4-1-nm-diameter-exposed-2--after-s01-anneal",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "salivati2010-jp912052u-si-nanocrystals-4-1-nm-diameter-exposed-2--after-s02-cool",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "salivati2010-jp912052u-si-nanocrystals-4-1-nm-diameter-exposed-2--after-s01-anneal"
+      ]
+    },
+    {
+      "id": "salivati2010-jp912052u-si-nanocrystals-4-1-nm-diameter-exposed-2--after-s03-grow",
+      "name": "mixture after step 3",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "salivati2010-jp912052u-si-nanocrystals-4-1-nm-diameter-exposed-2--after-s02-cool",
+        "salivati2010-jp912052u-si-nanocrystals-4-1-nm-diameter-exposed-2--disilane"
+      ]
+    },
+    {
+      "id": "salivati2010-jp912052u-si-nanocrystals-4-1-nm-diameter-exposed-2--after-s04-expose",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "salivati2010-jp912052u-si-nanocrystals-4-1-nm-diameter-exposed-2--after-s03-grow"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-anneal",
+      "action": "anneal",
+      "label": "Annealing at 975 K",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "salivati2010-jp912052u-si-nanocrystals-4-1-nm-diameter-exposed-2--after-s01-anneal"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 975,
+          "minimum": null,
+          "maximum": null,
+          "unit": "K",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "975 K",
+          "evidence": [
+            {
+              "source_id": "salivati2010-jp912052u",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 15,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "15 min",
+          "evidence": [
+            {
+              "source_id": "salivati2010-jp912052u",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "ultrahigh-vacuum",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "salivati2010-jp912052u",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Annealing at 975 K",
+      "evidence": [
+        {
+          "source_id": "salivati2010-jp912052u",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-cool",
+      "action": "cool",
+      "label": "Cooling to 375 K",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-anneal"
+      ],
+      "inputs": [
+        "salivati2010-jp912052u-si-nanocrystals-4-1-nm-diameter-exposed-2--after-s01-anneal"
+      ],
+      "outputs": [
+        "salivati2010-jp912052u-si-nanocrystals-4-1-nm-diameter-exposed-2--after-s02-cool"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 375,
+          "minimum": null,
+          "maximum": null,
+          "unit": "K",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "375 K",
+          "evidence": [
+            {
+              "source_id": "salivati2010-jp912052u",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "ultrahigh-vacuum",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "salivati2010-jp912052u",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Cooling to 375 K",
+      "evidence": [
+        {
+          "source_id": "salivati2010-jp912052u",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-grow",
+      "action": "grow",
+      "label": "HWCVD growth of Si NCs",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-cool"
+      ],
+      "inputs": [
+        "salivati2010-jp912052u-si-nanocrystals-4-1-nm-diameter-exposed-2--after-s02-cool",
+        "salivati2010-jp912052u-si-nanocrystals-4-1-nm-diameter-exposed-2--disilane"
+      ],
+      "outputs": [
+        "salivati2010-jp912052u-si-nanocrystals-4-1-nm-diameter-exposed-2--after-s03-grow"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 15,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "15 min",
+          "evidence": [
+            {
+              "source_id": "salivati2010-jp912052u",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "ultrahigh-vacuum",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "salivati2010-jp912052u",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "HWCVD growth of Si NCs",
+      "evidence": [
+        {
+          "source_id": "salivati2010-jp912052u",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s04-expose",
+      "action": "expose",
+      "label": "Exposure to ND3",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s03-grow"
+      ],
+      "inputs": [
+        "salivati2010-jp912052u-si-nanocrystals-4-1-nm-diameter-exposed-2--after-s03-grow"
+      ],
+      "outputs": [
+        "salivati2010-jp912052u-si-nanocrystals-4-1-nm-diameter-exposed-2--after-s04-expose"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 375,
+          "minimum": null,
+          "maximum": null,
+          "unit": "K",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "375 K",
+          "evidence": [
+            {
+              "source_id": "salivati2010-jp912052u",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "ultrahigh-vacuum",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "salivati2010-jp912052u",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Exposure to ND3",
+      "evidence": [
+        {
+          "source_id": "salivati2010-jp912052u",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "salivati2010-jp912052u-si-nanocrystals-4-1-nm-diameter-exposed-2--product",
+      "source_sample_label": "Si nanocrystals (∼4.1 nm diameter) exposed to ND3",
+      "batch_id": null,
+      "material_state_id": "salivati2010-jp912052u-si-nanocrystals-4-1-nm-diameter-exposed-2--after-s04-expose",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Si",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "salivati2010-jp912052u",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "salivati2010-jp912052u",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reaction time: 15 min (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "salivati2010-jp912052u-si-nanocrystals-4-1-nm-diameter-exposed-2--size",
+      "sample_id": "salivati2010-jp912052u-si-nanocrystals-4-1-nm-diameter-exposed-2--product",
+      "property": "particle_size",
+      "technique": "not reported",
+      "value": {
+        "value": 4.1,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "4.1 nm",
+        "evidence": [
+          {
+            "source_id": "salivati2010-jp912052u",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "salivati2010-jp912052u",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Amount of disilane not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

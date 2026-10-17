@@ -1,0 +1,304 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "taubert2005-jp051262w-cucl-nanoplatelets-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Andreas Taubert (2005): CuCl nanoplatelets",
+  "material": {
+    "formula": "CuCl",
+    "family": "CuCl nanocrystals",
+    "elements": [
+      "Cu",
+      "Cl"
+    ],
+    "components": [
+      "CuCl"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Synthesis as described in the source",
+  "sources": [
+    {
+      "id": "taubert2005-jp051262w",
+      "doi": "10.1021/jp051262w",
+      "title": "Ionic Liquid Crystal Precursors for Inorganic Particles: Phase Diagram and Thermal Properties of a CuCl Nanoplatelet Precursor",
+      "authors": "Andreas Taubert, Pascal Steiner, and Alexandre Mantion",
+      "year": 2005,
+      "url": "https://doi.org/10.1021/jp051262w",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "taubert2005-jp051262w",
+    "recipe_family": "taubert2005-jp051262w-cucl-nanoplatelets-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CuCl",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "taubert2005-jp051262w",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "crystalline",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "taubert2005-jp051262w",
+          "locator": "Main PDF p.4"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "platelet",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "taubert2005-jp051262w",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "taubert2005-jp051262w-cucl-nanoplatelets-1--bis-dodecylpyridinium-tetrachlorocuprate",
+      "name": "bis(dodecylpyridinium) tetrachlorocuprate",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "taubert2005-jp051262w",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "taubert2005-jp051262w-cucl-nanoplatelets-1--6-o-palmitoyl-ascorbic-acid",
+      "name": "6-O-palmitoyl ascorbic acid",
+      "formula": null,
+      "role": "ligand",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "taubert2005-jp051262w",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "taubert2005-jp051262w-cucl-nanoplatelets-1--after-s01-dissolve",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "taubert2005-jp051262w-cucl-nanoplatelets-1--bis-dodecylpyridinium-tetrachlorocuprate",
+        "taubert2005-jp051262w-cucl-nanoplatelets-1--6-o-palmitoyl-ascorbic-acid"
+      ]
+    },
+    {
+      "id": "taubert2005-jp051262w-cucl-nanoplatelets-1--after-s02-remove",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "taubert2005-jp051262w-cucl-nanoplatelets-1--after-s01-dissolve"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-dissolve",
+      "action": "dissolve",
+      "label": "Dissolve 1 and 2 in THF",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "taubert2005-jp051262w-cucl-nanoplatelets-1--bis-dodecylpyridinium-tetrachlorocuprate",
+        "taubert2005-jp051262w-cucl-nanoplatelets-1--6-o-palmitoyl-ascorbic-acid"
+      ],
+      "outputs": [
+        "taubert2005-jp051262w-cucl-nanoplatelets-1--after-s01-dissolve"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Dissolve 1 and 2 in THF",
+      "evidence": [
+        {
+          "source_id": "taubert2005-jp051262w",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "s02-remove",
+      "action": "remove",
+      "label": "Remove THF by rotary evaporation",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-dissolve"
+      ],
+      "inputs": [
+        "taubert2005-jp051262w-cucl-nanoplatelets-1--after-s01-dissolve"
+      ],
+      "outputs": [
+        "taubert2005-jp051262w-cucl-nanoplatelets-1--after-s02-remove"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Remove THF by rotary evaporation",
+      "evidence": [
+        {
+          "source_id": "taubert2005-jp051262w",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "taubert2005-jp051262w-cucl-nanoplatelets-1--product",
+      "source_sample_label": "CuCl nanoplatelets",
+      "batch_id": null,
+      "material_state_id": "taubert2005-jp051262w-cucl-nanoplatelets-1--after-s02-remove",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CuCl",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "taubert2005-jp051262w",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "crystalline",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "taubert2005-jp051262w",
+            "locator": "Main PDF p.4"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "platelet",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "taubert2005-jp051262w",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "taubert2005-jp051262w",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of bis(dodecylpyridinium) tetrachlorocuprate not reported in the extracted text.",
+      "Amount of 6-O-palmitoyl ascorbic acid not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

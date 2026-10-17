@@ -1,5 +1,7 @@
 # Published machine-extracted papers
 
+Current verified index after B47/B48/B49/B50 (2026-10-17T05:51:16+00:00): **1352 source_extracted primary paper contributions /2000 display pairs**. This release adds68 DOI rows87IDs from original batchesB47/B48/B49/B50, with32 limited saved-read markers. Actual overall totals1596/4985/2864; audited244papers864pairs remain unchanged. Prior memberships, rows, histories and footer remain verbatim; no audit/gold/training credit.
+
 Current verified index after B44/B45/B46 (2026-10-17T01:02:33+00:00): **1284 source_extracted primary paper contributions /1913 display pairs**. This release adds67 DOI rows97IDs from original batchesB44/B45/B46, with40 limited saved-read markers. Actual overall totals1528/4898/2777; audited244papers864pairs remain unchanged. Prior memberships, rows, histories and footer remain verbatim; no audit/gold/training credit.
 
 Current verified index after B42/B43 (2026-10-16T19:10:05+00:00): **1217 source_extracted primary paper contributions /1816 display pairs**. This release adds42 DOI rows69IDs from original batchesB42/B43, with20 limited saved-read markers. Actual overall totals1461/4801/2680; audited244papers864pairs remain unchanged. Prior memberships, rows, histories and footer remain verbatim; no audit/gold/training credit.
@@ -1429,5 +1431,80 @@ Source-extracted display contributions only; saved read markers add no independe
 | 10.1111/j.1551-2916.2007.01898.x | `real2007-j-1551-2916-2007-01898-x-crn-milled-at-3-bar-1` | B45 | 2026-10-17T01:02:33+00:00 | yes |
 | 10.1111/j.1551-2916.2008.02410.x | `ran2008-j-1551-2916-2008-02410-x-ti0-5nb0-5oxny-1` | B45 | 2026-10-17T01:02:33+00:00 | yes |
 | 10.1557/jmr.2005.0387 | `chen2005-jmr-2005-0387-as-deposited-nc-cunip-alloy-1` | B44 | 2026-10-17T01:02:33+00:00 | yes |
+
+Source-extracted display contributions only; saved read markers add no independent audit or training-ready credit. All earlier index rows remain unchanged.
+
+## B47/B48/B49/B50 — verified 2026-10-17T05:51:16+00:00
+
+| DOI | Record IDs | Original batch | Live verification UTC | Limited saved rare read |
+| --- | --- | --- | --- | --- |
+| 10.1002/adfm.200800940 | `lee2009-adfm-200800940-tio2-cds-3-cdse-4-zns-1` | B49 | 2026-10-17T05:51:16+00:00 | no |
+| 10.1002/adma.200702672 | `hendricks2008-adma-200702672-pdac-sps-10-1` | B50 | 2026-10-17T05:51:16+00:00 | yes |
+| 10.1002/anie.200700847 | `wu2007-anie-200700847-hybrid-silicananocrystalorganic-dye-supe-1` | B49 | 2026-10-17T05:51:16+00:00 | no |
+| 10.1002/pssc.201000140 | `konstantinova2011-pssc-201000140-sno2-1-1`, `konstantinova2011-pssc-201000140-sno2-2-2`, `konstantinova2011-pssc-201000140-sno2-3-3`, `konstantinova2011-pssc-201000140-sno2-4-4`, `konstantinova2011-pssc-201000140-sno2-5-5` | B50 | 2026-10-17T05:51:16+00:00 | yes |
+| 10.1007/s00339-005-3446-3 | `yasseriu2006-s00339-005-3446-3-ag-nanocrystals-on-sinws-1`, `yasseriu2006-s00339-005-3446-3-au-nanocrystals-on-sinws-2` | B49 | 2026-10-17T05:51:16+00:00 | no |
+| 10.1007/s10853-010-4665-3 | `koch2010-s10853-010-4665-3-microcrystalline-fe10cr-alloy-2`, `koch2010-s10853-010-4665-3-nanocrystalline-fe10cr-alloy-1` | B49 | 2026-10-17T05:51:16+00:00 | yes |
+| 10.1007/s11051-010-0042-z | `s11051-010-0042-z-nayf4-ce-tb-nanocrystals-1` | B49 | 2026-10-17T05:51:16+00:00 | yes |
+| 10.1016/j.electacta.2015.11.042 | `liu2016-j-electacta-2015-11-042-n-10-pbs-tnas-2`, `liu2016-j-electacta-2015-11-042-w-10-pbs-tnas-1` | B47 | 2026-10-17T05:51:16+00:00 | no |
+| 10.1016/j.jcrysgro.2005.02.051 | `al2005-j-jcrysgro-2005-02-051-ge-quantum-dots-with-boron-on-ge-wetting-1` | B47 | 2026-10-17T05:51:16+00:00 | yes |
+| 10.1016/j.talanta.2014.08.076 | `duan2015-j-talanta-2014-08-076-cdse-zns-quantum-dot-submicrobeads-qbs-1` | B47 | 2026-10-17T05:51:16+00:00 | no |
+| 10.1021/ac4020066 | `text2013-ac4020066-alloyed-cdses-zns-core-shell-qds-with-pl-1` | B50 | 2026-10-17T05:51:16+00:00 | no |
+| 10.1021/ac503791j | `kokkinos2015-ac503791j-stv-conjugated-pbs-qds-1` | B49 | 2026-10-17T05:51:16+00:00 | no |
+| 10.1021/acs.inorgchem.9b01980 | `wei2019-acs-inorgchem-9b01980-qd-shell-modified-cs4pbbr6-microcrystals-1` | B47 | 2026-10-17T05:51:16+00:00 | no |
+| 10.1021/acs.jchemed.9b00642 | `lisensky2020-acs-jchemed-9b00642-zn0-44cu0-78in0-78s2-quantum-dots-1` | B47 | 2026-10-17T05:51:16+00:00 | yes |
+| 10.1021/acsami.6b09496 | `zhang2016-acsami-6b09496-3d-0d-graphene-fe3o4-qd-hybrids-1` | B47 | 2026-10-17T05:51:16+00:00 | no |
+| 10.1021/am404876p | `castan2014-am404876p-blue-qled-3`, `castan2014-am404876p-green-qled-2`, `castan2014-am404876p-red-qled-1` | B49 | 2026-10-17T05:51:16+00:00 | no |
+| 10.1021/am500097f | `text2014-am500097f-mc540-ucn-fpl-1` | B48 | 2026-10-17T05:51:16+00:00 | yes |
+| 10.1021/bc5002032 | `uddayasankar2014-bc5002032-qd-dna-monoconjugates-19-mer-1`, `uddayasankar2014-bc5002032-qd-dna-monoconjugates-29-mer-2`, `uddayasankar2014-bc5002032-qd-dna-monoconjugates-36-mer-3` | B50 | 2026-10-17T05:51:16+00:00 | yes |
+| 10.1021/cg030001d | `praserthdam2004-cg030001d-fe2o3-2`, `praserthdam2004-cg030001d-tio2-1`, `praserthdam2004-cg030001d-zncr2o4-3` | B49 | 2026-10-17T05:51:16+00:00 | yes |
+| 10.1021/cg100381u | `mahima2010-cg100381u-branched-cu-nanorods-1` | B47 | 2026-10-17T05:51:16+00:00 | yes |
+| 10.1021/ie5008213 | `tong2014-ie5008213-cofe2o4-sio2-5-1` | B48 | 2026-10-17T05:51:16+00:00 | no |
+| 10.1021/ja1096368 | `puthussery2011-ja1096368-fes2-nanocrystals-1` | B47 | 2026-10-17T05:51:16+00:00 | yes |
+| 10.1021/ja306869j | `kuo2012-ja306869j-pd-zif-8-yolkshell-nanostructure-1` | B47 | 2026-10-17T05:51:16+00:00 | yes |
+| 10.1021/jp000238+ | `weitz2000-jp000238-20-nm-diameter-pb-quantum-dots-capped-wi-1` | B49 | 2026-10-17T05:51:16+00:00 | yes |
+| 10.1021/jp003166v | `matsui2001-jp003166v-carboxylic-acid-terminated-thiol-capped-1` | B49 | 2026-10-17T05:51:16+00:00 | no |
+| 10.1021/jp0102062 | `lin2001-jp0102062-gold-nanocrystals-1` | B49 | 2026-10-17T05:51:16+00:00 | no |
+| 10.1021/jp047153j | `saunders2004-jp047153j-dodecanethiol-coated-gold-nanocrystals-1` | B48 | 2026-10-17T05:51:16+00:00 | no |
+| 10.1021/jp207744n | `zarazua2011-jp207744n-tio2-au-cdse-qds-p3ot-1` | B48 | 2026-10-17T05:51:16+00:00 | yes |
+| 10.1021/jp211521k | `alkis2012-jp211521k-si-ncs-post-treated-1` | B47 | 2026-10-17T05:51:16+00:00 | no |
+| 10.1021/jp305098m | `text2012-jp305098m-cdse-znscds-nc-tio2-fto-2`, `text2012-jp305098m-znscds-nc-tio2-fto-1` | B49 | 2026-10-17T05:51:16+00:00 | yes |
+| 10.1021/jp3094319 | `yan2013-jp3094319-cdses-zns-sensitized-solar-cell-1` | B49 | 2026-10-17T05:51:16+00:00 | yes |
+| 10.1021/jp404952x | `aldeek2013-jp404952x-red-fluorescent-gold-nanoclusters-auncs-4` | B50 | 2026-10-17T05:51:16+00:00 | yes |
+| 10.1021/jp410615b | `zhou2013-jp410615b-cds-qdsc-c-12-1`, `zhou2013-jp410615b-cds-qdsc-n-12-2` | B47 | 2026-10-17T05:51:16+00:00 | no |
+| 10.1021/jp5086284 | `abdellah2014-jp5086284-cd1xznxse1ysy-gradient-coreshell-quantum-1` | B48 | 2026-10-17T05:51:16+00:00 | yes |
+| 10.1021/jp900131h | `jp900131h-pbse-qds-1` | B48 | 2026-10-17T05:51:16+00:00 | no |
+| 10.1021/jp905871k | `xia2009-jp905871k-fe3o4-magnetic-spheres-1` | B49 | 2026-10-17T05:51:16+00:00 | no |
+| 10.1021/jz301023c | `steinhagen2012-jz301023c-pyrite-nanocrystals-1` | B47 | 2026-10-17T05:51:16+00:00 | yes |
+| 10.1021/jz402338b | `mcdaniel2014-jz402338b-cises-qds-1` | B47 | 2026-10-17T05:51:16+00:00 | yes |
+| 10.1021/la103385s | `rauf2010-la103385s-cdse-zns-quantum-dot-multilayer-using-bi-2`, `rauf2010-la103385s-cdse-zns-quantum-dot-multilayer-using-di-1` | B50 | 2026-10-17T05:51:16+00:00 | no |
+| 10.1021/la303115t | `yusufoglu2012-la303115t-cdse-quantum-dots-qds-1` | B49 | 2026-10-17T05:51:16+00:00 | no |
+| 10.1021/la402367c | `huang2013-la402367c-fe3o4-pani-nanoclusters-1` | B48 | 2026-10-17T05:51:16+00:00 | yes |
+| 10.1021/mz5003855 | `kim2014-mz5003855-rgqd5-1` | B47 | 2026-10-17T05:51:16+00:00 | no |
+| 10.1021/nl049484d | `choi2004-nl049484d-meso-nc-tio2-v-2-1` | B48 | 2026-10-17T05:51:16+00:00 | no |
+| 10.1021/nl201472u | `x2011-nl201472u-oleic-acid-capped-pbs-qds-1` | B50 | 2026-10-17T05:51:16+00:00 | no |
+| 10.1021/nl403478s | `galland2014-nl403478s-cdse-cds-dib-ncs-r0-1-5-nm-h-8-5-nm-1`, `galland2014-nl403478s-cdse-cds-dib-ncs-r0-1-nm-h-9-nm-2` | B47 | 2026-10-17T05:51:16+00:00 | no |
+| 10.1021/nn1020067 | `nn1020067-cdse-qd-etptcdi-cnt-nanocomposite-1` | B47 | 2026-10-17T05:51:16+00:00 | no |
+| 10.1021/nn102873w | `giri2011-nn102873w-zns-capped-cdse-quantum-dots-qds-with-50-1` | B49 | 2026-10-17T05:51:16+00:00 | no |
+| 10.1021/nn2000492 | `arsenault2011-nn2000492-i-ncato-o-1` | B49 | 2026-10-17T05:51:16+00:00 | no |
+| 10.1021/nn400733t | `al2013-nn400733t-16-5-nm-wustite-nanocrystals-1` | B50 | 2026-10-17T05:51:16+00:00 | yes |
+| 10.1038/nnano.2011.159 | `talgorn12011-nnano-2011-159-pbse-qd-solid-1` | B47 | 2026-10-17T05:51:16+00:00 | no |
+| 10.1039/b101004m | `liao2001-b101004m-monodispersed-nanocrystalline-ceo2-powde-1` | B49 | 2026-10-17T05:51:16+00:00 | no |
+| 10.1039/b211831a | `stark2003-b211831a-ce0-5zr0-5o2-1` | B49 | 2026-10-17T05:51:16+00:00 | yes |
+| 10.1039/b414224a | `he2005-b414224a-gold-nanocrystal-coated-polypyrrole-ppy-1` | B48 | 2026-10-17T05:51:16+00:00 | yes |
+| 10.1063/1.115107 | `veprek1995-1-115107-nc-si-sio2-composite-doped-with-tungsten-1` | B49 | 2026-10-17T05:51:16+00:00 | yes |
+| 10.1063/1.117674 | `utzmeier1996-1-117674-insb-quantum-dashes-3-5-ml-2`, `utzmeier1996-1-117674-insb-quantum-dots-2-ml-1` | B48 | 2026-10-17T05:51:16+00:00 | no |
+| 10.1063/1.123548 | `linder1999-1-123548-in0-4ga0-6as-quantum-dot-active-region-1` | B48 | 2026-10-17T05:51:16+00:00 | yes |
+| 10.1063/1.1501441 | `song2002-1-1501441-y2o3-eu3-nanocrystals-5-nm-1` | B48 | 2026-10-17T05:51:16+00:00 | yes |
+| 10.1063/1.1669064 | `wang2004-1-1669064-in0-5ga0-5as-quantum-dot-chains-1`, `wang2004-1-1669064-inas-quantum-dot-chains-2` | B48 | 2026-10-17T05:51:16+00:00 | yes |
+| 10.1063/1.2006677 | `zhao2005-1-2006677-inas-quantum-dots-qds-1` | B50 | 2026-10-17T05:51:16+00:00 | no |
+| 10.1063/1.2213508 | `deng2006-1-2213508-20-nm-batio3-ceramics-1` | B48 | 2026-10-17T05:51:16+00:00 | no |
+| 10.1063/1.2767241 | `chiang2007-1-2767241-silicon-nanocrystals-1` | B48 | 2026-10-17T05:51:16+00:00 | no |
+| 10.1063/1.2828036 | `fernandez2007-1-2828036-cosi2-quantum-dots-on-vicinal-si-111-1` | B49 | 2026-10-17T05:51:16+00:00 | yes |
+| 10.1063/1.365541 | `majima1997-1-365541-sm2fe17nx-powder-with-x-3-2-1` | B48 | 2026-10-17T05:51:16+00:00 | yes |
+| 10.1080/01418639308226403 | `tschope1993-01418639308226403-nanocrystalline-platinum-1` | B48 | 2026-10-17T05:51:16+00:00 | no |
+| 10.1103/physrevb.69.125333 | `physrevb-69-125333-ge-ncs-in-ge-sio2-si-sample-1` | B48 | 2026-10-17T05:51:16+00:00 | no |
+| 10.1103/physrevb.74.125308 | `pan2006-physrevb-74-125308-c-si-p-nc-si-h-n-heterostructure-rtd-1` | B47 | 2026-10-17T05:51:16+00:00 | no |
+| 10.1103/physrevb.81.085321 | `buljan2010-physrevb-81-085321-ge-quantum-dots-in-amorphous-sio2-matrix-1` | B47 | 2026-10-17T05:51:16+00:00 | yes |
+| 10.1111/j.1551-2916.2005.00359.x | `tsai2005-j-1551-2916-2005-00359-x-enstatite-fiber-1` | B48 | 2026-10-17T05:51:16+00:00 | yes |
 
 Source-extracted display contributions only; saved read markers add no independent audit or training-ready credit. All earlier index rows remain unchanged.
