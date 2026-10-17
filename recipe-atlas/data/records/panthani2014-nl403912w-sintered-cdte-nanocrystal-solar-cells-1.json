@@ -1,0 +1,443 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "panthani2014-nl403912w-sintered-cdte-nanocrystal-solar-cells-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Matthew G. Panthani (2014): sintered CdTe nanocrystal solar cells",
+  "material": {
+    "formula": "CdTe",
+    "family": "CdTe nanocrystals",
+    "elements": [
+      "Cd",
+      "Te"
+    ],
+    "components": [
+      "CdTe"
+    ],
+    "architecture": "heterostructure"
+  },
+  "method": "Sintering",
+  "sources": [
+    {
+      "id": "panthani2014-nl403912w",
+      "doi": "10.1021/nl403912w",
+      "title": "High Efficiency Solution Processed Sintered CdTe Nanocrystal Solar Cells: The Role of Interfaces",
+      "authors": "Matthew G. Panthani, J. Matthew Kurley, Ryan W. Crisp, Travis C. Dietz, Taha Ezzyat, Joseph M. Luther, and Dmitri V. Talapin",
+      "year": 2014,
+      "url": "https://doi.org/10.1021/nl403912w",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "panthani2014-nl403912w",
+    "recipe_family": "panthani2014-nl403912w-sintered-cdte-nanocrystal-solar-cells-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdTe",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "panthani2014-nl403912w",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": 6.0,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "6 nm",
+      "evidence": [
+        {
+          "source_id": "panthani2014-nl403912w",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "nanocrystal",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "panthani2014-nl403912w",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "panthani2014-nl403912w-sintered-cdte-nanocrystal-solar-cells-1--cdcl2",
+      "name": "CdCl2",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "amount": {
+          "value": 15.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mg mL−1",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "15 mg mL−1",
+          "evidence": [
+            {
+              "source_id": "panthani2014-nl403912w",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "panthani2014-nl403912w",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "panthani2014-nl403912w-sintered-cdte-nanocrystal-solar-cells-1--after-s01-deposit",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "panthani2014-nl403912w-sintered-cdte-nanocrystal-solar-cells-1--after-s02-treat",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "panthani2014-nl403912w-sintered-cdte-nanocrystal-solar-cells-1--after-s01-deposit",
+        "panthani2014-nl403912w-sintered-cdte-nanocrystal-solar-cells-1--cdcl2"
+      ]
+    },
+    {
+      "id": "panthani2014-nl403912w-sintered-cdte-nanocrystal-solar-cells-1--after-s03-cool",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "panthani2014-nl403912w-sintered-cdte-nanocrystal-solar-cells-1--after-s02-treat"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-deposit",
+      "action": "deposit",
+      "label": "Deposit CdTe nanocrystals in 1-propanol/pyridine mixture",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "panthani2014-nl403912w-sintered-cdte-nanocrystal-solar-cells-1--after-s01-deposit"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 800,
+          "minimum": null,
+          "maximum": null,
+          "unit": "rpm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "800 rpm",
+          "evidence": [
+            {
+              "source_id": "panthani2014-nl403912w",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "panthani2014-nl403912w",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Deposit CdTe nanocrystals in 1-propanol/pyridine mixture",
+      "evidence": [
+        {
+          "source_id": "panthani2014-nl403912w",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-treat",
+      "action": "treat",
+      "label": "Dip in CdCl2 solution",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-deposit"
+      ],
+      "inputs": [
+        "panthani2014-nl403912w-sintered-cdte-nanocrystal-solar-cells-1--after-s01-deposit",
+        "panthani2014-nl403912w-sintered-cdte-nanocrystal-solar-cells-1--cdcl2"
+      ],
+      "outputs": [
+        "panthani2014-nl403912w-sintered-cdte-nanocrystal-solar-cells-1--after-s02-treat"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 60,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "60 °C",
+          "evidence": [
+            {
+              "source_id": "panthani2014-nl403912w",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 15,
+          "minimum": null,
+          "maximum": null,
+          "unit": "s",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "15 s",
+          "evidence": [
+            {
+              "source_id": "panthani2014-nl403912w",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "panthani2014-nl403912w",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Dip in CdCl2 solution",
+      "evidence": [
+        {
+          "source_id": "panthani2014-nl403912w",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-cool",
+      "action": "cool",
+      "label": "Cool on Al block at room temperature",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-treat"
+      ],
+      "inputs": [
+        "panthani2014-nl403912w-sintered-cdte-nanocrystal-solar-cells-1--after-s02-treat"
+      ],
+      "outputs": [
+        "panthani2014-nl403912w-sintered-cdte-nanocrystal-solar-cells-1--after-s03-cool"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "panthani2014-nl403912w",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Cool on Al block at room temperature",
+      "evidence": [
+        {
+          "source_id": "panthani2014-nl403912w",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "panthani2014-nl403912w-sintered-cdte-nanocrystal-solar-cells-1--product",
+      "source_sample_label": "sintered CdTe nanocrystal solar cells",
+      "batch_id": null,
+      "material_state_id": "panthani2014-nl403912w-sintered-cdte-nanocrystal-solar-cells-1--after-s03-cool",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdTe",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "panthani2014-nl403912w",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": "nanocrystal",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "panthani2014-nl403912w",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "panthani2014-nl403912w",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "notes": [
+        "Reactor: 25 × 25 mm ITO-coated glass substrate (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "panthani2014-nl403912w-sintered-cdte-nanocrystal-solar-cells-1--size",
+      "sample_id": "panthani2014-nl403912w-sintered-cdte-nanocrystal-solar-cells-1--product",
+      "property": "optically_derived_size",
+      "technique": "optical sizing",
+      "value": {
+        "value": 6.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "6 nm",
+        "evidence": [
+          {
+            "source_id": "panthani2014-nl403912w",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "panthani2014-nl403912w",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

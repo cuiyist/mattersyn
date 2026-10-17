@@ -1,0 +1,381 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "sun2004-1-1704856-nanocrystalline-diamond-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "L. T. Sun (2004): nanocrystalline diamond",
+  "material": {
+    "formula": "C",
+    "family": "C nanocrystals",
+    "elements": [
+      "C"
+    ],
+    "components": [
+      "C"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Hydrogen plasma post-treatment",
+  "sources": [
+    {
+      "id": "sun2004-1-1704856",
+      "doi": "10.1063/1.1704856",
+      "title": "Nanocrystalline diamond from carbon nanotubes",
+      "authors": "L. T. Sun, J. L. Gong, Z. Y. Zhu, D. Z. Zhu, S. X. He, Z. X. Wang, Y. Chen, G. Hu",
+      "year": 2004,
+      "url": "https://doi.org/10.1063/1.1704856",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "sun2004-1-1704856",
+    "recipe_family": "sun2004-1-1704856-nanocrystalline-diamond-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "C",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "sun2004-1-1704856",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "diamond",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "sun2004-1-1704856",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "nanoparticle",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "sun2004-1-1704856",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "sun2004-1-1704856-nanocrystalline-diamond-1--carbon-nanotubes",
+      "name": "carbon nanotubes",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "sun2004-1-1704856",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "sun2004-1-1704856-nanocrystalline-diamond-1--hydrogen",
+      "name": "hydrogen",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "sun2004-1-1704856",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "sun2004-1-1704856-nanocrystalline-diamond-1--after-s01-irradiate",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "sun2004-1-1704856-nanocrystalline-diamond-1--carbon-nanotubes"
+      ]
+    },
+    {
+      "id": "sun2004-1-1704856-nanocrystalline-diamond-1--after-s02-heat",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "sun2004-1-1704856-nanocrystalline-diamond-1--after-s01-irradiate"
+      ]
+    },
+    {
+      "id": "sun2004-1-1704856-nanocrystalline-diamond-1--after-s03-cool",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "sun2004-1-1704856-nanocrystalline-diamond-1--after-s02-heat"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-irradiate",
+      "action": "irradiate",
+      "label": "Carbon ion beam irradiation",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "sun2004-1-1704856-nanocrystalline-diamond-1--carbon-nanotubes"
+      ],
+      "outputs": [
+        "sun2004-1-1704856-nanocrystalline-diamond-1--after-s01-irradiate"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "hydrogen plasma",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "sun2004-1-1704856",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Carbon ion beam irradiation",
+      "evidence": [
+        {
+          "source_id": "sun2004-1-1704856",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-heat",
+      "action": "heat",
+      "label": "Heat to 1000 K",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-irradiate"
+      ],
+      "inputs": [
+        "sun2004-1-1704856-nanocrystalline-diamond-1--after-s01-irradiate"
+      ],
+      "outputs": [
+        "sun2004-1-1704856-nanocrystalline-diamond-1--after-s02-heat"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 1000,
+          "minimum": null,
+          "maximum": null,
+          "unit": "K",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1000 K",
+          "evidence": [
+            {
+              "source_id": "sun2004-1-1704856",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "hydrogen plasma",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "sun2004-1-1704856",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Heat to 1000 K",
+      "evidence": [
+        {
+          "source_id": "sun2004-1-1704856",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-cool",
+      "action": "cool",
+      "label": "Cool down in vacuum",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-heat"
+      ],
+      "inputs": [
+        "sun2004-1-1704856-nanocrystalline-diamond-1--after-s02-heat"
+      ],
+      "outputs": [
+        "sun2004-1-1704856-nanocrystalline-diamond-1--after-s03-cool"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "hydrogen plasma",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "sun2004-1-1704856",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Cool down in vacuum",
+      "evidence": [
+        {
+          "source_id": "sun2004-1-1704856",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "sun2004-1-1704856-nanocrystalline-diamond-1--product",
+      "source_sample_label": "nanocrystalline diamond",
+      "batch_id": null,
+      "material_state_id": "sun2004-1-1704856-nanocrystalline-diamond-1--after-s03-cool",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "C",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "sun2004-1-1704856",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "diamond",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "sun2004-1-1704856",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "nanoparticle",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "sun2004-1-1704856",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "sun2004-1-1704856",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reactor: PECVD reaction chamber (Main PDF p.2).",
+        "Reaction temperature: 1000 K (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of carbon nanotubes not reported in the extracted text.",
+      "Amount of hydrogen not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

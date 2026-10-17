@@ -1,0 +1,440 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "kanjilal2009-1-3183904-ge-rich-sio2-with-er-doping-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "A. Kanjilal (2009): Ge-rich SiO2 with Er doping",
+  "material": {
+    "formula": "Ge-rich SiO2 with Er doping",
+    "family": "Ge-rich SiO2 with Er doping",
+    "elements": [
+      "Ge",
+      "Si",
+      "O"
+    ],
+    "components": [
+      "Ge",
+      "SiO2"
+    ],
+    "architecture": "unresolved"
+  },
+  "method": "Synthesis as described in the source",
+  "sources": [
+    {
+      "id": "kanjilal2009-1-3183904",
+      "doi": "10.1063/1.3183904",
+      "title": "Defect-engineered blue-violet electroluminescence from Ge nanocrystal rich SiO2 layers by Er doping",
+      "authors": "A. Kanjilal, L. Rebohle, M. Voelskow, W. Skorupa, and M. Helm",
+      "year": 2009,
+      "url": "https://doi.org/10.1063/1.3183904",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "kanjilal2009-1-3183904",
+    "recipe_family": "kanjilal2009-1-3183904-ge-rich-sio2-with-er-doping-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Ge",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "kanjilal2009-1-3183904",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "crystalline",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "kanjilal2009-1-3183904",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": 6.1,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "6.1 nm",
+      "evidence": [
+        {
+          "source_id": "kanjilal2009-1-3183904",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "sphere",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "kanjilal2009-1-3183904",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "kanjilal2009-1-3183904-ge-rich-sio2-with-er-doping-1--er-ions",
+      "name": "Er ions",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "kanjilal2009-1-3183904",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "kanjilal2009-1-3183904-ge-rich-sio2-with-er-doping-1--after-s01-anneal",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "kanjilal2009-1-3183904-ge-rich-sio2-with-er-doping-1--after-s02-implant",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "kanjilal2009-1-3183904-ge-rich-sio2-with-er-doping-1--after-s01-anneal",
+        "kanjilal2009-1-3183904-ge-rich-sio2-with-er-doping-1--er-ions"
+      ]
+    },
+    {
+      "id": "kanjilal2009-1-3183904-ge-rich-sio2-with-er-doping-1--after-s03-anneal",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "kanjilal2009-1-3183904-ge-rich-sio2-with-er-doping-1--after-s02-implant"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-anneal",
+      "action": "anneal",
+      "label": "Anneal to produce Ge NCs",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "kanjilal2009-1-3183904-ge-rich-sio2-with-er-doping-1--after-s01-anneal"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 950,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "950 °C",
+          "evidence": [
+            {
+              "source_id": "kanjilal2009-1-3183904",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 60,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "60 min",
+          "evidence": [
+            {
+              "source_id": "kanjilal2009-1-3183904",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Anneal to produce Ge NCs",
+      "evidence": [
+        {
+          "source_id": "kanjilal2009-1-3183904",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-implant",
+      "action": "implant",
+      "label": "Implant Er ions",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-anneal"
+      ],
+      "inputs": [
+        "kanjilal2009-1-3183904-ge-rich-sio2-with-er-doping-1--after-s01-anneal",
+        "kanjilal2009-1-3183904-ge-rich-sio2-with-er-doping-1--er-ions"
+      ],
+      "outputs": [
+        "kanjilal2009-1-3183904-ge-rich-sio2-with-er-doping-1--after-s02-implant"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Implant Er ions",
+      "evidence": [
+        {
+          "source_id": "kanjilal2009-1-3183904",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-anneal",
+      "action": "anneal",
+      "label": "Anneal to remove implantation-induced defects",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-implant"
+      ],
+      "inputs": [
+        "kanjilal2009-1-3183904-ge-rich-sio2-with-er-doping-1--after-s02-implant"
+      ],
+      "outputs": [
+        "kanjilal2009-1-3183904-ge-rich-sio2-with-er-doping-1--after-s03-anneal"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 900,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "900 °C",
+          "evidence": [
+            {
+              "source_id": "kanjilal2009-1-3183904",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 30,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "30 min",
+          "evidence": [
+            {
+              "source_id": "kanjilal2009-1-3183904",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Anneal to remove implantation-induced defects",
+      "evidence": [
+        {
+          "source_id": "kanjilal2009-1-3183904",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "kanjilal2009-1-3183904-ge-rich-sio2-with-er-doping-1--product",
+      "source_sample_label": "Ge-rich SiO2 with Er doping",
+      "batch_id": null,
+      "material_state_id": "kanjilal2009-1-3183904-ge-rich-sio2-with-er-doping-1--after-s03-anneal",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Ge",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "kanjilal2009-1-3183904",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "crystalline",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "kanjilal2009-1-3183904",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "sphere",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "kanjilal2009-1-3183904",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "kanjilal2009-1-3183904",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reaction temperature: 950 degC (Main PDF p.2).",
+        "Reaction time: 60 min (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "kanjilal2009-1-3183904-ge-rich-sio2-with-er-doping-1--size",
+      "sample_id": "kanjilal2009-1-3183904-ge-rich-sio2-with-er-doping-1--product",
+      "property": "diameter",
+      "technique": "TEM",
+      "value": {
+        "value": 6.1,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "6.1 nm",
+        "evidence": [
+          {
+            "source_id": "kanjilal2009-1-3183904",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "kanjilal2009-1-3183904",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Ligand not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Amount of Er ions not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

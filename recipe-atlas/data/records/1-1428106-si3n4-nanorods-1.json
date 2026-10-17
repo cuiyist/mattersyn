@@ -1,0 +1,368 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "1-1428106-si3n4-nanorods-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Y. H. Gao et al. (2002): Si3N4 nanorods",
+  "material": {
+    "formula": "Si3N4",
+    "family": "Si3N4 nanocrystals",
+    "elements": [
+      "Si",
+      "N"
+    ],
+    "components": [
+      "Si3N4"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Other",
+  "sources": [
+    {
+      "id": "1-1428106",
+      "doi": "10.1063/1.1428106",
+      "title": "Si 3 N 4 / SiC interface structure in SiC-nanocrystal-embedded α-Si3N4 nanorods",
+      "authors": "Y. H. Gao; Y. Bando; K. Kurashima; T. Sato",
+      "year": 2002,
+      "url": "https://doi.org/10.1063/1.1428106",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "1-1428106",
+    "recipe_family": "1-1428106-si3n4-nanorods-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Si3N4",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "1-1428106",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "a-Si3N4",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "1-1428106",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "rod",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "1-1428106",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "1-1428106-si3n4-nanorods-1--silicon-monoxide-sio",
+      "name": "silicon monoxide (SiO)",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "1-1428106",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "1-1428106-si3n4-nanorods-1--amorphous-active-carbon-aac",
+      "name": "amorphous active carbon (AAC)",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "1-1428106",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "1-1428106-si3n4-nanorods-1--highly-curled-carbon-nanotubes-cnts",
+      "name": "highly curled carbon nanotubes (CNTs)",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "1-1428106",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "1-1428106-si3n4-nanorods-1--after-s01-heat",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "1-1428106-si3n4-nanorods-1--silicon-monoxide-sio",
+        "1-1428106-si3n4-nanorods-1--amorphous-active-carbon-aac",
+        "1-1428106-si3n4-nanorods-1--highly-curled-carbon-nanotubes-cnts"
+      ]
+    },
+    {
+      "id": "1-1428106-si3n4-nanorods-1--after-s02-collect",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "1-1428106-si3n4-nanorods-1--after-s01-heat"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-heat",
+      "action": "heat",
+      "label": "Heating reactants in furnace",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "1-1428106-si3n4-nanorods-1--silicon-monoxide-sio",
+        "1-1428106-si3n4-nanorods-1--amorphous-active-carbon-aac",
+        "1-1428106-si3n4-nanorods-1--highly-curled-carbon-nanotubes-cnts"
+      ],
+      "outputs": [
+        "1-1428106-si3n4-nanorods-1--after-s01-heat"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 1380,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1380 °C",
+          "evidence": [
+            {
+              "source_id": "1-1428106",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 2,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "2 h",
+          "evidence": [
+            {
+              "source_id": "1-1428106",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "1-1428106",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Heating reactants in furnace",
+      "evidence": [
+        {
+          "source_id": "1-1428106",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "s02-collect",
+      "action": "collect",
+      "label": "Collecting product at crucible bottom",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-heat"
+      ],
+      "inputs": [
+        "1-1428106-si3n4-nanorods-1--after-s01-heat"
+      ],
+      "outputs": [
+        "1-1428106-si3n4-nanorods-1--after-s02-collect"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Collecting product at crucible bottom",
+      "evidence": [
+        {
+          "source_id": "1-1428106",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "1-1428106-si3n4-nanorods-1--product",
+      "source_sample_label": "Si3N4 nanorods",
+      "batch_id": null,
+      "material_state_id": "1-1428106-si3n4-nanorods-1--after-s02-collect",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Si3N4",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "1-1428106",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "a-Si3N4",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "1-1428106",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "rod",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "1-1428106",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "1-1428106",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "notes": [
+        "Reactor: vertical radio frequency furnace with fused-quartz tube and graphite cylinder (Main PDF p.3).",
+        "Reaction temperature: 1380 degC (Main PDF p.3).",
+        "Reaction time: 2 h (Main PDF p.3)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Amount of silicon monoxide (SiO) not reported in the extracted text.",
+      "Amount of amorphous active carbon (AAC) not reported in the extracted text.",
+      "Amount of highly curled carbon nanotubes (CNTs) not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
