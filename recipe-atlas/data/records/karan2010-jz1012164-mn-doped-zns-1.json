@@ -1,0 +1,332 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "karan2010-jz1012164-mn-doped-zns-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Niladri S. Karan (2010): Mn-doped ZnS",
+  "material": {
+    "formula": "ZnS:Mn",
+    "family": "ZnS:Mn nanocrystals",
+    "elements": [
+      "Zn",
+      "S",
+      "Mn"
+    ],
+    "components": [
+      "ZnS:Mn"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Heat-up",
+  "sources": [
+    {
+      "id": "karan2010-jz1012164",
+      "doi": "10.1021/jz1012164",
+      "title": "Doping Transition Metal (Mn or Cu) Ions in Semiconductor Nanocrystals",
+      "authors": "Niladri S. Karan, D. D. Sarma, R. M. Kadam, and Narayan Pradhan",
+      "year": 2010,
+      "url": "https://doi.org/10.1021/jz1012164",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "karan2010-jz1012164",
+    "recipe_family": "karan2010-jz1012164-mn-doped-zns-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "ZnS:Mn",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "karan2010-jz1012164",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "karan2010-jz1012164-mn-doped-zns-1--zinc-carboxylate",
+      "name": "zinc carboxylate",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "karan2010-jz1012164",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "karan2010-jz1012164-mn-doped-zns-1--elemental-sulfur",
+      "name": "elemental sulfur",
+      "formula": null,
+      "role": "chalcogen_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "karan2010-jz1012164",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "karan2010-jz1012164-mn-doped-zns-1--1-octadecene",
+      "name": "1-octadecene",
+      "formula": null,
+      "role": "solvent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "karan2010-jz1012164",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "karan2010-jz1012164-mn-doped-zns-1--mn3o4",
+      "name": "Mn3O4",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "karan2010-jz1012164",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "karan2010-jz1012164-mn-doped-zns-1--after-s01-heat",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "karan2010-jz1012164-mn-doped-zns-1--zinc-carboxylate",
+        "karan2010-jz1012164-mn-doped-zns-1--elemental-sulfur",
+        "karan2010-jz1012164-mn-doped-zns-1--1-octadecene"
+      ]
+    },
+    {
+      "id": "karan2010-jz1012164-mn-doped-zns-1--after-s02-add",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "karan2010-jz1012164-mn-doped-zns-1--after-s01-heat",
+        "karan2010-jz1012164-mn-doped-zns-1--mn3o4"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-heat",
+      "action": "heat",
+      "label": "Heat-up reaction for ZnS nanocrystal synthesis",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "karan2010-jz1012164-mn-doped-zns-1--zinc-carboxylate",
+        "karan2010-jz1012164-mn-doped-zns-1--elemental-sulfur",
+        "karan2010-jz1012164-mn-doped-zns-1--1-octadecene"
+      ],
+      "outputs": [
+        "karan2010-jz1012164-mn-doped-zns-1--after-s01-heat"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Heat-up reaction for ZnS nanocrystal synthesis",
+      "evidence": [
+        {
+          "source_id": "karan2010-jz1012164",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-add",
+      "action": "add",
+      "label": "Introduce Mn3O4 dopant source",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-heat"
+      ],
+      "inputs": [
+        "karan2010-jz1012164-mn-doped-zns-1--after-s01-heat",
+        "karan2010-jz1012164-mn-doped-zns-1--mn3o4"
+      ],
+      "outputs": [
+        "karan2010-jz1012164-mn-doped-zns-1--after-s02-add"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Introduce Mn3O4 dopant source",
+      "evidence": [
+        {
+          "source_id": "karan2010-jz1012164",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "karan2010-jz1012164-mn-doped-zns-1--product",
+      "source_sample_label": "Mn-doped ZnS",
+      "batch_id": null,
+      "material_state_id": "karan2010-jz1012164-mn-doped-zns-1--after-s02-add",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "ZnS:Mn",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "karan2010-jz1012164",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "karan2010-jz1012164",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "notes": [
+        "Reaction temperature: 240 degC (Main PDF p.3)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of zinc carboxylate not reported in the extracted text.",
+      "Amount of elemental sulfur not reported in the extracted text.",
+      "Amount of 1-octadecene not reported in the extracted text.",
+      "Amount of Mn3O4 not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

@@ -1,0 +1,310 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "rilckschloss1993-1-109660-nanocrystalline-silicon-nc-si-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "M. Rückschloss et al. (1993): nanocrystalline silicon (nc-Si)",
+  "material": {
+    "formula": "Si",
+    "family": "Si nanocrystals",
+    "elements": [
+      "Si"
+    ],
+    "components": [
+      "Si"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Plasma chemical vapor deposition",
+  "sources": [
+    {
+      "id": "rilckschloss1993-1-109660",
+      "doi": "10.1063/1.109660",
+      "title": "Light emitting nanocrystalline silicon prepared by dry processing: The effect of crystallite size",
+      "authors": "M. Rückschloss; B. Landkammer; S. Vepřek",
+      "year": 1993,
+      "url": "https://doi.org/10.1063/1.109660",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "rilckschloss1993-1-109660",
+    "recipe_family": "rilckschloss1993-1-109660-nanocrystalline-silicon-nc-si-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Si",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "rilckschloss1993-1-109660",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "nanocrystalline",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "rilckschloss1993-1-109660",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "rilckschloss1993-1-109660-nanocrystalline-silicon-nc-si-1--silane",
+      "name": "silane",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "rilckschloss1993-1-109660",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "rilckschloss1993-1-109660-nanocrystalline-silicon-nc-si-1--after-s01-deposit",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "rilckschloss1993-1-109660-nanocrystalline-silicon-nc-si-1--silane"
+      ]
+    },
+    {
+      "id": "rilckschloss1993-1-109660-nanocrystalline-silicon-nc-si-1--after-s02-oxidize",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "rilckschloss1993-1-109660-nanocrystalline-silicon-nc-si-1--after-s01-deposit"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-deposit",
+      "action": "deposit",
+      "label": "Plasma induced deposition of hydrogenated silicon films",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "rilckschloss1993-1-109660-nanocrystalline-silicon-nc-si-1--silane"
+      ],
+      "outputs": [
+        "rilckschloss1993-1-109660-nanocrystalline-silicon-nc-si-1--after-s01-deposit"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 100,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "100 °C",
+          "evidence": [
+            {
+              "source_id": "rilckschloss1993-1-109660",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Plasma induced deposition of hydrogenated silicon films",
+      "evidence": [
+        {
+          "source_id": "rilckschloss1993-1-109660",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-oxidize",
+      "action": "oxidize",
+      "label": "Oxidation in pure oxygen",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-deposit"
+      ],
+      "inputs": [
+        "rilckschloss1993-1-109660-nanocrystalline-silicon-nc-si-1--after-s01-deposit"
+      ],
+      "outputs": [
+        "rilckschloss1993-1-109660-nanocrystalline-silicon-nc-si-1--after-s02-oxidize"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 1000,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1000 °C",
+          "evidence": [
+            {
+              "source_id": "rilckschloss1993-1-109660",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Oxidation in pure oxygen",
+      "evidence": [
+        {
+          "source_id": "rilckschloss1993-1-109660",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "rilckschloss1993-1-109660-nanocrystalline-silicon-nc-si-1--product",
+      "source_sample_label": "nanocrystalline silicon (nc-Si)",
+      "batch_id": null,
+      "material_state_id": "rilckschloss1993-1-109660-nanocrystalline-silicon-nc-si-1--after-s02-oxidize",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Si",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "rilckschloss1993-1-109660",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "nanocrystalline",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "rilckschloss1993-1-109660",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "rilckschloss1993-1-109660",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of silane not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

@@ -1,0 +1,390 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "chadwick2005-pssc-200460170-nanocrystalline-linbo3-sol-gel-21-nm-gra-2",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "A. V. Chadwick (2005): nanocrystalline LiNbO3 (sol-gel, 21 nm grain size, 20% SiO2)",
+  "material": {
+    "formula": "LiNbO3",
+    "family": "LiNbO3 nanocrystals",
+    "elements": [
+      "Li",
+      "Nb",
+      "O"
+    ],
+    "components": [
+      "LiNbO3"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Sol-gel",
+  "sources": [
+    {
+      "id": "chadwick2005-pssc-200460170",
+      "doi": "10.1002/pssc.200460170",
+      "title": "Lithium ion transport and microstructure in nanocrystalline lithium niobate",
+      "authors": "A. V. Chadwick, M. J. Pooley, and S. L. P. Savin",
+      "year": 2005,
+      "url": "https://doi.org/10.1002/pssc.200460170",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "chadwick2005-pssc-200460170",
+    "recipe_family": "chadwick2005-pssc-200460170-nanocrystalline-linbo3-sol-gel-21-nm-gra-2",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "LiNbO3",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "chadwick2005-pssc-200460170",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": 21,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "21 nm",
+      "evidence": [
+        {
+          "source_id": "chadwick2005-pssc-200460170",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "chadwick2005-pssc-200460170-nanocrystalline-linbo3-sol-gel-21-nm-gra-2--ethanol",
+      "name": "ethanol",
+      "formula": null,
+      "role": "solvent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "chadwick2005-pssc-200460170",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "chadwick2005-pssc-200460170-nanocrystalline-linbo3-sol-gel-21-nm-gra-2--water",
+      "name": "water",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "chadwick2005-pssc-200460170",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "chadwick2005-pssc-200460170-nanocrystalline-linbo3-sol-gel-21-nm-gra-2--tetraethoxy-silane-teos",
+      "name": "tetraethoxy silane (TEOS)",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "chadwick2005-pssc-200460170",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "chadwick2005-pssc-200460170-nanocrystalline-linbo3-sol-gel-21-nm-gra-2--after-s01-mix",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "chadwick2005-pssc-200460170-nanocrystalline-linbo3-sol-gel-21-nm-gra-2--ethanol"
+      ]
+    },
+    {
+      "id": "chadwick2005-pssc-200460170-nanocrystalline-linbo3-sol-gel-21-nm-gra-2--after-s02-hydrolyse",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "chadwick2005-pssc-200460170-nanocrystalline-linbo3-sol-gel-21-nm-gra-2--after-s01-mix",
+        "chadwick2005-pssc-200460170-nanocrystalline-linbo3-sol-gel-21-nm-gra-2--water"
+      ]
+    },
+    {
+      "id": "chadwick2005-pssc-200460170-nanocrystalline-linbo3-sol-gel-21-nm-gra-2--after-s03-dry",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "chadwick2005-pssc-200460170-nanocrystalline-linbo3-sol-gel-21-nm-gra-2--after-s02-hydrolyse"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-mix",
+      "action": "mix",
+      "label": "Mixing the ethoxides of lithium and niobium in a solution of ethanol",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "chadwick2005-pssc-200460170-nanocrystalline-linbo3-sol-gel-21-nm-gra-2--ethanol"
+      ],
+      "outputs": [
+        "chadwick2005-pssc-200460170-nanocrystalline-linbo3-sol-gel-21-nm-gra-2--after-s01-mix"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Mixing the ethoxides of lithium and niobium in a solution of ethanol",
+      "evidence": [
+        {
+          "source_id": "chadwick2005-pssc-200460170",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-hydrolyse",
+      "action": "hydrolyse",
+      "label": "Partially hydrolysed by the addition of water to produce hydroxy-alkoxides",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-mix"
+      ],
+      "inputs": [
+        "chadwick2005-pssc-200460170-nanocrystalline-linbo3-sol-gel-21-nm-gra-2--after-s01-mix",
+        "chadwick2005-pssc-200460170-nanocrystalline-linbo3-sol-gel-21-nm-gra-2--water"
+      ],
+      "outputs": [
+        "chadwick2005-pssc-200460170-nanocrystalline-linbo3-sol-gel-21-nm-gra-2--after-s02-hydrolyse"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Partially hydrolysed by the addition of water to produce hydroxy-alkoxides",
+      "evidence": [
+        {
+          "source_id": "chadwick2005-pssc-200460170",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-dry",
+      "action": "dry",
+      "label": "The gel was dried",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-hydrolyse"
+      ],
+      "inputs": [
+        "chadwick2005-pssc-200460170-nanocrystalline-linbo3-sol-gel-21-nm-gra-2--after-s02-hydrolyse"
+      ],
+      "outputs": [
+        "chadwick2005-pssc-200460170-nanocrystalline-linbo3-sol-gel-21-nm-gra-2--after-s03-dry"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "The gel was dried",
+      "evidence": [
+        {
+          "source_id": "chadwick2005-pssc-200460170",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "chadwick2005-pssc-200460170-nanocrystalline-linbo3-sol-gel-21-nm-gra-2--product",
+      "source_sample_label": "nanocrystalline LiNbO3 (sol-gel, 21 nm grain size, 20% SiO2)",
+      "batch_id": null,
+      "material_state_id": "chadwick2005-pssc-200460170-nanocrystalline-linbo3-sol-gel-21-nm-gra-2--after-s03-dry",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "LiNbO3",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "chadwick2005-pssc-200460170",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "chadwick2005-pssc-200460170",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [
+    {
+      "id": "chadwick2005-pssc-200460170-nanocrystalline-linbo3-sol-gel-21-nm-gra-2--size",
+      "sample_id": "chadwick2005-pssc-200460170-nanocrystalline-linbo3-sol-gel-21-nm-gra-2--product",
+      "property": "particle_size",
+      "technique": "not reported",
+      "value": {
+        "value": 21,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "21 nm",
+        "evidence": [
+          {
+            "source_id": "chadwick2005-pssc-200460170",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "chadwick2005-pssc-200460170",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of ethanol not reported in the extracted text.",
+      "Amount of water not reported in the extracted text.",
+      "Amount of tetraethoxy silane (TEOS) not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
