@@ -1,0 +1,487 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "gruber2007-1-2739316-er3-y2o3-nanocrystalline-aggregates-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "John B. Gruber et al. (2007): Er3+:Y2O3 nanocrystalline aggregates",
+  "material": {
+    "formula": "Er3+:Y2O3",
+    "family": "Er3+:Y2O3 nanocrystals",
+    "elements": [
+      "Er",
+      "Y",
+      "O"
+    ],
+    "components": [
+      "Er3+:Y2O3"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Precipitation",
+  "sources": [
+    {
+      "id": "gruber2007-1-2739316",
+      "doi": "10.1063/1.2739316",
+      "title": "Spectral analysis of synthesized nanocrystalline aggregates of Er3+:Y2O3",
+      "authors": "John B. Gruber; Dhiraj K. Sardar; Kelly L. Nash; Raylon M. Yow; Waldemar Gorski; Maogen Zhang",
+      "year": 2007,
+      "url": "https://doi.org/10.1063/1.2739316",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "gruber2007-1-2739316",
+    "recipe_family": "gruber2007-1-2739316-er3-y2o3-nanocrystalline-aggregates-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Er3+:Y2O3",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "gruber2007-1-2739316",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "cubic",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "gruber2007-1-2739316",
+          "locator": "Main PDF p.5"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": 200,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "200 nm",
+      "evidence": [
+        {
+          "source_id": "gruber2007-1-2739316",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "sphere",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "gruber2007-1-2739316",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "gruber2007-1-2739316-er3-y2o3-nanocrystalline-aggregates-1--ercl3",
+      "name": "ErCl3",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "gruber2007-1-2739316",
+          "locator": "Main PDF p.4"
+        }
+      ]
+    },
+    {
+      "id": "gruber2007-1-2739316-er3-y2o3-nanocrystalline-aggregates-1--ycl3",
+      "name": "YCl3",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "gruber2007-1-2739316",
+          "locator": "Main PDF p.4"
+        }
+      ]
+    },
+    {
+      "id": "gruber2007-1-2739316-er3-y2o3-nanocrystalline-aggregates-1--urea",
+      "name": "urea",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "gruber2007-1-2739316",
+          "locator": "Main PDF p.4"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "gruber2007-1-2739316-er3-y2o3-nanocrystalline-aggregates-1--after-s01-precipitate",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "gruber2007-1-2739316-er3-y2o3-nanocrystalline-aggregates-1--after-s02-wash",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "gruber2007-1-2739316-er3-y2o3-nanocrystalline-aggregates-1--after-s01-precipitate"
+      ]
+    },
+    {
+      "id": "gruber2007-1-2739316-er3-y2o3-nanocrystalline-aggregates-1--after-s03-dry",
+      "name": "mixture after step 3",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "gruber2007-1-2739316-er3-y2o3-nanocrystalline-aggregates-1--after-s02-wash"
+      ]
+    },
+    {
+      "id": "gruber2007-1-2739316-er3-y2o3-nanocrystalline-aggregates-1--after-s04-calcinate",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "gruber2007-1-2739316-er3-y2o3-nanocrystalline-aggregates-1--after-s03-dry"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-precipitate",
+      "action": "precipitate",
+      "label": "Precipitate mixed hydroxide/oxide nanoparticles",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "gruber2007-1-2739316-er3-y2o3-nanocrystalline-aggregates-1--after-s01-precipitate"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Precipitate mixed hydroxide/oxide nanoparticles",
+      "evidence": [
+        {
+          "source_id": "gruber2007-1-2739316",
+          "locator": "Main PDF p.4"
+        }
+      ]
+    },
+    {
+      "id": "s02-wash",
+      "action": "wash",
+      "label": "Wash precipitates with distilled water and ethanol",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-precipitate"
+      ],
+      "inputs": [
+        "gruber2007-1-2739316-er3-y2o3-nanocrystalline-aggregates-1--after-s01-precipitate"
+      ],
+      "outputs": [
+        "gruber2007-1-2739316-er3-y2o3-nanocrystalline-aggregates-1--after-s02-wash"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Wash precipitates with distilled water and ethanol",
+      "evidence": [
+        {
+          "source_id": "gruber2007-1-2739316",
+          "locator": "Main PDF p.4"
+        }
+      ]
+    },
+    {
+      "id": "s03-dry",
+      "action": "dry",
+      "label": "Dry precipitates at 80°C",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-wash"
+      ],
+      "inputs": [
+        "gruber2007-1-2739316-er3-y2o3-nanocrystalline-aggregates-1--after-s02-wash"
+      ],
+      "outputs": [
+        "gruber2007-1-2739316-er3-y2o3-nanocrystalline-aggregates-1--after-s03-dry"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 80,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "80 °C",
+          "evidence": [
+            {
+              "source_id": "gruber2007-1-2739316",
+              "locator": "Main PDF p.4"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Dry precipitates at 80°C",
+      "evidence": [
+        {
+          "source_id": "gruber2007-1-2739316",
+          "locator": "Main PDF p.4"
+        }
+      ]
+    },
+    {
+      "id": "s04-calcinate",
+      "action": "calcinate",
+      "label": "Calcinate at 900°C for over an hour",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s03-dry"
+      ],
+      "inputs": [
+        "gruber2007-1-2739316-er3-y2o3-nanocrystalline-aggregates-1--after-s03-dry"
+      ],
+      "outputs": [
+        "gruber2007-1-2739316-er3-y2o3-nanocrystalline-aggregates-1--after-s04-calcinate"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 900,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "900 °C",
+          "evidence": [
+            {
+              "source_id": "gruber2007-1-2739316",
+              "locator": "Main PDF p.4"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Calcinate at 900°C for over an hour",
+      "evidence": [
+        {
+          "source_id": "gruber2007-1-2739316",
+          "locator": "Main PDF p.4"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "gruber2007-1-2739316-er3-y2o3-nanocrystalline-aggregates-1--product",
+      "source_sample_label": "Er3+:Y2O3 nanocrystalline aggregates",
+      "batch_id": null,
+      "material_state_id": "gruber2007-1-2739316-er3-y2o3-nanocrystalline-aggregates-1--after-s04-calcinate",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Er3+:Y2O3",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "gruber2007-1-2739316",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "cubic",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "gruber2007-1-2739316",
+            "locator": "Main PDF p.5"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "sphere",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "gruber2007-1-2739316",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "gruber2007-1-2739316",
+          "locator": "Main PDF p.4"
+        }
+      ],
+      "notes": [
+        "Reaction temperature: 95 degC (Main PDF p.4).",
+        "Reaction time: 40 min (Main PDF p.4)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "gruber2007-1-2739316-er3-y2o3-nanocrystalline-aggregates-1--size",
+      "sample_id": "gruber2007-1-2739316-er3-y2o3-nanocrystalline-aggregates-1--product",
+      "property": "diameter",
+      "technique": "SEM",
+      "value": {
+        "value": 200,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "200 nm",
+        "evidence": [
+          {
+            "source_id": "gruber2007-1-2739316",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "gruber2007-1-2739316",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Ligand not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Amount of ErCl3 not reported in the extracted text.",
+      "Amount of YCl3 not reported in the extracted text.",
+      "Amount of urea not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

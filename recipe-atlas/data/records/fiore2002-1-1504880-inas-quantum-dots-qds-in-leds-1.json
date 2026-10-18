@@ -1,0 +1,341 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "fiore2002-1-1504880-inas-quantum-dots-qds-in-leds-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "A. Fiore (2002): InAs quantum dots (QDs) in LEDs",
+  "material": {
+    "formula": "InAs",
+    "family": "InAs nanocrystals",
+    "elements": [
+      "In",
+      "As"
+    ],
+    "components": [
+      "InAs"
+    ],
+    "architecture": "core_shell"
+  },
+  "method": "Molecular beam epitaxy",
+  "sources": [
+    {
+      "id": "fiore2002-1-1504880",
+      "doi": "10.1063/1.1504880",
+      "title": "Scaling quantum-dot light-emitting diodes to submicrometer sizes",
+      "authors": "A. Fiore, J. X. Chen, M. Ilegems",
+      "year": 2002,
+      "url": "https://doi.org/10.1063/1.1504880",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "fiore2002-1-1504880",
+    "recipe_family": "fiore2002-1-1504880-inas-quantum-dots-qds-in-leds-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "InAs",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "fiore2002-1-1504880",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "crystal",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "fiore2002-1-1504880",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": 25,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "25 nm",
+      "evidence": [
+        {
+          "source_id": "fiore2002-1-1504880",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "sphere",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "fiore2002-1-1504880",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "fiore2002-1-1504880-inas-quantum-dots-qds-in-leds-1--inas",
+      "name": "InAs",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "fiore2002-1-1504880",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "fiore2002-1-1504880-inas-quantum-dots-qds-in-leds-1--in0-15ga0-85as",
+      "name": "In0.15Ga0.85As",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "fiore2002-1-1504880",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "fiore2002-1-1504880-inas-quantum-dots-qds-in-leds-1--after-s01-grow",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "fiore2002-1-1504880-inas-quantum-dots-qds-in-leds-1--inas",
+        "fiore2002-1-1504880-inas-quantum-dots-qds-in-leds-1--in0-15ga0-85as"
+      ]
+    },
+    {
+      "id": "fiore2002-1-1504880-inas-quantum-dots-qds-in-leds-1--after-s02-grow",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "fiore2002-1-1504880-inas-quantum-dots-qds-in-leds-1--after-s01-grow"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-grow",
+      "action": "grow",
+      "label": "Grow quantum dots and shell",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "fiore2002-1-1504880-inas-quantum-dots-qds-in-leds-1--inas",
+        "fiore2002-1-1504880-inas-quantum-dots-qds-in-leds-1--in0-15ga0-85as"
+      ],
+      "outputs": [
+        "fiore2002-1-1504880-inas-quantum-dots-qds-in-leds-1--after-s01-grow"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Grow quantum dots and shell",
+      "evidence": [
+        {
+          "source_id": "fiore2002-1-1504880",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "s02-grow",
+      "action": "grow",
+      "label": "Grow hole injector and current aperture",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-grow"
+      ],
+      "inputs": [
+        "fiore2002-1-1504880-inas-quantum-dots-qds-in-leds-1--after-s01-grow"
+      ],
+      "outputs": [
+        "fiore2002-1-1504880-inas-quantum-dots-qds-in-leds-1--after-s02-grow"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Grow hole injector and current aperture",
+      "evidence": [
+        {
+          "source_id": "fiore2002-1-1504880",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "fiore2002-1-1504880-inas-quantum-dots-qds-in-leds-1--product",
+      "source_sample_label": "InAs quantum dots (QDs) in LEDs",
+      "batch_id": null,
+      "material_state_id": "fiore2002-1-1504880-inas-quantum-dots-qds-in-leds-1--after-s02-grow",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "InAs",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "fiore2002-1-1504880",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "crystal",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "fiore2002-1-1504880",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "sphere",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "fiore2002-1-1504880",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "fiore2002-1-1504880",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [
+    {
+      "id": "fiore2002-1-1504880-inas-quantum-dots-qds-in-leds-1--size",
+      "sample_id": "fiore2002-1-1504880-inas-quantum-dots-qds-in-leds-1--product",
+      "property": "particle_size",
+      "technique": "not reported",
+      "value": {
+        "value": 25,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "25 nm",
+        "evidence": [
+          {
+            "source_id": "fiore2002-1-1504880",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "fiore2002-1-1504880",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Ligand not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of InAs not reported in the extracted text.",
+      "Amount of In0.15Ga0.85As not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

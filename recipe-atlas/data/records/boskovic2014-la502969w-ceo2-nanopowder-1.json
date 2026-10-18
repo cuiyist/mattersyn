@@ -1,0 +1,464 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "boskovic2014-la502969w-ceo2-nanopowder-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Nataša M. Tomić et al. (2014): CeO2−δ nanopowder",
+  "material": {
+    "formula": "CeO2−δ",
+    "family": "CeO2−δ nanocrystals",
+    "elements": [
+      "Ce",
+      "O"
+    ],
+    "components": [
+      "CeO2−δ"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Self-propagating room temperature",
+  "sources": [
+    {
+      "id": "boskovic2014-la502969w",
+      "doi": "10.1021/la502969w",
+      "title": "Nanocrystalline CeO 2−δ as Effective Adsorbent of Azo Dyes",
+      "authors": "Nataša M. Tomić; Zorana D. Dohčević-Mitrović; Novica M. Paunović; Dušan Ž. Mijin; Nenad D. Radić; Boško V. Grbić; Sonja M. Aškrabić; Biljana M. Babić; Danica V. Bajuk-Bogdanović",
+      "year": 2014,
+      "url": "https://doi.org/10.1021/la502969w",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "boskovic2014-la502969w",
+    "recipe_family": "boskovic2014-la502969w-ceo2-nanopowder-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CeO2−δ",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "boskovic2014-la502969w",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "cubic fluorite",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "boskovic2014-la502969w",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "boskovic2014-la502969w-ceo2-nanopowder-1--cerium-nitrate-hexahydrate",
+      "name": "cerium nitrate hexahydrate",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "boskovic2014-la502969w",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "boskovic2014-la502969w-ceo2-nanopowder-1--sodium-hydroxide",
+      "name": "sodium hydroxide",
+      "formula": null,
+      "role": "nonmetal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "boskovic2014-la502969w",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "boskovic2014-la502969w-ceo2-nanopowder-1--after-s01-mix",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "boskovic2014-la502969w-ceo2-nanopowder-1--cerium-nitrate-hexahydrate",
+        "boskovic2014-la502969w-ceo2-nanopowder-1--sodium-hydroxide"
+      ]
+    },
+    {
+      "id": "boskovic2014-la502969w-ceo2-nanopowder-1--after-s02-expose",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "boskovic2014-la502969w-ceo2-nanopowder-1--after-s01-mix"
+      ]
+    },
+    {
+      "id": "boskovic2014-la502969w-ceo2-nanopowder-1--after-s03-suspend",
+      "name": "mixture after step 3",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "boskovic2014-la502969w-ceo2-nanopowder-1--after-s02-expose"
+      ]
+    },
+    {
+      "id": "boskovic2014-la502969w-ceo2-nanopowder-1--after-s04-rinse",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "boskovic2014-la502969w-ceo2-nanopowder-1--after-s03-suspend"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-mix",
+      "action": "mix",
+      "label": "Hand-mixing of nitrate with NaOH",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "boskovic2014-la502969w-ceo2-nanopowder-1--cerium-nitrate-hexahydrate",
+        "boskovic2014-la502969w-ceo2-nanopowder-1--sodium-hydroxide"
+      ],
+      "outputs": [
+        "boskovic2014-la502969w-ceo2-nanopowder-1--after-s01-mix"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "10 min",
+          "evidence": [
+            {
+              "source_id": "boskovic2014-la502969w",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "boskovic2014-la502969w",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Hand-mixing of nitrate with NaOH",
+      "evidence": [
+        {
+          "source_id": "boskovic2014-la502969w",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-expose",
+      "action": "expose",
+      "label": "Exposed to air",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-mix"
+      ],
+      "inputs": [
+        "boskovic2014-la502969w-ceo2-nanopowder-1--after-s01-mix"
+      ],
+      "outputs": [
+        "boskovic2014-la502969w-ceo2-nanopowder-1--after-s02-expose"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 4,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "4 h",
+          "evidence": [
+            {
+              "source_id": "boskovic2014-la502969w",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "boskovic2014-la502969w",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Exposed to air",
+      "evidence": [
+        {
+          "source_id": "boskovic2014-la502969w",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-suspend",
+      "action": "suspend",
+      "label": "Suspended in water",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-expose"
+      ],
+      "inputs": [
+        "boskovic2014-la502969w-ceo2-nanopowder-1--after-s02-expose"
+      ],
+      "outputs": [
+        "boskovic2014-la502969w-ceo2-nanopowder-1--after-s03-suspend"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "boskovic2014-la502969w",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Suspended in water",
+      "evidence": [
+        {
+          "source_id": "boskovic2014-la502969w",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s04-rinse",
+      "action": "rinse",
+      "label": "Rinsing of NaNO3 in a centrifuge",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s03-suspend"
+      ],
+      "inputs": [
+        "boskovic2014-la502969w-ceo2-nanopowder-1--after-s03-suspend"
+      ],
+      "outputs": [
+        "boskovic2014-la502969w-ceo2-nanopowder-1--after-s04-rinse"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "10 min",
+          "evidence": [
+            {
+              "source_id": "boskovic2014-la502969w",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "boskovic2014-la502969w",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Rinsing of NaNO3 in a centrifuge",
+      "evidence": [
+        {
+          "source_id": "boskovic2014-la502969w",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "boskovic2014-la502969w-ceo2-nanopowder-1--product",
+      "source_sample_label": "CeO2−δ nanopowder",
+      "batch_id": null,
+      "material_state_id": "boskovic2014-la502969w-ceo2-nanopowder-1--after-s04-rinse",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CeO2−δ",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "boskovic2014-la502969w",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "cubic fluorite",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "boskovic2014-la502969w",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "boskovic2014-la502969w",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reactor: alumina mortar (Main PDF p.2).",
+        "Reaction time: 4 h (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Amount of cerium nitrate hexahydrate not reported in the extracted text.",
+      "Amount of sodium hydroxide not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

@@ -1,5 +1,7 @@
 # Published machine-extracted papers
 
+M50:50source-extracted papers/65records verified 2026-10-18T09:42:42+00:00; source status unchanged, no audit/training credit.
+
 Current verified index after B60/B61 L58 (2026-10-18T03:10:14+00:00): **1,579 source_extracted primary paper contributions / 2,309 display pairs**. Adds 58 DOI rows / 75 IDs from B60/B61, with 29 limited saved-read markers. Overall 1,823 / 5,294 / 3,173; audited 244 papers / 864 pairs unchanged. Previous rows/histories/footer remain verbatim; no audit/gold/training credit.
 
 Current verified index after B56/B57/B58/B59 (2026-10-17T22:08:53+00:00): **1521 source_extracted primary paper contributions /2234 display pairs**. This release adds41 DOI rows53IDs from original batchesB56/B57/B58/B59, with26 limited saved-read markers. Actual overall totals1765/5219/3098; audited244papers864pairs remain unchanged. Prior memberships, rows, histories and footer remain verbatim; no audit/gold/training credit.
@@ -1780,3 +1782,55 @@ Source-extracted display contributions only; saved read markers add no independe
 | 10.1063/1.3493048 | errandonea2010-1-3493048-bulk-pbmoo4-1, errandonea2010-1-3493048-nanocrystalline-pbmoo4-2 | B61 | 2026-10-18T03:10:14+00:00 | yes |
 
 Source-extracted display contributions only; saved read markers add no independent audit/training credit. All earlier index rows and footer remain unchanged.
+
+| 10.1002/anie.200350912 | bukowski2003-anie-200350912-nanocrystalline-al-1, bukowski2003-anie-200350912-nanocrystalline-alxmny-alloy-2, bukowski2003-anie-200350912-nanocrystalline-fe-3, bukowski2003-anie-200350912-nanocrystalline-pd-4 | B63 | 2026-10-18T09:42:42+00:00 | yes |
+| 10.1021/acsphotonics.5b00086 | pei2015-acsphotonics-5b00086-ingan-gan-qd-pillar-in-ag-cavity-1 | B63 | 2026-10-18T09:42:42+00:00 | yes |
+| 10.1021/am4025142 | korgel2013-am4025142-cu0-8-in0-7ga0-3-se2-nanocrystals-1 | B63 | 2026-10-18T09:42:42+00:00 | yes |
+| 10.1021/cm101525p | al2011-cm101525p-zno-i-nanocrystalline-aggregates-1 | B63 | 2026-10-18T09:42:42+00:00 | yes |
+| 10.1021/ja0508469 | bharde2005-ja0508469-magnetite-nanoparticles-after-48-h-of-re-2 | B63 | 2026-10-18T09:42:42+00:00 | no |
+| 10.1021/jp0010031 | felde2000-jp0010031-sno2-sb-16-7-at-1 | B63 | 2026-10-18T09:42:42+00:00 | yes |
+| 10.1021/jp013234t | dollefeld2002-jp013234t-cd17s4-sch2ch2oh-26-1, dollefeld2002-jp013234t-cd32s14-sch2ch-ch3-oh-36-2 | B63 | 2026-10-18T09:42:42+00:00 | yes |
+| 10.1021/jp0360220 | yang2004-jp0360220-platinum-dendrimer-hybrid-nanoparticles-1 | B63 | 2026-10-18T09:42:42+00:00 | yes |
+| 10.1021/jp984574q | zhang1999-jp984574q-16-nm-anatase-tio2-particles-2, zhang1999-jp984574q-6-nm-anatase-tio2-particles-1 | B63 | 2026-10-18T09:42:42+00:00 | no |
+| 10.1021/nl060535b | diana2006-nl060535b-cdse-zns-core-shell-colloidal-quantum-do-1 | B63 | 2026-10-18T09:42:42+00:00 | no |
+| 10.1021/nl4040434 | kinzel2014-nl4040434-al0-3ga0-7as-emission-centers-ecs-in-rad-1 | B63 | 2026-10-18T09:42:42+00:00 | yes |
+| 10.1038/nnano.2006.93 | pompa2006-nnano-2006-93-cdse-zns-nanocrystals-dispersed-in-pmma-1 | B64 | 2026-10-18T09:42:42+00:00 | no |
+| 10.1039/b921744d | redel2010-b921744d-au-nps-kaucl4-sncl2-in-bmim-bf4-1 | B64 | 2026-10-18T09:42:42+00:00 | no |
+| 10.1063/1.115677 | gruen1996-1-115677-faceted-diamond-film-grown-from-ch4-2 | B64 | 2026-10-18T09:42:42+00:00 | no |
+| 10.1063/1.117285 | kaganovskii1996-1-117285-siocu-quantum-dot-thin-film-1 | B64 | 2026-10-18T09:42:42+00:00 | yes |
+| 10.1063/1.1415416 | liu2001-1-1415416-inas-gaas-quantum-dot-laser-with-ingaas-1 | B64 | 2026-10-18T09:42:42+00:00 | no |
+| 10.1063/1.1569973 | nambissan2003-1-1569973-znfe2o4-cer-series-bulk-6, nambissan2003-1-1569973-znfe2o4-ctr-series-bulk-1, nambissan2003-1-1569973-znfe2o4-ctr-series-dc-14-nm-2, nambissan2003-1-1569973-znfe2o4-ctr-series-dc-5-nm-5, nambissan2003-1-1569973-znfe2o4-ctr-series-dc-6-nm-4, nambissan2003-1-1569973-znfe2o4-ctr-series-dc-9-nm-3 | B64 | 2026-10-18T09:42:42+00:00 | yes |
+| 10.1063/1.1637155 | aurongzeb2003-1-1637155-ni-al-multilayer-1 | B64 | 2026-10-18T09:42:42+00:00 | yes |
+| 10.1063/1.1650037 | cha2004-1-1650037-luminescent-nanocrystal-si-nc-si-embedde-1 | B64 | 2026-10-18T09:42:42+00:00 | no |
+| 10.1063/1.1888025 | 1-1888025-sulfur-modified-nanocrystalline-carbon-n-1 | B64 | 2026-10-18T09:42:42+00:00 | yes |
+| 10.1063/1.1944899 | bais2005-1-1944899-inasn-gaas-quantum-dots-sample-e181-1, bais2005-1-1944899-inasn-gaasn-quantum-dots-sample-e187-2, bais2005-1-1944899-ingaasn-gaas-quantum-wells-sample-d960-3 | B64 | 2026-10-18T09:42:42+00:00 | yes |
+| 10.1063/1.2120905 | nataraj2005-1-2120905-one-dimensional-gaas-channel-coupled-ina-1 | B64 | 2026-10-18T09:42:42+00:00 | no |
+| 10.1063/1.2200647 | 1-2200647-silver-nanocrystal-arrays-1 | B64 | 2026-10-18T09:42:42+00:00 | no |
+| 10.1063/1.2217253 | bohra2006-1-2217253-zfpld1-1, bohra2006-1-2217253-zfpld2-2, bohra2006-1-2217253-zfrf-3 | B64 | 2026-10-18T09:42:42+00:00 | yes |
+| 10.1063/1.2335605 | zhang2006-1-2335605-100-layer-strain-balanced-inas-quantum-d-1 | B64 | 2026-10-18T09:42:42+00:00 | no |
+| 10.1063/1.2358851 | huang2006-1-2358851-gd0-2ce0-8o1-9-1 | B64 | 2026-10-18T09:42:42+00:00 | yes |
+| 10.1063/1.2359626 | puglisi2006-1-2359626-si-nanocrystals-si-ncs-by-cvd-1 | B64 | 2026-10-18T09:42:42+00:00 | no |
+| 10.1063/1.2734371 | wang2007-1-2734371-au-nanocrystals-surrounded-with-a-core-s-1 | B64 | 2026-10-18T09:42:42+00:00 | no |
+| 10.1063/1.2766680 | maikap2007-1-2766680-tin-nanocrystals-in-al2o3-films-1 | B64 | 2026-10-18T09:42:42+00:00 | yes |
+| 10.1063/1.2776014 | kim2007-1-2776014-si-nanocrystals-si-ncs-embedded-in-sio2-1 | B64 | 2026-10-18T09:42:42+00:00 | no |
+| 10.1063/1.3354027 | pan2010-1-3354027-tb2tio5-nanocrystal-film-annealed-at-800-1 | B64 | 2026-10-18T09:42:42+00:00 | yes |
+| 10.1063/1.3502481 | thakuria2010-1-3502481-bi0-875ho0-125feo3-1 | B64 | 2026-10-18T09:42:42+00:00 | yes |
+| 10.1063/1.3506538 | ohnuma2010-1-3506538-fe73-5si9b13-5nb3cu1-1 | B64 | 2026-10-18T09:42:42+00:00 | yes |
+| 10.1063/1.360838 | bai1996-1-360838-nanocrystalline-fe-40-nm-grain-size-1 | B62 | 2026-10-18T09:42:42+00:00 | no |
+| 10.1063/1.361538 | kim1996-1-361538-fe88zr7b4cu1-alloy-1 | B62 | 2026-10-18T09:42:42+00:00 | yes |
+| 10.1063/1.368497 | poulsen1998-1-368497-nanocrystalline-ge-h-films-1 | B62 | 2026-10-18T09:42:42+00:00 | yes |
+| 10.1063/1.369007 | al1998-1-369007-fe44co44zr7b4cu1-1 | B62 | 2026-10-18T09:42:42+00:00 | yes |
+| 10.1063/1.370519 | eckert1999-1-370519-zr55al10cu30ni5-composite-with-4-vol-w-p-1 | B62 | 2026-10-18T09:42:42+00:00 | yes |
+| 10.1063/1.372200 | yoon2000-1-372200-si0-7ge0-3-nanocrystals-1 | B62 | 2026-10-18T09:42:42+00:00 | yes |
+| 10.1063/1.372662 | roy2000-1-372662-nanocrystalline-cubic-cufe2o4-1 | B62 | 2026-10-18T09:42:42+00:00 | yes |
+| 10.1103/physrevlett.100.026803 | stegner2008-physrevlett-100-026803-p-doped-si-nanocrystals-si-ncs-1 | B62 | 2026-10-18T09:42:42+00:00 | no |
+| 10.1103/physrevlett.88.025503 | meldrum2002-physrevlett-88-025503-zro2-nanocrystals-embedded-in-amorphous-1 | B62 | 2026-10-18T09:42:42+00:00 | no |
+| 10.1103/physrevlett.90.226104 | bording2003-physrevlett-90-226104-ag-nanocrystals-on-h-si-111-1 | B62 | 2026-10-18T09:42:42+00:00 | no |
+| 10.1111/j.1551-2916.2008.02337.x | yoshida2008-j-1551-2916-2008-02337-x-undoped-polycrystalline-y2o3-1 | B62 | 2026-10-18T09:42:42+00:00 | no |
+| 10.1116/1.1508804 | ammendola2002-1-1508804-si-nanocrystals-embedded-in-sio2-1 | B62 | 2026-10-18T09:42:42+00:00 | no |
+| 10.1116/1.2353849 | fu2006-1-2353849-nc-w2n-a-si3n4-coating-1 | B62 | 2026-10-18T09:42:42+00:00 | yes |
+| 10.1116/1.2710244 | ko2007-1-2710244-in2o3-nanocrystal-chains-1 | B62 | 2026-10-18T09:42:42+00:00 | no |
+| 10.1116/1.590275 | lutzen1998-1-590275-nanocrystalline-si-film-nc-si-1 | B62 | 2026-10-18T09:42:42+00:00 | no |
+| 10.1557/jmr.2004.0442 | basu2004-jmr-2004-0442-nanocrystalline-ceo2-ce3-1 | B62 | 2026-10-18T09:42:42+00:00 | no |
+| 10.1557/jmr.2005.0157 | saraf2005-jmr-2005-0157-nanocrystalline-ceria-film-with-38-nm-av-2, saraf2005-jmr-2005-0157-nanocrystalline-ceria-film-with-7-nm-ave-1 | B62 | 2026-10-18T09:42:42+00:00 | no |
+

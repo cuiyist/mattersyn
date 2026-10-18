@@ -1,0 +1,369 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "xu2006-1-2194939-zno-as-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Ning Xu (2006): ZnO:As",
+  "material": {
+    "formula": "ZnO:As",
+    "family": "ZnO:As nanocrystals",
+    "elements": [
+      "Zn",
+      "O",
+      "As"
+    ],
+    "components": [
+      "ZnO:As"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Pulsed laser deposition",
+  "sources": [
+    {
+      "id": "xu2006-1-2194939",
+      "doi": "10.1116/1.2194939",
+      "title": "Arsenic doping for synthesis of nanocrystalline p-type ZnO thin films",
+      "authors": "Ning Xu, Yingliang Xu, Li Li, Yiqun Shen, Tinwei Zhang, Jiada Wu, Jian Sun, and Zhifeng Ying",
+      "year": 2006,
+      "url": "https://doi.org/10.1116/1.2194939",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "xu2006-1-2194939",
+    "recipe_family": "xu2006-1-2194939-zno-as-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "ZnO:As",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "xu2006-1-2194939",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": 21.3,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "21.3 nm",
+      "evidence": [
+        {
+          "source_id": "xu2006-1-2194939",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "xu2006-1-2194939-zno-as-1--zno",
+      "name": "ZnO",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "xu2006-1-2194939",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "xu2006-1-2194939-zno-as-1--as2o3",
+      "name": "As2O3",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "concentration": {
+          "value": 6.6,
+          "minimum": null,
+          "maximum": null,
+          "unit": "wt %",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "6.6 wt %",
+          "evidence": [
+            {
+              "source_id": "xu2006-1-2194939",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "xu2006-1-2194939",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "xu2006-1-2194939-zno-as-1--after-s01-clean",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "xu2006-1-2194939-zno-as-1--after-s02-deposit",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "xu2006-1-2194939-zno-as-1--after-s01-clean",
+        "xu2006-1-2194939-zno-as-1--zno",
+        "xu2006-1-2194939-zno-as-1--as2o3"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-clean",
+      "action": "clean",
+      "label": "Clean substrates with alcohol and de-ionized water",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "xu2006-1-2194939-zno-as-1--after-s01-clean"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "oxygen",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "xu2006-1-2194939",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Clean substrates with alcohol and de-ionized water",
+      "evidence": [
+        {
+          "source_id": "xu2006-1-2194939",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-deposit",
+      "action": "deposit",
+      "label": "Deposit ZnO:As film using pulsed laser deposition",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-clean"
+      ],
+      "inputs": [
+        "xu2006-1-2194939-zno-as-1--after-s01-clean",
+        "xu2006-1-2194939-zno-as-1--zno",
+        "xu2006-1-2194939-zno-as-1--as2o3"
+      ],
+      "outputs": [
+        "xu2006-1-2194939-zno-as-1--after-s02-deposit"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 30,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "30 min",
+          "evidence": [
+            {
+              "source_id": "xu2006-1-2194939",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "oxygen",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "xu2006-1-2194939",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Deposit ZnO:As film using pulsed laser deposition",
+      "evidence": [
+        {
+          "source_id": "xu2006-1-2194939",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "xu2006-1-2194939-zno-as-1--product",
+      "source_sample_label": "ZnO:As",
+      "batch_id": null,
+      "material_state_id": "xu2006-1-2194939-zno-as-1--after-s02-deposit",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "ZnO:As",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "xu2006-1-2194939",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "xu2006-1-2194939",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reactor: growth chamber (Main PDF p.2).",
+        "Reaction temperature: 500 degC (Main PDF p.2).",
+        "Reaction time: 30 min (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "xu2006-1-2194939-zno-as-1--size",
+      "sample_id": "xu2006-1-2194939-zno-as-1--product",
+      "property": "crystallite_size",
+      "technique": "XRD",
+      "value": {
+        "value": 21.3,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "21.3 nm",
+        "evidence": [
+          {
+            "source_id": "xu2006-1-2194939",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "xu2006-1-2194939",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Amount of ZnO not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

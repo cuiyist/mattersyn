@@ -1,0 +1,516 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "qin2003-1-1621659-sige-double-quantum-dot-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "H. Qin et al. (2003): SiGe double quantum dot",
+  "material": {
+    "formula": "Si0.9Ge0.1",
+    "family": "Si0.9Ge0.1 nanocrystals",
+    "elements": [
+      "Si",
+      "Ge"
+    ],
+    "components": [
+      "Si0.9Ge0.1"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Electron beam lithography and reactive ion etching",
+  "sources": [
+    {
+      "id": "qin2003-1-1621659",
+      "doi": "10.1116/1.1621659",
+      "title": "Fabrication and characterization of a SiGe double quantum dot structure",
+      "authors": "H. Qin; Shazia Yasin; D. A. Williams",
+      "year": 2003,
+      "url": "https://doi.org/10.1116/1.1621659",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "qin2003-1-1621659",
+    "recipe_family": "qin2003-1-1621659-sige-double-quantum-dot-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Si0.9Ge0.1",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "qin2003-1-1621659",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": 50,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "50 nm",
+      "evidence": [
+        {
+          "source_id": "qin2003-1-1621659",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "quantum dot",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "qin2003-1-1621659",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "qin2003-1-1621659-sige-double-quantum-dot-1--n-type-si0-9ge0-1",
+      "name": "n-type Si0.9Ge0.1",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "qin2003-1-1621659",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "qin2003-1-1621659-sige-double-quantum-dot-1--undoped-silicon",
+      "name": "undoped silicon",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "qin2003-1-1621659",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "qin2003-1-1621659-sige-double-quantum-dot-1--after-s01-grow",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "qin2003-1-1621659-sige-double-quantum-dot-1--n-type-si0-9ge0-1"
+      ]
+    },
+    {
+      "id": "qin2003-1-1621659-sige-double-quantum-dot-1--after-s02-deposit",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "qin2003-1-1621659-sige-double-quantum-dot-1--after-s01-grow",
+        "qin2003-1-1621659-sige-double-quantum-dot-1--undoped-silicon"
+      ]
+    },
+    {
+      "id": "qin2003-1-1621659-sige-double-quantum-dot-1--after-s03-define",
+      "name": "mixture after step 3",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "qin2003-1-1621659-sige-double-quantum-dot-1--after-s02-deposit"
+      ]
+    },
+    {
+      "id": "qin2003-1-1621659-sige-double-quantum-dot-1--after-s04-pattern",
+      "name": "mixture after step 4",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "qin2003-1-1621659-sige-double-quantum-dot-1--after-s03-define"
+      ]
+    },
+    {
+      "id": "qin2003-1-1621659-sige-double-quantum-dot-1--after-s05-pattern",
+      "name": "mixture after step 5",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "qin2003-1-1621659-sige-double-quantum-dot-1--after-s04-pattern"
+      ]
+    },
+    {
+      "id": "qin2003-1-1621659-sige-double-quantum-dot-1--after-s06-deposit",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "qin2003-1-1621659-sige-double-quantum-dot-1--after-s05-pattern"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-grow",
+      "action": "grow",
+      "label": "Grow n-type Si0.9Ge0.1 active layer",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "qin2003-1-1621659-sige-double-quantum-dot-1--n-type-si0-9ge0-1"
+      ],
+      "outputs": [
+        "qin2003-1-1621659-sige-double-quantum-dot-1--after-s01-grow"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Grow n-type Si0.9Ge0.1 active layer",
+      "evidence": [
+        {
+          "source_id": "qin2003-1-1621659",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-deposit",
+      "action": "deposit",
+      "label": "Deposit undoped silicon cap layer",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-grow"
+      ],
+      "inputs": [
+        "qin2003-1-1621659-sige-double-quantum-dot-1--after-s01-grow",
+        "qin2003-1-1621659-sige-double-quantum-dot-1--undoped-silicon"
+      ],
+      "outputs": [
+        "qin2003-1-1621659-sige-double-quantum-dot-1--after-s02-deposit"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Deposit undoped silicon cap layer",
+      "evidence": [
+        {
+          "source_id": "qin2003-1-1621659",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-define",
+      "action": "define",
+      "label": "Define mesa structure using optical lithography and reactive ion etching",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-deposit"
+      ],
+      "inputs": [
+        "qin2003-1-1621659-sige-double-quantum-dot-1--after-s02-deposit"
+      ],
+      "outputs": [
+        "qin2003-1-1621659-sige-double-quantum-dot-1--after-s03-define"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Define mesa structure using optical lithography and reactive ion etching",
+      "evidence": [
+        {
+          "source_id": "qin2003-1-1621659",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s04-pattern",
+      "action": "pattern",
+      "label": "Pattern local alignment masks using electron beam lithography",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s03-define"
+      ],
+      "inputs": [
+        "qin2003-1-1621659-sige-double-quantum-dot-1--after-s03-define"
+      ],
+      "outputs": [
+        "qin2003-1-1621659-sige-double-quantum-dot-1--after-s04-pattern"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Pattern local alignment masks using electron beam lithography",
+      "evidence": [
+        {
+          "source_id": "qin2003-1-1621659",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s05-pattern",
+      "action": "pattern",
+      "label": "Pattern device layout using high resolution electron beam lithography",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s04-pattern"
+      ],
+      "inputs": [
+        "qin2003-1-1621659-sige-double-quantum-dot-1--after-s04-pattern"
+      ],
+      "outputs": [
+        "qin2003-1-1621659-sige-double-quantum-dot-1--after-s05-pattern"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Pattern device layout using high resolution electron beam lithography",
+      "evidence": [
+        {
+          "source_id": "qin2003-1-1621659",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s06-deposit",
+      "action": "deposit",
+      "label": "Deposit aluminum layer and lift-off to form self-aligned mask",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s05-pattern"
+      ],
+      "inputs": [
+        "qin2003-1-1621659-sige-double-quantum-dot-1--after-s05-pattern"
+      ],
+      "outputs": [
+        "qin2003-1-1621659-sige-double-quantum-dot-1--after-s06-deposit"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Deposit aluminum layer and lift-off to form self-aligned mask",
+      "evidence": [
+        {
+          "source_id": "qin2003-1-1621659",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "qin2003-1-1621659-sige-double-quantum-dot-1--product",
+      "source_sample_label": "SiGe double quantum dot",
+      "batch_id": null,
+      "material_state_id": "qin2003-1-1621659-sige-double-quantum-dot-1--after-s06-deposit",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Si0.9Ge0.1",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "qin2003-1-1621659",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": "quantum dot",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "qin2003-1-1621659",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "qin2003-1-1621659",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [
+    {
+      "id": "qin2003-1-1621659-sige-double-quantum-dot-1--size",
+      "sample_id": "qin2003-1-1621659-sige-double-quantum-dot-1--product",
+      "property": "particle_size",
+      "technique": "not reported",
+      "value": {
+        "value": 50,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "50 nm",
+        "evidence": [
+          {
+            "source_id": "qin2003-1-1621659",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "qin2003-1-1621659",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of n-type Si0.9Ge0.1 not reported in the extracted text.",
+      "Amount of undoped silicon not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
