@@ -213,6 +213,9 @@ def elements_of(formula):
 
 def components_of(composition):
     """Split only top-level separators; malformed groups remain one opaque label."""
+    # A complete numeric polytype prefix is part of its formula, not a component.
+    if re.fullmatch(rf'[1-9]\d*[CHRT]-(?:(?:{ELEMENT})(?![a-z])\d*)+', composition.strip()):
+        return [composition.strip()]
     separator = re.compile(r'[/@]|(?<=[A-Za-z0-9)])[-–—−](?=[A-Z])')
     closers = {'(': ')', '[': ']', '{': '}'}
     stack, parts, start = [], [], 0
