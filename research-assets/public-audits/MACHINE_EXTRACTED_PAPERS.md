@@ -1,5 +1,7 @@
 # Published machine-extracted papers
 
+Current verified index after B60/B61 L58 (2026-10-18T03:10:14+00:00): **1,579 source_extracted primary paper contributions / 2,309 display pairs**. Adds 58 DOI rows / 75 IDs from B60/B61, with 29 limited saved-read markers. Overall 1,823 / 5,294 / 3,173; audited 244 papers / 864 pairs unchanged. Previous rows/histories/footer remain verbatim; no audit/gold/training credit.
+
 Current verified index after B56/B57/B58/B59 (2026-10-17T22:08:53+00:00): **1521 source_extracted primary paper contributions /2234 display pairs**. This release adds41 DOI rows53IDs from original batchesB56/B57/B58/B59, with26 limited saved-read markers. Actual overall totals1765/5219/3098; audited244papers864pairs remain unchanged. Prior memberships, rows, histories and footer remain verbatim; no audit/gold/training credit.
 
 Current verified index after B55/B56/B57 (2026-10-17T16:02:38+00:00): **1480 source_extracted primary paper contributions /2181 display pairs**. This release adds44 DOI rows61IDs from original batchesB55/B56/B57, with13 limited saved-read markers. Actual overall totals1724/5166/3045; audited244papers864pairs remain unchanged. Prior memberships, rows, histories and footer remain verbatim; no audit/gold/training credit.
@@ -1713,3 +1715,68 @@ Source-extracted display contributions only; saved read markers add no independe
 | 10.1116/1.1688346 | `yau2004-1-1688346-nc-ti-al-n12x-a-siny-composite-film-1` | B58 | 2026-10-17T22:08:53+00:00 | no |
 
 Source-extracted display contributions only; saved read markers add no independent audit or training-ready credit. All earlier index rows remain unchanged.
+
+## B60/B61 L58 — verified 2026-10-18T03:10:14+00:00
+
+| DOI | Record IDs | Original batch | Live verification UTC | Limited saved rare read |
+| --- | --- | --- | --- | --- |
+| 10.1021/ja029030n | lee2003-ja029030n-au38-phc2-5-peg-19-ii-2 | B60 | 2026-10-18T03:10:14+00:00 | yes |
+| 10.1021/jp036307c | heroux2004-jp036307c-ap-mgo-with-15-9-wt-carbon-2, heroux2004-jp036307c-ap-mgo-with-3-2-wt-carbon-1 | B60 | 2026-10-18T03:10:14+00:00 | no |
+| 10.1021/jp201098t | x2011-jp201098t-tio2-nrs-2 | B60 | 2026-10-18T03:10:14+00:00 | no |
+| 10.1021/jp308279m | rastgar2013-jp308279m-hydrogen-terminated-silicon-nanocrystals-1 | B60 | 2026-10-18T03:10:14+00:00 | no |
+| 10.1021/jp508028t | hwang2014-jp508028t-cu2znsnse4-cztse-thin-films-1 | B60 | 2026-10-18T03:10:14+00:00 | yes |
+| 10.1021/jp9011476 | siedl2009-jp9011476-tio2-nanocrystals-1, siedl2009-jp9011476-zro2-nanocrystals-2 | B60 | 2026-10-18T03:10:14+00:00 | no |
+| 10.1021/jp983791o | costa1999-jp983791o-al2o3-compacted-at-4-5-gpa-and-562-c-2, costa1999-jp983791o-al2o3-compacted-at-4-5-gpa-and-room-temp-1 | B60 | 2026-10-18T03:10:14+00:00 | no |
+| 10.1021/nl071093m | pan2007-nl071093m-nanocrystalline-ni-nc-ni-films-1 | B60 | 2026-10-18T03:10:14+00:00 | no |
+| 10.1021/nl2023806 | brittman2011-nl2023806-octahedral-silver-nanocrystal-1 | B60 | 2026-10-18T03:10:14+00:00 | no |
+| 10.1021/nl203235u | gao2011-nl203235u-pbse-quantum-dot-solid-1 | B60 | 2026-10-18T03:10:14+00:00 | no |
+| 10.1021/nl8024467 | nl8024467-hexylamine-capped-pbse-nanocrystals-1 | B60 | 2026-10-18T03:10:14+00:00 | no |
+| 10.1021/nn100346h | neltner2010-nn100346h-1-rh-10-ni-ceo2-m13-templated-1, neltner2010-nn100346h-10-ni-ceo2-untemplated-2 | B60 | 2026-10-18T03:10:14+00:00 | yes |
+| 10.1039/b506976a | wang2006-b506976a-ceo2na-mls-nanocomposite-1 | B60 | 2026-10-18T03:10:14+00:00 | yes |
+| 10.1039/b708269j | kale2007-b708269j-q-cdsglass-powder-1 | B60 | 2026-10-18T03:10:14+00:00 | no |
+| 10.1039/b918759f | liu2010-b918759f-geo2-nanocubes-2, liu2010-b918759f-geo2-nanospindles-3 | B60 | 2026-10-18T03:10:14+00:00 | yes |
+| 10.1063/1.103436 | chatterjee1990-1-103436-fe-cr-sio2-2, chatterjee1990-1-103436-fe-sio2-sample-1-1 | B60 | 2026-10-18T03:10:14+00:00 | yes |
+| 10.1063/1.106808 | paine1992-1-106808-nanocrystalline-ge-precipitates-in-sio2-1 | B60 | 2026-10-18T03:10:14+00:00 | no |
+| 10.1063/1.108170 | zhang1992-1-108170-fe-nanocrystalline-in-sio2-1 | B60 | 2026-10-18T03:10:14+00:00 | no |
+| 10.1063/1.114059 | tong1995-1-114059-nc-si-h-a-si-h-multilayer-with-ln-2-1-nm-1 | B60 | 2026-10-18T03:10:14+00:00 | no |
+| 10.1063/1.124985 | tsybeskov1999-1-124985-nanocrystalline-si-nc-si-amorphous-sio2-1 | B60 | 2026-10-18T03:10:14+00:00 | no |
+| 10.1063/1.126095 | leon2000-1-126095-ingaas-gaas-quantum-dots-qds-1 | B60 | 2026-10-18T03:10:14+00:00 | yes |
+| 10.1063/1.126350 | kerdiles2000-1-126350-nanocrystalline-silicon-carbide-nc-sic-h-1 | B60 | 2026-10-18T03:10:14+00:00 | no |
+| 10.1063/1.126632 | tachibana2000-1-126632-ingan-quantum-dot-structures-on-hexagona-1 | B60 | 2026-10-18T03:10:14+00:00 | yes |
+| 10.1063/1.1430539 | schubert2002-1-1430539-ge-nanocrystals-in-4hsic-1 | B60 | 2026-10-18T03:10:14+00:00 | no |
+| 10.1063/1.1447508 | bollero2002-1-1447508-pr15dy1fe75-9b8zr0-1-1, bollero2002-1-1447508-pr9nd3dy1fe72co8b6-9zr0-1-2 | B60 | 2026-10-18T03:10:14+00:00 | yes |
+| 10.1063/1.1467983 | lin2002-1-1467983-ingan-gan-quantum-well-sample-with-irreg-2, lin2002-1-1467983-ingan-gan-quantum-well-sample-with-quasi-1 | B60 | 2026-10-18T03:10:14+00:00 | no |
+| 10.1063/1.1495544 | soo2002-1-1495544-tio2-co-nanocrystals-annealed-at-1000-c-3, soo2002-1-1495544-tio2-co-nanocrystals-annealed-at-220-c-1, soo2002-1-1495544-tio2-co-nanocrystals-annealed-at-450-c-2 | B60 | 2026-10-18T03:10:14+00:00 | yes |
+| 10.1063/1.1544641 | sellin2003-1-1544641-in0-5ga0-5as-quantum-dots-qds-1 | B61 | 2026-10-18T03:10:14+00:00 | yes |
+| 10.1063/1.1582361 | banerjee2003-1-1582361-nanocrystalline-niobium-thin-films-1 | B61 | 2026-10-18T03:10:14+00:00 | yes |
+| 10.1063/1.1604966 | ghosh2003-1-1604966-nanocrystalline-tio2-rutile-phase-2 | B61 | 2026-10-18T03:10:14+00:00 | no |
+| 10.1063/1.1687979 | todaro2004-1-1687979-ingaas-quantum-dots-qds-in-gaas-matrix-1 | B61 | 2026-10-18T03:10:14+00:00 | no |
+| 10.1063/1.1801685 | baruwati2004-1-1801685-nife2o4-ph-7-1 | B61 | 2026-10-18T03:10:14+00:00 | no |
+| 10.1063/1.1815043 | edwards2004-1-1815043-inxga1xn-quantum-dots-at-gan-micropyrami-1 | B61 | 2026-10-18T03:10:14+00:00 | yes |
+| 10.1063/1.1815382 | wang2004-1-1815382-in-ga-as-gaas-100-quantum-dot-multilayer-1 | B61 | 2026-10-18T03:10:14+00:00 | yes |
+| 10.1063/1.1836863 | wang2004-1-1836863-tb-nanocrystalline-array-1 | B61 | 2026-10-18T03:10:14+00:00 | yes |
+| 10.1063/1.1927690 | zhao2005-1-1927690-pd-au-40-at-thin-films-1 | B61 | 2026-10-18T03:10:14+00:00 | yes |
+| 10.1063/1.1944209 | pradhan2005-1-1944209-co-tio2sapphire-0001-1 | B61 | 2026-10-18T03:10:14+00:00 | yes |
+| 10.1063/1.1994243 | kim2005-1-1994243-si-qds-silicon-quantum-dots-1 | B61 | 2026-10-18T03:10:14+00:00 | no |
+| 10.1063/1.2127125 | niu2005-1-2127125-nanocrystalline-ge-h-film-1 | B61 | 2026-10-18T03:10:14+00:00 | yes |
+| 10.1063/1.2148632 | wang2005-1-2148632-co-ferrite-powders-annealed-at-1000-c-an-1 | B61 | 2026-10-18T03:10:14+00:00 | no |
+| 10.1063/1.2163009 | mazur2006-1-2163009-in0-30ga0-70as-gaas-quantum-dot-stacks-1, mazur2006-1-2163009-in0-35ga0-65as-gaas-quantum-dot-stacks-2 | B61 | 2026-10-18T03:10:14+00:00 | no |
+| 10.1063/1.2176894 | carpenter2006-1-2176894-260-arg-air-2 | B61 | 2026-10-18T03:10:14+00:00 | no |
+| 10.1063/1.2203428 | shena2006-1-2203428-nanocrystalline-diamond-ncd-films-1 | B61 | 2026-10-18T03:10:14+00:00 | no |
+| 10.1063/1.2357550 | li2006-1-2357550-ge-quantum-dot-qd-in-sio2-matrix-1 | B61 | 2026-10-18T03:10:14+00:00 | no |
+| 10.1063/1.2364131 | chen2006-1-2364131-mon-mo-bilayer-film-1 | B61 | 2026-10-18T03:10:14+00:00 | yes |
+| 10.1063/1.2401051 | wei2006-1-2401051-ga0-5in0-5as0-994n0-006-qds-sample-a-1, wei2006-1-2401051-ga0-7in0-3as0-995n0-005-qds-sample-b-2 | B61 | 2026-10-18T03:10:14+00:00 | yes |
+| 10.1063/1.2410227 | ding2006-1-2410227-densely-stacked-si-nanocrystal-layer-emb-1 | B61 | 2026-10-18T03:10:14+00:00 | no |
+| 10.1063/1.2728747 | nakaoka2007-1-2728747-self-assembled-gan-aln-quantum-dot-1 | B61 | 2026-10-18T03:10:14+00:00 | yes |
+| 10.1063/1.2776155 | cheng2007-1-2776155-homogeneous-nanocrystalline-cubic-silico-1 | B61 | 2026-10-18T03:10:14+00:00 | no |
+| 10.1063/1.2832431 | biswas2008-1-2832431-s36-1, biswas2008-1-2832431-s78-2 | B61 | 2026-10-18T03:10:14+00:00 | yes |
+| 10.1063/1.2907196 | dais2008-1-2907196-si-ge-quantum-dot-array-with-quantum-mol-2, dais2008-1-2907196-si-ge-quantum-dot-array-with-single-dome-1 | B61 | 2026-10-18T03:10:14+00:00 | yes |
+| 10.1063/1.3259391 | zhang2009-1-3259391-film-a-1, zhang2009-1-3259391-film-b-2 | B61 | 2026-10-18T03:10:14+00:00 | yes |
+| 10.1063/1.3268471 | knipling2009-1-3268471-fe77co5-5ni5-5zr7b4cu1-1, knipling2009-1-3268471-fe88zr7b4cu1-2 | B61 | 2026-10-18T03:10:14+00:00 | yes |
+| 10.1063/1.3277054 | krivchenko2010-1-3277054-nanocrystalline-graphite-ncg-films-1 | B61 | 2026-10-18T03:10:14+00:00 | no |
+| 10.1063/1.3448026 | dakhel2010-1-3448026-gd-doped-zno-powder-3-5-gd-1 | B61 | 2026-10-18T03:10:14+00:00 | yes |
+| 10.1063/1.3460921 | zhang2010-1-3460921-ingan-gan-self-organized-quantum-dots-1 | B61 | 2026-10-18T03:10:14+00:00 | yes |
+| 10.1063/1.347698 | lu1991-1-347698-nanocrystalline-ni-p-alloy-1 | B61 | 2026-10-18T03:10:14+00:00 | yes |
+| 10.1063/1.3493048 | errandonea2010-1-3493048-bulk-pbmoo4-1, errandonea2010-1-3493048-nanocrystalline-pbmoo4-2 | B61 | 2026-10-18T03:10:14+00:00 | yes |
+
+Source-extracted display contributions only; saved read markers add no independent audit/training credit. All earlier index rows and footer remain unchanged.

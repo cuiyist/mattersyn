@@ -1,0 +1,359 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "thakuria2010-1-3502481-bi0-875ho0-125feo3-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Pankaj Thakuria and P. A. Joy (2010): Bi0.875Ho0.125FeO3",
+  "material": {
+    "formula": "Bi0.875Ho0.125FeO3",
+    "family": "Bi0.875Ho0.125FeO3 nanocrystals",
+    "elements": [
+      "Bi",
+      "Ho",
+      "Fe",
+      "O"
+    ],
+    "components": [
+      "Bi0.875Ho0.125FeO3"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Synthesis as described in the source",
+  "sources": [
+    {
+      "id": "thakuria2010-1-3502481",
+      "doi": "10.1063/1.3502481",
+      "title": "High room temperature ferromagnetic moment of Ho substituted nanocrystalline BiFeO3",
+      "authors": "Pankaj Thakuria and P. A. Joy",
+      "year": 2010,
+      "url": "https://doi.org/10.1063/1.3502481",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "thakuria2010-1-3502481",
+    "recipe_family": "thakuria2010-1-3502481-bi0-875ho0-125feo3-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Bi0.875Ho0.125FeO3",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "thakuria2010-1-3502481",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "orthorhombic",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "thakuria2010-1-3502481",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "thakuria2010-1-3502481-bi0-875ho0-125feo3-1--tartaric-acid",
+      "name": "tartaric acid",
+      "formula": null,
+      "role": "ligand",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "thakuria2010-1-3502481",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "thakuria2010-1-3502481-bi0-875ho0-125feo3-1--after-s01-dissolve",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "thakuria2010-1-3502481-bi0-875ho0-125feo3-1--after-s02-heat",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "thakuria2010-1-3502481-bi0-875ho0-125feo3-1--after-s01-dissolve",
+        "thakuria2010-1-3502481-bi0-875ho0-125feo3-1--tartaric-acid"
+      ]
+    },
+    {
+      "id": "thakuria2010-1-3502481-bi0-875ho0-125feo3-1--after-s03-calcine",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "thakuria2010-1-3502481-bi0-875ho0-125feo3-1--after-s02-heat",
+        "thakuria2010-1-3502481-bi0-875ho0-125feo3-1--tartaric-acid"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-dissolve",
+      "action": "dissolve",
+      "label": "Stoichiometric amounts of metal ions were dissolved in 2N HNO3 with sonication",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "thakuria2010-1-3502481-bi0-875ho0-125feo3-1--after-s01-dissolve"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Stoichiometric amounts of metal ions were dissolved in 2N HNO3 with sonication",
+      "evidence": [
+        {
+          "source_id": "thakuria2010-1-3502481",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-heat",
+      "action": "heat",
+      "label": "The resulting solution was heated on a hot plate to dryness",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-dissolve"
+      ],
+      "inputs": [
+        "thakuria2010-1-3502481-bi0-875ho0-125feo3-1--after-s01-dissolve",
+        "thakuria2010-1-3502481-bi0-875ho0-125feo3-1--tartaric-acid"
+      ],
+      "outputs": [
+        "thakuria2010-1-3502481-bi0-875ho0-125feo3-1--after-s02-heat"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "The resulting solution was heated on a hot plate to dryness",
+      "evidence": [
+        {
+          "source_id": "thakuria2010-1-3502481",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-calcine",
+      "action": "calcine",
+      "label": "The dried mass was calcined at 550 °C for 2 h",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-heat"
+      ],
+      "inputs": [
+        "thakuria2010-1-3502481-bi0-875ho0-125feo3-1--after-s02-heat",
+        "thakuria2010-1-3502481-bi0-875ho0-125feo3-1--tartaric-acid"
+      ],
+      "outputs": [
+        "thakuria2010-1-3502481-bi0-875ho0-125feo3-1--after-s03-calcine"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 550,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "550 °C",
+          "evidence": [
+            {
+              "source_id": "thakuria2010-1-3502481",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 2,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "2 h",
+          "evidence": [
+            {
+              "source_id": "thakuria2010-1-3502481",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "The dried mass was calcined at 550 °C for 2 h",
+      "evidence": [
+        {
+          "source_id": "thakuria2010-1-3502481",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "thakuria2010-1-3502481-bi0-875ho0-125feo3-1--product",
+      "source_sample_label": "Bi0.875Ho0.125FeO3",
+      "batch_id": null,
+      "material_state_id": "thakuria2010-1-3502481-bi0-875ho0-125feo3-1--after-s03-calcine",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Bi0.875Ho0.125FeO3",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "thakuria2010-1-3502481",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "orthorhombic",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "thakuria2010-1-3502481",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "thakuria2010-1-3502481",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reaction temperature: 550 degC (Main PDF p.2).",
+        "Reaction time: 2 h (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Amount of tartaric acid not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

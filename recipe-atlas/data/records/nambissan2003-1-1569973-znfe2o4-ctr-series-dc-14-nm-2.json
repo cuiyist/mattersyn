@@ -1,0 +1,301 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "nambissan2003-1-1569973-znfe2o4-ctr-series-dc-14-nm-2",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "P. M. G. Nambissan (2003): ZnFe2O4 (CTR series, dc=14 nm)",
+  "material": {
+    "formula": "ZnFe2O4",
+    "family": "ZnFe2O4 nanocrystals",
+    "elements": [
+      "Zn",
+      "Fe",
+      "O"
+    ],
+    "components": [
+      "ZnFe2O4"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Citrate route",
+  "sources": [
+    {
+      "id": "nambissan2003-1-1569973",
+      "doi": "10.1063/1.1569973",
+      "title": "Positron lifetime spectroscopic studies of nanocrystalline ZnFe2O4",
+      "authors": "P. M. G. Nambissan, C. Upadhyay, H. C. Verma",
+      "year": 2003,
+      "url": "https://doi.org/10.1063/1.1569973",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "nambissan2003-1-1569973",
+    "recipe_family": "nambissan2003-1-1569973-znfe2o4-ctr-series-dc-14-nm-2",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "ZnFe2O4",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "nambissan2003-1-1569973",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "nambissan2003-1-1569973-znfe2o4-ctr-series-dc-14-nm-2--metal-citrate-acetate",
+      "name": "metal citrate/acetate",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "nambissan2003-1-1569973",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "nambissan2003-1-1569973-znfe2o4-ctr-series-dc-14-nm-2--citric-acid",
+      "name": "citric acid",
+      "formula": null,
+      "role": "ligand",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "nambissan2003-1-1569973",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "nambissan2003-1-1569973-znfe2o4-ctr-series-dc-14-nm-2--after-s01-dry",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "nambissan2003-1-1569973-znfe2o4-ctr-series-dc-14-nm-2--after-s02-calcine",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "nambissan2003-1-1569973-znfe2o4-ctr-series-dc-14-nm-2--after-s01-dry"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-dry",
+      "action": "dry",
+      "label": "Slow drying",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "nambissan2003-1-1569973-znfe2o4-ctr-series-dc-14-nm-2--after-s01-dry"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 363,
+          "minimum": null,
+          "maximum": null,
+          "unit": "K",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "363 K",
+          "evidence": [
+            {
+              "source_id": "nambissan2003-1-1569973",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Slow drying",
+      "evidence": [
+        {
+          "source_id": "nambissan2003-1-1569973",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-calcine",
+      "action": "calcine",
+      "label": "Calcine the powder",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-dry"
+      ],
+      "inputs": [
+        "nambissan2003-1-1569973-znfe2o4-ctr-series-dc-14-nm-2--after-s01-dry"
+      ],
+      "outputs": [
+        "nambissan2003-1-1569973-znfe2o4-ctr-series-dc-14-nm-2--after-s02-calcine"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Calcine the powder",
+      "evidence": [
+        {
+          "source_id": "nambissan2003-1-1569973",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "nambissan2003-1-1569973-znfe2o4-ctr-series-dc-14-nm-2--product",
+      "source_sample_label": "ZnFe2O4 (CTR series, dc=14 nm)",
+      "batch_id": null,
+      "material_state_id": "nambissan2003-1-1569973-znfe2o4-ctr-series-dc-14-nm-2--after-s02-calcine",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "ZnFe2O4",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "nambissan2003-1-1569973",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "nambissan2003-1-1569973",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reaction temperature: 373 K (Main PDF p.2).",
+        "Reaction time: 24 h (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Amount of metal citrate/acetate not reported in the extracted text.",
+      "Amount of citric acid not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

@@ -1,0 +1,464 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "pan2010-1-3354027-tb2tio5-nanocrystal-film-annealed-at-800-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Tung-Ming Pan (2010): Tb2TiO5 nanocrystal film (annealed at 800 °C)",
+  "material": {
+    "formula": "Tb2TiO5",
+    "family": "Tb2TiO5 nanocrystals",
+    "elements": [
+      "Tb",
+      "Ti",
+      "O"
+    ],
+    "components": [
+      "Tb2TiO5"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Reactive cosputtering",
+  "sources": [
+    {
+      "id": "pan2010-1-3354027",
+      "doi": "10.1063/1.3354027",
+      "title": "A high-k Tb2TiO5 nanocrystal memory",
+      "authors": "Tung-Ming Pan, Fa-Hsyang Chen, and Ji-Shing Jung",
+      "year": 2010,
+      "url": "https://doi.org/10.1063/1.3354027",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "pan2010-1-3354027",
+    "recipe_family": "pan2010-1-3354027-tb2tio5-nanocrystal-film-annealed-at-800-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Tb2TiO5",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "pan2010-1-3354027",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "hexagonal",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "pan2010-1-3354027",
+          "locator": "Main PDF p.4"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": 5.0,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "5 nm",
+      "evidence": [
+        {
+          "source_id": "pan2010-1-3354027",
+          "locator": "Main PDF p.4"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "pan2010-1-3354027-tb2tio5-nanocrystal-film-annealed-at-800-1--terbium-target",
+      "name": "terbium target",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "pan2010-1-3354027",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "pan2010-1-3354027-tb2tio5-nanocrystal-film-annealed-at-800-1--titanium-target",
+      "name": "titanium target",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "pan2010-1-3354027",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "pan2010-1-3354027-tb2tio5-nanocrystal-film-annealed-at-800-1--after-s01-deposit",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "pan2010-1-3354027-tb2tio5-nanocrystal-film-annealed-at-800-1--terbium-target",
+        "pan2010-1-3354027-tb2tio5-nanocrystal-film-annealed-at-800-1--titanium-target"
+      ]
+    },
+    {
+      "id": "pan2010-1-3354027-tb2tio5-nanocrystal-film-annealed-at-800-1--after-s02-anneal",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "pan2010-1-3354027-tb2tio5-nanocrystal-film-annealed-at-800-1--after-s01-deposit"
+      ]
+    },
+    {
+      "id": "pan2010-1-3354027-tb2tio5-nanocrystal-film-annealed-at-800-1--after-s03-deposit",
+      "name": "mixture after step 3",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "pan2010-1-3354027-tb2tio5-nanocrystal-film-annealed-at-800-1--after-s02-anneal"
+      ]
+    },
+    {
+      "id": "pan2010-1-3354027-tb2tio5-nanocrystal-film-annealed-at-800-1--after-s04-deposit",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "pan2010-1-3354027-tb2tio5-nanocrystal-film-annealed-at-800-1--after-s03-deposit"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-deposit",
+      "action": "deposit",
+      "label": "Deposit Tb2TiO5 film by reactive cosputtering",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "pan2010-1-3354027-tb2tio5-nanocrystal-film-annealed-at-800-1--terbium-target",
+        "pan2010-1-3354027-tb2tio5-nanocrystal-film-annealed-at-800-1--titanium-target"
+      ],
+      "outputs": [
+        "pan2010-1-3354027-tb2tio5-nanocrystal-film-annealed-at-800-1--after-s01-deposit"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "O2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "pan2010-1-3354027",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Deposit Tb2TiO5 film by reactive cosputtering",
+      "evidence": [
+        {
+          "source_id": "pan2010-1-3354027",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-anneal",
+      "action": "anneal",
+      "label": "Anneal in O2 gas for 30 s",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-deposit"
+      ],
+      "inputs": [
+        "pan2010-1-3354027-tb2tio5-nanocrystal-film-annealed-at-800-1--after-s01-deposit"
+      ],
+      "outputs": [
+        "pan2010-1-3354027-tb2tio5-nanocrystal-film-annealed-at-800-1--after-s02-anneal"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 30,
+          "minimum": null,
+          "maximum": null,
+          "unit": "s",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "30 s",
+          "evidence": [
+            {
+              "source_id": "pan2010-1-3354027",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "O2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "pan2010-1-3354027",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Anneal in O2 gas for 30 s",
+      "evidence": [
+        {
+          "source_id": "pan2010-1-3354027",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-deposit",
+      "action": "deposit",
+      "label": "Deposit Al film as gate electrode",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-anneal"
+      ],
+      "inputs": [
+        "pan2010-1-3354027-tb2tio5-nanocrystal-film-annealed-at-800-1--after-s02-anneal"
+      ],
+      "outputs": [
+        "pan2010-1-3354027-tb2tio5-nanocrystal-film-annealed-at-800-1--after-s03-deposit"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "O2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "pan2010-1-3354027",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Deposit Al film as gate electrode",
+      "evidence": [
+        {
+          "source_id": "pan2010-1-3354027",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s04-deposit",
+      "action": "deposit",
+      "label": "Deposit Al film on backside contact",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s03-deposit"
+      ],
+      "inputs": [
+        "pan2010-1-3354027-tb2tio5-nanocrystal-film-annealed-at-800-1--after-s03-deposit"
+      ],
+      "outputs": [
+        "pan2010-1-3354027-tb2tio5-nanocrystal-film-annealed-at-800-1--after-s04-deposit"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "O2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "pan2010-1-3354027",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Deposit Al film on backside contact",
+      "evidence": [
+        {
+          "source_id": "pan2010-1-3354027",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "pan2010-1-3354027-tb2tio5-nanocrystal-film-annealed-at-800-1--product",
+      "source_sample_label": "Tb2TiO5 nanocrystal film (annealed at 800 °C)",
+      "batch_id": null,
+      "material_state_id": "pan2010-1-3354027-tb2tio5-nanocrystal-film-annealed-at-800-1--after-s04-deposit",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Tb2TiO5",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "pan2010-1-3354027",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "hexagonal",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "pan2010-1-3354027",
+            "locator": "Main PDF p.4"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "pan2010-1-3354027",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reaction time: 30 s (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "pan2010-1-3354027-tb2tio5-nanocrystal-film-annealed-at-800-1--size",
+      "sample_id": "pan2010-1-3354027-tb2tio5-nanocrystal-film-annealed-at-800-1--product",
+      "property": "diameter",
+      "technique": "TEM",
+      "value": {
+        "value": 5.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "5 nm",
+        "evidence": [
+          {
+            "source_id": "pan2010-1-3354027",
+            "locator": "Main PDF p.4"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "pan2010-1-3354027",
+          "locator": "Main PDF p.4"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Amount of terbium target not reported in the extracted text.",
+      "Amount of titanium target not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

@@ -1,0 +1,282 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "bohra2006-1-2217253-zfpld1-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Murtaza Bohra (2006): ZFPLD1",
+  "material": {
+    "formula": "ZnFe2O4",
+    "family": "ZnFe2O4 nanocrystals",
+    "elements": [
+      "Zn",
+      "Fe",
+      "O"
+    ],
+    "components": [
+      "ZnFe2O4"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Pulsed laser ablation",
+  "sources": [
+    {
+      "id": "bohra2006-1-2217253",
+      "doi": "10.1063/1.2217253",
+      "title": "Large room temperature magnetization in nanocrystalline zinc ferrite thin films",
+      "authors": "Murtaza Bohra, Shiva Prasad, Naresh Kumar, D. S. Misra, S. C. Sahoo, N. Venkataramani, R. Krishnan",
+      "year": 2006,
+      "url": "https://doi.org/10.1063/1.2217253",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "bohra2006-1-2217253",
+    "recipe_family": "bohra2006-1-2217253-zfpld1-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "ZnFe2O4",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "bohra2006-1-2217253",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "spinel",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "bohra2006-1-2217253",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "bohra2006-1-2217253-zfpld1-1--znfe2o4-target",
+      "name": "ZnFe2O4 target",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "bohra2006-1-2217253",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "bohra2006-1-2217253-zfpld1-1--after-s01-evacuate",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "bohra2006-1-2217253-zfpld1-1--after-s02-ablate",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "bohra2006-1-2217253-zfpld1-1--after-s01-evacuate",
+        "bohra2006-1-2217253-zfpld1-1--znfe2o4-target"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-evacuate",
+      "action": "evacuate",
+      "label": "Evacuate the PLA chamber to base vacuum",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "bohra2006-1-2217253-zfpld1-1--after-s01-evacuate"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "O2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "bohra2006-1-2217253",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Evacuate the PLA chamber to base vacuum",
+      "evidence": [
+        {
+          "source_id": "bohra2006-1-2217253",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-ablate",
+      "action": "ablate",
+      "label": "Ablate ZnFe2O4 target with laser",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-evacuate"
+      ],
+      "inputs": [
+        "bohra2006-1-2217253-zfpld1-1--after-s01-evacuate",
+        "bohra2006-1-2217253-zfpld1-1--znfe2o4-target"
+      ],
+      "outputs": [
+        "bohra2006-1-2217253-zfpld1-1--after-s02-ablate"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "O2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "bohra2006-1-2217253",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Ablate ZnFe2O4 target with laser",
+      "evidence": [
+        {
+          "source_id": "bohra2006-1-2217253",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "bohra2006-1-2217253-zfpld1-1--product",
+      "source_sample_label": "ZFPLD1",
+      "batch_id": null,
+      "material_state_id": "bohra2006-1-2217253-zfpld1-1--after-s02-ablate",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "ZnFe2O4",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "bohra2006-1-2217253",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "spinel",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "bohra2006-1-2217253",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "bohra2006-1-2217253",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "notes": [
+        "Reactor: PLA chamber (Main PDF p.2).",
+        "Reaction temperature: 350 degC (Main PDF p.3)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of ZnFe2O4 target not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
