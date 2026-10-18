@@ -1,0 +1,426 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "nambissan2003-1-1569973-znfe2o4-cer-series-bulk-6",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "P. M. G. Nambissan (2003): ZnFe2O4 (CER series, bulk)",
+  "material": {
+    "formula": "ZnFe2O4",
+    "family": "ZnFe2O4 nanocrystals",
+    "elements": [
+      "Zn",
+      "Fe",
+      "O"
+    ],
+    "components": [
+      "ZnFe2O4"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Synthesis as described in the source",
+  "sources": [
+    {
+      "id": "nambissan2003-1-1569973",
+      "doi": "10.1063/1.1569973",
+      "title": "Positron lifetime spectroscopic studies of nanocrystalline ZnFe2O4",
+      "authors": "P. M. G. Nambissan, C. Upadhyay, H. C. Verma",
+      "year": 2003,
+      "url": "https://doi.org/10.1063/1.1569973",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "nambissan2003-1-1569973",
+    "recipe_family": "nambissan2003-1-1569973-znfe2o4-cer-series-bulk-6",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "ZnFe2O4",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "nambissan2003-1-1569973",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "normal spinel",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "nambissan2003-1-1569973",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "nambissan2003-1-1569973-znfe2o4-cer-series-bulk-6--zinc-oxide",
+      "name": "zinc oxide",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "nambissan2003-1-1569973",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "nambissan2003-1-1569973-znfe2o4-cer-series-bulk-6--iron-oxide",
+      "name": "iron oxide",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "nambissan2003-1-1569973",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "nambissan2003-1-1569973-znfe2o4-cer-series-bulk-6--after-s01-mix",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "nambissan2003-1-1569973-znfe2o4-cer-series-bulk-6--zinc-oxide",
+        "nambissan2003-1-1569973-znfe2o4-cer-series-bulk-6--iron-oxide"
+      ]
+    },
+    {
+      "id": "nambissan2003-1-1569973-znfe2o4-cer-series-bulk-6--after-s02-pelletize",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "nambissan2003-1-1569973-znfe2o4-cer-series-bulk-6--after-s01-mix"
+      ]
+    },
+    {
+      "id": "nambissan2003-1-1569973-znfe2o4-cer-series-bulk-6--after-s03-anneal",
+      "name": "mixture after step 3",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "nambissan2003-1-1569973-znfe2o4-cer-series-bulk-6--after-s02-pelletize"
+      ]
+    },
+    {
+      "id": "nambissan2003-1-1569973-znfe2o4-cer-series-bulk-6--after-s04-cool",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "nambissan2003-1-1569973-znfe2o4-cer-series-bulk-6--after-s03-anneal"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-mix",
+      "action": "mix",
+      "label": "Mix zinc and iron oxides in stoichiometric composition",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "nambissan2003-1-1569973-znfe2o4-cer-series-bulk-6--zinc-oxide",
+        "nambissan2003-1-1569973-znfe2o4-cer-series-bulk-6--iron-oxide"
+      ],
+      "outputs": [
+        "nambissan2003-1-1569973-znfe2o4-cer-series-bulk-6--after-s01-mix"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Mix zinc and iron oxides in stoichiometric composition",
+      "evidence": [
+        {
+          "source_id": "nambissan2003-1-1569973",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-pelletize",
+      "action": "pelletize",
+      "label": "Repeated pelletization",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-mix"
+      ],
+      "inputs": [
+        "nambissan2003-1-1569973-znfe2o4-cer-series-bulk-6--after-s01-mix"
+      ],
+      "outputs": [
+        "nambissan2003-1-1569973-znfe2o4-cer-series-bulk-6--after-s02-pelletize"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Repeated pelletization",
+      "evidence": [
+        {
+          "source_id": "nambissan2003-1-1569973",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-anneal",
+      "action": "anneal",
+      "label": "Anneal at 1373 K for 24 h",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-pelletize"
+      ],
+      "inputs": [
+        "nambissan2003-1-1569973-znfe2o4-cer-series-bulk-6--after-s02-pelletize"
+      ],
+      "outputs": [
+        "nambissan2003-1-1569973-znfe2o4-cer-series-bulk-6--after-s03-anneal"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 1373,
+          "minimum": null,
+          "maximum": null,
+          "unit": "K",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1373 K",
+          "evidence": [
+            {
+              "source_id": "nambissan2003-1-1569973",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 24,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "24 h",
+          "evidence": [
+            {
+              "source_id": "nambissan2003-1-1569973",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Anneal at 1373 K for 24 h",
+      "evidence": [
+        {
+          "source_id": "nambissan2003-1-1569973",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s04-cool",
+      "action": "cool",
+      "label": "Slow cooling",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s03-anneal"
+      ],
+      "inputs": [
+        "nambissan2003-1-1569973-znfe2o4-cer-series-bulk-6--after-s03-anneal"
+      ],
+      "outputs": [
+        "nambissan2003-1-1569973-znfe2o4-cer-series-bulk-6--after-s04-cool"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Slow cooling",
+      "evidence": [
+        {
+          "source_id": "nambissan2003-1-1569973",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "nambissan2003-1-1569973-znfe2o4-cer-series-bulk-6--product",
+      "source_sample_label": "ZnFe2O4 (CER series, bulk)",
+      "batch_id": null,
+      "material_state_id": "nambissan2003-1-1569973-znfe2o4-cer-series-bulk-6--after-s04-cool",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "ZnFe2O4",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "nambissan2003-1-1569973",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "normal spinel",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "nambissan2003-1-1569973",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "nambissan2003-1-1569973",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reaction temperature: 1373 K (Main PDF p.2).",
+        "Reaction time: 24 h (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Amount of zinc oxide not reported in the extracted text.",
+      "Amount of iron oxide not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

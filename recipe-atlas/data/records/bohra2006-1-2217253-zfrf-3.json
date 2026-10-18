@@ -1,0 +1,321 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "bohra2006-1-2217253-zfrf-3",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Murtaza Bohra (2006): ZFRF",
+  "material": {
+    "formula": "ZnFe2O4",
+    "family": "ZnFe2O4 nanocrystals",
+    "elements": [
+      "Zn",
+      "Fe",
+      "O"
+    ],
+    "components": [
+      "ZnFe2O4"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Rf sputtering",
+  "sources": [
+    {
+      "id": "bohra2006-1-2217253",
+      "doi": "10.1063/1.2217253",
+      "title": "Large room temperature magnetization in nanocrystalline zinc ferrite thin films",
+      "authors": "Murtaza Bohra, Shiva Prasad, Naresh Kumar, D. S. Misra, S. C. Sahoo, N. Venkataramani, R. Krishnan",
+      "year": 2006,
+      "url": "https://doi.org/10.1063/1.2217253",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "bohra2006-1-2217253",
+    "recipe_family": "bohra2006-1-2217253-zfrf-3",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "ZnFe2O4",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "bohra2006-1-2217253",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "spinel",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "bohra2006-1-2217253",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "bohra2006-1-2217253-zfrf-3--znfe2o4-target",
+      "name": "ZnFe2O4 target",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "bohra2006-1-2217253",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "bohra2006-1-2217253-zfrf-3--after-s01-sputter",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "bohra2006-1-2217253-zfrf-3--znfe2o4-target"
+      ]
+    },
+    {
+      "id": "bohra2006-1-2217253-zfrf-3--after-s02-anneal",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "bohra2006-1-2217253-zfrf-3--after-s01-sputter"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-sputter",
+      "action": "sputter",
+      "label": "Sputter ZnFe2O4 target",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "bohra2006-1-2217253-zfrf-3--znfe2o4-target"
+      ],
+      "outputs": [
+        "bohra2006-1-2217253-zfrf-3--after-s01-sputter"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "Ar",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "bohra2006-1-2217253",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Sputter ZnFe2O4 target",
+      "evidence": [
+        {
+          "source_id": "bohra2006-1-2217253",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-anneal",
+      "action": "anneal",
+      "label": "Anneal film in air",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-sputter"
+      ],
+      "inputs": [
+        "bohra2006-1-2217253-zfrf-3--after-s01-sputter"
+      ],
+      "outputs": [
+        "bohra2006-1-2217253-zfrf-3--after-s02-anneal"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 500,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "500 °C",
+          "evidence": [
+            {
+              "source_id": "bohra2006-1-2217253",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 2,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "2 h",
+          "evidence": [
+            {
+              "source_id": "bohra2006-1-2217253",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "Ar",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "bohra2006-1-2217253",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Anneal film in air",
+      "evidence": [
+        {
+          "source_id": "bohra2006-1-2217253",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "bohra2006-1-2217253-zfrf-3--product",
+      "source_sample_label": "ZFRF",
+      "batch_id": null,
+      "material_state_id": "bohra2006-1-2217253-zfrf-3--after-s02-anneal",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "ZnFe2O4",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "bohra2006-1-2217253",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "spinel",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "bohra2006-1-2217253",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "bohra2006-1-2217253",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reaction temperature: 500 degC (Main PDF p.2).",
+        "Reaction time: 2 h (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Amount of ZnFe2O4 target not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

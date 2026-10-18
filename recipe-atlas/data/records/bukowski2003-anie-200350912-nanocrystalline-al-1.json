@@ -1,0 +1,403 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "bukowski2003-anie-200350912-nanocrystalline-al-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Frank Endres et al. (2003): nanocrystalline Al",
+  "material": {
+    "formula": "Al",
+    "family": "Al nanocrystals",
+    "elements": [
+      "Al"
+    ],
+    "components": [
+      "Al"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Galvanostatic electrodeposition",
+  "sources": [
+    {
+      "id": "bukowski2003-anie-200350912",
+      "doi": "10.1002/anie.200350912",
+      "title": "Electrodeposition of Nanocrystalline Metals and Alloys from Ionic Liquids",
+      "authors": "Frank Endres; Mirko Bukowski; Rolf Hempelmann; Harald Natter",
+      "year": 2003,
+      "url": "https://doi.org/10.1002/anie.200350912",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "bukowski2003-anie-200350912",
+    "recipe_family": "bukowski2003-anie-200350912-nanocrystalline-al-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Al",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "bukowski2003-anie-200350912",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "face-centered cubic (fcc)",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "bukowski2003-anie-200350912",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": 12,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "12 nm",
+      "evidence": [
+        {
+          "source_id": "bukowski2003-anie-200350912",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "nanoparticle",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "bukowski2003-anie-200350912",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "bukowski2003-anie-200350912-nanocrystalline-al-1--alcl3",
+      "name": "AlCl3",
+      "formula": null,
+      "role": "solvent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "bukowski2003-anie-200350912",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "bukowski2003-anie-200350912-nanocrystalline-al-1--emim-cl-or-bmim-cl",
+      "name": "[EMIm]+Cl− or [BMIm]+Cl−",
+      "formula": null,
+      "role": "solvent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "bukowski2003-anie-200350912",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "bukowski2003-anie-200350912-nanocrystalline-al-1--after-s01-mix",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "bukowski2003-anie-200350912-nanocrystalline-al-1--alcl3"
+      ]
+    },
+    {
+      "id": "bukowski2003-anie-200350912-nanocrystalline-al-1--after-s02-degas",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "bukowski2003-anie-200350912-nanocrystalline-al-1--after-s01-mix",
+        "bukowski2003-anie-200350912-nanocrystalline-al-1--alcl3"
+      ]
+    },
+    {
+      "id": "bukowski2003-anie-200350912-nanocrystalline-al-1--after-s03-deposit",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "bukowski2003-anie-200350912-nanocrystalline-al-1--after-s02-degas",
+        "bukowski2003-anie-200350912-nanocrystalline-al-1--alcl3"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-mix",
+      "action": "mix",
+      "label": "Mixing of organic component with AlCl3",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "bukowski2003-anie-200350912-nanocrystalline-al-1--alcl3"
+      ],
+      "outputs": [
+        "bukowski2003-anie-200350912-nanocrystalline-al-1--after-s01-mix"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "bukowski2003-anie-200350912",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Mixing of organic component with AlCl3",
+      "evidence": [
+        {
+          "source_id": "bukowski2003-anie-200350912",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "s02-degas",
+      "action": "degas",
+      "label": "Degassing of ionic liquid",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-mix"
+      ],
+      "inputs": [
+        "bukowski2003-anie-200350912-nanocrystalline-al-1--after-s01-mix",
+        "bukowski2003-anie-200350912-nanocrystalline-al-1--alcl3"
+      ],
+      "outputs": [
+        "bukowski2003-anie-200350912-nanocrystalline-al-1--after-s02-degas"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "bukowski2003-anie-200350912",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Degassing of ionic liquid",
+      "evidence": [
+        {
+          "source_id": "bukowski2003-anie-200350912",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "s03-deposit",
+      "action": "deposit",
+      "label": "Galvanostatic electrodeposition",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-degas"
+      ],
+      "inputs": [
+        "bukowski2003-anie-200350912-nanocrystalline-al-1--after-s02-degas",
+        "bukowski2003-anie-200350912-nanocrystalline-al-1--alcl3"
+      ],
+      "outputs": [
+        "bukowski2003-anie-200350912-nanocrystalline-al-1--after-s03-deposit"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "bukowski2003-anie-200350912",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Galvanostatic electrodeposition",
+      "evidence": [
+        {
+          "source_id": "bukowski2003-anie-200350912",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "bukowski2003-anie-200350912-nanocrystalline-al-1--product",
+      "source_sample_label": "nanocrystalline Al",
+      "batch_id": null,
+      "material_state_id": "bukowski2003-anie-200350912-nanocrystalline-al-1--after-s03-deposit",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Al",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "bukowski2003-anie-200350912",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "face-centered cubic (fcc)",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "bukowski2003-anie-200350912",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "nanoparticle",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "bukowski2003-anie-200350912",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "bukowski2003-anie-200350912",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reactor: glove box (Main PDF p.3)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "bukowski2003-anie-200350912-nanocrystalline-al-1--size",
+      "sample_id": "bukowski2003-anie-200350912-nanocrystalline-al-1--product",
+      "property": "particle_size",
+      "technique": "not reported",
+      "value": {
+        "value": 12,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "12 nm",
+        "evidence": [
+          {
+            "source_id": "bukowski2003-anie-200350912",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "bukowski2003-anie-200350912",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Ligand not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of AlCl3 not reported in the extracted text.",
+      "Amount of [EMIm]+Cl− or [BMIm]+Cl− not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

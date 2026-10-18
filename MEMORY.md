@@ -1,5 +1,30 @@
 Owner revisit list: [Machine-extracted papers](research-assets/public-audits/MACHINE_EXTRACTED_PAPERS.md).
 
+## B62/B63/B64 M52 captions closed; publication pending — 2026-10-18T04:46:54.224567+00:00
+
+The next **52 papers / 67 source_extracted records / 243 figure crops / 549 Reader caption instances** have completed normal preparation, trusted citation/title projection and saved-caption closure. Nineteen DOI metadata corrections cover25 new canonical records;25 title prefixes were aligned. Nine normal zero-hold caption binds and one normal apply preserve all243 approved caption strings and their origin flags. Original saved limited reads and56 whole-object deletions are reused without replay. The B63/B64 technical holds remain excluded. These52 papers still have **zero publication credit**.
+
+A reused private title-planning helper still required the preceding integration path. Its actual failure is preserved; one path literal and its exact code-checksum binding now point to the current M integration. All five normal metadata modes, including title verification, passed. No release gate, policy rule, scientific field or record identity was relaxed. Complete local/source/build/browser checks, exact-head CI, ordinary merge, deployment and anonymous verification remain required. Root browser still reports disabled after a fresh connection; the screenshot establishes access in another chat only. No nonempty Reader sync follows caption closure.
+
+Verified live totals remain **1,823 papers /5,294 canonical records /3,173 recipe–structure pairs**. Audited contributions remain244 papers/864 pairs; the six training exports remain audited-only. The audited lane, owner questions and original sampling denominator remain paused and unchanged.
+
+The [R71 cleanup report](https://github.com/cuiyist/mattersyn2/blob/3fa5e405db807ab76fdebaf6701b9080fb47d0a4/CLEANUP_REPORT_2026-10-12.md) is saved and anonymously byte-verified. Its one completed managed preview retirement adds50,404 published file copies/3,421,682,397 logical bytes; administrative metadata is excluded. It preserves all older report bytes and failed/held items. Actual C free at this checkpoint: 22230822912 bytes; the100GiB aim remains unmet. Protected papers, quoted training files, active model/server and working checkouts remain local. No scientific accuracy, physical600GB recovery, achieved hourly rate or uninterrupted activity is inferred.
+
+Choice: retire completed q build copies after their consumers/checks end and before the normal Site preparation creates its independent copies. This changes copy overlap only; all existing checks stay. The rejected older q-cleanup item remains omitted, with0 deletions and no retry.
+
+## B60/B61 L58 verified — 2026-10-18T03:10:14+00:00
+
+**58 papers / 75 source_extracted canonical records / 256 figure-caption keys / 592 Reader caption instances** are live. Source 86806b429e00b5af5f4d62c4015f976ea3684142 passed all three exact-head checks and ordinary [PR 69](https://github.com/cuiyist/mattersyn/pull/69), merge f3f27f0f57c56d82610af686754aa30fd9b46764. Site b6342ad2f6d9acce9b298b2925e123d7e0322d26 passed [Pages 39091147107](https://github.com/cuiyist/mattersyn-site/actions/runs/39091147107). The unchanged normal verifier passed at 2026-10-18T03:10:14+00:00 with 6,102 files, all 6,071 changed files, 58 paper routes and 89 material bindings; zero failures.
+
+The first two normal anonymous checks failed on respectively two and one older record pages. Their failed receipts and summaries remain saved; later diagnostics matched expected bytes. A third unchanged full verification passed. No verifier or release gate was bypassed. Site push: 2026-10-18T02:44:15+00:00; Pages: 2026-10-18T02:44:15Z to 2026-10-18T02:57:06Z. These are recorded times, not a throughput claim.
+
+Actual totals: **1,823 papers / 5,294 canonical records / 3,173 recipe–structure pairs / 819 direct material families / 938 hubs**. Audited contributions remain 244 papers / 864 pairs; source_extracted contributions are 1,579 papers / 2,309 pairs. Final manifest: 50393 files / 3327040393 logical bytes. All 5,219 prior and all 5,294 current canonical raw files remain exact. Six training exports remain audited-only.
+
+Original B60/B61 limited-read history and 43 already-applied whole-object deletions are preserved without replay; 29 retained DOI rows have saved limited-read markers, not independent audits. Three Ge navigation corrections and the whole Holman DOI technical hold remain recorded. The whole pending L object preserves historical 610 and actual 592 fields; the newly verified contribution uses 256 / 592. K/J and older applied-once histories, owner questions and the sampled audit denominator remain unchanged.
+
+Root browser access remains unavailable. The actual Source browser passed; 124 Site review routes and five structure-anchor follow-ups were observed through the owner-authorized browser-access chat and reviewed by Root. This does not assert Root browser access. M52 is a prepared private pool of 52 papers / 67 records / 243 figures with zero publication credit, awaiting normal integration and release. No source quotation or raw model payload is included.
+
+
 ## L58 phone display correction; fresh release pending — 2026-10-18T00:30:53.950288+00:00
 
 The exact Source870f checkpoint passed all13 normal local phases at2026-10-18T00:17:38+00:00. Actual desktop and phone browser checks then found one minor display defect: Lin2002’s single-option specimen selector clipped its long name at390px. The genuine failed visual receipt and all successful checks remain preserved. That Source revision was not pushed or merged and earns0 publication credit.
