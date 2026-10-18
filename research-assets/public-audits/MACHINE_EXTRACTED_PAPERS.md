@@ -1,5 +1,7 @@
 # Published machine-extracted papers
 
+Current verified N43 index (2026-10-18T18:42:26+00:00):43 new source_extracted DOI rows/55record IDs, 27 limited-read markers; overall1,916papers/5,414records/3,293pairs. Current O53 remains local/uncredited; all old index text and existing pointers are preserved.
+
 M50:50source-extracted papers/65records verified 2026-10-18T09:42:42+00:00; source status unchanged, no audit/training credit.
 
 Current verified index after B60/B61 L58 (2026-10-18T03:10:14+00:00): **1,579 source_extracted primary paper contributions / 2,309 display pairs**. Adds 58 DOI rows / 75 IDs from B60/B61, with 29 limited saved-read markers. Overall 1,823 / 5,294 / 3,173; audited 244 papers / 864 pairs unchanged. Previous rows/histories/footer remain verbatim; no audit/gold/training credit.
@@ -1834,3 +1836,53 @@ Source-extracted display contributions only; saved read markers add no independe
 | 10.1557/jmr.2004.0442 | basu2004-jmr-2004-0442-nanocrystalline-ceo2-ce3-1 | B62 | 2026-10-18T09:42:42+00:00 | no |
 | 10.1557/jmr.2005.0157 | saraf2005-jmr-2005-0157-nanocrystalline-ceria-film-with-38-nm-av-2, saraf2005-jmr-2005-0157-nanocrystalline-ceria-film-with-7-nm-ave-1 | B62 | 2026-10-18T09:42:42+00:00 | no |
 
+
+## N43 — verified 2026-10-18T18:42:26+00:00
+
+| DOI | Record IDs | Original batch | Live verification UTC | Limited saved rare read |
+| --- | --- | --- | --- | --- |
+| 10.1002/adma.201001572 | huh2010-adma-201001572-nc-si-led-with-5-periods-of-sin-x-sin-y-1 | B65 | 2026-10-18T18:42:26+00:00 | no |
+| 10.1002/pssc.201000670 | wan2011-pssc-201000670-si-quantum-dot-in-sic-matrix-rta-50-si-c-1 | B65 | 2026-10-18T18:42:26+00:00 | no |
+| 10.1006/jcat.2001.3474 | mishakov2002-jcat-2001-3474-apmgo-1 | B66 | 2026-10-18T18:42:26+00:00 | no |
+| 10.1021/am200126x | xiang2011-am200126x-au-nanoparticle-decorated-gnp-0-3-wt-pei-1, xiang2011-am200126x-au-nanoparticle-decorated-gnp-0-6-wt-pei-2 | B66 | 2026-10-18T18:42:26+00:00 | no |
+| 10.1021/ja307804v | verucchi2012-ja307804v-3c-sic-nanocrystals-on-si-111-1 | B66 | 2026-10-18T18:42:26+00:00 | yes |
+| 10.1021/jp312677u | x2013-jp312677u-bacl2-nanocrystals-in-fcz-nd3-glass-cera-1 | B66 | 2026-10-18T18:42:26+00:00 | yes |
+| 10.1021/la502969w | boskovic2014-la502969w-ceo2-nanopowder-1 | B66 | 2026-10-18T18:42:26+00:00 | yes |
+| 10.1021/nl049684p | nl049684p-tio2-da-dna-nanocomposite-1 | B66 | 2026-10-18T18:42:26+00:00 | no |
+| 10.1021/nl5024244 | mgb-mit-edu2015-nl5024244-pbs-qd-1 | B66 | 2026-10-18T18:42:26+00:00 | no |
+| 10.1021/nl8009704 | nl8009704-pbse-nanocrystals-1 | B66 | 2026-10-18T18:42:26+00:00 | no |
+| 10.1063/1.105026 | 1-105026-gaas-tetrahedral-quantum-dots-tqds-1 | B66 | 2026-10-18T18:42:26+00:00 | no |
+| 10.1063/1.113613 | wang1995-1-113613-hydrogenated-nanocrystalline-si-film-1 | B66 | 2026-10-18T18:42:26+00:00 | no |
+| 10.1063/1.119882 | hartmann1997-1-119882-algaas-gaas-quantum-dot-heterostructures-1 | B67 | 2026-10-18T18:42:26+00:00 | yes |
+| 10.1063/1.120640 | tsybeskov1998-1-120640-nc-si-sio2-superlattice-1 | B67 | 2026-10-18T18:42:26+00:00 | yes |
+| 10.1063/1.124417 | zhang1999-1-124417-sm2fe14-5cu0-5ga2c1-5-1 | B67 | 2026-10-18T18:42:26+00:00 | yes |
+| 10.1063/1.126715 | photopoulos2000-1-126715-si-sio2-superlattice-with-nanocrystallin-1 | B67 | 2026-10-18T18:42:26+00:00 | yes |
+| 10.1063/1.1504880 | fiore2002-1-1504880-inas-quantum-dots-qds-in-leds-1 | B67 | 2026-10-18T18:42:26+00:00 | no |
+| 10.1063/1.1578163 | topuria2003-1-1578163-cdse-based-quantum-dots-qds-from-sample-1 | B67 | 2026-10-18T18:42:26+00:00 | no |
+| 10.1063/1.1629783 | pal2003-1-1629783-in0-23ga0-77as-gaas-quantum-dots-1 | B67 | 2026-10-18T18:42:26+00:00 | yes |
+| 10.1063/1.2207571 | lu2006-1-2207571-transparent-mgal2o4-nanoceramics-1 | B67 | 2026-10-18T18:42:26+00:00 | yes |
+| 10.1063/1.2218059 | strittmatter2006-1-2218059-ingaas-gaas-quantum-dot-laser-diodes-1 | B67 | 2026-10-18T18:42:26+00:00 | no |
+| 10.1063/1.2227053 | uematsu2006-1-2227053-cdse-zns-core-shell-quantum-dot-qd-monol-1 | B67 | 2026-10-18T18:42:26+00:00 | no |
+| 10.1063/1.2739316 | gruber2007-1-2739316-er3-y2o3-nanocrystalline-aggregates-1 | B67 | 2026-10-18T18:42:26+00:00 | yes |
+| 10.1063/1.2831667 | kim2008-1-2831667-cosi2-nanocrystals-ncs-embedded-in-hfo2-1 | B67 | 2026-10-18T18:42:26+00:00 | yes |
+| 10.1063/1.2978243 | alonso-alvarez2008-1-2978243-50-inas-gaas-quantum-dot-layers-with-gap-1 | B67 | 2026-10-18T18:42:26+00:00 | no |
+| 10.1063/1.3076104 | xiao2009-1-3076104-nanocrystalline-naalh4-1 | B67 | 2026-10-18T18:42:26+00:00 | yes |
+| 10.1063/1.3334458 | zhang2010-1-3334458-bulk-nanocrystalline-smco5-sintered-magn-1 | B67 | 2026-10-18T18:42:26+00:00 | yes |
+| 10.1063/1.3340514 | wang2010-1-3340514-co-contained-finemet-nanocrystalline-all-1 | B67 | 2026-10-18T18:42:26+00:00 | yes |
+| 10.1063/1.3425714 | liu2010-1-3425714-nc-al-al2o3-nanocomposite-thin-film-1 | B67 | 2026-10-18T18:42:26+00:00 | yes |
+| 10.1063/1.350007 | kataoka1991-1-350007-fe75-6cu0-8nb1-9si13-2b8-5-500-nm-sio2-5-1 | B67 | 2026-10-18T18:42:26+00:00 | yes |
+| 10.1063/1.356789 | kim1994-1-356789-fe88zr7b4cu1-nanocrystalline-alloy-1 | B65 | 2026-10-18T18:42:26+00:00 | yes |
+| 10.1063/1.356914 | harris1994-1-356914-cuco-face-centered-cubic-alloy-1 | B65 | 2026-10-18T18:42:26+00:00 | yes |
+| 10.1063/1.363505 | zhou1996-1-363505-fe89zr7b4-1 | B65 | 2026-10-18T18:42:26+00:00 | yes |
+| 10.1063/1.363976 | makino1997-1-363976-fe84nb3-5zr3-5b8cu1-1 | B67 | 2026-10-18T18:42:26+00:00 | yes |
+| 10.1063/1.365187 | 1-365187-nd8-16dy1fe85-26nb1b4-58-1 | B67 | 2026-10-18T18:42:26+00:00 | yes |
+| 10.1063/1.368639 | bonetti1998-1-368639-nanocrystalline-nickel-1 | B65 | 2026-10-18T18:42:26+00:00 | no |
+| 10.1063/1.370410 | shin1999-1-370410-fe78-8ta8-5n12-7-single-layer-film-1, shin1999-1-370410-fe78-8ta8-5n12-7-ti-bilayer-film-2 | B67 | 2026-10-18T18:42:26+00:00 | yes |
+| 10.1063/1.372235 | jianga2000-1-372235-pbs-bulk-10-mm-2, jianga2000-1-372235-pbs-nanocrystals-861-nm-1 | B65 | 2026-10-18T18:42:26+00:00 | no |
+| 10.1103/physrevlett.93.175502 | senter2004-physrevlett-93-175502-erbium-doped-silicon-nanocrystals-with-e-2, senter2004-physrevlett-93-175502-erbium-doped-silicon-nanocrystals-with-r-1, senter2004-physrevlett-93-175502-undoped-silicon-nanocrystals-3 | B65 | 2026-10-18T18:42:26+00:00 | yes |
+| 10.1111/j.1551-2916.2010.03918.x | chung2010-j-1551-2916-2010-03918-x-dy3-doped-oxyfluoride-glass-ceramic-1, chung2010-j-1551-2916-2010-03918-x-er3-doped-oxyfluoride-glass-ceramic-2, chung2010-j-1551-2916-2010-03918-x-ho3-doped-oxyfluoride-glass-ceramic-3 | B65 | 2026-10-18T18:42:26+00:00 | yes |
+| 10.1116/1.1621659 | qin2003-1-1621659-sige-double-quantum-dot-1 | B67 | 2026-10-18T18:42:26+00:00 | yes |
+| 10.1116/1.2194939 | xu2006-1-2194939-zno-as-1 | B67 | 2026-10-18T18:42:26+00:00 | yes |
+| 10.1557/jmr.2009.0034 | liu2009-jmr-2009-0034-15-aln-al-3, liu2009-jmr-2009-0034-24-aln-al-4, liu2009-jmr-2009-0034-30-aln-al-5, liu2009-jmr-2009-0034-39-aln-al-6, liu2009-jmr-2009-0034-4-aln-al-1, liu2009-jmr-2009-0034-8-aln-al-2 | B65 | 2026-10-18T18:42:26+00:00 | yes |
+
+Source-extracted contributions only; saved limited-read markers add no independent audit/training credit. Earlier index rows/footer remain unchanged.

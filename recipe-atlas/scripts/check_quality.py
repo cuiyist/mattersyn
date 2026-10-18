@@ -276,7 +276,7 @@ class Audit:
         germanium = self.hubs.get("Ge", {})
         for condition, message in germanium_reviewed_regression_checks(germanium, self.byid):
             self.check(condition, message)
-        self.check(set(self.hubs.get("Ge/Si", {}).get("direct_record_ids", [])) == HEATH_GE_SI_ROUTES, "Ge/Si: both reviewed template variants must remain direct routes")
+        self.check(reviewed_silver_record_ids(self.hubs.get("Ge/Si", {}), self.byid, "direct_record_ids") == HEATH_GE_SI_ROUTES, "Ge/Si: both reviewed template variants must remain direct routes")
         silver = self.hubs.get("Ag", {})
         shah_ag_routes = {"shah-2001-ag-" + letter for letter in "abcdefghi"}
         qiu_ag_routes = {"qiu2006-ag-superlattice-150c"}

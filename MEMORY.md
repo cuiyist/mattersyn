@@ -1,5 +1,16 @@
 Owner revisit list: [Machine-extracted papers](research-assets/public-audits/MACHINE_EXTRACTED_PAPERS.md).
 
+## N43 verified — 2026-10-18T18:42:26+00:00
+
+**43 source_extracted papers /55 canonical records /176 caption keys /419 Reader caption instances** are live. Source `bde1b784da23fde45b0a6f1f959f829573704f02` passed all three exact-head CI checks and ordinary PR72 (merge `adfcc5d6746ccbc82a789cfb1642050236f86c6b`). Site `d4c672b0a81d2c5c2b41a78b98264b156cace3be` passed Pages39154586367; unchanged normal anonymous verification checked 674 files, 638 changed files,43 paper routes and 66 material bindings with zero failures.
+
+Actual deployed totals: 1,916 primary papers /5,414 canonical records /3,293 recipe–structure pairs. Audited contributions remain244papers/864pairs; these new records are source_extracted, not independently audited or training eligible. Manifest:51,685 files/3,404,575,748 logical bytes. Six exports remain audited-only.
+
+All prior document/index bytes, M50/L58/K/J history, N43 whole-DOI technical holds and superseded browser/display-correction evidence remain preserved. 27 retained DOI rows have saved limited deletion-read markers, not audits; prior whole-object deletions are not replayed. The official MACHINE index remains at `research-assets/public-audits/MACHINE_EXTRACTED_PAPERS.md`; the single job report remains `research-assets/public-audits/SIMPLE_PIPELINE_REPORT.md`.
+
+The current O53 Source checkpoint `a802f6f45db15524a0ff3d6bcbf78d037d932e05` has5,480 canonical records, including66 pending O53 records, separately from the published N43 artifact with5,414. O53's53papers/66records/201figure keys and its corrective quality assertion/test are local preparation with zero publication credit. Existing normal release gates remain required; no Source integration or caption replay is requested.
+
+
 ## N43 Site preparation; O53 metadata and captions complete locally — 2026-10-18T17:54:04.180755+00:00
 
 N43 Source bde1b784da23fde45b0a6f1f959f829573704f02 passed the complete local build, fresh Source browser review and exact-head CI; ordinary Source merge adfcc5d6746ccbc82a789cfb1642050236f86c6b is public. Normal Site preparation is running from the frozen Source. N43 remains43 pending papers/55 records/176 crop keys/419 caption instances and has no Site publication credit yet. Historical failed candidates remain unpublished.
@@ -4263,3 +4274,8 @@ The [R17 report](https://github.com/cuiyist/mattersyn2/blob/4dc758c2c8653b8b7e59
 R18’s actual removal read C: free as92,171,919,360→94,768,107,520 bytes; its publisher later observed94,747,238,400 bytes at 2026-10-16T10:27:54.691767+00:00. This is **12,626,944,000 bytes below100GiB**. These dated observations do not establish isolated physical recovery, a100GiB achievement or completion of the600GB physical-cleanup goal;100GiB remains a soft storage trigger, not a release-gate waiver. Protected source papers, quoted inputs, training/corpus, model, checkouts, active/preserved build evidence and all original receipts remain protected.
 
 Audited questions, original windows and denominators, paused audit status, audited records and SourceEx-only accounting remain unchanged. No ledger event, independent audit, scientific accuracy, universal unit-cell completeness, training readiness or new publication credit is added by this administrative checkpoint.
+
+
+### Simple-pipeline checkpoint, 2026-10-18T18:39:27.195575+00:00
+
+N43 Site commit d4c672b0a81d2c5c2b41a78b98264b156cace3be was pushed through the normal release path at 18:32 UTC from Source bde1b784da23fde45b0a6f1f959f829573704f02. Pages and anonymous verification are still pending; M50 remains the last verified publication. Fresh Site browser review covered all 94 required routes, three phone views and 24 screenshots; Root inspected six images. O53 retained 53 pending papers and 66 source_extracted records. Its complete local build stopped at the historical Ge/Si all-route equality, although both reviewed Heath routes were preserved alongside two extracted Yakimov routes. The correction scopes only that assertion to the exact reviewed subset using the existing status filter; no canonical record or release gate is removed. All 52 focused tests and the read-only candidate quality recheck passed. The original failure is retained; a new exact-head complete check and visual review are still required. Next-cohort 26 single-reader rare-material reads are complete, including one technical hold; supported deletions stay private until normal conversion. No publication credit or demonstrated hourly rate is inferred. The audited lane and its questions remain paused.
