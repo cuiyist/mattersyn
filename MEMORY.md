@@ -1,5 +1,17 @@
 Owner revisit list: [Machine-extracted papers](research-assets/public-audits/MACHINE_EXTRACTED_PAPERS.md).
 
+## L58 phone display correction; fresh release pending — 2026-10-18T00:30:53.950288+00:00
+
+The exact Source870f checkpoint passed all13 normal local phases at2026-10-18T00:17:38+00:00. Actual desktop and phone browser checks then found one minor display defect: Lin2002’s single-option specimen selector clipped its long name at390px. The genuine failed visual receipt and all successful checks remain preserved. That Source revision was not pushed or merged and earns0 publication credit.
+
+The shared particle display now shows the complete wrapping specimen label when only one context exists; real multi-specimen selection, source IDs, facts, references and scientific data are unchanged. All19 focused behavior tests pass, including selection of separate specimen evidence. The connected Reader cache graph is rolled to0.41.9 with43 finite version-literal edits across17 files; both existing cache suites pass(12 tests). Fresh normal Source binding/full checks, corrected artifact browser review, exact-head CI, ordinary merge and the normal Site/Pages/anonymous path remain required. The unused proposal for a different selector was never applied.
+
+Pending scope remains58 papers /75 source_extracted records /256 caption keys /592 instances. All5,219 previously published canonical files and all5294 current canonical files are preserved; training exports remain audited-only. The live website remains1,765 papers /5,219 records /3,098 display pairs. The audited lane, owner questions, findings and sampled denominator stay paused and unchanged.
+
+The [R65 cleanup report](https://github.com/cuiyist/mattersyn2/blob/70c3e40336a511c552895866198905f1da16755b/CLEANUP_REPORT_2026-10-12.md) is saved and anonymously byte-verified:15,743,842 cumulative generated copies /895,756,499,485 logical bytes, not distinct original data or isolated physical recovery. Its three actual failed-copy removals total89,955 copies /8,138,679,144 logical bytes; the last concurrent free-space delta is negative and remains recorded. Fresh C free bytes observed before this checkpoint:9177513984; the100GiB aim is unmet. Two exact Root-owned obsolete preview servers were retired after identity checks; no other program was stopped. Their candidate payloads have not yet been deleted. Protected papers, page text, quoted passes/pairs/training files, model/runtime and working checkouts remain local.
+
+Choice: fix the real phone defect in the shared display, preserve the failed visual history, and continue the58-paper release through unchanged checks. No scientific accuracy, target throughput or uninterrupted work is asserted.
+
 ## B60/B61 navigation corrected; fresh release pending — 2026-10-17T23:36:00.155731+00:00
 
 The unchanged complete local build rejected Ge products that were grouped as isolated Ge. Three new records now retain their exact named SiO2 or SiC matrix in navigation; reported composition, product, quantities, conditions, source locators and status stay unchanged. The focused regressions pass. DOI10.1021/nl101413d is held as a whole because its retained checked metadata does not identify a host/support; no component is invented. Its2 unpublished records and6 crops are removed from the release payload and retained privately. This is a technical hold, not an insufficient-synthesis skip. The original59-paper/77-record/262-figure preparation and failed build remain on record.

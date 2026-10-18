@@ -150,3 +150,34 @@ test('actual mount renders the sphere, retains measurements, and leaves unknown 
   assert.equal(unknown.display.children[0].children.length,1);
  }finally{globalThis.document=oldDocument;globalThis.fetch=oldFetch;}
 });
+
+// A single specimen is context text, not a native select that clips its label on phones.
+test('one particle context keeps its complete label visible as wrapping ordinary text',async()=>{
+ const oldDocument=globalThis.document,oldFetch=globalThis.fetch;
+ globalThis.document={createElement:tag=>new Element(tag),createTextNode:text=>({textContent:text})};
+ globalThis.fetch=async()=>({ok:true,json:async()=>({entries:{}})});
+ try{
+  const {r,presentation}=fixture(),fullLabel='A long synthetic specimen context '.repeat(10);
+  r.products[0].source_sample_label=fullLabel;
+  const before=JSON.stringify({r,presentation}),panel=new Element('section'),mounted=await mountParticleContext(panel,r,presentation);
+  assert.equal(mounted.groups.size,1);assert.equal(panel.children[0].tagName,'p');
+  assert.equal(panel.children[0].textContent,fullLabel);assert.match(panel.children[0].className,/reader-particle-context/);
+  assert.ok(!panel.children.some(child=>child.tagName==='select'));
+  assert.equal(JSON.stringify({r,presentation}),before);
+ }finally{globalThis.document=oldDocument;globalThis.fetch=oldFetch;}
+});
+test('multiple particle specimens retain the existing selector and exact selected evidence',async()=>{
+ const oldDocument=globalThis.document,oldFetch=globalThis.fetch;
+ globalThis.document={createElement:tag=>new Element(tag),createTextNode:text=>({textContent:text})};
+ globalThis.fetch=async()=>({ok:true,json:async()=>({entries:{}})});
+ try{
+  const {r,presentation}=fixture(),other=structuredClone(r.products[0]);
+  other.sample_id='second-product';other.source_sample_label='Second source specimen';other.morphology.value='unknown';r.products.push(other);
+  presentation.allProductFacts.push({record_id:r.record_id,sample_id:other.sample_id,kind:'measurement',label:'Diameter',value:'9.1 nm',status:'reported'});
+  const before=JSON.stringify({r,presentation}),panel=new Element('section'),mounted=await mountParticleContext(panel,r,presentation);
+  assert.equal(mounted.groups.size,2);assert.equal(panel.children[0],mounted.choose);assert.equal(mounted.choose.tagName,'select');
+  mounted.choose.value=r.record_id+':'+other.sample_id;mounted.choose.onchange();
+  const texts=[];const visit=e=>{if(e.textContent)texts.push(e.textContent);for(const c of e.children||[])visit(c);};visit(mounted.display);
+  assert.ok(texts.includes('9.1 nm'));assert.ok(!texts.includes('5.2 nm'));assert.equal(JSON.stringify({r,presentation}),before);
+ }finally{globalThis.document=oldDocument;globalThis.fetch=oldFetch;}
+});

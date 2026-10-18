@@ -1,14 +1,14 @@
-import {figureGallery} from './reader-app.mjs?v=0.41.8';
+import {figureGallery} from './reader-app.mjs?v=0.41.9';
 import {stockScope} from './stock-scope.mjs';
 import {quantityValue} from './quantity-value.mjs';
-import {sourceItemCard} from './source-evidence.mjs?v=0.41.7';
-import {mountCrystalReferences} from './crystal-viewer.mjs?v=0.41.7';
-export {mountCrystalReferences} from './crystal-viewer.mjs?v=0.41.7';
+import {sourceItemCard} from './source-evidence.mjs?v=0.41.9';
+import {mountCrystalReferences} from './crystal-viewer.mjs?v=0.41.9';
+export {mountCrystalReferences} from './crystal-viewer.mjs?v=0.41.9';
 import {mountProtocol} from './protocol-visuals.mjs?v=0.39.1';
 import {chemicalRegistry,chemicalEntry,chemicalImage,openChemical,mountStockComponents,mountReagentComponents} from './chemical-viewer.mjs?v=0.34.1';
 const el=(tag,text,cls)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(cls)n.className=cls;return n;};
 const link=(text,url)=>{const a=el('a',text);a.href=new URL(url.startsWith('/')&&!url.startsWith('//')?url.slice(1):url,import.meta.url);return a;};
-import {loadReaderPresentations} from './reader-presentation-loader.mjs?v=0.41.8';
+import {loadReaderPresentations} from './reader-presentation-loader.mjs?v=0.41.9';
 let reviewIndex,readerPresentations,figureDialog;
 function enlargeFigure(f){if(!figureDialog){figureDialog=el('dialog',undefined,'guide-figure-dialog');document.body.append(figureDialog);}figureDialog.replaceChildren();const header=el('header'),close=el('button','Close ×');close.type='button';close.onclick=()=>figureDialog.close();header.append(el('h2',f.label||f.id),close);const view=el('div',undefined,'figure-zoom-area'),img=el('img');img.src=new URL(f.public_asset+'?sha='+f.public_asset_sha256,import.meta.url);img.alt=f.caption_paraphrase||f.summary||f.label;view.append(img);let scale=1;const controls=el('div',undefined,'protocol-controls');for(const [label,n] of [['−',1/1.25],['Reset',0],['+',1.25]]){const button=el('button',label);button.type='button';button.onclick=()=>{scale=n?Math.max(.5,Math.min(5,scale*n)):1;img.style.width=(scale*100)+'%';};controls.append(button);}figureDialog.append(header,view,controls,el('p',img.alt));figureDialog.showModal();}
 

@@ -4,8 +4,8 @@ import ast
 import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = '0.41.7'
-PUBLIC_READER_VERSION = '0.41.8'
+VERSION = '0.41.9'
+PUBLIC_READER_VERSION = '0.41.9'
 
 
 class ReaderCacheVersionTests(unittest.TestCase):

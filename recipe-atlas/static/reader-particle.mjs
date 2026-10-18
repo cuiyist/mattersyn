@@ -1,5 +1,5 @@
 // Source-bound morphology illustrations; never measured coordinates or training labels.
-import {el,link,badge,recordURL,disclosure,siteURL} from './reader-utils.mjs?v=0.41.7';
+import {el,link,badge,recordURL,disclosure,siteURL} from './reader-utils.mjs?v=0.41.9';
 import {particleShapeSVG,particleShapeInfo} from './particle-shapes.mjs?v=0.40.5';
 import {scopedProductArt} from './reader-scoped-product-art.mjs';
 
@@ -150,7 +150,8 @@ export async function mountParticleContext(panel,r,presentation={}){
  const illustrated=[...groups.values()].filter(g=>particleDisplayDescriptor(r,g,presentation,interpretations).shape!=='neutral');
  const preferred=illustrated.find(g=>g.key===wanted)||illustrated.find(g=>g.recordId===r.record_id&&(g.context?.recipe_link||g.product?.recipe_link)==='explicit')||illustrated[0];
  if(preferred)choose.value=preferred.key;else if(groups.has(wanted))choose.value=wanted;
- panel.append(choose,display);
+ const only=groups.size===1?groups.values().next().value:null;
+ panel.append(only?el('p',only.label||only.sampleId,'reader-note reader-particle-context'):choose,display);
  function show(){const group=groups.get(choose.value)||groups.values().next().value,d=particleDisplayDescriptor(r,group,presentation,interpretations),layout=el('div',undefined,'reader-product-layout'),copy=el('div');
   const caption=d.shape==='neutral'&&presentation.presentation_status==='pending'?'A morphology illustration has not yet been assigned to this specimen. Its available source-reported observations are retained below.':d.caption;
   copy.append(badge(d.shape==='neutral'?'Reported product information':d.inferred?.display_kind==='composition_schematic'?'Conceptual product':d.inferred?'Inferred morphology':'Morphology illustration','reference'),el('h3',d.inferred?.label||d.composition),el('p',d.scope,'reader-note'),el('p',caption,'reader-note'));
