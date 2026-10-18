@@ -1,5 +1,5 @@
-import {figureCaptionTexts,appendFigureCaptions,legacyFigureCaptionMetadata} from './figure-captions.mjs?v=0.41.7';
-import {mountSourceSections} from './source-evidence.mjs?v=0.41.7';
+import {figureCaptionTexts,appendFigureCaptions,legacyFigureCaptionMetadata} from './figure-captions.mjs?v=0.41.9';
+import {mountSourceSections} from './source-evidence.mjs?v=0.41.9';
 import {renderPendingVariants} from './pending-variants.mjs';
 const $=id=>document.getElementById(id);
 const figureCaptionByTrigger=new WeakMap();

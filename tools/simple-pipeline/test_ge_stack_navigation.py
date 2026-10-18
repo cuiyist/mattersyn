@@ -22,6 +22,9 @@ class NamedGeStacks(unittest.TestCase):
     def test_exact_whole_products_have_separate_navigation_and_preserve_science(self):
         for label, composition, components, elements in [
                 ('Ge nanocrystals in SiOx:Ge/SiOx multilayers', None, ['Ge', 'SiOx'], ['Ge', 'Si', 'O']),
+                ('nanocrystalline Ge precipitates in SiO2 matrix', None, ['Ge', 'SiO2'], ['Ge', 'Si', 'O']),
+                ('Ge nanocrystals in 4H–SiC', 'Ge', ['Ge', 'SiC'], ['Ge', 'Si', 'C']),
+                ('Ge quantum dot (QD) in SiO2 matrix', 'Ge', ['Ge', 'SiO2'], ['Ge', 'Si', 'O']),
                 ('Ge/Si QDSL', 'Ge/Si', ['Ge', 'Si'], ['Ge', 'Si'])]:
             with self.subTest(label=label):
                 pair = make_pair(label, composition)
@@ -41,6 +44,10 @@ class NamedGeStacks(unittest.TestCase):
         for label, composition in [
                 ('Ge/Si QDSL', 'CdSe'), ('Ge/Si QDSL device', 'Ge/Si'),
                 ('Ge nanocrystals in SiOx:Ge/SiOx multilayers', 'CdSe'),
+                ('nanocrystalline Ge precipitates in SiO2 matrix', 'CdSe'),
+                ('Ge nanocrystals in 4H–SiC', 'CdSe'),
+                ('Ge quantum dot (QD) in SiO2 matrix', 'CdSe'),
+                ('Ge', 'Ge'), ('6 nm Ge NC FET', 'Ge'),
                 ('Ge nanocrystals on a substrate', 'Ge')]:
             with self.subTest(label=label, composition=composition):
                 pair = make_pair(label, composition)

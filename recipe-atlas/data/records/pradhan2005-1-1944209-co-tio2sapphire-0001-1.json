@@ -1,0 +1,476 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "pradhan2005-1-1944209-co-tio2sapphire-0001-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "A. K. Pradhan (2005): Co:TiO2–Sapphire(0001)",
+  "material": {
+    "formula": "Co:TiO2",
+    "family": "Co:TiO2 nanocrystals",
+    "elements": [
+      "Co",
+      "Ti",
+      "O"
+    ],
+    "components": [
+      "Co:TiO2"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Pulsed-laser deposition",
+  "sources": [
+    {
+      "id": "pradhan2005-1-1944209",
+      "doi": "10.1063/1.1944209",
+      "title": "Ferromagnetism in nanocrystalline epitaxial Co:TiO2 thin films",
+      "authors": "A. K. Pradhan, D. Hunter, J. B. Dadson, T. M. Williams, Kai Zhang, K. Lord, B. Lasley, R. R. Rakhimov, Jun Zhang, D. J. Sellmyer, U. N. Roy, Y. Cui, A. Burger, C. Hopkins, N. Pearson, A. L. Wilkerson",
+      "year": 2005,
+      "url": "https://doi.org/10.1063/1.1944209",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "pradhan2005-1-1944209",
+    "recipe_family": "pradhan2005-1-1944209-co-tio2sapphire-0001-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Co:TiO2",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "pradhan2005-1-1944209",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "rutile",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "pradhan2005-1-1944209",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "pradhan2005-1-1944209-co-tio2sapphire-0001-1--tio2",
+      "name": "TiO2",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "pradhan2005-1-1944209",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "pradhan2005-1-1944209-co-tio2sapphire-0001-1--coo",
+      "name": "CoO",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "pradhan2005-1-1944209",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "pradhan2005-1-1944209-co-tio2sapphire-0001-1--after-s01-mix",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "pradhan2005-1-1944209-co-tio2sapphire-0001-1--tio2",
+        "pradhan2005-1-1944209-co-tio2sapphire-0001-1--coo"
+      ]
+    },
+    {
+      "id": "pradhan2005-1-1944209-co-tio2sapphire-0001-1--after-s02-calcine",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "pradhan2005-1-1944209-co-tio2sapphire-0001-1--after-s01-mix",
+        "pradhan2005-1-1944209-co-tio2sapphire-0001-1--tio2",
+        "pradhan2005-1-1944209-co-tio2sapphire-0001-1--coo"
+      ]
+    },
+    {
+      "id": "pradhan2005-1-1944209-co-tio2sapphire-0001-1--after-s03-press",
+      "name": "mixture after step 3",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "pradhan2005-1-1944209-co-tio2sapphire-0001-1--after-s02-calcine",
+        "pradhan2005-1-1944209-co-tio2sapphire-0001-1--tio2",
+        "pradhan2005-1-1944209-co-tio2sapphire-0001-1--coo"
+      ]
+    },
+    {
+      "id": "pradhan2005-1-1944209-co-tio2sapphire-0001-1--after-s04-sinter",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "pradhan2005-1-1944209-co-tio2sapphire-0001-1--after-s03-press",
+        "pradhan2005-1-1944209-co-tio2sapphire-0001-1--tio2",
+        "pradhan2005-1-1944209-co-tio2sapphire-0001-1--coo"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-mix",
+      "action": "mix",
+      "label": "Mixing TiO2 and CoO powders",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "pradhan2005-1-1944209-co-tio2sapphire-0001-1--tio2",
+        "pradhan2005-1-1944209-co-tio2sapphire-0001-1--coo"
+      ],
+      "outputs": [
+        "pradhan2005-1-1944209-co-tio2sapphire-0001-1--after-s01-mix"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "oxygen",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "pradhan2005-1-1944209",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Mixing TiO2 and CoO powders",
+      "evidence": [
+        {
+          "source_id": "pradhan2005-1-1944209",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-calcine",
+      "action": "calcine",
+      "label": "Calcining the mixture",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-mix"
+      ],
+      "inputs": [
+        "pradhan2005-1-1944209-co-tio2sapphire-0001-1--after-s01-mix",
+        "pradhan2005-1-1944209-co-tio2sapphire-0001-1--tio2",
+        "pradhan2005-1-1944209-co-tio2sapphire-0001-1--coo"
+      ],
+      "outputs": [
+        "pradhan2005-1-1944209-co-tio2sapphire-0001-1--after-s02-calcine"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 700,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "700 °C",
+          "evidence": [
+            {
+              "source_id": "pradhan2005-1-1944209",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 12,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "12 h",
+          "evidence": [
+            {
+              "source_id": "pradhan2005-1-1944209",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "oxygen",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "pradhan2005-1-1944209",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Calcining the mixture",
+      "evidence": [
+        {
+          "source_id": "pradhan2005-1-1944209",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-press",
+      "action": "press",
+      "label": "Isostatic pressing",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-calcine"
+      ],
+      "inputs": [
+        "pradhan2005-1-1944209-co-tio2sapphire-0001-1--after-s02-calcine",
+        "pradhan2005-1-1944209-co-tio2sapphire-0001-1--tio2",
+        "pradhan2005-1-1944209-co-tio2sapphire-0001-1--coo"
+      ],
+      "outputs": [
+        "pradhan2005-1-1944209-co-tio2sapphire-0001-1--after-s03-press"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "oxygen",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "pradhan2005-1-1944209",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Isostatic pressing",
+      "evidence": [
+        {
+          "source_id": "pradhan2005-1-1944209",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s04-sinter",
+      "action": "sinter",
+      "label": "Sintering to make target",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s03-press"
+      ],
+      "inputs": [
+        "pradhan2005-1-1944209-co-tio2sapphire-0001-1--after-s03-press",
+        "pradhan2005-1-1944209-co-tio2sapphire-0001-1--tio2",
+        "pradhan2005-1-1944209-co-tio2sapphire-0001-1--coo"
+      ],
+      "outputs": [
+        "pradhan2005-1-1944209-co-tio2sapphire-0001-1--after-s04-sinter"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 1000,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1000 °C",
+          "evidence": [
+            {
+              "source_id": "pradhan2005-1-1944209",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "oxygen",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "pradhan2005-1-1944209",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Sintering to make target",
+      "evidence": [
+        {
+          "source_id": "pradhan2005-1-1944209",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "pradhan2005-1-1944209-co-tio2sapphire-0001-1--product",
+      "source_sample_label": "Co:TiO2–Sapphire(0001)",
+      "batch_id": null,
+      "material_state_id": "pradhan2005-1-1944209-co-tio2sapphire-0001-1--after-s04-sinter",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Co:TiO2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "pradhan2005-1-1944209",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "rutile",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "pradhan2005-1-1944209",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "pradhan2005-1-1944209",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reactor: deposition chamber (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of TiO2 not reported in the extracted text.",
+      "Amount of CoO not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

@@ -1,0 +1,298 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "siedl2009-jp9011476-zro2-nanocrystals-2",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Nicolas Siedl et al. (2009): ZrO2 nanocrystals",
+  "material": {
+    "formula": "ZrO2",
+    "family": "ZrO2 nanocrystals",
+    "elements": [
+      "Zr",
+      "O"
+    ],
+    "components": [
+      "ZrO2"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Metal organic chemical vapor deposition",
+  "sources": [
+    {
+      "id": "siedl2009-jp9011476",
+      "doi": "10.1021/jp9011476",
+      "title": "When Fewer Photons Do More: A Comparative O2Photoadsorption Study on Vapor-Deposited TiO2and ZrO2Nanocrystal Ensembles",
+      "authors": "Nicolas Siedl, Michael J. Elser, Erich Halwax, Johannes Bernardi, and Oliver Diwald",
+      "year": 2009,
+      "url": "https://doi.org/10.1021/jp9011476",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "siedl2009-jp9011476",
+    "recipe_family": "siedl2009-jp9011476-zro2-nanocrystals-2",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "ZrO2",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "siedl2009-jp9011476",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "tetragonal and monoclinic",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "siedl2009-jp9011476",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "siedl2009-jp9011476-zro2-nanocrystals-2--zirconium-iv-propoxide",
+      "name": "zirconium(IV) propoxide",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "siedl2009-jp9011476",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "siedl2009-jp9011476-zro2-nanocrystals-2--after-s01-heat",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "siedl2009-jp9011476-zro2-nanocrystals-2--after-s02-oxidize",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "siedl2009-jp9011476-zro2-nanocrystals-2--after-s01-heat"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-heat",
+      "action": "heat",
+      "label": "Heating to 870 K",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "siedl2009-jp9011476-zro2-nanocrystals-2--after-s01-heat"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 870,
+          "minimum": null,
+          "maximum": null,
+          "unit": "K",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "870 K",
+          "evidence": [
+            {
+              "source_id": "siedl2009-jp9011476",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "O2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "siedl2009-jp9011476",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Heating to 870 K",
+      "evidence": [
+        {
+          "source_id": "siedl2009-jp9011476",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-oxidize",
+      "action": "oxidize",
+      "label": "Oxidation with O2",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-heat"
+      ],
+      "inputs": [
+        "siedl2009-jp9011476-zro2-nanocrystals-2--after-s01-heat"
+      ],
+      "outputs": [
+        "siedl2009-jp9011476-zro2-nanocrystals-2--after-s02-oxidize"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "O2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "siedl2009-jp9011476",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Oxidation with O2",
+      "evidence": [
+        {
+          "source_id": "siedl2009-jp9011476",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "siedl2009-jp9011476-zro2-nanocrystals-2--product",
+      "source_sample_label": "ZrO2 nanocrystals",
+      "batch_id": null,
+      "material_state_id": "siedl2009-jp9011476-zro2-nanocrystals-2--after-s02-oxidize",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "ZrO2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "siedl2009-jp9011476",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "tetragonal and monoclinic",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "siedl2009-jp9011476",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "siedl2009-jp9011476",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reactor: flow reactor system (Main PDF p.2).",
+        "Reaction temperature: 1070 K (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of zirconium(IV) propoxide not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

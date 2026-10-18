@@ -1,9 +1,9 @@
-import {appendFigureCaptions,figureCaptionTexts} from './figure-captions.mjs?v=0.41.7';
+import {appendFigureCaptions,figureCaptionTexts} from './figure-captions.mjs?v=0.41.9';
 import {installReaderHashNavigation,applyReaderFragment} from './reader-navigation.mjs';
 import {renderPendingVariants,PENDING_BADGE,pendingVariants} from './pending-variants.mjs';
 import {resolveMaterialEntry} from './material-aliases.mjs';
 import {mountWuContext} from './wu2008-reader-context.mjs';
-import {el,link,button,badge,section,disclosure,siteURL,recordURL,human,isEquipment,shortMethod,sourceURL,figureMatchesCategory,sourceFigureRows,componentScopeLabel} from './reader-utils.mjs?v=0.41.7';
+import {el,link,button,badge,section,disclosure,siteURL,recordURL,human,isEquipment,shortMethod,sourceURL,figureMatchesCategory,sourceFigureRows,componentScopeLabel} from './reader-utils.mjs?v=0.41.9';
 
 import {quantityValue} from './quantity-value.mjs';
 
@@ -11,9 +11,9 @@ import {chemicalRegistry,chemicalEntry,chemicalImage,openChemical,hasRotatableCh
 
 import {mountProtocol} from './protocol-visuals.mjs?v=0.40.3';
 
-import {mountReaderStructures} from './reader-structures.mjs?v=0.41.7';
+import {mountReaderStructures} from './reader-structures.mjs?v=0.41.9';
 
-import {loadReaderPresentations} from './reader-presentation-loader.mjs?v=0.41.8';
+import {loadReaderPresentations} from './reader-presentation-loader.mjs?v=0.41.9';
 const cache=new Map();
 
 function json(path){if(path==='data/reader-presentation.json')return loadReaderPresentations(siteURL(path));if(!cache.has(path))cache.set(path,fetch(siteURL(path),{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Unavailable '+path);return r.json();}));return cache.get(path);}
@@ -41,7 +41,7 @@ export function methodBadges(r,presentation={}){
 }
 
 
-function installStyle(){if(document.querySelector('link[data-reader-css]'))return;const style=el('link');style.rel='stylesheet';style.href=siteURL('reader.css?v=0.41.7');style.dataset.readerCss='true';document.head.append(style);}
+function installStyle(){if(document.querySelector('link[data-reader-css]'))return;const style=el('link');style.rel='stylesheet';style.href=siteURL('reader.css?v=0.41.9');style.dataset.readerCss='true';document.head.append(style);}
 async function precursors(host,r,presentation={}){
 
  const [data,thumbs,stockBindings]=await Promise.all([chemicalRegistry(),json('data/chemical-thumbnail-map.json'),json('data/reader-stock-bindings.json')]);if(!host.isConnected)return;function cardImage(entry){const img=chemicalImage(entry),item=thumbs.entries[entry.id];if(item?.thumbnail_path)img.src=siteURL(item.thumbnail_path);return img;}const chemicals=r.materials.filter(m=>!isEquipment(m)),grid=el('div',undefined,'reader-chemicals');

@@ -1,5 +1,59 @@
 Owner revisit list: [Machine-extracted papers](research-assets/public-audits/MACHINE_EXTRACTED_PAPERS.md).
 
+## L58 phone display correction; fresh release pending — 2026-10-18T00:30:53.950288+00:00
+
+The exact Source870f checkpoint passed all13 normal local phases at2026-10-18T00:17:38+00:00. Actual desktop and phone browser checks then found one minor display defect: Lin2002’s single-option specimen selector clipped its long name at390px. The genuine failed visual receipt and all successful checks remain preserved. That Source revision was not pushed or merged and earns0 publication credit.
+
+The shared particle display now shows the complete wrapping specimen label when only one context exists; real multi-specimen selection, source IDs, facts, references and scientific data are unchanged. All19 focused behavior tests pass, including selection of separate specimen evidence. The connected Reader cache graph is rolled to0.41.9 with43 finite version-literal edits across17 files; both existing cache suites pass(12 tests). Fresh normal Source binding/full checks, corrected artifact browser review, exact-head CI, ordinary merge and the normal Site/Pages/anonymous path remain required. The unused proposal for a different selector was never applied.
+
+Pending scope remains58 papers /75 source_extracted records /256 caption keys /592 instances. All5,219 previously published canonical files and all5294 current canonical files are preserved; training exports remain audited-only. The live website remains1,765 papers /5,219 records /3,098 display pairs. The audited lane, owner questions, findings and sampled denominator stay paused and unchanged.
+
+The [R65 cleanup report](https://github.com/cuiyist/mattersyn2/blob/70c3e40336a511c552895866198905f1da16755b/CLEANUP_REPORT_2026-10-12.md) is saved and anonymously byte-verified:15,743,842 cumulative generated copies /895,756,499,485 logical bytes, not distinct original data or isolated physical recovery. Its three actual failed-copy removals total89,955 copies /8,138,679,144 logical bytes; the last concurrent free-space delta is negative and remains recorded. Fresh C free bytes observed before this checkpoint:9177513984; the100GiB aim is unmet. Two exact Root-owned obsolete preview servers were retired after identity checks; no other program was stopped. Their candidate payloads have not yet been deleted. Protected papers, page text, quoted passes/pairs/training files, model/runtime and working checkouts remain local.
+
+Choice: fix the real phone defect in the shared display, preserve the failed visual history, and continue the58-paper release through unchanged checks. No scientific accuracy, target throughput or uninterrupted work is asserted.
+
+## B60/B61 navigation corrected; fresh release pending — 2026-10-17T23:36:00.155731+00:00
+
+The unchanged complete local build rejected Ge products that were grouped as isolated Ge. Three new records now retain their exact named SiO2 or SiC matrix in navigation; reported composition, product, quantities, conditions, source locators and status stay unchanged. The focused regressions pass. DOI10.1021/nl101413d is held as a whole because its retained checked metadata does not identify a host/support; no component is invented. Its2 unpublished records and6 crops are removed from the release payload and retained privately. This is a technical hold, not an insufficient-synthesis skip. The original59-paper/77-record/262-figure preparation and failed build remain on record.
+
+The corrected pending scope is **58 papers /75 records /256 figure keys /592 Reader caption instances**, with0 publication credit. All5,219 prior canonical raw files and the six audited-only training exports remain preserved. The live website stays at **1,765 papers /5,219 canonical records /3,098 display pairs**. Fresh normal source binding, complete build, visual review, exact-head CI, ordinary merge, deployment and anonymous verification are required. The audit lane remains paused. The other chat's browser works; this chat still reports local browser use disabled, so the authorized working chat will perform the actual artifact-bound visual checks.
+
+C free bytes observed:11539984384; the100GiB aim remains unmet. Reconstructible failed-build copies are under bounded cleanup review. Original papers, quote-bearing training inputs, active model/runtime and one Source/Site checkout remain protected. No throughput or scientific accuracy claim is made.
+
+
+## B60/B61 captions and metadata closed; release checks pending — 2026-10-17T22:50:07.655139+00:00
+
+The59-paper /77-record /262-figure group has completed normal preparation and exact saved-caption closure. Trusted DOI metadata corrected24 new records across19 flagged papers, with0 unresolved authorities;23 display-title prefixes were aligned. Six normal zero-hold binds and one normal caption apply preserve all262 approved strings and origin packets across610 actual Reader instances. Full Reader semantic inverse and all5,296 raw canonical files passed. Two normal generators passed; all six audited-only training exports match the verified Site. No nonempty sync followed caption application.
+
+Complete local Source/build/browser checks, exact-head CI, ordinary merge, deployment and anonymous verification remain required. These59 papers still have0 publication credit. Live totals remain1,765 primary source IDs /5,219 records /3,098 display pairs. The technical holds and paused audited lane remain unchanged. One selected paper has0 listed source crops in the saved metadata; no missing crop file or new source-reading conclusion is inferred.
+
+Three additional consumed public build copies are retired through exact manifest/retained-Site byte comparison, fresh native consumer checks and final metadata CAS:148,842 copies /9,822,042,867 logical bytes. All directories, unknown entries, protected inputs, working checkouts and model/runtime files remain preserved. Their receipts are additional to R63 and are not yet added to that public report. Measured C free bytes:19284000768;100GiB remains unmet. No other program was stopped.
+
+
+## B60/B61 prepared; K41 milestone saved — 2026-10-17T22:32:35.147552+00:00
+
+The next group contains **59 papers /77 new source_extracted records /262 figure crops**. All seven normal preparation stages passed. All5,219 previously published canonical raw files remain exact;43 saved whole-object deletions were applied before selecting these papers, with no new facts or independent audit. The known B61 technical hold stays out. Citation/title and descriptive-caption closure, complete local build/source/browser checks, CI, ordinary merge, deployment and anonymous verification remain pending. This group has0 publication credit. Another52 papers/67 records are saved privately for the following group and require their final admission refresh after this release.
+
+The genuine K41 milestone is recorded once in the Source status, owner revisit index and local publication ledger. Verified live totals remain **1,765 primary source IDs /5,219 records /3,098 display pairs**. Audited contributions remain244 papers/864 pairs, and training exports remain audited-only. No achieved throughput or scientific accuracy is inferred. The audited lane, its owner questions and denominator remain paused and unchanged.
+
+The approved [R63 cleanup report](https://github.com/cuiyist/mattersyn2/blob/6bb14e00b2eaa076dd1181a6c466cb842846cad7/CLEANUP_REPORT_2026-10-12.md) is saved and anonymously byte-verified. Cumulative accounting is15,475,528 retired copies /875,132,004,473 logical bytes, not an isolated physical recovery claim. Its six actual removals are separate from the retained R60→R61→R62 history. Current measured C free bytes:12908109824; the100GiB aim remains unmet. A later manifest-listed candidate cleanup has finished and a second is active; neither is added to R63. Protected inputs, models and working checkouts remain preserved. Only Root's obsolete q3 preview server was retired; no other program was stopped.
+
+Choice: release the111 prepared papers in two groups of roughly50 to retain the owner's batch cadence and proceed with the first59 now.
+
+
+## B56/B57/B58/B59 pooled release verified — 2026-10-17T22:08:53+00:00
+
+**41 source_extracted papers /53 new canonical records /187 retained caption keys** are live and anonymously verified. Original contributions: B56 5 papers/5 records/30 figures; B57 13/16/59; B58 13/18/59; B59 10/14/39. Source `627b817d7ab21fea320ab2ee760446f794ad531d` passed all three exact-head CI jobs and ordinary PR [68](https://github.com/cuiyist/mattersyn/pull/68), merge `3cbd6cb61b734bdcb403b45954351750ead0655b`. Site `5c3899ea21f24ce701d5a795f5af1542a6484b8a` passed [Pages 39072987879](https://github.com/cuiyist/mattersyn-site/actions/runs/39072987879). Anonymous verification checked 634 files and all planned paper/material routes with zero failures. Final manifest 49614 files /3274014289 logical bytes.
+
+Actual build totals: **1765 primary paper IDs /5219 canonical records /3098 recipe–structure display pairs**. Audited contributions remain244 papers/864 pairs. No scientific accuracy or training readiness is inferred.
+
+All5,166 old canonical raw files and all53 final K raw files remain exact. The two earlier navigation-only corrections remain preserved. Five corrected canonical records,26 corrected caption fields,4 corrected protocol SVGs and4 material-hub metadata edits are reflected in the final artifact; all187 caption keys/433 instances are preserved. Original B56–B59 limited-read history and59 already-applied whole-object deletions are retained without replay; actual retained DOI markers 26. Prior holds, owner questions, audit denominators and G68/H35/I49/J44 applied-once history are unchanged. These saved reads are not independent audits.
+
+Storage carries independently verified report `cd4fde4d2f9b34c5674d5f64a593684848df4566`: 857581632084 cumulative logical copy bytes /15256499 copies. The whole previous Source storage object is retained. Dated observations establish neither current free space nor isolated physical recovery.
+
+Separate dated cleanup observations, outside the unchanged R60 -> R61 -> R62 receipt chain: at 2026-10-17 20:03:54 UTC, the cancelled r-K-r1/site-stage was removed (3,274,006,953 logical bytes; measured C free 21,514,756,096 -> 24,929,943,552 bytes). At 21:10:28 UTC the completed q-K-r3/source-boundary export was removed (3,142,542,566 logical bytes; C free 16,237,010,944 -> 19,497,484,288 bytes). At 21:19:09 UTC the completed q-K-r2/source-boundary export was removed (3,142,508,958 logical bytes; C free 12,638,679,040 -> 15,889,440,768 bytes). No protected inputs, working checkout or active model files were removed; no program was stopped. These are dated observed free-byte readings, not an attribution of isolated physical recovery, a current free-space reading or a new R63 receipt.
+
+
 ## K41 browser findings and corrections; publication pending — 2026-10-17T20:07:04.944454+00:00
 
 The working browser chat opened all91 required candidate routes at desktop width and four representative pages at phone width. Route reachability and source selection passed; the clean visual result failed on a power value labelled as a temperature. The same review identified malformed printed symbols and a composite film grouped as elemental silicon. The failed browser result and cancelled normal Site dry-run remain preserved; Source PR67/908ec32 passed its exact-head CI and merged, but this batch has not been deployed.

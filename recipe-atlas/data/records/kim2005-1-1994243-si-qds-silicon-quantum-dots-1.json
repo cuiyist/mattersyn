@@ -1,0 +1,309 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "kim2005-1-1994243-si-qds-silicon-quantum-dots-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Sang Soo Kim (2005): Si-QDs (Silicon quantum dots)",
+  "material": {
+    "formula": "Si",
+    "family": "Si nanocrystals",
+    "elements": [
+      "Si"
+    ],
+    "components": [
+      "Si"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Photo-CVD",
+  "sources": [
+    {
+      "id": "kim2005-1-1994243",
+      "doi": "10.1063/1.1994243",
+      "title": "Silicon quantum dot formation using photo-CVD",
+      "authors": "Sang Soo Kim",
+      "year": 2005,
+      "url": "https://doi.org/10.1063/1.1994243",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "kim2005-1-1994243",
+    "recipe_family": "kim2005-1-1994243-si-qds-silicon-quantum-dots-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Si",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "kim2005-1-1994243",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "crystalline",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "kim2005-1-1994243",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": 12.0,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "12 nm",
+      "evidence": [
+        {
+          "source_id": "kim2005-1-1994243",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "kim2005-1-1994243-si-qds-silicon-quantum-dots-1--silane-sih4",
+      "name": "silane (SiH4)",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "kim2005-1-1994243",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "kim2005-1-1994243-si-qds-silicon-quantum-dots-1--hydrogen-h2",
+      "name": "hydrogen (H2)",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "kim2005-1-1994243",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "kim2005-1-1994243-si-qds-silicon-quantum-dots-1--after-s01-pass",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "kim2005-1-1994243-si-qds-silicon-quantum-dots-1--silane-sih4",
+        "kim2005-1-1994243-si-qds-silicon-quantum-dots-1--hydrogen-h2"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-pass",
+      "action": "pass",
+      "label": "Source gases passed through a mercury bath",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "kim2005-1-1994243-si-qds-silicon-quantum-dots-1--silane-sih4",
+        "kim2005-1-1994243-si-qds-silicon-quantum-dots-1--hydrogen-h2"
+      ],
+      "outputs": [
+        "kim2005-1-1994243-si-qds-silicon-quantum-dots-1--after-s01-pass"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 20,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "20 °C",
+          "evidence": [
+            {
+              "source_id": "kim2005-1-1994243",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "H2/SiH4 gas mixture",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "kim2005-1-1994243",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Source gases passed through a mercury bath",
+      "evidence": [
+        {
+          "source_id": "kim2005-1-1994243",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "kim2005-1-1994243-si-qds-silicon-quantum-dots-1--product",
+      "source_sample_label": "Si-QDs (Silicon quantum dots)",
+      "batch_id": null,
+      "material_state_id": "kim2005-1-1994243-si-qds-silicon-quantum-dots-1--after-s01-pass",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Si",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "kim2005-1-1994243",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "crystalline",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "kim2005-1-1994243",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "kim2005-1-1994243",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reactor: reaction chamber (Main PDF p.2).",
+        "Reaction temperature: 150 degC (Main PDF p.2).",
+        "Reaction time: 2 min (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "kim2005-1-1994243-si-qds-silicon-quantum-dots-1--size",
+      "sample_id": "kim2005-1-1994243-si-qds-silicon-quantum-dots-1--product",
+      "property": "diameter",
+      "technique": "SEM",
+      "value": {
+        "value": 12.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "12 nm",
+        "evidence": [
+          {
+            "source_id": "kim2005-1-1994243",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "kim2005-1-1994243",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Amount of silane (SiH4) not reported in the extracted text.",
+      "Amount of hydrogen (H2) not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
