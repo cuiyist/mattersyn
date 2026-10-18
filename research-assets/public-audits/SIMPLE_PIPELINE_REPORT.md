@@ -1,3 +1,13 @@
+## N43 finite 3C component correction; fresh release checks pending - 2026-10-18T16:08:52.099761+00:00
+
+Normal Source preparation refused two newly added absolute local evidence paths in the status file. Root removed only those two paths, retaining the evidence byte counts and SHA-256 values; all old status history and release checks remain unchanged. A private metadata-review header was also corrected before preparation after a shallow-copy evidence error; the exact one-key Source authorization was unchanged.
+
+Historical Source92 passed all three exact-head CI checks in run39131651857 and PR71 merged as b1ee8361f58b6df3b66c6525d8da56e6f7dff3f6. Its old Site candidate remains unpublished under the confirmed false3C component-hub HOLD. The valid whole product remains3C-SiC; Root corrected only its component navigation and exact Reader/binding dependencies. No recipe value, product statement, caption, rights fact, review status or audited-export content changed.
+
+The first direct-write attempt29461 stopped after seven file writes at private DOI-identity validation. Its failure and before copies remain preserved. A separate Root-pinned continuation result now validates those already-applied files without reapplication. No extra pre-q generators or empty sync ran. Fresh normal Source preparation, complete q/build and export checks, actual browser review, exact-head CI/ordinary merge, Site release and anonymous verification remain due. N43 has zero Site publication credit until fresh verification.
+
+Cleanup20819 completed eight roles:246104 file copies and22247989240 logical bytes removed. Observed C free bytes were39516958720 then61841084416, still below100GiB (107374182400bytes); this is not an attributed physical gain. All prior HOLDs remain untouched. B70 completed10 limited rare reads covering11ordinals with12 private whole-object deletion instructions and0additions; fresh admission p/c remain pending. The audit lane, old questions, denominators and official paper ledger/index are unchanged.
+
 ## N43 phone stage-strip paint mitigation; fresh release checks required — 2026-10-18T12:52:29.875494+00:00
 
 All13 normal local checks passed on Source6835301c0c3fdbd11e248ee83f4fb449c15bf0c5. Actual desktop/phone review found the phone stage-button strip missing in initial captures while the schematic and identical visible DOM geometry were present; later captures showed the buttons. Both original and bounded-reload reviews remain `needs_review`, with their images and unknown cause preserved. No Source push, PR, merge or N43 publication occurred from those results.
