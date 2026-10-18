@@ -1,0 +1,384 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "bonetti1998-1-368639-nanocrystalline-nickel-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "E. Bonetti (1998): nanocrystalline nickel",
+  "material": {
+    "formula": "Ni",
+    "family": "Ni nanocrystals",
+    "elements": [
+      "Ni"
+    ],
+    "components": [
+      "Ni"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Mechanical attrition",
+  "sources": [
+    {
+      "id": "bonetti1998-1-368639",
+      "doi": "10.1063/1.368639",
+      "title": "Microstructure-related anelastic and magnetoelastic behavior of nanocrystalline nickel",
+      "authors": "E. Bonetti, E. G. Campari, L. Pasquini, and E. Sampaolesi",
+      "year": 1998,
+      "url": "https://doi.org/10.1063/1.368639",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "bonetti1998-1-368639",
+    "recipe_family": "bonetti1998-1-368639-nanocrystalline-nickel-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Ni",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "bonetti1998-1-368639",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": 15,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "15 nm",
+      "evidence": [
+        {
+          "source_id": "bonetti1998-1-368639",
+          "locator": "Main PDF p.4"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "bonetti1998-1-368639-nanocrystalline-nickel-1--nickel-powder",
+      "name": "nickel powder",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "bonetti1998-1-368639",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "bonetti1998-1-368639-nanocrystalline-nickel-1--after-s01-mill",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "bonetti1998-1-368639-nanocrystalline-nickel-1--nickel-powder"
+      ]
+    },
+    {
+      "id": "bonetti1998-1-368639-nanocrystalline-nickel-1--after-s02-anneal",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "bonetti1998-1-368639-nanocrystalline-nickel-1--after-s01-mill"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-mill",
+      "action": "mill",
+      "label": "Mechanical attrition in a planetary ball mill",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "bonetti1998-1-368639-nanocrystalline-nickel-1--nickel-powder"
+      ],
+      "outputs": [
+        "bonetti1998-1-368639-nanocrystalline-nickel-1--after-s01-mill"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 220,
+          "minimum": null,
+          "maximum": null,
+          "unit": "K",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "220 K",
+          "evidence": [
+            {
+              "source_id": "bonetti1998-1-368639",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 90,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "90 h",
+          "evidence": [
+            {
+              "source_id": "bonetti1998-1-368639",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "vacuum",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "bonetti1998-1-368639",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Mechanical attrition in a planetary ball mill",
+      "evidence": [
+        {
+          "source_id": "bonetti1998-1-368639",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-anneal",
+      "action": "anneal",
+      "label": "Thermal treatment to reduce internal strains",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-mill"
+      ],
+      "inputs": [
+        "bonetti1998-1-368639-nanocrystalline-nickel-1--after-s01-mill"
+      ],
+      "outputs": [
+        "bonetti1998-1-368639-nanocrystalline-nickel-1--after-s02-anneal"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 680,
+          "minimum": null,
+          "maximum": null,
+          "unit": "K",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "680 K",
+          "evidence": [
+            {
+              "source_id": "bonetti1998-1-368639",
+              "locator": "Main PDF p.4"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1 h",
+          "evidence": [
+            {
+              "source_id": "bonetti1998-1-368639",
+              "locator": "Main PDF p.4"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "vacuum",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "bonetti1998-1-368639",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Thermal treatment to reduce internal strains",
+      "evidence": [
+        {
+          "source_id": "bonetti1998-1-368639",
+          "locator": "Main PDF p.4"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "bonetti1998-1-368639-nanocrystalline-nickel-1--product",
+      "source_sample_label": "nanocrystalline nickel",
+      "batch_id": null,
+      "material_state_id": "bonetti1998-1-368639-nanocrystalline-nickel-1--after-s02-anneal",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Ni",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "bonetti1998-1-368639",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "bonetti1998-1-368639",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reactor: planetary ball milling apparatus (Main PDF p.2).",
+        "Reaction temperature: 220 K (Main PDF p.2).",
+        "Reaction time: 90 h (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "bonetti1998-1-368639-nanocrystalline-nickel-1--size",
+      "sample_id": "bonetti1998-1-368639-nanocrystalline-nickel-1--product",
+      "property": "particle_size",
+      "technique": "not reported",
+      "value": {
+        "value": 15,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "15 nm",
+        "evidence": [
+          {
+            "source_id": "bonetti1998-1-368639",
+            "locator": "Main PDF p.4"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "bonetti1998-1-368639",
+          "locator": "Main PDF p.4"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Amount of nickel powder not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

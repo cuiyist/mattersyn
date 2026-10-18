@@ -1,0 +1,398 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "mgb-mit-edu2015-nl5024244-pbs-qd-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Darcy D. W. Grinolds et al. (2015): mgb@mit.edu. (2015): PbS QD",
+  "material": {
+    "formula": "PbS",
+    "family": "PbS nanocrystals",
+    "elements": [
+      "Pb",
+      "S"
+    ],
+    "components": [
+      "PbS"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Synthesis as described in the source",
+  "sources": [
+    {
+      "id": "mgb-mit-edu2015-nl5024244",
+      "doi": "10.1021/nl5024244",
+      "title": "Quantum-Dot Size and Thin-Film Dielectric Constant: Precision Measurement and Disparity with Simple Models",
+      "authors": "Darcy D. W. Grinolds; Patrick R. Brown; Daniel K. Harris; Vladimir Bulovic; Moungi G. Bawendi",
+      "year": 2015,
+      "url": "https://doi.org/10.1021/nl5024244",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "mgb-mit-edu2015-nl5024244",
+    "recipe_family": "mgb-mit-edu2015-nl5024244-pbs-qd-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "PbS",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "mgb-mit-edu2015-nl5024244",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": 2.97,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "2.97 nm",
+      "evidence": [
+        {
+          "source_id": "mgb-mit-edu2015-nl5024244",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "sphere",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "mgb-mit-edu2015-nl5024244",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "mgb-mit-edu2015-nl5024244-pbs-qd-1--oleic-acid",
+      "name": "oleic acid",
+      "formula": null,
+      "role": "ligand",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "mgb-mit-edu2015-nl5024244",
+          "locator": "Main PDF p.4"
+        }
+      ]
+    },
+    {
+      "id": "mgb-mit-edu2015-nl5024244-pbs-qd-1--octadecene",
+      "name": "octadecene",
+      "formula": null,
+      "role": "solvent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "mgb-mit-edu2015-nl5024244",
+          "locator": "Main PDF p.4"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "mgb-mit-edu2015-nl5024244-pbs-qd-1--after-s01-heat",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "mgb-mit-edu2015-nl5024244-pbs-qd-1--oleic-acid",
+        "mgb-mit-edu2015-nl5024244-pbs-qd-1--octadecene"
+      ]
+    },
+    {
+      "id": "mgb-mit-edu2015-nl5024244-pbs-qd-1--after-s02-precipitate",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "mgb-mit-edu2015-nl5024244-pbs-qd-1--after-s01-heat"
+      ]
+    },
+    {
+      "id": "mgb-mit-edu2015-nl5024244-pbs-qd-1--after-s03-precipitate",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "mgb-mit-edu2015-nl5024244-pbs-qd-1--after-s02-precipitate"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-heat",
+      "action": "heat",
+      "label": "Heat-up synthesis",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "mgb-mit-edu2015-nl5024244-pbs-qd-1--oleic-acid",
+        "mgb-mit-edu2015-nl5024244-pbs-qd-1--octadecene"
+      ],
+      "outputs": [
+        "mgb-mit-edu2015-nl5024244-pbs-qd-1--after-s01-heat"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 120,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "120 °C",
+          "evidence": [
+            {
+              "source_id": "mgb-mit-edu2015-nl5024244",
+              "locator": "Main PDF p.4"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Heat-up synthesis",
+      "evidence": [
+        {
+          "source_id": "mgb-mit-edu2015-nl5024244",
+          "locator": "Main PDF p.4"
+        }
+      ]
+    },
+    {
+      "id": "s02-precipitate",
+      "action": "precipitate",
+      "label": "Size-selective precipitation with butanol",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-heat"
+      ],
+      "inputs": [
+        "mgb-mit-edu2015-nl5024244-pbs-qd-1--after-s01-heat"
+      ],
+      "outputs": [
+        "mgb-mit-edu2015-nl5024244-pbs-qd-1--after-s02-precipitate"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Size-selective precipitation with butanol",
+      "evidence": [
+        {
+          "source_id": "mgb-mit-edu2015-nl5024244",
+          "locator": "Main PDF p.5"
+        }
+      ]
+    },
+    {
+      "id": "s03-precipitate",
+      "action": "precipitate",
+      "label": "Precipitation with butanol/methanol for film measurements",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-precipitate"
+      ],
+      "inputs": [
+        "mgb-mit-edu2015-nl5024244-pbs-qd-1--after-s02-precipitate"
+      ],
+      "outputs": [
+        "mgb-mit-edu2015-nl5024244-pbs-qd-1--after-s03-precipitate"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Precipitation with butanol/methanol for film measurements",
+      "evidence": [
+        {
+          "source_id": "mgb-mit-edu2015-nl5024244",
+          "locator": "Main PDF p.5"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "mgb-mit-edu2015-nl5024244-pbs-qd-1--product",
+      "source_sample_label": "PbS QD",
+      "batch_id": null,
+      "material_state_id": "mgb-mit-edu2015-nl5024244-pbs-qd-1--after-s03-precipitate",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "PbS",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "mgb-mit-edu2015-nl5024244",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": "sphere",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "mgb-mit-edu2015-nl5024244",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "mgb-mit-edu2015-nl5024244",
+          "locator": "Main PDF p.4"
+        }
+      ],
+      "notes": [
+        "Reactor: four-necked flask (Main PDF p.4).",
+        "Reaction temperature: 120 degC (Main PDF p.4)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "mgb-mit-edu2015-nl5024244-pbs-qd-1--size",
+      "sample_id": "mgb-mit-edu2015-nl5024244-pbs-qd-1--product",
+      "property": "diameter",
+      "technique": "SAXS",
+      "value": {
+        "value": 2.97,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "2.97 nm",
+        "evidence": [
+          {
+            "source_id": "mgb-mit-edu2015-nl5024244",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "mgb-mit-edu2015-nl5024244",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of oleic acid not reported in the extracted text.",
+      "Amount of octadecene not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

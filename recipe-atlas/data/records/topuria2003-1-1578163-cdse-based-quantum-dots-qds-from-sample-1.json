@@ -1,0 +1,386 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "topuria2003-1-1578163-cdse-based-quantum-dots-qds-from-sample-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "T. Topuria et al. (2003): CdSe based quantum dots (QDs) from sample A",
+  "material": {
+    "formula": "CdSe",
+    "family": "CdSe nanocrystals",
+    "elements": [
+      "Cd",
+      "Se"
+    ],
+    "components": [
+      "CdSe"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Thermal treatment",
+  "sources": [
+    {
+      "id": "topuria2003-1-1578163",
+      "doi": "10.1063/1.1578163",
+      "title": "Highly uniform (Cd,Mn,Zn)Se/(Zn,Mn)Se quantum dot array formation by means of thermal treatments",
+      "authors": "T. Topuria, P. Möck, Y. Lei, and N. D. Browning",
+      "year": 2003,
+      "url": "https://doi.org/10.1063/1.1578163",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "topuria2003-1-1578163",
+    "recipe_family": "topuria2003-1-1578163-cdse-based-quantum-dots-qds-from-sample-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdSe",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "topuria2003-1-1578163",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "topuria2003-1-1578163-cdse-based-quantum-dots-qds-from-sample-1--znse",
+      "name": "ZnSe",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "topuria2003-1-1578163",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "topuria2003-1-1578163-cdse-based-quantum-dots-qds-from-sample-1--cd-mn-se",
+      "name": "(Cd,Mn)Se",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "topuria2003-1-1578163",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "topuria2003-1-1578163-cdse-based-quantum-dots-qds-from-sample-1--after-s01-deposit",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "topuria2003-1-1578163-cdse-based-quantum-dots-qds-from-sample-1--znse"
+      ]
+    },
+    {
+      "id": "topuria2003-1-1578163-cdse-based-quantum-dots-qds-from-sample-1--after-s02-deposit",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "topuria2003-1-1578163-cdse-based-quantum-dots-qds-from-sample-1--after-s01-deposit",
+        "topuria2003-1-1578163-cdse-based-quantum-dots-qds-from-sample-1--cd-mn-se",
+        "topuria2003-1-1578163-cdse-based-quantum-dots-qds-from-sample-1--znse"
+      ]
+    },
+    {
+      "id": "topuria2003-1-1578163-cdse-based-quantum-dots-qds-from-sample-1--after-s03-deposit",
+      "name": "mixture after step 3",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "topuria2003-1-1578163-cdse-based-quantum-dots-qds-from-sample-1--after-s02-deposit",
+        "topuria2003-1-1578163-cdse-based-quantum-dots-qds-from-sample-1--cd-mn-se"
+      ]
+    },
+    {
+      "id": "topuria2003-1-1578163-cdse-based-quantum-dots-qds-from-sample-1--after-s04-deposit",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "topuria2003-1-1578163-cdse-based-quantum-dots-qds-from-sample-1--after-s03-deposit",
+        "topuria2003-1-1578163-cdse-based-quantum-dots-qds-from-sample-1--znse"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-deposit",
+      "action": "deposit",
+      "label": "Deposit ZnSe on GaAs/ZnSe pseudosubstrate",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "topuria2003-1-1578163-cdse-based-quantum-dots-qds-from-sample-1--znse"
+      ],
+      "outputs": [
+        "topuria2003-1-1578163-cdse-based-quantum-dots-qds-from-sample-1--after-s01-deposit"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Deposit ZnSe on GaAs/ZnSe pseudosubstrate",
+      "evidence": [
+        {
+          "source_id": "topuria2003-1-1578163",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-deposit",
+      "action": "deposit",
+      "label": "Deposit (Cd,Mn)Se and ZnSe layers",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-deposit"
+      ],
+      "inputs": [
+        "topuria2003-1-1578163-cdse-based-quantum-dots-qds-from-sample-1--after-s01-deposit",
+        "topuria2003-1-1578163-cdse-based-quantum-dots-qds-from-sample-1--cd-mn-se",
+        "topuria2003-1-1578163-cdse-based-quantum-dots-qds-from-sample-1--znse"
+      ],
+      "outputs": [
+        "topuria2003-1-1578163-cdse-based-quantum-dots-qds-from-sample-1--after-s02-deposit"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Deposit (Cd,Mn)Se and ZnSe layers",
+      "evidence": [
+        {
+          "source_id": "topuria2003-1-1578163",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-deposit",
+      "action": "deposit",
+      "label": "Deposit final (Cd,Mn)Se layer",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-deposit"
+      ],
+      "inputs": [
+        "topuria2003-1-1578163-cdse-based-quantum-dots-qds-from-sample-1--after-s02-deposit",
+        "topuria2003-1-1578163-cdse-based-quantum-dots-qds-from-sample-1--cd-mn-se"
+      ],
+      "outputs": [
+        "topuria2003-1-1578163-cdse-based-quantum-dots-qds-from-sample-1--after-s03-deposit"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Deposit final (Cd,Mn)Se layer",
+      "evidence": [
+        {
+          "source_id": "topuria2003-1-1578163",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s04-deposit",
+      "action": "deposit",
+      "label": "Deposit capping ZnSe layer",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s03-deposit"
+      ],
+      "inputs": [
+        "topuria2003-1-1578163-cdse-based-quantum-dots-qds-from-sample-1--after-s03-deposit",
+        "topuria2003-1-1578163-cdse-based-quantum-dots-qds-from-sample-1--znse"
+      ],
+      "outputs": [
+        "topuria2003-1-1578163-cdse-based-quantum-dots-qds-from-sample-1--after-s04-deposit"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Deposit capping ZnSe layer",
+      "evidence": [
+        {
+          "source_id": "topuria2003-1-1578163",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "topuria2003-1-1578163-cdse-based-quantum-dots-qds-from-sample-1--product",
+      "source_sample_label": "CdSe based quantum dots (QDs) from sample A",
+      "batch_id": null,
+      "material_state_id": "topuria2003-1-1578163-cdse-based-quantum-dots-qds-from-sample-1--after-s04-deposit",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdSe",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "topuria2003-1-1578163",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "topuria2003-1-1578163",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reactor: JEOL JEM 2010F transmission electron microscope (TEM)/scanning TEM STEM (Main PDF p.2).",
+        "Reaction time: 5 min (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Amount of ZnSe not reported in the extracted text.",
+      "Amount of (Cd,Mn)Se not reported in the extracted text.",
+      "Amount of ZnSe not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
