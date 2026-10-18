@@ -1,0 +1,422 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "liu2012-cs200686a-thh-pt-ncs-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Hai-Xia Liu (2012): THH Pt NCs",
+  "material": {
+    "formula": "Pt",
+    "family": "Pt nanocrystals",
+    "elements": [
+      "Pt"
+    ],
+    "components": [
+      "Pt"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Electrochemical",
+  "sources": [
+    {
+      "id": "liu2012-cs200686a",
+      "doi": "10.1021/cs200686a",
+      "title": "Tetrahexahedral Pt Nanocrystal Catalysts Decorated with Ru Adatoms and Their Enhanced Activity in Methanol Electrooxidation",
+      "authors": "Hai-Xia Liu, Na Tian, Michael P. Brandon, Zhi-You Zhou, Jian-Long Lin, Christopher Hardacre, Wen-Feng Lin, Shi-Gang Sun",
+      "year": 2012,
+      "url": "https://doi.org/10.1021/cs200686a",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "liu2012-cs200686a",
+    "recipe_family": "liu2012-cs200686a-thh-pt-ncs-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Pt",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "liu2012-cs200686a",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "metallic",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "liu2012-cs200686a",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": 81,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "81 nm",
+      "evidence": [
+        {
+          "source_id": "liu2012-cs200686a",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "tetrahexahedral",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "liu2012-cs200686a",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "liu2012-cs200686a-thh-pt-ncs-1--ascorbic-acid",
+      "name": "ascorbic acid",
+      "formula": null,
+      "role": "reducing_agent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "concentration": {
+          "value": 30,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mM",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "30 mM",
+          "evidence": [
+            {
+              "source_id": "liu2012-cs200686a",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "liu2012-cs200686a",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "liu2012-cs200686a-thh-pt-ncs-1--h2so4",
+      "name": "H2SO4",
+      "formula": null,
+      "role": "solvent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "concentration": {
+          "value": 0.1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "M",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0.1 M",
+          "evidence": [
+            {
+              "source_id": "liu2012-cs200686a",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "liu2012-cs200686a",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "liu2012-cs200686a-thh-pt-ncs-1--after-s01-grow",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "liu2012-cs200686a-thh-pt-ncs-1--after-s02-recrystallize",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "liu2012-cs200686a-thh-pt-ncs-1--after-s01-grow",
+        "liu2012-cs200686a-thh-pt-ncs-1--ascorbic-acid",
+        "liu2012-cs200686a-thh-pt-ncs-1--h2so4"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-grow",
+      "action": "grow",
+      "label": "Grow polycrystalline Pt nanospheres",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "liu2012-cs200686a-thh-pt-ncs-1--after-s01-grow"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 30,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "30 min",
+          "evidence": [
+            {
+              "source_id": "liu2012-cs200686a",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "liu2012-cs200686a",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Grow polycrystalline Pt nanospheres",
+      "evidence": [
+        {
+          "source_id": "liu2012-cs200686a",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-recrystallize",
+      "action": "recrystallize",
+      "label": "Recrystallize nanospheres into THH Pt NCs",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-grow"
+      ],
+      "inputs": [
+        "liu2012-cs200686a-thh-pt-ncs-1--after-s01-grow",
+        "liu2012-cs200686a-thh-pt-ncs-1--ascorbic-acid",
+        "liu2012-cs200686a-thh-pt-ncs-1--h2so4"
+      ],
+      "outputs": [
+        "liu2012-cs200686a-thh-pt-ncs-1--after-s02-recrystallize"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 30,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "30 min",
+          "evidence": [
+            {
+              "source_id": "liu2012-cs200686a",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "liu2012-cs200686a",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Recrystallize nanospheres into THH Pt NCs",
+      "evidence": [
+        {
+          "source_id": "liu2012-cs200686a",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "liu2012-cs200686a-thh-pt-ncs-1--product",
+      "source_sample_label": "THH Pt NCs",
+      "batch_id": null,
+      "material_state_id": "liu2012-cs200686a-thh-pt-ncs-1--after-s02-recrystallize",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Pt",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "liu2012-cs200686a",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "metallic",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "liu2012-cs200686a",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "tetrahexahedral",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "liu2012-cs200686a",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "liu2012-cs200686a",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reaction temperature: 25 degC (Main PDF p.2).",
+        "Reaction time: 30 min (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "liu2012-cs200686a-thh-pt-ncs-1--size",
+      "sample_id": "liu2012-cs200686a-thh-pt-ncs-1--product",
+      "property": "diameter",
+      "technique": "TEM",
+      "value": {
+        "value": 81,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "81 nm",
+        "evidence": [
+          {
+            "source_id": "liu2012-cs200686a",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "liu2012-cs200686a",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Ligand not reported in the extracted text.",
+      "Reactor not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

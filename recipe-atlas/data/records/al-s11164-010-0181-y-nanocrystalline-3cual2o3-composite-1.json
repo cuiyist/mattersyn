@@ -1,0 +1,325 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "al-s11164-010-0181-y-nanocrystalline-3cual2o3-composite-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "In-Yong Ko et al. (2010): nanocrystalline 3Cu–Al2O3 composite",
+  "material": {
+    "formula": "3Cu–Al2O3",
+    "family": "3Cu–Al2O3 nanocrystals",
+    "elements": [
+      "Cu",
+      "Al",
+      "O"
+    ],
+    "components": [
+      "3Cu",
+      "Al2O3"
+    ],
+    "architecture": "composite"
+  },
+  "method": "Synthesis as described in the source",
+  "sources": [
+    {
+      "id": "al-s11164-010-0181-y",
+      "doi": "10.1007/s11164-010-0181-y",
+      "title": "Properties and consolidation of nanocrystalline 3Cu–Al2O3 composite by rapid sintering",
+      "authors": "In-Yong Ko; Na-Ri Kim; Jin-Yeoung Lee; Na-Ra Park; Jung-Mann Doh; In-Jin Shon",
+      "year": 2010,
+      "url": "https://doi.org/10.1007/s11164-010-0181-y",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "al-s11164-010-0181-y",
+    "recipe_family": "al-s11164-010-0181-y-nanocrystalline-3cual2o3-composite-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "al-s11164-010-0181-y-nanocrystalline-3cual2o3-composite-1--cuo",
+      "name": "CuO",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "al-s11164-010-0181-y",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "al-s11164-010-0181-y-nanocrystalline-3cual2o3-composite-1--al",
+      "name": "Al",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "al-s11164-010-0181-y",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "al-s11164-010-0181-y-nanocrystalline-3cual2o3-composite-1--after-s01-milling",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "al-s11164-010-0181-y-nanocrystalline-3cual2o3-composite-1--cuo",
+        "al-s11164-010-0181-y-nanocrystalline-3cual2o3-composite-1--al"
+      ]
+    },
+    {
+      "id": "al-s11164-010-0181-y-nanocrystalline-3cual2o3-composite-1--after-s02-sintering",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "al-s11164-010-0181-y-nanocrystalline-3cual2o3-composite-1--after-s01-milling"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-milling",
+      "action": "milling",
+      "label": "Milling of 3CuO and 2Al powder mixtures",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "al-s11164-010-0181-y-nanocrystalline-3cual2o3-composite-1--cuo",
+        "al-s11164-010-0181-y-nanocrystalline-3cual2o3-composite-1--al"
+      ],
+      "outputs": [
+        "al-s11164-010-0181-y-nanocrystalline-3cual2o3-composite-1--after-s01-milling"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "10 h",
+          "evidence": [
+            {
+              "source_id": "al-s11164-010-0181-y",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "argon",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "al-s11164-010-0181-y",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Milling of 3CuO and 2Al powder mixtures",
+      "evidence": [
+        {
+          "source_id": "al-s11164-010-0181-y",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-sintering",
+      "action": "sintering",
+      "label": "Pulsed-current activated sintering",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-milling"
+      ],
+      "inputs": [
+        "al-s11164-010-0181-y-nanocrystalline-3cual2o3-composite-1--after-s01-milling"
+      ],
+      "outputs": [
+        "al-s11164-010-0181-y-nanocrystalline-3cual2o3-composite-1--after-s02-sintering"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 2,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "2 min",
+          "evidence": [
+            {
+              "source_id": "al-s11164-010-0181-y",
+              "locator": "Main PDF p.9"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "argon",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "al-s11164-010-0181-y",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Pulsed-current activated sintering",
+      "evidence": [
+        {
+          "source_id": "al-s11164-010-0181-y",
+          "locator": "Main PDF p.9"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "al-s11164-010-0181-y-nanocrystalline-3cual2o3-composite-1--product",
+      "source_sample_label": "nanocrystalline 3Cu–Al2O3 composite",
+      "batch_id": null,
+      "material_state_id": "al-s11164-010-0181-y-nanocrystalline-3cual2o3-composite-1--after-s02-sintering",
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "al-s11164-010-0181-y",
+          "locator": "Main PDF"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of CuO not reported in the extracted text.",
+      "Amount of Al not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

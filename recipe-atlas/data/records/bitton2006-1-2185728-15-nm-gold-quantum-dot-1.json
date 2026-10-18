@@ -1,0 +1,380 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "bitton2006-1-2185728-15-nm-gold-quantum-dot-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "L. Bitton and A. Frydman (2006): 15 nm gold quantum dot",
+  "material": {
+    "formula": "Au",
+    "family": "Au nanocrystals",
+    "elements": [
+      "Au"
+    ],
+    "components": [
+      "Au"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Electrochemical deposition",
+  "sources": [
+    {
+      "id": "bitton2006-1-2185728",
+      "doi": "10.1063/1.2185728",
+      "title": "Controllable room-temperature metallic quantum dot",
+      "authors": "L. Bitton and A. Frydman",
+      "year": 2006,
+      "url": "https://doi.org/10.1063/1.2185728",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "bitton2006-1-2185728",
+    "recipe_family": "bitton2006-1-2185728-15-nm-gold-quantum-dot-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Au",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "bitton2006-1-2185728",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": 15,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "15 nm",
+      "evidence": [
+        {
+          "source_id": "bitton2006-1-2185728",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "sphere",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "bitton2006-1-2185728",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "bitton2006-1-2185728-15-nm-gold-quantum-dot-1--after-s01-scribe",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "bitton2006-1-2185728-15-nm-gold-quantum-dot-1--after-s02-spread",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "bitton2006-1-2185728-15-nm-gold-quantum-dot-1--after-s01-scribe"
+      ]
+    },
+    {
+      "id": "bitton2006-1-2185728-15-nm-gold-quantum-dot-1--after-s03-manipulate",
+      "name": "mixture after step 3",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "bitton2006-1-2185728-15-nm-gold-quantum-dot-1--after-s02-spread"
+      ]
+    },
+    {
+      "id": "bitton2006-1-2185728-15-nm-gold-quantum-dot-1--after-s04-deposit",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "bitton2006-1-2185728-15-nm-gold-quantum-dot-1--after-s03-manipulate"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-scribe",
+      "action": "scribe",
+      "label": "AFM scribe Au wire to create gap",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "bitton2006-1-2185728-15-nm-gold-quantum-dot-1--after-s01-scribe"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "AFM scribe Au wire to create gap",
+      "evidence": [
+        {
+          "source_id": "bitton2006-1-2185728",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-spread",
+      "action": "spread",
+      "label": "Spread Au colloids on substrate",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-scribe"
+      ],
+      "inputs": [
+        "bitton2006-1-2185728-15-nm-gold-quantum-dot-1--after-s01-scribe"
+      ],
+      "outputs": [
+        "bitton2006-1-2185728-15-nm-gold-quantum-dot-1--after-s02-spread"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Spread Au colloids on substrate",
+      "evidence": [
+        {
+          "source_id": "bitton2006-1-2185728",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-manipulate",
+      "action": "manipulate",
+      "label": "AFM nano-manipulation to move Au colloid between electrodes",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-spread"
+      ],
+      "inputs": [
+        "bitton2006-1-2185728-15-nm-gold-quantum-dot-1--after-s02-spread"
+      ],
+      "outputs": [
+        "bitton2006-1-2185728-15-nm-gold-quantum-dot-1--after-s03-manipulate"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "AFM nano-manipulation to move Au colloid between electrodes",
+      "evidence": [
+        {
+          "source_id": "bitton2006-1-2185728",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "s04-deposit",
+      "action": "deposit",
+      "label": "Electrochemical deposition of Ag on Au electrodes",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s03-manipulate"
+      ],
+      "inputs": [
+        "bitton2006-1-2185728-15-nm-gold-quantum-dot-1--after-s03-manipulate"
+      ],
+      "outputs": [
+        "bitton2006-1-2185728-15-nm-gold-quantum-dot-1--after-s04-deposit"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Electrochemical deposition of Ag on Au electrodes",
+      "evidence": [
+        {
+          "source_id": "bitton2006-1-2185728",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "bitton2006-1-2185728-15-nm-gold-quantum-dot-1--product",
+      "source_sample_label": "15 nm gold quantum dot",
+      "batch_id": null,
+      "material_state_id": "bitton2006-1-2185728-15-nm-gold-quantum-dot-1--after-s04-deposit",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Au",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "bitton2006-1-2185728",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": "sphere",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "bitton2006-1-2185728",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": "negatively charged ions",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "bitton2006-1-2185728",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "bitton2006-1-2185728",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [
+    {
+      "id": "bitton2006-1-2185728-15-nm-gold-quantum-dot-1--size",
+      "sample_id": "bitton2006-1-2185728-15-nm-gold-quantum-dot-1--product",
+      "property": "particle_size",
+      "technique": "not reported",
+      "value": {
+        "value": 15,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "15 nm",
+        "evidence": [
+          {
+            "source_id": "bitton2006-1-2185728",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "bitton2006-1-2185728",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

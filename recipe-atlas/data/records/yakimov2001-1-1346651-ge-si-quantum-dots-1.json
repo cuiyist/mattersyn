@@ -1,0 +1,431 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "yakimov2001-1-1346651-ge-si-quantum-dots-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "A. I. Yakimov (2001): Ge/Si quantum dots",
+  "material": {
+    "formula": "Ge/Si",
+    "family": "Ge/Si nanocrystals",
+    "elements": [
+      "Ge",
+      "Si"
+    ],
+    "components": [
+      "Ge",
+      "Si"
+    ],
+    "architecture": "unresolved"
+  },
+  "method": "Solid source molecular beam epitaxy",
+  "sources": [
+    {
+      "id": "yakimov2001-1-1346651",
+      "doi": "10.1063/1.1346651",
+      "title": "Interlevel Ge/Si quantum dot infrared photodetector",
+      "authors": "A. I. Yakimov, A. V. Dvurechenskii, A. I. Nikiforov, and Yu. Yu. Proskuryakov",
+      "year": 2001,
+      "url": "https://doi.org/10.1063/1.1346651",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "yakimov2001-1-1346651",
+    "recipe_family": "yakimov2001-1-1346651-ge-si-quantum-dots-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Ge/Si",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "yakimov2001-1-1346651",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "crystal",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "yakimov2001-1-1346651",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "pyramid",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "yakimov2001-1-1346651",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "yakimov2001-1-1346651-ge-si-quantum-dots-1--ge",
+      "name": "Ge",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "yakimov2001-1-1346651",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "yakimov2001-1-1346651-ge-si-quantum-dots-1--si",
+      "name": "Si",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "yakimov2001-1-1346651",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "yakimov2001-1-1346651-ge-si-quantum-dots-1--boron",
+      "name": "boron",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "yakimov2001-1-1346651",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "yakimov2001-1-1346651-ge-si-quantum-dots-1--after-s01-grow",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "yakimov2001-1-1346651-ge-si-quantum-dots-1--ge"
+      ]
+    },
+    {
+      "id": "yakimov2001-1-1346651-ge-si-quantum-dots-1--after-s02-grow",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "yakimov2001-1-1346651-ge-si-quantum-dots-1--after-s01-grow",
+        "yakimov2001-1-1346651-ge-si-quantum-dots-1--si"
+      ]
+    },
+    {
+      "id": "yakimov2001-1-1346651-ge-si-quantum-dots-1--after-s03-grow",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "yakimov2001-1-1346651-ge-si-quantum-dots-1--after-s02-grow",
+        "yakimov2001-1-1346651-ge-si-quantum-dots-1--si"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-grow",
+      "action": "grow",
+      "label": "Grow Ge quantum dot layers",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "yakimov2001-1-1346651-ge-si-quantum-dots-1--ge"
+      ],
+      "outputs": [
+        "yakimov2001-1-1346651-ge-si-quantum-dots-1--after-s01-grow"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 300,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "300 °C",
+          "evidence": [
+            {
+              "source_id": "yakimov2001-1-1346651",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Grow Ge quantum dot layers",
+      "evidence": [
+        {
+          "source_id": "yakimov2001-1-1346651",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "s02-grow",
+      "action": "grow",
+      "label": "Grow Si barrier layers",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-grow"
+      ],
+      "inputs": [
+        "yakimov2001-1-1346651-ge-si-quantum-dots-1--after-s01-grow",
+        "yakimov2001-1-1346651-ge-si-quantum-dots-1--si"
+      ],
+      "outputs": [
+        "yakimov2001-1-1346651-ge-si-quantum-dots-1--after-s02-grow"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 500,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "500 °C",
+          "evidence": [
+            {
+              "source_id": "yakimov2001-1-1346651",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Grow Si barrier layers",
+      "evidence": [
+        {
+          "source_id": "yakimov2001-1-1346651",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "s03-grow",
+      "action": "grow",
+      "label": "Grow buffer Si layer",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-grow"
+      ],
+      "inputs": [
+        "yakimov2001-1-1346651-ge-si-quantum-dots-1--after-s02-grow",
+        "yakimov2001-1-1346651-ge-si-quantum-dots-1--si"
+      ],
+      "outputs": [
+        "yakimov2001-1-1346651-ge-si-quantum-dots-1--after-s03-grow"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 800,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "800 °C",
+          "evidence": [
+            {
+              "source_id": "yakimov2001-1-1346651",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Grow buffer Si layer",
+      "evidence": [
+        {
+          "source_id": "yakimov2001-1-1346651",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "yakimov2001-1-1346651-ge-si-quantum-dots-1--product",
+      "source_sample_label": "Ge/Si quantum dots",
+      "batch_id": null,
+      "material_state_id": "yakimov2001-1-1346651-ge-si-quantum-dots-1--after-s03-grow",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Ge/Si",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yakimov2001-1-1346651",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "crystal",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yakimov2001-1-1346651",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "pyramid",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yakimov2001-1-1346651",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "yakimov2001-1-1346651",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "notes": [
+        "Reactor: solid source molecular beam epitaxy system (Main PDF p.3).",
+        "Reaction temperature: 300 degC (Main PDF p.3)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of Ge not reported in the extracted text.",
+      "Amount of Si not reported in the extracted text.",
+      "Amount of boron not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

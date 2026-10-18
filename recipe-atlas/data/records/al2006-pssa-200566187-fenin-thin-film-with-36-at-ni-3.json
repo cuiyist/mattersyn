@@ -1,0 +1,341 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "al2006-pssa-200566187-fenin-thin-film-with-36-at-ni-3",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "P. Prieto et al. (2006): FeNiN thin film with 36 at% Ni",
+  "material": {
+    "formula": "FeNiN",
+    "family": "FeNiN nanocrystals",
+    "elements": [
+      "Fe",
+      "Ni",
+      "N"
+    ],
+    "components": [
+      "FeNiN"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Dual ion beam sputtering",
+  "sources": [
+    {
+      "id": "al2006-pssa-200566187",
+      "doi": "10.1002/pssa.200566187",
+      "title": "Magnetic properties of nanocrystalline FeNiN thin films",
+      "authors": "P. Prieto; J. Camarero; N. Sacristan; D. O. Boerma; J. M. Sanz",
+      "year": 2006,
+      "url": "https://doi.org/10.1002/pssa.200566187",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "al2006-pssa-200566187",
+    "recipe_family": "al2006-pssa-200566187-fenin-thin-film-with-36-at-ni-3",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "FeNiN",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "al2006-pssa-200566187",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "al2006-pssa-200566187-fenin-thin-film-with-36-at-ni-3--fe-target",
+      "name": "Fe target",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "al2006-pssa-200566187",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "al2006-pssa-200566187-fenin-thin-film-with-36-at-ni-3--ni-chips",
+      "name": "Ni chips",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "al2006-pssa-200566187",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "al2006-pssa-200566187-fenin-thin-film-with-36-at-ni-3--ar",
+      "name": "Ar",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "al2006-pssa-200566187",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "al2006-pssa-200566187-fenin-thin-film-with-36-at-ni-3--n2",
+      "name": "N2",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "al2006-pssa-200566187",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "al2006-pssa-200566187-fenin-thin-film-with-36-at-ni-3--after-s01-sputter",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "al2006-pssa-200566187-fenin-thin-film-with-36-at-ni-3--fe-target",
+        "al2006-pssa-200566187-fenin-thin-film-with-36-at-ni-3--ni-chips"
+      ]
+    },
+    {
+      "id": "al2006-pssa-200566187-fenin-thin-film-with-36-at-ni-3--after-s02-bombard",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "al2006-pssa-200566187-fenin-thin-film-with-36-at-ni-3--after-s01-sputter",
+        "al2006-pssa-200566187-fenin-thin-film-with-36-at-ni-3--ar",
+        "al2006-pssa-200566187-fenin-thin-film-with-36-at-ni-3--n2"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-sputter",
+      "action": "sputter",
+      "label": "Sputter Fe target with Ni chips",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "al2006-pssa-200566187-fenin-thin-film-with-36-at-ni-3--fe-target",
+        "al2006-pssa-200566187-fenin-thin-film-with-36-at-ni-3--ni-chips"
+      ],
+      "outputs": [
+        "al2006-pssa-200566187-fenin-thin-film-with-36-at-ni-3--after-s01-sputter"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "Ar/N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "al2006-pssa-200566187",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Sputter Fe target with Ni chips",
+      "evidence": [
+        {
+          "source_id": "al2006-pssa-200566187",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-bombard",
+      "action": "bombard",
+      "label": "Bombard film with Ar/N2 ions",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-sputter"
+      ],
+      "inputs": [
+        "al2006-pssa-200566187-fenin-thin-film-with-36-at-ni-3--after-s01-sputter",
+        "al2006-pssa-200566187-fenin-thin-film-with-36-at-ni-3--ar",
+        "al2006-pssa-200566187-fenin-thin-film-with-36-at-ni-3--n2"
+      ],
+      "outputs": [
+        "al2006-pssa-200566187-fenin-thin-film-with-36-at-ni-3--after-s02-bombard"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "Ar/N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "al2006-pssa-200566187",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Bombard film with Ar/N2 ions",
+      "evidence": [
+        {
+          "source_id": "al2006-pssa-200566187",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "al2006-pssa-200566187-fenin-thin-film-with-36-at-ni-3--product",
+      "source_sample_label": "FeNiN thin film with 36 at% Ni",
+      "batch_id": null,
+      "material_state_id": "al2006-pssa-200566187-fenin-thin-film-with-36-at-ni-3--after-s02-bombard",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "FeNiN",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "al2006-pssa-200566187",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "al2006-pssa-200566187",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reactor: dual ion beam sputtering system (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of Fe target not reported in the extracted text.",
+      "Amount of Ni chips not reported in the extracted text.",
+      "Amount of Ar not reported in the extracted text.",
+      "Amount of N2 not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
