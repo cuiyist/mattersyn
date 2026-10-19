@@ -4,6 +4,7 @@ import {readFileSync} from 'node:fs';
 import {readReactorLineNote,reactorEnvironmentText,createReactorLineDetails,reactorLineCaption,reactorDisplayRecord,reactorQuantityUnavailable} from '../static/reactor-lines.mjs';
 import {quantityValue} from '../static/quantity-value.mjs';
 import {matchProtocolCondition} from '../static/protocol-conditions.mjs';
+import {conditionFieldText,conditionDisclosureText} from '../static/source-field-copy.mjs';
 
 // Invented fixtures only. No production record, source, asset, HTTP or model I/O.
 const keys=['vessel_type','atmosphere','schlenk_line','glovebox','heating_method','stirring','addition_method','cooling_method'];
@@ -120,7 +121,7 @@ test('the retained original fact helper demonstrates the hidden-note and raw-JSO
 function mountWithInertProviders(overrides={}){
  const source=readFileSync(new URL('../static/protocol-visuals.mjs',import.meta.url),'utf8');
  const names=[...source.matchAll(/^import \{([^}]+)\} from .+;$/gm)].flatMap(m=>m[1].split(',').map(n=>n.trim().split(/\s+as\s+/).at(-1)));
- const actual={reactorEnvironmentText,createReactorLineDetails,reactorLineCaption,reactorDisplayRecord,reactorQuantityUnavailable,quantityValue,matchProtocolCondition,...overrides,kind:()=> 'context',mountProtocolReferences:()=>Promise.resolve()};
+ const actual={reactorEnvironmentText,createReactorLineDetails,reactorLineCaption,reactorDisplayRecord,reactorQuantityUnavailable,quantityValue,matchProtocolCondition,conditionFieldText,conditionDisclosureText,...overrides,kind:()=> 'context',mountProtocolReferences:()=>Promise.resolve()};
  const inert=()=>null;
  const code=source.replace(/^import .+;\r?\n/gm,'').replace('export function mountProtocol','function mountProtocol');
  return new Function(...names,code+'\nreturn mountProtocol;')(...names.map(name=>actual[name]||inert));
@@ -407,4 +408,13 @@ test('rich scoped details bind every citation and preserve original objects incl
   const op=scopedOperation(metadata),before=JSON.stringify(op);assert.equal(readReactorLineNote(op.environment.note).valid,true);
   const details=createReactorLineDetails(op,record());assert.match(details.textContent,/metadata is invalid/);assert.doesNotMatch(details.textContent,/fixture-local-tube|fixture reduced pressure/);assert.equal(JSON.stringify(op),before);
  }
+}));
+
+test('source-extracted mount keeps real field formatters and source data unchanged',()=>dom(()=>{
+ const r=record(),op=operation();r.quality={review_status:'source_extracted'};
+ op.environment={value:null,status:'not_reported',note:'',evidence:[]};r.operations=[op];
+ const before=JSON.stringify(r),host=new Element('div');mountWithInertProviders()(host,r);
+ assert.match(host.textContent,/Not recorded in this field/);assert.match(host.textContent,/Conditions and source/);
+ assert.doesNotMatch(host.textContent,/Temperature null|Environment null|Endpoint: null/);
+ assert.equal(JSON.stringify(r),before);
 }));

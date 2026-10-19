@@ -56,9 +56,9 @@ def unit_name(unit):
 
 
 def temperature_unit_compatible(unit):
-    """Reject explicit power or electron-volt units without relabelling them."""
+    """Reject explicit power, energy, pressure or rotation units without relabelling them."""
     written = unicodedata.normalize('NFKC', str(unit or '')).strip().casefold()
-    return re.search(r'(?<![a-z])(?:[pnumkmgµμ]?w(?:atts?)?|(?:pico|nano|micro|milli|kilo|mega|giga)watts?|power|[pnumkmgµμ]?ev)(?![a-z])', written) is None
+    return re.search(r'(?<![a-z])(?:[pnumkmgµμ]?w(?:atts?)?|(?:pico|nano|micro|milli|kilo|mega|giga)watts?|power|[pnumkmgµμ]?ev|mtorr|rpm)(?![a-z])', written) is None
 
 
 def _formula_token(text):
@@ -195,6 +195,8 @@ def _composition_from(pair):
 
 
 def first_upper(text):
+    # Only the confirmed numeric U+100010C degree-glyph defect in step text.
+    text = re.sub(r'(?<![\w.])([+-]?(?:\d+(?:\.\d+)?|\.\d+))(\s*)\U00100010(?=C\b)', r'\1\2°', text)
     return text[:1].upper() + text[1:]
 
 
@@ -240,6 +242,13 @@ def components_of(composition):
 
 class Builder:
     def __init__(self, doc, include_optical=False):
+        authors = doc.get('authors')
+        if isinstance(authors, list):
+            if not authors or any(not isinstance(name, str) or not name.strip() for name in authors):
+                raise ValueError('Authors list must contain nonblank strings')
+            doc = dict(doc, authors='; '.join(authors))
+        elif authors is not None and not isinstance(authors, str):
+            raise ValueError('Unsupported authors representation')
         self.doc = doc; self.include_optical = include_optical
         first = slug(re.split(r'[,;]| and ', doc.get('authors') or '')[0].split()[-1] if doc.get('authors') else '', 20)
         year = str(doc.get('year') or '')[:4]
@@ -355,7 +364,7 @@ class Builder:
             architecture = named_composite['architecture']
         method = str((rc.get('method') or {}).get('value') or 'synthesis as described in the source')
         notes = []
-        if rc.get('reactor'): notes.append(f'Reactor: {rc["reactor"]["value"]} (Main PDF p.{rc["reactor"].get("page", "?")}).')
+        if rc.get('reactor') and reactor_value_compatible(rc["reactor"].get("value")): notes.append(f'Reactor: {rc["reactor"]["value"]} (Main PDF p.{rc["reactor"].get("page", "?")}).')
         for key, label in (('reaction_temperature', 'Reaction temperature'), ('reaction_time', 'Reaction time')):
             if rc.get(key) and (key != 'reaction_temperature' or temperature_unit_compatible(rc[key].get('unit'))): notes.append(f'{label}: {rc[key]["value"]:g} {unit_name(rc[key].get("unit"))} (Main PDF p.{rc[key].get("page", "?")}).')
         product['notes'] = notes
@@ -393,8 +402,19 @@ def sha_file(path):
     return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 
 
+def reactor_value_compatible(value):
+    """Reject only three confirmed nonvessel values; preserve all other wording."""
+    written = re.sub(r'\s+', ' ', unicodedata.normalize('NFKC', str(value or '')).strip()).casefold()
+    return written not in {
+        '2 ml distilled water',
+        'thin films of silicon oxide (siox) on p-type silicon (111) substrates',
+        '25 × 25 mm ito-coated glass substrate',
+    }
+
+
 def step_svg(op, reactor):
     """Conceptual step diagram; a reported recipe-level vessel is not assigned to this step."""
+    reactor = reactor if reactor_value_compatible(reactor) else None
     import textwrap
     esc = lambda s: str(s).replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
     q = lambda k: op['parameters'].get(k)

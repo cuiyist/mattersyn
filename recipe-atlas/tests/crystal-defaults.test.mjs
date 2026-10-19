@@ -6,7 +6,7 @@ const ordered=entry('ordered','CoPt3','CoPt3 ordered L12 bulk reference',221);
 const fcc=entry('fcc','CoPt3','CoPt3 disordered fcc bulk reference',225);
 const rec=(phase,target)=>({record_id:'synthetic-r',lineage:{source_group:'synthetic'},material:{formula:'CoPt3'},products:[{phase:{value:phase}}],intended_target:{phase:{value:target}}});
 test('unreported phase permits all bulk composition forms with explicit scope',()=>{
- const refs=defaultCrystalReferences([ordered,fcc],rec(null));assert.equal(refs.length,2);assert.ok(refs.every(e=>e.scope.includes('paper does not state the phase')&&e.scope.includes('not a structure')));
+ const refs=defaultCrystalReferences([ordered,fcc],rec(null));assert.equal(refs.length,2);assert.ok(refs.every(e=>e.scope.includes('The record does not assign a crystal phase; available bulk references are shown for comparison.')&&e.scope.includes('not a structure')));
 });
 test('unrecognized reported phase cannot silently become no reported phase',()=>{assert.deepEqual(defaultCrystalReferences([ordered,fcc],rec('unrecognized phase')),[])});
 test('qualifiers are conjunctive: cubic plus fcc does not admit ordered primitive cubic',()=>{assert.deepEqual(defaultCrystalReferences([ordered,fcc],rec('chemically disordered cubic fcc')).map(e=>e.id),['fcc'])});
