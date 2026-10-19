@@ -195,6 +195,8 @@ def _composition_from(pair):
 
 
 def first_upper(text):
+    # Only the confirmed numeric U+100010C degree-glyph defect in step text.
+    text = re.sub(r'(?<![\w.])([+-]?(?:\d+(?:\.\d+)?|\.\d+))(\s*)\U00100010(?=C\b)', r'\1\2°', text)
     return text[:1].upper() + text[1:]
 
 
@@ -401,11 +403,12 @@ def sha_file(path):
 
 
 def reactor_value_compatible(value):
-    """Reject only two confirmed nonvessel values; preserve all other wording."""
+    """Reject only three confirmed nonvessel values; preserve all other wording."""
     written = re.sub(r'\s+', ' ', unicodedata.normalize('NFKC', str(value or '')).strip()).casefold()
     return written not in {
         '2 ml distilled water',
         'thin films of silicon oxide (siox) on p-type silicon (111) substrates',
+        '25 × 25 mm ito-coated glass substrate',
     }
 
 
