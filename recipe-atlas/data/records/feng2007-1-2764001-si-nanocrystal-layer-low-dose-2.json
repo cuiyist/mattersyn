@@ -1,0 +1,319 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "feng2007-1-2764001-si-nanocrystal-layer-low-dose-2",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Tao Feng (2007): Si nanocrystal layer (low dose)",
+  "material": {
+    "formula": "Si",
+    "family": "Si nanocrystals",
+    "elements": [
+      "Si"
+    ],
+    "components": [
+      "Si"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Ion implantation",
+  "sources": [
+    {
+      "id": "feng2007-1-2764001",
+      "doi": "10.1063/1.2764001",
+      "title": "Charge retention characteristics of silicon nanocrystal layers by ultrahigh vacuum atomic force microscopy",
+      "authors": "Tao Feng, Gerald Miller, and Harry A. Atwater",
+      "year": 2007,
+      "url": "https://doi.org/10.1063/1.2764001",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "feng2007-1-2764001",
+    "recipe_family": "feng2007-1-2764001-si-nanocrystal-layer-low-dose-2",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Si",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "feng2007-1-2764001",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "crystalline",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "feng2007-1-2764001",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "feng2007-1-2764001-si-nanocrystal-layer-low-dose-2--si-ions",
+      "name": "Si+ ions",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "feng2007-1-2764001",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "feng2007-1-2764001-si-nanocrystal-layer-low-dose-2--after-s01-implant",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "feng2007-1-2764001-si-nanocrystal-layer-low-dose-2--si-ions"
+      ]
+    },
+    {
+      "id": "feng2007-1-2764001-si-nanocrystal-layer-low-dose-2--after-s02-anneal",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "feng2007-1-2764001-si-nanocrystal-layer-low-dose-2--after-s01-implant"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-implant",
+      "action": "implant",
+      "label": "Implant Si+ ions into SiO2 film",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "feng2007-1-2764001-si-nanocrystal-layer-low-dose-2--si-ions"
+      ],
+      "outputs": [
+        "feng2007-1-2764001-si-nanocrystal-layer-low-dose-2--after-s01-implant"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "Ar",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "feng2007-1-2764001",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Implant Si+ ions into SiO2 film",
+      "evidence": [
+        {
+          "source_id": "feng2007-1-2764001",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-anneal",
+      "action": "anneal",
+      "label": "Thermal annealing to precipitate nanocrystals",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-implant"
+      ],
+      "inputs": [
+        "feng2007-1-2764001-si-nanocrystal-layer-low-dose-2--after-s01-implant"
+      ],
+      "outputs": [
+        "feng2007-1-2764001-si-nanocrystal-layer-low-dose-2--after-s02-anneal"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 1080,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1080 °C",
+          "evidence": [
+            {
+              "source_id": "feng2007-1-2764001",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 15,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "15 min",
+          "evidence": [
+            {
+              "source_id": "feng2007-1-2764001",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "Ar",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "feng2007-1-2764001",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Thermal annealing to precipitate nanocrystals",
+      "evidence": [
+        {
+          "source_id": "feng2007-1-2764001",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "feng2007-1-2764001-si-nanocrystal-layer-low-dose-2--product",
+      "source_sample_label": "Si nanocrystal layer (low dose)",
+      "batch_id": null,
+      "material_state_id": "feng2007-1-2764001-si-nanocrystal-layer-low-dose-2--after-s02-anneal",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Si",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "feng2007-1-2764001",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "crystalline",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "feng2007-1-2764001",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "feng2007-1-2764001",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reaction temperature: 1080 degC (Main PDF p.2).",
+        "Reaction time: 15 min (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Amount of Si+ ions not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

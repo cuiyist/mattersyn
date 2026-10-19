@@ -1,3 +1,13 @@
+## O53 verified — 2026-10-18T21:54:25+00:00
+
+**53 source_extracted papers /66 canonical records /201 caption keys /446 Reader caption instances** are live. Source `f3112e0d719b56fbf60e1fee59328e735cd1fd9d` passed all three exact-head CI checks and ordinary PR73 (merge `dd6aa9a6fd519b4336b9be06bbd03adac07383f8`). Site `f2bff8cc3826a6217fe3ed1ec74d855f0d6ee9ac` passed Pages39168804324; unchanged normal anonymous verification checked 747 files, 713 changed files,53 paper routes and 85 material bindings with zero failures.
+
+Actual deployed totals: 1,969 primary papers /5,480 canonical records /3,359 recipe–structure pairs. Audited contributions remain244papers/864pairs; these new records are source_extracted, not independently audited or training eligible. Manifest:52,345 files/3,440,944,580 logical bytes. Six exports remain audited-only.
+
+All prior document/index bytes, M50/L58/K/J history, O53 whole-DOI technical holds and superseded browser/display-correction evidence remain preserved. 28 retained DOI rows have saved limited deletion-read markers, not audits; prior whole-object deletions are not replayed. The official MACHINE index remains at `research-assets/public-audits/MACHINE_EXTRACTED_PAPERS.md`; the single job report remains `research-assets/public-audits/SIMPLE_PIPELINE_REPORT.md`.
+
+The current P51 Source checkpoint `f3112e0d719b56fbf60e1fee59328e735cd1fd9d` has5,549 canonical records, including69 pending P51 records, separately from the published O53 artifact with5,480. P51's51papers/69records/195figure keys are local preparation with zero publication credit. Existing normal release gates remain required; no Source integration or caption replay is requested.
+
 ## N43 verified — 2026-10-18T18:42:26+00:00
 
 **43 source_extracted papers /55 canonical records /176 caption keys /419 Reader caption instances** are live. Source `bde1b784da23fde45b0a6f1f959f829573704f02` passed all three exact-head CI checks and ordinary PR72 (merge `adfcc5d6746ccbc82a789cfb1642050236f86c6b`). Site `d4c672b0a81d2c5c2b41a78b98264b156cace3be` passed Pages39154586367; unchanged normal anonymous verification checked 674 files, 638 changed files,43 paper routes and 66 material bindings with zero failures.

@@ -1,0 +1,457 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "ioannou-sougleridisa2009-1-3211988-si-nanocrystal-layer-embedded-in-sio2-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "V. Ioannou-Sougleridis et al. (2009): Si nanocrystal layer embedded in SiO2",
+  "material": {
+    "formula": "Si",
+    "family": "Si nanocrystals",
+    "elements": [
+      "Si"
+    ],
+    "components": [
+      "Si"
+    ],
+    "architecture": "composite"
+  },
+  "method": "Thermal oxidation and annealing",
+  "sources": [
+    {
+      "id": "ioannou-sougleridisa2009-1-3211988",
+      "doi": "10.1063/1.3211988",
+      "title": "Dynamic charge transfer effects in two-dimensional silicon nanocrystal layers embedded within SiO2",
+      "authors": "V. Ioannou-Sougleridis; A. G. Nassiopoulou",
+      "year": 2009,
+      "url": "https://doi.org/10.1063/1.3211988",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "ioannou-sougleridisa2009-1-3211988",
+    "recipe_family": "ioannou-sougleridisa2009-1-3211988-si-nanocrystal-layer-embedded-in-sio2-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Si",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "ioannou-sougleridisa2009-1-3211988",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "nanocrystalline",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "ioannou-sougleridisa2009-1-3211988",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "nanocrystal",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "ioannou-sougleridisa2009-1-3211988",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "ioannou-sougleridisa2009-1-3211988-si-nanocrystal-layer-embedded-in-sio2-1--amorphous-silicon",
+      "name": "amorphous silicon",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "amount": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "nm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "10 nm",
+          "evidence": [
+            {
+              "source_id": "ioannou-sougleridisa2009-1-3211988",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "ioannou-sougleridisa2009-1-3211988",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "ioannou-sougleridisa2009-1-3211988-si-nanocrystal-layer-embedded-in-sio2-1--after-s01-deposit",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "ioannou-sougleridisa2009-1-3211988-si-nanocrystal-layer-embedded-in-sio2-1--amorphous-silicon"
+      ]
+    },
+    {
+      "id": "ioannou-sougleridisa2009-1-3211988-si-nanocrystal-layer-embedded-in-sio2-1--after-s02-oxidize",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "ioannou-sougleridisa2009-1-3211988-si-nanocrystal-layer-embedded-in-sio2-1--after-s01-deposit",
+        "ioannou-sougleridisa2009-1-3211988-si-nanocrystal-layer-embedded-in-sio2-1--amorphous-silicon"
+      ]
+    },
+    {
+      "id": "ioannou-sougleridisa2009-1-3211988-si-nanocrystal-layer-embedded-in-sio2-1--after-s03-anneal",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "ioannou-sougleridisa2009-1-3211988-si-nanocrystal-layer-embedded-in-sio2-1--after-s02-oxidize",
+        "ioannou-sougleridisa2009-1-3211988-si-nanocrystal-layer-embedded-in-sio2-1--amorphous-silicon"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-deposit",
+      "action": "deposit",
+      "label": "Deposit amorphous silicon layer",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "ioannou-sougleridisa2009-1-3211988-si-nanocrystal-layer-embedded-in-sio2-1--amorphous-silicon"
+      ],
+      "outputs": [
+        "ioannou-sougleridisa2009-1-3211988-si-nanocrystal-layer-embedded-in-sio2-1--after-s01-deposit"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 580,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "580 °C",
+          "evidence": [
+            {
+              "source_id": "ioannou-sougleridisa2009-1-3211988",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ioannou-sougleridisa2009-1-3211988",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Deposit amorphous silicon layer",
+      "evidence": [
+        {
+          "source_id": "ioannou-sougleridisa2009-1-3211988",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-oxidize",
+      "action": "oxidize",
+      "label": "Thermal oxidation to form SiO2 and Si-NCs",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-deposit"
+      ],
+      "inputs": [
+        "ioannou-sougleridisa2009-1-3211988-si-nanocrystal-layer-embedded-in-sio2-1--after-s01-deposit",
+        "ioannou-sougleridisa2009-1-3211988-si-nanocrystal-layer-embedded-in-sio2-1--amorphous-silicon"
+      ],
+      "outputs": [
+        "ioannou-sougleridisa2009-1-3211988-si-nanocrystal-layer-embedded-in-sio2-1--after-s02-oxidize"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 900,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "900 °C",
+          "evidence": [
+            {
+              "source_id": "ioannou-sougleridisa2009-1-3211988",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 20,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "20 min",
+          "evidence": [
+            {
+              "source_id": "ioannou-sougleridisa2009-1-3211988",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ioannou-sougleridisa2009-1-3211988",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Thermal oxidation to form SiO2 and Si-NCs",
+      "evidence": [
+        {
+          "source_id": "ioannou-sougleridisa2009-1-3211988",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-anneal",
+      "action": "anneal",
+      "label": "Annealing in N2 ambient",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-oxidize"
+      ],
+      "inputs": [
+        "ioannou-sougleridisa2009-1-3211988-si-nanocrystal-layer-embedded-in-sio2-1--after-s02-oxidize",
+        "ioannou-sougleridisa2009-1-3211988-si-nanocrystal-layer-embedded-in-sio2-1--amorphous-silicon"
+      ],
+      "outputs": [
+        "ioannou-sougleridisa2009-1-3211988-si-nanocrystal-layer-embedded-in-sio2-1--after-s03-anneal"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 900,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "900 °C",
+          "evidence": [
+            {
+              "source_id": "ioannou-sougleridisa2009-1-3211988",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 60,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "60 min",
+          "evidence": [
+            {
+              "source_id": "ioannou-sougleridisa2009-1-3211988",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ioannou-sougleridisa2009-1-3211988",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Annealing in N2 ambient",
+      "evidence": [
+        {
+          "source_id": "ioannou-sougleridisa2009-1-3211988",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "ioannou-sougleridisa2009-1-3211988-si-nanocrystal-layer-embedded-in-sio2-1--product",
+      "source_sample_label": "Si nanocrystal layer embedded in SiO2",
+      "batch_id": null,
+      "material_state_id": "ioannou-sougleridisa2009-1-3211988-si-nanocrystal-layer-embedded-in-sio2-1--after-s03-anneal",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Si",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ioannou-sougleridisa2009-1-3211988",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "nanocrystalline",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ioannou-sougleridisa2009-1-3211988",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "nanocrystal",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ioannou-sougleridisa2009-1-3211988",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "ioannou-sougleridisa2009-1-3211988",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reactor: LPCVD reactor (Main PDF p.2).",
+        "Reaction temperature: 900 degC (Main PDF p.2).",
+        "Reaction time: 60 min (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

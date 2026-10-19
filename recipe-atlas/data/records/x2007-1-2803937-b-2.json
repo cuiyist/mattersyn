@@ -1,0 +1,421 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "x2007-1-2803937-b-2",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "C. H. Chen et al. (2007): B",
+  "material": {
+    "formula": "W",
+    "family": "W nanocrystals",
+    "elements": [
+      "W"
+    ],
+    "components": [
+      "W"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Thermal oxidation and SCCO2 treatment",
+  "sources": [
+    {
+      "id": "x2007-1-2803937",
+      "doi": "10.1063/1.2803937",
+      "title": "Tungsten nanocrystal memory devices improved by supercritical fluid treatment",
+      "authors": "C. H. Chen; T. C. Chang; I. H. Liao; P. B. Xi; C. T. Tsai; P. Y. Yang; Joe Hsieh; Jason Chen; U. S. Chen; J. R. Chen",
+      "year": 2007,
+      "url": "https://doi.org/10.1063/1.2803937",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "x2007-1-2803937",
+    "recipe_family": "x2007-1-2803937-b-2",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "W",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "x2007-1-2803937",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": 10.3,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "10.3 nm",
+      "evidence": [
+        {
+          "source_id": "x2007-1-2803937",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "x2007-1-2803937-b-2--a-si",
+      "name": "a-Si",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "x2007-1-2803937",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "x2007-1-2803937-b-2--sio2",
+      "name": "SiO2",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "x2007-1-2803937",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "x2007-1-2803937-b-2--propyl-alcohol",
+      "name": "propyl alcohol",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "x2007-1-2803937",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "x2007-1-2803937-b-2--de-ionized-h2o",
+      "name": "de-ionized H2O",
+      "formula": null,
+      "role": "solvent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "x2007-1-2803937",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "x2007-1-2803937-b-2--after-s01-heat",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "x2007-1-2803937-b-2--a-si"
+      ]
+    },
+    {
+      "id": "x2007-1-2803937-b-2--after-s02-treat",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "x2007-1-2803937-b-2--after-s01-heat",
+        "x2007-1-2803937-b-2--propyl-alcohol",
+        "x2007-1-2803937-b-2--de-ionized-h2o"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-heat",
+      "action": "heat",
+      "label": "Perform rapid thermal oxidation",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "x2007-1-2803937-b-2--a-si"
+      ],
+      "outputs": [
+        "x2007-1-2803937-b-2--after-s01-heat"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 900,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "900 °C",
+          "evidence": [
+            {
+              "source_id": "x2007-1-2803937",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Perform rapid thermal oxidation",
+      "evidence": [
+        {
+          "source_id": "x2007-1-2803937",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "s02-treat",
+      "action": "treat",
+      "label": "Perform SCCO2 treatment",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-heat"
+      ],
+      "inputs": [
+        "x2007-1-2803937-b-2--after-s01-heat",
+        "x2007-1-2803937-b-2--propyl-alcohol",
+        "x2007-1-2803937-b-2--de-ionized-h2o"
+      ],
+      "outputs": [
+        "x2007-1-2803937-b-2--after-s02-treat"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 150,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "150 °C",
+          "evidence": [
+            {
+              "source_id": "x2007-1-2803937",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 2,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "2 h",
+          "evidence": [
+            {
+              "source_id": "x2007-1-2803937",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Perform SCCO2 treatment",
+      "evidence": [
+        {
+          "source_id": "x2007-1-2803937",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "x2007-1-2803937-b-2--product",
+      "source_sample_label": "B",
+      "batch_id": null,
+      "material_state_id": "x2007-1-2803937-b-2--after-s02-treat",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "W",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "x2007-1-2803937",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "x2007-1-2803937",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "notes": [
+        "Reactor: supercritical fluid system (Main PDF p.3)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "x2007-1-2803937-b-2--size",
+      "sample_id": "x2007-1-2803937-b-2--product",
+      "property": "diameter",
+      "technique": "TEM",
+      "value": {
+        "value": 10.3,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "10.3 nm",
+        "evidence": [
+          {
+            "source_id": "x2007-1-2803937",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "x2007-1-2803937",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of a-Si not reported in the extracted text.",
+      "Amount of SiO2 not reported in the extracted text.",
+      "Amount of propyl alcohol not reported in the extracted text.",
+      "Amount of de-ionized H2O not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

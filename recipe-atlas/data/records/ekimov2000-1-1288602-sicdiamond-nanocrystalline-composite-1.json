@@ -1,0 +1,300 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "ekimov2000-1-1288602-sicdiamond-nanocrystalline-composite-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "E. A. Ekimov (2000): SiC–diamond nanocrystalline composite",
+  "material": {
+    "formula": "SiC–diamond",
+    "family": "SiC–diamond nanocrystals",
+    "elements": [
+      "Si",
+      "C"
+    ],
+    "components": [
+      "SiC–diamond"
+    ],
+    "architecture": "composite"
+  },
+  "method": "Synthesis as described in the source",
+  "sources": [
+    {
+      "id": "ekimov2000-1-1288602",
+      "doi": "10.1063/1.1288602",
+      "title": "High-pressure, high-temperature synthesis of SiC–diamond nanocrystalline ceramics",
+      "authors": "E. A. Ekimov, A. G. Gavriliuk, B. Palosz, S. Gierlotka, P. Dluzewski, E. Tatianin, Yu. Kluev, A. M. Naletov, A. Presz",
+      "year": 2000,
+      "url": "https://doi.org/10.1063/1.1288602",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "ekimov2000-1-1288602",
+    "recipe_family": "ekimov2000-1-1288602-sicdiamond-nanocrystalline-composite-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "SiC–diamond",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "ekimov2000-1-1288602",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "nanoparticles",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "ekimov2000-1-1288602",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "ekimov2000-1-1288602-sicdiamond-nanocrystalline-composite-1--diamond-nanopowder",
+      "name": "diamond nanopowder",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "ekimov2000-1-1288602",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "ekimov2000-1-1288602-sicdiamond-nanocrystalline-composite-1--silicon",
+      "name": "silicon",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "ekimov2000-1-1288602",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "ekimov2000-1-1288602-sicdiamond-nanocrystalline-composite-1--after-s01-heat",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "ekimov2000-1-1288602-sicdiamond-nanocrystalline-composite-1--diamond-nanopowder",
+        "ekimov2000-1-1288602-sicdiamond-nanocrystalline-composite-1--silicon"
+      ]
+    },
+    {
+      "id": "ekimov2000-1-1288602-sicdiamond-nanocrystalline-composite-1--after-s02-react",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "ekimov2000-1-1288602-sicdiamond-nanocrystalline-composite-1--after-s01-heat",
+        "ekimov2000-1-1288602-sicdiamond-nanocrystalline-composite-1--silicon",
+        "ekimov2000-1-1288602-sicdiamond-nanocrystalline-composite-1--diamond-nanopowder"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-heat",
+      "action": "heat",
+      "label": "Diamond and silicon powders were placed in a graphite heater and heated.",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "ekimov2000-1-1288602-sicdiamond-nanocrystalline-composite-1--diamond-nanopowder",
+        "ekimov2000-1-1288602-sicdiamond-nanocrystalline-composite-1--silicon"
+      ],
+      "outputs": [
+        "ekimov2000-1-1288602-sicdiamond-nanocrystalline-composite-1--after-s01-heat"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Diamond and silicon powders were placed in a graphite heater and heated.",
+      "evidence": [
+        {
+          "source_id": "ekimov2000-1-1288602",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-react",
+      "action": "react",
+      "label": "Si reacted with carbon to form nanocrystalline SiC.",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-heat"
+      ],
+      "inputs": [
+        "ekimov2000-1-1288602-sicdiamond-nanocrystalline-composite-1--after-s01-heat",
+        "ekimov2000-1-1288602-sicdiamond-nanocrystalline-composite-1--silicon",
+        "ekimov2000-1-1288602-sicdiamond-nanocrystalline-composite-1--diamond-nanopowder"
+      ],
+      "outputs": [
+        "ekimov2000-1-1288602-sicdiamond-nanocrystalline-composite-1--after-s02-react"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Si reacted with carbon to form nanocrystalline SiC.",
+      "evidence": [
+        {
+          "source_id": "ekimov2000-1-1288602",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "ekimov2000-1-1288602-sicdiamond-nanocrystalline-composite-1--product",
+      "source_sample_label": "SiC–diamond nanocrystalline composite",
+      "batch_id": null,
+      "material_state_id": "ekimov2000-1-1288602-sicdiamond-nanocrystalline-composite-1--after-s02-react",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "SiC–diamond",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ekimov2000-1-1288602",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": "nanoparticles",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ekimov2000-1-1288602",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "ekimov2000-1-1288602",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "notes": [
+        "Reactor: toroid-type high-pressure apparatus (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of diamond nanopowder not reported in the extracted text.",
+      "Amount of silicon not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

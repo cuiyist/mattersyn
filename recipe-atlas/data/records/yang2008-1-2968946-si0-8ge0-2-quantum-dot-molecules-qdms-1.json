@@ -1,0 +1,435 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "yang2008-1-2968946-si0-8ge0-2-quantum-dot-molecules-qdms-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Hongbin Yang (2008): Si0.8Ge0.2 quantum dot molecules (QDMs)",
+  "material": {
+    "formula": "Si0.8Ge0.2",
+    "family": "Si0.8Ge0.2 nanocrystals",
+    "elements": [
+      "Si",
+      "Ge"
+    ],
+    "components": [
+      "Si0.8Ge0.2"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Molecular beam epitaxy",
+  "sources": [
+    {
+      "id": "yang2008-1-2968946",
+      "doi": "10.1063/1.2968946",
+      "title": "SiGe quantum dot molecules grown on patterned Si (001) substrates",
+      "authors": "Hongbin Yang, Xiang-jiu Zhang, Zuiming Jiang, Xinju Yang, and Yongliang Fan",
+      "year": 2008,
+      "url": "https://doi.org/10.1063/1.2968946",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "yang2008-1-2968946",
+    "recipe_family": "yang2008-1-2968946-si0-8ge0-2-quantum-dot-molecules-qdms-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Si0.8Ge0.2",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "yang2008-1-2968946",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "yang2008-1-2968946-si0-8ge0-2-quantum-dot-molecules-qdms-1--si",
+      "name": "Si",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "yang2008-1-2968946",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "yang2008-1-2968946-si0-8ge0-2-quantum-dot-molecules-qdms-1--ge",
+      "name": "Ge",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "yang2008-1-2968946",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "yang2008-1-2968946-si0-8ge0-2-quantum-dot-molecules-qdms-1--after-s01-clean",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "yang2008-1-2968946-si0-8ge0-2-quantum-dot-molecules-qdms-1--after-s02-heat",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "yang2008-1-2968946-si0-8ge0-2-quantum-dot-molecules-qdms-1--after-s01-clean"
+      ]
+    },
+    {
+      "id": "yang2008-1-2968946-si0-8ge0-2-quantum-dot-molecules-qdms-1--after-s03-deposit",
+      "name": "mixture after step 3",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "yang2008-1-2968946-si0-8ge0-2-quantum-dot-molecules-qdms-1--after-s02-heat",
+        "yang2008-1-2968946-si0-8ge0-2-quantum-dot-molecules-qdms-1--si"
+      ]
+    },
+    {
+      "id": "yang2008-1-2968946-si0-8ge0-2-quantum-dot-molecules-qdms-1--after-s04-deposit",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "yang2008-1-2968946-si0-8ge0-2-quantum-dot-molecules-qdms-1--after-s03-deposit",
+        "yang2008-1-2968946-si0-8ge0-2-quantum-dot-molecules-qdms-1--si",
+        "yang2008-1-2968946-si0-8ge0-2-quantum-dot-molecules-qdms-1--ge"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-clean",
+      "action": "clean",
+      "label": "Chemically cleaned using Shiraki method",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "yang2008-1-2968946-si0-8ge0-2-quantum-dot-molecules-qdms-1--after-s01-clean"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Chemically cleaned using Shiraki method",
+      "evidence": [
+        {
+          "source_id": "yang2008-1-2968946",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-heat",
+      "action": "heat",
+      "label": "Thermal desorption of the oxide",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-clean"
+      ],
+      "inputs": [
+        "yang2008-1-2968946-si0-8ge0-2-quantum-dot-molecules-qdms-1--after-s01-clean"
+      ],
+      "outputs": [
+        "yang2008-1-2968946-si0-8ge0-2-quantum-dot-molecules-qdms-1--after-s02-heat"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 980,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "980 °C",
+          "evidence": [
+            {
+              "source_id": "yang2008-1-2968946",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "10 min",
+          "evidence": [
+            {
+              "source_id": "yang2008-1-2968946",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Thermal desorption of the oxide",
+      "evidence": [
+        {
+          "source_id": "yang2008-1-2968946",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-deposit",
+      "action": "deposit",
+      "label": "Deposit Si buffer layer",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-heat"
+      ],
+      "inputs": [
+        "yang2008-1-2968946-si0-8ge0-2-quantum-dot-molecules-qdms-1--after-s02-heat",
+        "yang2008-1-2968946-si0-8ge0-2-quantum-dot-molecules-qdms-1--si"
+      ],
+      "outputs": [
+        "yang2008-1-2968946-si0-8ge0-2-quantum-dot-molecules-qdms-1--after-s03-deposit"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 650,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "650 °C",
+          "evidence": [
+            {
+              "source_id": "yang2008-1-2968946",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Deposit Si buffer layer",
+      "evidence": [
+        {
+          "source_id": "yang2008-1-2968946",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s04-deposit",
+      "action": "deposit",
+      "label": "Grow Si0.8Ge0.2 film",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s03-deposit"
+      ],
+      "inputs": [
+        "yang2008-1-2968946-si0-8ge0-2-quantum-dot-molecules-qdms-1--after-s03-deposit",
+        "yang2008-1-2968946-si0-8ge0-2-quantum-dot-molecules-qdms-1--si",
+        "yang2008-1-2968946-si0-8ge0-2-quantum-dot-molecules-qdms-1--ge"
+      ],
+      "outputs": [
+        "yang2008-1-2968946-si0-8ge0-2-quantum-dot-molecules-qdms-1--after-s04-deposit"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Grow Si0.8Ge0.2 film",
+      "evidence": [
+        {
+          "source_id": "yang2008-1-2968946",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "yang2008-1-2968946-si0-8ge0-2-quantum-dot-molecules-qdms-1--product",
+      "source_sample_label": "Si0.8Ge0.2 quantum dot molecules (QDMs)",
+      "batch_id": null,
+      "material_state_id": "yang2008-1-2968946-si0-8ge0-2-quantum-dot-molecules-qdms-1--after-s04-deposit",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Si0.8Ge0.2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yang2008-1-2968946",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "yang2008-1-2968946",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reactor: solid source molecular beam epitaxy machine (model Riber EVA-32) (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of Si not reported in the extracted text.",
+      "Amount of Ge not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
