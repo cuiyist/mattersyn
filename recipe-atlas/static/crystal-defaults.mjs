@@ -55,7 +55,7 @@ export function defaultCrystalReferences(entries,r,excluded=[]){
   }
   const shown=phases.length?bulk.filter(entry=>phaseTests.some(tests=>tests.length&&tests.every(test=>test(entry)))):bulk;
   for(const entry of shown){
-   const scope='Bulk reference shown because the composition matches'+(phases.length?' and the paper reports this phase':'; the paper does not state the phase, so every bulk form in the library is shown')+'. It is not a structure of the synthesized sample: size, surface, defects and interfaces are not represented.';
+   const scope=(phases.length?'Bulk reference shown because the composition matches and the paper reports this phase.':'The record does not assign a crystal phase; available bulk references are shown for comparison.')+' It is not a structure of the synthesized sample: size, surface, defects and interfaces are not represented.';
    // A reused library title may mention another record's core/shell role.
    // Every composite default has a neutral component role, even when the
    // product architecture is named; a library title cannot assign that role.

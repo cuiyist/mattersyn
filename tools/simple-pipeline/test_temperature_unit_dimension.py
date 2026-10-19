@@ -24,7 +24,7 @@ class TemperatureUnitDimensionTest(unittest.TestCase):
         return converter.Builder(doc).record(pair, 1)
 
     def test_power_or_energy_cannot_become_temperature_or_erase_valid_recipe_values(self):
-        for unit in ('W', 'Watts', 'power', 'mW', 'kW/cm²', 'laser power (W)', 'eV', 'keV', 'MeV'):
+        for unit in ('W', 'Watts', 'power', 'mW', 'kW/cm²', 'laser power (W)', 'eV', 'keV', 'MeV', 'mTorr', 'rpm'):
             with self.subTest(unit=unit):
                 pair = self.pair(unit); original = copy.deepcopy(pair)
                 record = self.record(pair); operation = record['operations'][0]

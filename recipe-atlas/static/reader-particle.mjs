@@ -2,6 +2,7 @@
 import {el,link,badge,recordURL,disclosure,siteURL} from './reader-utils.mjs?v=0.41.9';
 import {particleShapeSVG,particleShapeInfo} from './particle-shapes.mjs?v=0.40.5';
 import {scopedProductArt} from './reader-scoped-product-art.mjs';
+import {productFactLabel} from './source-field-copy.mjs?v=0.1.0';
 
 const knownStatus=new Set(['reported','author_derived','calculated','inherited']);
 const text=v=>v===null||v===undefined?'':typeof v==='object'?JSON.stringify(v):String(v);
@@ -162,9 +163,9 @@ export async function mountParticleContext(panel,r,presentation={}){
   for(const note of d.inferred?.limitations||[])basis.append(el('p',note));
   if(d.shape!=='neutral')basis.append(el('p','The drawing summarizes source evidence. It is not a micrograph, a measured coordinate model, or an exact structure–recipe training label.'));
   if(basis.children.length>1)copy.append(basis);
-  const dl=el('dl',undefined,'reader-product-facts');for(const f of group.facts.slice(0,5)){const row=el('div');row.append(el('dt',f.label),el('dd',text(f.value)));if(f.scope)row.append(el('small',f.scope));if(f.qualifier)row.append(el('small',f.qualifier));dl.append(row);}
+  const dl=el('dl',undefined,'reader-product-facts');for(const f of group.facts.slice(0,5)){const row=el('div');row.append(el('dt',productFactLabel(f.label,r)),el('dd',text(f.value)));if(f.scope)row.append(el('small',f.scope));if(f.qualifier)row.append(el('small',f.qualifier));dl.append(row);}
   if(!dl.children.length)dl.append(el('p','No non-null composition, phase, morphology or size facts are assigned to this context. Its source scope is retained.','reader-note'));
-  if(group.facts.length>5){const extra=el('dl',undefined,'reader-product-facts');for(const f of group.facts.slice(5)){const row=el('div');row.append(el('dt',f.label),el('dd',text(f.value)));if(f.qualifier)row.append(el('small',f.qualifier));extra.append(row);}copy.append(disclosure('Additional specimen observations',extra));}copy.append(dl,link('Complete specimen evidence →',recordURL(group.recordId)+'#structures','reader-data-link'));
+  if(group.facts.length>5){const extra=el('dl',undefined,'reader-product-facts');for(const f of group.facts.slice(5)){const row=el('div');row.append(el('dt',productFactLabel(f.label,r)),el('dd',text(f.value)));if(f.qualifier)row.append(el('small',f.qualifier));extra.append(row);}copy.append(disclosure('Additional specimen observations',extra));}copy.append(dl,link('Complete specimen evidence →',recordURL(group.recordId)+'#structures','reader-data-link'));
   const readableNotes=(group.context?.notes||group.product?.notes||[]).filter(n=>typeof n==='string'&&!/^Source context object:/.test(n));if(readableNotes.length)copy.append(disclosure('Specimen scope',...readableNotes.map(n=>el('p',n))));
   if(d.shape==='neutral'){layout.style.gridTemplateColumns='1fr';layout.append(copy);}else layout.append(particleArt(d),copy);
   display.replaceChildren(layout);
