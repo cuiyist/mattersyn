@@ -23,8 +23,8 @@ class TemperatureUnitDimensionTest(unittest.TestCase):
                'authors': 'A. Tester', 'year': 2026, 'title': 'Invented regression fixture'}
         return converter.Builder(doc).record(pair, 1)
 
-    def test_power_cannot_become_temperature_or_erase_valid_recipe_values(self):
-        for unit in ('W', 'Watts', 'power', 'mW', 'kW/cm²', 'laser power (W)'):
+    def test_power_or_energy_cannot_become_temperature_or_erase_valid_recipe_values(self):
+        for unit in ('W', 'Watts', 'power', 'mW', 'kW/cm²', 'laser power (W)', 'eV', 'keV', 'MeV'):
             with self.subTest(unit=unit):
                 pair = self.pair(unit); original = copy.deepcopy(pair)
                 record = self.record(pair); operation = record['operations'][0]

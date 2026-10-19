@@ -1,5 +1,7 @@
 # Published machine-extracted papers
 
+Current verified O53 index (2026-10-18T21:54:25+00:00):53 new source_extracted DOI rows/66record IDs, 28 limited-read markers; overall1,969papers/5,480records/3,359pairs. Current P51 remains local/uncredited; all old index text and existing pointers are preserved.
+
 Current verified N43 index (2026-10-18T18:42:26+00:00):43 new source_extracted DOI rows/55record IDs, 27 limited-read markers; overall1,916papers/5,414records/3,293pairs. Current O53 remains local/uncredited; all old index text and existing pointers are preserved.
 
 M50:50source-extracted papers/65records verified 2026-10-18T09:42:42+00:00; source status unchanged, no audit/training credit.
@@ -1884,5 +1886,65 @@ Source-extracted display contributions only; saved read markers add no independe
 | 10.1116/1.1621659 | qin2003-1-1621659-sige-double-quantum-dot-1 | B67 | 2026-10-18T18:42:26+00:00 | yes |
 | 10.1116/1.2194939 | xu2006-1-2194939-zno-as-1 | B67 | 2026-10-18T18:42:26+00:00 | yes |
 | 10.1557/jmr.2009.0034 | liu2009-jmr-2009-0034-15-aln-al-3, liu2009-jmr-2009-0034-24-aln-al-4, liu2009-jmr-2009-0034-30-aln-al-5, liu2009-jmr-2009-0034-39-aln-al-6, liu2009-jmr-2009-0034-4-aln-al-1, liu2009-jmr-2009-0034-8-aln-al-2 | B65 | 2026-10-18T18:42:26+00:00 | yes |
+
+Source-extracted contributions only; saved limited-read markers add no independent audit/training credit. Earlier index rows/footer remain unchanged.
+
+## O53 — verified 2026-10-18T21:54:25+00:00
+
+| DOI | Record IDs | Original batch | Live verification UTC | Limited saved rare read |
+| --- | --- | --- | --- | --- |
+| 10.1002/aoc.167 | ossi2001-aoc-167-bn-thin-film-sample-1-1, ossi2001-aoc-167-bn-thin-film-sample-3-2 | B70 | 2026-10-18T21:54:25+00:00 | no |
+| 10.1002/jbm.a.31469 | sato2008-jbm-a-31469-nanotitania-ha-weight-ratio-1-1-coatings-2, sato2008-jbm-a-31469-nanotitania-ha-weight-ratio-1-2-coatings-3, sato2008-jbm-a-31469-nanotitania-ha-weight-ratio-2-1-coatings-1 | B68 | 2026-10-18T21:54:25+00:00 | no |
+| 10.1002/pssa.200566187 | al2006-pssa-200566187-fenin-thin-film-with-15-at-ni-2, al2006-pssa-200566187-fenin-thin-film-with-36-at-ni-3, al2006-pssa-200566187-fenin-thin-film-with-5-at-ni-1 | B68 | 2026-10-18T21:54:25+00:00 | yes |
+| 10.1002/pssa.200776326 | al2007-pssa-200776326-undoped-nanocrystalline-diamond-ncd-film-1 | B70 | 2026-10-18T21:54:25+00:00 | no |
+| 10.1002/pssc.200460170 | chadwick2005-pssc-200460170-nanocrystalline-linbo3-sol-gel-21-nm-gra-2 | B68 | 2026-10-18T21:54:25+00:00 | yes |
+| 10.1002/pssc.200564739 | sedova2006-pssc-200564739-cdse-qds-in-znse-matrix-structure-a-1, sedova2006-pssc-200564739-cdse-qds-in-znse-matrix-with-cdte-stress-2 | B68 | 2026-10-18T21:54:25+00:00 | no |
+| 10.1007/s11164-010-0181-y | al-s11164-010-0181-y-nanocrystalline-3cual2o3-composite-1 | B70 | 2026-10-18T21:54:25+00:00 | yes |
+| 10.1007/s11340-008-9212-7 | dubey2010-s11340-008-9212-7-400-nm-thick-nanocrystalline-pt-films-1 | B68 | 2026-10-18T21:54:25+00:00 | no |
+| 10.1007/s11431-010-3163-9 | bangshao2010-s11431-010-3163-9-fe83-3si4b8p4cu0-7-100-xalx-x-01-5-at-1 | B70 | 2026-10-18T21:54:25+00:00 | yes |
+| 10.1007/s11434-009-0143-1 | zhenyu12009-s11434-009-0143-1-agcl-nanocrystal-doped-80teo2-20nb2o5-gl-1 | B68 | 2026-10-18T21:54:25+00:00 | yes |
+| 10.1007/s11595-009-5747-4 | zhong2009-s11595-009-5747-4-fe68zr20b12-amorphous-alloy-1 | B70 | 2026-10-18T21:54:25+00:00 | yes |
+| 10.1021/cs200686a | liu2012-cs200686a-thh-pt-ncs-1 | B68 | 2026-10-18T21:54:25+00:00 | no |
+| 10.1021/ja053795o | fan2005-ja053795o-organo-silane-functionalized-gold-nc-mic-1 | B68 | 2026-10-18T21:54:25+00:00 | no |
+| 10.1021/ja0565875 | kim2006-ja0565875-magnetite-and-cdse-zns-quantum-dots-embe-2, kim2006-ja0565875-magnetite-nanocrystals-embedded-in-mesop-1 | B70 | 2026-10-18T21:54:25+00:00 | yes |
+| 10.1021/ja8012402 | morales2008-ja8012402-wo3-u-2 | B68 | 2026-10-18T21:54:25+00:00 | yes |
+| 10.1021/ja905922j | steinhagen2009-ja905922j-czts-nanocrystals-1 | B68 | 2026-10-18T21:54:25+00:00 | yes |
+| 10.1021/jp208707p | x2012-jp208707p-tio2-nanocrystals-1 | B68 | 2026-10-18T21:54:25+00:00 | no |
+| 10.1021/jp3058838 | tian2012-jp3058838-cdse-qds-on-cds-coated-tio2-film-2 | B70 | 2026-10-18T21:54:25+00:00 | no |
+| 10.1021/jz1012164 | karan2010-jz1012164-cu-doped-znse-2, karan2010-jz1012164-mn-doped-zns-1 | B68 | 2026-10-18T21:54:25+00:00 | no |
+| 10.1021/nl072370s | sun2007-nl072370s-core-shell-cds-zns-qds-1 | B68 | 2026-10-18T21:54:25+00:00 | no |
+| 10.1021/nl404400d | holmes2014-nl404400d-site-controlled-iii-nitride-quantum-dot-1 | B70 | 2026-10-18T21:54:25+00:00 | yes |
+| 10.1021/nl8025218 | bulovic2008-nl8025218-cdse-zns-core-shell-qds-1 | B68 | 2026-10-18T21:54:25+00:00 | no |
+| 10.1021/nl9041017 | mart2010-nl9041017-si-nc-sio2-material-deposited-in-horizon-1 | B70 | 2026-10-18T21:54:25+00:00 | yes |
+| 10.1063/1.109660 | rilckschloss1993-1-109660-nanocrystalline-silicon-nc-si-1 | B70 | 2026-10-18T21:54:25+00:00 | no |
+| 10.1063/1.113110 | veprek1995-1-113110-nc-tin-a-si3n4-composite-1 | B70 | 2026-10-18T21:54:25+00:00 | yes |
+| 10.1063/1.118828 | li1997-1-118828-nanocrystalline-batio3-1 | B70 | 2026-10-18T21:54:25+00:00 | no |
+| 10.1063/1.120835 | kocher1998-1-120835-lppp-tio2-fullerene-composite-1 | B69 | 2026-10-18T21:54:25+00:00 | no |
+| 10.1063/1.124897 | mais1999-1-124897-er-doped-zno-nanocrystalline-waveguide-s-1 | B70 | 2026-10-18T21:54:25+00:00 | no |
+| 10.1063/1.125092 | tachibana1999-1-125092-in0-2ga0-8n-self-assembled-quantum-dot-l-1 | B69 | 2026-10-18T21:54:25+00:00 | yes |
+| 10.1063/1.126699 | pan2000-1-126699-in-gaas-gaas-quantum-dot-nanostructures-1 | B69 | 2026-10-18T21:54:25+00:00 | yes |
+| 10.1063/1.1346651 | yakimov2001-1-1346651-ge-si-quantum-dots-1 | B69 | 2026-10-18T21:54:25+00:00 | yes |
+| 10.1063/1.1357780 | chen2001-1-1357780-nanocrystalline-e-fe-1 | B69 | 2026-10-18T21:54:25+00:00 | no |
+| 10.1063/1.1358363 | lin2001-1-1358363-1-dodecanethiol-ligated-gold-nanocrystal-1 | B70 | 2026-10-18T21:54:25+00:00 | no |
+| 10.1063/1.1434947 | chen2002-1-1434947-100-nm-diamond-nanocrystals-1, chen2002-1-1434947-700-nm-diamond-nanocrystals-2 | B69 | 2026-10-18T21:54:25+00:00 | no |
+| 10.1063/1.1488688 | yakimov2002-1-1488688-ge-self-assembled-quantum-dots-in-si-mat-1 | B70 | 2026-10-18T21:54:25+00:00 | yes |
+| 10.1063/1.1539556 | rothschild2003-1-1539556-nanocrystalline-tio2-rutile-film-1 | B69 | 2026-10-18T21:54:25+00:00 | no |
+| 10.1063/1.1711171 | kaiander2004-1-1711171-in0-65ga0-35as-quantum-dots-overgrown-wi-1, kaiander2004-1-1711171-in0-65ga0-35as-quantum-dots-overgrown-wi-2 | B69 | 2026-10-18T21:54:25+00:00 | yes |
+| 10.1063/1.1771475 | posada2004-1-1771475-psi-n-monoliths-1 | B69 | 2026-10-18T21:54:25+00:00 | no |
+| 10.1063/1.2130717 | bessais2005-1-2130717-smfe8-75ga0-25c-1 | B70 | 2026-10-18T21:54:25+00:00 | yes |
+| 10.1063/1.2185728 | bitton2006-1-2185728-15-nm-gold-quantum-dot-1 | B69 | 2026-10-18T21:54:25+00:00 | no |
+| 10.1063/1.2208268 | kim2006-1-2208268-finfet-silicon-nanocrystal-floating-gate-1 | B69 | 2026-10-18T21:54:25+00:00 | no |
+| 10.1063/1.2233808 | su2006-1-2233808-in0-6al0-4as-gaas-quantum-dot-intersuble-1 | B69 | 2026-10-18T21:54:25+00:00 | yes |
+| 10.1063/1.2737123 | heyn2007-1-2737123-gaas-quantum-dots-qds-with-25-facets-1, heyn2007-1-2737123-gaas-quantum-dots-qds-with-55-facets-2 | B69 | 2026-10-18T21:54:25+00:00 | no |
+| 10.1063/1.3359418 | mahajan2010-1-3359418-gd2o3-nanocrystal-film-anode-1 | B69 | 2026-10-18T21:54:25+00:00 | yes |
+| 10.1063/1.3507390 | sugaya2010-1-3507390-in0-4ga0-6as-qd-solar-cells-with-in0-2ga-1 | B69 | 2026-10-18T21:54:25+00:00 | yes |
+| 10.1063/1.3526380 | phan2010-1-3526380-nanocrystalline-la0-35pr0-275ca0-375mno3-1 | B69 | 2026-10-18T21:54:25+00:00 | yes |
+| 10.1063/1.366781 | kopcewicz1998-1-366781-fe73-5nb4-5cr5cu1b16-alloy-1 | B69 | 2026-10-18T21:54:25+00:00 | yes |
+| 10.1063/1.369098 | yang1999-1-369098-fe69-5cu0-5cr4v5si13b8-nanocrystalline-a-1 | B69 | 2026-10-18T21:54:25+00:00 | yes |
+| 10.1063/1.370363 | kopcewicz1999-1-370363-fe80-5nb7b12-5-nanocrystalline-alloy-1 | B69 | 2026-10-18T21:54:25+00:00 | yes |
+| 10.1063/1.371881 | chen2000-1-371881-fe88zr7b3al2-1 | B69 | 2026-10-18T21:54:25+00:00 | yes |
+| 10.1103/physrevlett.88.206104 | x2002-physrevlett-88-206104-nanocrystalline-pd-as-prepared-1 | B70 | 2026-10-18T21:54:25+00:00 | no |
+| 10.1116/1.585983 | schmidt1992-1-585983-ingaas-gaas-quantum-dots-2, schmidt1992-1-585983-ingaas-inp-quantum-dots-1 | B68 | 2026-10-18T21:54:25+00:00 | yes |
+| 10.1557/jmr.2007.0060 | al2007-jmr-2007-0060-ni-15-fe-nanocrystalline-coating-2, al2007-jmr-2007-0060-zr58ni13-6cu18al10-4-amorphous-alloy-1 | B68 | 2026-10-18T21:54:25+00:00 | yes |
 
 Source-extracted contributions only; saved limited-read markers add no independent audit/training credit. Earlier index rows/footer remain unchanged.

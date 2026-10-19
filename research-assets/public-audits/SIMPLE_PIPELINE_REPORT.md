@@ -1,3 +1,13 @@
+## O53 verified — 2026-10-18T21:54:25+00:00
+
+**53 source_extracted papers /66 canonical records /201 caption keys /446 Reader caption instances** are live. Source `f3112e0d719b56fbf60e1fee59328e735cd1fd9d` passed all three exact-head CI checks and ordinary PR73 (merge `dd6aa9a6fd519b4336b9be06bbd03adac07383f8`). Site `f2bff8cc3826a6217fe3ed1ec74d855f0d6ee9ac` passed Pages39168804324; unchanged normal anonymous verification checked 747 files, 713 changed files,53 paper routes and 85 material bindings with zero failures.
+
+Actual deployed totals: 1,969 primary papers /5,480 canonical records /3,359 recipe–structure pairs. Audited contributions remain244papers/864pairs; these new records are source_extracted, not independently audited or training eligible. Manifest:52,345 files/3,440,944,580 logical bytes. Six exports remain audited-only.
+
+All prior document/index bytes, M50/L58/K/J history, O53 whole-DOI technical holds and superseded browser/display-correction evidence remain preserved. 28 retained DOI rows have saved limited deletion-read markers, not audits; prior whole-object deletions are not replayed. The official MACHINE index remains at `research-assets/public-audits/MACHINE_EXTRACTED_PAPERS.md`; the single job report remains `research-assets/public-audits/SIMPLE_PIPELINE_REPORT.md`.
+
+The current P51 Source checkpoint `f3112e0d719b56fbf60e1fee59328e735cd1fd9d` has5,549 canonical records, including69 pending P51 records, separately from the published O53 artifact with5,480. P51's51papers/69records/195figure keys are local preparation with zero publication credit. Existing normal release gates remain required; no Source integration or caption replay is requested.
+
 ## N43 verified — 2026-10-18T18:42:26+00:00
 
 **43 source_extracted papers /55 canonical records /176 caption keys /419 Reader caption instances** are live. Source `bde1b784da23fde45b0a6f1f959f829573704f02` passed all three exact-head CI checks and ordinary PR72 (merge `adfcc5d6746ccbc82a789cfb1642050236f86c6b`). Site `d4c672b0a81d2c5c2b41a78b98264b156cace3be` passed Pages39154586367; unchanged normal anonymous verification checked 674 files, 638 changed files,43 paper routes and 66 material bindings with zero failures.
@@ -2922,3 +2932,8 @@ O53: the complete candidate build stopped at the historical Ge/Si equality becau
 Next cohort: 26 rare-paper reads have completed; 25 supported papers cover 39 rare record ordinals and 22 deletion-only corrections. Seven whole-DOI technical holds stay excluded; final converted counts remain pending. Original model/text/quoted pair files stay local.
 
 Storage: C free bytes observed at this checkpoint: 15473471488. No new deletion is claimed here. A bounded proof of reconstructible generated files is being prepared before another large build; all protected input files and earlier HOLD scopes remain intact.
+
+
+P51 prepublication energy-unit correction (2026-10-19 UTC): The original local checkpoint passed its 13 normal local phases, but independent visual QA found one energy value incorrectly assigned to temperature in a new record and its schematic. Publication remains pending, with zero P51 publication credit. The existing importer guard now rejects electron-volt units in temperature fields; the focused regression tests pass. The correction deletes the invalid temperature field without inferring a replacement or changing the original local pass/pair files. The other 68 new records, previous published records, figure-caption content and audited-only exports must remain unchanged. Fresh exact-revision checks and browser review remain required.
+
+Owner-priority C cleanup is complete; the final safe cleanup report is published in cuiyist/mattersyn2 at commit 735eb96e4730a53102eee36752d688a202a45f93. The dated post-cleanup reading was 121,044,402,176 free bytes; a later actual reading was 141,387,751,424 bytes. Later changes in free capacity are not attributed to cleanup without evidence. Protected source documents, page text, pass/pair training files and the active Qwen3-32B server/model are preserved.

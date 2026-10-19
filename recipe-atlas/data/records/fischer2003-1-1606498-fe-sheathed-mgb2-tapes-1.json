@@ -1,0 +1,383 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "fischer2003-1-1606498-fe-sheathed-mgb2-tapes-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "C. Fischer (2003): Fe-sheathed MgB2 tapes",
+  "material": {
+    "formula": "MgB2",
+    "family": "MgB2 nanocrystals",
+    "elements": [
+      "Mg",
+      "B"
+    ],
+    "components": [
+      "MgB2"
+    ],
+    "architecture": "composite"
+  },
+  "method": "Powder-in-tube",
+  "sources": [
+    {
+      "id": "fischer2003-1-1606498",
+      "doi": "10.1063/1.1606498",
+      "title": "Preparation of MgB2 tapes using a nanocrystalline partially reacted precursor",
+      "authors": "C. Fischer, C. Rodig, W. Haßler, O. Perner, J. Eckert, K. Nenkov, G. Fuchs, H. Wendrock, B. Holzapfel, and L. Schultz",
+      "year": 2003,
+      "url": "https://doi.org/10.1063/1.1606498",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "fischer2003-1-1606498",
+    "recipe_family": "fischer2003-1-1606498-fe-sheathed-mgb2-tapes-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "MgB2",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "fischer2003-1-1606498",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "tape",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "fischer2003-1-1606498",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "fischer2003-1-1606498-fe-sheathed-mgb2-tapes-1--mg-powder",
+      "name": "Mg powder",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "fischer2003-1-1606498",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "fischer2003-1-1606498-fe-sheathed-mgb2-tapes-1--b-powder",
+      "name": "B powder",
+      "formula": null,
+      "role": "nonmetal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "fischer2003-1-1606498",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "fischer2003-1-1606498-fe-sheathed-mgb2-tapes-1--after-s01-mix",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "fischer2003-1-1606498-fe-sheathed-mgb2-tapes-1--mg-powder",
+        "fischer2003-1-1606498-fe-sheathed-mgb2-tapes-1--b-powder"
+      ]
+    },
+    {
+      "id": "fischer2003-1-1606498-fe-sheathed-mgb2-tapes-1--after-s02-mill",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "fischer2003-1-1606498-fe-sheathed-mgb2-tapes-1--after-s01-mix",
+        "fischer2003-1-1606498-fe-sheathed-mgb2-tapes-1--mg-powder",
+        "fischer2003-1-1606498-fe-sheathed-mgb2-tapes-1--b-powder"
+      ]
+    },
+    {
+      "id": "fischer2003-1-1606498-fe-sheathed-mgb2-tapes-1--after-s03-fill",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "fischer2003-1-1606498-fe-sheathed-mgb2-tapes-1--after-s02-mill",
+        "fischer2003-1-1606498-fe-sheathed-mgb2-tapes-1--mg-powder",
+        "fischer2003-1-1606498-fe-sheathed-mgb2-tapes-1--b-powder"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-mix",
+      "action": "mix",
+      "label": "Mix Mg and B powders in the stoichiometric ratio of MgB2.",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "fischer2003-1-1606498-fe-sheathed-mgb2-tapes-1--mg-powder",
+        "fischer2003-1-1606498-fe-sheathed-mgb2-tapes-1--b-powder"
+      ],
+      "outputs": [
+        "fischer2003-1-1606498-fe-sheathed-mgb2-tapes-1--after-s01-mix"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "Ar",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "fischer2003-1-1606498",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Mix Mg and B powders in the stoichiometric ratio of MgB2.",
+      "evidence": [
+        {
+          "source_id": "fischer2003-1-1606498",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-mill",
+      "action": "mill",
+      "label": "Mechanically alloy the powder mixture in a planetary ball mill.",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-mix"
+      ],
+      "inputs": [
+        "fischer2003-1-1606498-fe-sheathed-mgb2-tapes-1--after-s01-mix",
+        "fischer2003-1-1606498-fe-sheathed-mgb2-tapes-1--mg-powder",
+        "fischer2003-1-1606498-fe-sheathed-mgb2-tapes-1--b-powder"
+      ],
+      "outputs": [
+        "fischer2003-1-1606498-fe-sheathed-mgb2-tapes-1--after-s02-mill"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 50,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "50 h",
+          "evidence": [
+            {
+              "source_id": "fischer2003-1-1606498",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "Ar",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "fischer2003-1-1606498",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Mechanically alloy the powder mixture in a planetary ball mill.",
+      "evidence": [
+        {
+          "source_id": "fischer2003-1-1606498",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-fill",
+      "action": "fill",
+      "label": "Fill the precursor powder into Fe tubes.",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-mill"
+      ],
+      "inputs": [
+        "fischer2003-1-1606498-fe-sheathed-mgb2-tapes-1--after-s02-mill",
+        "fischer2003-1-1606498-fe-sheathed-mgb2-tapes-1--mg-powder",
+        "fischer2003-1-1606498-fe-sheathed-mgb2-tapes-1--b-powder"
+      ],
+      "outputs": [
+        "fischer2003-1-1606498-fe-sheathed-mgb2-tapes-1--after-s03-fill"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "Ar",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "fischer2003-1-1606498",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Fill the precursor powder into Fe tubes.",
+      "evidence": [
+        {
+          "source_id": "fischer2003-1-1606498",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "fischer2003-1-1606498-fe-sheathed-mgb2-tapes-1--product",
+      "source_sample_label": "Fe-sheathed MgB2 tapes",
+      "batch_id": null,
+      "material_state_id": "fischer2003-1-1606498-fe-sheathed-mgb2-tapes-1--after-s03-fill",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "MgB2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "fischer2003-1-1606498",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": "tape",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "fischer2003-1-1606498",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "fischer2003-1-1606498",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reactor: planetary ball mill (Main PDF p.2).",
+        "Reaction temperature: 770 K (Main PDF p.2).",
+        "Reaction time: 3 h (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Amount of Mg powder not reported in the extracted text.",
+      "Amount of B powder not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

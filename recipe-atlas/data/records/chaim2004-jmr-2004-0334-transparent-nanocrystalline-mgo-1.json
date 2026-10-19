@@ -1,0 +1,392 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "chaim2004-jmr-2004-0334-transparent-nanocrystalline-mgo-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Rachman Chaim (2004): Transparent nanocrystalline MgO",
+  "material": {
+    "formula": "MgO",
+    "family": "MgO nanocrystals",
+    "elements": [
+      "Mg",
+      "O"
+    ],
+    "components": [
+      "MgO"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Spark plasma sintering",
+  "sources": [
+    {
+      "id": "chaim2004-jmr-2004-0334",
+      "doi": "10.1557/jmr.2004.0334",
+      "title": "Transparent nanocrystalline MgO by rapid and low-temperature spark plasma sintering",
+      "authors": "Rachman Chaim, Zhijian Shen, and Mats Nygren",
+      "year": 2004,
+      "url": "https://doi.org/10.1557/jmr.2004.0334",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "chaim2004-jmr-2004-0334",
+    "recipe_family": "chaim2004-jmr-2004-0334-transparent-nanocrystalline-mgo-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "MgO",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "chaim2004-jmr-2004-0334",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "polycrystalline",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "chaim2004-jmr-2004-0334",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": 52,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "52 nm",
+      "evidence": [
+        {
+          "source_id": "chaim2004-jmr-2004-0334",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "grains",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "chaim2004-jmr-2004-0334",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "chaim2004-jmr-2004-0334-transparent-nanocrystalline-mgo-1--after-s01-uniaxial-cold-pressing",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "chaim2004-jmr-2004-0334-transparent-nanocrystalline-mgo-1--after-s02-cold-isostatic-pressing",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "chaim2004-jmr-2004-0334-transparent-nanocrystalline-mgo-1--after-s01-uniaxial-cold-pressing"
+      ]
+    },
+    {
+      "id": "chaim2004-jmr-2004-0334-transparent-nanocrystalline-mgo-1--after-s03-spark-plasma-sintering",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "chaim2004-jmr-2004-0334-transparent-nanocrystalline-mgo-1--after-s02-cold-isostatic-pressing"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-uniaxial-cold-pressing",
+      "action": "uniaxial cold pressing",
+      "label": "Uniaxially cold pressed into cylinders under 30 MPa",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "chaim2004-jmr-2004-0334-transparent-nanocrystalline-mgo-1--after-s01-uniaxial-cold-pressing"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "vacuum",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "chaim2004-jmr-2004-0334",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Uniaxially cold pressed into cylinders under 30 MPa",
+      "evidence": [
+        {
+          "source_id": "chaim2004-jmr-2004-0334",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-cold-isostatic-pressing",
+      "action": "cold isostatic pressing",
+      "label": "Cold isostatic pressing (CIP) at 250 MPa",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-uniaxial-cold-pressing"
+      ],
+      "inputs": [
+        "chaim2004-jmr-2004-0334-transparent-nanocrystalline-mgo-1--after-s01-uniaxial-cold-pressing"
+      ],
+      "outputs": [
+        "chaim2004-jmr-2004-0334-transparent-nanocrystalline-mgo-1--after-s02-cold-isostatic-pressing"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "vacuum",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "chaim2004-jmr-2004-0334",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Cold isostatic pressing (CIP) at 250 MPa",
+      "evidence": [
+        {
+          "source_id": "chaim2004-jmr-2004-0334",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-spark-plasma-sintering",
+      "action": "spark plasma sintering",
+      "label": "SPS at 800 °C and 150 MPa for 5 min",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-cold-isostatic-pressing"
+      ],
+      "inputs": [
+        "chaim2004-jmr-2004-0334-transparent-nanocrystalline-mgo-1--after-s02-cold-isostatic-pressing"
+      ],
+      "outputs": [
+        "chaim2004-jmr-2004-0334-transparent-nanocrystalline-mgo-1--after-s03-spark-plasma-sintering"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 800,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "800 °C",
+          "evidence": [
+            {
+              "source_id": "chaim2004-jmr-2004-0334",
+              "locator": "Main PDF p.1"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "5 min",
+          "evidence": [
+            {
+              "source_id": "chaim2004-jmr-2004-0334",
+              "locator": "Main PDF p.1"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "vacuum",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "chaim2004-jmr-2004-0334",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "SPS at 800 °C and 150 MPa for 5 min",
+      "evidence": [
+        {
+          "source_id": "chaim2004-jmr-2004-0334",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "chaim2004-jmr-2004-0334-transparent-nanocrystalline-mgo-1--product",
+      "source_sample_label": "Transparent nanocrystalline MgO",
+      "batch_id": null,
+      "material_state_id": "chaim2004-jmr-2004-0334-transparent-nanocrystalline-mgo-1--after-s03-spark-plasma-sintering",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "MgO",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "chaim2004-jmr-2004-0334",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "polycrystalline",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "chaim2004-jmr-2004-0334",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "grains",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "chaim2004-jmr-2004-0334",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "chaim2004-jmr-2004-0334",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "notes": [
+        "Reactor: Dr. Sinter 2050 (Sumitomo Coal Mining Co. Ltd., Nihama, Japan) (Main PDF p.2).",
+        "Reaction temperature: 800 degC (Main PDF p.1).",
+        "Reaction time: 5 min (Main PDF p.1)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "chaim2004-jmr-2004-0334-transparent-nanocrystalline-mgo-1--size",
+      "sample_id": "chaim2004-jmr-2004-0334-transparent-nanocrystalline-mgo-1--product",
+      "property": "particle_size",
+      "technique": "not reported",
+      "value": {
+        "value": 52,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "52 nm",
+        "evidence": [
+          {
+            "source_id": "chaim2004-jmr-2004-0334",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "chaim2004-jmr-2004-0334",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Ligand not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

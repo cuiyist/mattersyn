@@ -1,0 +1,530 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "biteen2006-1-2191411-si-qds-silicon-quantum-dots-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Julie S. Biteen (2006): Si QDs (silicon quantum dots)",
+  "material": {
+    "formula": "Si",
+    "family": "Si nanocrystals",
+    "elements": [
+      "Si"
+    ],
+    "components": [
+      "Si"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Ion implantation",
+  "sources": [
+    {
+      "id": "biteen2006-1-2191411",
+      "doi": "10.1063/1.2191411",
+      "title": "Spectral tuning of plasmon-enhanced silicon quantum dot luminescence",
+      "authors": "Julie S. Biteen, Nathan S. Lewis, Harry A. Atwater, Hans Mertens, Albert Polman",
+      "year": 2006,
+      "url": "https://doi.org/10.1063/1.2191411",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "biteen2006-1-2191411",
+    "recipe_family": "biteen2006-1-2191411-si-qds-silicon-quantum-dots-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Si",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "biteen2006-1-2191411",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "nanocrystalline",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "biteen2006-1-2191411",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "sphere",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "biteen2006-1-2191411",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "biteen2006-1-2191411-si-qds-silicon-quantum-dots-1--si-ions",
+      "name": "Si+ ions",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "biteen2006-1-2191411",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "biteen2006-1-2191411-si-qds-silicon-quantum-dots-1--fused-quartz",
+      "name": "fused quartz",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "biteen2006-1-2191411",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "biteen2006-1-2191411-si-qds-silicon-quantum-dots-1--after-s01-anneal",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "biteen2006-1-2191411-si-qds-silicon-quantum-dots-1--fused-quartz"
+      ]
+    },
+    {
+      "id": "biteen2006-1-2191411-si-qds-silicon-quantum-dots-1--after-s02-anneal",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "biteen2006-1-2191411-si-qds-silicon-quantum-dots-1--after-s01-anneal",
+        "biteen2006-1-2191411-si-qds-silicon-quantum-dots-1--fused-quartz"
+      ]
+    },
+    {
+      "id": "biteen2006-1-2191411-si-qds-silicon-quantum-dots-1--after-s03-heat",
+      "name": "mixture after step 3",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "biteen2006-1-2191411-si-qds-silicon-quantum-dots-1--after-s02-anneal",
+        "biteen2006-1-2191411-si-qds-silicon-quantum-dots-1--fused-quartz"
+      ]
+    },
+    {
+      "id": "biteen2006-1-2191411-si-qds-silicon-quantum-dots-1--after-s04-etch",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "biteen2006-1-2191411-si-qds-silicon-quantum-dots-1--after-s03-heat",
+        "biteen2006-1-2191411-si-qds-silicon-quantum-dots-1--fused-quartz"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-anneal",
+      "action": "anneal",
+      "label": "Annealing in Ar at 200 and 450 °C",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "biteen2006-1-2191411-si-qds-silicon-quantum-dots-1--fused-quartz"
+      ],
+      "outputs": [
+        "biteen2006-1-2191411-si-qds-silicon-quantum-dots-1--after-s01-anneal"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 200,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "200 °C",
+          "evidence": [
+            {
+              "source_id": "biteen2006-1-2191411",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 20,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "20 min",
+          "evidence": [
+            {
+              "source_id": "biteen2006-1-2191411",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "Ar",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "biteen2006-1-2191411",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Annealing in Ar at 200 and 450 °C",
+      "evidence": [
+        {
+          "source_id": "biteen2006-1-2191411",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-anneal",
+      "action": "anneal",
+      "label": "Annealing in Ar at 1000 °C",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-anneal"
+      ],
+      "inputs": [
+        "biteen2006-1-2191411-si-qds-silicon-quantum-dots-1--after-s01-anneal",
+        "biteen2006-1-2191411-si-qds-silicon-quantum-dots-1--fused-quartz"
+      ],
+      "outputs": [
+        "biteen2006-1-2191411-si-qds-silicon-quantum-dots-1--after-s02-anneal"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 1000,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1000 °C",
+          "evidence": [
+            {
+              "source_id": "biteen2006-1-2191411",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 30,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "30 min",
+          "evidence": [
+            {
+              "source_id": "biteen2006-1-2191411",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "Ar",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "biteen2006-1-2191411",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Annealing in Ar at 1000 °C",
+      "evidence": [
+        {
+          "source_id": "biteen2006-1-2191411",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-heat",
+      "action": "heat",
+      "label": "Heating in forming gas at 450 °C",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-anneal"
+      ],
+      "inputs": [
+        "biteen2006-1-2191411-si-qds-silicon-quantum-dots-1--after-s02-anneal",
+        "biteen2006-1-2191411-si-qds-silicon-quantum-dots-1--fused-quartz"
+      ],
+      "outputs": [
+        "biteen2006-1-2191411-si-qds-silicon-quantum-dots-1--after-s03-heat"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 450,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "450 °C",
+          "evidence": [
+            {
+              "source_id": "biteen2006-1-2191411",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 30,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "30 min",
+          "evidence": [
+            {
+              "source_id": "biteen2006-1-2191411",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "Ar",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "biteen2006-1-2191411",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Heating in forming gas at 450 °C",
+      "evidence": [
+        {
+          "source_id": "biteen2006-1-2191411",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s04-etch",
+      "action": "etch",
+      "label": "Etching in 2.3% HF(aq) to adjust depth",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s03-heat"
+      ],
+      "inputs": [
+        "biteen2006-1-2191411-si-qds-silicon-quantum-dots-1--after-s03-heat",
+        "biteen2006-1-2191411-si-qds-silicon-quantum-dots-1--fused-quartz"
+      ],
+      "outputs": [
+        "biteen2006-1-2191411-si-qds-silicon-quantum-dots-1--after-s04-etch"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "Ar",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "biteen2006-1-2191411",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Etching in 2.3% HF(aq) to adjust depth",
+      "evidence": [
+        {
+          "source_id": "biteen2006-1-2191411",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "biteen2006-1-2191411-si-qds-silicon-quantum-dots-1--product",
+      "source_sample_label": "Si QDs (silicon quantum dots)",
+      "batch_id": null,
+      "material_state_id": "biteen2006-1-2191411-si-qds-silicon-quantum-dots-1--after-s04-etch",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Si",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "biteen2006-1-2191411",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "nanocrystalline",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "biteen2006-1-2191411",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "sphere",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "biteen2006-1-2191411",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "biteen2006-1-2191411",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reaction temperature: 1000 degC (Main PDF p.2).",
+        "Reaction time: 30 min (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Amount of Si+ ions not reported in the extracted text.",
+      "Amount of fused quartz not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
