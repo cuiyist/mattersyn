@@ -1,0 +1,289 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "zhong2023-acs-jpcc-2c07272-si-qds-no-c2-sample-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Longhai Zhong; Xin Gao; Jinchao Qiao; Yan Chen; Xueying Zhang; Zeqi Xiao; Pengwan Chen (2023): Si QDs (No. c2 sample)",
+  "material": {
+    "formula": "Si",
+    "family": "Si nanocrystals",
+    "elements": [
+      "Si"
+    ],
+    "components": [
+      "Si"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Pulsed wire discharge",
+  "sources": [
+    {
+      "id": "zhong2023-acs-jpcc-2c07272",
+      "doi": "10.1021/acs.jpcc.2c07272",
+      "title": "Formation of Blue-Emitting Colloidal Si Quantum Dots through Pulsed Discharge of Si Strips in Distilled Water Medium",
+      "authors": "Longhai Zhong; Xin Gao; Jinchao Qiao; Yan Chen; Xueying Zhang; Zeqi Xiao; Pengwan Chen",
+      "year": 2023,
+      "url": "https://doi.org/10.1021/acs.jpcc.2c07272",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "zhong2023-acs-jpcc-2c07272",
+    "recipe_family": "zhong2023-acs-jpcc-2c07272-si-qds-no-c2-sample-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Si",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "zhong2023-acs-jpcc-2c07272",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "zhong2023-acs-jpcc-2c07272-si-qds-no-c2-sample-1--si-strip",
+      "name": "Si strip",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "concentration": {
+          "value": 0.4,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0.4 mm",
+          "evidence": [
+            {
+              "source_id": "zhong2023-acs-jpcc-2c07272",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "zhong2023-acs-jpcc-2c07272",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "zhong2023-acs-jpcc-2c07272-si-qds-no-c2-sample-1--after-s01-pour",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "zhong2023-acs-jpcc-2c07272-si-qds-no-c2-sample-1--after-s02-charge",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "zhong2023-acs-jpcc-2c07272-si-qds-no-c2-sample-1--after-s01-pour",
+        "zhong2023-acs-jpcc-2c07272-si-qds-no-c2-sample-1--si-strip"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-pour",
+      "action": "pour",
+      "label": "Pour distilled water into the chamber to immerse the Si strip",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "zhong2023-acs-jpcc-2c07272-si-qds-no-c2-sample-1--after-s01-pour"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "distilled water",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "zhong2023-acs-jpcc-2c07272",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Pour distilled water into the chamber to immerse the Si strip",
+      "evidence": [
+        {
+          "source_id": "zhong2023-acs-jpcc-2c07272",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "s02-charge",
+      "action": "charge",
+      "label": "Charge the capacitor to a specific voltage for the pulsed discharge process",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-pour"
+      ],
+      "inputs": [
+        "zhong2023-acs-jpcc-2c07272-si-qds-no-c2-sample-1--after-s01-pour",
+        "zhong2023-acs-jpcc-2c07272-si-qds-no-c2-sample-1--si-strip"
+      ],
+      "outputs": [
+        "zhong2023-acs-jpcc-2c07272-si-qds-no-c2-sample-1--after-s02-charge"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "distilled water",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "zhong2023-acs-jpcc-2c07272",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Charge the capacitor to a specific voltage for the pulsed discharge process",
+      "evidence": [
+        {
+          "source_id": "zhong2023-acs-jpcc-2c07272",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "zhong2023-acs-jpcc-2c07272-si-qds-no-c2-sample-1--product",
+      "source_sample_label": "Si QDs (No. c2 sample)",
+      "batch_id": null,
+      "material_state_id": "zhong2023-acs-jpcc-2c07272-si-qds-no-c2-sample-1--after-s02-charge",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Si",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "zhong2023-acs-jpcc-2c07272",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "zhong2023-acs-jpcc-2c07272",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reactor: stainless steel cylindrical container with an inner diameter of 350 mm and a depth of 250 mm (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
