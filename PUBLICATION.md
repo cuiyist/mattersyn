@@ -1,3 +1,34 @@
+## P51 verified; owner pause — 2026-10-20T00:31:42.077482+00:00
+
+**51 distinct primary papers /69 source_extracted records /195 figure crops /440 Reader caption instances** are deployed and anonymously verified at 2026-10-20T00:00:15+00:00. Actual totals are **2,020 papers /5,549 canonical records /3,428 recipe–structure pairs**. Audited244 papers/864 pairs and all six audited-only training exports remain unchanged. No independent scientific audit, calibrated accuracy, gold or training credit is asserted for these51 papers.
+
+Source `2a9fcb36b6910d9ffff7983a725dfa7e03c4183c` passed the completed13 local phases (the original capacity HOLD and its two-phase continuation are preserved),222 JavaScript tests and all three exact-head CI checks in39334489144. [Source PR75](https://github.com/cuiyist/mattersyn/pull/75) merged ordinarily as `39afb7ff234c812c15466be84e92cdbbb0a8332d`. Site `11bde9af7a1a3d6918f9fe4d6f4b588aedcff774` passed [Pages39343483435](https://github.com/cuiyist/mattersyn-site/actions/runs/39343483435). The unchanged anonymous release check passed756 files, including720 changed files,51 paper routes and71 material bindings, with zero failures. The51 primary DOIs are distinct and absent from the previous published source set.
+
+The normal clean release took2,180.8seconds through candidate, final and Site export stages. The artifact is52,994 files /3,478,097,585 logical bytes. This is an observed batch release, not evidence of a sustained publication rate. All51 planned papers shipped; no further paper was excluded during this release continuation. Original extraction omissions, technical holds, rejected evidence and earlier failed builds/browser reviews remain on record.
+
+The corrected Source fixes the remaining Beier degree glyphs, removes Panthani's substrate from vessel context and clears Biteen's inconsistent atmosphere assertion without inventing a replacement gas. Three conceptual SVGs and46 same-record Reader pointers are rebound. The full101-route GUI receipt is reused only after complete snapshot/file-map equality; it covers77 selected records,202 structure panels,93 representative figure modals and three phone cases. It does not assert every method, figure or operation was individually inspected. Five wording/reference observations remain OPEN and nonblocking in the bounded display adjudication:
+
+Proposed open display debts retained after bounded H6 GUI delivery; no claim of prose perfection, scientific audit, or resolution:
+
+- Existing diamond method shows an explicitly independent graphite bulk reference; retain clearer reference-scope wording without assigning a measured phase.
+- Existing Schmidt figure caption retains uncertain OCR notation; keep a source-backed notation-review debt without guessing replacement characters.
+- New Hidalgo protocol calls copper-wheel apparatus a recipe-level vessel while explicitly making no step assignment; retain terminology debt.
+- Existing Ishikawa protocol labels the MOCVD process as a recipe-level vessel; retain apparatus/category wording debt.
+- New Han protocol names an ampoule while the legacy recipe-level vessel field is missing; retain field-scope wording debt without inferring paper absence.
+
+Storage cleanup after publication:
+
+- five generated release copies: FIVE_POSTPUBLICATION_R6_KNOWN_FILE_SETS_REMOVED_ALL_DIRECTORIES_PRESERVED; 228,604 verified files / 16,151,332,605 logical bytes removed; C free 87,290,507,264 → 103,944,400,896 bytes.
+- extra Site preview: ROOT_NORMAL_GIT_WORKTREE_REMOVED_AFTER_FULL_BYTE_PROOF; 53,005 verified files / 3,577,544,066 logical bytes removed; C free 103,918,325,760 → 107,632,578,560 bytes.
+
+Two extra-preview preflight attempts stopped before any deletion: the first exposed an idle-slot response parsing bug; the next lacked sandbox access to process metadata. Their zero-deletion HOLD receipts are preserved. The corrected attempt uses the same full-byte reconstruction and live-consumer checks with authorized process inspection.
+
+The earlier q6 native-owner lookup HOLD remains preserved: its first Source copy removed43,095 files/3,343,780,699 logical bytes; unstarted roles were left untouched. The separately reviewed continuation removed87,805 files/6,336,617,510 logical bytes. No prior attempt was blindly replayed. Protected PDFs, page text, quoted passes/pairs, owner directories, active model/server/CUDA build and canonical Source/Site checkouts remain preserved. No other program was stopped. Whole-drive readings include concurrent changes and are not isolated physical recovery. C free before this bookkeeping save is107,632,128,000 bytes. Its one generated Source boundary will be retired separately after the branch save if the100GiB trigger applies; the safe [cleanup log](https://github.com/cuiyist/mattersyn2/blob/main/CLEANUP_REPORT_2026-10-12.md) records subsequent storage results.
+
+Choices: reuse exact accepted GUI evidence; keep the legacy gold-only ledger hook unused and record this publication separately as source_extracted; preserve the five open observations and all failures. An optional message to the completed browser worker was rejected by automatic approval for missing chat-specific permission and left unsent; publication was unaffected. No policy/allowlist rule or release check was weakened for these corrections.
+
+The website queue and30-minute wake-up are PAUSED for the owner's model switch. All workers are idle; no new batch, claim, model client or controller starts. Completed later-batch outputs remain private. The audited lane, its four open questions and original sampling denominator remain paused and unchanged. This clerical save requires its own normal file-list/boundary checks and exact-head CI; it adds no Site publication. Wait for a new explicit owner resume.
+
 ## P51 integration fixture fixed; fresh release checks pending — 2026-10-19T20:07:37.444741+00:00
 
 P51 integration-fixture correction, 2026-10-19T20:07:37.444741+00:00: the first JavaScript phase on unpublished Source3b19 stopped with 219 of221 tests passing. Two copied-mount fixtures replaced the newly imported field formatters with inert null stubs. The fixture now injects the real formatters, keeps every existing assertion and adds a source_extracted mount/missing-field/no-mutation regression. All39 focused reactor-display tests pass. This changes the invented integration fixture only; production renderer code, canonical records, captions,195 crops and six audited-only exports are unchanged. The failed q4 result remains preserved; fresh complete checks run on the next ordinary corrective commit. The earlier converter changes also preserve author-list metadata and reject only the two confirmed nonvessel strings. No further paper extraction or batch launch occurs.

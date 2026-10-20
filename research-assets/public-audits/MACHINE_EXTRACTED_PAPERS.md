@@ -1,5 +1,64 @@
 # Published machine-extracted papers
 
+## P51 verified — 2026-10-20T00:00:15+00:00
+
+51 new primary papers /69 record IDs;25 limited rare-material reads, not audits. Overall2,020 papers /5,549 records /3,428 pairs. Source status remains source_extracted; audited244/864 and six audited-only exports unchanged.
+
+| DOI | Record IDs | Original batch | Date live (UTC) | Limited rare-material read |
+|---|---|---|---|---|
+| 10.1007/s10439-009-9713-2 | al2023-s10439-009-9713-2-cdse-zns-qds-embedded-in-polystyrene-mic-1 | B73 | 2026-10-20T00:00:15+00:00 | no |
+| 10.1063/1.3242379 | beyer2009-1-3242379-si-nanocrystals-in-gate-oxide-1 | B71 | 2026-10-20T00:00:15+00:00 | no |
+| 10.1063/1.2191411 | biteen2006-1-2191411-si-qds-silicon-quantum-dots-1 | B72 | 2026-10-20T00:00:15+00:00 | no |
+| 10.1063/1.1645333 | brown2004-1-1645333-gan-quantum-dots-qds-1 | B73 | 2026-10-20T00:00:15+00:00 | no |
+| 10.1557/jmr.2004.0334 | chaim2004-jmr-2004-0334-transparent-nanocrystalline-mgo-1 | B71 | 2026-10-20T00:00:15+00:00 | no |
+| 10.1063/1.1542913 | chaudhari2003-1-1542913-nanocrystalline-silicon-in-siox-matrix-1 | B72 | 2026-10-20T00:00:15+00:00 | no |
+| 10.1002/pssc.200460523 | cherkashin2005-pssc-200460523-si-nanocrystals-in-sio2-gate-oxide-1 | B73 | 2026-10-20T00:00:15+00:00 | no |
+| 10.1063/1.1354632 | chirita2001-1-1354632-zr0-9si0-3b3-nanocrystalline-thin-film-1 | B73 | 2026-10-20T00:00:15+00:00 | yes |
+| 10.1116/1.582348 | choi2000-1-582348-50-nm-wide-bi-nanowire-1 | B71 | 2026-10-20T00:00:15+00:00 | yes |
+| 10.1063/1.363641 | cicala1996-1-363641-nc-si-h-f-1 | B72 | 2026-10-20T00:00:15+00:00 | no |
+| 10.1021/nl301917d | cohen-hoshen2012-nl301917d-cdse-zns-quantum-dotgold-nanoparticle-co-1 | B73 | 2026-10-20T00:00:15+00:00 | no |
+| 10.1002/pssa.200566011 | domaradzki2006-pssa-200566011-hftio4-thin-film-1 | B71 | 2026-10-20T00:00:15+00:00 | yes |
+| 10.1063/1.3334173 | dwevedi2010-1-3334173-fe73-5si13-5b8cunb0v3al-4, dwevedi2010-1-3334173-fe73-5si13-5b8cunb1-5v1-5al-3, dwevedi2010-1-3334173-fe73-5si13-5b8cunb3al-1 | B71 | 2026-10-20T00:00:15+00:00 | yes |
+| 10.1063/1.1288602 | ekimov2000-1-1288602-sicdiamond-nanocrystalline-composite-1 | B72 | 2026-10-20T00:00:15+00:00 | yes |
+| 10.1116/1.589476 | fang1997-1-589476-nanocrystalline-tio2-film-modified-with-1 | B73 | 2026-10-20T00:00:15+00:00 | no |
+| 10.1063/1.2764001 | feng2007-1-2764001-si-nanocrystal-layer-high-dose-1, feng2007-1-2764001-si-nanocrystal-layer-low-dose-2 | B73 | 2026-10-20T00:00:15+00:00 | no |
+| 10.1063/1.1606498 | fischer2003-1-1606498-fe-sheathed-mgb2-tapes-1 | B72 | 2026-10-20T00:00:15+00:00 | yes |
+| 10.1063/1.362543 | fultz1996-1-362543-annealed-nanocrystalline-fe-2 | B72 | 2026-10-20T00:00:15+00:00 | no |
+| 10.1116/1.1372919 | gu2001-1-1372919-nanocrystalline-diamond-films-1 | B71 | 2026-10-20T00:00:15+00:00 | no |
+| 10.1063/1.345798 | hahn1990-1-345798-nanocrystalline-al52ti48-5, hahn1990-1-345798-nanocrystalline-cu91mn9-4 | B71 | 2026-10-20T00:00:15+00:00 | yes |
+| 10.1063/1.1695635 | han2004-1-1695635-kcl-nanocrystal-1 | B73 | 2026-10-20T00:00:15+00:00 | yes |
+| 10.1103/physrevb.76.075317 | heyn2007-physrevb-76-075317-gaas-quantum-dots-qds-1 | B72 | 2026-10-20T00:00:15+00:00 | no |
+| 10.1063/1.3076139 | hidalgo-gonzalez2009-1-3076139-y0-5sm0-5co5-ribbons-1 | B71 | 2026-10-20T00:00:15+00:00 | yes |
+| 10.1063/1.2358114 | hopfer2006-1-2358114-ingaas-submonolayer-quantum-dots-sml-qds-1 | B73 | 2026-10-20T00:00:15+00:00 | yes |
+| 10.1063/1.3211988 | ioannou-sougleridisa2009-1-3211988-si-nanocrystal-layer-embedded-in-sio2-1 | B72 | 2026-10-20T00:00:15+00:00 | no |
+| 10.1021/jp062065f | jp062065f-cdse-opv-nanostructures-1 | B73 | 2026-10-20T00:00:15+00:00 | yes |
+| 10.1063/1.369965 | lee1999-1-369965-fe82b8zr7cu1al2-alloy-annealed-at-450-c-3, lee1999-1-369965-fe84b6zr7cu1al2-alloy-annealed-at-450-c-4, lee1999-1-369965-fe86b4zr7cu1al2-alloy-annealed-at-450-c-1, lee1999-1-369965-fe88b2zr7cu1al2-alloy-annealed-at-450-c-2 | B72 | 2026-10-20T00:00:15+00:00 | yes |
+| 10.1063/1.3110183 | li2009-1-3110183-cosi2-coated-si-nanocrystals-1 | B71 | 2026-10-20T00:00:15+00:00 | no |
+| 10.1063/1.363355 | liu1996-1-363355-fe81-5p12c3cu0-5mo0-5si2-5-1 | B71 | 2026-10-20T00:00:15+00:00 | yes |
+| 10.1063/1.2995862 | lo2008-1-2995862-au-nanocrystals-embedded-in-al2o3-hfo2-s-1 | B71 | 2026-10-20T00:00:15+00:00 | no |
+| 10.1063/1.2387966 | min2006-1-2387966-cdse-zns-core-shell-quantum-dots-1 | B73 | 2026-10-20T00:00:15+00:00 | no |
+| 10.1116/1.3151816 | pan2009-1-3151816-high-y2o3-nanocrystal-film-1 | B72 | 2026-10-20T00:00:15+00:00 | no |
+| 10.1063/1.3120768 | sato2009-1-3120768-b-doped-nc-si-particles-1 | B72 | 2026-10-20T00:00:15+00:00 | yes |
+| 10.1063/1.2745200 | schlereth2007-1-2745200-ga0-57in0-43as-quantum-dots-qds-in-gaina-2 | B71 | 2026-10-20T00:00:15+00:00 | yes |
+| 10.1063/1.1855712 | seet2005-1-1855712-ni80fe20-cu-composite-wire-grain-size-11-3, seet2005-1-1855712-ni80fe20-cu-composite-wire-grain-size-15-2 | B72 | 2026-10-20T00:00:15+00:00 | yes |
+| 10.1063/1.2234545 | stieler2006-1-2234545-nanocrystalline-si-h-nc-si-h-with-large-1 | B71 | 2026-10-20T00:00:15+00:00 | yes |
+| 10.1021/am405285u | text2014-am405285u-cd1xznxse1ysy-qds-1 | B73 | 2026-10-20T00:00:15+00:00 | yes |
+| 10.1063/1.121035 | toyama1998-1-121035-p-type-nc-si-thin-film-in-sno2-p-type-nc-1 | B72 | 2026-10-20T00:00:15+00:00 | no |
+| 10.1039/b718730k | triulzi2008-b718730k-auqdpamamanti-human-igg-complex-1 | B72 | 2026-10-20T00:00:15+00:00 | no |
+| 10.1116/1.579878 | veprek1996-1-579878-nc-w2n-a-si3n4-composite-1 | B71 | 2026-10-20T00:00:15+00:00 | yes |
+| 10.1063/1.118834 | wang1997-1-118834-light-emitting-nanocrystalline-silicon-f-2, wang1997-1-118834-light-emitting-porous-silicon-film-1 | B72 | 2026-10-20T00:00:15+00:00 | no |
+| 10.1116/1.589737 | wang1997-1-589737-ingaas-gaas-quantum-dot-arrays-1 | B72 | 2026-10-20T00:00:15+00:00 | no |
+| 10.1063/1.2803937 | x2007-1-2803937-a-1, x2007-1-2803937-b-2 | B72 | 2026-10-20T00:00:15+00:00 | yes |
+| 10.1063/1.2968946 | yang2008-1-2968946-si0-8ge0-2-quantum-dot-molecules-qdms-1 | B73 | 2026-10-20T00:00:15+00:00 | yes |
+| 10.1103/physrevlett.93.205501 | yue2004-physrevlett-93-205501-nanocrystalline-fe-1 | B73 | 2026-10-20T00:00:15+00:00 | no |
+| 10.1063/1.358688 | zhang1995-1-358688-nanocrystalline-selenium-nc-se-1 | B71 | 2026-10-20T00:00:15+00:00 | yes |
+| 10.1063/1.1378310 | zhang2001-1-1378310-inxga1-xas-gaas-quantum-dots-1 | B72 | 2026-10-20T00:00:15+00:00 | yes |
+| 10.1063/1.3254183 | zhang2009-1-3254183-sample-a-nc-si-2-nm-1, zhang2009-1-3254183-sample-b-nc-si-3-nm-2, zhang2009-1-3254183-sample-c-nc-si-5-nm-3, zhang2009-1-3254183-sample-d-nc-si-6-nm-4 | B71 | 2026-10-20T00:00:15+00:00 | no |
+| 10.1063/1.352576 | zhou1993-1-352576-fe73-5ag1nb3si13-5b9-annealed-at-823-k-3, zhou1993-1-352576-fe73-5cu1nb3si13-5b9-annealed-at-1073-k-2, zhou1993-1-352576-fe73-5cu1nb3si13-5b9-annealed-at-823-k-1, zhou1993-1-352576-fe73-5ni1nb3si13-5b9-annealed-at-823-k-4 | B71 | 2026-10-20T00:00:15+00:00 | yes |
+| 10.1063/1.2952036 | zhou2008-1-2952036-si-nanocrystals-11-1-nm-diameter-3, zhou2008-1-2952036-si-nanocrystals-6-1-nm-diameter-1, zhou2008-1-2952036-si-nanocrystals-8-1-nm-diameter-2 | B72 | 2026-10-20T00:00:15+00:00 | no |
+| 10.1134/s1054660x07040299 | znamenskiy2007-s1054660x07040299-y2sio5-pr3-nanocrystals-1 | B71 | 2026-10-20T00:00:15+00:00 | yes |
+
+
 Current verified O53 index (2026-10-18T21:54:25+00:00):53 new source_extracted DOI rows/66record IDs, 28 limited-read markers; overall1,969papers/5,480records/3,359pairs. Current P51 remains local/uncredited; all old index text and existing pointers are preserved.
 
 Current verified N43 index (2026-10-18T18:42:26+00:00):43 new source_extracted DOI rows/55record IDs, 27 limited-read markers; overall1,916papers/5,414records/3,293pairs. Current O53 remains local/uncredited; all old index text and existing pointers are preserved.
