@@ -1,0 +1,443 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "he2012-am3020108-crgds-capped-cdte-qds-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Hua He; Min Feng; Jing Hu; Cuixia Chen; Jiqian Wang; Xiaojuan Wang; Hai Xu; Jian R. Lu (2012): CRGDS-capped CdTe QDs",
+  "material": {
+    "formula": "CdTe",
+    "family": "CdTe nanocrystals",
+    "elements": [
+      "Cd",
+      "Te"
+    ],
+    "components": [
+      "CdTe"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Precipitation",
+  "sources": [
+    {
+      "id": "he2012-am3020108",
+      "doi": "10.1021/am3020108",
+      "title": "Designed Short RGD Peptides for One-Pot Aqueous Synthesis of Integrin-Binding CdTe and CdZnTe Quantum Dots",
+      "authors": "Hua He; Min Feng; Jing Hu; Cuixia Chen; Jiqian Wang; Xiaojuan Wang; Hai Xu; Jian R. Lu",
+      "year": 2012,
+      "url": "https://doi.org/10.1021/am3020108",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "he2012-am3020108",
+    "recipe_family": "he2012-am3020108-crgds-capped-cdte-qds-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdTe",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "he2012-am3020108",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "zinc blende",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "he2012-am3020108",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": 3.56,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "3.56 nm",
+      "evidence": [
+        {
+          "source_id": "he2012-am3020108",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "sphere",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "he2012-am3020108",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "he2012-am3020108-crgds-capped-cdte-qds-1--cdcl2",
+      "name": "CdCl2",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "he2012-am3020108",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "he2012-am3020108-crgds-capped-cdte-qds-1--crgds",
+      "name": "CRGDS",
+      "formula": null,
+      "role": "ligand",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "he2012-am3020108",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "he2012-am3020108-crgds-capped-cdte-qds-1--nahte",
+      "name": "NaHTe",
+      "formula": null,
+      "role": "chalcogen_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "he2012-am3020108",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "he2012-am3020108-crgds-capped-cdte-qds-1--after-s01-dissolve",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "he2012-am3020108-crgds-capped-cdte-qds-1--cdcl2",
+        "he2012-am3020108-crgds-capped-cdte-qds-1--crgds"
+      ]
+    },
+    {
+      "id": "he2012-am3020108-crgds-capped-cdte-qds-1--after-s02-inject",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "he2012-am3020108-crgds-capped-cdte-qds-1--after-s01-dissolve",
+        "he2012-am3020108-crgds-capped-cdte-qds-1--nahte"
+      ]
+    },
+    {
+      "id": "he2012-am3020108-crgds-capped-cdte-qds-1--after-s03-heat",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "he2012-am3020108-crgds-capped-cdte-qds-1--after-s02-inject"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-dissolve",
+      "action": "dissolve",
+      "label": "Dissolve CdCl2 and CRGDS in ultrapure water",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "he2012-am3020108-crgds-capped-cdte-qds-1--cdcl2",
+        "he2012-am3020108-crgds-capped-cdte-qds-1--crgds"
+      ],
+      "outputs": [
+        "he2012-am3020108-crgds-capped-cdte-qds-1--after-s01-dissolve"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "he2012-am3020108",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Dissolve CdCl2 and CRGDS in ultrapure water",
+      "evidence": [
+        {
+          "source_id": "he2012-am3020108",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-inject",
+      "action": "inject",
+      "label": "Inject NaHTe solution into precursor solution",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-dissolve"
+      ],
+      "inputs": [
+        "he2012-am3020108-crgds-capped-cdte-qds-1--after-s01-dissolve",
+        "he2012-am3020108-crgds-capped-cdte-qds-1--nahte"
+      ],
+      "outputs": [
+        "he2012-am3020108-crgds-capped-cdte-qds-1--after-s02-inject"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "he2012-am3020108",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Inject NaHTe solution into precursor solution",
+      "evidence": [
+        {
+          "source_id": "he2012-am3020108",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-heat",
+      "action": "heat",
+      "label": "Heat to 98 °C and reflux",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-inject"
+      ],
+      "inputs": [
+        "he2012-am3020108-crgds-capped-cdte-qds-1--after-s02-inject"
+      ],
+      "outputs": [
+        "he2012-am3020108-crgds-capped-cdte-qds-1--after-s03-heat"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 98,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "98 °C",
+          "evidence": [
+            {
+              "source_id": "he2012-am3020108",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "he2012-am3020108",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Heat to 98 °C and reflux",
+      "evidence": [
+        {
+          "source_id": "he2012-am3020108",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "he2012-am3020108-crgds-capped-cdte-qds-1--product",
+      "source_sample_label": "CRGDS-capped CdTe QDs",
+      "batch_id": null,
+      "material_state_id": "he2012-am3020108-crgds-capped-cdte-qds-1--after-s03-heat",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdTe",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "he2012-am3020108",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "zinc blende",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "he2012-am3020108",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "sphere",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "he2012-am3020108",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "he2012-am3020108",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reactor: 25 mL solution (Main PDF p.2).",
+        "Reaction temperature: 98 degC (Main PDF p.2).",
+        "Reaction time: 3 h (Main PDF p.3)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "he2012-am3020108-crgds-capped-cdte-qds-1--size",
+      "sample_id": "he2012-am3020108-crgds-capped-cdte-qds-1--product",
+      "property": "diameter",
+      "technique": "TEM",
+      "value": {
+        "value": 3.56,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "3.56 nm",
+        "evidence": [
+          {
+            "source_id": "he2012-am3020108",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "he2012-am3020108",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Ligand not reported in the extracted text.",
+      "Amount of CdCl2 not reported in the extracted text.",
+      "Amount of CRGDS not reported in the extracted text.",
+      "Amount of NaHTe not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

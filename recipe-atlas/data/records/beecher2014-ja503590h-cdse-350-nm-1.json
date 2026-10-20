@@ -1,0 +1,545 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "beecher2014-ja503590h-cdse-350-nm-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Alexander N. Beecher; Xiaohao Yang; Joshua H. Palmer; Alexandra L. LaGrassa; Pavol Juhas; Simon J. L. Billinge; Jonathan S. Owen (2014): CdSe(350 nm)",
+  "material": {
+    "formula": "CdSe",
+    "family": "CdSe nanocrystals",
+    "elements": [
+      "Cd",
+      "Se"
+    ],
+    "components": [
+      "CdSe"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Heat-up",
+  "sources": [
+    {
+      "id": "beecher2014-ja503590h",
+      "doi": "10.1021/ja503590h",
+      "title": "Atomic Structures and Gram Scale Synthesis of Three Tetrahedral Quantum Dots",
+      "authors": "Alexander N. Beecher; Xiaohao Yang; Joshua H. Palmer; Alexandra L. LaGrassa; Pavol Juhas; Simon J. L. Billinge; Jonathan S. Owen",
+      "year": 2014,
+      "url": "https://doi.org/10.1021/ja503590h",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "beecher2014-ja503590h",
+    "recipe_family": "beecher2014-ja503590h-cdse-350-nm-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdSe",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "beecher2014-ja503590h",
+          "locator": "Main PDF p.4"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "zinc blende",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "beecher2014-ja503590h",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "tetrahedron",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "beecher2014-ja503590h",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "beecher2014-ja503590h-cdse-350-nm-1--cadmium-benzoate",
+      "name": "cadmium benzoate",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "beecher2014-ja503590h",
+          "locator": "Main PDF p.6"
+        }
+      ]
+    },
+    {
+      "id": "beecher2014-ja503590h-cdse-350-nm-1--n-butylamine",
+      "name": "n-butylamine",
+      "formula": null,
+      "role": "ligand",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "beecher2014-ja503590h",
+          "locator": "Main PDF p.6"
+        }
+      ]
+    },
+    {
+      "id": "beecher2014-ja503590h-cdse-350-nm-1--bis-trimethylsilyl-selenide",
+      "name": "bis(trimethylsilyl)selenide",
+      "formula": null,
+      "role": "chalcogen_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "beecher2014-ja503590h",
+          "locator": "Main PDF p.6"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "beecher2014-ja503590h-cdse-350-nm-1--after-s01-dissolve",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "beecher2014-ja503590h-cdse-350-nm-1--cadmium-benzoate",
+        "beecher2014-ja503590h-cdse-350-nm-1--n-butylamine"
+      ]
+    },
+    {
+      "id": "beecher2014-ja503590h-cdse-350-nm-1--after-s02-cool",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "beecher2014-ja503590h-cdse-350-nm-1--after-s01-dissolve"
+      ]
+    },
+    {
+      "id": "beecher2014-ja503590h-cdse-350-nm-1--after-s03-add",
+      "name": "mixture after step 3",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "beecher2014-ja503590h-cdse-350-nm-1--after-s02-cool",
+        "beecher2014-ja503590h-cdse-350-nm-1--bis-trimethylsilyl-selenide"
+      ]
+    },
+    {
+      "id": "beecher2014-ja503590h-cdse-350-nm-1--after-s04-heat",
+      "name": "mixture after step 4",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "beecher2014-ja503590h-cdse-350-nm-1--after-s03-add"
+      ]
+    },
+    {
+      "id": "beecher2014-ja503590h-cdse-350-nm-1--after-s05-precipitate",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "beecher2014-ja503590h-cdse-350-nm-1--after-s04-heat"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-dissolve",
+      "action": "dissolve",
+      "label": "Cadmium benzoate and n-butylamine are dissolved in diethyl ether.",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "beecher2014-ja503590h-cdse-350-nm-1--cadmium-benzoate",
+        "beecher2014-ja503590h-cdse-350-nm-1--n-butylamine"
+      ],
+      "outputs": [
+        "beecher2014-ja503590h-cdse-350-nm-1--after-s01-dissolve"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "beecher2014-ja503590h",
+            "locator": "Main PDF p.7"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Cadmium benzoate and n-butylamine are dissolved in diethyl ether.",
+      "evidence": [
+        {
+          "source_id": "beecher2014-ja503590h",
+          "locator": "Main PDF p.6"
+        }
+      ]
+    },
+    {
+      "id": "s02-cool",
+      "action": "cool",
+      "label": "The solution is cooled to 0 °C.",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-dissolve"
+      ],
+      "inputs": [
+        "beecher2014-ja503590h-cdse-350-nm-1--after-s01-dissolve"
+      ],
+      "outputs": [
+        "beecher2014-ja503590h-cdse-350-nm-1--after-s02-cool"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0 °C",
+          "evidence": [
+            {
+              "source_id": "beecher2014-ja503590h",
+              "locator": "Main PDF p.6"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "beecher2014-ja503590h",
+            "locator": "Main PDF p.7"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "The solution is cooled to 0 °C.",
+      "evidence": [
+        {
+          "source_id": "beecher2014-ja503590h",
+          "locator": "Main PDF p.6"
+        }
+      ]
+    },
+    {
+      "id": "s03-add",
+      "action": "add",
+      "label": "A solution of bis(trimethylsilyl)selenide is cannula-transferred into the cadmium precursor solution.",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-cool"
+      ],
+      "inputs": [
+        "beecher2014-ja503590h-cdse-350-nm-1--after-s02-cool",
+        "beecher2014-ja503590h-cdse-350-nm-1--bis-trimethylsilyl-selenide"
+      ],
+      "outputs": [
+        "beecher2014-ja503590h-cdse-350-nm-1--after-s03-add"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0 °C",
+          "evidence": [
+            {
+              "source_id": "beecher2014-ja503590h",
+              "locator": "Main PDF p.6"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "beecher2014-ja503590h",
+            "locator": "Main PDF p.7"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "A solution of bis(trimethylsilyl)selenide is cannula-transferred into the cadmium precursor solution.",
+      "evidence": [
+        {
+          "source_id": "beecher2014-ja503590h",
+          "locator": "Main PDF p.6"
+        }
+      ]
+    },
+    {
+      "id": "s04-heat",
+      "action": "heat",
+      "label": "The mixture is allowed to warm to room temperature.",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s03-add"
+      ],
+      "inputs": [
+        "beecher2014-ja503590h-cdse-350-nm-1--after-s03-add"
+      ],
+      "outputs": [
+        "beecher2014-ja503590h-cdse-350-nm-1--after-s04-heat"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 30,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "30 min",
+          "evidence": [
+            {
+              "source_id": "beecher2014-ja503590h",
+              "locator": "Main PDF p.6"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "beecher2014-ja503590h",
+            "locator": "Main PDF p.7"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "The mixture is allowed to warm to room temperature.",
+      "evidence": [
+        {
+          "source_id": "beecher2014-ja503590h",
+          "locator": "Main PDF p.6"
+        }
+      ]
+    },
+    {
+      "id": "s05-precipitate",
+      "action": "precipitate",
+      "label": "The reaction mixture is precipitated with acetonitrile.",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s04-heat"
+      ],
+      "inputs": [
+        "beecher2014-ja503590h-cdse-350-nm-1--after-s04-heat"
+      ],
+      "outputs": [
+        "beecher2014-ja503590h-cdse-350-nm-1--after-s05-precipitate"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "The reaction mixture is precipitated with acetonitrile.",
+      "evidence": [
+        {
+          "source_id": "beecher2014-ja503590h",
+          "locator": "Main PDF p.6"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "beecher2014-ja503590h-cdse-350-nm-1--product",
+      "source_sample_label": "CdSe(350 nm)",
+      "batch_id": null,
+      "material_state_id": "beecher2014-ja503590h-cdse-350-nm-1--after-s05-precipitate",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdSe",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "beecher2014-ja503590h",
+            "locator": "Main PDF p.4"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "zinc blende",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "beecher2014-ja503590h",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "tetrahedron",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "beecher2014-ja503590h",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": "n-butylamine and benzoate",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "beecher2014-ja503590h",
+            "locator": "Main PDF p.4"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "beecher2014-ja503590h",
+          "locator": "Main PDF p.7"
+        }
+      ],
+      "notes": [
+        "Reaction temperature: 22 degC (Main PDF p.7).",
+        "Reaction time: 30 min (Main PDF p.6)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Size not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Amount of cadmium benzoate not reported in the extracted text.",
+      "Amount of n-butylamine not reported in the extracted text.",
+      "Amount of bis(trimethylsilyl)selenide not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

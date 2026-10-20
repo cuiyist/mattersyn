@@ -1,3 +1,9 @@
+## Latest verified continuation — Q18 / Q19
+
+Revisit extracted papers in research-assets/public-audits/MACHINE_EXTRACTED_PAPERS.md; this file is repository-only. Queue at 2026-10-20T23:11:51.377491+00:00: **3,051 physical entries; 348 IN, 800 OUT and 1,903 uncertain**. IN comprises 219 saved-read entries, 126 remaining entries and 3 terminal failed attempts. There are 2,054 saved-read/positive entries, 48 attempted entries without usable saved reads, and 949 remaining entries overall. These are physical/status counts, not a certified unique-primary total. Exactly 50 verified Q18 papers were removed; B123 membership is included once.
+
+Q18 is actually live:2,184papers/5,793records/3,672pairs, Site d53a91b494237a76563d90db5f0db3778b5c5ea6, Source793bfa690ec10b38b5006e56d5a8fd623d5f298b merged via PR81/8c360164fca10797ec143c3e1542169c0cd089d5, Pages39510966983. Added50papers/71records/308captionedcrops. Q19 50papers/74records/299crops integrated locally with zero publication credit, branch simple-Q19-particles-20261020-r1. B122 running same19184server/controller38772; B123 prepared but unlaunched. Audit/WorkerA/B/five questions stay paused. Protected local raw training inputs remain local; completed generated copies are being cleaned. See the single SIMPLE_PIPELINE_REPORT.md for actual stage, queue, cleanup and preserved failure details.
+
 Current job report: [Simple pipeline report](research-assets/public-audits/SIMPLE_PIPELINE_REPORT.md). Owner revisit list: [Machine-extracted papers](research-assets/public-audits/MACHINE_EXTRACTED_PAPERS.md).
 
 ## Q17 verified; Q18 Source-integrated and unpublished — 2026-10-20T20:28:06.479159+00:00
