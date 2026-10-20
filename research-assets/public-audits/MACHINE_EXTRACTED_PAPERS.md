@@ -1,5 +1,29 @@
 # Published machine-extracted papers
 
+## Q14 verified additions — 2026-10-20T05:33:48+00:00
+
+14 primary papers / 29 source_extracted records / 72 figure crops / 220 Reader caption instances. Five papers have preserved limited rare-material deletion-only read receipts; these are not independent audits. Site `3f02e7d65de15c0dd81051c5107aa8db1d9e5728`; [Source PR76](https://github.com/cuiyist/mattersyn/pull/76), [Source CI39366062710](https://github.com/cuiyist/mattersyn/actions/runs/39366062710), [Pages39374574085](https://github.com/cuiyist/mattersyn-site/actions/runs/39374574085).
+
+| DOI | Record IDs | Origin | Live verified | Limited rare read |
+|---|---|---|---|---|
+| 10.1007/s003390000609 | cao2000-s003390000609-aln-nanocrystalline-solids-1 | B92 | 2026-10-20T05:33:48+00:00 | no |
+| 10.1007/s003390100919 | yu12002-s003390100919-nanocrystalline-batio3-sample-a-1, yu12002-s003390100919-nanocrystalline-batio3-sample-b-2, yu12002-s003390100919-nanocrystalline-batio3-sample-c-3, yu12002-s003390100919-nanocrystalline-batio3-sample-d-4 | B92 | 2026-10-20T05:33:48+00:00 | no |
+| 10.1134/s0020168509080111 | titov2009-s0020168509080111-yb2o3-from-carbonate-precursors-1, titov2009-s0020168509080111-yb2o3-from-oxalate-precursors-2, titov2009-s0020168509080111-yb2o3-from-hydroxide-precursors-3 | B92 | 2026-10-20T05:33:48+00:00 | yes |
+| 10.1134/s0020168510020159 | dudnik2010-s0020168510020159-zy-powder-zro2-3-mol-y2o3-1, dudnik2010-s0020168510020159-zya-powder-90-wt-zro2-3-mol-y2o3-10-wt-a-2 | B92 | 2026-10-20T05:33:48+00:00 | no |
+| 10.1134/s0020168510110178 | kazin2010-s0020168510110178-nife2o4-annealed-at-300c-1, kazin2010-s0020168510110178-nife2o4-annealed-at-400c-2, kazin2010-s0020168510110178-nife2o4-annealed-at-500c-3 | B92 | 2026-10-20T05:33:48+00:00 | no |
+| 10.1017/s1431927607076489 | divakar2007-s1431927607076489-ceo2-nanocrystals-1, divakar2007-s1431927607076489-la-doped-ceo2-nanocrystals-2, divakar2007-s1431927607076489-gd-doped-ceo2-nanocrystals-3 | B94 | 2026-10-20T05:33:48+00:00 | no |
+| 10.1088/0022-3727/47/1/015103 | al2014-015103-tg-capped-cdte-qds-1, al2014-015103-mpa-capped-cdte-qds-2 | B96 | 2026-10-20T05:33:48+00:00 | no |
+| 10.1088/2053-1591/aa8925 | al2017-aa8925-cu-mn-znse-qds-1 | B96 | 2026-10-20T05:33:48+00:00 | no |
+| 10.1088/2053-1591/ab167b | zhang2019-ab167b-pbse-quantum-dots-3-6-nm-1 | B96 | 2026-10-20T05:33:48+00:00 | no |
+| 10.1007/s10853-005-2831-9 | thangadurai2005-s10853-005-2831-9-nanocrystalline-la2o3-zro2-8-mol-la2o3-1 | B102 | 2026-10-20T05:33:48+00:00 | yes |
+| 10.1007/s12034-009-0035-7 | menaka2009-s12034-009-0035-7-znmn2o4-nanoparticles-reverse-micellar-m-1, menaka2009-s12034-009-0035-7-znmn2o4-nanoparticles-coprecipitation-me-2 | B102 | 2026-10-20T05:33:48+00:00 | yes |
+| 10.1007/s12034-009-0089-6 | tyagi2009-s12034-009-0089-6-kmgf3-1, tyagi2009-s12034-009-0089-6-kcuf3-2 | B102 | 2026-10-20T05:33:48+00:00 | yes |
+| 10.1021/jp971756w | davis1997-jp971756w-pure-nanocrystalline-sno2-1, davis1997-jp971756w-cu2-doped-nanocrystalline-sno2-2, davis1997-jp971756w-fe3-doped-nanocrystalline-sno2-3 | B102 | 2026-10-20T05:33:48+00:00 | no |
+| 10.1111/j.1151-2916.2003.tb03331.x | ray2003-j-1151-2916-2003-tb03331-x-zn-15-1 | B102 | 2026-10-20T05:33:48+00:00 | yes |
+
+All earlier rows, the 58-paper title-based owner revisit list and historical summaries remain byte-preserved. No new independent-audit, gold, training-ready or calibrated-accuracy credit is assigned.
+
+
 ## Live papers outside the new free-particle scope — title-based owner review, 2026-10-20T02:41:44.674780+00:00
 
 This repository-only list identifies **58 live source_extracted papers** whose titles indicate solid, bulk, implanted, deposited or substrate-grown products. It is a conservative title-based screen for the owner's later decision, not a source reread or a new audit. The website is unchanged: no paper is removed, no counter is reduced and no review status changes. A paper that also synthesizes free isolable particles remains in scope; ambiguous colloidal heterostructures, superlattices, particle assemblies and films made from particles are not placed here merely for those words. Uncertain cases remain unclassified. This list is not part of the built site.

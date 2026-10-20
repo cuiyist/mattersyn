@@ -1,3 +1,13 @@
+## Q14 verified live — 2026-10-20T05:33:48+00:00
+
+**14 distinct in-scope primary papers / 29 source_extracted records / 72 figure crops / 220 Reader caption instances are deployed and anonymously verified.** Actual Site `3f02e7d65de15c0dd81051c5107aa8db1d9e5728` passed [Pages 39374574085](https://github.com/cuiyist/mattersyn-site/actions/runs/39374574085); the unchanged anonymous check passed 356 files, including 320 changed files, 14 paper routes and 17 material bindings, with zero mismatches or failed routes. Actual totals are **2,034 papers / 5,578 records / 3,457 recipe–structure pairs**.
+
+Source `db4906f63884eaaa8c5b91c76e87a3d75a87680a` passed all three exact-head [CI checks in 39366062710](https://github.com/cuiyist/mattersyn/actions/runs/39366062710); [PR76](https://github.com/cuiyist/mattersyn/pull/76) merged ordinarily as `f16f83f3e4907846c500984c69da48dd6f7f3b5a`. Q14 reuses accepted saved pairs and captions, including five limited rare-material deletion-only reads. The four source-confirmed degree-unit fixes shipped in this release. These limited reads and local two-pass checks are not independent scientific audits. The audited 244 papers / 864 pairs, six audited-only training exports and prior sampling denominator remain unchanged; Q14 adds no gold, training-ready or calibrated-accuracy credit.
+
+The anonymous receipt was recorded at 2026-10-20T05:33:48+00:00 after the normal push at 05:22:47 UTC. Its SHA-256 is `c145713993d318c3d44530e7499e65ea7c188db0dd7080d54d963ac867a1e6d5`. All 14 planned DOI/source groups and 29 record IDs match the normal release plan. The machine-extracted index receives 14 per-paper rows with actual origin batch and limited-read markers; no new audited status is assigned.
+
+B108 and B109 are local unpublished work and add no Site count. Existing failed builds, technical identity holds, source omissions, browser findings, zero-deletion preflights and previous publication receipts remain part of the history. This bookkeeping proposal changes no scientific record, figure, caption, blueprint-approved scientific digest or release policy.
+
 ## P51 verified; owner pause — 2026-10-20T00:31:42.077482+00:00
 
 **51 distinct primary papers /69 source_extracted records /195 figure crops /440 Reader caption instances** are deployed and anonymously verified at 2026-10-20T00:00:15+00:00. Actual totals are **2,020 papers /5,549 canonical records /3,428 recipe–structure pairs**. Audited244 papers/864 pairs and all six audited-only training exports remain unchanged. No independent scientific audit, calibrated accuracy, gold or training credit is asserted for these51 papers.
