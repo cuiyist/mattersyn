@@ -1,5 +1,71 @@
 # Published machine-extracted papers
 
+## Pending Q16 contributions — not live
+
+Prepared 2026-10-20T12:55:15.928724+00:00;39 papers/58 records/215 crops. Live date remains pending until deployment and anonymous verification. This section is repository-only and gives no publication credit.
+
+| DOI | Record IDs | Origin | Live verified | Limited rare read |
+|---|---|---|---|---|
+| 10.1021/acs.bioconjchem.5b00491 | akin2015-acs-bioconjchem-5b00491-mpegqdots-1-10-1 | B116 | pending | yes |
+| 10.1021/acs.chemmater.0c02059 | li2020-acs-chemmater-0c02059-pbse-cdse-core-shell-qds-1, li2020-acs-chemmater-0c02059-pbse-cds-core-shell-qds-2 | B116 | pending | yes |
+| 10.1021/acs.chemmater.0c04757 | huang2021-acs-chemmater-0c04757-cdxzn1xse-znse-zns-core-shell-qds-1 | B116 | pending | yes |
+| 10.1021/acs.chemmater.2c03278 | rebmann2023-acs-chemmater-2c03278-znse-cds-dot-in-rod-nanostructures-growt-1 | B115 | pending | yes |
+| 10.1021/acs.chemmater.5c01252 | wang2025-acs-chemmater-5c01252-znte-qds-1-7-nm-1, wang2025-acs-chemmater-5c01252-znte-qds-9-9-nm-2 | B116 | pending | no |
+| 10.1021/acs.chemmater.5c01697 | martin2025-acs-chemmater-5c01697-snte-cqds-1, martin2025-acs-chemmater-5c01697-snte-znte-coreshell-cqds-2 | B116 | pending | yes |
+| 10.1021/acs.chemmater.7b01100 | zhang2017-acs-chemmater-7b01100-ch3nh3pbi3-quantum-dots-qds-with-tunable-1 | B116 | pending | yes |
+| 10.1021/acs.chemmater.7b01258 | xia2017-acs-chemmater-7b01258-wz-cis-zns-core-shell-qds-1 | B116 | pending | no |
+| 10.1021/acs.chemmater.7b01648 | koh2017-acs-chemmater-7b01648-inp-qds-1, koh2017-acs-chemmater-7b01648-in-zn-p-qds-2 | B116 | pending | yes |
+| 10.1021/acs.chemmater.7b02803 | dolzhnikov2017-acs-chemmater-7b02803-cs2sni6-nanocrystals-1 | B115 | pending | yes |
+| 10.1021/acs.chemmater.8b05193 | choi2019-acs-chemmater-8b05193-gan-cqds-1, choi2019-acs-chemmater-8b05193-zn-doped-gan-cqds-2 | B115 | pending | yes |
+| 10.1021/acs.chemmater.9b00905 | jalali2019-acs-chemmater-9b00905-alsb-qds-1-min-reaction-time-1, jalali2019-acs-chemmater-9b00905-alsb-qds-3-min-reaction-time-2, jalali2019-acs-chemmater-9b00905-alsb-qds-20-min-reaction-time-3 | B115 | pending | yes |
+| 10.1021/acs.chemmater.9b05370 | saha2020-acs-chemmater-9b05370-ag2znsns4-azts-colloidal-qds-1 | B116 | pending | yes |
+| 10.1021/acs.jpcc.1c05371 | scimeca2021-acs-jpcc-1c05371-ag2se-cqds-2-6-nm-1 | B116 | pending | no |
+| 10.1021/acs.jpcc.5c08526 | nurrosyid2026-acs-jpcc-5c08526-insb-qds-1 | B116 | pending | no |
+| 10.1021/acs.jpclett.7b00775 | shen2017-acs-jpclett-7b00775-hgte-cqds-1 | B116 | pending | no |
+| 10.1021/acs.nanolett.6c00158 | stylianou2026-acs-nanolett-6c00158-pbs-cds-core-shell-cqd-series-1-1, stylianou2026-acs-nanolett-6c00158-pbs-cds-core-shell-cqd-series-2-2 | B116 | pending | no |
+| 10.1021/acsanm.5c03620 | jiang2025-acsanm-5c03620-ag2mnsns4-amts-qds-1 | B115 | pending | yes |
+| 10.1021/acsenergylett.7b01243 | wang2018-acsenergylett-7b01243-cspbbr3-a-cspbbrx-qds-1 | B115 | pending | yes |
+| 10.1021/acsnano.0c04744 | busatto2020-acsnano-0c04744-insb-qds-2-8-0-3-nm-1, busatto2020-acsnano-0c04744-insb-qds-5-3-0-5-nm-2, busatto2020-acsnano-0c04744-insb-qds-10-3-1-2-nm-3, busatto2020-acsnano-0c04744-insb-qds-14-9-1-0-nm-4 | B116 | pending | no |
+| 10.1021/acsnano.3c01187 | kumaar2023-acsnano-3c01187-sngete-quantum-dots-qds-1 | B116 | pending | yes |
+| 10.1021/acsnano.3c08796 | sheikh2023-acsnano-3c08796-inas-nanorod-cqds-1 | B116 | pending | no |
+| 10.1021/acsnano.5b06527 | deng2016-acsnano-5b06527-hgse-cds-core-shell-quantum-dots-1 | B115 | pending | yes |
+| 10.1021/acsnano.6b08747 | liu2017-acsnano-6b08747-cspb0-54mn0-46cl3-qds-1 | B115 | pending | yes |
+| 10.1021/acsnano.7b05442 | liu2017-acsnano-7b05442-topcspbi3-qds-1 | B115 | pending | no |
+| 10.1021/acsomega.8b00612 | asano2018-acsomega-8b00612-zn-te0-77se0-23-zns-core-shell-qds-1 | B116 | pending | yes |
+| 10.1021/acsphotonics.8b01028 | polovitsyn2018-acsphotonics-8b01028-cdse-cds-dot-in-giant-rod-digr-nanocryst-1 | B115 | pending | no |
+| 10.1021/ic101302q | aboulaich2010-ic101302q-znse-mn-zns-mpa-1 | B116 | pending | yes |
+| 10.1021/ja074481z | kovalenko2007-ja074481z-snte-ncs-1 | B115 | pending | yes |
+| 10.1021/jacs.0c13071 | yang2021-jacs-0c13071-agause-qds-4-37-nm-1, yang2021-jacs-0c13071-agause-qds-3-66-nm-2, yang2021-jacs-0c13071-agause-qds-6-07-nm-3, yang2021-jacs-0c13071-agause-qds-8-33-nm-4 | B115 | pending | yes |
+| 10.1021/jacs.3c02709 | gupta2023-jacs-3c02709-in0-65ga0-35p-zns-1 | B116 | pending | yes |
+| 10.1021/jacs.4c13692 | noh2025-jacs-4c13692-ge-cqd-1-1 | B116 | pending | no |
+| 10.1021/jacs.6b07533 | grigel2016-jacs-6b07533-inas-qds-1, grigel2016-jacs-6b07533-inas-zns-qds-2, grigel2016-jacs-6b07533-inas-znse-qds-3 | B115 | pending | yes |
+| 10.1021/jacs.6b08679 | park2016-jacs-6b08679-in0-2ga0-8as-znse-1 | B116 | pending | yes |
+| 10.1021/jacs.8b01412 | xia2018-jacs-8b01412-cis-zns-hncs-1 | B115 | pending | yes |
+| 10.1021/jacs.8b06971 | srivastava2018-jacs-8b06971-in1xgaxp-zns-coreshell-qds-1 | B116 | pending | yes |
+| 10.1021/jacs.9b06652 | zhao2019-jacs-9b06652-inas-qds-1, zhao2019-jacs-9b06652-insb-qds-2, zhao2019-jacs-9b06652-inas0-5sb0-5-qds-3 | B116 | pending | yes |
+| 10.1021/jacsau.5c00651 | teku2025-jacsau-5c00651-cspbbr3-zns-core-shell-heterostructure-1 | B116 | pending | yes |
+| 10.1023/b:inma.0000020523.89340.46 | petrunin2004-b-inma-0000020523-89340-46-t-zro2-nanocrystals-1, petrunin2004-b-inma-0000020523-89340-46-c-zro2-nanocrystals-2 | B114 | pending | yes |
+
+
+## Q15 verified additions — 2026-10-20T10:40:08+00:00
+
+11 primary papers / 16 source_extracted records / 59 figure crops / 103 Reader caption instances. Four papers / five records have limited rare-material deletion-only read receipts, not independent audits. Site `17fac45bf17b318c22cb6e07c24880013e753723`; [Source PR78](https://github.com/cuiyist/mattersyn/pull/78), [Source CI 39393824309](https://github.com/cuiyist/mattersyn/actions/runs/39393824309), [Pages 39407916058](https://github.com/cuiyist/mattersyn-site/actions/runs/39407916058).
+
+| DOI | Record IDs | Origin | Live verified | Limited rare read |
+|---|---|---|---|---|
+| 10.1006/jssc.1998.8056 | bokhimi1999-jssc-1998-8056-y2o3-zro2-10-0-mol-y2o3-4, bokhimi1999-jssc-1998-8056-y2o3-zro2-2-5-mol-y2o3-1, bokhimi1999-jssc-1998-8056-y2o3-zro2-5-0-mol-y2o3-2, bokhimi1999-jssc-1998-8056-y2o3-zro2-7-0-mol-y2o3-3 | B108 | 2026-10-20T10:40:08+00:00 | no |
+| 10.1007/s00339-008-4719-4 | sugimura2008-s00339-008-4719-4-surface-hydrogenated-silicon-nanocrystal-1 | B77 | 2026-10-20T10:40:08+00:00 | no |
+| 10.1021/cm950502p | shklover1997-cm950502p-tio2-nanocrystalline-powder-1 | B111 | 2026-10-20T10:40:08+00:00 | no |
+| 10.1021/ja9098577 | sambur2010-ja9098577-cdse-zns-core-shell-qds-2, sambur2010-ja9098577-core-cdse-qds-1 | B89 | 2026-10-20T10:40:08+00:00 | no |
+| 10.1021/jp307078g | pi2012-jp307078g-si-quantum-dot-ink-1 | B77 | 2026-10-20T10:40:08+00:00 | no |
+| 10.1039/a903664d | veith1999-a903664d-ce-doped-y3al5o12-ceyag-2, veith1999-a903664d-y3al5o12-yag-1 | B109 | 2026-10-20T10:40:08+00:00 | yes |
+| 10.1063/1.3242352 | zhang2009-1-3242352-cdse-cds-zns-core-shell-nqds-1 | B79 | 2026-10-20T10:40:08+00:00 | no |
+| 10.1111/j.1551-2916.2004.00487.x | bose2004-j-1551-2916-2004-00487-x-pzt-pb-zr0-52ti0-48-o3-nanopowder-1 | B106 | 2026-10-20T10:40:08+00:00 | yes |
+| 10.1246/cl.2005.1002 | feng2005-cl-2005-1002-ticn-nanocrystals-1 | B108 | 2026-10-20T10:40:08+00:00 | yes |
+| 10.1557/jmr.1999.0072 | yin1999-jmr-1999-0072-tetrahedral-coo-nanocrystals-1 | B110 | 2026-10-20T10:40:08+00:00 | no |
+| 10.1557/jmr.2004.19.2.474 | chavan2004-jmr-2004-19-2-474-ce0-55y0-45o1-775-1 | B109 | 2026-10-20T10:40:08+00:00 | yes |
+
+
 ## Q14 verified additions — 2026-10-20T05:33:48+00:00
 
 14 primary papers / 29 source_extracted records / 72 figure crops / 220 Reader caption instances. Five papers have preserved limited rare-material deletion-only read receipts; these are not independent audits. Site `3f02e7d65de15c0dd81051c5107aa8db1d9e5728`; [Source PR76](https://github.com/cuiyist/mattersyn/pull/76), [Source CI39366062710](https://github.com/cuiyist/mattersyn/actions/runs/39366062710), [Pages39374574085](https://github.com/cuiyist/mattersyn-site/actions/runs/39374574085).

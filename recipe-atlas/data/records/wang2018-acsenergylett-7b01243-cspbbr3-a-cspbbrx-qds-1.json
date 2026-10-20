@@ -1,0 +1,289 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "wang2018-acsenergylett-7b01243-cspbbr3-a-cspbbrx-qds-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Shixun Wang; Chenghao Bi; Jifeng Yuan; Linxing Zhang; Jianjun Tian (2018): CsPbBr3@A-CsPbBrx QDs",
+  "material": {
+    "formula": "CsPbBr3@A-CsPbBrx",
+    "family": "CsPbBr3@A-CsPbBrx nanocrystals",
+    "elements": [
+      "Cs",
+      "Pb",
+      "Br"
+    ],
+    "components": [
+      "CsPbBr3",
+      "A",
+      "CsPbBrx"
+    ],
+    "architecture": "core_shell"
+  },
+  "method": "Hot injection",
+  "sources": [
+    {
+      "id": "wang2018-acsenergylett-7b01243",
+      "doi": "10.1021/acsenergylett.7b01243",
+      "title": "Original Core–Shell Structure of Cubic CsPbBr 3 @Amorphous CsPbBr x Perovskite Quantum Dots with a High Blue Photoluminescence Quantum Yield of over 80%",
+      "authors": "Shixun Wang; Chenghao Bi; Jifeng Yuan; Linxing Zhang; Jianjun Tian",
+      "year": 2018,
+      "url": "https://doi.org/10.1021/acsenergylett.7b01243",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "wang2018-acsenergylett-7b01243",
+    "recipe_family": "wang2018-acsenergylett-7b01243-cspbbr3-a-cspbbrx-qds-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CsPbBr3@A-CsPbBrx",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "wang2018-acsenergylett-7b01243",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "cubic",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "wang2018-acsenergylett-7b01243",
+          "locator": "Main PDF p.4"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": 6.0,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "6 nm",
+      "evidence": [
+        {
+          "source_id": "wang2018-acsenergylett-7b01243",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "wang2018-acsenergylett-7b01243-cspbbr3-a-cspbbrx-qds-1--after-s01-heat",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "wang2018-acsenergylett-7b01243-cspbbr3-a-cspbbrx-qds-1--after-s02-centrifuge",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "wang2018-acsenergylett-7b01243-cspbbr3-a-cspbbrx-qds-1--after-s01-heat"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-heat",
+      "action": "heat",
+      "label": "Heat precursors",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "wang2018-acsenergylett-7b01243-cspbbr3-a-cspbbrx-qds-1--after-s01-heat"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Heat precursors",
+      "evidence": [
+        {
+          "source_id": "wang2018-acsenergylett-7b01243",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "s02-centrifuge",
+      "action": "centrifuge",
+      "label": "Separate QDs from byproducts",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-heat"
+      ],
+      "inputs": [
+        "wang2018-acsenergylett-7b01243-cspbbr3-a-cspbbrx-qds-1--after-s01-heat"
+      ],
+      "outputs": [
+        "wang2018-acsenergylett-7b01243-cspbbr3-a-cspbbrx-qds-1--after-s02-centrifuge"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Separate QDs from byproducts",
+      "evidence": [
+        {
+          "source_id": "wang2018-acsenergylett-7b01243",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "wang2018-acsenergylett-7b01243-cspbbr3-a-cspbbrx-qds-1--product",
+      "source_sample_label": "CsPbBr3@A-CsPbBrx QDs",
+      "batch_id": null,
+      "material_state_id": "wang2018-acsenergylett-7b01243-cspbbr3-a-cspbbrx-qds-1--after-s02-centrifuge",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CsPbBr3@A-CsPbBrx",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "wang2018-acsenergylett-7b01243",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "cubic",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "wang2018-acsenergylett-7b01243",
+            "locator": "Main PDF p.4"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "wang2018-acsenergylett-7b01243",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "notes": [
+        "Reactor: three-neck bottle (Main PDF p.4)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "wang2018-acsenergylett-7b01243-cspbbr3-a-cspbbrx-qds-1--size",
+      "sample_id": "wang2018-acsenergylett-7b01243-cspbbr3-a-cspbbrx-qds-1--product",
+      "property": "particle_size",
+      "technique": "not reported",
+      "value": {
+        "value": 6.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "6 nm",
+        "evidence": [
+          {
+            "source_id": "wang2018-acsenergylett-7b01243",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "wang2018-acsenergylett-7b01243",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

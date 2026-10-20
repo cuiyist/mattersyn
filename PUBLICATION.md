@@ -1,3 +1,13 @@
+Current publication checkpoint 2026-10-20T12:55:15.928724+00:00: verified Site17fac45 remains2045 papers/5594 records/3473 pairs. Q16's39 papers/58 records/215 crops are local pending contributions with zero publication credit. Normal records/sync/export/rights registration completed; full local checks, browser, exact-head CI, ordinary merge, normal Site deployment and anonymous verification remain mandatory. All records retain source_extracted; no reviewed record or six audited-only exports changed. No release rule, path rule or permission status was weakened.
+
+## Q15 verified live — 2026-10-20T10:40:08+00:00
+
+**11 in-scope primary papers / 16 source_extracted records / 59 figure crops / 103 Reader caption instances** are deployed and anonymously verified. Actual totals: **2,045 papers / 5,594 records / 3,473 recipe–structure pairs**. Site `17fac45bf17b318c22cb6e07c24880013e753723` passed [Pages 39407916058](https://github.com/cuiyist/mattersyn-site/actions/runs/39407916058); the unchanged anonymous check passed 221 files, 11 paper routes and 16 material bindings, with no failures.
+
+Source `530dc0b2297581f843be0c239ca25c446a0143ea` passed all three exact-head [CI checks in 39393824309](https://github.com/cuiyist/mattersyn/actions/runs/39393824309); [PR78](https://github.com/cuiyist/mattersyn/pull/78) merged ordinarily as `2af3cb6036fcc9f4158a47e272502527e0e89d96`. Q15 reuses accepted two-pass pairs, deletion-only results and local captions. Four papers covering five records have limited rare-material read receipts; common materials received no extra source audit. These are not independent scientific audits. Audited 244 papers / 864 pairs, six audited-only exports, the audit lane, Worker A/B and the five older owner questions remain unchanged. No gold, training-ready or calibrated-accuracy credit is added.
+
+The machine-extracted index adds eleven exact DOI/source groups and sixteen record IDs with their original batch and four per-paper limited-read markers. The separate source_extracted publication event does not invoke the legacy gold-only hook. Historical failures, holds and prior receipts remain preserved.
+
 ## Q15 preparation — 2026-10-20T06:55:54.512786+00:00
 
 Q14 is verified live at Site `3f02e7d65de15c0dd81051c5107aa8db1d9e5728` (2,034 papers / 5,578 records / 3,457 pairs). Q15 preparation grants no publication credit. New source-extracted particle papers retain that data status and ordinary neutral display; existing audited records and six training exports are protected. Normal source, rights, boundary, browser, CI, deployment and anonymous verification gates remain required.

@@ -1,0 +1,324 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "zhao2019-jacs-9b06652-inas-qds-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Tianshuo Zhao; Nuri Oh; Davit Jishkariani; Mingliang Zhang; Han Wang; Na Li; Jennifer D. Lee; Chenjie Zeng; Manisha Muduli; Hak-Jong Choi; Dong Su; Christopher B. Murray; Cherie R. Kagan (2019): InAs QDs",
+  "material": {
+    "formula": "InAs",
+    "family": "InAs nanocrystals",
+    "elements": [
+      "In",
+      "As"
+    ],
+    "components": [
+      "InAs"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Synthesis as described in the source",
+  "sources": [
+    {
+      "id": "zhao2019-jacs-9b06652",
+      "doi": "10.1021/jacs.9b06652",
+      "title": "General Synthetic Route to High-Quality Colloidal III–V Semiconductor Quantum Dots Based on Pnictogen Chlorides",
+      "authors": "Tianshuo Zhao; Nuri Oh; Davit Jishkariani; Mingliang Zhang; Han Wang; Na Li; Jennifer D. Lee; Chenjie Zeng; Manisha Muduli; Hak-Jong Choi; Dong Su; Christopher B. Murray; Cherie R. Kagan",
+      "year": 2019,
+      "url": "https://doi.org/10.1021/jacs.9b06652",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "zhao2019-jacs-9b06652",
+    "recipe_family": "zhao2019-jacs-9b06652-inas-qds-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "phase": {
+      "value": "zinc blende",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "zhao2019-jacs-9b06652",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": 3.0,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "3 nm",
+      "evidence": [
+        {
+          "source_id": "zhao2019-jacs-9b06652",
+          "locator": "Main PDF p.4"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "zhao2019-jacs-9b06652-inas-qds-1--liet3bh",
+      "name": "LiEt3BH",
+      "formula": null,
+      "role": "reducing_agent",
+      "stage": "workup",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "amount": {
+          "value": 2.2,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mmol",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "2.2 mmol",
+          "evidence": [
+            {
+              "source_id": "zhao2019-jacs-9b06652",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "zhao2019-jacs-9b06652",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "zhao2019-jacs-9b06652-inas-qds-1--after-s01-dissolve",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "zhao2019-jacs-9b06652-inas-qds-1--after-s02-purify",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "zhao2019-jacs-9b06652-inas-qds-1--after-s01-dissolve",
+        "zhao2019-jacs-9b06652-inas-qds-1--liet3bh"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-dissolve",
+      "action": "dissolve",
+      "label": "InCl3 and AsCl3 are dissolved in OLAM",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "zhao2019-jacs-9b06652-inas-qds-1--after-s01-dissolve"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "zhao2019-jacs-9b06652",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "InCl3 and AsCl3 are dissolved in OLAM",
+      "evidence": [
+        {
+          "source_id": "zhao2019-jacs-9b06652",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-purify",
+      "action": "purify",
+      "label": "QDs are purified via precipitation and redispersion",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-dissolve"
+      ],
+      "inputs": [
+        "zhao2019-jacs-9b06652-inas-qds-1--after-s01-dissolve",
+        "zhao2019-jacs-9b06652-inas-qds-1--liet3bh"
+      ],
+      "outputs": [
+        "zhao2019-jacs-9b06652-inas-qds-1--after-s02-purify"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "QDs are purified via precipitation and redispersion",
+      "evidence": [
+        {
+          "source_id": "zhao2019-jacs-9b06652",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "zhao2019-jacs-9b06652-inas-qds-1--product",
+      "source_sample_label": "InAs QDs",
+      "batch_id": null,
+      "material_state_id": "zhao2019-jacs-9b06652-inas-qds-1--after-s02-purify",
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "phase": {
+        "value": "zinc blende",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "zhao2019-jacs-9b06652",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": "oleylamine",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "zhao2019-jacs-9b06652",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "zhao2019-jacs-9b06652",
+          "locator": "Main PDF"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [
+    {
+      "id": "zhao2019-jacs-9b06652-inas-qds-1--size",
+      "sample_id": "zhao2019-jacs-9b06652-inas-qds-1--product",
+      "property": "particle_size",
+      "technique": "not reported",
+      "value": {
+        "value": 3.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "3 nm",
+        "evidence": [
+          {
+            "source_id": "zhao2019-jacs-9b06652",
+            "locator": "Main PDF p.4"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "zhao2019-jacs-9b06652",
+          "locator": "Main PDF p.4"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Shape not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
