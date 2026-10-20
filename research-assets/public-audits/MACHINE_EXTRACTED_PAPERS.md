@@ -1,5 +1,130 @@
 # Published machine-extracted papers
 
+## Live papers outside the new free-particle scope — title-based owner review, 2026-10-20T02:41:44.674780+00:00
+
+This repository-only list identifies **58 live source_extracted papers** whose titles indicate solid, bulk, implanted, deposited or substrate-grown products. It is a conservative title-based screen for the owner's later decision, not a source reread or a new audit. The website is unchanged: no paper is removed, no counter is reduced and no review status changes. A paper that also synthesizes free isolable particles remains in scope; ambiguous colloidal heterostructures, superlattices, particle assemblies and films made from particles are not placed here merely for those words. Uncertain cases remain unclassified. This list is not part of the built site.
+
+| DOI | Title | Short outside-scope reason |
+|---|---|---|
+| 10.1116/1.1894417 | Self-assembled quantum-dot molecules by molecular-beam epitaxy | Substrate/solid epitaxial or molecular-beam growth in the title. |
+| 10.1063/1.1476069 | Tuning InAs/GaAs quantum dot properties under Stranski-Krastanov growth mode for 1.3 μm applications | Substrate/solid epitaxial or molecular-beam growth in the title. |
+| 10.1002/pssc.200564111 | InAs quantum dot formed on GaNAs buffer layer by Metalorganic Chemical Vapor Deposition | Deposited film or substrate layer in the title. |
+| 10.1557/jmr.2007.0060 | Nanocrystalline coating enhanced ductility in a Zr-based bulk metallic glass | Solid milling, ribbon, or bulk product in the title. |
+| 10.1002/pssc.200881722 | First step to Si photonics: synthesis of quantum dot light‐emitters on GaP substrate by MBE | Deposited film or substrate layer in the title. |
+| 10.1063/1.120117 | Pulsed laser deposition of Cu:Al2O3 nanocrystal thin films with high third-order optical susceptibility | Deposited film or substrate layer in the title. |
+| 10.1007/s11431-010-3163-9 | Magnetic properties and crystallization behavior of nanocrystalline FeSiBPCuAl alloys | Crystals formed within a glass or solid matrix in the title. |
+| 10.1063/1.1645333 | GaN quantum dot density control by rf-plasma molecular beam epitaxy | Substrate/solid epitaxial or molecular-beam growth in the title. |
+| 10.1063/1.2968204 | Implantation conditions for diamond nanocrystal formation in amorphous silica | Ion-implanted nanocrystals in the title. |
+| 10.1002/pssc.200460523 | Fabrication of nanocrystal memories by ultra low energy ion implantation | Ion-implanted nanocrystals in the title. |
+| 10.1063/1.363641 | Plasma deposition and characterization of photoluminescent fluorinated nanocrystalline silicon films | Deposited film or substrate layer in the title. |
+| 10.1063/1.2730560 | Influence of nanocrystal size on optical properties of Si nanocrystals embedded in SiO2 synthesized by Si ion implantation | Ion-implanted nanocrystals in the title. |
+| 10.1063/1.3334173 | Giant magnetoimpedance effect in nanocrystalline ribbons for sensitive magnetic sensors | Solid milling, ribbon, or bulk product in the title. |
+| 10.1063/1.116098 | Visible luminescence from nanocrystalline silicon films produced by plasma enhanced chemical vapor deposition | Deposited film or substrate layer in the title. |
+| 10.1021/cm0208509 | Phase Transformations in Pulsed Laser Deposited Nanocrystalline Tin Oxide Thin Films | Deposited film or substrate layer in the title. |
+| 10.1063/1.2828036 | Self-assembly of silicide quantum dot arrays on stepped silicon surfaces by reactive epitaxy | Substrate/solid epitaxial or molecular-beam growth in the title. |
+| 10.1116/1.2353849 | Thermal stability of sputter deposited nanocrystalline W2N/amorphous Si3N4 coatings | Deposited film or substrate layer in the title. |
+| 10.1021/nl803196f | Atomic-Scale, All Epitaxial In-Plane Gated Donor Quantum Dot in Silicon | Substrate/solid epitaxial or molecular-beam growth in the title. |
+| 10.1063/1.104891 | In situ buried GaInAs/InP quantum dot arrays by selective area metalorganic vapor phase epitaxy | Substrate/solid epitaxial or molecular-beam growth in the title. |
+| 10.1063/1.2817951 | Size control and midinfrared emission of epitaxial PbTe/CdTe quantum dot precipitates grown by molecular beam epitaxy | Substrate/solid epitaxial or molecular-beam growth in the title. |
+| 10.1063/1.126830 | Formation of single and double self-organized InAs quantum dot by selective area metal-organic vapor phase epitaxy | Substrate/solid epitaxial or molecular-beam growth in the title. |
+| 10.1063/1.2737123 | Faceting during GaAs quantum dot self-assembly by droplet epitaxy | Substrate/solid epitaxial or molecular-beam growth in the title. |
+| 10.1103/physrevb.76.075317 | Regimes of GaAs quantum dot self-assembly by droplet epitaxy | Substrate/solid epitaxial or molecular-beam growth in the title. |
+| 10.1063/1.3076139 | Nanocrystalline Y0.5Sm0.5Co5 ribbons obtained by melt spinning | Solid milling, ribbon, or bulk product in the title. |
+| 10.1063/1.1530717 | InAs/GaAs quantum dot intermixing induced by proton implantation | Ion-implanted nanocrystals in the title. |
+| 10.1063/1.3204499 | PbTe and SnTe quantum dot precipitates in a CdTe matrix fabricated by ion implantation | Ion-implanted nanocrystals in the title. Crystals formed within a glass or solid matrix in the title. |
+| 10.1063/1.1405422 | GaN quantum-dot formation by self-assembling droplet epitaxy and application to single-electron transistors | Substrate/solid epitaxial or molecular-beam growth in the title. |
+| 10.1063/1.126350 | Low temperature deposition of nanocrystalline silicon carbide thin films | Deposited film or substrate layer in the title. |
+| 10.1063/1.1886274 | Oxygen defect and Si nanocrystal dependent white-light and near-infrared electroluminescence of Si-implanted and plasma-enhanced chemical-vapor deposition-grown Si-rich SiO2 | Ion-implanted nanocrystals in the title. |
+| 10.1063/1.347130 | Quantum-dot size-distribution analysis and precipitation stages in semiconductor doped glasses | Crystals formed within a glass or solid matrix in the title. |
+| 10.1063/1.2766680 | Physical and electrical characteristics of atomic layer deposited TiN nanocrystal memory capacitors | Deposited film or substrate layer in the title. |
+| 10.1002/pssc.200880813 | Dislocation density in AlN grown on multistacked GaN/AlN quantum dot layers by molecular beam epitaxy | Substrate/solid epitaxial or molecular-beam growth in the title. |
+| 10.1063/1.1985969 | Molecular-beam epitaxial growth and characteristics of highly uniform InAs/GaAs quantum dot layers | Substrate/solid epitaxial or molecular-beam growth in the title. |
+| 10.1063/1.2120905 | Fabrication of one-dimensional GaAs channel-coupled InAs quantum dot memory device by selective-area metal-organic vapor phase epitaxy | Substrate/solid epitaxial or molecular-beam growth in the title. |
+| 10.1116/1.1926308 | Molecular beam epitaxy growth of novel double-layer InAs quantum dot structures and their optical properties | Substrate/solid epitaxial or molecular-beam growth in the title. |
+| 10.1116/1.2190675 | In As ∕ Ga As quantum-dot infrared photodetectors grown by molecular beam epitaxy | Substrate/solid epitaxial or molecular-beam growth in the title. |
+| 10.1007/s10853-006-0098-4 | Characterization of chemically deposited nanocrystalline PbS thin films | Deposited film or substrate layer in the title. |
+| 10.1063/1.3089234 | Epitaxial 3C-SiC nanocrystal formation at the SiO2/Si interface by combined carbon implantation and annealing in CO atmosphere | Substrate/solid epitaxial or molecular-beam growth in the title. Ion-implanted nanocrystals in the title. |
+| 10.1063/1.1944209 | Ferromagnetism in nanocrystalline epitaxial Co:TiO2 thin films | Substrate/solid epitaxial or molecular-beam growth in the title. |
+| 10.1007/s11661-008-9593-3 | Mechanical Properties of Bulk Nanocrystalline Aluminum-Tungsten Alloys | Solid milling, ribbon, or bulk product in the title. |
+| 10.1007/s11671-006-9002-z | Self-organization of quantum-dot pairs by high-temperature droplet epitaxy | Substrate/solid epitaxial or molecular-beam growth in the title. |
+| 10.1063/1.1430539 | Nanocrystal formation in SiC by Ge ion implantation and subsequent thermal annealing | Ion-implanted nanocrystals in the title. |
+| 10.2351/1.1642632 | Laser annealing of silicon nanocrystal films formed by pulsed-laser deposition | Deposited film or substrate layer in the title. |
+| 10.1021/acs.chemmater.1c03093 | PbI 2 Nanocrystal Growth by Atomic Layer Deposition from Pb(tmhd) 2 and HI | Deposited film or substrate layer in the title. |
+| 10.1002/pssa.200925636 | High‐surface‐quality nanocrystalline InN layers deposited on GaN templates by RF sputtering | Deposited film or substrate layer in the title. |
+| 10.1021/ja307804v | Epitaxy of Nanocrystalline Silicon Carbide on Si(111) at Room Temperature | Substrate/solid epitaxial or molecular-beam growth in the title. |
+| 10.1063/1.1605242 | Self-assembled NiSi quantum-dot arrays on epitaxial Si0.7Ge0.3 on (001)Si | Substrate/solid epitaxial or molecular-beam growth in the title. |
+| 10.1021/nl100217k | Intersublevel Infrared Photodetector with Strain-Free GaAs Quantum Dot Pairs Grown by High-Temperature Droplet Epitaxy | Substrate/solid epitaxial or molecular-beam growth in the title. |
+| 10.1063/1.2787155 | GaN quantum dot superlattices grown by molecular beam epitaxy at high temperature | Substrate/solid epitaxial or molecular-beam growth in the title. |
+| 10.1021/jp505737u | One-Step Electrochemical Deposition of Hierarchical CuS Nanostructures on Conductive Substrates as Robust, High-Performance Counter Electrodes for Quantum-Dot-Sensitized Solar Cells | Deposited film or substrate layer in the title. |
+| 10.1063/1.1445269 | InAs/GaAs quantum dot lasers with InGaP cladding layer grown by solid-source molecular-beam epitaxy | Substrate/solid epitaxial or molecular-beam growth in the title. |
+| 10.1063/1.372200 | High spatial density nanocrystal formation using thin layer of amorphous Si0.7Ge0.3 deposited on SiO2 | Deposited film or substrate layer in the title. |
+| 10.1063/1.2400079 | Preparation, microstructure, and magnetic properties of bulk nanocrystalline Gd metal | Solid milling, ribbon, or bulk product in the title. |
+| 10.1007/s10853-009-3769-0 | Thermal properties and microstructure of bulk nanocrystalline Gd material | Solid milling, ribbon, or bulk product in the title. |
+| 10.1063/1.108170 | Preparation of Fe nanocrystalline in SiO2 by ion implantation | Ion-implanted nanocrystals in the title. |
+| 10.1007/s11664-006-0021-4 | Growth of Nanocrystalline ZnSe:N Films by Pulsed Laser Deposition | Deposited film or substrate layer in the title. |
+| 10.1063/1.2830557 | Structure and magnetic properties of bulk nanocrystalline SmCo7−xHfx sintered magnets | Solid milling, ribbon, or bulk product in the title. |
+| 10.1063/1.3309411 | Positioning effects on quantum dot solar cells grown by molecular beam epitaxy | Substrate/solid epitaxial or molecular-beam growth in the title. |
+
+
+## P51 verified — 2026-10-20T00:00:15+00:00
+
+51 new primary papers /69 record IDs;25 limited rare-material reads, not audits. Overall2,020 papers /5,549 records /3,428 pairs. Source status remains source_extracted; audited244/864 and six audited-only exports unchanged.
+
+| DOI | Record IDs | Original batch | Date live (UTC) | Limited rare-material read |
+|---|---|---|---|---|
+| 10.1007/s10439-009-9713-2 | al2023-s10439-009-9713-2-cdse-zns-qds-embedded-in-polystyrene-mic-1 | B73 | 2026-10-20T00:00:15+00:00 | no |
+| 10.1063/1.3242379 | beyer2009-1-3242379-si-nanocrystals-in-gate-oxide-1 | B71 | 2026-10-20T00:00:15+00:00 | no |
+| 10.1063/1.2191411 | biteen2006-1-2191411-si-qds-silicon-quantum-dots-1 | B72 | 2026-10-20T00:00:15+00:00 | no |
+| 10.1063/1.1645333 | brown2004-1-1645333-gan-quantum-dots-qds-1 | B73 | 2026-10-20T00:00:15+00:00 | no |
+| 10.1557/jmr.2004.0334 | chaim2004-jmr-2004-0334-transparent-nanocrystalline-mgo-1 | B71 | 2026-10-20T00:00:15+00:00 | no |
+| 10.1063/1.1542913 | chaudhari2003-1-1542913-nanocrystalline-silicon-in-siox-matrix-1 | B72 | 2026-10-20T00:00:15+00:00 | no |
+| 10.1002/pssc.200460523 | cherkashin2005-pssc-200460523-si-nanocrystals-in-sio2-gate-oxide-1 | B73 | 2026-10-20T00:00:15+00:00 | no |
+| 10.1063/1.1354632 | chirita2001-1-1354632-zr0-9si0-3b3-nanocrystalline-thin-film-1 | B73 | 2026-10-20T00:00:15+00:00 | yes |
+| 10.1116/1.582348 | choi2000-1-582348-50-nm-wide-bi-nanowire-1 | B71 | 2026-10-20T00:00:15+00:00 | yes |
+| 10.1063/1.363641 | cicala1996-1-363641-nc-si-h-f-1 | B72 | 2026-10-20T00:00:15+00:00 | no |
+| 10.1021/nl301917d | cohen-hoshen2012-nl301917d-cdse-zns-quantum-dotgold-nanoparticle-co-1 | B73 | 2026-10-20T00:00:15+00:00 | no |
+| 10.1002/pssa.200566011 | domaradzki2006-pssa-200566011-hftio4-thin-film-1 | B71 | 2026-10-20T00:00:15+00:00 | yes |
+| 10.1063/1.3334173 | dwevedi2010-1-3334173-fe73-5si13-5b8cunb0v3al-4, dwevedi2010-1-3334173-fe73-5si13-5b8cunb1-5v1-5al-3, dwevedi2010-1-3334173-fe73-5si13-5b8cunb3al-1 | B71 | 2026-10-20T00:00:15+00:00 | yes |
+| 10.1063/1.1288602 | ekimov2000-1-1288602-sicdiamond-nanocrystalline-composite-1 | B72 | 2026-10-20T00:00:15+00:00 | yes |
+| 10.1116/1.589476 | fang1997-1-589476-nanocrystalline-tio2-film-modified-with-1 | B73 | 2026-10-20T00:00:15+00:00 | no |
+| 10.1063/1.2764001 | feng2007-1-2764001-si-nanocrystal-layer-high-dose-1, feng2007-1-2764001-si-nanocrystal-layer-low-dose-2 | B73 | 2026-10-20T00:00:15+00:00 | no |
+| 10.1063/1.1606498 | fischer2003-1-1606498-fe-sheathed-mgb2-tapes-1 | B72 | 2026-10-20T00:00:15+00:00 | yes |
+| 10.1063/1.362543 | fultz1996-1-362543-annealed-nanocrystalline-fe-2 | B72 | 2026-10-20T00:00:15+00:00 | no |
+| 10.1116/1.1372919 | gu2001-1-1372919-nanocrystalline-diamond-films-1 | B71 | 2026-10-20T00:00:15+00:00 | no |
+| 10.1063/1.345798 | hahn1990-1-345798-nanocrystalline-al52ti48-5, hahn1990-1-345798-nanocrystalline-cu91mn9-4 | B71 | 2026-10-20T00:00:15+00:00 | yes |
+| 10.1063/1.1695635 | han2004-1-1695635-kcl-nanocrystal-1 | B73 | 2026-10-20T00:00:15+00:00 | yes |
+| 10.1103/physrevb.76.075317 | heyn2007-physrevb-76-075317-gaas-quantum-dots-qds-1 | B72 | 2026-10-20T00:00:15+00:00 | no |
+| 10.1063/1.3076139 | hidalgo-gonzalez2009-1-3076139-y0-5sm0-5co5-ribbons-1 | B71 | 2026-10-20T00:00:15+00:00 | yes |
+| 10.1063/1.2358114 | hopfer2006-1-2358114-ingaas-submonolayer-quantum-dots-sml-qds-1 | B73 | 2026-10-20T00:00:15+00:00 | yes |
+| 10.1063/1.3211988 | ioannou-sougleridisa2009-1-3211988-si-nanocrystal-layer-embedded-in-sio2-1 | B72 | 2026-10-20T00:00:15+00:00 | no |
+| 10.1021/jp062065f | jp062065f-cdse-opv-nanostructures-1 | B73 | 2026-10-20T00:00:15+00:00 | yes |
+| 10.1063/1.369965 | lee1999-1-369965-fe82b8zr7cu1al2-alloy-annealed-at-450-c-3, lee1999-1-369965-fe84b6zr7cu1al2-alloy-annealed-at-450-c-4, lee1999-1-369965-fe86b4zr7cu1al2-alloy-annealed-at-450-c-1, lee1999-1-369965-fe88b2zr7cu1al2-alloy-annealed-at-450-c-2 | B72 | 2026-10-20T00:00:15+00:00 | yes |
+| 10.1063/1.3110183 | li2009-1-3110183-cosi2-coated-si-nanocrystals-1 | B71 | 2026-10-20T00:00:15+00:00 | no |
+| 10.1063/1.363355 | liu1996-1-363355-fe81-5p12c3cu0-5mo0-5si2-5-1 | B71 | 2026-10-20T00:00:15+00:00 | yes |
+| 10.1063/1.2995862 | lo2008-1-2995862-au-nanocrystals-embedded-in-al2o3-hfo2-s-1 | B71 | 2026-10-20T00:00:15+00:00 | no |
+| 10.1063/1.2387966 | min2006-1-2387966-cdse-zns-core-shell-quantum-dots-1 | B73 | 2026-10-20T00:00:15+00:00 | no |
+| 10.1116/1.3151816 | pan2009-1-3151816-high-y2o3-nanocrystal-film-1 | B72 | 2026-10-20T00:00:15+00:00 | no |
+| 10.1063/1.3120768 | sato2009-1-3120768-b-doped-nc-si-particles-1 | B72 | 2026-10-20T00:00:15+00:00 | yes |
+| 10.1063/1.2745200 | schlereth2007-1-2745200-ga0-57in0-43as-quantum-dots-qds-in-gaina-2 | B71 | 2026-10-20T00:00:15+00:00 | yes |
+| 10.1063/1.1855712 | seet2005-1-1855712-ni80fe20-cu-composite-wire-grain-size-11-3, seet2005-1-1855712-ni80fe20-cu-composite-wire-grain-size-15-2 | B72 | 2026-10-20T00:00:15+00:00 | yes |
+| 10.1063/1.2234545 | stieler2006-1-2234545-nanocrystalline-si-h-nc-si-h-with-large-1 | B71 | 2026-10-20T00:00:15+00:00 | yes |
+| 10.1021/am405285u | text2014-am405285u-cd1xznxse1ysy-qds-1 | B73 | 2026-10-20T00:00:15+00:00 | yes |
+| 10.1063/1.121035 | toyama1998-1-121035-p-type-nc-si-thin-film-in-sno2-p-type-nc-1 | B72 | 2026-10-20T00:00:15+00:00 | no |
+| 10.1039/b718730k | triulzi2008-b718730k-auqdpamamanti-human-igg-complex-1 | B72 | 2026-10-20T00:00:15+00:00 | no |
+| 10.1116/1.579878 | veprek1996-1-579878-nc-w2n-a-si3n4-composite-1 | B71 | 2026-10-20T00:00:15+00:00 | yes |
+| 10.1063/1.118834 | wang1997-1-118834-light-emitting-nanocrystalline-silicon-f-2, wang1997-1-118834-light-emitting-porous-silicon-film-1 | B72 | 2026-10-20T00:00:15+00:00 | no |
+| 10.1116/1.589737 | wang1997-1-589737-ingaas-gaas-quantum-dot-arrays-1 | B72 | 2026-10-20T00:00:15+00:00 | no |
+| 10.1063/1.2803937 | x2007-1-2803937-a-1, x2007-1-2803937-b-2 | B72 | 2026-10-20T00:00:15+00:00 | yes |
+| 10.1063/1.2968946 | yang2008-1-2968946-si0-8ge0-2-quantum-dot-molecules-qdms-1 | B73 | 2026-10-20T00:00:15+00:00 | yes |
+| 10.1103/physrevlett.93.205501 | yue2004-physrevlett-93-205501-nanocrystalline-fe-1 | B73 | 2026-10-20T00:00:15+00:00 | no |
+| 10.1063/1.358688 | zhang1995-1-358688-nanocrystalline-selenium-nc-se-1 | B71 | 2026-10-20T00:00:15+00:00 | yes |
+| 10.1063/1.1378310 | zhang2001-1-1378310-inxga1-xas-gaas-quantum-dots-1 | B72 | 2026-10-20T00:00:15+00:00 | yes |
+| 10.1063/1.3254183 | zhang2009-1-3254183-sample-a-nc-si-2-nm-1, zhang2009-1-3254183-sample-b-nc-si-3-nm-2, zhang2009-1-3254183-sample-c-nc-si-5-nm-3, zhang2009-1-3254183-sample-d-nc-si-6-nm-4 | B71 | 2026-10-20T00:00:15+00:00 | no |
+| 10.1063/1.352576 | zhou1993-1-352576-fe73-5ag1nb3si13-5b9-annealed-at-823-k-3, zhou1993-1-352576-fe73-5cu1nb3si13-5b9-annealed-at-1073-k-2, zhou1993-1-352576-fe73-5cu1nb3si13-5b9-annealed-at-823-k-1, zhou1993-1-352576-fe73-5ni1nb3si13-5b9-annealed-at-823-k-4 | B71 | 2026-10-20T00:00:15+00:00 | yes |
+| 10.1063/1.2952036 | zhou2008-1-2952036-si-nanocrystals-11-1-nm-diameter-3, zhou2008-1-2952036-si-nanocrystals-6-1-nm-diameter-1, zhou2008-1-2952036-si-nanocrystals-8-1-nm-diameter-2 | B72 | 2026-10-20T00:00:15+00:00 | no |
+| 10.1134/s1054660x07040299 | znamenskiy2007-s1054660x07040299-y2sio5-pr3-nanocrystals-1 | B71 | 2026-10-20T00:00:15+00:00 | yes |
+
+
 Current verified O53 index (2026-10-18T21:54:25+00:00):53 new source_extracted DOI rows/66record IDs, 28 limited-read markers; overall1,969papers/5,480records/3,359pairs. Current P51 remains local/uncredited; all old index text and existing pointers are preserved.
 
 Current verified N43 index (2026-10-18T18:42:26+00:00):43 new source_extracted DOI rows/55record IDs, 27 limited-read markers; overall1,916papers/5,414records/3,293pairs. Current O53 remains local/uncredited; all old index text and existing pointers are preserved.
