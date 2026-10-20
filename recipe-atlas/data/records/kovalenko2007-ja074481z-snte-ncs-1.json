@@ -1,0 +1,367 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "kovalenko2007-ja074481z-snte-ncs-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Maksym V. Kovalenko; Wolfgang Heiss; Elena V. Shevchenko; Jong-Soo Lee; Harald Schwinghammer; A. Paul Alivisatos; Dmitri V. Talapin (2007): SnTe NCs",
+  "material": {
+    "formula": "SnTe",
+    "family": "SnTe nanocrystals",
+    "elements": [
+      "Sn",
+      "Te"
+    ],
+    "components": [
+      "SnTe"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Synthesis as described in the source",
+  "sources": [
+    {
+      "id": "kovalenko2007-ja074481z",
+      "doi": "10.1021/ja074481z",
+      "title": "SnTe Nanocrystals: A New Example of Narrow-Gap Semiconductor Quantum Dots",
+      "authors": "Maksym V. Kovalenko; Wolfgang Heiss; Elena V. Shevchenko; Jong-Soo Lee; Harald Schwinghammer; A. Paul Alivisatos; Dmitri V. Talapin",
+      "year": 2007,
+      "url": "https://doi.org/10.1021/ja074481z",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "kovalenko2007-ja074481z",
+    "recipe_family": "kovalenko2007-ja074481z-snte-ncs-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "SnTe",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "kovalenko2007-ja074481z",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "rock-salt",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "kovalenko2007-ja074481z",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": 10.2,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "10.2 nm",
+      "evidence": [
+        {
+          "source_id": "kovalenko2007-ja074481z",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "sphere",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "kovalenko2007-ja074481z",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "kovalenko2007-ja074481z-snte-ncs-1--oleic-acid-oa",
+      "name": "oleic acid (OA)",
+      "formula": null,
+      "role": "ligand",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "kovalenko2007-ja074481z",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "kovalenko2007-ja074481z-snte-ncs-1--after-s01-cool",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "kovalenko2007-ja074481z-snte-ncs-1--after-s02-add",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "kovalenko2007-ja074481z-snte-ncs-1--after-s01-cool",
+        "kovalenko2007-ja074481z-snte-ncs-1--oleic-acid-oa"
+      ]
+    },
+    {
+      "id": "kovalenko2007-ja074481z-snte-ncs-1--after-s03-isolate",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "kovalenko2007-ja074481z-snte-ncs-1--after-s02-add"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-cool",
+      "action": "cool",
+      "label": "Rapidly cool to room temperature",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "kovalenko2007-ja074481z-snte-ncs-1--after-s01-cool"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Rapidly cool to room temperature",
+      "evidence": [
+        {
+          "source_id": "kovalenko2007-ja074481z",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "s02-add",
+      "action": "add",
+      "label": "Add oleic acid to passivate NC surface",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-cool"
+      ],
+      "inputs": [
+        "kovalenko2007-ja074481z-snte-ncs-1--after-s01-cool",
+        "kovalenko2007-ja074481z-snte-ncs-1--oleic-acid-oa"
+      ],
+      "outputs": [
+        "kovalenko2007-ja074481z-snte-ncs-1--after-s02-add"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Add oleic acid to passivate NC surface",
+      "evidence": [
+        {
+          "source_id": "kovalenko2007-ja074481z",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "s03-isolate",
+      "action": "isolate",
+      "label": "Isolate and purify NCs using solvent/nonsolvent procedure",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-add"
+      ],
+      "inputs": [
+        "kovalenko2007-ja074481z-snte-ncs-1--after-s02-add"
+      ],
+      "outputs": [
+        "kovalenko2007-ja074481z-snte-ncs-1--after-s03-isolate"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Isolate and purify NCs using solvent/nonsolvent procedure",
+      "evidence": [
+        {
+          "source_id": "kovalenko2007-ja074481z",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "kovalenko2007-ja074481z-snte-ncs-1--product",
+      "source_sample_label": "SnTe NCs",
+      "batch_id": null,
+      "material_state_id": "kovalenko2007-ja074481z-snte-ncs-1--after-s03-isolate",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "SnTe",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "kovalenko2007-ja074481z",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "rock-salt",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "kovalenko2007-ja074481z",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "sphere",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "kovalenko2007-ja074481z",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": "oleic acid",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "kovalenko2007-ja074481z",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "kovalenko2007-ja074481z",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [
+    {
+      "id": "kovalenko2007-ja074481z-snte-ncs-1--size",
+      "sample_id": "kovalenko2007-ja074481z-snte-ncs-1--product",
+      "property": "diameter",
+      "technique": "TEM",
+      "value": {
+        "value": 10.2,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "10.2 nm",
+        "evidence": [
+          {
+            "source_id": "kovalenko2007-ja074481z",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "kovalenko2007-ja074481z",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Reactor not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of oleic acid (OA) not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
