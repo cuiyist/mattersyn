@@ -1,0 +1,400 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "kalasad2009-la901798y-sample-2-pale-yellow-2",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "M. N. Kalasad; M. K. Rabinal; B. G. Mulimani (2009): Sample 2 (pale yellow)",
+  "material": {
+    "formula": "CdSe",
+    "family": "CdSe nanocrystals",
+    "elements": [
+      "Cd",
+      "Se"
+    ],
+    "components": [
+      "CdSe"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Precipitation",
+  "sources": [
+    {
+      "id": "kalasad2009-la901798y",
+      "doi": "10.1021/la901798y",
+      "title": "Ambient Synthesis and Characterization of High-Quality CdSe Quantum Dots by an Aqueous Route",
+      "authors": "M. N. Kalasad; M. K. Rabinal; B. G. Mulimani",
+      "year": 2009,
+      "url": "https://doi.org/10.1021/la901798y",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "kalasad2009-la901798y",
+    "recipe_family": "kalasad2009-la901798y-sample-2-pale-yellow-2",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdSe",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "kalasad2009-la901798y",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "sphere",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "kalasad2009-la901798y",
+          "locator": "Main PDF p.6"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "kalasad2009-la901798y-sample-2-pale-yellow-2--cdcl2",
+      "name": "CdCl2",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "concentration": {
+          "value": 100,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mM",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "100 mM",
+          "evidence": [
+            {
+              "source_id": "kalasad2009-la901798y",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "kalasad2009-la901798y",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "kalasad2009-la901798y-sample-2-pale-yellow-2--hydrazine-hydrate",
+      "name": "hydrazine hydrate",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "concentration": {
+          "value": 50,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mM",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "50 mM",
+          "evidence": [
+            {
+              "source_id": "kalasad2009-la901798y",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "kalasad2009-la901798y",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "kalasad2009-la901798y-sample-2-pale-yellow-2--after-s01-dissolve",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "kalasad2009-la901798y-sample-2-pale-yellow-2--hydrazine-hydrate"
+      ]
+    },
+    {
+      "id": "kalasad2009-la901798y-sample-2-pale-yellow-2--after-s02-dissolve",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "kalasad2009-la901798y-sample-2-pale-yellow-2--after-s01-dissolve",
+        "kalasad2009-la901798y-sample-2-pale-yellow-2--cdcl2"
+      ]
+    },
+    {
+      "id": "kalasad2009-la901798y-sample-2-pale-yellow-2--after-s03-mix",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "kalasad2009-la901798y-sample-2-pale-yellow-2--after-s02-dissolve",
+        "kalasad2009-la901798y-sample-2-pale-yellow-2--cdcl2",
+        "kalasad2009-la901798y-sample-2-pale-yellow-2--hydrazine-hydrate"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-dissolve",
+      "action": "dissolve",
+      "label": "Dissolve Se in hydrazine hydrate",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "kalasad2009-la901798y-sample-2-pale-yellow-2--hydrazine-hydrate"
+      ],
+      "outputs": [
+        "kalasad2009-la901798y-sample-2-pale-yellow-2--after-s01-dissolve"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "kalasad2009-la901798y",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Dissolve Se in hydrazine hydrate",
+      "evidence": [
+        {
+          "source_id": "kalasad2009-la901798y",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-dissolve",
+      "action": "dissolve",
+      "label": "Dissolve CdCl2 in water with MPA",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-dissolve"
+      ],
+      "inputs": [
+        "kalasad2009-la901798y-sample-2-pale-yellow-2--after-s01-dissolve",
+        "kalasad2009-la901798y-sample-2-pale-yellow-2--cdcl2"
+      ],
+      "outputs": [
+        "kalasad2009-la901798y-sample-2-pale-yellow-2--after-s02-dissolve"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "kalasad2009-la901798y",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Dissolve CdCl2 in water with MPA",
+      "evidence": [
+        {
+          "source_id": "kalasad2009-la901798y",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-mix",
+      "action": "mix",
+      "label": "Mix CdCl2 solution with hydrazine hydrate-Se solution",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-dissolve"
+      ],
+      "inputs": [
+        "kalasad2009-la901798y-sample-2-pale-yellow-2--after-s02-dissolve",
+        "kalasad2009-la901798y-sample-2-pale-yellow-2--cdcl2",
+        "kalasad2009-la901798y-sample-2-pale-yellow-2--hydrazine-hydrate"
+      ],
+      "outputs": [
+        "kalasad2009-la901798y-sample-2-pale-yellow-2--after-s03-mix"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "kalasad2009-la901798y",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Mix CdCl2 solution with hydrazine hydrate-Se solution",
+      "evidence": [
+        {
+          "source_id": "kalasad2009-la901798y",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "kalasad2009-la901798y-sample-2-pale-yellow-2--product",
+      "source_sample_label": "Sample 2 (pale yellow)",
+      "batch_id": null,
+      "material_state_id": "kalasad2009-la901798y-sample-2-pale-yellow-2--after-s03-mix",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdSe",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "kalasad2009-la901798y",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": "sphere",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "kalasad2009-la901798y",
+            "locator": "Main PDF p.6"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": "3-mercaptopropionic acid",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "kalasad2009-la901798y",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "kalasad2009-la901798y",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reactor: open-air conditions (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
