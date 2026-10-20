@@ -120,7 +120,7 @@ def silicon_reviewed_regression_checks(hub, byid):
 
 
 def germanium_reviewed_regression_checks(hub, byid):
-    """Keep exact reviewed Heath scope; extracted Ge routes must be components."""
+    """Pin reviewed Heath components; extracted direct Ge needs a consistent particle product."""
     routes = set(hub.get("record_ids", []))
     direct = set(hub.get("direct_record_ids", []))
     reviewed = {rid for rid in routes
@@ -128,19 +128,36 @@ def germanium_reviewed_regression_checks(hub, byid):
     extracted = {rid for rid in routes
                  if byid.get(rid, {}).get("quality", {}).get("review_status") == "source_extracted"}
     component_architectures = {"core_shell", "heterostructure", "composite", "alloy", "phase_mixture", "unresolved"}
+
+    def direct_particle(record):
+        material, products = record.get("material", {}), record.get("products", [])
+        return (material.get("formula") == "Ge" and material.get("components") == ["Ge"]
+                and material.get("elements") == ["Ge"] and material.get("architecture") == "single_material"
+                and str(record.get("method", "")).strip().casefold() in {"heat-up", "hot-injection", "colloidal synthesis"}
+                and bool(products) and all(
+                    product.get("composition", {}).get("value") == "Ge"
+                    and product.get("composition", {}).get("status") == "reported"
+                    and ("nanocrystal" in (label := str(product.get("source_sample_label", "")).casefold())
+                         or "nanoparticle" in label or "quantum dot" in label
+                         or bool(set(label.split()) & {"cqd", "cqds", "qd", "qds"}))
+                    and not any(word in label for word in ("embedded", "matrix", "substrate", "supported", "film", "device", "implant", "well"))
+                    for product in products))
+
     return [
-        (hub.get("component_only") is True and not direct,
-         "Ge: substrate-supported routes became isolated Ge synthesis"),
+        (hub.get("component_only") is (not direct) and not (direct & HEATH_GE_SI_ROUTES)
+         and direct <= extracted and all(direct_particle(byid[rid]) for rid in direct),
+         "Ge: reviewed/component routes became direct or isolated Ge lacks a consistent particle product"),
         (reviewed == HEATH_GE_SI_ROUTES,
          "Ge: reviewed component routes must remain exactly the two Heath variants"),
         (routes <= set(byid) and routes == reviewed | extracted,
          "Ge: unknown or inadmissible-status route entered component scope"),
-        (all(byid[rid].get("material", {}).get("formula") != "Ge"
+        (all(direct_particle(byid[rid]) if rid in direct else
+             byid[rid].get("material", {}).get("formula") != "Ge"
              and "Ge" in byid[rid].get("material", {}).get("components", [])
              and len(set(byid[rid].get("material", {}).get("components", []))) > 1
              and byid[rid].get("material", {}).get("architecture") in component_architectures
              for rid in extracted),
-         "Ge: extracted route must retain a named multi-component product, never isolated Ge"),
+         "Ge: extracted component must retain its multi-component product; direct Ge must be consistent free particles"),
     ]
 
 

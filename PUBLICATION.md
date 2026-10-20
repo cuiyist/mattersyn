@@ -1,3 +1,5 @@
+Current publication checkpoint 2026-10-20T13:57:39.658370+00:00: Q16 remains pending39/58/215 with zero publication credit. The earlier full-build Ge regression failure is retained; a consistent free-particle recognition branch and two deletion-only Noh corrections are applied. New complete local validation, actual GUI, exact-head CI, ordinary merge, unchanged Site release, deployment and anonymous verification remain required. All prior published/audited records and six audited-only exports remain preserved.
+
 Current publication checkpoint 2026-10-20T12:55:15.928724+00:00: verified Site17fac45 remains2045 papers/5594 records/3473 pairs. Q16's39 papers/58 records/215 crops are local pending contributions with zero publication credit. Normal records/sync/export/rights registration completed; full local checks, browser, exact-head CI, ordinary merge, normal Site deployment and anonymous verification remain mandatory. All records retain source_extracted; no reviewed record or six audited-only exports changed. No release rule, path rule or permission status was weakened.
 
 ## Q15 verified live — 2026-10-20T10:40:08+00:00

@@ -37,7 +37,7 @@ Prepared 2026-10-20T12:55:15.928724+00:00;39 papers/58 records/215 crops. Live d
 | 10.1021/ja074481z | kovalenko2007-ja074481z-snte-ncs-1 | B115 | pending | yes |
 | 10.1021/jacs.0c13071 | yang2021-jacs-0c13071-agause-qds-4-37-nm-1, yang2021-jacs-0c13071-agause-qds-3-66-nm-2, yang2021-jacs-0c13071-agause-qds-6-07-nm-3, yang2021-jacs-0c13071-agause-qds-8-33-nm-4 | B115 | pending | yes |
 | 10.1021/jacs.3c02709 | gupta2023-jacs-3c02709-in0-65ga0-35p-zns-1 | B116 | pending | yes |
-| 10.1021/jacs.4c13692 | noh2025-jacs-4c13692-ge-cqd-1-1 | B116 | pending | no |
+| 10.1021/jacs.4c13692 | noh2025-jacs-4c13692-ge-cqd-1-1 | B116 | pending | yes |
 | 10.1021/jacs.6b07533 | grigel2016-jacs-6b07533-inas-qds-1, grigel2016-jacs-6b07533-inas-zns-qds-2, grigel2016-jacs-6b07533-inas-znse-qds-3 | B115 | pending | yes |
 | 10.1021/jacs.6b08679 | park2016-jacs-6b08679-in0-2ga0-8as-znse-1 | B116 | pending | yes |
 | 10.1021/jacs.8b01412 | xia2018-jacs-8b01412-cis-zns-hncs-1 | B115 | pending | yes |
