@@ -1,0 +1,572 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "grigel2018-acs-chemmater-8b02908-hgse-ncs-5-8-nm-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Valeriia Grigel; Laxmi Kishore Sagar; Kim De Nolf; Qiang Zhao; André Vantomme; Jonathan De Roo; Ivan Infante; Zeger Hens (2018): HgSe NCs (5.8 nm)",
+  "material": {
+    "formula": "HgSe",
+    "family": "HgSe nanocrystals",
+    "elements": [
+      "Hg",
+      "Se"
+    ],
+    "components": [
+      "HgSe"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Synthesis as described in the source",
+  "sources": [
+    {
+      "id": "grigel2018-acs-chemmater-8b02908",
+      "doi": "10.1021/acs.chemmater.8b02908",
+      "title": "The Surface Chemistry of Colloidal HgSe Nanocrystals, toward Stoichiometric Quantum Dots by Design",
+      "authors": "Valeriia Grigel; Laxmi Kishore Sagar; Kim De Nolf; Qiang Zhao; André Vantomme; Jonathan De Roo; Ivan Infante; Zeger Hens",
+      "year": 2018,
+      "url": "https://doi.org/10.1021/acs.chemmater.8b02908",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "grigel2018-acs-chemmater-8b02908",
+    "recipe_family": "grigel2018-acs-chemmater-8b02908-hgse-ncs-5-8-nm-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "HgSe",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "grigel2018-acs-chemmater-8b02908",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "sphere",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "grigel2018-acs-chemmater-8b02908",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "grigel2018-acs-chemmater-8b02908-hgse-ncs-5-8-nm-1--selenourea",
+      "name": "selenourea",
+      "formula": null,
+      "role": "chalcogen_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "amount": {
+          "value": 0.2,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mmol",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0.2 mmol",
+          "evidence": [
+            {
+              "source_id": "grigel2018-acs-chemmater-8b02908",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "grigel2018-acs-chemmater-8b02908",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "grigel2018-acs-chemmater-8b02908-hgse-ncs-5-8-nm-1--after-s01-dissolve",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "grigel2018-acs-chemmater-8b02908-hgse-ncs-5-8-nm-1--after-s02-degas",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "grigel2018-acs-chemmater-8b02908-hgse-ncs-5-8-nm-1--after-s01-dissolve"
+      ]
+    },
+    {
+      "id": "grigel2018-acs-chemmater-8b02908-hgse-ncs-5-8-nm-1--after-s03-inject",
+      "name": "mixture after step 3",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "grigel2018-acs-chemmater-8b02908-hgse-ncs-5-8-nm-1--after-s02-degas",
+        "grigel2018-acs-chemmater-8b02908-hgse-ncs-5-8-nm-1--selenourea"
+      ]
+    },
+    {
+      "id": "grigel2018-acs-chemmater-8b02908-hgse-ncs-5-8-nm-1--after-s04-heat",
+      "name": "mixture after step 4",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "grigel2018-acs-chemmater-8b02908-hgse-ncs-5-8-nm-1--after-s03-inject"
+      ]
+    },
+    {
+      "id": "grigel2018-acs-chemmater-8b02908-hgse-ncs-5-8-nm-1--after-s05-precipitate",
+      "name": "mixture after step 5",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "grigel2018-acs-chemmater-8b02908-hgse-ncs-5-8-nm-1--after-s04-heat"
+      ]
+    },
+    {
+      "id": "grigel2018-acs-chemmater-8b02908-hgse-ncs-5-8-nm-1--after-s06-centrifuge",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "grigel2018-acs-chemmater-8b02908-hgse-ncs-5-8-nm-1--after-s05-precipitate"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-dissolve",
+      "action": "dissolve",
+      "label": "Dissolve HgCl2 in oleylamine",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "grigel2018-acs-chemmater-8b02908-hgse-ncs-5-8-nm-1--after-s01-dissolve"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "grigel2018-acs-chemmater-8b02908",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Dissolve HgCl2 in oleylamine",
+      "evidence": [
+        {
+          "source_id": "grigel2018-acs-chemmater-8b02908",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-degas",
+      "action": "degas",
+      "label": "Flush reaction mixture under nitrogen and heat to remove water and oxygen",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-dissolve"
+      ],
+      "inputs": [
+        "grigel2018-acs-chemmater-8b02908-hgse-ncs-5-8-nm-1--after-s01-dissolve"
+      ],
+      "outputs": [
+        "grigel2018-acs-chemmater-8b02908-hgse-ncs-5-8-nm-1--after-s02-degas"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 110,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "110 °C",
+          "evidence": [
+            {
+              "source_id": "grigel2018-acs-chemmater-8b02908",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1 h",
+          "evidence": [
+            {
+              "source_id": "grigel2018-acs-chemmater-8b02908",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "grigel2018-acs-chemmater-8b02908",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Flush reaction mixture under nitrogen and heat to remove water and oxygen",
+      "evidence": [
+        {
+          "source_id": "grigel2018-acs-chemmater-8b02908",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-inject",
+      "action": "inject",
+      "label": "Inject selenourea solution into reaction mixture",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-degas"
+      ],
+      "inputs": [
+        "grigel2018-acs-chemmater-8b02908-hgse-ncs-5-8-nm-1--after-s02-degas",
+        "grigel2018-acs-chemmater-8b02908-hgse-ncs-5-8-nm-1--selenourea"
+      ],
+      "outputs": [
+        "grigel2018-acs-chemmater-8b02908-hgse-ncs-5-8-nm-1--after-s03-inject"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 110,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "110 °C",
+          "evidence": [
+            {
+              "source_id": "grigel2018-acs-chemmater-8b02908",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "grigel2018-acs-chemmater-8b02908",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Inject selenourea solution into reaction mixture",
+      "evidence": [
+        {
+          "source_id": "grigel2018-acs-chemmater-8b02908",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s04-heat",
+      "action": "heat",
+      "label": "Heat reaction mixture for 6 minutes",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s03-inject"
+      ],
+      "inputs": [
+        "grigel2018-acs-chemmater-8b02908-hgse-ncs-5-8-nm-1--after-s03-inject"
+      ],
+      "outputs": [
+        "grigel2018-acs-chemmater-8b02908-hgse-ncs-5-8-nm-1--after-s04-heat"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 6,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "6 min",
+          "evidence": [
+            {
+              "source_id": "grigel2018-acs-chemmater-8b02908",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "grigel2018-acs-chemmater-8b02908",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Heat reaction mixture for 6 minutes",
+      "evidence": [
+        {
+          "source_id": "grigel2018-acs-chemmater-8b02908",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s05-precipitate",
+      "action": "precipitate",
+      "label": "Precipitate NCs with methanol",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s04-heat"
+      ],
+      "inputs": [
+        "grigel2018-acs-chemmater-8b02908-hgse-ncs-5-8-nm-1--after-s04-heat"
+      ],
+      "outputs": [
+        "grigel2018-acs-chemmater-8b02908-hgse-ncs-5-8-nm-1--after-s05-precipitate"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Precipitate NCs with methanol",
+      "evidence": [
+        {
+          "source_id": "grigel2018-acs-chemmater-8b02908",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s06-centrifuge",
+      "action": "centrifuge",
+      "label": "Centrifuge and discard supernatant",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s05-precipitate"
+      ],
+      "inputs": [
+        "grigel2018-acs-chemmater-8b02908-hgse-ncs-5-8-nm-1--after-s05-precipitate"
+      ],
+      "outputs": [
+        "grigel2018-acs-chemmater-8b02908-hgse-ncs-5-8-nm-1--after-s06-centrifuge"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Centrifuge and discard supernatant",
+      "evidence": [
+        {
+          "source_id": "grigel2018-acs-chemmater-8b02908",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "grigel2018-acs-chemmater-8b02908-hgse-ncs-5-8-nm-1--product",
+      "source_sample_label": "HgSe NCs (5.8 nm)",
+      "batch_id": null,
+      "material_state_id": "grigel2018-acs-chemmater-8b02908-hgse-ncs-5-8-nm-1--after-s06-centrifuge",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "HgSe",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "grigel2018-acs-chemmater-8b02908",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": "sphere",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "grigel2018-acs-chemmater-8b02908",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": "oleylammonium chloride",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "grigel2018-acs-chemmater-8b02908",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "grigel2018-acs-chemmater-8b02908",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reactor: three-neck flask (Main PDF p.2).",
+        "Reaction temperature: 110 degC (Main PDF p.2).",
+        "Reaction time: 6 min (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Size not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
