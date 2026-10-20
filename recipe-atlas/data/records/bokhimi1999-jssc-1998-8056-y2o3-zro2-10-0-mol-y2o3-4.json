@@ -1,0 +1,337 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "bokhimi1999-jssc-1998-8056-y2o3-zro2-10-0-mol-y2o3-4",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "X. Bokhimi; A. Morales; A. Garcı́a-Ruiz; T.D. Xiao; H. Chen; P.R. Strutt (1999): Y2O3/ZrO2 (10.0 mol% Y2O3)",
+  "material": {
+    "formula": "ZrO2",
+    "family": "ZrO2 nanocrystals",
+    "elements": [
+      "Zr",
+      "O"
+    ],
+    "components": [
+      "ZrO2"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Precipitation",
+  "sources": [
+    {
+      "id": "bokhimi1999-jssc-1998-8056",
+      "doi": "10.1006/jssc.1998.8056",
+      "title": "Transformation of Yttrium-Doped Hydrated Zirconium into Tetragonal and Cubic Nanocrystalline Zirconia",
+      "authors": "X. Bokhimi; A. Morales; A. Garcı́a-Ruiz; T.D. Xiao; H. Chen; P.R. Strutt",
+      "year": 1999,
+      "url": "https://doi.org/10.1006/jssc.1998.8056",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "bokhimi1999-jssc-1998-8056",
+    "recipe_family": "bokhimi1999-jssc-1998-8056-y2o3-zro2-10-0-mol-y2o3-4",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "ZrO2",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "bokhimi1999-jssc-1998-8056",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "bokhimi1999-jssc-1998-8056-y2o3-zro2-10-0-mol-y2o3-4--zirconyl-chloride",
+      "name": "zirconyl chloride",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "bokhimi1999-jssc-1998-8056",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "bokhimi1999-jssc-1998-8056-y2o3-zro2-10-0-mol-y2o3-4--yttrium-chloride",
+      "name": "yttrium chloride",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "bokhimi1999-jssc-1998-8056",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "bokhimi1999-jssc-1998-8056-y2o3-zro2-10-0-mol-y2o3-4--ammonium-hydroxide",
+      "name": "ammonium hydroxide",
+      "formula": null,
+      "role": "solvent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "bokhimi1999-jssc-1998-8056",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "bokhimi1999-jssc-1998-8056-y2o3-zro2-10-0-mol-y2o3-4--after-s01-spray",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "bokhimi1999-jssc-1998-8056-y2o3-zro2-10-0-mol-y2o3-4--zirconyl-chloride",
+        "bokhimi1999-jssc-1998-8056-y2o3-zro2-10-0-mol-y2o3-4--yttrium-chloride",
+        "bokhimi1999-jssc-1998-8056-y2o3-zro2-10-0-mol-y2o3-4--ammonium-hydroxide"
+      ]
+    },
+    {
+      "id": "bokhimi1999-jssc-1998-8056-y2o3-zro2-10-0-mol-y2o3-4--after-s02-anneal",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "bokhimi1999-jssc-1998-8056-y2o3-zro2-10-0-mol-y2o3-4--after-s01-spray"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-spray",
+      "action": "spray",
+      "label": "Ultrasonically spray solution into reaction vessel",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "bokhimi1999-jssc-1998-8056-y2o3-zro2-10-0-mol-y2o3-4--zirconyl-chloride",
+        "bokhimi1999-jssc-1998-8056-y2o3-zro2-10-0-mol-y2o3-4--yttrium-chloride",
+        "bokhimi1999-jssc-1998-8056-y2o3-zro2-10-0-mol-y2o3-4--ammonium-hydroxide"
+      ],
+      "outputs": [
+        "bokhimi1999-jssc-1998-8056-y2o3-zro2-10-0-mol-y2o3-4--after-s01-spray"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "bokhimi1999-jssc-1998-8056",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Ultrasonically spray solution into reaction vessel",
+      "evidence": [
+        {
+          "source_id": "bokhimi1999-jssc-1998-8056",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "s02-anneal",
+      "action": "anneal",
+      "label": "Anneal at 400°C",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-spray"
+      ],
+      "inputs": [
+        "bokhimi1999-jssc-1998-8056-y2o3-zro2-10-0-mol-y2o3-4--after-s01-spray"
+      ],
+      "outputs": [
+        "bokhimi1999-jssc-1998-8056-y2o3-zro2-10-0-mol-y2o3-4--after-s02-anneal"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 400,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "400 °C",
+          "evidence": [
+            {
+              "source_id": "bokhimi1999-jssc-1998-8056",
+              "locator": "Main PDF p.9"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "bokhimi1999-jssc-1998-8056",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Anneal at 400°C",
+      "evidence": [
+        {
+          "source_id": "bokhimi1999-jssc-1998-8056",
+          "locator": "Main PDF p.9"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "bokhimi1999-jssc-1998-8056-y2o3-zro2-10-0-mol-y2o3-4--product",
+      "source_sample_label": "Y2O3/ZrO2 (10.0 mol% Y2O3)",
+      "batch_id": null,
+      "material_state_id": "bokhimi1999-jssc-1998-8056-y2o3-zro2-10-0-mol-y2o3-4--after-s02-anneal",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "ZrO2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "bokhimi1999-jssc-1998-8056",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "bokhimi1999-jssc-1998-8056",
+          "locator": "Main PDF p.9"
+        }
+      ],
+      "notes": [
+        "Reactor: reaction vessel (Main PDF p.3).",
+        "Reaction temperature: 400 degC (Main PDF p.9)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of zirconyl chloride not reported in the extracted text.",
+      "Amount of yttrium chloride not reported in the extracted text.",
+      "Amount of ammonium hydroxide not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
