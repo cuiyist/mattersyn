@@ -1,5 +1,13 @@
 Owner revisit list: [Machine-extracted papers](research-assets/public-audits/MACHINE_EXTRACTED_PAPERS.md).
 
+## Owner resume and free-particle scope — 2026-10-20T02:54:03.350501+00:00
+
+The owner ended the October 19 13:29 pause. P51 is verified live at Site `11bde9a`: **2,020 papers / 5,549 records / 3,428 pairs**. Continue the same local Qwen3-32B Q4_K_M server, two-pass simple pipeline and normal release path; the existing 30-minute wake-up is active. The separate audited lane, Worker A/B queue, five older owner questions and sampling denominator remain paused and unchanged.
+
+New and read-but-unpublished batches admit only free isolable particles from solution/colloidal or free-particle gas/plasma/laser synthesis. Particle synthesis followed by film/device assembly stays in scope; continuous films, substrate/solid-confined products and bulk alloy/ceramic/glass/device-only routes are excluded. Screen available title/abstract or saved pairs locally before model time. Uncertain sources remain out of batches. Already-live papers stay unchanged: the repository-only owner revisit list has 58 title-based outside-scope papers, with no scope-based source rereads or website removals.
+
+Initial queue census: **2,815 entries, 74 in scope**, including technical holds; 1,953 read and 862 unread. The first ready subset has 14 papers / 29 records / 72 existing crops. Four source-confirmed typed temperature-unit fixes and the converter regression ship with that batch, not separately. Full details and actual release status remain in the single job report and curation control. No new publication or rate is claimed before deployment and anonymous verification.
+
 ## P51 verified; owner pause — 2026-10-20T00:31:42.077482+00:00
 
 **51 distinct primary papers /69 source_extracted records /195 figure crops /440 Reader caption instances** are deployed and anonymously verified at 2026-10-20T00:00:15+00:00. Actual totals are **2,020 papers /5,549 canonical records /3,428 recipe–structure pairs**. Audited244 papers/864 pairs and all six audited-only training exports remain unchanged. No independent scientific audit, calibrated accuracy, gold or training credit is asserted for these51 papers.

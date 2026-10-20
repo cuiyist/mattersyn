@@ -23,9 +23,19 @@ converted records against the canonical schema. Its OpenAI-compatible
 address is `http://127.0.0.1:8080/v1`. No source processing uses an outside model.
 Do not use `--allow-remote` or single-pass generation in this workflow.
 
-Take the next existing screened, locally available primary PDFs whose DOI is not
-on the site. Do not run new reading-based screening before extraction. The first
-batch has 20 papers; subsequent batches have about 50. Expand globs in PowerShell
+Owner scope update, October 19: take existing screened, locally available primary
+PDFs whose DOI is not on the site and whose synthesis produces free isolable
+nanocrystals or nanoparticles. Solution/colloidal and free-particle gas/plasma/
+laser formation are in scope, including later assembly into films or devices.
+Continuous films, bulk alloys/ceramics/glass, device-only studies and particles
+formed only in solids or on substrates are out. Uncertain isolability is out of
+new batches. Screen available titles/abstracts, or saved pairs for read papers,
+locally before spending model time; apply this to every unpublished batch.
+Do not remove or reread live papers for this scope update. List title-based live
+outside-scope contributions only in the repository owner revisit list. Refill
+from the existing screened list when the in-scope queue runs out; if none can be
+found, record exhaustion and stop building batches. The first batch has 20 papers;
+subsequent batches have about 50, without padding with out-of-scope papers. Expand globs in PowerShell
 before invoking Python; `*.pdf` is not expanded by Python's argument parser:
 
 ```powershell

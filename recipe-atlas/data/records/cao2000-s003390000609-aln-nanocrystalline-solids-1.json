@@ -1,0 +1,515 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "cao2000-s003390000609-aln-nanocrystalline-solids-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Y.G. Cao (2000): AlN nanocrystalline solids",
+  "material": {
+    "formula": "AlN",
+    "family": "AlN nanocrystals",
+    "elements": [
+      "Al",
+      "N"
+    ],
+    "components": [
+      "AlN"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Ammonothermal",
+  "sources": [
+    {
+      "id": "cao2000-s003390000609",
+      "doi": "10.1007/s003390000609",
+      "title": "Synthesis and photoluminescence characteristics of AlN nanocrystalline solids",
+      "authors": "Y.G. Cao, X.L. Chen, Y.C. Lan, J.Y. Li, Y.P. Xu, T. Xu, Y. Zhang, J.K. Liang",
+      "year": 2000,
+      "url": "https://doi.org/10.1007/s003390000609",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "cao2000-s003390000609",
+    "recipe_family": "cao2000-s003390000609-aln-nanocrystalline-solids-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": 18,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "18 nm",
+      "evidence": [
+        {
+          "source_id": "cao2000-s003390000609",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "cao2000-s003390000609-aln-nanocrystalline-solids-1--al-metal",
+      "name": "Al metal",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "cao2000-s003390000609",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "cao2000-s003390000609-aln-nanocrystalline-solids-1--nh4cl",
+      "name": "NH4Cl",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "cao2000-s003390000609",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "cao2000-s003390000609-aln-nanocrystalline-solids-1--nh4i",
+      "name": "NH4I",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "cao2000-s003390000609",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "cao2000-s003390000609-aln-nanocrystalline-solids-1--liquid-ammonia",
+      "name": "liquid ammonia",
+      "formula": null,
+      "role": "solvent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "cao2000-s003390000609",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "cao2000-s003390000609-aln-nanocrystalline-solids-1--after-s01-put",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "cao2000-s003390000609-aln-nanocrystalline-solids-1--al-metal",
+        "cao2000-s003390000609-aln-nanocrystalline-solids-1--nh4cl",
+        "cao2000-s003390000609-aln-nanocrystalline-solids-1--nh4i"
+      ]
+    },
+    {
+      "id": "cao2000-s003390000609-aln-nanocrystalline-solids-1--after-s02-fill",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "cao2000-s003390000609-aln-nanocrystalline-solids-1--after-s01-put",
+        "cao2000-s003390000609-aln-nanocrystalline-solids-1--liquid-ammonia"
+      ]
+    },
+    {
+      "id": "cao2000-s003390000609-aln-nanocrystalline-solids-1--after-s03-heat",
+      "name": "mixture after step 3",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "cao2000-s003390000609-aln-nanocrystalline-solids-1--after-s02-fill"
+      ]
+    },
+    {
+      "id": "cao2000-s003390000609-aln-nanocrystalline-solids-1--after-s04-cool",
+      "name": "mixture after step 4",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "cao2000-s003390000609-aln-nanocrystalline-solids-1--after-s03-heat"
+      ]
+    },
+    {
+      "id": "cao2000-s003390000609-aln-nanocrystalline-solids-1--after-s05-collect",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "cao2000-s003390000609-aln-nanocrystalline-solids-1--after-s04-cool"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-put",
+      "action": "put",
+      "label": "Put Al metal and (NH4Cl+NH4I) mixture into autoclave",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "cao2000-s003390000609-aln-nanocrystalline-solids-1--al-metal",
+        "cao2000-s003390000609-aln-nanocrystalline-solids-1--nh4cl",
+        "cao2000-s003390000609-aln-nanocrystalline-solids-1--nh4i"
+      ],
+      "outputs": [
+        "cao2000-s003390000609-aln-nanocrystalline-solids-1--after-s01-put"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Put Al metal and (NH4Cl+NH4I) mixture into autoclave",
+      "evidence": [
+        {
+          "source_id": "cao2000-s003390000609",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "s02-fill",
+      "action": "fill",
+      "label": "Fill autoclave with liquid ammonia",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-put"
+      ],
+      "inputs": [
+        "cao2000-s003390000609-aln-nanocrystalline-solids-1--after-s01-put",
+        "cao2000-s003390000609-aln-nanocrystalline-solids-1--liquid-ammonia"
+      ],
+      "outputs": [
+        "cao2000-s003390000609-aln-nanocrystalline-solids-1--after-s02-fill"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Fill autoclave with liquid ammonia",
+      "evidence": [
+        {
+          "source_id": "cao2000-s003390000609",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "s03-heat",
+      "action": "heat",
+      "label": "Maintain autoclave at high temperature",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-fill"
+      ],
+      "inputs": [
+        "cao2000-s003390000609-aln-nanocrystalline-solids-1--after-s02-fill"
+      ],
+      "outputs": [
+        "cao2000-s003390000609-aln-nanocrystalline-solids-1--after-s03-heat"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 72,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "72 h",
+          "evidence": [
+            {
+              "source_id": "cao2000-s003390000609",
+              "locator": "Main PDF p.1"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Maintain autoclave at high temperature",
+      "evidence": [
+        {
+          "source_id": "cao2000-s003390000609",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "s04-cool",
+      "action": "cool",
+      "label": "Cool autoclave to room temperature",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s03-heat"
+      ],
+      "inputs": [
+        "cao2000-s003390000609-aln-nanocrystalline-solids-1--after-s03-heat"
+      ],
+      "outputs": [
+        "cao2000-s003390000609-aln-nanocrystalline-solids-1--after-s04-cool"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Cool autoclave to room temperature",
+      "evidence": [
+        {
+          "source_id": "cao2000-s003390000609",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "s05-collect",
+      "action": "collect",
+      "label": "Collect and wash white condensed products",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s04-cool"
+      ],
+      "inputs": [
+        "cao2000-s003390000609-aln-nanocrystalline-solids-1--after-s04-cool"
+      ],
+      "outputs": [
+        "cao2000-s003390000609-aln-nanocrystalline-solids-1--after-s05-collect"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Collect and wash white condensed products",
+      "evidence": [
+        {
+          "source_id": "cao2000-s003390000609",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "cao2000-s003390000609-aln-nanocrystalline-solids-1--product",
+      "source_sample_label": "AlN nanocrystalline solids",
+      "batch_id": null,
+      "material_state_id": "cao2000-s003390000609-aln-nanocrystalline-solids-1--after-s05-collect",
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "cao2000-s003390000609",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reactor: 35 ml stainless steel autoclave with platinum inner liner (Main PDF p.1).",
+        "Reaction time: 72 h (Main PDF p.1)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "cao2000-s003390000609-aln-nanocrystalline-solids-1--size",
+      "sample_id": "cao2000-s003390000609-aln-nanocrystalline-solids-1--product",
+      "property": "diameter",
+      "technique": "TEM",
+      "value": {
+        "value": 18,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "18 nm",
+        "evidence": [
+          {
+            "source_id": "cao2000-s003390000609",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "cao2000-s003390000609",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Amount of Al metal not reported in the extracted text.",
+      "Amount of NH4Cl not reported in the extracted text.",
+      "Amount of NH4I not reported in the extracted text.",
+      "Amount of liquid ammonia not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

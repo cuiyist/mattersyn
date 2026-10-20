@@ -61,6 +61,13 @@ def temperature_unit_compatible(unit):
     return re.search(r'(?<![a-z])(?:[pnumkmgµμ]?w(?:atts?)?|(?:pico|nano|micro|milli|kilo|mega|giga)watts?|power|[pnumkmgµμ]?ev|mtorr|rpm)(?![a-z])', written) is None
 
 
+def temperature_unit_name(unit, value):
+    """Normalize confirmed degree glyphs only for a separate numeric temperature."""
+    if type(value) in (int, float) and isinstance(unit, str) and unit.strip() in ('8C', '˚C'):
+        return '°C'
+    return unit
+
+
 def _formula_token(text):
     """The formula inside a composition phrase; preserve grouped composition punctuation."""
     phrase = re.sub(r'\s*([/@])\s*', r'\1', str(text))
@@ -310,7 +317,7 @@ class Builder:
             states.append(state)
             workup = (s.get('action') or '').lower() in WORKUP
             parameters = {}
-            if s.get('temperature') is not None and temperature_unit_compatible(s.get('temperature_unit')): parameters['temperature'] = self.quantity(s['temperature'], s.get('temperature_unit') or '°C', s.get('page'))
+            if s.get('temperature') is not None and temperature_unit_compatible(s.get('temperature_unit')): parameters['temperature'] = self.quantity(s['temperature'], temperature_unit_name(s.get('temperature_unit'), s['temperature']) or '°C', s.get('page'))
             if s.get('time') is not None: parameters['duration'] = self.quantity(s['time'], s.get('time_unit') or 'min', s.get('page'))
             for m in materials:  # a chemical first used in a workup step belongs to the workup
                 if m['id'] in state['parent_ids'] and workup and not any(m['id'] in o['inputs'] for o in operations): m['stage'] = 'workup'
@@ -366,7 +373,7 @@ class Builder:
         notes = []
         if rc.get('reactor') and reactor_value_compatible(rc["reactor"].get("value")): notes.append(f'Reactor: {rc["reactor"]["value"]} (Main PDF p.{rc["reactor"].get("page", "?")}).')
         for key, label in (('reaction_temperature', 'Reaction temperature'), ('reaction_time', 'Reaction time')):
-            if rc.get(key) and (key != 'reaction_temperature' or temperature_unit_compatible(rc[key].get('unit'))): notes.append(f'{label}: {rc[key]["value"]:g} {unit_name(rc[key].get("unit"))} (Main PDF p.{rc[key].get("page", "?")}).')
+            if rc.get(key) and (key != 'reaction_temperature' or temperature_unit_compatible(rc[key].get('unit'))): notes.append(f'{label}: {rc[key]["value"]:g} {unit_name(temperature_unit_name(rc[key].get("unit"), rc[key]["value"]) if key == 'reaction_temperature' else rc[key].get("unit"))} (Main PDF p.{rc[key].get("page", "?")}).')
         product['notes'] = notes
         return {'schema_version': '1.3.0', 'record_id': rid, 'revision': 1, 'record_type': 'literature_protocol',
                 'title': f'{(self.doc.get("authors") or self.source_id).split(",")[0].strip()} ({self.doc.get("year") or "n.d."}): {pair.get("product") or composition}',
