@@ -1,0 +1,320 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "sugimura2008-s00339-008-4719-4-surface-hydrogenated-silicon-nanocrystal-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Ikurou Umezu · Issei Kondo · Akira Sugimura (2008): surface hydrogenated silicon nanocrystallites",
+  "material": {
+    "formula": "Si",
+    "family": "Si nanocrystals",
+    "elements": [
+      "Si"
+    ],
+    "components": [
+      "Si"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Pulsed laser ablation",
+  "sources": [
+    {
+      "id": "sugimura2008-s00339-008-4719-4",
+      "doi": "10.1007/s00339-008-4719-4",
+      "title": "Formation of surface stabilized Si nanocrystal by pulsed laser ablation in hydrogen gas",
+      "authors": "Ikurou Umezu · Issei Kondo · Akira Sugimura",
+      "year": 2008,
+      "url": "https://doi.org/10.1007/s00339-008-4719-4",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "sugimura2008-s00339-008-4719-4",
+    "recipe_family": "sugimura2008-s00339-008-4719-4-surface-hydrogenated-silicon-nanocrystal-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Si",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "sugimura2008-s00339-008-4719-4",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "sugimura2008-s00339-008-4719-4-surface-hydrogenated-silicon-nanocrystal-1--hydrogen",
+      "name": "hydrogen",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "sugimura2008-s00339-008-4719-4",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "sugimura2008-s00339-008-4719-4-surface-hydrogenated-silicon-nanocrystal-1--helium",
+      "name": "helium",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "sugimura2008-s00339-008-4719-4",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "sugimura2008-s00339-008-4719-4-surface-hydrogenated-silicon-nanocrystal-1--single-crystalline-si",
+      "name": "single-crystalline Si",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "sugimura2008-s00339-008-4719-4",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "sugimura2008-s00339-008-4719-4-surface-hydrogenated-silicon-nanocrystal-1--after-s01-introduce",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "sugimura2008-s00339-008-4719-4-surface-hydrogenated-silicon-nanocrystal-1--hydrogen",
+        "sugimura2008-s00339-008-4719-4-surface-hydrogenated-silicon-nanocrystal-1--helium"
+      ]
+    },
+    {
+      "id": "sugimura2008-s00339-008-4719-4-surface-hydrogenated-silicon-nanocrystal-1--after-s02-ablate",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "sugimura2008-s00339-008-4719-4-surface-hydrogenated-silicon-nanocrystal-1--after-s01-introduce",
+        "sugimura2008-s00339-008-4719-4-surface-hydrogenated-silicon-nanocrystal-1--single-crystalline-si"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-introduce",
+      "action": "introduce",
+      "label": "Introduce hydrogen and helium gas",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "sugimura2008-s00339-008-4719-4-surface-hydrogenated-silicon-nanocrystal-1--hydrogen",
+        "sugimura2008-s00339-008-4719-4-surface-hydrogenated-silicon-nanocrystal-1--helium"
+      ],
+      "outputs": [
+        "sugimura2008-s00339-008-4719-4-surface-hydrogenated-silicon-nanocrystal-1--after-s01-introduce"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "hydrogen",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "sugimura2008-s00339-008-4719-4",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Introduce hydrogen and helium gas",
+      "evidence": [
+        {
+          "source_id": "sugimura2008-s00339-008-4719-4",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-ablate",
+      "action": "ablate",
+      "label": "Pulsed laser ablation of Si target",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-introduce"
+      ],
+      "inputs": [
+        "sugimura2008-s00339-008-4719-4-surface-hydrogenated-silicon-nanocrystal-1--after-s01-introduce",
+        "sugimura2008-s00339-008-4719-4-surface-hydrogenated-silicon-nanocrystal-1--single-crystalline-si"
+      ],
+      "outputs": [
+        "sugimura2008-s00339-008-4719-4-surface-hydrogenated-silicon-nanocrystal-1--after-s02-ablate"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "hydrogen",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "sugimura2008-s00339-008-4719-4",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Pulsed laser ablation of Si target",
+      "evidence": [
+        {
+          "source_id": "sugimura2008-s00339-008-4719-4",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "sugimura2008-s00339-008-4719-4-surface-hydrogenated-silicon-nanocrystal-1--product",
+      "source_sample_label": "surface hydrogenated silicon nanocrystallites",
+      "batch_id": null,
+      "material_state_id": "sugimura2008-s00339-008-4719-4-surface-hydrogenated-silicon-nanocrystal-1--after-s02-ablate",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Si",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "sugimura2008-s00339-008-4719-4",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": "Si–H bonds",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "sugimura2008-s00339-008-4719-4",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "sugimura2008-s00339-008-4719-4",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Shape not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of hydrogen not reported in the extracted text.",
+      "Amount of helium not reported in the extracted text.",
+      "Amount of single-crystalline Si not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

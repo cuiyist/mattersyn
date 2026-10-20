@@ -1,3 +1,7 @@
+## Q15 preparation — 2026-10-20T06:55:54.512786+00:00
+
+Q14 is verified live at Site `3f02e7d65de15c0dd81051c5107aa8db1d9e5728` (2,034 papers / 5,578 records / 3,457 pairs). Q15 preparation grants no publication credit. New source-extracted particle papers retain that data status and ordinary neutral display; existing audited records and six training exports are protected. Normal source, rights, boundary, browser, CI, deployment and anonymous verification gates remain required.
+
 ## Q14 verified live — 2026-10-20T05:33:48+00:00
 
 **14 distinct in-scope primary papers / 29 source_extracted records / 72 figure crops / 220 Reader caption instances are deployed and anonymously verified.** Actual Site `3f02e7d65de15c0dd81051c5107aa8db1d9e5728` passed [Pages 39374574085](https://github.com/cuiyist/mattersyn-site/actions/runs/39374574085); the unchanged anonymous check passed 356 files, including 320 changed files, 14 paper routes and 17 material bindings, with zero mismatches or failed routes. Actual totals are **2,034 papers / 5,578 records / 3,457 recipe–structure pairs**.

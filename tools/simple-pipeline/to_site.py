@@ -202,8 +202,8 @@ def _composition_from(pair):
 
 
 def first_upper(text):
-    # Only the confirmed numeric U+100010C degree-glyph defect in step text.
-    text = re.sub(r'(?<![\w.])([+-]?(?:\d+(?:\.\d+)?|\.\d+))(\s*)\U00100010(?=C\b)', r'\1\2°', text)
+    # Only the confirmed numeric U+100010C / U+100001C degree-glyph defects in step text.
+    text = re.sub(r'(?<![\w.])([+-]?(?:\d+(?:\.\d+)?|\.\d+))(\s*)[\U00100010\U00100001](?=C\b)', r'\1\2°', text)
     return text[:1].upper() + text[1:]
 
 
