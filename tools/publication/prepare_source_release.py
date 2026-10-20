@@ -20,6 +20,7 @@ import shutil
 import subprocess
 import sys
 import tempfile
+from concurrent.futures import ThreadPoolExecutor
 from baseline_control import BASELINE, generate as generate_baseline
 
 MANIFEST = 'publication/project-allowlist.json'
@@ -118,6 +119,27 @@ def review_map(receipt, head):
     return rows
 
 
+def read_staged_member(root, item):
+    """Fresh exact bytes and staged blob verification for one independent member."""
+    name, info = item
+    path = member(root, name)
+    content = path.read_bytes()
+    # --no-filters catches CRLF and clean-filter changes as well as a raced edit.
+    # Compute the exact Git blob identity in-process, avoiding one Git
+    # process per file. No clean filters or newline transformations apply.
+    algorithm = 'sha1' if len(info['oid']) == 40 else 'sha256'
+    actual = hashlib.new(algorithm, b'blob ' + str(len(content)).encode() + b'\0' + content).hexdigest()
+    if actual != info['oid']:
+        raise PreparationError('Working file differs from exact staged bytes: ' + name)
+    return name, content
+
+
+def read_staged_members(root, staged):
+    """Keep index order and its first exception while reading with eight workers."""
+    with ThreadPoolExecutor(max_workers=8) as workers:
+        return dict(workers.map(lambda item: read_staged_member(root, item), staged.items()))
+
+
 def prepare(root, receipt, release_id, guard, config, now=None):
     """Return baseline, blueprint and allowlist bytes with a read-only plan."""
     root = Path(root).resolve(strict=True)
@@ -132,18 +154,7 @@ def prepare(root, receipt, release_id, guard, config, now=None):
     head = git(root, 'rev-parse', 'HEAD').decode().strip()
     rows = review_map(receipt, head)
     staged = index_files(root)
-    raw = {}
-    for name, info in staged.items():
-        path = member(root, name)
-        content = path.read_bytes()
-        # --no-filters catches CRLF and clean-filter changes as well as a raced edit.
-        # Compute the exact Git blob identity in-process, avoiding one Git
-        # process per file. No clean filters or newline transformations apply.
-        algorithm = 'sha1' if len(info['oid']) == 40 else 'sha256'
-        actual = hashlib.new(algorithm, b'blob ' + str(len(content)).encode() + b'\0' + content).hexdigest()
-        if actual != info['oid']:
-            raise PreparationError('Working file differs from exact staged bytes: ' + name)
-        raw[name] = content
+    raw = read_staged_members(root, staged)
     previous = json.loads(git(root, 'show', 'HEAD:' + MANIFEST))
     if previous.get('schema_version') != 'mattersyn-public-release-allowlist/1' or previous.get('repo') != 'mattersyn':
         raise PreparationError('Invalid existing source allowlist')

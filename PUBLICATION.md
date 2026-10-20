@@ -1,3 +1,13 @@
+## Q17 verified; Q18 Source-integrated and unpublished — 2026-10-20T20:28:06.479159+00:00
+
+**Q17 verified live at 2026-10-20T20:17:28+00:00: 50 papers / 70 source_extracted records / 246 captioned crop keys.** Verified website totals are **2,134 papers / 5,722 records / 3,601 recipe–structure pairs**. Source `98f7addfc3c2434e2346d56429228fac50db4105` passed 13 local phases and actual 103-route GUI; [PR80](https://github.com/cuiyist/mattersyn/pull/80) passed all three exact-head [CI jobs 39475285788](https://github.com/cuiyist/mattersyn/actions/runs/39475285788) and merged as `92605846d7205521d12914b2c524a66c31e66fe7`. [Site b5e4617](https://github.com/cuiyist/mattersyn-site/commit/b5e4617eede867d238b1206c0f64e0239de16076) passed [Pages 39488445831](https://github.com/cuiyist/mattersyn-site/actions/runs/39488445831) and unchanged anonymous verification: 924 files, 50 paper routes and 95 material bindings, zero mismatches/failures. The normal Site GUI receipt reused the existing 103-route observations only after complete snapshot/file-map/byte equality; it claims no new screenshot files or visits.
+
+Measured stage elapsed: normal dry run 44.38 minutes; private full-byte GUI equality 14.08 minutes; normal push/Pages/anonymous about 22 minutes (normal cumulative push-to-verification 1,318.5 seconds). These stages are not a sustained throughput or speedup estimate.
+
+**Q18 is Source-integrated and unpublished: 50 papers / 71 records / 308 caption-bound crop keys, with 19 limited deletion-only read markers.** Normal integration produced 5,793 canonical records while preserving all preceding 5,722 record bytes and all six audited-only exports. Normal asset registration checked 654 assets and added 619, with zero new path rules. The parallel-read Source preparer and its tests are applied; the focused and existing preparer suite ran 25 tests in 28.626 seconds, passing with one real-symlink skip. Production speedup is unmeasured. Q18 commit, normal preparation/local checks/GUI, exact-head CI, deployment and anonymous verification remain pending; publication credit is zero. The five accepted B119 surplus papers remain separate and preserved. The Q18rowtable stays private and is not marked live in the published-paper index.
+
+The repository-only 58-paper revisit section, five older owner questions, paused audited lane/Worker A/B, audited 244 papers / 864 pairs, six audited-only exports and sampling denominator remain unchanged. No independent-audit, gold, training-ready, calibrated-accuracy, corpus-exhaustion or sustained-rate claim is added.
+
 Current checkpoint 2026-10-20T17:25:56.549649+00:00; owner revisit list: research-assets/public-audits/MACHINE_EXTRACTED_PAPERS.md.
 
 ## Q16 verified live; Q17 Source-integrated and pending

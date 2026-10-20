@@ -1,63 +1,62 @@
 # Published machine-extracted papers
 
-## Pending Q17 contributions — combined pool, not live
+## Q17 contributions — verified live 2026-10-20T20:17:28+00:00
 
-50 papers/70 source_extracted records/246 captioned crop keys are in the accepted combined private pool. The33-paper base is integrated; the additional17 await import. Canonical count is5,696 at the last integration receipt;5,722 is an expectation until the extra import passes. All live dates remain pending; publication credit is zero.
+50 papers / 70 source_extracted records / 246 captioned crop keys were deployed and anonymously verified. Source 98f7add passed all 13 local phases, actual 103-route GUI, all three exact-head CI jobs 39475285788 and ordinary PR80 merge 92605846. Site b5e4617eede867d238b1206c0f64e0239de16076 passed Pages 39488445831 and anonymous verification at2026-10-20T20:17:28+00:00. These are source_extracted contributions, not independent scientific audits.
 
 | DOI | Record IDs | Origin | Live verified | Limited rare read |
 |---|---|---|---|---|
-| 10.1021/acs.cgd.4c00150 | dehm2024-acs-cgd-4c00150-cuins2-qds-5-min-colloidal-annealing-1, dehm2024-acs-cgd-4c00150-cuins2-qds-90-min-colloidal-annealing-2, dehm2024-acs-cgd-4c00150-cis-zns-core-shell-qds-5-min-colloidal-a-3 | B117 | pending | yes |
-| 10.1021/acs.chemmater.0c01750 | bi2020-acs-chemmater-0c01750-cspb0-93zn0-07i3-qds-1 | B117 | pending | yes |
-| 10.1021/acs.chemmater.5b02786 | reinhart2015-acs-chemmater-5b02786-3-mpa-capped-pbs-qds-1 | B117 | pending | no |
-| 10.1021/acs.chemmater.5c01153 | munyebvu2025-acs-chemmater-5c01153-cspbbr3-ncs-1 | B117 | pending | no |
-| 10.1021/acs.chemmater.6b02917 | shapiro2016-acs-chemmater-6b02917-pbse-cqds-14-nm-1, shapiro2016-acs-chemmater-6b02917-pbse-pbs-core-shell-cqds-5-3-nm-2 | B117 | pending | yes |
-| 10.1021/acs.chemmater.7b02204 | ramasamy2017-acs-chemmater-7b02204-in-zn-p-znse-zns-qds-emitting-at-535-nm-1 | B117 | pending | yes |
-| 10.1021/acs.chemmater.8b02908 | grigel2018-acs-chemmater-8b02908-hgse-ncs-5-8-nm-1, grigel2018-acs-chemmater-8b02908-hgse-ncs-4-4-nm-2 | B117 | pending | no |
-| 10.1021/acs.inorgchem.3c00161 | park2023-acs-inorgchem-3c00161-inp-zno-qds-1 | B117 | pending | yes |
-| 10.1021/acs.inorgchem.3c04511 | yang2024-acs-inorgchem-3c04511-hgte-colloidal-quantum-dots-cqds-1 | B117 | pending | no |
-| 10.1021/acs.jpcc.1c04896 | yang2021-acs-jpcc-1c04896-white-qds-1 | B117 | pending | yes |
-| 10.1021/acs.jpcc.2c07272 | zhong2023-acs-jpcc-2c07272-si-qds-no-c2-sample-1 | B117 | pending | no |
-| 10.1021/acs.jpcc.4c02444 | song2024-acs-jpcc-4c02444-sample-a-pbs-cqds-3-8-nm-1, song2024-acs-jpcc-4c02444-sample-b-pbs-cqds-4-4-nm-2, song2024-acs-jpcc-4c02444-sample-c-pbs-cqds-5-1-nm-3 | B117 | pending | no |
-| 10.1021/acs.jpcc.5b03086 | grumbach2015-acs-jpcc-5b03086-cdse-cds-core-shell-cqds-3-4-nm-core-3-m-1 | B117 | pending | no |
-| 10.1021/acs.jpclett.0c01550 | zhang2020-acs-jpclett-0c01550-spherical-hgte-cqds-edge-at-2527-cm1-1, zhang2020-acs-jpclett-0c01550-tetrahedral-hgte-cqds-edge-at-2434-cm1-2 | B117 | pending | no |
-| 10.1021/acs.langmuir.5b00847 | mnoyan2015-acs-langmuir-5b00847-inp-fs-qds-1 | B117 | pending | no |
-| 10.1021/acs.nanolett.1c01223 | darwan2021-acs-nanolett-1c01223-in-zn-as-znse-zns-qd-538-nm-1 | B117 | pending | yes |
-| 10.1021/acs.nanolett.5c04666 | yamada2025-acs-nanolett-5c04666-cr-inp-zns-qds-1 | B117 | pending | no |
-| 10.1021/acsami.6b16170 | hunter2017-acsami-6b16170-ge-si-core-shell-qds-1 | B117 | pending | no |
-| 10.1021/acsanm.1c03030 | ouyang2021-acsanm-1c03030-ag2te-qds-6-1-ag-te-feed-molar-ratio-tbp-1 | B117 | pending | no |
-| 10.1021/acsmaterialslett.3c01089 | yoo2024-acsmaterialslett-3c01089-ag2s-cqds-control-1, yoo2024-acsmaterialslett-3c01089-ag2s-cqds-dual-ligand-2 | B117 | pending | no |
-| 10.1021/acsphotonics.4c02258 | ma2025-acsphotonics-4c02258-pbs-cqd-1550-nm-1 | B117 | pending | no |
-| 10.1021/am302788q | zhan2013-am302788q-cdse-zns-qds-capped-with-la-zw-1 | B117 | pending | no |
-| 10.1021/cm302793k | yanover2012-cm302793k-pbse-pbs-core-shell-cqds-1 | B117 | pending | yes |
-| 10.1021/ja028416v | radovanovic2002-ja028416v-4-0-nm-4-3-co2-zno-qds-1, radovanovic2002-ja028416v-4-5-nm-0-2-ni2-zno-qds-2 | B117 | pending | yes |
-| 10.1021/ja063425f | norberg2006-ja063425f-co2-znse-qds-1 | B117 | pending | yes |
-| 10.1021/ja2079509 | keuleyan2011-ja2079509-hgte-colloidal-quantum-dots-1 | B117 | pending | no |
-| 10.1021/jacs.0c12871 | leemans2021-jacs-0c12871-in-as-p-qds-1220-nm-absorption-1 | B117 | pending | yes |
-| 10.1021/jacs.4c06202 | ban2024-jacs-4c06202-inas-cqds-synthesized-with-tmsi-3as-1, ban2024-jacs-4c06202-inas-cqds-synthesized-with-tmge-3as-2 | B117 | pending | no |
-| 10.1021/jacs.4c10755 | sheikh2024-jacs-4c10755-inas-znse-core-shell-colloidal-nanorod-q-1 | B117 | pending | yes |
-| 10.1021/jacs.6b01254 | tessier2016-jacs-6b01254-inp-znse-qds-1 | B117 | pending | yes |
-| 10.1021/jacs.7b00158 | reinhart2017-jacs-7b00158-3-mercaptopropionic-acid-3-mpa-capped-pb-1 | B117 | pending | no |
-| 10.1021/jp204249j | zhong2011-jp204249j-cuinse2-ncs-1, zhong2011-jp204249j-cuinse2-zns-core-shell-ncs-2 | B117 | pending | yes |
-| 10.1021/jp809398k | nose2009-jp809398k-cuinse2-qds-sample-a-1 | B117 | pending | no |
+| 10.1021/acs.cgd.4c00150 | dehm2024-acs-cgd-4c00150-cuins2-qds-5-min-colloidal-annealing-1, dehm2024-acs-cgd-4c00150-cuins2-qds-90-min-colloidal-annealing-2, dehm2024-acs-cgd-4c00150-cis-zns-core-shell-qds-5-min-colloidal-a-3 | B117 | 2026-10-20T20:17:28+00:00 | yes |
+| 10.1021/acs.chemmater.0c01750 | bi2020-acs-chemmater-0c01750-cspb0-93zn0-07i3-qds-1 | B117 | 2026-10-20T20:17:28+00:00 | yes |
+| 10.1021/acs.chemmater.5b02786 | reinhart2015-acs-chemmater-5b02786-3-mpa-capped-pbs-qds-1 | B117 | 2026-10-20T20:17:28+00:00 | no |
+| 10.1021/acs.chemmater.5c01153 | munyebvu2025-acs-chemmater-5c01153-cspbbr3-ncs-1 | B117 | 2026-10-20T20:17:28+00:00 | no |
+| 10.1021/acs.chemmater.6b02917 | shapiro2016-acs-chemmater-6b02917-pbse-cqds-14-nm-1, shapiro2016-acs-chemmater-6b02917-pbse-pbs-core-shell-cqds-5-3-nm-2 | B117 | 2026-10-20T20:17:28+00:00 | yes |
+| 10.1021/acs.chemmater.7b02204 | ramasamy2017-acs-chemmater-7b02204-in-zn-p-znse-zns-qds-emitting-at-535-nm-1 | B117 | 2026-10-20T20:17:28+00:00 | yes |
+| 10.1021/acs.chemmater.8b02908 | grigel2018-acs-chemmater-8b02908-hgse-ncs-5-8-nm-1, grigel2018-acs-chemmater-8b02908-hgse-ncs-4-4-nm-2 | B117 | 2026-10-20T20:17:28+00:00 | no |
+| 10.1021/acs.inorgchem.3c00161 | park2023-acs-inorgchem-3c00161-inp-zno-qds-1 | B117 | 2026-10-20T20:17:28+00:00 | yes |
+| 10.1021/acs.inorgchem.3c04511 | yang2024-acs-inorgchem-3c04511-hgte-colloidal-quantum-dots-cqds-1 | B117 | 2026-10-20T20:17:28+00:00 | no |
+| 10.1021/acs.jpcc.1c04896 | yang2021-acs-jpcc-1c04896-white-qds-1 | B117 | 2026-10-20T20:17:28+00:00 | yes |
+| 10.1021/acs.jpcc.2c07272 | zhong2023-acs-jpcc-2c07272-si-qds-no-c2-sample-1 | B117 | 2026-10-20T20:17:28+00:00 | no |
+| 10.1021/acs.jpcc.4c02444 | song2024-acs-jpcc-4c02444-sample-a-pbs-cqds-3-8-nm-1, song2024-acs-jpcc-4c02444-sample-b-pbs-cqds-4-4-nm-2, song2024-acs-jpcc-4c02444-sample-c-pbs-cqds-5-1-nm-3 | B117 | 2026-10-20T20:17:28+00:00 | no |
+| 10.1021/acs.jpcc.5b03086 | grumbach2015-acs-jpcc-5b03086-cdse-cds-core-shell-cqds-3-4-nm-core-3-m-1 | B117 | 2026-10-20T20:17:28+00:00 | no |
+| 10.1021/acs.jpclett.0c01550 | zhang2020-acs-jpclett-0c01550-spherical-hgte-cqds-edge-at-2527-cm1-1, zhang2020-acs-jpclett-0c01550-tetrahedral-hgte-cqds-edge-at-2434-cm1-2 | B117 | 2026-10-20T20:17:28+00:00 | no |
+| 10.1021/acs.langmuir.5b00847 | mnoyan2015-acs-langmuir-5b00847-inp-fs-qds-1 | B117 | 2026-10-20T20:17:28+00:00 | no |
+| 10.1021/acs.nanolett.1c01223 | darwan2021-acs-nanolett-1c01223-in-zn-as-znse-zns-qd-538-nm-1 | B117 | 2026-10-20T20:17:28+00:00 | yes |
+| 10.1021/acs.nanolett.5c04666 | yamada2025-acs-nanolett-5c04666-cr-inp-zns-qds-1 | B117 | 2026-10-20T20:17:28+00:00 | no |
+| 10.1021/acsami.6b16170 | hunter2017-acsami-6b16170-ge-si-core-shell-qds-1 | B117 | 2026-10-20T20:17:28+00:00 | no |
+| 10.1021/acsanm.1c03030 | ouyang2021-acsanm-1c03030-ag2te-qds-6-1-ag-te-feed-molar-ratio-tbp-1 | B117 | 2026-10-20T20:17:28+00:00 | no |
+| 10.1021/acsmaterialslett.3c01089 | yoo2024-acsmaterialslett-3c01089-ag2s-cqds-control-1, yoo2024-acsmaterialslett-3c01089-ag2s-cqds-dual-ligand-2 | B117 | 2026-10-20T20:17:28+00:00 | no |
+| 10.1021/acsphotonics.4c02258 | ma2025-acsphotonics-4c02258-pbs-cqd-1550-nm-1 | B117 | 2026-10-20T20:17:28+00:00 | no |
+| 10.1021/am302788q | zhan2013-am302788q-cdse-zns-qds-capped-with-la-zw-1 | B117 | 2026-10-20T20:17:28+00:00 | no |
+| 10.1021/cm302793k | yanover2012-cm302793k-pbse-pbs-core-shell-cqds-1 | B117 | 2026-10-20T20:17:28+00:00 | yes |
+| 10.1021/ja028416v | radovanovic2002-ja028416v-4-0-nm-4-3-co2-zno-qds-1, radovanovic2002-ja028416v-4-5-nm-0-2-ni2-zno-qds-2 | B117 | 2026-10-20T20:17:28+00:00 | yes |
+| 10.1021/ja063425f | norberg2006-ja063425f-co2-znse-qds-1 | B117 | 2026-10-20T20:17:28+00:00 | yes |
+| 10.1021/ja2079509 | keuleyan2011-ja2079509-hgte-colloidal-quantum-dots-1 | B117 | 2026-10-20T20:17:28+00:00 | no |
+| 10.1021/jacs.0c12871 | leemans2021-jacs-0c12871-in-as-p-qds-1220-nm-absorption-1 | B117 | 2026-10-20T20:17:28+00:00 | yes |
+| 10.1021/jacs.4c06202 | ban2024-jacs-4c06202-inas-cqds-synthesized-with-tmsi-3as-1, ban2024-jacs-4c06202-inas-cqds-synthesized-with-tmge-3as-2 | B117 | 2026-10-20T20:17:28+00:00 | no |
+| 10.1021/jacs.4c10755 | sheikh2024-jacs-4c10755-inas-znse-core-shell-colloidal-nanorod-q-1 | B117 | 2026-10-20T20:17:28+00:00 | yes |
+| 10.1021/jacs.6b01254 | tessier2016-jacs-6b01254-inp-znse-qds-1 | B117 | 2026-10-20T20:17:28+00:00 | yes |
+| 10.1021/jacs.7b00158 | reinhart2017-jacs-7b00158-3-mercaptopropionic-acid-3-mpa-capped-pb-1 | B117 | 2026-10-20T20:17:28+00:00 | no |
+| 10.1021/jp204249j | zhong2011-jp204249j-cuinse2-ncs-1, zhong2011-jp204249j-cuinse2-zns-core-shell-ncs-2 | B117 | 2026-10-20T20:17:28+00:00 | yes |
+| 10.1021/jp809398k | nose2009-jp809398k-cuinse2-qds-sample-a-1 | B117 | 2026-10-20T20:17:28+00:00 | no |
+| 10.1021/acsnano.4c08052 | thomas2024-acsnano-4c08052-sic-quantum-dots-qds-with-110-exfoliatio-1 | B118 | 2026-10-20T20:17:28+00:00 | no |
+| 10.1021/acsnano.5c12714 | deng2026-acsnano-5c12714-cis-zns-qds-1 | B118 | 2026-10-20T20:17:28+00:00 | no |
+| 10.1021/acsphotonics.9b00491 | zhang2019-acsphotonics-9b00491-pbs-1, zhang2019-acsphotonics-9b00491-mn0-007pbs-2, zhang2019-acsphotonics-9b00491-mn0-0115pbs-3, zhang2019-acsphotonics-9b00491-mn0-0166pbs-4 | B118 | 2026-10-20T20:17:28+00:00 | yes |
+| 10.1021/cm050110a | lucey2005-cm050110a-inp-qds-1 | B118 | 2026-10-20T20:17:28+00:00 | no |
+| 10.1021/ja047659f | pietryga2004-ja047659f-pbse-qds-0-34-ev-emission-1, pietryga2004-ja047659f-pbse-qds-0-34-ev-emission-high-temperatu-2 | B118 | 2026-10-20T20:17:28+00:00 | no |
+| 10.1021/ja908408m | deng2009-ja908408m-zn0-6cd0-4s0-5se0-5-qqds-1 | B118 | 2026-10-20T20:17:28+00:00 | yes |
+| 10.1021/jacs.6b06972 | jin2016-jacs-6b06972-wse2-sqds-4-1-nm-1 | B118 | 2026-10-20T20:17:28+00:00 | yes |
+| 10.1021/jacs.6c03474 | chang2026-jacs-6c03474-gaas-qds-1 | B118 | 2026-10-20T20:17:28+00:00 | no |
+| 10.1021/jp047035w | chen2004-jp047035w-znse-qds-1, chen2004-jp047035w-znse-zns-qds-2, chen2004-jp047035w-znse-znses-qds-3 | B118 | 2026-10-20T20:17:28+00:00 | yes |
+| 10.1021/jp710852q | ouyang2008-jp710852q-zncds-qds-1 | B118 | 2026-10-20T20:17:28+00:00 | yes |
+| 10.1021/la5044415 | wu2015-la5044415-pbs-cqds-1, wu2015-la5044415-pbse-cqds-2 | B118 | 2026-10-20T20:17:28+00:00 | no |
+| 10.1021/nl0702362 | archer2007-nl0702362-1-0-mn2-cdse-qds-d-2-64-nm-1, archer2007-nl0702362-1-5-co2-cdse-qds-d-2-76-nm-2 | B118 | 2026-10-20T20:17:28+00:00 | no |
+| 10.1021/nn503805h | keuleyan2014-nn503805h-hgte-cqds-5-5-nm-1, keuleyan2014-nn503805h-hgte-cqds-20-nm-2 | B118 | 2026-10-20T20:17:28+00:00 | no |
+| 10.1021/am302933x | chen2013-am302933x-ag2te-qds-1 | B118 | 2026-10-20T20:17:28+00:00 | no |
+| 10.1021/acs.chemmater.8b04282 | wang2018-acs-chemmater-8b04282-cis-zns-core-shell-qds-1 | B118 | 2026-10-20T20:17:28+00:00 | no |
+| 10.1021/ic9010949 | zhang2009-ic9010949-cdte-cdse-zns-core-shell-shell-qds-1 | B118 | 2026-10-20T20:17:28+00:00 | yes |
+| 10.1021/nn304765k | zhang2012-nn304765k-cdse-znxcd1-xs-qds-1 | B118 | 2026-10-20T20:17:28+00:00 | yes |
 
-Limited-read markers refer only to the saved bounded rare-product reads; they do not mean every variant was reviewed or independently audited. Preserve every existing index row, the repository-only 58-paper out-of-scope section and the prior footer unchanged.
-| 10.1021/acsnano.4c08052 | thomas2024-acsnano-4c08052-sic-quantum-dots-qds-with-110-exfoliatio-1 | B118 | pending | no |
-| 10.1021/acsnano.5c12714 | deng2026-acsnano-5c12714-cis-zns-qds-1 | B118 | pending | no |
-| 10.1021/acsphotonics.9b00491 | zhang2019-acsphotonics-9b00491-pbs-1, zhang2019-acsphotonics-9b00491-mn0-007pbs-2, zhang2019-acsphotonics-9b00491-mn0-0115pbs-3, zhang2019-acsphotonics-9b00491-mn0-0166pbs-4 | B118 | pending | yes |
-| 10.1021/cm050110a | lucey2005-cm050110a-inp-qds-1 | B118 | pending | no |
-| 10.1021/ja047659f | pietryga2004-ja047659f-pbse-qds-0-34-ev-emission-1, pietryga2004-ja047659f-pbse-qds-0-34-ev-emission-high-temperatu-2 | B118 | pending | no |
-| 10.1021/ja908408m | deng2009-ja908408m-zn0-6cd0-4s0-5se0-5-qqds-1 | B118 | pending | yes |
-| 10.1021/jacs.6b06972 | jin2016-jacs-6b06972-wse2-sqds-4-1-nm-1 | B118 | pending | yes |
-| 10.1021/jacs.6c03474 | chang2026-jacs-6c03474-gaas-qds-1 | B118 | pending | no |
-| 10.1021/jp047035w | chen2004-jp047035w-znse-qds-1, chen2004-jp047035w-znse-zns-qds-2, chen2004-jp047035w-znse-znses-qds-3 | B118 | pending | yes |
-| 10.1021/jp710852q | ouyang2008-jp710852q-zncds-qds-1 | B118 | pending | yes |
-| 10.1021/la5044415 | wu2015-la5044415-pbs-cqds-1, wu2015-la5044415-pbse-cqds-2 | B118 | pending | no |
-| 10.1021/nl0702362 | archer2007-nl0702362-1-0-mn2-cdse-qds-d-2-64-nm-1, archer2007-nl0702362-1-5-co2-cdse-qds-d-2-76-nm-2 | B118 | pending | no |
-| 10.1021/nn503805h | keuleyan2014-nn503805h-hgte-cqds-5-5-nm-1, keuleyan2014-nn503805h-hgte-cqds-20-nm-2 | B118 | pending | no |
-| 10.1021/am302933x | chen2013-am302933x-ag2te-qds-1 | B118 | pending | no |
-| 10.1021/acs.chemmater.8b04282 | wang2018-acs-chemmater-8b04282-cis-zns-core-shell-qds-1 | B118 | pending | no |
-| 10.1021/ic9010949 | zhang2009-ic9010949-cdte-cdse-zns-core-shell-shell-qds-1 | B118 | pending | yes |
-| 10.1021/nn304765k | zhang2012-nn304765k-cdse-znxcd1-xs-qds-1 | B118 | pending | yes |
 
 ## Q16 contributions — verified live 2026-10-20T16:55:58Z
 

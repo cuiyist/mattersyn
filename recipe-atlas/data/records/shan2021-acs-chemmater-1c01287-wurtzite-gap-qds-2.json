@@ -1,0 +1,530 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "shan2021-acs-chemmater-1c01287-wurtzite-gap-qds-2",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Xinyao Shan; Binghan Li; Botao Ji (2021): wurtzite GaP QDs",
+  "material": {
+    "formula": "GaP",
+    "family": "GaP nanocrystals",
+    "elements": [
+      "Ga",
+      "P"
+    ],
+    "components": [
+      "GaP"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Cation exchange",
+  "sources": [
+    {
+      "id": "shan2021-acs-chemmater-1c01287",
+      "doi": "10.1021/acs.chemmater.1c01287",
+      "title": "Synthesis of Wurtzite In and Ga Phosphide Quantum Dots Through Cation Exchange Reactions",
+      "authors": "Xinyao Shan; Binghan Li; Botao Ji",
+      "year": 2021,
+      "url": "https://doi.org/10.1021/acs.chemmater.1c01287",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "shan2021-acs-chemmater-1c01287",
+    "recipe_family": "shan2021-acs-chemmater-1c01287-wurtzite-gap-qds-2",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "GaP",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "shan2021-acs-chemmater-1c01287",
+          "locator": "Main PDF p.5"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "wurtzite",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "shan2021-acs-chemmater-1c01287",
+          "locator": "Main PDF p.5"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": 4.8,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "4.8 nm",
+      "evidence": [
+        {
+          "source_id": "shan2021-acs-chemmater-1c01287",
+          "locator": "Main PDF p.5"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "shan2021-acs-chemmater-1c01287-wurtzite-gap-qds-2--1-octadecene",
+      "name": "1-octadecene",
+      "formula": null,
+      "role": "solvent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "shan2021-acs-chemmater-1c01287",
+          "locator": "Main PDF p.8"
+        }
+      ]
+    },
+    {
+      "id": "shan2021-acs-chemmater-1c01287-wurtzite-gap-qds-2--cu3p-ncs",
+      "name": "Cu3P NCs",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "amount": {
+          "value": 0.05,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mmol",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0.05 mmol",
+          "evidence": [
+            {
+              "source_id": "shan2021-acs-chemmater-1c01287",
+              "locator": "Main PDF p.8"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "shan2021-acs-chemmater-1c01287",
+          "locator": "Main PDF p.8"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "shan2021-acs-chemmater-1c01287-wurtzite-gap-qds-2--after-s01-heat",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "shan2021-acs-chemmater-1c01287-wurtzite-gap-qds-2--after-s02-cool",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "shan2021-acs-chemmater-1c01287-wurtzite-gap-qds-2--after-s01-heat"
+      ]
+    },
+    {
+      "id": "shan2021-acs-chemmater-1c01287-wurtzite-gap-qds-2--after-s03-add",
+      "name": "mixture after step 3",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "shan2021-acs-chemmater-1c01287-wurtzite-gap-qds-2--after-s02-cool"
+      ]
+    },
+    {
+      "id": "shan2021-acs-chemmater-1c01287-wurtzite-gap-qds-2--after-s04-puriify",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "shan2021-acs-chemmater-1c01287-wurtzite-gap-qds-2--after-s03-add"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-heat",
+      "action": "heat",
+      "label": "Heat solution to 200 °C under N2",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "shan2021-acs-chemmater-1c01287-wurtzite-gap-qds-2--after-s01-heat"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 200,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "200 °C",
+          "evidence": [
+            {
+              "source_id": "shan2021-acs-chemmater-1c01287",
+              "locator": "Main PDF p.8"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 75,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "75 min",
+          "evidence": [
+            {
+              "source_id": "shan2021-acs-chemmater-1c01287",
+              "locator": "Main PDF p.8"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "shan2021-acs-chemmater-1c01287",
+            "locator": "Main PDF p.8"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Heat solution to 200 °C under N2",
+      "evidence": [
+        {
+          "source_id": "shan2021-acs-chemmater-1c01287",
+          "locator": "Main PDF p.8"
+        }
+      ]
+    },
+    {
+      "id": "s02-cool",
+      "action": "cool",
+      "label": "Cool solution to RT",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-heat"
+      ],
+      "inputs": [
+        "shan2021-acs-chemmater-1c01287-wurtzite-gap-qds-2--after-s01-heat"
+      ],
+      "outputs": [
+        "shan2021-acs-chemmater-1c01287-wurtzite-gap-qds-2--after-s02-cool"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "shan2021-acs-chemmater-1c01287",
+            "locator": "Main PDF p.8"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Cool solution to RT",
+      "evidence": [
+        {
+          "source_id": "shan2021-acs-chemmater-1c01287",
+          "locator": "Main PDF p.8"
+        }
+      ]
+    },
+    {
+      "id": "s03-add",
+      "action": "add",
+      "label": "Add DDT to improve colloidal stability",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-cool"
+      ],
+      "inputs": [
+        "shan2021-acs-chemmater-1c01287-wurtzite-gap-qds-2--after-s02-cool"
+      ],
+      "outputs": [
+        "shan2021-acs-chemmater-1c01287-wurtzite-gap-qds-2--after-s03-add"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 200,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "200 °C",
+          "evidence": [
+            {
+              "source_id": "shan2021-acs-chemmater-1c01287",
+              "locator": "Main PDF p.8"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 35,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "35 min",
+          "evidence": [
+            {
+              "source_id": "shan2021-acs-chemmater-1c01287",
+              "locator": "Main PDF p.8"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "shan2021-acs-chemmater-1c01287",
+            "locator": "Main PDF p.8"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Add DDT to improve colloidal stability",
+      "evidence": [
+        {
+          "source_id": "shan2021-acs-chemmater-1c01287",
+          "locator": "Main PDF p.8"
+        }
+      ]
+    },
+    {
+      "id": "s04-puriify",
+      "action": "puriify",
+      "label": "Purify GaP QDs with toluene and ethanol",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s03-add"
+      ],
+      "inputs": [
+        "shan2021-acs-chemmater-1c01287-wurtzite-gap-qds-2--after-s03-add"
+      ],
+      "outputs": [
+        "shan2021-acs-chemmater-1c01287-wurtzite-gap-qds-2--after-s04-puriify"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "shan2021-acs-chemmater-1c01287",
+            "locator": "Main PDF p.8"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Purify GaP QDs with toluene and ethanol",
+      "evidence": [
+        {
+          "source_id": "shan2021-acs-chemmater-1c01287",
+          "locator": "Main PDF p.8"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "shan2021-acs-chemmater-1c01287-wurtzite-gap-qds-2--product",
+      "source_sample_label": "wurtzite GaP QDs",
+      "batch_id": null,
+      "material_state_id": "shan2021-acs-chemmater-1c01287-wurtzite-gap-qds-2--after-s04-puriify",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "GaP",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "shan2021-acs-chemmater-1c01287",
+            "locator": "Main PDF p.5"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "wurtzite",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "shan2021-acs-chemmater-1c01287",
+            "locator": "Main PDF p.5"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "shan2021-acs-chemmater-1c01287",
+          "locator": "Main PDF p.8"
+        }
+      ],
+      "notes": [
+        "Reactor: round-bottom flask (Main PDF p.8).",
+        "Reaction temperature: 200 degC (Main PDF p.8).",
+        "Reaction time: 75 min (Main PDF p.8)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "shan2021-acs-chemmater-1c01287-wurtzite-gap-qds-2--size",
+      "sample_id": "shan2021-acs-chemmater-1c01287-wurtzite-gap-qds-2--product",
+      "property": "particle_size",
+      "technique": "not reported",
+      "value": {
+        "value": 4.8,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "4.8 nm",
+        "evidence": [
+          {
+            "source_id": "shan2021-acs-chemmater-1c01287",
+            "locator": "Main PDF p.5"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "shan2021-acs-chemmater-1c01287",
+          "locator": "Main PDF p.5"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Amount of 1-octadecene not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
