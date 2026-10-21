@@ -1,5 +1,16 @@
 # Published machine-extracted papers
 
+## Q21 contributions — verified live 2026-10-21T18:27:52+00:00
+
+4 papers / 5 source_extracted records / 25 captioned crop keys; limited reads are not independent audits.
+
+| DOI | Record IDs | Origin | Live verified | Limited rare read |
+|---|---|---|---|---|
+| 10.1021/jp109585t | caetano2011-jp109585t-zno-quantum-dots-1 | B122 | 2026-10-21T18:27:52+00:00 | no |
+| 10.1021/jp406342m | jing2013-jp406342m-manganese-doped-cdte-zns-core-shell-quan-1 | B122 | 2026-10-21T18:27:52+00:00 | yes |
+| 10.1021/jz302067r | mcdaniel2013-jz302067r-cuinse1-4s0-6-qds-1 | B122 | 2026-10-21T18:27:52+00:00 | yes |
+| 10.1021/nn401274e | kim2013-nn401274e-cuinte2-qds-1, kim2013-nn401274e-cuinte2xsex-qds-2 | B122 | 2026-10-21T18:27:52+00:00 | yes |
+
 ## Q20 contributions — verified live 2026-10-21T10:17:35+00:00
 
 50 papers / 80 source_extracted records / 287 captioned crop keys; limited reads are not independent audits.
