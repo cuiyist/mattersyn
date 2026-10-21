@@ -1,5 +1,62 @@
 # Published machine-extracted papers
 
+## Q18 contributions — verified live 2026-10-20T23:04:10+00:00
+
+50 papers / 71 source_extracted records / 308 captioned crop keys; limited reads are not independent audits.
+
+| DOI | Record IDs | Origin | Live verified | Limited rare read |
+|---|---|---|---|---|
+| 10.1021/acs.jpcc.5b00413 | kang2015-acs-jpcc-5b00413-ais-zns-qds-1 | B118 | 2026-10-20T23:04:10+00:00 | yes |
+| 10.1021/acs.langmuir.2c02459 | karmakar2022-acs-langmuir-2c02459-cdse-zns-gsh-qds-1 | B118 | 2026-10-20T23:04:10+00:00 | no |
+| 10.1021/acsnano.5c02271 | hautzinger2025-acsnano-5c02271-bacd2p2-qds-1 | B118 | 2026-10-20T23:04:10+00:00 | yes |
+| 10.1021/jp711395f | zeng2008-jp711395f-cdte-cds-core-shell-quantum-dots-qds-wit-1 | B118 | 2026-10-20T23:04:10+00:00 | no |
+| 10.1021/acs.cgd.5c00808 | pretto2025-acs-cgd-5c00808-znse-qds-1 | B118 | 2026-10-20T23:04:10+00:00 | no |
+| 10.1021/acs.chemmater.1c01287 | shan2021-acs-chemmater-1c01287-wurtzite-inp-qds-inp-2-25-1, shan2021-acs-chemmater-1c01287-wurtzite-gap-qds-2, shan2021-acs-chemmater-1c01287-wurtzite-ingap-alloy-qds-3 | B118 | 2026-10-20T23:04:10+00:00 | yes |
+| 10.1021/acs.chemmater.2c02891 | welsch2022-acs-chemmater-2c02891-cdte-cds-core-thick-shell-quantum-dots-1 | B118 | 2026-10-20T23:04:10+00:00 | no |
+| 10.1021/acs.chemmater.7b02174 | susumu2017-acs-chemmater-7b02174-znse-zns-qds-1, susumu2017-acs-chemmater-7b02174-cdznse-cd0-2zn0-8s-zns-qds-2, susumu2017-acs-chemmater-7b02174-znse-cd0-4zn0-6s-zns-qds-3 | B118 | 2026-10-20T23:04:10+00:00 | yes |
+| 10.1021/acs.nanolett.5b00199 | abecassis2015-acs-nanolett-5b00199-cdse-quantum-dots-1 | B118 | 2026-10-20T23:04:10+00:00 | no |
+| 10.1021/acsaelm.4c01495 | yang2024-acsaelm-4c01495-pqd-ddam-1, yang2024-acsaelm-4c01495-pqd-olam-2 | B118 | 2026-10-20T23:04:10+00:00 | no |
+| 10.1021/acsaem.5c00356 | deng2025-acsaem-5c00356-cspbbr3-qds-1 | B118 | 2026-10-20T23:04:10+00:00 | no |
+| 10.1021/acsami.5c16269 | liu2025-acsami-5c16269-ag2se-qds-1 | B118 | 2026-10-20T23:04:10+00:00 | no |
+| 10.1021/cm400812v | dong2013-cm400812v-ag2se-qds-1 | B118 | 2026-10-20T23:04:10+00:00 | no |
+| 10.1021/jp808465s | zhao2009-jp808465s-nac-capped-cdte-cds-qds-1 | B118 | 2026-10-20T23:04:10+00:00 | no |
+| 10.1021/acs.analchem.7b00777 | wu2017-acs-analchem-7b00777-ag2s-qds-1 | B118 | 2026-10-20T23:04:10+00:00 | no |
+| 10.1021/acs.cgd.0c00108 | yuan2020-acs-cgd-0c00108-ag2s-qds-80-c-for-4-h-1, yuan2020-acs-cgd-0c00108-ag2s-qds-90-c-for-4-h-2, yuan2020-acs-cgd-0c00108-ag2s-qds-100-c-for-3-h-3, yuan2020-acs-cgd-0c00108-agins2-qds-100-c-for-4-h-4 | B118 | 2026-10-20T23:04:10+00:00 | no |
+| 10.1021/acs.chemmater.0c01906 | achorn2020-acs-chemmater-0c01906-inp-znse-core-shell-qds-1 | B118 | 2026-10-20T23:04:10+00:00 | yes |
+| 10.1021/acs.chemmater.1c01496 | baek2021-acs-chemmater-1c01496-pb1xbixsy-qd-1, baek2021-acs-chemmater-1c01496-pb1xbixsy-nr-2 | B118 | 2026-10-20T23:04:10+00:00 | yes |
+| 10.1021/acs.inorgchem.0c00347 | mrad2020-acs-inorgchem-0c00347-aizs-qds-ag-in-1-5-1 | B118 | 2026-10-20T23:04:10+00:00 | yes |
+| 10.1021/acs.jpcc.4c08315 | singh2025-acs-jpcc-4c08315-cspbbr3-pqds-1 | B118 | 2026-10-20T23:04:10+00:00 | no |
+| 10.1021/acs.langmuir.7b01699 | huo2017-acs-langmuir-7b01699-boron-nitride-quantum-dots-bnqds-1 | B118 | 2026-10-20T23:04:10+00:00 | no |
+| 10.1021/acsabm.1c00917 | shi2021-acsabm-1c00917-ag2te-qds-1 | B119 | 2026-10-20T23:04:10+00:00 | no |
+| 10.1021/acsabm.5c00752 | bapli2025-acsabm-5c00752-siqds-spd-1 | B119 | 2026-10-20T23:04:10+00:00 | no |
+| 10.1021/acsanm.1c02038 | lee2021-acsanm-1c02038-green-g-emitting-qds-1, lee2021-acsanm-1c02038-red-r-emitting-qds-2, lee2021-acsanm-1c02038-blue-b-emitting-qds-3 | B119 | 2026-10-20T23:04:10+00:00 | yes |
+| 10.1021/acsanm.3c05043 | an2023-acsanm-3c05043-agxse-cqds-x-2-1 | B119 | 2026-10-20T23:04:10+00:00 | yes |
+| 10.1021/acsanm.5c03641 | li2025-acsanm-5c03641-cspbi3-strongly-confined-quantum-dots-sq-1 | B119 | 2026-10-20T23:04:10+00:00 | no |
+| 10.1021/acsnano.5c03449 | huang2025-acsnano-5c03449-green-cspbbr3-peqd-da-1, huang2025-acsnano-5c03449-red-cspbbr0-3i0-7-peqd-da-2 | B119 | 2026-10-20T23:04:10+00:00 | yes |
+| 10.1021/acsomega.2c04862 | rehman2022-acsomega-2c04862-pristine-cds-qds-1, rehman2022-acsomega-2c04862-3-ba-doped-cds-qds-2, rehman2022-acsomega-2c04862-6-ba-doped-cds-qds-3 | B119 | 2026-10-20T23:04:10+00:00 | no |
+| 10.1021/acsomega.5c12566 | ibarra2026-acsomega-5c12566-n-gqd-ca-1 | B119 | 2026-10-20T23:04:10+00:00 | yes |
+| 10.1021/acsphotonics.5c02796 | qiu2026-acsphotonics-5c02796-inp-gap-zns-qds-1 | B119 | 2026-10-20T23:04:10+00:00 | yes |
+| 10.1021/acssuschemeng.9b00027 | jing2019-acssuschemeng-9b00027-cqds-0-1-4-1 | B119 | 2026-10-20T23:04:10+00:00 | no |
+| 10.1021/am504158r | epifani2014-am504158r-monoclinic-wo3-quantum-dots-1 | B119 | 2026-10-20T23:04:10+00:00 | yes |
+| 10.1021/cm202368w | zhou2011-cm202368w-mpa-stabilized-cdte-qds-1 | B119 | 2026-10-20T23:04:10+00:00 | no |
+| 10.1021/ja804755q | kairdolf2008-ja804755q-cdte-core-qds-1, kairdolf2008-ja804755q-cdte-cdse-core-shell-qds-2 | B119 | 2026-10-20T23:04:10+00:00 | no |
+| 10.1021/ja9105732 | miao2010-ja9105732-cd3p2-nanocrystals-1 | B119 | 2026-10-20T23:04:10+00:00 | yes |
+| 10.1021/jacs.9b12350 | ginterseder2020-jacs-9b12350-inas-qds-1 | B119 | 2026-10-20T23:04:10+00:00 | no |
+| 10.1021/jp0739420 | celebi2007-jp0739420-paa-coated-cds-nps-1 | B119 | 2026-10-20T23:04:10+00:00 | no |
+| 10.1021/la901798y | kalasad2009-la901798y-sample-1-white-1, kalasad2009-la901798y-sample-2-pale-yellow-2, kalasad2009-la901798y-sample-3-yellow-3, kalasad2009-la901798y-sample-4-orange-4, kalasad2009-la901798y-sample-5-red-5 | B119 | 2026-10-20T23:04:10+00:00 | no |
+| 10.1021/nn901016u | sudeep2009-nn901016u-si-qds-functionalized-with-phosphine-oxi-1 | B119 | 2026-10-20T23:04:10+00:00 | no |
+| 10.1021/acs.analchem.5b03201 | cai2015-acs-analchem-5b03201-nitrogen-doped-graphene-quantum-dots-n-g-1 | B119 | 2026-10-20T23:04:10+00:00 | yes |
+| 10.1021/acs.analchem.7b03053 | mao2017-acs-analchem-7b03053-rox-dna-functionalized-cdzntes-qds-1 | B119 | 2026-10-20T23:04:10+00:00 | yes |
+| 10.1021/acs.chemmater.2c03023 | uematsu2023-acs-chemmater-2c03023-aginxga1xs2-core-qds-sample-1-1 | B119 | 2026-10-20T23:04:10+00:00 | yes |
+| 10.1021/acs.chemmater.5b00774 | liu2015-acs-chemmater-5b00774-graphene-quantum-dots-gqds-1 | B119 | 2026-10-20T23:04:10+00:00 | no |
+| 10.1021/acs.chemmater.6c01064 | gidey2026-acs-chemmater-6c01064-sno2-qd-u-1 | B119 | 2026-10-20T23:04:10+00:00 | no |
+| 10.1021/acs.chemmater.7b02637 | abdelazim2017-acs-chemmater-7b02637-hgte-qds-2-1-fmt-hg2-ratio-1 | B119 | 2026-10-20T23:04:10+00:00 | no |
+| 10.1021/acs.chemmater.8b03587 | guidelli2018-acs-chemmater-8b03587-znse-quantum-dots-1 | B119 | 2026-10-20T23:04:10+00:00 | no |
+| 10.1021/acs.chemmater.9b00557 | yuan2019-acs-chemmater-9b00557-cdznsecdzns-alloy-qds-1 | B119 | 2026-10-20T23:04:10+00:00 | yes |
+| 10.1021/acs.chemmater.9b00962 | preske2019-acs-chemmater-9b00962-pbse-qds-dibpse-1, preske2019-acs-chemmater-9b00962-pbse-qds-dotpse-2, preske2019-acs-chemmater-9b00962-pbse-qds-dippse-3 | B119 | 2026-10-20T23:04:10+00:00 | no |
+| 10.1021/acs.iecr.8b00913 | wang2018-acs-iecr-8b00913-rh-gqds-1 | B119 | 2026-10-20T23:04:10+00:00 | no |
+| 10.1021/acs.inorgchem.1c02172 | zhang2021-acs-inorgchem-1c02172-sqds-1 | B119 | 2026-10-20T23:04:10+00:00 | yes |
+
 ## Q17 contributions — verified live 2026-10-20T20:17:28+00:00
 
 50 papers / 70 source_extracted records / 246 captioned crop keys were deployed and anonymously verified. Source 98f7add passed all 13 local phases, actual 103-route GUI, all three exact-head CI jobs 39475285788 and ordinary PR80 merge 92605846. Site b5e4617eede867d238b1206c0f64e0239de16076 passed Pages 39488445831 and anonymous verification at2026-10-20T20:17:28+00:00. These are source_extracted contributions, not independent scientific audits.
