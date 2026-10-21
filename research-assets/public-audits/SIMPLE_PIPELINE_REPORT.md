@@ -1,3 +1,25 @@
+## Q20 verified; queue and storage checkpoint
+
+The **2026-10-21 10:24:43 UTC** queue snapshot contains **3,101 physical entries: 398 IN, 800 OUT and 1,903 uncertain**. Saved-read or positive two-pass entries: 2,021 (186 IN). Attempted without usable saved reads: 55 (10 IN; 45 historical entries without pairs and 10 terminal failures after redo). Remaining without a successful or terminal result: 1,025 (202 IN), including unfinished jobs. The 3,075 distinct nonempty DOI labels and 26 unlabeled entries are not a certified unique-primary-paper count. Q20 was subtracted exactly once.
+
+| Queue bucket at that snapshot | Total | IN | OUT | Uncertain |
+|---|---:|---:|---:|---:|
+| Saved-read or positive two-pass | 2,021 | 186 | 760 | 1,075 |
+| Attempted, no usable saved read | 55 | 10 | 2 | 43 |
+| Remaining, including unfinished jobs | 1,025 | 202 | 38 | 785 |
+
+Q20 added **50 distinct papers, 80 source_extracted records and 287 captioned crops**. Observed live totals are **2,284 papers / 5,947 records / 3,826 recipe–structure pairs**. [Source PR 83](https://github.com/cuiyist/mattersyn/pull/83), all three exact-head [CI jobs](https://github.com/cuiyist/mattersyn/actions/runs/39569203564), ordinary merge `b7eb985aa4f5c95b93140cc7bdd5e46150708a6b`, [Site a05cf49](https://github.com/cuiyist/mattersyn-site/commit/a05cf494e3eb035c257f51da65af12b43a9c971a), and successful [Pages run 39581813314](https://github.com/cuiyist/mattersyn-site/actions/runs/39581813314). Normal anonymous verification at 2026-10-21 10:17:35 UTC covered 997 files, all 50 paper routes and 110 material bindings, with no mismatches or failed routes.
+
+The published cohort uses B121 (20 papers) and B122 (30). The exact paper index has **25 completed limited rare-material reads and 25 without one**; these are not independent audits. Four accepted B122 surplus papers (5 records / 25 crops) remain private. At the saved B123 state timestamp **2026-10-21 11:55:54 UTC**, 22 papers had two successful passes, 7 were left out after redo and 21 were pending; figures had not started. No next cohort has integration or publication credit.
+
+All 50 Q20 selections came from the already scope-admitted ready pools. No selected Q20 paper was left out during integration; four accepted B122 surplus papers remain for a later cohort. The scope rule continues to exclude non-isolable, embedded or substrate-only products from new batches; the existing 58-paper live outside-scope section is unchanged.
+
+The built site contained **57,440 files / 3,981,981,272 logical bytes**. No converter or release-script fix was needed for Q20. Normal figure registration and its checksum refresh retained every release gate. Choice: reuse accepted work and save the verified Source checkpoint before qualifying the remaining cleanup, so completed work reaches GitHub promptly. No sustained publication rate or completion-time guarantee is asserted.
+
+The two completed Q20 cleanup passes removed **340,562 generated leaves / 26,165,620,583 logical bytes**. Including the specified prior eight completed passes, this ten-pass reporting cohort totals **650,120 leaves / 84,753,693,067 logical bytes**. Extension C: observations were **38,174,396,416 bytes before / 53,286,764,544 after**; the 100 GiB target remains unmet. Logical totals and drive observations do not isolate cleanup gain from other activity. The [safe cleanup report](https://github.com/cuiyist/mattersyn2/blob/0976b9631ffd635ef46502238414495dbf2bfdf8/CLEANUP_REPORT_2026-10-12.md) is anonymously verified. The remaining R20 tail has not run and has no deletion credit. Papers, owner folders, private training data, credentials, the active model/runtime and canonical checkouts remain protected; no programs were stopped.
+
+The audit lane and five owner questions remain paused. No new paper is labelled reviewed, and the six audited-only training exports remain unchanged.
+
 ## Q19 verified live; Q20 integrated locally
 
 Queue captured 2026-10-21T07:00:43.646425+00:00: **3,151 physical entries; 448 IN / 800 OUT / 1,903 uncertain**. Disjoint saved-read/positive metadata:2,067 (232 IN); attempted without usable saved read:53 (8 IN); remaining:1,031 (208 IN). Remaining includes active jobs and is not a never-sent claim. There are3,125 distinct nonempty DOI labels and26 unlabeled entries, not a certified unique-primary total. Exact50 verified Q19 sources were subtracted once; B124/B125/B126 were already admitted and were not added again.
