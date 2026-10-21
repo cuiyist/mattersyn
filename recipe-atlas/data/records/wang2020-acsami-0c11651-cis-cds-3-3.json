@@ -1,0 +1,353 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "wang2020-acsami-0c11651-cis-cds-3-3",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Changmeng Wang; Xin Tong; Wenhao Wang; Jing-Yin Xu; Lucas V. Besteiro; Ali Imran Channa; Feng Lin; Jiang Wu; Qiang Wang; Alexander O. Govorov; Alberto Vomiero; Zhiming M. Wang (2020): CIS/CdS #3",
+  "material": {
+    "formula": "CuInS2/CdS",
+    "family": "CuInS2/CdS nanocrystals",
+    "elements": [
+      "Cu",
+      "In",
+      "S",
+      "Cd"
+    ],
+    "components": [
+      "CuInS2",
+      "CdS"
+    ],
+    "architecture": "core_shell"
+  },
+  "method": "Slow-injection",
+  "sources": [
+    {
+      "id": "wang2020-acsami-0c11651",
+      "doi": "10.1021/acsami.0c11651",
+      "title": "Manipulating the Optoelectronic Properties of Quasi-type II CuInS2/CdS Core/Shell Quantum Dots for Photoelectrochemical Cell Applications",
+      "authors": "Changmeng Wang; Xin Tong; Wenhao Wang; Jing-Yin Xu; Lucas V. Besteiro; Ali Imran Channa; Feng Lin; Jiang Wu; Qiang Wang; Alexander O. Govorov; Alberto Vomiero; Zhiming M. Wang",
+      "year": 2020,
+      "url": "https://doi.org/10.1021/acsami.0c11651",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "wang2020-acsami-0c11651",
+    "recipe_family": "wang2020-acsami-0c11651-cis-cds-3-3",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CuInS2/CdS",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "wang2020-acsami-0c11651",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": 5.0,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "5 nm",
+      "evidence": [
+        {
+          "source_id": "wang2020-acsami-0c11651",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "quasi-pyramidal",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "wang2020-acsami-0c11651",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "wang2020-acsami-0c11651-cis-cds-3-3--cis-core-qds",
+      "name": "CIS core QDs",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "wang2020-acsami-0c11651",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "wang2020-acsami-0c11651-cis-cds-3-3--cds-stock-solution",
+      "name": "CdS stock solution",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "volume": {
+          "value": 4,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "4 mL",
+          "evidence": [
+            {
+              "source_id": "wang2020-acsami-0c11651",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "wang2020-acsami-0c11651",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "wang2020-acsami-0c11651-cis-cds-3-3--after-s01-prepare",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "wang2020-acsami-0c11651-cis-cds-3-3--cis-core-qds"
+      ]
+    },
+    {
+      "id": "wang2020-acsami-0c11651-cis-cds-3-3--after-s02-inject",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "wang2020-acsami-0c11651-cis-cds-3-3--after-s01-prepare",
+        "wang2020-acsami-0c11651-cis-cds-3-3--cds-stock-solution"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-prepare",
+      "action": "prepare",
+      "label": "CIS core QDs using thermal decomposition",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "wang2020-acsami-0c11651-cis-cds-3-3--cis-core-qds"
+      ],
+      "outputs": [
+        "wang2020-acsami-0c11651-cis-cds-3-3--after-s01-prepare"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "CIS core QDs using thermal decomposition",
+      "evidence": [
+        {
+          "source_id": "wang2020-acsami-0c11651",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-inject",
+      "action": "inject",
+      "label": "Inject CdS stock solution",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-prepare"
+      ],
+      "inputs": [
+        "wang2020-acsami-0c11651-cis-cds-3-3--after-s01-prepare",
+        "wang2020-acsami-0c11651-cis-cds-3-3--cds-stock-solution"
+      ],
+      "outputs": [
+        "wang2020-acsami-0c11651-cis-cds-3-3--after-s02-inject"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Inject CdS stock solution",
+      "evidence": [
+        {
+          "source_id": "wang2020-acsami-0c11651",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "wang2020-acsami-0c11651-cis-cds-3-3--product",
+      "source_sample_label": "CIS/CdS #3",
+      "batch_id": null,
+      "material_state_id": "wang2020-acsami-0c11651-cis-cds-3-3--after-s02-inject",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CuInS2/CdS",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "wang2020-acsami-0c11651",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": "quasi-pyramidal",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "wang2020-acsami-0c11651",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "wang2020-acsami-0c11651",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [
+    {
+      "id": "wang2020-acsami-0c11651-cis-cds-3-3--size",
+      "sample_id": "wang2020-acsami-0c11651-cis-cds-3-3--product",
+      "property": "diameter",
+      "technique": "TEM",
+      "value": {
+        "value": 5.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "5 nm",
+        "evidence": [
+          {
+            "source_id": "wang2020-acsami-0c11651",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "wang2020-acsami-0c11651",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of CIS core QDs not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

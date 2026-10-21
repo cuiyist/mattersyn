@@ -1,0 +1,362 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "harris2011-ja1101932-cd3as2-quantum-dots-emitting-at-850-nm-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Daniel K. Harris; Peter M. Allen; Hee-Sun Han; Brian J. Walker; Jungmin Lee; Moungi G. Bawendi (2011): Cd3As2 quantum dots emitting at 850 nm",
+  "material": {
+    "formula": "Cd3As2",
+    "family": "Cd3As2 nanocrystals",
+    "elements": [
+      "Cd",
+      "As"
+    ],
+    "components": [
+      "Cd3As2"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Hot injection",
+  "sources": [
+    {
+      "id": "harris2011-ja1101932",
+      "doi": "10.1021/ja1101932",
+      "title": "Synthesis of Cadmium Arsenide Quantum Dots Luminescent in the Infrared",
+      "authors": "Daniel K. Harris; Peter M. Allen; Hee-Sun Han; Brian J. Walker; Jungmin Lee; Moungi G. Bawendi",
+      "year": 2011,
+      "url": "https://doi.org/10.1021/ja1101932",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "harris2011-ja1101932",
+    "recipe_family": "harris2011-ja1101932-cd3as2-quantum-dots-emitting-at-850-nm-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Cd3As2",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "harris2011-ja1101932",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "sphere",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "harris2011-ja1101932",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "harris2011-ja1101932-cd3as2-quantum-dots-emitting-at-850-nm-1--cadmium-ii-myristate",
+      "name": "cadmium(II) myristate",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "amount": {
+          "value": 20,
+          "minimum": null,
+          "maximum": null,
+          "unit": "fold excess",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "20 fold excess",
+          "evidence": [
+            {
+              "source_id": "harris2011-ja1101932",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "harris2011-ja1101932",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "harris2011-ja1101932-cd3as2-quantum-dots-emitting-at-850-nm-1--tris-trimethylsilyl-arsine",
+      "name": "tris(trimethylsilyl)arsine",
+      "formula": null,
+      "role": "nonmetal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "harris2011-ja1101932",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "harris2011-ja1101932-cd3as2-quantum-dots-emitting-at-850-nm-1--after-s01-heat",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "harris2011-ja1101932-cd3as2-quantum-dots-emitting-at-850-nm-1--cadmium-ii-myristate",
+        "harris2011-ja1101932-cd3as2-quantum-dots-emitting-at-850-nm-1--tris-trimethylsilyl-arsine"
+      ]
+    },
+    {
+      "id": "harris2011-ja1101932-cd3as2-quantum-dots-emitting-at-850-nm-1--after-s02-add",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "harris2011-ja1101932-cd3as2-quantum-dots-emitting-at-850-nm-1--after-s01-heat",
+        "harris2011-ja1101932-cd3as2-quantum-dots-emitting-at-850-nm-1--tris-trimethylsilyl-arsine"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-heat",
+      "action": "heat",
+      "label": "Heat solution to 175 ˚C",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "harris2011-ja1101932-cd3as2-quantum-dots-emitting-at-850-nm-1--cadmium-ii-myristate",
+        "harris2011-ja1101932-cd3as2-quantum-dots-emitting-at-850-nm-1--tris-trimethylsilyl-arsine"
+      ],
+      "outputs": [
+        "harris2011-ja1101932-cd3as2-quantum-dots-emitting-at-850-nm-1--after-s01-heat"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 175,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "175 °C",
+          "evidence": [
+            {
+              "source_id": "harris2011-ja1101932",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 20,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "20 min",
+          "evidence": [
+            {
+              "source_id": "harris2011-ja1101932",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "inert",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "harris2011-ja1101932",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Heat solution to 175 ˚C",
+      "evidence": [
+        {
+          "source_id": "harris2011-ja1101932",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-add",
+      "action": "add",
+      "label": "Add TMS3As in TOP via syringe pump over several hours",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-heat"
+      ],
+      "inputs": [
+        "harris2011-ja1101932-cd3as2-quantum-dots-emitting-at-850-nm-1--after-s01-heat",
+        "harris2011-ja1101932-cd3as2-quantum-dots-emitting-at-850-nm-1--tris-trimethylsilyl-arsine"
+      ],
+      "outputs": [
+        "harris2011-ja1101932-cd3as2-quantum-dots-emitting-at-850-nm-1--after-s02-add"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "inert",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "harris2011-ja1101932",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Add TMS3As in TOP via syringe pump over several hours",
+      "evidence": [
+        {
+          "source_id": "harris2011-ja1101932",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "harris2011-ja1101932-cd3as2-quantum-dots-emitting-at-850-nm-1--product",
+      "source_sample_label": "Cd3As2 quantum dots emitting at 850 nm",
+      "batch_id": null,
+      "material_state_id": "harris2011-ja1101932-cd3as2-quantum-dots-emitting-at-850-nm-1--after-s02-add",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Cd3As2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "harris2011-ja1101932",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": "sphere",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "harris2011-ja1101932",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "harris2011-ja1101932",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reaction temperature: 175 degC (Main PDF p.2).",
+        "Reaction time: 20 min (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Amount of tris(trimethylsilyl)arsine not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
