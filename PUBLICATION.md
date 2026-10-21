@@ -1,3 +1,7 @@
+## Q21 locally integrated; normal release pending
+
+Q21 checkpoint: four accepted B122 papers (five source_extracted records, 25 captioned crops) are integrated locally and have zero publication credit pending every normal release gate. Q20 remains the counted site at 2,284 papers / 5,947 records / 3,826 pairs. The final bounded R20 cleanup removed 127,332 redundant generated leaves / 8,741,741,652 logical bytes, with 12 unmapped control leaves protected and no stopped programs; the original zero-deletion hold and documentation 12-phase capacity hold are retained. The single report records the full dated storage and release details. The audit lane, five questions and six audited-only training exports are unchanged.
+
 ## Verified Q20 publication and completed cleanup
 
 Q20 added **50 distinct papers, 80 source_extracted records and 287 captioned crops**. Observed live totals are **2,284 papers / 5,947 records / 3,826 recipe–structure pairs**. [Source PR 83](https://github.com/cuiyist/mattersyn/pull/83), all three exact-head [CI jobs](https://github.com/cuiyist/mattersyn/actions/runs/39569203564), ordinary merge `b7eb985aa4f5c95b93140cc7bdd5e46150708a6b`, [Site a05cf49](https://github.com/cuiyist/mattersyn-site/commit/a05cf494e3eb035c257f51da65af12b43a9c971a), and successful [Pages run 39581813314](https://github.com/cuiyist/mattersyn-site/actions/runs/39581813314). Normal anonymous verification at 2026-10-21 10:17:35 UTC covered 997 files, all 50 paper routes and 110 material bindings, with no mismatches or failed routes.

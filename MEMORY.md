@@ -1,3 +1,7 @@
+## Q21 locally integrated; normal release pending
+
+Q21 checkpoint: four accepted B122 papers (five source_extracted records, 25 captioned crops) are integrated locally and have zero publication credit pending every normal release gate. Q20 remains the counted site at 2,284 papers / 5,947 records / 3,826 pairs. The final bounded R20 cleanup removed 127,332 redundant generated leaves / 8,741,741,652 logical bytes, with 12 unmapped control leaves protected and no stopped programs; the original zero-deletion hold and documentation 12-phase capacity hold are retained. The single report records the full dated storage and release details. The audit lane, five questions and six audited-only training exports are unchanged.
+
 [Published paper index and limited-read markers](research-assets/public-audits/MACHINE_EXTRACTED_PAPERS.md)
 
 ## Q20 verified; simple lane continues
