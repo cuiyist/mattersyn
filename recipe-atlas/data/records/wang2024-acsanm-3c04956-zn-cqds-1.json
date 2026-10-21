@@ -1,0 +1,393 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "wang2024-acsanm-3c04956-zn-cqds-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Zhongming Wang; Xiong Shen; Jinhe Wei; Lin Chen; Fei Hu; Fanfan Qi; Qiuyun Ouyang (2024): Zn-CQDs",
+  "material": {
+    "formula": "C, O, Zn",
+    "family": "C, O, Zn nanocrystals",
+    "elements": [
+      "C",
+      "O",
+      "Zn"
+    ],
+    "components": [
+      "C, O, Zn"
+    ],
+    "architecture": "composite"
+  },
+  "method": "Reduction",
+  "sources": [
+    {
+      "id": "wang2024-acsanm-3c04956",
+      "doi": "10.1021/acsanm.3c04956",
+      "title": "Zinc-Reduced Carbon Quantum Dots as Color-Conversion Materials in Blue Light-Emitting Diodes",
+      "authors": "Zhongming Wang; Xiong Shen; Jinhe Wei; Lin Chen; Fei Hu; Fanfan Qi; Qiuyun Ouyang",
+      "year": 2024,
+      "url": "https://doi.org/10.1021/acsanm.3c04956",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "wang2024-acsanm-3c04956",
+    "recipe_family": "wang2024-acsanm-3c04956-zn-cqds-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "C, O, Zn",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "wang2024-acsanm-3c04956",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "wang2024-acsanm-3c04956-zn-cqds-1--zinc-powder",
+      "name": "zinc powder",
+      "formula": null,
+      "role": "reducing_agent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "mass": {
+          "value": 2,
+          "minimum": null,
+          "maximum": null,
+          "unit": "g",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "2 g",
+          "evidence": [
+            {
+              "source_id": "wang2024-acsanm-3c04956",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "wang2024-acsanm-3c04956",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "wang2024-acsanm-3c04956-zn-cqds-1--methanol",
+      "name": "methanol",
+      "formula": null,
+      "role": "solvent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "volume": {
+          "value": 100,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "100 mL",
+          "evidence": [
+            {
+              "source_id": "wang2024-acsanm-3c04956",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "wang2024-acsanm-3c04956",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "wang2024-acsanm-3c04956-zn-cqds-1--after-s01-add",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "wang2024-acsanm-3c04956-zn-cqds-1--zinc-powder"
+      ]
+    },
+    {
+      "id": "wang2024-acsanm-3c04956-zn-cqds-1--after-s02-add",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "wang2024-acsanm-3c04956-zn-cqds-1--after-s01-add",
+        "wang2024-acsanm-3c04956-zn-cqds-1--methanol"
+      ]
+    },
+    {
+      "id": "wang2024-acsanm-3c04956-zn-cqds-1--after-s03-centrifuge",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "wang2024-acsanm-3c04956-zn-cqds-1--after-s02-add"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-add",
+      "action": "add",
+      "label": "Add zinc powder to CQD solution",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "wang2024-acsanm-3c04956-zn-cqds-1--zinc-powder"
+      ],
+      "outputs": [
+        "wang2024-acsanm-3c04956-zn-cqds-1--after-s01-add"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "10 min",
+          "evidence": [
+            {
+              "source_id": "wang2024-acsanm-3c04956",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Add zinc powder to CQD solution",
+      "evidence": [
+        {
+          "source_id": "wang2024-acsanm-3c04956",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-add",
+      "action": "add",
+      "label": "Add methanol to reduce solubility",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-add"
+      ],
+      "inputs": [
+        "wang2024-acsanm-3c04956-zn-cqds-1--after-s01-add",
+        "wang2024-acsanm-3c04956-zn-cqds-1--methanol"
+      ],
+      "outputs": [
+        "wang2024-acsanm-3c04956-zn-cqds-1--after-s02-add"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Add methanol to reduce solubility",
+      "evidence": [
+        {
+          "source_id": "wang2024-acsanm-3c04956",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-centrifuge",
+      "action": "centrifuge",
+      "label": "Separate precipitate",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-add"
+      ],
+      "inputs": [
+        "wang2024-acsanm-3c04956-zn-cqds-1--after-s02-add"
+      ],
+      "outputs": [
+        "wang2024-acsanm-3c04956-zn-cqds-1--after-s03-centrifuge"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Separate precipitate",
+      "evidence": [
+        {
+          "source_id": "wang2024-acsanm-3c04956",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "wang2024-acsanm-3c04956-zn-cqds-1--product",
+      "source_sample_label": "Zn-CQDs",
+      "batch_id": null,
+      "material_state_id": "wang2024-acsanm-3c04956-zn-cqds-1--after-s03-centrifuge",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "C, O, Zn",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "wang2024-acsanm-3c04956",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": "COO−, C−OH",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "wang2024-acsanm-3c04956",
+            "locator": "Main PDF p.5"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "wang2024-acsanm-3c04956",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reaction time: 10 min (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Shape not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
