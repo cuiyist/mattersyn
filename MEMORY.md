@@ -38,6 +38,21 @@ The source_extracted lane, six audited-only exports, all historical exports, out
 
 ## Q23 local correction — publication pending
 
+## Q24 technical release hold and current saved queue
+
+Queue metadata dated 2026-10-22T12:43:29.492959+00:00: **3,169 physical originals / 466 IN / 800 OUT / 1,903 uncertain**. The saved ledger and 83 separately registered originals are disjoint by SHA and DOI label. The dated split is **2,164 saved-read or positive-two-pass rows (329 IN), 70 attempted without a usable saved read (25 IN), and 935 remaining or uncompleted rows including prepared originals (112 IN)**. There are 3,143 distinct nonempty DOI labels and 26 unlabeled physical files. These are saved metadata buckets, not a certified unique-primary-paper count or an exhaustion claim.
+
+Separately, B128 saved generation metadata dated 2026-10-22T12:59:07.520771+00:00 records **34 successful two-pass papers**, phase `extract`, controller PID 55944. This point-in-time saved state is not a native process-liveness or completed-batch proof. Active generation has not been transferred into the dated queue's completed-read, eligibility or publication totals. B129's 33 official bibliographic sidecars were attached; B129 has not been launched at this checkpoint.
+
+The whole unpublished Lu2020 paper, DOI 10.1021/acs.langmuir.0c02477, was omitted at 2026-10-22T13:01:57.875403+00:00 as a **technical release hold** after the unchanged strict Ge method-label guard rejected four records. No method or chemistry was guessed, no scientific-error conclusion or S1 audit claim is made, and no additional paper or SI reading occurred. Q24 now retains **46 papers / 63 source_extracted records / 277 crops**, with **6,095 canonical records**, all still unpublished. The eight shared changes and 21 exclusive newly added leaf removals preserve the other 6,095 record bytes, all 60 prior batch exports, six audited-only exports and the existing Song-omitted B126 export. The dataset baseline remains for normal regeneration.
+
+The completed final-head thirteen-check run remains a failure: phases 0–11 passed and the complete-build Ge quality guard failed. Its outputs and the local commit `6caa7cc7c5010c0273c579d21f1f80412d26898f` remain in history. A new ordinary substantive follow-up commit must include the omission and these progress documents, followed by all thirteen checks on the final head, actual browser review, exact-head CI, ordinary merge, Pages and anonymous verification. The new validation run is pending; no Source push or Q24 publication is claimed.
+
+Q23 remains the latest verified live release: **2,349 papers / 6,032 records / 3,911 display pairs**, Site `acd47e585c32e31f2bfcb7ceeb38dcefa716b50e`. The private B127 pool is **25 papers / 31 records / 148 crops**, with no Source integration or publication credit.
+
+The completed remaining-eleven-role cleanup retains its actual **428,326 known leaves / 32,206,491,038 logical bytes** and twelve preserved controls. Its M2 report-only save is commit `a8ebf3a0bf5b925b996021124b383be01cc77a7e`. Free-space observations are non-isolated; the 100 GiB target is not claimed. Four failed-candidate output directories are only planned cleanup here, with no removal outcome or credit. Earlier failures, outside-scope 58-paper history, all untouched history, the five waiting owner questions and paused audit/Worker A/B lanes remain preserved.
+
+
 Q23 correction at 2026-10-22T04:58:46.883736+00:00: 37 papers / 47 records / 221 captioned crops are integrated locally; the canonical record count is 6,032. Q23 has zero publication credit. 
 
 The earlier 38-paper / 48-record / 224-crop import remains historical fact. Its c563 complete build failed the unchanged Ge quality checks after phases 0–11 passed. One whole paper (DOI 10.1021/jacs.5c00423) is held; no method/product label or gate was changed. The exact correction removed only that new record, its three crops and exclusive derived bindings. The old 5,985 records, six audited-only exports and 59 prior batch exports remain preserved. Original pairs, the accepted parent pool and the failed local branch remain retained. Normal regeneration preserves the other 37 papers exactly; it does not establish a fresh complete-build pass.
