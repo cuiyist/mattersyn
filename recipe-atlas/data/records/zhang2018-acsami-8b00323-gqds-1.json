@@ -1,0 +1,586 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "zhang2018-acsami-8b00323-gqds-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Shuo Zhang; Lina Sui; Hongzhou Dong; Wenbo He; Lifeng Dong; Liyan Yu (2018): GQDs",
+  "material": {
+    "formula": "C",
+    "family": "C nanocrystals",
+    "elements": [
+      "C"
+    ],
+    "components": [
+      "C"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Top-down",
+  "sources": [
+    {
+      "id": "zhang2018-acsami-8b00323",
+      "doi": "10.1021/acsami.8b00323",
+      "title": "High-Performance Supercapacitor of Graphene Quantum Dots with Uniform Sizes",
+      "authors": "Shuo Zhang; Lina Sui; Hongzhou Dong; Wenbo He; Lifeng Dong; Liyan Yu",
+      "year": 2018,
+      "url": "https://doi.org/10.1021/acsami.8b00323",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "zhang2018-acsami-8b00323",
+    "recipe_family": "zhang2018-acsami-8b00323-gqds-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "C",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "zhang2018-acsami-8b00323",
+          "locator": "Main PDF p.4"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": 1.94,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "1.94 nm",
+      "evidence": [
+        {
+          "source_id": "zhang2018-acsami-8b00323",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "sphere",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "zhang2018-acsami-8b00323",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "zhang2018-acsami-8b00323-gqds-1--graphene-oxide",
+      "name": "graphene oxide",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "mass": {
+          "value": 50,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mg",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "50 mg",
+          "evidence": [
+            {
+              "source_id": "zhang2018-acsami-8b00323",
+              "locator": "Main PDF p.7"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "zhang2018-acsami-8b00323",
+          "locator": "Main PDF p.7"
+        }
+      ]
+    },
+    {
+      "id": "zhang2018-acsami-8b00323-gqds-1--nitric-acid",
+      "name": "nitric acid",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "volume": {
+          "value": 50,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "50 mL",
+          "evidence": [
+            {
+              "source_id": "zhang2018-acsami-8b00323",
+              "locator": "Main PDF p.7"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "zhang2018-acsami-8b00323",
+          "locator": "Main PDF p.7"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "zhang2018-acsami-8b00323-gqds-1--after-s01-disperse",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "zhang2018-acsami-8b00323-gqds-1--graphene-oxide",
+        "zhang2018-acsami-8b00323-gqds-1--nitric-acid"
+      ]
+    },
+    {
+      "id": "zhang2018-acsami-8b00323-gqds-1--after-s02-heat",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "zhang2018-acsami-8b00323-gqds-1--after-s01-disperse"
+      ]
+    },
+    {
+      "id": "zhang2018-acsami-8b00323-gqds-1--after-s03-centrifuge",
+      "name": "mixture after step 3",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "zhang2018-acsami-8b00323-gqds-1--after-s02-heat"
+      ]
+    },
+    {
+      "id": "zhang2018-acsami-8b00323-gqds-1--after-s04-heat",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "zhang2018-acsami-8b00323-gqds-1--after-s03-centrifuge"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-disperse",
+      "action": "disperse",
+      "label": "GO powder is dispersed in HNO3 solution",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "zhang2018-acsami-8b00323-gqds-1--graphene-oxide",
+        "zhang2018-acsami-8b00323-gqds-1--nitric-acid"
+      ],
+      "outputs": [
+        "zhang2018-acsami-8b00323-gqds-1--after-s01-disperse"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 4,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "4 h",
+          "evidence": [
+            {
+              "source_id": "zhang2018-acsami-8b00323",
+              "locator": "Main PDF p.7"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "Ar",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "zhang2018-acsami-8b00323",
+            "locator": "Main PDF p.7"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "GO powder is dispersed in HNO3 solution",
+      "evidence": [
+        {
+          "source_id": "zhang2018-acsami-8b00323",
+          "locator": "Main PDF p.7"
+        }
+      ]
+    },
+    {
+      "id": "s02-heat",
+      "action": "heat",
+      "label": "Hydrothermal reaction in autoclave",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-disperse"
+      ],
+      "inputs": [
+        "zhang2018-acsami-8b00323-gqds-1--after-s01-disperse"
+      ],
+      "outputs": [
+        "zhang2018-acsami-8b00323-gqds-1--after-s02-heat"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 100,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "100 °C",
+          "evidence": [
+            {
+              "source_id": "zhang2018-acsami-8b00323",
+              "locator": "Main PDF p.7"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 12,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "12 h",
+          "evidence": [
+            {
+              "source_id": "zhang2018-acsami-8b00323",
+              "locator": "Main PDF p.7"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "Ar",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "zhang2018-acsami-8b00323",
+            "locator": "Main PDF p.7"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Hydrothermal reaction in autoclave",
+      "evidence": [
+        {
+          "source_id": "zhang2018-acsami-8b00323",
+          "locator": "Main PDF p.7"
+        }
+      ]
+    },
+    {
+      "id": "s03-centrifuge",
+      "action": "centrifuge",
+      "label": "Separate the product from the acid",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-heat"
+      ],
+      "inputs": [
+        "zhang2018-acsami-8b00323-gqds-1--after-s02-heat"
+      ],
+      "outputs": [
+        "zhang2018-acsami-8b00323-gqds-1--after-s03-centrifuge"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "10 min",
+          "evidence": [
+            {
+              "source_id": "zhang2018-acsami-8b00323",
+              "locator": "Main PDF p.7"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Separate the product from the acid",
+      "evidence": [
+        {
+          "source_id": "zhang2018-acsami-8b00323",
+          "locator": "Main PDF p.7"
+        }
+      ]
+    },
+    {
+      "id": "s04-heat",
+      "action": "heat",
+      "label": "Thermal reduction under Ar atmosphere",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s03-centrifuge"
+      ],
+      "inputs": [
+        "zhang2018-acsami-8b00323-gqds-1--after-s03-centrifuge"
+      ],
+      "outputs": [
+        "zhang2018-acsami-8b00323-gqds-1--after-s04-heat"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 800,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "800 °C",
+          "evidence": [
+            {
+              "source_id": "zhang2018-acsami-8b00323",
+              "locator": "Main PDF p.7"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 4,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "4 h",
+          "evidence": [
+            {
+              "source_id": "zhang2018-acsami-8b00323",
+              "locator": "Main PDF p.7"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "Ar",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "zhang2018-acsami-8b00323",
+            "locator": "Main PDF p.7"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Thermal reduction under Ar atmosphere",
+      "evidence": [
+        {
+          "source_id": "zhang2018-acsami-8b00323",
+          "locator": "Main PDF p.7"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "zhang2018-acsami-8b00323-gqds-1--product",
+      "source_sample_label": "GQDs",
+      "batch_id": null,
+      "material_state_id": "zhang2018-acsami-8b00323-gqds-1--after-s04-heat",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "C",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "zhang2018-acsami-8b00323",
+            "locator": "Main PDF p.4"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": "sphere",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "zhang2018-acsami-8b00323",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "zhang2018-acsami-8b00323",
+          "locator": "Main PDF p.7"
+        }
+      ],
+      "notes": [
+        "Reactor: 80 mL Teﬂon-equipped stainless steel autoclave (Main PDF p.7).",
+        "Reaction temperature: 100 degC (Main PDF p.7).",
+        "Reaction time: 12 h (Main PDF p.7)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "zhang2018-acsami-8b00323-gqds-1--size",
+      "sample_id": "zhang2018-acsami-8b00323-gqds-1--product",
+      "property": "diameter",
+      "technique": "TEM",
+      "value": {
+        "value": 1.94,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "1.94 nm",
+        "evidence": [
+          {
+            "source_id": "zhang2018-acsami-8b00323",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "zhang2018-acsami-8b00323",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Ligand not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

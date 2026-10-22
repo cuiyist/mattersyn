@@ -1,3 +1,19 @@
+## Q24 integrated locally; normal release pending
+
+Q24 now has 48 papers / 68 source_extracted records / 288 captioned crops integrated locally through the normal sequential B125 and B126 commands; the canonical record count is 6,100. Normal combined asset registration checked 593 assets, appended 563 asset entries and added zero path rules. Complete local checks, GUI, exact-head CI, ordinary merge, deployment and anonymous verification remain pending; Q24 publication credit is zero. The older 6,032 records, existing merged Reader content, six audited-only training exports and prior batch exports were preserved. No scientific audit or accuracy claim is made.
+
+## Q23 verified live — 37 papers
+
+Q23 was verified live at 2026-10-22T08:43:34+00:00: 37 papers / 47 source_extracted records / 221 captioned crop keys. Live totals are 2,349 papers / 6,032 records / 3,911 display pairs across 1,035 material families. Normal anonymous verification passed 682 files, 37 paper routes and 61 material bindings; both Pages jobs passed. The verified build contains 58,409 files / 4,125,761,410 logical bytes. This is one publication, not additional credit from the extended metadata receipt.
+
+Scientific Source commit: 38cbe29656c8c95e73bf61ffad53686e7220b99c; ordinary merge: 5c856c151f86faacfa7a2af434e6775f53fcb4d4; Site commit: acd47e585c32e31f2bfcb7ceeb38dcefa716b50e.
+
+[Source PR 87](https://github.com/cuiyist/mattersyn/pull/87) · [exact-head CI](https://github.com/cuiyist/mattersyn/actions/runs/39735348728) · [Pages](https://github.com/cuiyist/mattersyn-site/actions/runs/39747735605) · [live site](https://cuiyist.github.io/mattersyn-site/)
+
+The earlier 38-paper local import and c563 failed complete-build history remain below. The final release excludes the whole Ge paper 10.1021/jacs.5c00423; no product label, method label or quality gate was changed. Limited rare reads were deletion-only and are not independent scientific audits.
+
+The next B125/B126 private pools have no publication credit. The next normal Source change will combine this verified checkpoint with substantive science; no separate notes or binding-only commit is proposed.
+
 ## Q23 final local payload — publication pending
 
 Q23 correction at 2026-10-22T04:58:46.883736+00:00: 37 papers / 47 records / 221 captioned crops are integrated locally; the canonical record count is 6,032. Q23 has zero publication credit. 

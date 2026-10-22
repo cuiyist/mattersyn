@@ -1,3 +1,65 @@
+## Q24 technical release hold and current saved queue
+
+Queue metadata dated 2026-10-22T12:43:29.492959+00:00: **3,169 physical originals / 466 IN / 800 OUT / 1,903 uncertain**. The saved ledger and 83 separately registered originals are disjoint by SHA and DOI label. The dated split is **2,164 saved-read or positive-two-pass rows (329 IN), 70 attempted without a usable saved read (25 IN), and 935 remaining or uncompleted rows including prepared originals (112 IN)**. There are 3,143 distinct nonempty DOI labels and 26 unlabeled physical files. These are saved metadata buckets, not a certified unique-primary-paper count or an exhaustion claim.
+
+Separately, B128 saved generation metadata dated 2026-10-22T12:59:07.520771+00:00 records **34 successful two-pass papers**, phase `extract`, controller PID 55944. This point-in-time saved state is not a native process-liveness or completed-batch proof. Active generation has not been transferred into the dated queue's completed-read, eligibility or publication totals. B129's 33 official bibliographic sidecars were attached; B129 has not been launched at this checkpoint.
+
+The whole unpublished Lu2020 paper, DOI 10.1021/acs.langmuir.0c02477, was omitted at 2026-10-22T13:01:57.875403+00:00 as a **technical release hold** after the unchanged strict Ge method-label guard rejected four records. No method or chemistry was guessed, no scientific-error conclusion or S1 audit claim is made, and no additional paper or SI reading occurred. Q24 now retains **46 papers / 63 source_extracted records / 277 crops**, with **6,095 canonical records**, all still unpublished. The eight shared changes and 21 exclusive newly added leaf removals preserve the other 6,095 record bytes, all 60 prior batch exports, six audited-only exports and the existing Song-omitted B126 export. The dataset baseline remains for normal regeneration.
+
+The completed final-head thirteen-check run remains a failure: phases 0–11 passed and the complete-build Ge quality guard failed. Its outputs and the local commit `6caa7cc7c5010c0273c579d21f1f80412d26898f` remain in history. A new ordinary substantive follow-up commit must include the omission and these progress documents, followed by all thirteen checks on the final head, actual browser review, exact-head CI, ordinary merge, Pages and anonymous verification. The new validation run is pending; no Source push or Q24 publication is claimed.
+
+Q23 remains the latest verified live release: **2,349 papers / 6,032 records / 3,911 display pairs**, Site `acd47e585c32e31f2bfcb7ceeb38dcefa716b50e`. The private B127 pool is **25 papers / 31 records / 148 crops**, with no Source integration or publication credit.
+
+The completed remaining-eleven-role cleanup retains its actual **428,326 known leaves / 32,206,491,038 logical bytes** and twelve preserved controls. Its M2 report-only save is commit `a8ebf3a0bf5b925b996021124b383be01cc77a7e`. Free-space observations are non-isolated; the 100 GiB target is not claimed. Four failed-candidate output directories are only planned cleanup here, with no removal outcome or credit. Earlier failures, outside-scope 58-paper history, all untouched history, the five waiting owner questions and paused audit/Worker A/B lanes remain preserved.
+
+## Current queue — 2026-10-22 11:45 UTC
+
+**3,136 physical originals remain across the saved queue and the separately prepared B128 pool; 433 are in scope, 800 out of scope and 1,903 uncertain.** This comprises the saved 3,086-entry ledger plus 50 B128 originals with no SHA or DOI-label overlap; those 50 are prepared candidates, not yet model-admitted or read. There are 3,110 distinct nonempty DOI labels and 26 unlabeled files; this is not a certified unique-primary-paper count. Published Q23 papers are excluded exactly once; the unpublished Q24 additions remain pending.
+
+The combined split is **2,164 saved-read or positive-two-pass rows (329 IN), 70 attempted without a usable saved read (25 IN), and 902 unread/uncompleted or prepared candidates (79 IN)**. Within the saved ledger alone, unread/uncompleted is 852 (29 IN). The 50 prepared B128 candidates account for the difference. These buckets measure saved processing metadata, not eligibility, caption coverage, audits or publication.
+
+B127 caption follow-up: the original 27 local requests had one failed packet. Seven bounded single-key recovery requests leave **25 caption-complete papers / 148 figure keys and two unresolved whole-paper holds**. The failures remain recorded, the hold papers stay out, and no ready-pool or publication outcome is inferred from caption completion.
+
+## Earlier queue observation — retained history
+
+Queue metadata captured 2026-10-22T09:05:26.351977+00:00: 3,060 distinct valid unpublished DOI labels (383 IN / 800 OUT / 1,877 uncertain), plus 26 separate unlabeled, identity-pending physical files. The physical ledger has 3,086 entries. The supplemental DOI-label census is dated 2026-10-22T09:06:30.504656+00:00; it found no current published-primary DOI overlap. These are metadata labels, not certified unique scientific papers.
+
+Saved unpublished status: 2,136 read rows (301 IN), 70 attempted without a usable saved read (25 IN), and 880 remaining rows (57 IN). Of the remaining rows, 854 have DOI labels and 26 await identity; remaining includes unfinished work and does not mean never sent.
+
+## Q24 revised integration — publication pending
+
+At 2026-10-22T11:41:45.176330+00:00, Q23 remains deployed and anonymously verified at **2,349 papers / 6,032 records / 3,911 display pairs** (Site `acd47e585c32e31f2bfcb7ceeb38dcefa716b50e`). Its contribution was 37 distinct papers / 47 records / 221 captioned crops; this checkpoint adds no paper credit.
+
+Q24 now retains **47 papers / 67 source_extracted records / 283 crops** after omitting the whole unpublished paper DOI 10.1021/acsanm.4c02691 because an instrument-name expansion was used as a reagent. The omission was applied on 2026-10-22 at 11:39 UTC: eight shared payload files and ten newly added exclusive leaves, with all 6,099 retained record files, 61 previous batch exports and six audited-only exports byte-preserved. The normal preparer will regenerate the dataset baseline and file bindings. No guessed chemical repair or additional common-paper source audit was made. The original unpublished 48 / 68 / 288 commit `35acac18344e67280f85015cedb725ee6252a416` stays in history. All thirteen checks must run freshly on the final follow-up head, then browser review, exact-head CI, ordinary merge, deployment and anonymous verification; the old ten-check prefix provides no final-head credit.
+
+B127 has a private selection of **27 papers / 33 records / 160 figure keys**. Fourteen limited rare-material reads finished; twelve whole objects were deleted only from private derivative pairs. The whole paper DOI 10.1021/acsphotonics.2c01228 is a technical hold because composition was not explicitly reported; its two deletion proposals were suppressed when that paper was omitted. Original PDFs and quoted passes/pairs remain unchanged. The normal local caption generation for the selected 27 papers has started; complete caption coverage, a ready pool and Source integration remain pending. These reads are deletion-only checks, not independent scientific audits. B128 has 50 original identities and official bibliographic sidecars prepared, with no queue admission, model launch or publication claimed at this checkpoint.
+
+The bounded remaining-eleven-role cleanup finished at 11:33:57 UTC with an actual process exit of zero. Independent closed-journal accounting reconciled **428,326 removed known leaves / 32,206,491,038 logical bytes**; twelve unknown control leaves were preserved, zero deletion failures occurred, and no directory, program or Source/Site Git state was removed or stopped. The original result remains `ATTEMPT_FINISHED_WITH_HELD_SUBSETS`; whole-attempt success is not claimed. Recorded C free bytes were **23,432,720,384 before / 56,274,788,352 after**. This change is not an isolated physical-gain measurement and remains below the 100 GiB cleanup target. Retained terminal/deletion accounting and files that can be rebuilt are kept separate from protected papers, training payloads and the running model. Earlier partial failures, the old saved RUNNING result plus external exit 1, all audit history, the outside-scope 58-paper list and five paused owner questions stay unchanged. The audit and Worker A/B lanes stay paused.
+
+## Original Q24 local integration — historical unpublished checkpoint
+
+Q24 now has 48 papers / 68 source_extracted records / 288 captioned crops integrated locally through the normal sequential B125 and B126 commands; the canonical record count is 6,100. Normal combined asset registration checked 593 assets, appended 563 asset entries and added zero path rules. Complete local checks, GUI, exact-head CI, ordinary merge, deployment and anonymous verification remain pending; Q24 publication credit is zero. The older 6,032 records, existing merged Reader content, six audited-only training exports and prior batch exports were preserved. No scientific audit or accuracy claim is made.
+
+The bounded Q23 cleanup removed one completed known role: 47,893 files / 3,985,935,653 logical bytes. Its original result still says RUNNING because the next-role native observation ended with GetOwner Not found and external exit 1; independent journal reconciliation confirms only role 0. The other eleven roles receive zero credit. C free bytes were 20,515,074,048 before and 24,620,072,960 at that terminal; observations are not an isolated physical-gain measurement and the 100 GiB aim remains unmet. No program, directory, paper, training file or canonical checkout was removed. The partial attempt is preserved without replay. Current free-space observation at 2026-10-22T09:35:47.412987+00:00: 23915958272 bytes; no threshold-restoration claim.
+
+No extraction/check/pass-rule, release tool or public display change was made. The B125 importer needed the ordinary tools directory in its child PYTHONPATH; its initial missing-import failure occurred before any output directory or Source write and was retained. The unchanged importer then completed. The B126 continuation used the five normal README commands on the exact post-B125 state; it did not rerun the clean-role B125 wrapper.
+
+## Q23 verified outcome
+
+Q23 was verified live at 2026-10-22T08:43:34+00:00: 37 papers / 47 source_extracted records / 221 captioned crop keys. Live totals are 2,349 papers / 6,032 records / 3,911 display pairs across 1,035 material families. Normal anonymous verification passed 682 files, 37 paper routes and 61 material bindings; both Pages jobs passed. The verified build contains 58,409 files / 4,125,761,410 logical bytes. This is one publication, not additional credit from the extended metadata receipt.
+
+[Source PR 87](https://github.com/cuiyist/mattersyn/pull/87) · [exact-head CI](https://github.com/cuiyist/mattersyn/actions/runs/39735348728) · [Pages](https://github.com/cuiyist/mattersyn-site/actions/runs/39747735605) · [live site](https://cuiyist.github.io/mattersyn-site/)
+
+The earlier 38-paper local import and c563 failed complete-build history remain below. The final release excludes the whole Ge paper 10.1021/jacs.5c00423; no product label, method label or quality gate was changed. Limited rare reads were deletion-only and are not independent scientific audits.
+
+## Next local batch and storage
+
+The private B125 pool is 24 papers / 32 records / 153 crops; the private B126 pool is 24 / 36 / 135. Their metadata memberships are disjoint, giving a potential next combined 48 papers / 68 records / 288 crops. No combined pool or integration receipt is claimed here, and none has live credit. Root reports the existing local B127 controller (PID 3492) active at this checkpoint; no continuous-work or rate claim is made.
+
+The source_extracted lane, six audited-only exports, all historical exports, outside-scope 58-paper history, five waiting owner questions and paused audit/Worker A/B lanes remain unchanged. Further cleanup is in preparation; this draft adds no pending cleanup outcome or free-space credit.
+
+[Existing cleanup report](https://github.com/cuiyist/mattersyn2/blob/888ba7d1f908a71dc20fe61df15cd57750b5d3ba/CLEANUP_REPORT_2026-10-12.md); all earlier dated cleanup and partial/refused history is preserved below.
+
 Queue basis — 2026-10-22T02:23:40.555201+00:00: 3,073 physical entries / 370 IN / 800 OUT / 1,903 uncertain. Read or positive 2,061 (226 IN); attempted without usable saved read 68 (23 IN); remaining 944 (121 IN), including unfinished work. No Q23 subtraction or publication credit.
 
 ## Q23 local correction — publication pending

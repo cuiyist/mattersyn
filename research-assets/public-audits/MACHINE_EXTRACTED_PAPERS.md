@@ -1,5 +1,49 @@
 # Published machine-extracted papers
 
+## Q23 contributions — verified live 2026-10-22T08:43:34+00:00
+
+37 papers / 47 source_extracted records / 221 captioned crop keys; limited reads are not independent audits.
+
+| DOI | Record IDs | Origin | Live verified | Limited rare read |
+|---|---|---|---|---|
+| 10.1021/ja3079576 | evans2012-ja3079576-cdse-n-1-1, evans2012-ja3079576-cdse-n-2-2, evans2012-ja3079576-cdse-n-3-3, evans2012-ja3079576-cdse-n-4-4 | B124 | 2026-10-22T08:43:34+00:00 | no |
+| 10.1021/jacs.0c06914 | lv2020-jacs-0c06914-cube-shaped-cdse-qds-1 | B124 | 2026-10-22T08:43:34+00:00 | no |
+| 10.1021/jacs.1c06661 | liu2021-jacs-1c06661-ag2te-qds-1 | B124 | 2026-10-22T08:43:34+00:00 | no |
+| 10.1021/jacs.5c12086 | hidayatova2025-jacs-5c12086-mn2-doped-cspbbr3-qds-1 | B124 | 2026-10-22T08:43:34+00:00 | yes |
+| 10.1021/jacs.6b03155 | purkait2016-jacs-6b03155-alkoxy-terminated-siqds-ro-siqds-1 | B124 | 2026-10-22T08:43:34+00:00 | no |
+| 10.1021/jacsau.5c00787 | muchlis2025-jacsau-5c00787-pbs-qds-1, muchlis2025-jacsau-5c00787-pbs-cds-qds-2 | B124 | 2026-10-22T08:43:34+00:00 | no |
+| 10.1021/jp4008575 | hassinen2013-jp4008575-4-4-nm-cdte-qds-1 | B124 | 2026-10-22T08:43:34+00:00 | no |
+| 10.1021/la104542n | zylstra2011-la104542n-cdse-zns-qdot-1-qdot-1 | B124 | 2026-10-22T08:43:34+00:00 | no |
+| 10.1021/la301186n | jiang2012-la301186n-znse-qds-mpa-capped-1 | B124 | 2026-10-22T08:43:34+00:00 | no |
+| 10.1021/la500945f | cheng2014-la500945f-siqdnonadiyne-1, cheng2014-la500945f-siqdnh2-2 | B124 | 2026-10-22T08:43:34+00:00 | no |
+| 10.1021/nn300760g | tang2012-nn300760g-graphene-quantum-dots-gqds-1 | B124 | 2026-10-22T08:43:34+00:00 | no |
+| 10.1021/ac0511896 | zhelev2006-ac0511896-cdse-core-qds-1 | B124 | 2026-10-22T08:43:34+00:00 | no |
+| 10.1021/ac202101u | zhu2011-ac202101u-mn-doped-znse-qds-mn-qds-1 | B124 | 2026-10-22T08:43:34+00:00 | yes |
+| 10.1021/ac400606e | zhang2013-ac400606e-dna-qds-1 | B124 | 2026-10-22T08:43:34+00:00 | yes |
+| 10.1021/ac500289c | zhang2014-ac500289c-boron-doped-graphene-quantum-dots-bgqds-1 | B124 | 2026-10-22T08:43:34+00:00 | yes |
+| 10.1021/ac5012014 | wang2014-ac5012014-mos2-qds-1 | B124 | 2026-10-22T08:43:34+00:00 | no |
+| 10.1021/acs.analchem.0c05102 | ma2021-acs-analchem-0c05102-cys-mno2-qds-1 | B124 | 2026-10-22T08:43:34+00:00 | yes |
+| 10.1021/acs.analchem.3c00845 | wang2023-acs-analchem-3c00845-cdse-cds-zns-qds-1 | B124 | 2026-10-22T08:43:34+00:00 | no |
+| 10.1021/acs.analchem.3c01967 | yang2023-acs-analchem-3c01967-nir-ii-ag2se-qds-1 | B124 | 2026-10-22T08:43:34+00:00 | no |
+| 10.1021/acs.analchem.4c00951 | sun2024-acs-analchem-4c00951-oda-cspbbr3-cspb2br5-pqds-1 | B124 | 2026-10-22T08:43:34+00:00 | yes |
+| 10.1021/acs.analchem.6b01943 | dutta2016-acs-analchem-6b01943-cds-maa-1, dutta2016-acs-analchem-6b01943-cds-maa-tu-2 | B124 | 2026-10-22T08:43:34+00:00 | no |
+| 10.1021/acs.analchem.8b05923 | huang2019-acs-analchem-8b05923-voxqds-1 | B124 | 2026-10-22T08:43:34+00:00 | yes |
+| 10.1021/acs.bioconjchem.5c00622 | liu2026-acs-bioconjchem-5c00622-que-cds-1 | B124 | 2026-10-22T08:43:34+00:00 | no |
+| 10.1021/acs.chemmater.0c01596 | lee2020-acs-chemmater-0c01596-znsete-znse-znses-zns-qds-te-se-0-28-1 | B124 | 2026-10-22T08:43:34+00:00 | yes |
+| 10.1021/acs.chemmater.0c03181 | toufanian2021-acs-chemmater-0c03181-inp-1zns-1, toufanian2021-acs-chemmater-0c03181-inp-10znse-3zns-2 | B124 | 2026-10-22T08:43:34+00:00 | no |
+| 10.1021/acs.chemmater.4c00026 | li2024-acs-chemmater-4c00026-ag2te-qds-with-emission-wavelengths-tuna-1 | B124 | 2026-10-22T08:43:34+00:00 | no |
+| 10.1021/acs.chemmater.6b00208 | kong2016-acs-chemmater-6b00208-rnase-a-pbs-qdots-1 | B124 | 2026-10-22T08:43:34+00:00 | no |
+| 10.1021/acs.chemmater.7b04825 | lian2018-acs-chemmater-7b04825-pbse-qds-1 | B124 | 2026-10-22T08:43:34+00:00 | no |
+| 10.1021/acs.inorgchem.2c04308 | hu2023-acs-inorgchem-2c04308-inp-znses-zns-qds-1 | B124 | 2026-10-22T08:43:34+00:00 | no |
+| 10.1021/acs.inorgchem.3c01092 | zhu2023-acs-inorgchem-3c01092-ddaf-3-cspbbr3-peqds-1 | B124 | 2026-10-22T08:43:34+00:00 | no |
+| 10.1021/acs.inorgchem.3c04358 | hu2024-acs-inorgchem-3c04358-inp-znse-zns-qds-1 | B124 | 2026-10-22T08:43:34+00:00 | no |
+| 10.1021/acs.inorgchem.5c02885 | yu2025-acs-inorgchem-5c02885-aqueous-cdse-znse-zns-zns-qds-thick-zns-1 | B124 | 2026-10-22T08:43:34+00:00 | yes |
+| 10.1021/acs.jafc.6c00865 | xiao2026-acs-jafc-6c00865-carbon-quantum-dots-cqds-1 | B124 | 2026-10-22T08:43:34+00:00 | no |
+| 10.1021/acs.jpcc.0c01933 | nguyen2020-acs-jpcc-0c01933-cis-zns-qds-0-1-mmol-zn-st-2-1, nguyen2020-acs-jpcc-0c01933-cis-zns-qds-1-mmol-zn-st-2-2, nguyen2020-acs-jpcc-0c01933-cis-zns-qds-2-mmol-zn-st-2-3, nguyen2020-acs-jpcc-0c01933-cis-zns-qds-4-mmol-zn-st-2-4 | B124 | 2026-10-22T08:43:34+00:00 | no |
+| 10.1021/acs.jpcc.1c06029 | gomez2021-acs-jpcc-1c06029-n-gqds-1 | B124 | 2026-10-22T08:43:34+00:00 | yes |
+| 10.1021/acs.jpcc.1c09817 | lee2022-acs-jpcc-1c09817-cspbbr3-siox-pqds-1 | B124 | 2026-10-22T08:43:34+00:00 | yes |
+| 10.1021/acs.jpcc.5c02041 | seto2025-acs-jpcc-5c02041-agins2-qds-ais-qds-treated-with-trioctyl-1 | B124 | 2026-10-22T08:43:34+00:00 | no |
+
 ## Q22 contributions — verified live 2026-10-22T02:14:33+00:00
 
 24 papers / 33 source_extracted records / 115 captioned crop keys; limited reads are not independent audits.
