@@ -1,0 +1,369 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "zhao2021-acs-langmuir-0c02966-cnqds-c18-3",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Ping Zhao; Bo Jin; Qingchun Zhang; Rufan Peng (2021): CNQDs-C18",
+  "material": {
+    "formula": "C3N4",
+    "family": "C3N4 nanocrystals",
+    "elements": [
+      "C",
+      "N"
+    ],
+    "components": [
+      "C3N4"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Hydrothermal",
+  "sources": [
+    {
+      "id": "zhao2021-acs-langmuir-0c02966",
+      "doi": "10.1021/acs.langmuir.0c02966",
+      "title": "High-Quality Carbon Nitride Quantum Dots on Photoluminescence: Effect of Carbon Sources",
+      "authors": "Ping Zhao; Bo Jin; Qingchun Zhang; Rufan Peng",
+      "year": 2021,
+      "url": "https://doi.org/10.1021/acs.langmuir.0c02966",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "zhao2021-acs-langmuir-0c02966",
+    "recipe_family": "zhao2021-acs-langmuir-0c02966-cnqds-c18-3",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "C3N4",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "zhao2021-acs-langmuir-0c02966",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": 6.3,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "6.3 nm",
+      "evidence": [
+        {
+          "source_id": "zhao2021-acs-langmuir-0c02966",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "zhao2021-acs-langmuir-0c02966-cnqds-c18-3--after-s01-heat",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "zhao2021-acs-langmuir-0c02966-cnqds-c18-3--after-s02-cool",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "zhao2021-acs-langmuir-0c02966-cnqds-c18-3--after-s01-heat"
+      ]
+    },
+    {
+      "id": "zhao2021-acs-langmuir-0c02966-cnqds-c18-3--after-s03-purify",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "zhao2021-acs-langmuir-0c02966-cnqds-c18-3--after-s02-cool"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-heat",
+      "action": "heat",
+      "label": "Hydrothermal reaction at 180 °C for 3 h",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "zhao2021-acs-langmuir-0c02966-cnqds-c18-3--after-s01-heat"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 180,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "180 °C",
+          "evidence": [
+            {
+              "source_id": "zhao2021-acs-langmuir-0c02966",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 3,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "3 h",
+          "evidence": [
+            {
+              "source_id": "zhao2021-acs-langmuir-0c02966",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "zhao2021-acs-langmuir-0c02966",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Hydrothermal reaction at 180 °C for 3 h",
+      "evidence": [
+        {
+          "source_id": "zhao2021-acs-langmuir-0c02966",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-cool",
+      "action": "cool",
+      "label": "Cool to laboratory temperature",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-heat"
+      ],
+      "inputs": [
+        "zhao2021-acs-langmuir-0c02966-cnqds-c18-3--after-s01-heat"
+      ],
+      "outputs": [
+        "zhao2021-acs-langmuir-0c02966-cnqds-c18-3--after-s02-cool"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "zhao2021-acs-langmuir-0c02966",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Cool to laboratory temperature",
+      "evidence": [
+        {
+          "source_id": "zhao2021-acs-langmuir-0c02966",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-purify",
+      "action": "purify",
+      "label": "Purify using a 0.22 μm membrane",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-cool"
+      ],
+      "inputs": [
+        "zhao2021-acs-langmuir-0c02966-cnqds-c18-3--after-s02-cool"
+      ],
+      "outputs": [
+        "zhao2021-acs-langmuir-0c02966-cnqds-c18-3--after-s03-purify"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Purify using a 0.22 μm membrane",
+      "evidence": [
+        {
+          "source_id": "zhao2021-acs-langmuir-0c02966",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "zhao2021-acs-langmuir-0c02966-cnqds-c18-3--product",
+      "source_sample_label": "CNQDs-C18",
+      "batch_id": null,
+      "material_state_id": "zhao2021-acs-langmuir-0c02966-cnqds-c18-3--after-s03-purify",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "C3N4",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "zhao2021-acs-langmuir-0c02966",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "zhao2021-acs-langmuir-0c02966",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reactor: 10 mL stainless steel autoclave with a Teflon-lined pipe (Main PDF p.2).",
+        "Reaction temperature: 180 degC (Main PDF p.2).",
+        "Reaction time: 3 h (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "zhao2021-acs-langmuir-0c02966-cnqds-c18-3--size",
+      "sample_id": "zhao2021-acs-langmuir-0c02966-cnqds-c18-3--product",
+      "property": "diameter",
+      "technique": "HRTEM",
+      "value": {
+        "value": 6.3,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "6.3 nm",
+        "evidence": [
+          {
+            "source_id": "zhao2021-acs-langmuir-0c02966",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "zhao2021-acs-langmuir-0c02966",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
