@@ -1,0 +1,498 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "ono2022-acsami-1c18779-rt-siqds-2",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Taisei Ono; Yuping Xu; Toshiki Sakata; Ken-ichi Saitow (2022): RT-SiQDs",
+  "material": {
+    "formula": "Si",
+    "family": "Si nanocrystals",
+    "elements": [
+      "Si"
+    ],
+    "components": [
+      "Si"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Synthesis as described in the source",
+  "sources": [
+    {
+      "id": "ono2022-acsami-1c18779",
+      "doi": "10.1021/acsami.1c18779",
+      "title": "Designing Efficient Si Quantum Dots and LEDs by Quantifying Ligand Effects",
+      "authors": "Taisei Ono; Yuping Xu; Toshiki Sakata; Ken-ichi Saitow",
+      "year": 2022,
+      "url": "https://doi.org/10.1021/acsami.1c18779",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "ono2022-acsami-1c18779",
+    "recipe_family": "ono2022-acsami-1c18779-rt-siqds-2",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Si",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "ono2022-acsami-1c18779",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "nanocrystalline",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "ono2022-acsami-1c18779",
+          "locator": "Main PDF p.14"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": 3.2,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "3.2 nm",
+      "evidence": [
+        {
+          "source_id": "ono2022-acsami-1c18779",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "sphere",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "ono2022-acsami-1c18779",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "ono2022-acsami-1c18779-rt-siqds-2--hydrogen-silsesquioxane-hsq",
+      "name": "hydrogen silsesquioxane (HSQ)",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "ono2022-acsami-1c18779",
+          "locator": "Main PDF p.13"
+        }
+      ]
+    },
+    {
+      "id": "ono2022-acsami-1c18779-rt-siqds-2--1-decene",
+      "name": "1-decene",
+      "formula": null,
+      "role": "ligand",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "ono2022-acsami-1c18779",
+          "locator": "Main PDF p.13"
+        }
+      ]
+    },
+    {
+      "id": "ono2022-acsami-1c18779-rt-siqds-2--pcl5",
+      "name": "PCl5",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "ono2022-acsami-1c18779",
+          "locator": "Main PDF p.13"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "ono2022-acsami-1c18779-rt-siqds-2--after-s01-heat",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "ono2022-acsami-1c18779-rt-siqds-2--hydrogen-silsesquioxane-hsq"
+      ]
+    },
+    {
+      "id": "ono2022-acsami-1c18779-rt-siqds-2--after-s02-cool",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "ono2022-acsami-1c18779-rt-siqds-2--after-s01-heat"
+      ]
+    },
+    {
+      "id": "ono2022-acsami-1c18779-rt-siqds-2--after-s03-etch",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "ono2022-acsami-1c18779-rt-siqds-2--after-s02-cool"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-heat",
+      "action": "heat",
+      "label": "HSQ was heated in a tube furnace",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "ono2022-acsami-1c18779-rt-siqds-2--hydrogen-silsesquioxane-hsq"
+      ],
+      "outputs": [
+        "ono2022-acsami-1c18779-rt-siqds-2--after-s01-heat"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 1100,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1100 °C",
+          "evidence": [
+            {
+              "source_id": "ono2022-acsami-1c18779",
+              "locator": "Main PDF p.13"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1 h",
+          "evidence": [
+            {
+              "source_id": "ono2022-acsami-1c18779",
+              "locator": "Main PDF p.13"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "Ar",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ono2022-acsami-1c18779",
+            "locator": "Main PDF p.13"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "HSQ was heated in a tube furnace",
+      "evidence": [
+        {
+          "source_id": "ono2022-acsami-1c18779",
+          "locator": "Main PDF p.13"
+        }
+      ]
+    },
+    {
+      "id": "s02-cool",
+      "action": "cool",
+      "label": "HSQ was cooled after pyrolysis",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-heat"
+      ],
+      "inputs": [
+        "ono2022-acsami-1c18779-rt-siqds-2--after-s01-heat"
+      ],
+      "outputs": [
+        "ono2022-acsami-1c18779-rt-siqds-2--after-s02-cool"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 7,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "7 h",
+          "evidence": [
+            {
+              "source_id": "ono2022-acsami-1c18779",
+              "locator": "Main PDF p.13"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "Ar",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ono2022-acsami-1c18779",
+            "locator": "Main PDF p.13"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "HSQ was cooled after pyrolysis",
+      "evidence": [
+        {
+          "source_id": "ono2022-acsami-1c18779",
+          "locator": "Main PDF p.13"
+        }
+      ]
+    },
+    {
+      "id": "s03-etch",
+      "action": "etch",
+      "label": "Si/SiO2 matrices were etched to produce H-SiQDs",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-cool"
+      ],
+      "inputs": [
+        "ono2022-acsami-1c18779-rt-siqds-2--after-s02-cool"
+      ],
+      "outputs": [
+        "ono2022-acsami-1c18779-rt-siqds-2--after-s03-etch"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 6,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "6 h",
+          "evidence": [
+            {
+              "source_id": "ono2022-acsami-1c18779",
+              "locator": "Main PDF p.13"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "Ar",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ono2022-acsami-1c18779",
+            "locator": "Main PDF p.13"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Si/SiO2 matrices were etched to produce H-SiQDs",
+      "evidence": [
+        {
+          "source_id": "ono2022-acsami-1c18779",
+          "locator": "Main PDF p.13"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "ono2022-acsami-1c18779-rt-siqds-2--product",
+      "source_sample_label": "RT-SiQDs",
+      "batch_id": null,
+      "material_state_id": "ono2022-acsami-1c18779-rt-siqds-2--after-s03-etch",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Si",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ono2022-acsami-1c18779",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "nanocrystalline",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ono2022-acsami-1c18779",
+            "locator": "Main PDF p.14"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "sphere",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ono2022-acsami-1c18779",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": "decyl",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ono2022-acsami-1c18779",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "ono2022-acsami-1c18779",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "notes": [
+        "Reactor: quartz boat (Main PDF p.13)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "ono2022-acsami-1c18779-rt-siqds-2--size",
+      "sample_id": "ono2022-acsami-1c18779-rt-siqds-2--product",
+      "property": "diameter",
+      "technique": "TEM",
+      "value": {
+        "value": 3.2,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "3.2 nm",
+        "evidence": [
+          {
+            "source_id": "ono2022-acsami-1c18779",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "ono2022-acsami-1c18779",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of hydrogen silsesquioxane (HSQ) not reported in the extracted text.",
+      "Amount of 1-decene not reported in the extracted text.",
+      "Amount of PCl5 not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

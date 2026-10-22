@@ -1,3 +1,9 @@
+## Q22 Source integrated, live pending — 2026-10-21T23:32:17.680000+00:00
+
+Current queue capture 2026-10-21T23:24:27.308919+00:00: 3,097 physical entries (394 IN / 800 OUT / 1,903 uncertain); saved-read metadata 2,035, attempted without usable result 65, remaining 997 including unfinished jobs. Q22 has no queue subtraction or publication credit.
+
+B123 contributes a private accepted 24-paper / 33-record / 115-captioned-crop pool after nine deletion-only object removals across five limited reads. All five normal integration phases passed; local records are 5,985, while verified live totals remain 2,288 papers / 5,952 records / 3,831 pairs. Fresh final-head local13, GUI, Source CI/ordinary merge and normal Site verification remain required. Q27 cleanup accounting passed; 100 GiB free-space aim remains unmet. Preserve the B120 caption hold and all prior refusals, five owner questions, audit windows and training rules.
+
 [Published paper index and limited-read markers](research-assets/public-audits/MACHINE_EXTRACTED_PAPERS.md)
 
 ## Q21 verified; simple lane continues

@@ -1,3 +1,19 @@
+## Q22 pending Source save — queue captured 2026-10-21T23:24:27.308919+00:00
+
+The physical queue has **3,097 entries: 394 IN, 800 OUT and 1,903 uncertain**. Saved read/positive-two-pass metadata covers 2,035 entries (200 IN); 65 were attempted without a usable saved result (20 IN); 997 remain without a successful or terminal result (174 IN). The remaining bucket includes unfinished jobs and is not a never-sent count. Historical read metadata was not re-audited. No Q22 queue subtraction or live credit has been taken.
+
+B123 closed naturally: 33 valid two-pass results and 17 omitted after the unchanged pipeline; 31 checked pairs, two valid results without checked pairs, and seven checked-pair papers without an eligible route. The accepted IN pool contains 24 papers, 33 source_extracted records and 115 captioned crop keys; no additional product-scope omission was made. Five papers received one bounded rare-material read each. Root accepted nine whole-object deletions, with zero pair deletions, additions, repairs or technical holds. These limited reads are not independent scientific audits; original paper, pass and pair bytes remain unchanged.
+
+All five normal local integration phases passed at 23:27:08–23:27:54 UTC on 2026-10-21. Local canonical records are now 5,985, including the 5,952 preserved old records; all six audited exports and 58 prior public batch exports were preserved. The merged Reader check preserved 5,394 old record displays and 2,275 figure-source displays. All 115 actual copied sync inputs and canonical crops matched their accepted SHA256 and byte bindings. Normal asset registration covered 33 records and 236 assets, adding 226 assets and zero exact rules; rights remain unverified.
+
+Q22 is Source-integrated but unpublished. No Q22 Source commit, fresh all13, GUI, exact-head CI, ordinary merge, Site Pages or anonymous publication success is claimed here. The last verified live Site remains 60453d3aeb953548676a71e53892a1324b2129ba: **2,288 papers / 5,952 records / 3,831 pairs**. All normal release gates remain required.
+
+The one fresh B120 caption request failed; that whole paper remains held with no further retry. B124 saved metadata at 23:23:30 UTC reports five positive results under its existing controller; this is not a native health, completion, eligibility or publication observation.
+
+The completed Q27 generated-copy cleanup removed 93,292 known files / 5,878,421,677 logical bytes, with zero holds, failures, directory removals, program stops or Git mutations. Independent closed-journal accounting passed. Free C changed from 46,833,348,608 to 69,178,417,152 bytes during the attempt; this is non-isolated and is not a physical-gain measurement. The 100 GiB cleanup aim remains unmet. The existing [cleanup report](https://github.com/cuiyist/mattersyn2/blob/e3e92e3b9ad11796be048c434302718ddd7fed5c/CLEANUP_REPORT_2026-10-12.md) was saved and anonymously verified at 23:22:52 UTC. Original refused three-input cleanup paths remain omitted with zero deletion credit; their failure/refusal history is preserved.
+
+Paused audit lanes, five owner questions, outside-58 history and audited-only training rules remain unchanged. This update adds no paper audit or training promotion.
+
 ## Q21 verified; simple lane continues
 
 The **2026-10-21 18:29:37 UTC** queue snapshot contains **3,097 physical entries: 394 IN, 800 OUT and 1,903 uncertain**. Disjoint states are 2,025 saved-read or positive two-pass entries (190 IN), 61 attempted without usable saved reads (16 IN), and 1,011 remaining without a successful or terminal result (188 IN). The attempted set includes 45 historical entries without saved pairs and 16 terminal failures after redo. Remaining includes unfinished jobs and is not a never-sent claim. There are 3,071 distinct nonempty DOI labels and 26 unlabeled entries, not a certified unique-primary-paper count. The exact four verified Q21 sources were subtracted once.
