@@ -1,35 +1,36 @@
 # Published machine-extracted papers
 
-## Q22 pending Source contribution — captured 2026-10-21T23:32:17.680000+00:00
+## Q22 contributions — verified live 2026-10-22T02:14:33+00:00
 
-24 papers / 33 source_extracted records / 115 captioned crop keys; live verification is pending. Five limited rare reads are not independent audits.
+24 papers / 33 source_extracted records / 115 captioned crop keys; limited reads are not independent audits.
 
-| DOI | Source ID | Record IDs | Origin | Publication | Limited rare read |
-|---|---|---|---|---|---|
-| 10.1021/acs.jpcc.7b06153 | durmusoglu2017-acs-jpcc-7b06153 | durmusoglu2017-acs-jpcc-7b06153-pbs-cds-core-shell-qds-1 | B123 | pending | no |
-| 10.1021/acs.jpclett.5b00689 | zhang2015-acs-jpclett-5b00689 | zhang2015-acs-jpclett-5b00689-pbs-qds-synthesized-at-95-c-with-2-g-oa-1, zhang2015-acs-jpclett-5b00689-pbs-qds-synthesized-at-120-c-with-5-5-g-2, zhang2015-acs-jpclett-5b00689-pbs-qds-synthesized-at-150-c-with-3-8-g-3, zhang2015-acs-jpclett-5b00689-pbs-qds-synthesized-at-185-c-with-2-2-g-4 | B123 | pending | no |
-| 10.1021/acs.jpclett.5c01007 | huang2025-acs-jpclett-5c01007 | huang2025-acs-jpclett-5c01007-cds-qds-1 | B123 | pending | no |
-| 10.1021/acs.langmuir.2c00236 | li2022-acs-langmuir-2c00236 | li2022-acs-langmuir-2c00236-agins2-qds-1 | B123 | pending | no |
-| 10.1021/acs.langmuir.6c01054 | rani2026-acs-langmuir-6c01054 | rani2026-acs-langmuir-6c01054-hp-cqd-1 | B123 | pending | no |
-| 10.1021/acs.macromol.6b00582 | fokina2016-acs-macromol-6b00582 | fokina2016-acs-macromol-6b00582-qd-pl1a-1 | B123 | pending | no |
-| 10.1021/acsabm.4c01467 | chen2025-acsabm-4c01467 | chen2025-acsabm-4c01467-inp-znse-zns-aca-qds-1 | B123 | pending | no |
-| 10.1021/acsami.1c18779 | ono2022-acsami-1c18779 | ono2022-acsami-1c18779-ht-siqds-1, ono2022-acsami-1c18779-rt-siqds-2 | B123 | pending | no |
-| 10.1021/acsami.4c21351 | alam2025-acsami-4c21351 | alam2025-acsami-4c21351-cspbbr3-gpa-pqds-1 | B123 | pending | no |
-| 10.1021/acsami.5c01857 | mao2025-acsami-5c01857 | mao2025-acsami-5c01857-ag2te-qds-1 | B123 | pending | no |
-| 10.1021/acsanm.2c00811 | xu2022-acsanm-2c00811 | xu2022-acsanm-2c00811-decyl-terminated-siqds-de-siqds-1 | B123 | pending | no |
-| 10.1021/acsanm.3c04956 | wang2024-acsanm-3c04956 | wang2024-acsanm-3c04956-zn-cqds-1 | B123 | pending | yes |
-| 10.1021/acsanm.4c02542 | paria2024-acsanm-4c02542 | paria2024-acsanm-4c02542-mos2-qds-1, paria2024-acsanm-4c02542-mose2-qds-2 | B123 | pending | yes |
-| 10.1021/acsanm.4c02560 | teku2024-acsanm-4c02560 | teku2024-acsanm-4c02560-cspbbr3-zns-core-shell-pqds-1 | B123 | pending | yes |
-| 10.1021/acsanm.5c04795 | yano2026-acsanm-5c04795 | yano2026-acsanm-5c04795-cuins2-zns-qds-silica-1 | B123 | pending | no |
-| 10.1021/acsanm.8b02231 | mallick2019-acsanm-8b02231 | mallick2019-acsanm-8b02231-qd-1-1 | B123 | pending | no |
-| 10.1021/acsenergylett.5c01449 | zhang2025-acsenergylett-5c01449 | zhang2025-acsenergylett-5c01449-target-pqds-1 | B123 | pending | no |
-| 10.1021/acsenergylett.5c04073 | he2026-acsenergylett-5c04073 | he2026-acsenergylett-5c04073-cspbbr3-qds-capped-with-12612-gemini-lig-1, he2026-acsenergylett-5c04073-cspbbr3-qds-capped-with-12612-oh-gemini-2 | B123 | pending | no |
-| 10.1021/acssuschemeng.2c00036 | gao2022-acssuschemeng-2c00036 | gao2022-acssuschemeng-2c00036-sulfur-quantum-dots-sqds-1 | B123 | pending | yes |
-| 10.1021/acssusresmgt.4c00202 | kumar2024-acssusresmgt-4c00202 | kumar2024-acssusresmgt-4c00202-graphene-quantum-dots-gqds-1 | B123 | pending | no |
-| 10.1021/am303110x | zhu2013-am303110x | zhu2013-am303110x-ag2se-qds-reaction-time-1-min-1, zhu2013-am303110x-ag2se-qds-reaction-time-5-min-2, zhu2013-am303110x-ag2se-qds-reaction-time-1-h-3 | B123 | pending | no |
-| 10.1021/cm201550w | lim2011-cm201550w | lim2011-cm201550w-inp-znses-qds-1 | B123 | pending | yes |
-| 10.1021/ie2007467 | shen2011-ie2007467 | shen2011-ie2007467-tio2-cuins2-heterojunction-photocatalyst-1 | B123 | pending | no |
-| 10.1021/ja207344u | atkins2011-ja207344u | atkins2011-ja207344u-3-aminopropenyl-terminated-si-qds-1, atkins2011-ja207344u-silica-encapsulated-si-qds-2 | B123 | pending | no |
+| DOI | Record IDs | Origin | Live verified | Limited rare read |
+|---|---|---|---|---|
+| 10.1021/acs.jpcc.7b06153 | durmusoglu2017-acs-jpcc-7b06153-pbs-cds-core-shell-qds-1 | B123 | 2026-10-22T02:14:33+00:00 | no |
+| 10.1021/acs.jpclett.5b00689 | zhang2015-acs-jpclett-5b00689-pbs-qds-synthesized-at-95-c-with-2-g-oa-1, zhang2015-acs-jpclett-5b00689-pbs-qds-synthesized-at-120-c-with-5-5-g-2, zhang2015-acs-jpclett-5b00689-pbs-qds-synthesized-at-150-c-with-3-8-g-3, zhang2015-acs-jpclett-5b00689-pbs-qds-synthesized-at-185-c-with-2-2-g-4 | B123 | 2026-10-22T02:14:33+00:00 | no |
+| 10.1021/acs.jpclett.5c01007 | huang2025-acs-jpclett-5c01007-cds-qds-1 | B123 | 2026-10-22T02:14:33+00:00 | no |
+| 10.1021/acs.langmuir.2c00236 | li2022-acs-langmuir-2c00236-agins2-qds-1 | B123 | 2026-10-22T02:14:33+00:00 | no |
+| 10.1021/acs.langmuir.6c01054 | rani2026-acs-langmuir-6c01054-hp-cqd-1 | B123 | 2026-10-22T02:14:33+00:00 | no |
+| 10.1021/acs.macromol.6b00582 | fokina2016-acs-macromol-6b00582-qd-pl1a-1 | B123 | 2026-10-22T02:14:33+00:00 | no |
+| 10.1021/acsabm.4c01467 | chen2025-acsabm-4c01467-inp-znse-zns-aca-qds-1 | B123 | 2026-10-22T02:14:33+00:00 | no |
+| 10.1021/acsami.1c18779 | ono2022-acsami-1c18779-ht-siqds-1, ono2022-acsami-1c18779-rt-siqds-2 | B123 | 2026-10-22T02:14:33+00:00 | no |
+| 10.1021/acsami.4c21351 | alam2025-acsami-4c21351-cspbbr3-gpa-pqds-1 | B123 | 2026-10-22T02:14:33+00:00 | no |
+| 10.1021/acsami.5c01857 | mao2025-acsami-5c01857-ag2te-qds-1 | B123 | 2026-10-22T02:14:33+00:00 | no |
+| 10.1021/acsanm.2c00811 | xu2022-acsanm-2c00811-decyl-terminated-siqds-de-siqds-1 | B123 | 2026-10-22T02:14:33+00:00 | no |
+| 10.1021/acsanm.3c04956 | wang2024-acsanm-3c04956-zn-cqds-1 | B123 | 2026-10-22T02:14:33+00:00 | yes |
+| 10.1021/acsanm.4c02542 | paria2024-acsanm-4c02542-mos2-qds-1, paria2024-acsanm-4c02542-mose2-qds-2 | B123 | 2026-10-22T02:14:33+00:00 | yes |
+| 10.1021/acsanm.4c02560 | teku2024-acsanm-4c02560-cspbbr3-zns-core-shell-pqds-1 | B123 | 2026-10-22T02:14:33+00:00 | yes |
+| 10.1021/acsanm.5c04795 | yano2026-acsanm-5c04795-cuins2-zns-qds-silica-1 | B123 | 2026-10-22T02:14:33+00:00 | no |
+| 10.1021/acsanm.8b02231 | mallick2019-acsanm-8b02231-qd-1-1 | B123 | 2026-10-22T02:14:33+00:00 | no |
+| 10.1021/acsenergylett.5c01449 | zhang2025-acsenergylett-5c01449-target-pqds-1 | B123 | 2026-10-22T02:14:33+00:00 | no |
+| 10.1021/acsenergylett.5c04073 | he2026-acsenergylett-5c04073-cspbbr3-qds-capped-with-12612-gemini-lig-1, he2026-acsenergylett-5c04073-cspbbr3-qds-capped-with-12612-oh-gemini-2 | B123 | 2026-10-22T02:14:33+00:00 | no |
+| 10.1021/acssuschemeng.2c00036 | gao2022-acssuschemeng-2c00036-sulfur-quantum-dots-sqds-1 | B123 | 2026-10-22T02:14:33+00:00 | yes |
+| 10.1021/acssusresmgt.4c00202 | kumar2024-acssusresmgt-4c00202-graphene-quantum-dots-gqds-1 | B123 | 2026-10-22T02:14:33+00:00 | no |
+| 10.1021/am303110x | zhu2013-am303110x-ag2se-qds-reaction-time-1-min-1, zhu2013-am303110x-ag2se-qds-reaction-time-5-min-2, zhu2013-am303110x-ag2se-qds-reaction-time-1-h-3 | B123 | 2026-10-22T02:14:33+00:00 | no |
+| 10.1021/cm201550w | lim2011-cm201550w-inp-znses-qds-1 | B123 | 2026-10-22T02:14:33+00:00 | yes |
+| 10.1021/ie2007467 | shen2011-ie2007467-tio2-cuins2-heterojunction-photocatalyst-1 | B123 | 2026-10-22T02:14:33+00:00 | no |
+| 10.1021/ja207344u | atkins2011-ja207344u-3-aminopropenyl-terminated-si-qds-1, atkins2011-ja207344u-silica-encapsulated-si-qds-2 | B123 | 2026-10-22T02:14:33+00:00 | no |
+
 
 ## Q21 contributions — verified live 2026-10-21T18:27:52+00:00
 

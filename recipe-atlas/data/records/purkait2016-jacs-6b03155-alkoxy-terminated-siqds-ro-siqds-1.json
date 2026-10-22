@@ -1,0 +1,386 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "purkait2016-jacs-6b03155-alkoxy-terminated-siqds-ro-siqds-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Tapas K. Purkait; Muhammad Iqbal; Muhammad Amirul Islam; Md Hosnay Mobarok; Christina M. Gonzalez; Lida Hadidi; Jonathan G. C. Veinot (2016): alkoxy-terminated SiQDs (RO-SiQDs)",
+  "material": {
+    "formula": "Si",
+    "family": "Si nanocrystals",
+    "elements": [
+      "Si"
+    ],
+    "components": [
+      "Si"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Synthesis as described in the source",
+  "sources": [
+    {
+      "id": "purkait2016-jacs-6b03155",
+      "doi": "10.1021/jacs.6b03155",
+      "title": "Alkoxy-Terminated Si Surfaces: A New Reactive Platform for the Functionalization and Derivatization of Silicon Quantum Dots",
+      "authors": "Tapas K. Purkait; Muhammad Iqbal; Muhammad Amirul Islam; Md Hosnay Mobarok; Christina M. Gonzalez; Lida Hadidi; Jonathan G. C. Veinot",
+      "year": 2016,
+      "url": "https://doi.org/10.1021/jacs.6b03155",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "purkait2016-jacs-6b03155",
+    "recipe_family": "purkait2016-jacs-6b03155-alkoxy-terminated-siqds-ro-siqds-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Si",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "purkait2016-jacs-6b03155",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "zinc blende",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "purkait2016-jacs-6b03155",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": 3.4,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "3.4 nm",
+      "evidence": [
+        {
+          "source_id": "purkait2016-jacs-6b03155",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "sphere",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "purkait2016-jacs-6b03155",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "purkait2016-jacs-6b03155-alkoxy-terminated-siqds-ro-siqds-1--2-butanone",
+      "name": "2-butanone",
+      "formula": null,
+      "role": "ligand",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "amount": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mmol",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "10 mmol",
+          "evidence": [
+            {
+              "source_id": "purkait2016-jacs-6b03155",
+              "locator": "Main PDF p.5"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "purkait2016-jacs-6b03155",
+          "locator": "Main PDF p.5"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "purkait2016-jacs-6b03155-alkoxy-terminated-siqds-ro-siqds-1--after-s01-combine",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "purkait2016-jacs-6b03155-alkoxy-terminated-siqds-ro-siqds-1--2-butanone"
+      ]
+    },
+    {
+      "id": "purkait2016-jacs-6b03155-alkoxy-terminated-siqds-ro-siqds-1--after-s02-heat",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "purkait2016-jacs-6b03155-alkoxy-terminated-siqds-ro-siqds-1--after-s01-combine"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-combine",
+      "action": "combine",
+      "label": "Combine 2-butanone and degassed H-SiQD solution",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "purkait2016-jacs-6b03155-alkoxy-terminated-siqds-ro-siqds-1--2-butanone"
+      ],
+      "outputs": [
+        "purkait2016-jacs-6b03155-alkoxy-terminated-siqds-ro-siqds-1--after-s01-combine"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "purkait2016-jacs-6b03155",
+            "locator": "Main PDF p.5"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Combine 2-butanone and degassed H-SiQD solution",
+      "evidence": [
+        {
+          "source_id": "purkait2016-jacs-6b03155",
+          "locator": "Main PDF p.5"
+        }
+      ]
+    },
+    {
+      "id": "s02-heat",
+      "action": "heat",
+      "label": "Heat to 180 °C for 1 h",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-combine"
+      ],
+      "inputs": [
+        "purkait2016-jacs-6b03155-alkoxy-terminated-siqds-ro-siqds-1--after-s01-combine"
+      ],
+      "outputs": [
+        "purkait2016-jacs-6b03155-alkoxy-terminated-siqds-ro-siqds-1--after-s02-heat"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 180,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "180 °C",
+          "evidence": [
+            {
+              "source_id": "purkait2016-jacs-6b03155",
+              "locator": "Main PDF p.5"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1 h",
+          "evidence": [
+            {
+              "source_id": "purkait2016-jacs-6b03155",
+              "locator": "Main PDF p.5"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "purkait2016-jacs-6b03155",
+            "locator": "Main PDF p.5"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Heat to 180 °C for 1 h",
+      "evidence": [
+        {
+          "source_id": "purkait2016-jacs-6b03155",
+          "locator": "Main PDF p.5"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "purkait2016-jacs-6b03155-alkoxy-terminated-siqds-ro-siqds-1--product",
+      "source_sample_label": "alkoxy-terminated SiQDs (RO-SiQDs)",
+      "batch_id": null,
+      "material_state_id": "purkait2016-jacs-6b03155-alkoxy-terminated-siqds-ro-siqds-1--after-s02-heat",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Si",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "purkait2016-jacs-6b03155",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "zinc blende",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "purkait2016-jacs-6b03155",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "sphere",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "purkait2016-jacs-6b03155",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": "alkoxy",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "purkait2016-jacs-6b03155",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "purkait2016-jacs-6b03155",
+          "locator": "Main PDF p.5"
+        }
+      ],
+      "notes": [
+        "Reactor: 5 mL microwave vial (Main PDF p.5).",
+        "Reaction temperature: 180 degC (Main PDF p.5).",
+        "Reaction time: 1 h (Main PDF p.5)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "purkait2016-jacs-6b03155-alkoxy-terminated-siqds-ro-siqds-1--size",
+      "sample_id": "purkait2016-jacs-6b03155-alkoxy-terminated-siqds-ro-siqds-1--product",
+      "property": "diameter",
+      "technique": "TEM",
+      "value": {
+        "value": 3.4,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "3.4 nm",
+        "evidence": [
+          {
+            "source_id": "purkait2016-jacs-6b03155",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "purkait2016-jacs-6b03155",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

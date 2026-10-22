@@ -1,3 +1,27 @@
+## Q23 local correction — publication pending
+
+Q23 correction at 2026-10-22T04:58:46.883736+00:00: 37 papers / 47 records / 221 captioned crops are integrated locally; the canonical record count is 6,032. Q23 has zero publication credit. 
+
+The earlier 38-paper / 48-record / 224-crop import remains historical fact. Its c563 complete build failed the unchanged Ge quality checks after phases 0–11 passed. One whole paper (DOI 10.1021/jacs.5c00423) is held; no method/product label or gate was changed. The exact correction removed only that new record, its three crops and exclusive derived bindings. The old 5,985 records, six audited-only exports and 59 prior batch exports remain preserved. Original pairs, the accepted parent pool and the failed local branch remain retained. Normal regeneration preserves the other 37 papers exactly; it does not establish a fresh complete-build pass.
+
+Q22 remains verified live at 2,312 papers / 5,985 records / 3,864 pairs: [Source PR86](https://github.com/cuiyist/mattersyn/pull/86), [exact-head CI](https://github.com/cuiyist/mattersyn/actions/runs/39700534521), and [Pages](https://github.com/cuiyist/mattersyn-site/actions/runs/39708696861). Fresh Q23 checks, GUI, CI, merge, release and anonymous verification are pending.
+
+B125 private derivatives at 2026-10-22T04:45:56.467940+00:00 applied 28 whole-object deletions and zero whole-pair deletions, leaving a normal projection of 29 papers / 38 records / 187 figure keys. Caption closure at 04:50:55.622666+00:00 covers 25 papers / 159 keys, with six whole-paper caption holds. The accepted/caption-complete metadata intersection is 24 papers / 32 records / 153 crops; it is not a materialized pool, Source integration, independent audit or publication.
+
+The [existing cleanup report](https://github.com/cuiyist/mattersyn2/blob/786f0e9ad473a251550eca6a0ace7237757fb759/CLEANUP_REPORT_2026-10-12.md) was saved and anonymously verified at 04:12:53.219377+00:00. Its R22 partial entry records 173,535 files / 12,123,174,918 logical bytes across three closed roles with an external exit of 1; the unvisited role has zero credit. The original failure and all prior named cleanup facts remain preserved. These are logical removed-copy counts, not isolated physical gain; the 100 GiB free-space aim remains unmet. The five owner questions, paused audit lane, outside-scope 58 and historical source-extracted status remain unchanged.
+
+[Paper index and limited-read markers](research-assets/public-audits/MACHINE_EXTRACTED_PAPERS.md) · [Single pipeline report](research-assets/public-audits/SIMPLE_PIPELINE_REPORT.md)
+
+## Q22 verified; Q23 integrated locally
+
+Q22 is [live](https://cuiyist.github.io/mattersyn-site/): **24 papers, 33 source_extracted records and 115 captioned crops**. Its normal anonymous check at 2026-10-22T02:14:33+00:00 passed 428 files, 24 paper routes and 38 material bindings. [Source PR86](https://github.com/cuiyist/mattersyn/pull/86), [all three exact-head CI jobs](https://github.com/cuiyist/mattersyn/actions/runs/39700534521) and the ordinary merge are saved; [Pages run 39708696861](https://github.com/cuiyist/mattersyn-site/actions/runs/39708696861) passed. The deployment and displayed-counter observation at 2026-10-22T02:21:06.680923+00:00 confirms **2,312 contributing papers, 5,985 canonical records, 3,864 recipe–structure pairs and 1,025 material families**. The Q22 contribution had five limited rare-material reads and nine whole-object deletions, with no whole-pair deletion or repair. These are not independent audits.
+
+The private B124 pool is accepted at **38 papers, 48 records and 224 captioned crops**. Its derivatives applied 14 whole-object deletions and no whole-pair deletions or repairs; originals were preserved. The whole DOI [10.1021/acs.inorgchem.5c05727](https://doi.org/10.1021/acs.inorgchem.5c05727) remains excluded under a technical hold. The saved caption closure covered 39 papers and 228 keys with no failed packet, recovery request or unresolved caption; that larger closure is not the accepted-pool count.
+
+The normal Q23 import completed at 2026-10-22T03:53:50.876117+00:00 with all five local conversion stages successful. It added **48 records from 38 papers and 224 captioned crops**, giving **6,033 local canonical records**. All 5,985 prior record files, six audited-only exports, existing batch exports and existing Reader entries were preserved. The quote-free export was generated without quotes. Q23 is integrated locally and remains **unpublished, with zero publication credit**; the normal preparation, build, browser, CI, merge, deployment and anonymous checks remain required.
+
+The dated queue is 3,073 physical entries: 370 IN, 800 OUT and 1,903 uncertain. The [single report](research-assets/public-audits/SIMPLE_PIPELINE_REPORT.md) preserves the exact read/attempt/remaining breakdown, fourteen-cohort cleanup base, later partial results and permanent omissions. The five questions, paused audit lane, outside58 history and six audited-only exports remain unchanged.
+
 ## Q22 Source integrated, live pending — 2026-10-21T23:32:17.680000+00:00
 
 Current queue capture 2026-10-21T23:24:27.308919+00:00: 3,097 physical entries (394 IN / 800 OUT / 1,903 uncertain); saved-read metadata 2,035, attempted without usable result 65, remaining 997 including unfinished jobs. Q22 has no queue subtraction or publication credit.

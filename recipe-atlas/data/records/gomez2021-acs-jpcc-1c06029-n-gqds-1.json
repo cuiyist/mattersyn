@@ -1,0 +1,367 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "gomez2021-acs-jpcc-1c06029-n-gqds-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "I. Jénnifer Gómez; Manuel Vázquez Sulleiro; Anna Dolečková; Naděžda Pizúrová; Jiřina Medalová; Rajarshi Roy; David Nečas; Lenka Zajíčková (2021): N-GQDs",
+  "material": {
+    "formula": "C, N, O",
+    "family": "C, N, O nanocrystals",
+    "elements": [
+      "C",
+      "N",
+      "O"
+    ],
+    "components": [
+      "C, N, O"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Microwave-assisted hydrothermal",
+  "sources": [
+    {
+      "id": "gomez2021-acs-jpcc-1c06029",
+      "doi": "10.1021/acs.jpcc.1c06029",
+      "title": "Exploring the Emission Pathways in Nitrogen-Doped Graphene Quantum Dots for Bioimaging",
+      "authors": "I. Jénnifer Gómez; Manuel Vázquez Sulleiro; Anna Dolečková; Naděžda Pizúrová; Jiřina Medalová; Rajarshi Roy; David Nečas; Lenka Zajíčková",
+      "year": 2021,
+      "url": "https://doi.org/10.1021/acs.jpcc.1c06029",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "gomez2021-acs-jpcc-1c06029",
+    "recipe_family": "gomez2021-acs-jpcc-1c06029-n-gqds-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "C, N, O",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "gomez2021-acs-jpcc-1c06029",
+          "locator": "Main PDF p.4"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "hexagonal graphite",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "gomez2021-acs-jpcc-1c06029",
+          "locator": "Main PDF p.4"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "sphere",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "gomez2021-acs-jpcc-1c06029",
+          "locator": "Main PDF p.4"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "gomez2021-acs-jpcc-1c06029-n-gqds-1--glucose",
+      "name": "glucose",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "amount": {
+          "value": 0.14,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mmol",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0.14 mmol",
+          "evidence": [
+            {
+              "source_id": "gomez2021-acs-jpcc-1c06029",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "gomez2021-acs-jpcc-1c06029",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "gomez2021-acs-jpcc-1c06029-n-gqds-1--after-s01-dissolve",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "gomez2021-acs-jpcc-1c06029-n-gqds-1--glucose"
+      ]
+    },
+    {
+      "id": "gomez2021-acs-jpcc-1c06029-n-gqds-1--after-s02-dialyze",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "gomez2021-acs-jpcc-1c06029-n-gqds-1--after-s01-dissolve"
+      ]
+    },
+    {
+      "id": "gomez2021-acs-jpcc-1c06029-n-gqds-1--after-s03-freeze-dry",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "gomez2021-acs-jpcc-1c06029-n-gqds-1--after-s02-dialyze"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-dissolve",
+      "action": "dissolve",
+      "label": "Dissolve glucose in Milli-Q water",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "gomez2021-acs-jpcc-1c06029-n-gqds-1--glucose"
+      ],
+      "outputs": [
+        "gomez2021-acs-jpcc-1c06029-n-gqds-1--after-s01-dissolve"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Dissolve glucose in Milli-Q water",
+      "evidence": [
+        {
+          "source_id": "gomez2021-acs-jpcc-1c06029",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-dialyze",
+      "action": "dialyze",
+      "label": "Dialyze the N-GQD solution",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-dissolve"
+      ],
+      "inputs": [
+        "gomez2021-acs-jpcc-1c06029-n-gqds-1--after-s01-dissolve"
+      ],
+      "outputs": [
+        "gomez2021-acs-jpcc-1c06029-n-gqds-1--after-s02-dialyze"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 2,
+          "minimum": null,
+          "maximum": null,
+          "unit": "d",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "2 days",
+          "evidence": [
+            {
+              "source_id": "gomez2021-acs-jpcc-1c06029",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Dialyze the N-GQD solution",
+      "evidence": [
+        {
+          "source_id": "gomez2021-acs-jpcc-1c06029",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-freeze-dry",
+      "action": "freeze-dry",
+      "label": "Freeze-dry the N-GQD solution",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-dialyze"
+      ],
+      "inputs": [
+        "gomez2021-acs-jpcc-1c06029-n-gqds-1--after-s02-dialyze"
+      ],
+      "outputs": [
+        "gomez2021-acs-jpcc-1c06029-n-gqds-1--after-s03-freeze-dry"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Freeze-dry the N-GQD solution",
+      "evidence": [
+        {
+          "source_id": "gomez2021-acs-jpcc-1c06029",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "gomez2021-acs-jpcc-1c06029-n-gqds-1--product",
+      "source_sample_label": "N-GQDs",
+      "batch_id": null,
+      "material_state_id": "gomez2021-acs-jpcc-1c06029-n-gqds-1--after-s03-freeze-dry",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "C, N, O",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "gomez2021-acs-jpcc-1c06029",
+            "locator": "Main PDF p.4"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "hexagonal graphite",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "gomez2021-acs-jpcc-1c06029",
+            "locator": "Main PDF p.4"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "sphere",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "gomez2021-acs-jpcc-1c06029",
+            "locator": "Main PDF p.4"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "gomez2021-acs-jpcc-1c06029",
+          "locator": "Main PDF p.4"
+        }
+      ],
+      "notes": [
+        "Reactor: Discover SP microwave reactor (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
