@@ -1,0 +1,344 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "yang2018-acs-jpcc-8b01385-ugqds-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Guancao Yang; Chuanli Wu; Xiaojun Luo; Xiaoyan Liu; Yuan Gao; Ping Wu; Chenxin Cai; S. Scott Saavedra (2018): UGQDs",
+  "material": {
+    "formula": "C",
+    "family": "C nanocrystals",
+    "elements": [
+      "C"
+    ],
+    "components": [
+      "C"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Constant potential electrolysis",
+  "sources": [
+    {
+      "id": "yang2018-acs-jpcc-8b01385",
+      "doi": "10.1021/acs.jpcc.8b01385",
+      "title": "Exploring the Emissive States of Heteroatom-Doped Graphene Quantum Dots",
+      "authors": "Guancao Yang; Chuanli Wu; Xiaojun Luo; Xiaoyan Liu; Yuan Gao; Ping Wu; Chenxin Cai; S. Scott Saavedra",
+      "year": 2018,
+      "url": "https://doi.org/10.1021/acs.jpcc.8b01385",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "yang2018-acs-jpcc-8b01385",
+    "recipe_family": "yang2018-acs-jpcc-8b01385-ugqds-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "C",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "yang2018-acs-jpcc-8b01385",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": 4.3,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "4.3 nm",
+      "evidence": [
+        {
+          "source_id": "yang2018-acs-jpcc-8b01385",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "yang2018-acs-jpcc-8b01385-ugqds-1--graphite-rod",
+      "name": "graphite rod",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "yang2018-acs-jpcc-8b01385",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "yang2018-acs-jpcc-8b01385-ugqds-1--0-1-m-phosphate-buffer-solution",
+      "name": "0.1 M phosphate buffer solution",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "yang2018-acs-jpcc-8b01385",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "yang2018-acs-jpcc-8b01385-ugqds-1--after-s01-filter",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "yang2018-acs-jpcc-8b01385-ugqds-1--after-s02-dialyze",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "yang2018-acs-jpcc-8b01385-ugqds-1--after-s01-filter"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-filter",
+      "action": "filter",
+      "label": "Filtering the solution to remove precipitated graphite oxide and particles",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "yang2018-acs-jpcc-8b01385-ugqds-1--after-s01-filter"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Filtering the solution to remove precipitated graphite oxide and particles",
+      "evidence": [
+        {
+          "source_id": "yang2018-acs-jpcc-8b01385",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-dialyze",
+      "action": "dialyze",
+      "label": "Dialysis in deionized water to remove PBS electrolyte",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-filter"
+      ],
+      "inputs": [
+        "yang2018-acs-jpcc-8b01385-ugqds-1--after-s01-filter"
+      ],
+      "outputs": [
+        "yang2018-acs-jpcc-8b01385-ugqds-1--after-s02-dialyze"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 48,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "48 h",
+          "evidence": [
+            {
+              "source_id": "yang2018-acs-jpcc-8b01385",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "aqueous",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yang2018-acs-jpcc-8b01385",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Dialysis in deionized water to remove PBS electrolyte",
+      "evidence": [
+        {
+          "source_id": "yang2018-acs-jpcc-8b01385",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "yang2018-acs-jpcc-8b01385-ugqds-1--product",
+      "source_sample_label": "UGQDs",
+      "batch_id": null,
+      "material_state_id": "yang2018-acs-jpcc-8b01385-ugqds-1--after-s02-dialyze",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "C",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yang2018-acs-jpcc-8b01385",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": "surface functional groups (−OH, −COOH, C−O−C)",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yang2018-acs-jpcc-8b01385",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "yang2018-acs-jpcc-8b01385",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reactor: two-compartment two-electrode cell with a sample volume of ∼20 mL (Main PDF p.2).",
+        "Reaction time: 2 h (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "yang2018-acs-jpcc-8b01385-ugqds-1--size",
+      "sample_id": "yang2018-acs-jpcc-8b01385-ugqds-1--product",
+      "property": "diameter",
+      "technique": "TEM",
+      "value": {
+        "value": 4.3,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "4.3 nm",
+        "evidence": [
+          {
+            "source_id": "yang2018-acs-jpcc-8b01385",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "yang2018-acs-jpcc-8b01385",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Shape not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Amount of graphite rod not reported in the extracted text.",
+      "Amount of 0.1 M phosphate buffer solution not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

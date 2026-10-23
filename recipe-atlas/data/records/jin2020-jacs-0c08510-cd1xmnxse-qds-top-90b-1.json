@@ -1,0 +1,388 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "jin2020-jacs-0c08510-cd1xmnxse-qds-top-90b-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Ho Jin; Mateusz Goryca; Michael T. Janicke; Scott A. Crooker; Victor I. Klimov (2020): Cd1−xMnxSe QDs (TOP-90b)",
+  "material": {
+    "formula": "CdSe",
+    "family": "CdSe nanocrystals",
+    "elements": [
+      "Cd",
+      "Se"
+    ],
+    "components": [
+      "CdSe"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Synthesis as described in the source",
+  "sources": [
+    {
+      "id": "jin2020-jacs-0c08510",
+      "doi": "10.1021/jacs.0c08510",
+      "title": "Exploiting Functional Impurities for Fast and Efficient Incorporation of Manganese into Quantum Dots",
+      "authors": "Ho Jin; Mateusz Goryca; Michael T. Janicke; Scott A. Crooker; Victor I. Klimov",
+      "year": 2020,
+      "url": "https://doi.org/10.1021/jacs.0c08510",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "jin2020-jacs-0c08510",
+    "recipe_family": "jin2020-jacs-0c08510-cd1xmnxse-qds-top-90b-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdSe",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "jin2020-jacs-0c08510",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "wurtzite",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "jin2020-jacs-0c08510",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "jin2020-jacs-0c08510-cd1xmnxse-qds-top-90b-1--after-s01-heat",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "jin2020-jacs-0c08510-cd1xmnxse-qds-top-90b-1--after-s02-heat",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "jin2020-jacs-0c08510-cd1xmnxse-qds-top-90b-1--after-s01-heat"
+      ]
+    },
+    {
+      "id": "jin2020-jacs-0c08510-cd1xmnxse-qds-top-90b-1--after-s03-inject",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "jin2020-jacs-0c08510-cd1xmnxse-qds-top-90b-1--after-s02-heat"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-heat",
+      "action": "heat",
+      "label": "Heat to 150 °C under vacuum",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "jin2020-jacs-0c08510-cd1xmnxse-qds-top-90b-1--after-s01-heat"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 150,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "150 °C",
+          "evidence": [
+            {
+              "source_id": "jin2020-jacs-0c08510",
+              "locator": "Main PDF p.11"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1 h",
+          "evidence": [
+            {
+              "source_id": "jin2020-jacs-0c08510",
+              "locator": "Main PDF p.11"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jin2020-jacs-0c08510",
+            "locator": "Main PDF p.11"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Heat to 150 °C under vacuum",
+      "evidence": [
+        {
+          "source_id": "jin2020-jacs-0c08510",
+          "locator": "Main PDF p.11"
+        }
+      ]
+    },
+    {
+      "id": "s02-heat",
+      "action": "heat",
+      "label": "Heat to 320 °C under N2",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-heat"
+      ],
+      "inputs": [
+        "jin2020-jacs-0c08510-cd1xmnxse-qds-top-90b-1--after-s01-heat"
+      ],
+      "outputs": [
+        "jin2020-jacs-0c08510-cd1xmnxse-qds-top-90b-1--after-s02-heat"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 320,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "320 °C",
+          "evidence": [
+            {
+              "source_id": "jin2020-jacs-0c08510",
+              "locator": "Main PDF p.11"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jin2020-jacs-0c08510",
+            "locator": "Main PDF p.11"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Heat to 320 °C under N2",
+      "evidence": [
+        {
+          "source_id": "jin2020-jacs-0c08510",
+          "locator": "Main PDF p.11"
+        }
+      ]
+    },
+    {
+      "id": "s03-inject",
+      "action": "inject",
+      "label": "Inject TOP at 320 °C",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-heat"
+      ],
+      "inputs": [
+        "jin2020-jacs-0c08510-cd1xmnxse-qds-top-90b-1--after-s02-heat"
+      ],
+      "outputs": [
+        "jin2020-jacs-0c08510-cd1xmnxse-qds-top-90b-1--after-s03-inject"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 320,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "320 °C",
+          "evidence": [
+            {
+              "source_id": "jin2020-jacs-0c08510",
+              "locator": "Main PDF p.11"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jin2020-jacs-0c08510",
+            "locator": "Main PDF p.11"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Inject TOP at 320 °C",
+      "evidence": [
+        {
+          "source_id": "jin2020-jacs-0c08510",
+          "locator": "Main PDF p.11"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "jin2020-jacs-0c08510-cd1xmnxse-qds-top-90b-1--product",
+      "source_sample_label": "Cd1−xMnxSe QDs (TOP-90b)",
+      "batch_id": null,
+      "material_state_id": "jin2020-jacs-0c08510-cd1xmnxse-qds-top-90b-1--after-s03-inject",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdSe",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jin2020-jacs-0c08510",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "wurtzite",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jin2020-jacs-0c08510",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": "trioctylphosphine oxide (TOPO)",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jin2020-jacs-0c08510",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "jin2020-jacs-0c08510",
+          "locator": "Main PDF p.11"
+        }
+      ],
+      "notes": [
+        "Reactor: 50 mL three-neck flask (Main PDF p.11).",
+        "Reaction temperature: 380 degC (Main PDF p.11).",
+        "Reaction time: 1 min (Main PDF p.11)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Shape not reported in the extracted text.",
+      "Size not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

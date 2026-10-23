@@ -1,0 +1,371 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "subedi2022-acsnano-2c00758-anisometric-cqds-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Subhangi Subedi; Avinash K. Rella; Le Gia Trung; Vineet Kumar; Shin-Woong Kang (2022): anisometric CQDs",
+  "material": {
+    "formula": "C, O, F",
+    "family": "C, O, F nanocrystals",
+    "elements": [
+      "C",
+      "O",
+      "F"
+    ],
+    "components": [
+      "C, O, F"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Microwave",
+  "sources": [
+    {
+      "id": "subedi2022-acsnano-2c00758",
+      "doi": "10.1021/acsnano.2c00758",
+      "title": "Electrically Switchable Anisometric Carbon Quantum Dots Exhibiting Linearly Polarized Photoluminescence: Syntheses, Anisotropic Properties, and Facile Control of Uniaxial Orientation",
+      "authors": "Subhangi Subedi; Avinash K. Rella; Le Gia Trung; Vineet Kumar; Shin-Woong Kang",
+      "year": 2022,
+      "url": "https://doi.org/10.1021/acsnano.2c00758",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "subedi2022-acsnano-2c00758",
+    "recipe_family": "subedi2022-acsnano-2c00758-anisometric-cqds-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "C, O, F",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "subedi2022-acsnano-2c00758",
+          "locator": "Main PDF p.5"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "rod-like",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "subedi2022-acsnano-2c00758",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "subedi2022-acsnano-2c00758-anisometric-cqds-1--mlc-15600-100",
+      "name": "MLC 15600-100",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "subedi2022-acsnano-2c00758",
+          "locator": "Main PDF p.10"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "subedi2022-acsnano-2c00758-anisometric-cqds-1--after-s01-seal",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "subedi2022-acsnano-2c00758-anisometric-cqds-1--mlc-15600-100"
+      ]
+    },
+    {
+      "id": "subedi2022-acsnano-2c00758-anisometric-cqds-1--after-s02-filter",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "subedi2022-acsnano-2c00758-anisometric-cqds-1--after-s01-seal"
+      ]
+    },
+    {
+      "id": "subedi2022-acsnano-2c00758-anisometric-cqds-1--after-s03-centrifuge",
+      "name": "mixture after step 3",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "subedi2022-acsnano-2c00758-anisometric-cqds-1--after-s02-filter"
+      ]
+    },
+    {
+      "id": "subedi2022-acsnano-2c00758-anisometric-cqds-1--after-s04-redisperse",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "subedi2022-acsnano-2c00758-anisometric-cqds-1--after-s03-centrifuge"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-seal",
+      "action": "seal",
+      "label": "Seal the LC mixture in a vial",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "subedi2022-acsnano-2c00758-anisometric-cqds-1--mlc-15600-100"
+      ],
+      "outputs": [
+        "subedi2022-acsnano-2c00758-anisometric-cqds-1--after-s01-seal"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Seal the LC mixture in a vial",
+      "evidence": [
+        {
+          "source_id": "subedi2022-acsnano-2c00758",
+          "locator": "Main PDF p.10"
+        }
+      ]
+    },
+    {
+      "id": "s02-filter",
+      "action": "filter",
+      "label": "Filter the dispersion using a micropore syringe",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-seal"
+      ],
+      "inputs": [
+        "subedi2022-acsnano-2c00758-anisometric-cqds-1--after-s01-seal"
+      ],
+      "outputs": [
+        "subedi2022-acsnano-2c00758-anisometric-cqds-1--after-s02-filter"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Filter the dispersion using a micropore syringe",
+      "evidence": [
+        {
+          "source_id": "subedi2022-acsnano-2c00758",
+          "locator": "Main PDF p.10"
+        }
+      ]
+    },
+    {
+      "id": "s03-centrifuge",
+      "action": "centrifuge",
+      "label": "Centrifuge the dispersion to discard larger aggregates",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-filter"
+      ],
+      "inputs": [
+        "subedi2022-acsnano-2c00758-anisometric-cqds-1--after-s02-filter"
+      ],
+      "outputs": [
+        "subedi2022-acsnano-2c00758-anisometric-cqds-1--after-s03-centrifuge"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Centrifuge the dispersion to discard larger aggregates",
+      "evidence": [
+        {
+          "source_id": "subedi2022-acsnano-2c00758",
+          "locator": "Main PDF p.10"
+        }
+      ]
+    },
+    {
+      "id": "s04-redisperse",
+      "action": "redisperse",
+      "label": "Redisperse the purified CQDs in a fresh LC host",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s03-centrifuge"
+      ],
+      "inputs": [
+        "subedi2022-acsnano-2c00758-anisometric-cqds-1--after-s03-centrifuge"
+      ],
+      "outputs": [
+        "subedi2022-acsnano-2c00758-anisometric-cqds-1--after-s04-redisperse"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Redisperse the purified CQDs in a fresh LC host",
+      "evidence": [
+        {
+          "source_id": "subedi2022-acsnano-2c00758",
+          "locator": "Main PDF p.10"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "subedi2022-acsnano-2c00758-anisometric-cqds-1--product",
+      "source_sample_label": "anisometric CQDs",
+      "batch_id": null,
+      "material_state_id": "subedi2022-acsnano-2c00758-anisometric-cqds-1--after-s04-redisperse",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "C, O, F",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "subedi2022-acsnano-2c00758",
+            "locator": "Main PDF p.5"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": "rod-like",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "subedi2022-acsnano-2c00758",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": "ester, ether, alkyl, hydroxyl",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "subedi2022-acsnano-2c00758",
+            "locator": "Main PDF p.5"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "subedi2022-acsnano-2c00758",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reactor: sealed vial (Main PDF p.10)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of MLC 15600-100 not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
