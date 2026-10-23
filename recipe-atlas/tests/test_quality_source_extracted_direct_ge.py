@@ -33,6 +33,36 @@ class DirectGe(unittest.TestCase):
         for method,label in [('Heat-up','Ge CQD #1'),('Hot-injection','Ge nanocrystals'),('Colloidal synthesis','Colloidal Ge quantum dots')]:
             self.byid[DIRECT]['method']=method;self.byid[DIRECT]['products'][0]['source_sample_label']=label
             with self.subTest(method=method,label=label):self.assertTrue(all(self.checks()))
+    def microwave(self,label='dodecanethiol-capped Ge NCs'):
+        self.byid[DIRECT]['method']='Microwave';self.byid[DIRECT]['products'][0]['source_sample_label']=label
+    def test_microwave_exact_NC_and_NCs_tokens(self):
+        for label in ['dodecanethiol-capped Ge NCs','Ge NC','Ge nanocrystals']:
+            self.microwave(label);before=copy.deepcopy((self.byid,self.hub))
+            with self.subTest(label=label):
+                self.assertTrue(all(self.checks()));self.assertEqual((self.byid,self.hub),before)
+    def test_microwave_NCs_keeps_composition_and_reported_status_guards(self):
+        self.microwave()
+        for value,status in [('GeO2','reported'),('Ge/Si','reported'),('Ge','inferred'),(None,'not_reported')]:
+            self.byid[DIRECT]['products'][0]['composition']={'value':value,'status':status}
+            with self.subTest(value=value,status=status):self.assertFalse(all(self.checks()))
+    def test_microwave_NCs_keeps_material_architecture_guards(self):
+        self.microwave()
+        for key,value in [('formula','GeO2'),('components',['Ge','SiO2']),('elements',['Ge','O']),('architecture','composite')]:
+            before=copy.deepcopy(self.byid[DIRECT]['material']);self.byid[DIRECT]['material'][key]=value
+            with self.subTest(key=key):self.assertFalse(all(self.checks()))
+            self.byid[DIRECT]['material']=before
+    def test_microwave_NCs_keeps_all_context_exclusions(self):
+        for word in ['embedded','matrix','substrate','supported','film','device','implant','well']:
+            self.microwave('Ge NCs '+word)
+            with self.subTest(word=word):self.assertFalse(all(self.checks()))
+    def test_microwave_does_not_allow_substrings_or_other_methods(self):
+        for label in ['Ge','Ge CDs','Ge ncsource','Ge NCsfilm']:
+            self.microwave(label)
+            with self.subTest(label=label):self.assertFalse(all(self.checks()))
+        self.microwave()
+        for method in ['Microwave deposition','Ion implantation','Milling','Synthesis as described in the source']:
+            self.byid[DIRECT]['method']=method
+            with self.subTest(method=method):self.assertFalse(all(self.checks()))
     def test_no_DOI_or_recordID_allowlist(self):
         other=self.byid.pop(DIRECT);other['record_id']='another-Ge-QD';self.byid[other['record_id']]=other
         self.hub['record_ids'].remove(DIRECT);self.hub['record_ids'].append(other['record_id']);self.hub['direct_record_ids']=[other['record_id']]

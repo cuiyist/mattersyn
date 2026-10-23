@@ -1,3 +1,5 @@
+Current Q26 compatibility-fix and Site10 closure progress: see research-assets/public-audits/SIMPLE_PIPELINE_REPORT.md;44-paper contribution is still unpublished. Keep the failed7090 build and all earlier history.
+
 [Machine-extracted paper index](research-assets/public-audits/MACHINE_EXTRACTED_PAPERS.md)
 
 ## Q25 verified live and Q26 Source-integrated pending
