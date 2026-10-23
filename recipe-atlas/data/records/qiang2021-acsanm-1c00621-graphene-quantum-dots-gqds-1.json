@@ -1,0 +1,441 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "qiang2021-acsanm-1c00621-graphene-quantum-dots-gqds-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Ruibin Qiang; Weiming Sun; Kaiming Hou; Zhangpeng Li; Jinyun Zhang; Yong Ding; Jinqing Wang; Shengrong Yang (2021): Graphene Quantum Dots (GQDs)",
+  "material": {
+    "formula": "C",
+    "family": "C nanocrystals",
+    "elements": [
+      "C"
+    ],
+    "components": [
+      "C"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Electrochemical trimming",
+  "sources": [
+    {
+      "id": "qiang2021-acsanm-1c00621",
+      "doi": "10.1021/acsanm.1c00621",
+      "title": "Electrochemical Trimming of Graphene Oxide Affords Graphene Quantum Dots for Fe3+ Detection",
+      "authors": "Ruibin Qiang; Weiming Sun; Kaiming Hou; Zhangpeng Li; Jinyun Zhang; Yong Ding; Jinqing Wang; Shengrong Yang",
+      "year": 2021,
+      "url": "https://doi.org/10.1021/acsanm.1c00621",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "qiang2021-acsanm-1c00621",
+    "recipe_family": "qiang2021-acsanm-1c00621-graphene-quantum-dots-gqds-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "C",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "qiang2021-acsanm-1c00621",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": 2.0,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "2 nm",
+      "evidence": [
+        {
+          "source_id": "qiang2021-acsanm-1c00621",
+          "locator": "Main PDF p.4"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "dot",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "qiang2021-acsanm-1c00621",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "qiang2021-acsanm-1c00621-graphene-quantum-dots-gqds-1--graphite-powder",
+      "name": "Graphite powder",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "qiang2021-acsanm-1c00621",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "qiang2021-acsanm-1c00621-graphene-quantum-dots-gqds-1--n-type-single-crystal-polished-si-100-wa",
+      "name": "N-type single-crystal polished Si(100) wafers",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "qiang2021-acsanm-1c00621",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "qiang2021-acsanm-1c00621-graphene-quantum-dots-gqds-1--after-s01-filter",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "qiang2021-acsanm-1c00621-graphene-quantum-dots-gqds-1--after-s02-dialyze",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "qiang2021-acsanm-1c00621-graphene-quantum-dots-gqds-1--after-s01-filter"
+      ]
+    },
+    {
+      "id": "qiang2021-acsanm-1c00621-graphene-quantum-dots-gqds-1--after-s03-filter",
+      "name": "mixture after step 3",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "qiang2021-acsanm-1c00621-graphene-quantum-dots-gqds-1--after-s02-dialyze"
+      ]
+    },
+    {
+      "id": "qiang2021-acsanm-1c00621-graphene-quantum-dots-gqds-1--after-s04-freeze-dry",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "qiang2021-acsanm-1c00621-graphene-quantum-dots-gqds-1--after-s03-filter"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-filter",
+      "action": "filter",
+      "label": "Filter through 0.22 μm membrane",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "qiang2021-acsanm-1c00621-graphene-quantum-dots-gqds-1--after-s01-filter"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Filter through 0.22 μm membrane",
+      "evidence": [
+        {
+          "source_id": "qiang2021-acsanm-1c00621",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "s02-dialyze",
+      "action": "dialyze",
+      "label": "Dialyze in 3500 Da dialysis bag for 3 days",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-filter"
+      ],
+      "inputs": [
+        "qiang2021-acsanm-1c00621-graphene-quantum-dots-gqds-1--after-s01-filter"
+      ],
+      "outputs": [
+        "qiang2021-acsanm-1c00621-graphene-quantum-dots-gqds-1--after-s02-dialyze"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 3,
+          "minimum": null,
+          "maximum": null,
+          "unit": "d",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "3 days",
+          "evidence": [
+            {
+              "source_id": "qiang2021-acsanm-1c00621",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Dialyze in 3500 Da dialysis bag for 3 days",
+      "evidence": [
+        {
+          "source_id": "qiang2021-acsanm-1c00621",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "s03-filter",
+      "action": "filter",
+      "label": "Filter through 0.22 μm membrane again",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-dialyze"
+      ],
+      "inputs": [
+        "qiang2021-acsanm-1c00621-graphene-quantum-dots-gqds-1--after-s02-dialyze"
+      ],
+      "outputs": [
+        "qiang2021-acsanm-1c00621-graphene-quantum-dots-gqds-1--after-s03-filter"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Filter through 0.22 μm membrane again",
+      "evidence": [
+        {
+          "source_id": "qiang2021-acsanm-1c00621",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "s04-freeze-dry",
+      "action": "freeze-dry",
+      "label": "Freeze-dry to obtain powder samples",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s03-filter"
+      ],
+      "inputs": [
+        "qiang2021-acsanm-1c00621-graphene-quantum-dots-gqds-1--after-s03-filter"
+      ],
+      "outputs": [
+        "qiang2021-acsanm-1c00621-graphene-quantum-dots-gqds-1--after-s04-freeze-dry"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Freeze-dry to obtain powder samples",
+      "evidence": [
+        {
+          "source_id": "qiang2021-acsanm-1c00621",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "qiang2021-acsanm-1c00621-graphene-quantum-dots-gqds-1--product",
+      "source_sample_label": "Graphene Quantum Dots (GQDs)",
+      "batch_id": null,
+      "material_state_id": "qiang2021-acsanm-1c00621-graphene-quantum-dots-gqds-1--after-s04-freeze-dry",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "C",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "qiang2021-acsanm-1c00621",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": "dot",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "qiang2021-acsanm-1c00621",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": "oxygen-containing functional groups",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "qiang2021-acsanm-1c00621",
+            "locator": "Main PDF p.4"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "qiang2021-acsanm-1c00621",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "notes": [
+        "Reaction time: 5 h (Main PDF p.3)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "qiang2021-acsanm-1c00621-graphene-quantum-dots-gqds-1--size",
+      "sample_id": "qiang2021-acsanm-1c00621-graphene-quantum-dots-gqds-1--product",
+      "property": "diameter",
+      "technique": "TEM",
+      "value": {
+        "value": 2.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "2 nm",
+        "evidence": [
+          {
+            "source_id": "qiang2021-acsanm-1c00621",
+            "locator": "Main PDF p.4"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "qiang2021-acsanm-1c00621",
+          "locator": "Main PDF p.4"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Amount of Graphite powder not reported in the extracted text.",
+      "Amount of N-type single-crystal polished Si(100) wafers not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

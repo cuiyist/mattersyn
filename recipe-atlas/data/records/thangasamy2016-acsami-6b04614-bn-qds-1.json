@@ -1,0 +1,379 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "thangasamy2016-acsami-6b04614-bn-qds-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Pitchai Thangasamy; Manikandan Santhanam; Marappan Sathish (2016): BN QDs",
+  "material": {
+    "formula": "BN",
+    "family": "BN nanocrystals",
+    "elements": [
+      "B",
+      "N"
+    ],
+    "components": [
+      "BN"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Supercritical fluid processing",
+  "sources": [
+    {
+      "id": "thangasamy2016-acsami-6b04614",
+      "doi": "10.1021/acsami.6b04614",
+      "title": "Supercritical Fluid Facilitated Disintegration of Hexagonal Boron Nitride Nanosheets to Quantum Dots and Its Application in Cells Imaging",
+      "authors": "Pitchai Thangasamy; Manikandan Santhanam; Marappan Sathish",
+      "year": 2016,
+      "url": "https://doi.org/10.1021/acsami.6b04614",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "thangasamy2016-acsami-6b04614",
+    "recipe_family": "thangasamy2016-acsami-6b04614-bn-qds-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "BN",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "thangasamy2016-acsami-6b04614",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "thangasamy2016-acsami-6b04614-bn-qds-1--hexagonal-boron-nitride",
+      "name": "hexagonal boron nitride",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "thangasamy2016-acsami-6b04614",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "thangasamy2016-acsami-6b04614-bn-qds-1--n-n-dimethylformamide-dmf",
+      "name": "N,N-Dimethylformamide (DMF)",
+      "formula": null,
+      "role": "solvent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "thangasamy2016-acsami-6b04614",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "thangasamy2016-acsami-6b04614-bn-qds-1--after-s01-disperse",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "thangasamy2016-acsami-6b04614-bn-qds-1--hexagonal-boron-nitride",
+        "thangasamy2016-acsami-6b04614-bn-qds-1--n-n-dimethylformamide-dmf"
+      ]
+    },
+    {
+      "id": "thangasamy2016-acsami-6b04614-bn-qds-1--after-s02-quench",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "thangasamy2016-acsami-6b04614-bn-qds-1--after-s01-disperse"
+      ]
+    },
+    {
+      "id": "thangasamy2016-acsami-6b04614-bn-qds-1--after-s03-centrifuge",
+      "name": "mixture after step 3",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "thangasamy2016-acsami-6b04614-bn-qds-1--after-s02-quench"
+      ]
+    },
+    {
+      "id": "thangasamy2016-acsami-6b04614-bn-qds-1--after-s04-filter",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "thangasamy2016-acsami-6b04614-bn-qds-1--after-s03-centrifuge"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-disperse",
+      "action": "disperse",
+      "label": "Bulk h-BN powder dispersed in DMF",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "thangasamy2016-acsami-6b04614-bn-qds-1--hexagonal-boron-nitride",
+        "thangasamy2016-acsami-6b04614-bn-qds-1--n-n-dimethylformamide-dmf"
+      ],
+      "outputs": [
+        "thangasamy2016-acsami-6b04614-bn-qds-1--after-s01-disperse"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Bulk h-BN powder dispersed in DMF",
+      "evidence": [
+        {
+          "source_id": "thangasamy2016-acsami-6b04614",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-quench",
+      "action": "quench",
+      "label": "Rapid quenching in ice cold water",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-disperse"
+      ],
+      "inputs": [
+        "thangasamy2016-acsami-6b04614-bn-qds-1--after-s01-disperse"
+      ],
+      "outputs": [
+        "thangasamy2016-acsami-6b04614-bn-qds-1--after-s02-quench"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Rapid quenching in ice cold water",
+      "evidence": [
+        {
+          "source_id": "thangasamy2016-acsami-6b04614",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-centrifuge",
+      "action": "centrifuge",
+      "label": "Centrifugation of the solution",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-quench"
+      ],
+      "inputs": [
+        "thangasamy2016-acsami-6b04614-bn-qds-1--after-s02-quench"
+      ],
+      "outputs": [
+        "thangasamy2016-acsami-6b04614-bn-qds-1--after-s03-centrifuge"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Centrifugation of the solution",
+      "evidence": [
+        {
+          "source_id": "thangasamy2016-acsami-6b04614",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s04-filter",
+      "action": "filter",
+      "label": "Filtration using 0.22 μm microporous membrane filter",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s03-centrifuge"
+      ],
+      "inputs": [
+        "thangasamy2016-acsami-6b04614-bn-qds-1--after-s03-centrifuge"
+      ],
+      "outputs": [
+        "thangasamy2016-acsami-6b04614-bn-qds-1--after-s04-filter"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Filtration using 0.22 μm microporous membrane filter",
+      "evidence": [
+        {
+          "source_id": "thangasamy2016-acsami-6b04614",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "thangasamy2016-acsami-6b04614-bn-qds-1--product",
+      "source_sample_label": "BN QDs",
+      "batch_id": null,
+      "material_state_id": "thangasamy2016-acsami-6b04614-bn-qds-1--after-s04-filter",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "BN",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "thangasamy2016-acsami-6b04614",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "thangasamy2016-acsami-6b04614",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "notes": [
+        "Reactor: stainless steel reactor (Main PDF p.2).",
+        "Reaction time: 40 min (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Amount of hexagonal boron nitride not reported in the extracted text.",
+      "Amount of N,N-Dimethylformamide (DMF) not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
