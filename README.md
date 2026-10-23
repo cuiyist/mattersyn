@@ -635,3 +635,18 @@ Reference structures are distinguished from sample-resolved synthesis targets. P
 A citation does not grant reuse rights to third-party figures or source text. The separate release boundary gate controls public delivery.
 
 <!-- mattersyn-generated-references:end -->
+
+
+## Local C: disk reserve
+
+Before every large local write, run the fixed 100 GiB eligibility check with a reviewed positive peak allocation budget:
+
+```text
+python tools/publication/check_C_space.py --check --peak-additional-bytes BUDGET_BYTES
+```
+
+Replace `BUDGET_BYTES` with a measured or conservatively estimated positive integer for the operation, including unfinished concurrent work. Proceed only when current C: free bytes minus that budget remain at least 107,374,182,400 bytes (100 GiB). A one-byte probe is not a build budget. A nonzero exit parks the write until enough verified reconstructible MatterSyn output has been cleaned.
+
+After successful deployment and anonymous verification, retire completed generated builds and duplicate exports promptly. GitHub stores safe code, records, figure crops, diagrams and reports. Preserve original papers, page text, quoted pass/pair/training files, credentials, the active local model/server/runtime and one Source/Site working checkout; these private inputs are not public GitHub content.
+
+This check is a point observation, not a space reservation or control over other applications. The active queue and dated verified counts are recorded in [curation control](research-assets/curation-control.json) and the [single pipeline report](research-assets/public-audits/SIMPLE_PIPELINE_REPORT.md); older snapshots remain history.
