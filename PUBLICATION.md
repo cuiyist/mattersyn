@@ -1,3 +1,17 @@
+## Q25 verified live and Q26 Source-integrated pending
+
+Q25 was verified live at 2026-10-23T03:12:30+00:00: 52 papers / 65 source_extracted records / 321 captioned crops. Observed totals are 2,447 papers / 6,160 records / 4,039 recipe-structure pairs / 1,063 material families. All 986 files, including 950 changed files, 52 paper routes and 82 material bindings passed the unchanged normal anonymous checker; both Pages jobs succeeded. The first two HTTP failures and ownership error remain preserved. The unchanged verification-only retry passed without a repush. Limited reads and asset registration are not independent audits, S1 findings or training eligibility.
+
+[Source PR89](https://github.com/cuiyist/mattersyn/pull/89) · [exact-head CI](https://github.com/cuiyist/mattersyn/actions/runs/39882112863) · [Pages](https://github.com/cuiyist/mattersyn-site/actions/runs/39891601315)
+
+Q26 now has 44 papers / 65 source_extracted records / 244 captioned crops integrated through the normal five phases, with the old 6,160 record bytes and all six audited-only exports preserved. Q26 is unpublished with a null Live date and zero publication credit. Preserve paused audit and Worker A/B lanes, the five owner questions, all older history and the outside-scope 58 section. Before each large write, require current C free minus a positive measured or conservative peak budget to remain at least 100 GiB.
+
+Closed Source3 removed 96,185 known leaves / 8,265,536,117 logical bytes; closed Source4 removed 93,718 known leaves / 8,135,814,484 logical bytes. Both had zero holds, failures, directory removals, program stops and canonical mutations. Free-space observations are non-isolated and are not attributed physical gain. All prior held, deferred and unknown leaves, technical failures and automatic refusals remain preserved.
+
+Normal Q26 asset registration covered 65 records and 581 assets, adding 545 entries and zero exact path rules. Permission remains unverified; only the normal registry checksum changed in the release policy. The first private integration launch failed before any writes because its normal converter import path was absent; setting process PYTHONPATH to the pinned Source tools directory resolved it. No importer, extraction prompt, check rule, normal converter or release gate changed.
+
+Closed Site5 process and observed-journal accounting: 299,970 known leaves / 21,692,137,030 logical bytes removed across 5 visited roles; 0 roles unvisited, 12 held entries and 0 failed entries. Original result status remains ATTEMPT_FINISHED_WITH_HELD_SUBSETS; actual process exit 0. No complete five-role success is claimed. C free was 141378834432 bytes before and 163628261376 bytes after; these are non-isolated observations, not attributed physical reclaim or a continuing reserve guarantee. This cleanup adds no publication credit. [Existing cleanup report](https://github.com/cuiyist/mattersyn2/blob/95211e735a012d1e4cfed1758bf5313e098a209a/CLEANUP_REPORT_2026-10-12.md).
+
 ## Q24 verified publication and pending Q25
 
 Q24 verified live at 2026-10-22T23:03:24+00:00: 46 papers / 63 source_extracted records / 277 captioned crop keys; observed totals are 2,395 papers / 6,095 records / 3,974 recipe-structure pairs / 1,048 material families. Scientific Source is 71ae2690bf6e5e079863d519f3f9de7e3501c9a6 and published Site is 6961fa3ad7a7f8385e4cbd9edd2e349d0f47f853. Limited reads and asset registration are not independent scientific audits, S1 findings or rights permission.
