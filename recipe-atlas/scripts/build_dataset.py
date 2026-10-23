@@ -221,7 +221,7 @@ def main():
         q=json.loads(queue.read_text(encoding='utf-8'));dump(public/'pilot-source-queue.json',q);report['queue_count']=len(q['candidates']);report['queue_families']=len({x['family'] for x in q['candidates']})
     dump(public/'measurement-display.json',DISPLAY)
     dump(public/'record.schema.json',SCHEMA);dump(public/'dataset-manifest.json',manifest);dump(public/'validation-report.json',report)
-    (public/'records.jsonl').write_text(''.join(json.dumps(r,ensure_ascii=False)+'\n' for r in records),encoding='utf-8',newline='\n')
+    (public/'records.jsonl').write_text(''.join(json.dumps(r,ensure_ascii=False,separators=(',',':'))+'\n' for r in records),encoding='utf-8',newline='\n')
     for task,rows in exports.items():
         path=public/'exports'/(task+'.jsonl');path.parent.mkdir(parents=True,exist_ok=True);path.write_text(''.join(json.dumps(row,ensure_ascii=False)+'\n' for row in rows),encoding='utf-8',newline='\n')
     (ROOT/'dist/dataset.html').write_text(catalog_html(report,manifest,collection['pairs']),encoding='utf-8',newline='\n')

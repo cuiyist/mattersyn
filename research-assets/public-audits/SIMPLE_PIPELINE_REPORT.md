@@ -1,3 +1,21 @@
+## Q27 verified live; next simple-pipeline batch in progress
+
+## Q28 Source contribution pending publication
+
+22 papers / 49 records / 121 captioned figures from B133 passed the accepted private deletion projection, normal eligibility, in-scope product selection, official metadata and complete-caption intersection. Publication credit is zero until deployment and anonymous verification. The seven omitted papers comprise three caption holds (one also outside the particle scope), two whole-paper technical holds and two additional normal route-eligibility holds. Original papers, quoted passes/pairs and all failed attempts remain local. The ten rare-material reads proposed 39 whole-object deletions; no extra common-material audit or replacement values were added.
+
+The public records.jsonl serializer now omits optional JSON whitespace. Values, keys and order are preserved; individual scientific records and the six audited-only exports remain unchanged. This bounded file-size fix is included with the substantive batch. The earlier private projection attempt failed on path spelling; canonical pin paths and genuine archive triples fixed that bookkeeping error without changing any guard or scientific value. Official ordered author lists and integer years are normalized to the same citation strings used by the normal converter before the unchanged strict citation guard; the original official metadata stays byte exact.
+
+Q27 passed exact-head CI, ordinary Source merge, Pages deployment and normal anonymous verification at 2026-10-23T14:40:42+00:00. Its 43 distinct papers, 59 records and 238 captioned figures count once. Source `75883dea1ef0e6a3eddc58ebe63046f3c2ed2626`; Site `6eac6b0b5f86dd63f932914f25a2dae0c05e1135`. Observed totals: 2,534 papers, 6,284 records, 4,163 recipe–structure pairs and 1,079 material families. All new records remain `source_extracted`; audited-only exports remain unchanged.
+
+Accepted queue snapshot (2026-10-23 15:11 UTC): 3,172 physical entries; 458 in scope, 800 outside scope, 1,914 uncertain. Read but unpublished: 2,219 (373 in scope); attempted without a usable saved read: 75 (30 in scope); unread, incomplete or prepared: 878 (55 in scope). These are dated physical-entry counts; a certified unique-primary total is not asserted. Q27’s 43 exact SHA/DOI identities have been removed once.
+
+B133 completed two successful local passes for 29 papers. Its single rare-material reads finished for ten papers: 39 whole-object deletions and two whole-paper technical holds; three separate caption holds remain. Final publication membership is determined by the unchanged normal eligibility, product scope and complete-caption intersection after private projection. B134’s 26 in-scope originals started the same local two-worker controller at 15:25 UTC. Neither pending batch has publication credit.
+
+Completed-copy cleanup independently confirmed 99,019 leaves / 33,663,193,698 logical bytes removed, with 310 selected leaves still held and no failures. Original held-subset status and history are preserved. Actual C free observations were 114,550,800,384 before and 148,349,132,800 after; their difference is not isolated physical reclaim. The 100 GiB reserve plus all unfinished concurrent write budgets remains mandatory. [Safe cleanup report](https://github.com/cuiyist/mattersyn2/blob/9e8879a6c1df7883d090b37ade2a514d06379dbe/CLEANUP_REPORT_2026-10-12.md).
+
+The audited lane, Worker A/B and five older owner questions remain paused. Original failed validation and audit histories remain below.
+
 Queue total3,160; in scope446, split387 saved-read,30 attempted and29 remaining title-IN. The last29 are identity-held.
 
 ## Q26 verified live and Q27 Source-integrated pending

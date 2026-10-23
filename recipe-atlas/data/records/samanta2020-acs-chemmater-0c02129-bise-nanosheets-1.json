@@ -1,0 +1,406 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "samanta2020-acs-chemmater-0c02129-bise-nanosheets-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Manisha Samanta; Kanishka Biswas (2020): BiSe nanosheets",
+  "material": {
+    "formula": "BiSe",
+    "family": "BiSe nanocrystals",
+    "elements": [
+      "Bi",
+      "Se"
+    ],
+    "components": [
+      "BiSe"
+    ],
+    "architecture": "heterostructure"
+  },
+  "method": "Colloidal synthesis",
+  "sources": [
+    {
+      "id": "samanta2020-acs-chemmater-0c02129",
+      "doi": "10.1021/acs.chemmater.0c02129",
+      "title": "2D Nanosheets of Topological Quantum Materials from Homologous (Bi2) m (Bi2Se3) n Heterostructures: Synthesis and Ultralow Thermal Conductivity",
+      "authors": "Manisha Samanta; Kanishka Biswas",
+      "year": 2020,
+      "url": "https://doi.org/10.1021/acs.chemmater.0c02129",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "samanta2020-acs-chemmater-0c02129",
+    "recipe_family": "samanta2020-acs-chemmater-0c02129-bise-nanosheets-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "BiSe",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "samanta2020-acs-chemmater-0c02129",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "trigonal",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "samanta2020-acs-chemmater-0c02129",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": 2.5,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "2.5 nm",
+      "evidence": [
+        {
+          "source_id": "samanta2020-acs-chemmater-0c02129",
+          "locator": "Main PDF p.4"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "nanosheet",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "samanta2020-acs-chemmater-0c02129",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "samanta2020-acs-chemmater-0c02129-bise-nanosheets-1--1-10-phenanthroline",
+      "name": "1,10-phenanthroline",
+      "formula": null,
+      "role": "ligand",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "samanta2020-acs-chemmater-0c02129",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "samanta2020-acs-chemmater-0c02129-bise-nanosheets-1--oleylamine",
+      "name": "oleylamine",
+      "formula": null,
+      "role": "solvent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "samanta2020-acs-chemmater-0c02129",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "samanta2020-acs-chemmater-0c02129-bise-nanosheets-1--after-s01-heat",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "samanta2020-acs-chemmater-0c02129-bise-nanosheets-1--1-10-phenanthroline",
+        "samanta2020-acs-chemmater-0c02129-bise-nanosheets-1--oleylamine"
+      ]
+    },
+    {
+      "id": "samanta2020-acs-chemmater-0c02129-bise-nanosheets-1--after-s02-dry",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "samanta2020-acs-chemmater-0c02129-bise-nanosheets-1--after-s01-heat"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-heat",
+      "action": "heat",
+      "label": "Heat solution to 120 °C and hold for 1.5 h",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "samanta2020-acs-chemmater-0c02129-bise-nanosheets-1--1-10-phenanthroline",
+        "samanta2020-acs-chemmater-0c02129-bise-nanosheets-1--oleylamine"
+      ],
+      "outputs": [
+        "samanta2020-acs-chemmater-0c02129-bise-nanosheets-1--after-s01-heat"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 120,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "120 °C",
+          "evidence": [
+            {
+              "source_id": "samanta2020-acs-chemmater-0c02129",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 1.5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1.5 h",
+          "evidence": [
+            {
+              "source_id": "samanta2020-acs-chemmater-0c02129",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "samanta2020-acs-chemmater-0c02129",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Heat solution to 120 °C and hold for 1.5 h",
+      "evidence": [
+        {
+          "source_id": "samanta2020-acs-chemmater-0c02129",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-dry",
+      "action": "dry",
+      "label": "Dry in vacuum oven at 100 °C",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-heat"
+      ],
+      "inputs": [
+        "samanta2020-acs-chemmater-0c02129-bise-nanosheets-1--after-s01-heat"
+      ],
+      "outputs": [
+        "samanta2020-acs-chemmater-0c02129-bise-nanosheets-1--after-s02-dry"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 100,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "100 °C",
+          "evidence": [
+            {
+              "source_id": "samanta2020-acs-chemmater-0c02129",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Dry in vacuum oven at 100 °C",
+      "evidence": [
+        {
+          "source_id": "samanta2020-acs-chemmater-0c02129",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "samanta2020-acs-chemmater-0c02129-bise-nanosheets-1--product",
+      "source_sample_label": "BiSe nanosheets",
+      "batch_id": null,
+      "material_state_id": "samanta2020-acs-chemmater-0c02129-bise-nanosheets-1--after-s02-dry",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "BiSe",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "samanta2020-acs-chemmater-0c02129",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "trigonal",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "samanta2020-acs-chemmater-0c02129",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "nanosheet",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "samanta2020-acs-chemmater-0c02129",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": "oleylamine",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "samanta2020-acs-chemmater-0c02129",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "samanta2020-acs-chemmater-0c02129",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reaction temperature: 120 degC (Main PDF p.2).",
+        "Reaction time: 1.5 h (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "samanta2020-acs-chemmater-0c02129-bise-nanosheets-1--size",
+      "sample_id": "samanta2020-acs-chemmater-0c02129-bise-nanosheets-1--product",
+      "property": "particle_size",
+      "technique": "not reported",
+      "value": {
+        "value": 2.5,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "2.5 nm",
+        "evidence": [
+          {
+            "source_id": "samanta2020-acs-chemmater-0c02129",
+            "locator": "Main PDF p.4"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "samanta2020-acs-chemmater-0c02129",
+          "locator": "Main PDF p.4"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Reactor not reported in the extracted text.",
+      "Amount of 1,10-phenanthroline not reported in the extracted text.",
+      "Amount of oleylamine not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
