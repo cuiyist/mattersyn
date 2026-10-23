@@ -1,0 +1,361 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "wang2008-ja804436w-arsenic-ii-sulfide-nanocrystals-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Junzhong Wang; Ming Lin; Tianyu Zhang; Yongli Yan; Paul C. Ho; Qing-Hua Xu; Kian Ping Loh (2008): arsenic(II) sulfide nanocrystals",
+  "material": {
+    "formula": "As4S4",
+    "family": "As4S4 nanocrystals",
+    "elements": [
+      "As",
+      "S"
+    ],
+    "components": [
+      "As4S4"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Cluster-mediated transformation",
+  "sources": [
+    {
+      "id": "wang2008-ja804436w",
+      "doi": "10.1021/ja804436w",
+      "title": "Arsenic(II) Sulfide Quantum Dots Prepared by a Wet Process from its Bulk",
+      "authors": "Junzhong Wang; Ming Lin; Tianyu Zhang; Yongli Yan; Paul C. Ho; Qing-Hua Xu; Kian Ping Loh",
+      "year": 2008,
+      "url": "https://doi.org/10.1021/ja804436w",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "wang2008-ja804436w",
+    "recipe_family": "wang2008-ja804436w-arsenic-ii-sulfide-nanocrystals-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "As4S4",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "wang2008-ja804436w",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": 3.0,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "3 nm",
+      "evidence": [
+        {
+          "source_id": "wang2008-ja804436w",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "wang2008-ja804436w-arsenic-ii-sulfide-nanocrystals-1--arsenic-ii-sulfide",
+      "name": "arsenic(II) sulfide",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "wang2008-ja804436w",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "wang2008-ja804436w-arsenic-ii-sulfide-nanocrystals-1--ethylenediamine",
+      "name": "ethylenediamine",
+      "formula": null,
+      "role": "ligand",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "wang2008-ja804436w",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "wang2008-ja804436w-arsenic-ii-sulfide-nanocrystals-1--acrylic-acid",
+      "name": "acrylic acid",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "wang2008-ja804436w",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "wang2008-ja804436w-arsenic-ii-sulfide-nanocrystals-1--after-s01-dissolve",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "wang2008-ja804436w-arsenic-ii-sulfide-nanocrystals-1--arsenic-ii-sulfide",
+        "wang2008-ja804436w-arsenic-ii-sulfide-nanocrystals-1--ethylenediamine"
+      ]
+    },
+    {
+      "id": "wang2008-ja804436w-arsenic-ii-sulfide-nanocrystals-1--after-s02-transform",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "wang2008-ja804436w-arsenic-ii-sulfide-nanocrystals-1--after-s01-dissolve",
+        "wang2008-ja804436w-arsenic-ii-sulfide-nanocrystals-1--arsenic-ii-sulfide",
+        "wang2008-ja804436w-arsenic-ii-sulfide-nanocrystals-1--ethylenediamine"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-dissolve",
+      "action": "dissolve",
+      "label": "Dissolve bulk arsenic(II) sulfide in ethylenediamine to form a cluster solution",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "wang2008-ja804436w-arsenic-ii-sulfide-nanocrystals-1--arsenic-ii-sulfide",
+        "wang2008-ja804436w-arsenic-ii-sulfide-nanocrystals-1--ethylenediamine"
+      ],
+      "outputs": [
+        "wang2008-ja804436w-arsenic-ii-sulfide-nanocrystals-1--after-s01-dissolve"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "not specified",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "wang2008-ja804436w",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Dissolve bulk arsenic(II) sulfide in ethylenediamine to form a cluster solution",
+      "evidence": [
+        {
+          "source_id": "wang2008-ja804436w",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "s02-transform",
+      "action": "transform",
+      "label": "Transform the cluster solution into crystalline nanoparticles",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-dissolve"
+      ],
+      "inputs": [
+        "wang2008-ja804436w-arsenic-ii-sulfide-nanocrystals-1--after-s01-dissolve",
+        "wang2008-ja804436w-arsenic-ii-sulfide-nanocrystals-1--arsenic-ii-sulfide",
+        "wang2008-ja804436w-arsenic-ii-sulfide-nanocrystals-1--ethylenediamine"
+      ],
+      "outputs": [
+        "wang2008-ja804436w-arsenic-ii-sulfide-nanocrystals-1--after-s02-transform"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "not specified",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "wang2008-ja804436w",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Transform the cluster solution into crystalline nanoparticles",
+      "evidence": [
+        {
+          "source_id": "wang2008-ja804436w",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "wang2008-ja804436w-arsenic-ii-sulfide-nanocrystals-1--product",
+      "source_sample_label": "arsenic(II) sulfide nanocrystals",
+      "batch_id": null,
+      "material_state_id": "wang2008-ja804436w-arsenic-ii-sulfide-nanocrystals-1--after-s02-transform",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "As4S4",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "wang2008-ja804436w",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": "amide",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "wang2008-ja804436w",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "wang2008-ja804436w",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "notes": [
+        "Reactor: not specified (Main PDF p.1)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "wang2008-ja804436w-arsenic-ii-sulfide-nanocrystals-1--size",
+      "sample_id": "wang2008-ja804436w-arsenic-ii-sulfide-nanocrystals-1--product",
+      "property": "diameter",
+      "technique": "TEM",
+      "value": {
+        "value": 3.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "3 nm",
+        "evidence": [
+          {
+            "source_id": "wang2008-ja804436w",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "wang2008-ja804436w",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Shape not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of arsenic(II) sulfide not reported in the extracted text.",
+      "Amount of ethylenediamine not reported in the extracted text.",
+      "Amount of acrylic acid not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

@@ -1,3 +1,15 @@
+[Machine-extracted paper index](research-assets/public-audits/MACHINE_EXTRACTED_PAPERS.md)
+
+## Q24 verified / Q25 unpublished progress
+
+Q24 verified live at 2026-10-22T23:03:24+00:00: 46 papers / 63 source_extracted records / 277 captioned crop keys; observed totals are 2,395 papers / 6,095 records / 3,974 recipe-structure pairs / 1,048 material families. Scientific Source is 71ae2690bf6e5e079863d519f3f9de7e3501c9a6 and published Site is 6961fa3ad7a7f8385e4cbd9edd2e349d0f47f853. Limited reads and asset registration are not independent scientific audits, S1 findings or rights permission.
+
+Q25 pending contribution: 52 papers / 65 source_extracted records / 321 captioned crop keys from B127 and B128. Q25 verified_live_at remains null and publication_credit remains 0. The genuine Q25 importer completed all five normal stages: 52 papers / 65 records / 321 crops, with 6,160 canonical Source records and all 6,095 prior record bytes preserved. Normal rights registration applied for 65 records and checked 675 assets; it grants no rights permission or independent-audit status. Preserve the Song/Lu technical-release-hold and failed-build histories, paused audited Worker A/B lanes, outside-scope section and five waiting owner questions.
+
+Eight disjoint scoped cleanup groups have closed independent accounting: 1,088,282 known leaves removed / 144,394,405,771 logical bytes. The final Q24 published-payload group removed 236,608 known leaves / 16,926,010,932 logical bytes; 12 unknown control leaves were held, with no failures. Its selected known maps are complete; whole-parent removal is false. Earlier held, unmatched and deferred leaves and all prior failure/refusal histories remain distinct. Logical removal is not attributed physical free-space gain.
+
+Keep a fixed C-space minimum of 100 GiB (107,374,182,400 bytes) after each operation's measured or conservatively estimated additional peak allocation: require current free bytes minus that peak budget to be at least the fixed floor before a large write. Otherwise park the write. A passing check is a point observation, not a disk reservation or a promise that other applications cannot consume space. The Q24 24 GiB planning allowance is historical and is not a measured Q25 peak budget.
+
 Extracted-paper index: [owner revisit list](https://github.com/cuiyist/mattersyn/blob/main/research-assets/public-audits/MACHINE_EXTRACTED_PAPERS.md).
 
 ## Current queue — 2026-10-22 11:45 UTC
