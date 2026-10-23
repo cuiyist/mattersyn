@@ -133,13 +133,13 @@ def germanium_reviewed_regression_checks(hub, byid):
         material, products = record.get("material", {}), record.get("products", [])
         return (material.get("formula") == "Ge" and material.get("components") == ["Ge"]
                 and material.get("elements") == ["Ge"] and material.get("architecture") == "single_material"
-                and str(record.get("method", "")).strip().casefold() in {"heat-up", "hot-injection", "colloidal synthesis", "microwave"}
+                and str(record.get("method", "")).strip().casefold() in {"heat-up", "hot-injection", "colloidal synthesis", "microwave", "metathesis"}
                 and bool(products) and all(
                     product.get("composition", {}).get("value") == "Ge"
                     and product.get("composition", {}).get("status") == "reported"
                     and ("nanocrystal" in (label := str(product.get("source_sample_label", "")).casefold())
                          or "nanoparticle" in label or "quantum dot" in label
-                         or bool(set(label.split()) & {"cqd", "cqds", "qd", "qds", "nc", "ncs"}))
+                         or bool(set(label.replace("-", " ").split()) & {"cqd", "cqds", "qd", "qds", "nc", "ncs"}))
                     and not any(word in label for word in ("embedded", "matrix", "substrate", "supported", "film", "device", "implant", "well"))
                     for product in products))
 

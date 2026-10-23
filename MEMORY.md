@@ -1,5 +1,9 @@
 [Machine-extracted paper index](research-assets/public-audits/MACHINE_EXTRACTED_PAPERS.md)
 
+## Q27 compatibility correction after the first normal build
+
+Q27 normal build at Source9e4eefd was correctly stopped by the Ge consistency check because its route vocabulary did not recognize the new Metathesis method and hyphenated NC sample label. Scoped source inspection confirms isolated Ge particles dispersed in hexane (10.1021/cm990203q, main PDF p.3). The bounded compatibility fix recognizes that method and token without changing records or the composition, architecture, review status and embedded/substrate/film/device exclusions. All 53 Ge regression tests pass; the patched checker passes all 282,910 checks on the original failed candidate. The failed build and diagnostics remain on record. Q27 stays pending at 43 papers / 59 records / 238 captioned crops, publication credit zero, until fresh complete local validation, GUI, exact-head CI, ordinary merge, Pages and anonymous verification. No policy, rights or permission rule changed.
+
 ## Q26 verified live and Q27 Source-integrated pending
 
 Q26 was verified live at 2026-10-23T08:38:47+00:00: 44 papers / 65 source_extracted records / 244 captioned crops, counted once. Site3f0309e has successful Pages and the normal anonymous verification-only retry passed without a repush. Observed totals are 2,491 papers / 6,225 records / 4,104 recipe-structure pairs / 1,072 material families. The first file-verification mismatch and all earlier failures remain preserved.

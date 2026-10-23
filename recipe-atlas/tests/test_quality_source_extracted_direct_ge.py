@@ -45,6 +45,30 @@ class DirectGe(unittest.TestCase):
         for value,status in [('GeO2','reported'),('Ge/Si','reported'),('Ge','inferred'),(None,'not_reported')]:
             self.byid[DIRECT]['products'][0]['composition']={'value':value,'status':status}
             with self.subTest(value=value,status=status):self.assertFalse(all(self.checks()))
+    def test_metathesis_hyphenated_nanocrystal_label(self):
+        self.byid[DIRECT]['method']='Metathesis'
+        self.byid[DIRECT]['products'][0]['source_sample_label']='Rˆ -nc-Ge (methyl-terminated)'
+        before=copy.deepcopy((self.byid,self.hub))
+        self.assertTrue(all(self.checks()));self.assertEqual((self.byid,self.hub),before)
+    def test_metathesis_keeps_product_and_context_guards(self):
+        self.byid[DIRECT]['method']='Metathesis'
+        for label in ['ncsource-Ge','Ge','R-nc-Ge embedded in matrix','R-nc-Ge substrate film','supported R-nc-Ge device','implanted R-nc-Ge wells']:
+            self.byid[DIRECT]['products'][0]['source_sample_label']=label
+            with self.subTest(label=label):self.assertFalse(all(self.checks()))
+        self.byid[DIRECT]['products'][0]['source_sample_label']='R-nc-Ge'
+        for value,status in [('GeO2','reported'),('Ge/Si','reported'),('Ge','inferred'),(None,'not_reported')]:
+            self.byid[DIRECT]['products'][0]['composition']={'value':value,'status':status}
+            with self.subTest(value=value,status=status):self.assertFalse(all(self.checks()))
+    def test_metathesis_keeps_method_and_architecture_guards(self):
+        self.byid[DIRECT]['products'][0]['source_sample_label']='R-nc-Ge'
+        for method in ['Metathesis deposition','Ion implantation','Milling','']:
+            self.byid[DIRECT]['method']=method
+            with self.subTest(method=method):self.assertFalse(all(self.checks()))
+        self.byid[DIRECT]['method']='Metathesis'
+        for key,value in [('formula','GeO2'),('components',['Ge','SiO2']),('elements',['Ge','O']),('architecture','composite')]:
+            before=copy.deepcopy(self.byid[DIRECT]['material']);self.byid[DIRECT]['material'][key]=value
+            with self.subTest(key=key):self.assertFalse(all(self.checks()))
+            self.byid[DIRECT]['material']=before
     def test_microwave_NCs_keeps_material_architecture_guards(self):
         self.microwave()
         for key,value in [('formula','GeO2'),('components',['Ge','SiO2']),('elements',['Ge','O']),('architecture','composite')]:
