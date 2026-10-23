@@ -1,3 +1,15 @@
+[Machine-extracted paper index](research-assets/public-audits/MACHINE_EXTRACTED_PAPERS.md)
+
+## Q26 verified live and Q27 Source-integrated pending
+
+Q26 was verified live at 2026-10-23T08:38:47+00:00: 44 papers / 65 source_extracted records / 244 captioned crops, counted once. Site3f0309e has successful Pages and the normal anonymous verification-only retry passed without a repush. Observed totals are 2,491 papers / 6,225 records / 4,104 recipe-structure pairs / 1,072 material families. The first file-verification mismatch and all earlier failures remain preserved.
+
+Q27 contains 43 papers / 59 source_extracted records / 238 captioned crops integrated through the unchanged five normal stages, with all 6,225 old record bytes and six audited-only exports preserved. Q27 has no Live date and no publication credit before deployment and anonymous verification.
+
+Source8 removed 187,412 known leaves /15,552,424,692 logical bytes with2,728 holds and0 failures. Site6 removed65,250 known leaves /23,747,781,612 logical bytes with299,219 holds and0 failures. Both original held-subsets statuses are preserved. Site6 C free was137,288,675,328 bytes before and161,110,945,792 after; wrapper161,053,470,720 is a separate later observation. Logical removal is not isolated physical gain; no whole-folder or600GB claim. [Cleanup report](https://github.com/cuiyist/mattersyn2/blob/ed329bd3e4bb05b3e7c2f14dfc4a1f69d6d60eb5/CLEANUP_REPORT_2026-10-12.md).
+
+Normal asset registration checked 557 assets for59 records. Permission remains unverified; the ordinary rights-registry checksum refresh grants no permission or scientific-review status. All release gates and neutral public display remain unchanged. Keep the audit lane, real Worker A/B queue and five older owner questions paused. Before each large write require actual C free minus the complete conservative positive unfinished allocation to remain at least107,374,182,400 bytes; this does not reserve disk space or control unrelated programs.
+
 Current Q26 compatibility-fix and Site10 closure progress: see research-assets/public-audits/SIMPLE_PIPELINE_REPORT.md;44-paper contribution is still unpublished. Keep the failed7090 build and all earlier history.
 
 [Machine-extracted paper index](research-assets/public-audits/MACHINE_EXTRACTED_PAPERS.md)
