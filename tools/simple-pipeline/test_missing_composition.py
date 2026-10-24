@@ -51,6 +51,26 @@ class MissingCompositionTests(unittest.TestCase):
                 self.assertEqual(record['quality']['review_status'], 'source_extracted')
                 self.assertIsNone(record['products'][0]['composition']['value'])
 
+    def test_known_sample_acronym_and_protein_codes_do_not_create_materials(self):
+        labels = ('CPI-6', 'CPI-12', 'CPI−6', 'CPI6', 'CIS/ZnS core/shell QDs',
+                  'CdSe/CIS', 'SP1', 'SP1/ZnS')
+        doc = document([pair(label) for label in labels] + [pair('CsI')])
+        before = copy.deepcopy(doc)
+        builder, records = converter.records_of(doc)
+        self.assertEqual(builder.omitted_composition_indices, list(range(1, 9)))
+        self.assertEqual(len(records), 1)
+        self.assertTrue(records[0]['record_id'].endswith('-9'))
+        self.assertEqual(records[0]['material']['formula'], 'CsI')
+        self.assertEqual(doc, before)
+
+    def test_code_guard_keeps_real_formulas_and_explicit_source_compositions(self):
+        for product in ('CsI', 'CaS', 'CsPbI3', 'CuInS2/ZnS', 'Cu2-xS', 'CO2', 'CISi'):
+            with self.subTest(product=product):
+                self.assertEqual(self.convert(pair(product))['material']['formula'], product)
+        record = self.convert(pair('CPI-6', {'value': 'CuInS2', 'page': 3}))
+        self.assertEqual(record['products'][0]['composition']['value'], 'CuInS2')
+        self.assertEqual(record['products'][0]['composition']['evidence'][0]['locator'], 'Main PDF p.3')
+
     def test_existing_complex_formula_parser_and_text_fallback_are_preserved(self):
         for product, expected in (('Cd(Te, Se)/ZnSe quantum dots', 'Cd(Te,Se)/ZnSe'),
                                   ('Cd[Te, Se]/ZnSe quantum dots', 'Cd[Te,Se]/ZnSe'),

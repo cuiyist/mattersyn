@@ -1,0 +1,528 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "tang2017-acs-analchem-7b00284-an-dots-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Zhijiao Tang; Zhenhua Lin; Gongke Li; Yuling Hu (2017): aN-dots",
+  "material": {
+    "formula": "C, N, O",
+    "family": "C, N, O nanocrystals",
+    "elements": [
+      "C",
+      "N",
+      "O"
+    ],
+    "components": [
+      "C, N, O"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Synthesis as described in the source",
+  "sources": [
+    {
+      "id": "tang2017-acs-analchem-7b00284",
+      "doi": "10.1021/acs.analchem.7b00284",
+      "title": "Amino Nitrogen Quantum Dots-Based Nanoprobe for Fluorescence Detection and Imaging of Cysteine in Biological Samples",
+      "authors": "Zhijiao Tang; Zhenhua Lin; Gongke Li; Yuling Hu",
+      "year": 2017,
+      "url": "https://doi.org/10.1021/acs.analchem.7b00284",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "tang2017-acs-analchem-7b00284",
+    "recipe_family": "tang2017-acs-analchem-7b00284-an-dots-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "C, N, O",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "tang2017-acs-analchem-7b00284",
+          "locator": "Main PDF p.4"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": 5.0,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "5 nm",
+      "evidence": [
+        {
+          "source_id": "tang2017-acs-analchem-7b00284",
+          "locator": "Main PDF p.4"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "tang2017-acs-analchem-7b00284-an-dots-1--2-azidoimidazole",
+      "name": "2-azidoimidazole",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "mass": {
+          "value": 0.5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "g",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0.5 g",
+          "evidence": [
+            {
+              "source_id": "tang2017-acs-analchem-7b00284",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "tang2017-acs-analchem-7b00284",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "tang2017-acs-analchem-7b00284-an-dots-1--aqueous-ammonia",
+      "name": "aqueous ammonia",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "volume": {
+          "value": 50,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "50 mL",
+          "evidence": [
+            {
+              "source_id": "tang2017-acs-analchem-7b00284",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "tang2017-acs-analchem-7b00284",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "tang2017-acs-analchem-7b00284-an-dots-1--after-s01-heat",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "tang2017-acs-analchem-7b00284-an-dots-1--2-azidoimidazole",
+        "tang2017-acs-analchem-7b00284-an-dots-1--aqueous-ammonia"
+      ]
+    },
+    {
+      "id": "tang2017-acs-analchem-7b00284-an-dots-1--after-s02-centrifuge",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "tang2017-acs-analchem-7b00284-an-dots-1--after-s01-heat"
+      ]
+    },
+    {
+      "id": "tang2017-acs-analchem-7b00284-an-dots-1--after-s03-dialyze",
+      "name": "mixture after step 3",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "tang2017-acs-analchem-7b00284-an-dots-1--after-s02-centrifuge"
+      ]
+    },
+    {
+      "id": "tang2017-acs-analchem-7b00284-an-dots-1--after-s04-freeze-dry",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "tang2017-acs-analchem-7b00284-an-dots-1--after-s03-dialyze"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-heat",
+      "action": "heat",
+      "label": "Microwave irradiation",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "tang2017-acs-analchem-7b00284-an-dots-1--2-azidoimidazole",
+        "tang2017-acs-analchem-7b00284-an-dots-1--aqueous-ammonia"
+      ],
+      "outputs": [
+        "tang2017-acs-analchem-7b00284-an-dots-1--after-s01-heat"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 120,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "120 °C",
+          "evidence": [
+            {
+              "source_id": "tang2017-acs-analchem-7b00284",
+              "locator": "Main PDF p.4"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 8,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "8 min",
+          "evidence": [
+            {
+              "source_id": "tang2017-acs-analchem-7b00284",
+              "locator": "Main PDF p.4"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Microwave irradiation",
+      "evidence": [
+        {
+          "source_id": "tang2017-acs-analchem-7b00284",
+          "locator": "Main PDF p.4"
+        }
+      ]
+    },
+    {
+      "id": "s02-centrifuge",
+      "action": "centrifuge",
+      "label": "Removing large dots",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-heat"
+      ],
+      "inputs": [
+        "tang2017-acs-analchem-7b00284-an-dots-1--after-s01-heat"
+      ],
+      "outputs": [
+        "tang2017-acs-analchem-7b00284-an-dots-1--after-s02-centrifuge"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 20,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "20 min",
+          "evidence": [
+            {
+              "source_id": "tang2017-acs-analchem-7b00284",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Removing large dots",
+      "evidence": [
+        {
+          "source_id": "tang2017-acs-analchem-7b00284",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-dialyze",
+      "action": "dialyze",
+      "label": "Purification",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-centrifuge"
+      ],
+      "inputs": [
+        "tang2017-acs-analchem-7b00284-an-dots-1--after-s02-centrifuge"
+      ],
+      "outputs": [
+        "tang2017-acs-analchem-7b00284-an-dots-1--after-s03-dialyze"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 24,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "24 h",
+          "evidence": [
+            {
+              "source_id": "tang2017-acs-analchem-7b00284",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Purification",
+      "evidence": [
+        {
+          "source_id": "tang2017-acs-analchem-7b00284",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s04-freeze-dry",
+      "action": "freeze-dry",
+      "label": "Obtaining solid residue",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s03-dialyze"
+      ],
+      "inputs": [
+        "tang2017-acs-analchem-7b00284-an-dots-1--after-s03-dialyze"
+      ],
+      "outputs": [
+        "tang2017-acs-analchem-7b00284-an-dots-1--after-s04-freeze-dry"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Obtaining solid residue",
+      "evidence": [
+        {
+          "source_id": "tang2017-acs-analchem-7b00284",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "tang2017-acs-analchem-7b00284-an-dots-1--product",
+      "source_sample_label": "aN-dots",
+      "batch_id": null,
+      "material_state_id": "tang2017-acs-analchem-7b00284-an-dots-1--after-s04-freeze-dry",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "C, N, O",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "tang2017-acs-analchem-7b00284",
+            "locator": "Main PDF p.4"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "tang2017-acs-analchem-7b00284",
+          "locator": "Main PDF p.4"
+        }
+      ],
+      "notes": [
+        "Reactor: microwave reactor (Main PDF p.2).",
+        "Reaction temperature: 120 degC (Main PDF p.4).",
+        "Reaction time: 8 min (Main PDF p.4)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "tang2017-acs-analchem-7b00284-an-dots-1--size",
+      "sample_id": "tang2017-acs-analchem-7b00284-an-dots-1--product",
+      "property": "diameter",
+      "technique": "TEM",
+      "value": {
+        "value": 5.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "5 nm",
+        "evidence": [
+          {
+            "source_id": "tang2017-acs-analchem-7b00284",
+            "locator": "Main PDF p.4"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "tang2017-acs-analchem-7b00284",
+          "locator": "Main PDF p.4"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

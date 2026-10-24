@@ -198,7 +198,11 @@ def _composition_from(pair):
     value = ((pair.get('structure') or {}).get('composition') or {}).get('value')
     if value is not None and str(value).strip():
         return formula_from(value)
-    return _formula_token(pair.get('product') or '')
+    token = _formula_token(pair.get('product') or '')
+    # Known sample/acronym labels are not chemical identities. Do not expand them.
+    if token is not None and re.search(r'(?<![A-Za-z0-9])(?:CPI(?:[-−–—]?\d+)?|CIS|SP1)(?![A-Za-z0-9])', token):
+        return None
+    return token
 
 
 def first_upper(text):
