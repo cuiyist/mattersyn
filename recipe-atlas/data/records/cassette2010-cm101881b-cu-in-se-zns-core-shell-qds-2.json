@@ -1,0 +1,319 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "cassette2010-cm101881b-cu-in-se-zns-core-shell-qds-2",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "E. Cassette; T. Pons; C. Bouet; M. Helle; L. Bezdetnaya; F. Marchal; B. Dubertret (2010): Cu-In-Se/ZnS core/shell QDs",
+  "material": {
+    "formula": "CuInSe2/ZnS",
+    "family": "CuInSe2/ZnS nanocrystals",
+    "elements": [
+      "Cu",
+      "In",
+      "Se",
+      "Zn",
+      "S"
+    ],
+    "components": [
+      "CuInSe2",
+      "ZnS"
+    ],
+    "architecture": "core_shell"
+  },
+  "method": "Heat-up",
+  "sources": [
+    {
+      "id": "cassette2010-cm101881b",
+      "doi": "10.1021/cm101881b",
+      "title": "Synthesis and Characterization of Near-Infrared Cu−In−Se/ZnS Core/Shell Quantum Dots for In vivo Imaging",
+      "authors": "E. Cassette; T. Pons; C. Bouet; M. Helle; L. Bezdetnaya; F. Marchal; B. Dubertret",
+      "year": 2010,
+      "url": "https://doi.org/10.1021/cm101881b",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "cassette2010-cm101881b",
+    "recipe_family": "cassette2010-cm101881b-cu-in-se-zns-core-shell-qds-2",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CuInSe2/ZnS",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "cassette2010-cm101881b",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "cassette2010-cm101881b-cu-in-se-zns-core-shell-qds-2--1-octadecene",
+      "name": "1-octadecene",
+      "formula": null,
+      "role": "solvent",
+      "stage": "workup",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "cassette2010-cm101881b",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "cassette2010-cm101881b-cu-in-se-zns-core-shell-qds-2--after-s01-redisperse",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "cassette2010-cm101881b-cu-in-se-zns-core-shell-qds-2--1-octadecene"
+      ]
+    },
+    {
+      "id": "cassette2010-cm101881b-cu-in-se-zns-core-shell-qds-2--after-s02-degas",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "cassette2010-cm101881b-cu-in-se-zns-core-shell-qds-2--after-s01-redisperse"
+      ]
+    },
+    {
+      "id": "cassette2010-cm101881b-cu-in-se-zns-core-shell-qds-2--after-s03-precipitate",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "cassette2010-cm101881b-cu-in-se-zns-core-shell-qds-2--after-s02-degas"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-redisperse",
+      "action": "redisperse",
+      "label": "Redisperse CuInSe2 cores in ODE and OAm",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "cassette2010-cm101881b-cu-in-se-zns-core-shell-qds-2--1-octadecene"
+      ],
+      "outputs": [
+        "cassette2010-cm101881b-cu-in-se-zns-core-shell-qds-2--after-s01-redisperse"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Redisperse CuInSe2 cores in ODE and OAm",
+      "evidence": [
+        {
+          "source_id": "cassette2010-cm101881b",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-degas",
+      "action": "degas",
+      "label": "Degas solution under vacuum",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-redisperse"
+      ],
+      "inputs": [
+        "cassette2010-cm101881b-cu-in-se-zns-core-shell-qds-2--after-s01-redisperse"
+      ],
+      "outputs": [
+        "cassette2010-cm101881b-cu-in-se-zns-core-shell-qds-2--after-s02-degas"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "Ar",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "cassette2010-cm101881b",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Degas solution under vacuum",
+      "evidence": [
+        {
+          "source_id": "cassette2010-cm101881b",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-precipitate",
+      "action": "precipitate",
+      "label": "Precipitate QDs in ethanol and acetone",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-degas"
+      ],
+      "inputs": [
+        "cassette2010-cm101881b-cu-in-se-zns-core-shell-qds-2--after-s02-degas"
+      ],
+      "outputs": [
+        "cassette2010-cm101881b-cu-in-se-zns-core-shell-qds-2--after-s03-precipitate"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Precipitate QDs in ethanol and acetone",
+      "evidence": [
+        {
+          "source_id": "cassette2010-cm101881b",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "cassette2010-cm101881b-cu-in-se-zns-core-shell-qds-2--product",
+      "source_sample_label": "Cu-In-Se/ZnS core/shell QDs",
+      "batch_id": null,
+      "material_state_id": "cassette2010-cm101881b-cu-in-se-zns-core-shell-qds-2--after-s03-precipitate",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CuInSe2/ZnS",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "cassette2010-cm101881b",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "cassette2010-cm101881b",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reactor: three-necked flask (Main PDF p.2).",
+        "Reaction temperature: 190 degC (Main PDF p.2).",
+        "Reaction time: 1 h (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Amount of 1-octadecene not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
