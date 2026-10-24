@@ -1,28 +1,65 @@
-## Q30 Source contribution pending publication
+## Q31 Source contribution pending publication
 
 | DOI | Source ID | Record IDs | Origin | Review status | Live verified | Publication credit | Limited rare read |
 |---|---|---|---|---|---|---|---|
-| 10.1021/acs.chemmater.1c00348 | taylor2021-acs-chemmater-1c00348 | taylor2021-acs-chemmater-1c00348-in-zn-p-znse-znses-zns-coremultishell-qu-1 | B136 | source_extracted | null | 0 | no |
-| 10.1021/acs.chemmater.1c03219 | li2021-acs-chemmater-1c03219 | li2021-acs-chemmater-1c03219-inp-qds-1, li2021-acs-chemmater-1c03219-inas-qds-2, li2021-acs-chemmater-1c03219-cuins2-qds-3 | B136 | source_extracted | null | 0 | no |
-| 10.1021/acs.iecr.0c01194 | franco2020-acs-iecr-0c01194 | franco2020-acs-iecr-0c01194-carbon-quantum-dots-cqds-from-mortino-ex-1 | B136 | source_extracted | null | 0 | no |
-| 10.1021/acs.jchemed.7b00593 | bauer2018-acs-jchemed-7b00593 | bauer2018-acs-jchemed-7b00593-cds-qds-sample-1-1, bauer2018-acs-jchemed-7b00593-cds-qds-sample-2-2, bauer2018-acs-jchemed-7b00593-cdse-qds-sample-1-3 | B136 | source_extracted | null | 0 | no |
-| 10.1021/acs.jpcc.5c08403 | tian2026-acs-jpcc-5c08403 | tian2026-acs-jpcc-5c08403-qd21-1, tian2026-acs-jpcc-5c08403-qd31-2, tian2026-acs-jpcc-5c08403-qd41-3 | B136 | source_extracted | null | 0 | no |
-| 10.1021/acs.jpclett.4c00158 | hou2024-acs-jpclett-4c00158 | hou2024-acs-jpclett-4c00158-inp-qds-with-nh4pf6-additive-1, hou2024-acs-jpclett-4c00158-inp-zns-zns-qds-2 | B136 | source_extracted | null | 0 | yes |
-| 10.1021/acs.nanolett.7b04700 | chen2018-acs-nanolett-7b04700 | chen2018-acs-nanolett-7b04700-osinds-1 | B136 | source_extracted | null | 0 | yes |
-| 10.1021/acsami.5b11316 | xiao2016-acsami-5b11316 | xiao2016-acsami-5b11316-moox-qds-1 | B136 | source_extracted | null | 0 | yes |
-| 10.1021/acsanm.5c04920 | stephen2026-acsanm-5c04920 | stephen2026-acsanm-5c04920-cubr-qds-1 | B136 | source_extracted | null | 0 | yes |
-| 10.1021/acssuschemeng.0c00106 | chen2020-acssuschemeng-0c00106 | chen2020-acssuschemeng-0c00106-d-gqds-1 | B136 | source_extracted | null | 0 | no |
-| 10.1021/cm061311x | jiang2006-cm061311x | jiang2006-cm061311x-cdtexse1-x-cds-qdots-1 | B136 | source_extracted | null | 0 | yes |
-| 10.1021/cm070754d | bae2008-cm070754d | bae2008-cm070754d-cd1-xznxse1-ysy-qds-1 | B136 | source_extracted | null | 0 | yes |
-| 10.1021/cm070798m | yang2007-cm070798m | yang2007-cm070798m-cdte-sio2-1 | B136 | source_extracted | null | 0 | yes |
-| 10.1021/cm101881b | cassette2010-cm101881b | cassette2010-cm101881b-cu-in-se-core-qds-1, cassette2010-cm101881b-cu-in-se-zns-core-shell-qds-2 | B136 | source_extracted | null | 0 | yes |
-| 10.1021/cm3021462 | niezgoda2012-cm3021462 | niezgoda2012-cm3021462-cuxinys2-quantum-dots-4-0-nm-2-1-ev-band-1, niezgoda2012-cm3021462-cuxinys2-quantum-dots-4-4-nm-1-8-ev-band-2, niezgoda2012-cm3021462-cuxinys2-quantum-dots-4-9-nm-1-6-ev-band-3, niezgoda2012-cm3021462-cuxinys2-quantum-dots-5-6-nm-1-5-ev-band-4 | B136 | source_extracted | null | 0 | yes |
-| 10.1021/cm702856v | evans2008-cm702856v | evans2008-cm702856v-insb-qds-1 | B136 | source_extracted | null | 0 | no |
-| 10.1021/cm803084p | ryu2009-cm803084p | ryu2009-cm803084p-inp-zns-core-shell-quantum-dots-1 | B136 | source_extracted | null | 0 | no |
-| 10.1021/ic9006422 | shen2009-ic9006422 | shen2009-ic9006422-zn0-93cd0-07se-qds-1 | B136 | source_extracted | null | 0 | yes |
-| 10.1021/jz201605d | kim2012-jz201605d | kim2012-jz201605d-inpzns-alloy-qds-blue-emitting-1, kim2012-jz201605d-inpzns-alloy-qds-green-emitting-2, kim2012-jz201605d-inpzns-alloy-qds-red-emitting-3 | B136 | source_extracted | null | 0 | yes |
-| 10.1021/nn102878u | smith2011-nn102878u | smith2011-nn102878u-pbs0-54se0-46-1 | B136 | source_extracted | null | 0 | yes |
-| 10.1021/nn301629v | zhou2012-nn301629v | zhou2012-nn301629v-graphene-quantum-dots-gqds-1 | B136 | source_extracted | null | 0 | no |
+| 10.1021/acs.analchem.7b00284 | tang2017-acs-analchem-7b00284 | tang2017-acs-analchem-7b00284-an-dots-1 | B137 | source_extracted | null | 0 | yes |
+| 10.1021/acs.iecr.4c03757 | pattnayak2025-acs-iecr-4c03757 | pattnayak2025-acs-iecr-4c03757-l-cys-b-gc3n4-qds-1 | B137 | source_extracted | null | 0 | yes |
+| 10.1021/acs.inorgchem.1c02931 | shi2021-acs-inorgchem-1c02931 | shi2021-acs-inorgchem-1c02931-cuce0-5co1-5ox-1 | B137 | source_extracted | null | 0 | yes |
+| 10.1021/acsaem.5c00030 | maddala2025-acsaem-5c00030 | maddala2025-acsaem-5c00030-mos2-qds-1 | B137 | source_extracted | null | 0 | no |
+| 10.1021/acsaem.6c01210 | guan2026-acsaem-6c01210 | guan2026-acsaem-6c01210-heterostructural-cspbbr3-pbs-qds-with-0-1 | B137 | source_extracted | null | 0 | yes |
+| 10.1021/acsanm.1c02577 | valleix2021-acsanm-1c02577 | valleix2021-acsanm-1c02577-inp-zns-qds-with-480-nm-emission-1 | B137 | source_extracted | null | 0 | no |
+| 10.1021/acs.jpclett.5c02235 | wang2025-acs-jpclett-5c02235 | wang2025-acs-jpclett-5c02235-nayf4-yb-er-ucnps-na-re-2-00-1 | B138 | source_extracted | null | 0 | yes |
+| 10.1021/acsami.1c09421 | huang2021-acsami-1c09421 | huang2021-acsami-1c09421-yb3-cspbcl3-pencs-1 | B138 | source_extracted | null | 0 | yes |
+| 10.1021/acsami.9b19626 | ghose2020-acsami-9b19626 | ghose2020-acsami-9b19626-3agcu2o-1 | B138 | source_extracted | null | 0 | yes |
+| 10.1021/acsanm.1c02685 | zacharia2021-acsanm-1c02685 | zacharia2021-acsanm-1c02685-ag3in5se9-ncs-s1-1, zacharia2021-acsanm-1c02685-ag3in5se9-ncs-s2-2, zacharia2021-acsanm-1c02685-ag3in5se9-ncs-s3-3, zacharia2021-acsanm-1c02685-ag3in5se9-ncs-s4-4, zacharia2021-acsanm-1c02685-ag3in5se9-znse-core-shell-ncs-s5-5 | B138 | source_extracted | null | 0 | yes |
+| 10.1021/am403050s | deng2013-am403050s | deng2013-am403050s-quaternary-znaginse-zaise-qds-1 | B138 | source_extracted | null | 0 | yes |
+| 10.1021/ie502432y | mao2014-ie502432y | mao2014-ie502432y-cdte-cds-znssio2-qds-1 | B138 | source_extracted | null | 0 | yes |
+| 10.1021/ja110996c | deng2011-ja110996c | deng2011-ja110996c-mn-doped-zns-qr2-1 | B138 | source_extracted | null | 0 | no |
+| 10.1021/ja909490r | du2010-ja909490r | du2010-ja909490r-ag2s-qds-1 | B138 | source_extracted | null | 0 | no |
+| 10.1021/la800964s | saunders2008-la800964s | saunders2008-la800964s-cds-nanorods-1 | B138 | source_extracted | null | 0 | no |
+| 10.1021/nn901421v | pons2010-nn901421v | pons2010-nn901421v-cuins2-zns-qds-1 | B138 | source_extracted | null | 0 | no |
+| 10.1021/ac4011342 | malashikhina2013-ac4011342 | malashikhina2013-ac4011342-cds-qds-1 | B139 | source_extracted | null | 0 | no |
+| 10.1021/acs.chemmater.0c01275 | kim2020-acs-chemmater-0c01275 | kim2020-acs-chemmater-0c01275-zns-zntese-zns-cqw-1 | B139 | source_extracted | null | 0 | yes |
+| 10.1021/acs.chemmater.6b01793 | teunis2016-acs-chemmater-6b01793 | teunis2016-acs-chemmater-6b01793-ch3nh3pbbr3-quantum-wires-1 | B139 | source_extracted | null | 0 | no |
+| 10.1021/acs.energyfuels.4c02652 | ogundele2024-acs-energyfuels-4c02652 | ogundele2024-acs-energyfuels-4c02652-cdxs-zn1xs-coreshell-sqd-1 | B139 | source_extracted | null | 0 | yes |
+| 10.1021/acs.jpcc.6c00028 | duong2026-acs-jpcc-6c00028 | duong2026-acs-jpcc-6c00028-cspbbr3-ncs-1 | B139 | source_extracted | null | 0 | no |
+| 10.1021/acs.jpclett.1c03244 | xie2021-acs-jpclett-1c03244 | xie2021-acs-jpclett-1c03244-cpi-1-1 | B139 | source_extracted | null | 0 | yes |
+| 10.1021/acs.jpclett.5c00219 | he2025-acs-jpclett-5c00219 | he2025-acs-jpclett-5c00219-4-nm-cds-core-1, he2025-acs-jpclett-5c00219-cdses-core-2 | B139 | source_extracted | null | 0 | no |
+| 10.1021/acsami.0c15161 | rreza2021-acsami-0c15161 | rreza2021-acsami-0c15161-cds-cdse1xsx-cds-sqw-1a-0-7-0-8-1-6-nm-1 | B139 | source_extracted | null | 0 | yes |
+| 10.1021/acsami.5c10632 | liu2025-acsami-5c10632 | liu2025-acsami-5c10632-red-emitting-cuins2-zns-zns-zns-core-she-1, liu2025-acsami-5c10632-yellow-green-emitting-cuins2-zns-zns-zns-2, liu2025-acsami-5c10632-blue-emitting-zncugas2-zns-zns-zns-qds-3 | B139 | source_extracted | null | 0 | yes |
+| 10.1021/acsnano.1c09582 | cai2022-acsnano-1c09582 | cai2022-acsnano-1c09582-b-gqds-1 | B139 | source_extracted | null | 0 | yes |
+| 10.1021/acsnano.5b05903 | delikanli2015-acsnano-5b05903 | delikanli2015-acsnano-5b05903-sample-1-5-cdse-2-cdmns-2-cds-1, delikanli2015-acsnano-5b05903-sample-2-3-cdse-2-cdmns-4-cds-2 | B139 | source_extracted | null | 0 | yes |
+| 10.1021/bm9002877 | zhou2009-bm9002877 | zhou2009-bm9002877-qd-hpg1-1 | B139 | source_extracted | null | 0 | no |
+| 10.1021/cm061974e | tan2007-cm061974e | tan2007-cm061974e-pbse-qds-7-12-nm-spheres-octahedrons-cub-1, tan2007-cm061974e-sio2-pbse-silica-coated-pbse-qds-2 | B139 | source_extracted | null | 0 | no |
+| 10.1021/cm902610f | kumar2010-cm902610f | kumar2010-cm902610f-sio2-coated-cdse-cds-zns-quantum-rods-qr-1 | B139 | source_extracted | null | 0 | no |
+| 10.1021/jp057435z | wolcott2006-jp057435z | wolcott2006-jp057435z-silica-coated-cdte-qds-1 | B139 | source_extracted | null | 0 | no |
+| 10.1021/la201213c | yang2011-la201213c | yang2011-la201213c-cdse-cdxzn1-xs-core-shell-qds-coated-wit-1 | B139 | source_extracted | null | 0 | yes |
+
+## Q30 verified live (2026-10-24)
+
+| DOI | Source ID | Record IDs | Origin | Review status | Live verified | Publication credit | Limited rare read |
+|---|---|---|---|---|---|---|---|
+| 10.1021/acs.chemmater.1c00348 | taylor2021-acs-chemmater-1c00348 | taylor2021-acs-chemmater-1c00348-in-zn-p-znse-znses-zns-coremultishell-qu-1 | B136 | source_extracted | 2026-10-24T04:19:37+00:00 | 1 | no |
+| 10.1021/acs.chemmater.1c03219 | li2021-acs-chemmater-1c03219 | li2021-acs-chemmater-1c03219-inp-qds-1, li2021-acs-chemmater-1c03219-inas-qds-2, li2021-acs-chemmater-1c03219-cuins2-qds-3 | B136 | source_extracted | 2026-10-24T04:19:37+00:00 | 1 | no |
+| 10.1021/acs.iecr.0c01194 | franco2020-acs-iecr-0c01194 | franco2020-acs-iecr-0c01194-carbon-quantum-dots-cqds-from-mortino-ex-1 | B136 | source_extracted | 2026-10-24T04:19:37+00:00 | 1 | no |
+| 10.1021/acs.jchemed.7b00593 | bauer2018-acs-jchemed-7b00593 | bauer2018-acs-jchemed-7b00593-cds-qds-sample-1-1, bauer2018-acs-jchemed-7b00593-cds-qds-sample-2-2, bauer2018-acs-jchemed-7b00593-cdse-qds-sample-1-3 | B136 | source_extracted | 2026-10-24T04:19:37+00:00 | 1 | no |
+| 10.1021/acs.jpcc.5c08403 | tian2026-acs-jpcc-5c08403 | tian2026-acs-jpcc-5c08403-qd21-1, tian2026-acs-jpcc-5c08403-qd31-2, tian2026-acs-jpcc-5c08403-qd41-3 | B136 | source_extracted | 2026-10-24T04:19:37+00:00 | 1 | no |
+| 10.1021/acs.jpclett.4c00158 | hou2024-acs-jpclett-4c00158 | hou2024-acs-jpclett-4c00158-inp-qds-with-nh4pf6-additive-1, hou2024-acs-jpclett-4c00158-inp-zns-zns-qds-2 | B136 | source_extracted | 2026-10-24T04:19:37+00:00 | 1 | yes |
+| 10.1021/acs.nanolett.7b04700 | chen2018-acs-nanolett-7b04700 | chen2018-acs-nanolett-7b04700-osinds-1 | B136 | source_extracted | 2026-10-24T04:19:37+00:00 | 1 | yes |
+| 10.1021/acsami.5b11316 | xiao2016-acsami-5b11316 | xiao2016-acsami-5b11316-moox-qds-1 | B136 | source_extracted | 2026-10-24T04:19:37+00:00 | 1 | yes |
+| 10.1021/acsanm.5c04920 | stephen2026-acsanm-5c04920 | stephen2026-acsanm-5c04920-cubr-qds-1 | B136 | source_extracted | 2026-10-24T04:19:37+00:00 | 1 | yes |
+| 10.1021/acssuschemeng.0c00106 | chen2020-acssuschemeng-0c00106 | chen2020-acssuschemeng-0c00106-d-gqds-1 | B136 | source_extracted | 2026-10-24T04:19:37+00:00 | 1 | no |
+| 10.1021/cm061311x | jiang2006-cm061311x | jiang2006-cm061311x-cdtexse1-x-cds-qdots-1 | B136 | source_extracted | 2026-10-24T04:19:37+00:00 | 1 | yes |
+| 10.1021/cm070754d | bae2008-cm070754d | bae2008-cm070754d-cd1-xznxse1-ysy-qds-1 | B136 | source_extracted | 2026-10-24T04:19:37+00:00 | 1 | yes |
+| 10.1021/cm070798m | yang2007-cm070798m | yang2007-cm070798m-cdte-sio2-1 | B136 | source_extracted | 2026-10-24T04:19:37+00:00 | 1 | yes |
+| 10.1021/cm101881b | cassette2010-cm101881b | cassette2010-cm101881b-cu-in-se-core-qds-1, cassette2010-cm101881b-cu-in-se-zns-core-shell-qds-2 | B136 | source_extracted | 2026-10-24T04:19:37+00:00 | 1 | yes |
+| 10.1021/cm3021462 | niezgoda2012-cm3021462 | niezgoda2012-cm3021462-cuxinys2-quantum-dots-4-0-nm-2-1-ev-band-1, niezgoda2012-cm3021462-cuxinys2-quantum-dots-4-4-nm-1-8-ev-band-2, niezgoda2012-cm3021462-cuxinys2-quantum-dots-4-9-nm-1-6-ev-band-3, niezgoda2012-cm3021462-cuxinys2-quantum-dots-5-6-nm-1-5-ev-band-4 | B136 | source_extracted | 2026-10-24T04:19:37+00:00 | 1 | yes |
+| 10.1021/cm702856v | evans2008-cm702856v | evans2008-cm702856v-insb-qds-1 | B136 | source_extracted | 2026-10-24T04:19:37+00:00 | 1 | no |
+| 10.1021/cm803084p | ryu2009-cm803084p | ryu2009-cm803084p-inp-zns-core-shell-quantum-dots-1 | B136 | source_extracted | 2026-10-24T04:19:37+00:00 | 1 | no |
+| 10.1021/ic9006422 | shen2009-ic9006422 | shen2009-ic9006422-zn0-93cd0-07se-qds-1 | B136 | source_extracted | 2026-10-24T04:19:37+00:00 | 1 | yes |
+| 10.1021/jz201605d | kim2012-jz201605d | kim2012-jz201605d-inpzns-alloy-qds-blue-emitting-1, kim2012-jz201605d-inpzns-alloy-qds-green-emitting-2, kim2012-jz201605d-inpzns-alloy-qds-red-emitting-3 | B136 | source_extracted | 2026-10-24T04:19:37+00:00 | 1 | yes |
+| 10.1021/nn102878u | smith2011-nn102878u | smith2011-nn102878u-pbs0-54se0-46-1 | B136 | source_extracted | 2026-10-24T04:19:37+00:00 | 1 | yes |
+| 10.1021/nn301629v | zhou2012-nn301629v | zhou2012-nn301629v-graphene-quantum-dots-gqds-1 | B136 | source_extracted | 2026-10-24T04:19:37+00:00 | 1 | no |
 
 ## Q29 verified live (2026-10-23)
 
