@@ -1,3 +1,9 @@
+## Source5 Huang staged, publication pending
+
+| DOI | Source ID | Record IDs | Origin | Review status | Live verified | Publication credit | Limited rare read |
+|---|---|---|---|---|---|---|---|
+| 10.1021/acs.jpclett.9b02386 | huang2019-acs-jpclett-9b02386 | huang2019-acs-jpclett-9b02386-cu-assisted-inp-zns-core-shell-qds-1 | B116 / Source5 | source_extracted | pending | 0 | no |
+
 ## Source4 Kalita verified website publication
 
 | DOI | Source ID | Record IDs | Origin | Review status | Live verified | Publication credit | Limited rare read |
