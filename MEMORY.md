@@ -1,3 +1,13 @@
+Paper index: [MACHINE_EXTRACTED_PAPERS.md](research-assets/public-audits/MACHINE_EXTRACTED_PAPERS.md).
+
+## Source5 Huang staged; normal Source release checks pending
+
+The saved Huang B116 particle synthesis (DOI 10.1021/acs.jpclett.9b02386) has completed the unchanged five normal import stages and asset registration: one source_extracted paper, one record and five captioned crops. Canonical Source now has 6,429 records after preserving all 6,428 previous record bytes and all six audited-only exports. Existing merged Reader records preserved: 5,870; existing figure-source groups preserved: 2,610. The normal registrar checked ten assets; permission remains unverified and no policy rule or permission changed. Independent InP and ZnS component reference cells remain comparisons, not measured cells of the synthesized sample.
+
+The verified website remains at Site 0cedb7a8e9bb945d6522657c4e4d79695faf1acd: 2,623 papers / 6,428 records / 4,307 recipe–structure pairs / 1,122 material families. Huang is pending, with no Live date and zero publication credit until the normal complete build, source/privacy/rights/schema checks, fresh same-head desktop/phone visual review, exact CI, ordinary merge, Pages and anonymous verification pass. The original failed caption result and all saved pass/pair/technical-failure history remain unchanged. No new extraction, model request, source audit or scientific replacement was performed. The audited lane, Worker A/B and five older owner questions remain paused.
+
+The separately closed c780 cleanup independently accounts for 17,051 files / 5,727,815,788 logical bytes removed; 71,365 held entries remain and whole_attempt_success is false. Actual C free observations were 137,017,839,616 before and 142,765,109,248 after; these nonisolated physical points are separate from logical accounting. The [safe cleanup report](https://github.com/cuiyist/mattersyn2/blob/aab589ea83693f0857c93e14d89e283c7efa68d0/CLEANUP_REPORT_2026-10-12.md) preserves all earlier history. The unchanged complete 30-GiB preliminary Source profile was newly admitted from actual capacity; the later full 40-GiB Site release remains separately unadmitted. Before every large write, actual C free minus all unfinished positive allocations must remain at least 107,374,182,400 bytes. This does not control unrelated programs.
+
 [Machine-extracted paper index](research-assets/public-audits/MACHINE_EXTRACTED_PAPERS.md)
 
 ## Source4 Kalita verified website publication
