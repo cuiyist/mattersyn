@@ -1,8 +1,8 @@
-## Source4 Kalita Source contribution pending website publication
+## Source4 Kalita verified website publication
 
 | DOI | Source ID | Record IDs | Origin | Review status | Live verified | Publication credit | Limited rare read |
 |---|---|---|---|---|---|---|---|
-| 10.1021/ic202252m | kalita2012-ic202252m | kalita2012-ic202252m-cdse-qds-1, kalita2012-ic202252m-cdte-qds-2 | B120 | source_extracted | null | 0 | no |
+| 10.1021/ic202252m | kalita2012-ic202252m | kalita2012-ic202252m-cdse-qds-1, kalita2012-ic202252m-cdte-qds-2 | B120 | source_extracted | 2026-10-25T08:09:39+00:00 | 1 | no |
 
 ## Q31 verified Live - 2026-10-24T09:49:55+00:00
 
