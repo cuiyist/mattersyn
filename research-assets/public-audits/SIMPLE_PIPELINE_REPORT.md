@@ -1,4 +1,18 @@
+Queue: 3,177 physical entries (458 current effective IN); saved-read 2,250 (399 IN), attempted 75 (30 IN), unread/incomplete 852 (29 IN, all parked identity holds). Physical-row counts do not certify primary-paper uniqueness, readiness or exhaustion.
+
+Historical Q31 queue header (accepted 2026-10-24T09:54:33.688189+00:00; superseded by Source4 reconciliation 2026-10-25T08:16:33.533302+00:00):
 Queue: 3,178 physical entries (459 current effective IN); saved-read 2,251 (400 IN), attempted 75 (30 IN), unread/incomplete 852 (29 IN, all parked identity holds). Physical-row counts do not certify primary-paper uniqueness, readiness or exhaustion.
+
+
+The normal Site boundary manifest contains 63,006 files totaling 4,705,277,053 logical bytes. This is built-site logical size; it is not physical allocation or reclaimed space.
+
+
+## Source4 Kalita verified website publication
+
+Verified 2026-10-25T08:09:39+00:00: the Kalita B120 contribution (DOI 10.1021/ic202252m) is live from Source 2d3232a1a5c69d647869d949bfa2bde19bd27f5a at Site 0cedb7a8e9bb945d6522657c4e4d79695faf1acd. Actual normal push, both Pages jobs and anonymous verification confirm one paper, two source_extracted records and five captioned crops. Observed totals are 2,623 papers / 6,428 records / 4,307 pairs / 1,122 material families. This records the already completed publication once; it adds no second paper, extraction, audit or cleanup credit. The accepted deletion-only ambiguity omission and original pair/pass/caption-failure history remain retained; no chemical identity or scientific replacement was inferred. Copyright permission and scientific-review status are unchanged. Source3 Song and the four Lu records retain their previous holds. All other index entries, repository-only title annotations, paused audited/Worker A/B state and five owner questions remain unchanged. This Source-only checkpoint still requires normal exact-file review, preparation, all13 checks, fresh same-head GUI, three-job CI and ordinary Source merge. It authorizes no new Site release.
+
+The separately accepted Root incremental queue reconciliation removes exactly the verified DOI/full-SHA member once. Actual remaining physical entries: 3177 (effective scope 458 IN / 802 OUT / 1917 uncertain); saved-read unpublished 2250, attempted 75, unread 852. The separately retained dated classification has 461 IN; it is not substituted for effective scope. Physical entries are not certified unique primary papers. All other rows and held states remain unchanged; no exhaustion is inferred.
+
 
 ## Source4 Kalita Source contribution pending website publication
 
