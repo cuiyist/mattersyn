@@ -393,10 +393,73 @@ class Builder:
                 'context_links': [], 'collection': 'reviewed_literature', 'reader_role': 'synthesis_route'}
 
 
-def records_of(doc, include_optical=False):
+def original_ordinal_pairs(doc, original_ordinals=None):
+    """Select retained pair entries without compacting their original record indices."""
+    pairs = doc.get('pairs') or []
+    if original_ordinals is None:
+        return list(enumerate(pairs, 1))
+    if (not isinstance(original_ordinals, list) or not original_ordinals or
+            any(type(n) is not int or n < 1 or n > len(pairs) for n in original_ordinals) or
+            original_ordinals != sorted(set(original_ordinals))):
+        raise ValueError('Original ordinal selection must be unique increasing in-range integers')
+    return [(n, pairs[n - 1]) for n in original_ordinals]
+
+
+def unique_selection_object(pairs):
+    """Reject every duplicate selector object key, including nested objects."""
+    result = {}
+    for key, value in pairs:
+        if key in result:
+            raise ValueError('Duplicate original ordinal selector object key')
+        result[key] = value
+    return result
+
+
+def selected_pair_input(a, path):
+    """An optional metadata selection pins the same raw pair bytes that are parsed."""
+    selection_path = getattr(a, 'original_ordinals', None)
+    if selection_path is None:
+        return json.loads(path.read_text(encoding='utf-8')), None
+    import hashlib
+    if not hasattr(a, '_original_ordinal_selection'):
+        with Path(selection_path).open('rb') as selection_file:
+            control_raw = selection_file.read(1048577)
+        if len(control_raw) > 1048576:
+            raise ValueError('Original ordinal selection exceeds one MiB')
+        control = json.loads(control_raw.decode('utf-8-sig'), object_pairs_hook=unique_selection_object)
+        rows = control.get('papers')
+        if (control.get('schema') != 'normal-original-ordinal-selection/1' or
+                not isinstance(rows, list) or not rows or
+                any(not isinstance(r, dict) or not isinstance(r.get('doi'), str) or
+                    not isinstance(r.get('source_id'), str) for r in rows) or
+                len({r['doi'] for r in rows}) != len(rows) or
+                len({r['source_id'] for r in rows}) != len(rows)):
+            raise ValueError('Invalid original ordinal selection metadata')
+        a._original_ordinal_selection = control
+    raw = path.read_bytes()
+    doc = json.loads(raw.decode('utf-8'))
+    rows = [r for r in a._original_ordinal_selection['papers'] if r['doi'] == doc.get('doi')]
+    if len(rows) != 1:
+        raise ValueError('Every pair input must have one exact DOI selection row')
+    row = rows[0]
+    if (type(row.get('pair_bytes')) is not int or row['pair_bytes'] != len(raw) or
+            row.get('pair_sha256') != hashlib.sha256(raw).hexdigest() or
+            row['source_id'] != Builder(doc, a.include_optical).source_id):
+        raise ValueError('Selected original pair bytes or source identity differ')
+    ordinals = row.get('original_ordinals')
+    original_ordinal_pairs(doc, ordinals)
+    if ordinals is None:
+        raise ValueError('An opted-in selection must specify original ordinals')
+    _, records = records_of(doc, a.include_optical, original_ordinals=ordinals)
+    if row.get('record_ids') != [r['record_id'] for r in records]:
+        raise ValueError('Selected record IDs differ from exact original ordinal derivation')
+    return doc, ordinals
+
+
+def records_of(doc, include_optical=False, original_ordinals=None):
     """(builder, [records]) for the pairs that describe a synthesis."""
     builder = Builder(doc, include_optical)
-    usable = [(n, p) for n, p in enumerate(doc.get('pairs') or [], 1) if (p.get('recipe') or {}).get('steps') or (p.get('recipe') or {}).get('chemicals')]
+    usable = [(n, p) for n, p in original_ordinal_pairs(doc, original_ordinals) if (p.get('recipe') or {}).get('steps') or (p.get('recipe') or {}).get('chemicals')]
     records = []
     builder.omitted_composition_indices = []
     for n, pair in usable:
@@ -560,14 +623,14 @@ def cmd_sync(a):
     side_changed = False
     inventory = json.loads((atlas / 'data/inventory-evidence.json').read_text(encoding='utf-8'))
     for f in sorted(pairs_dir.glob('*.pairs.json')):
-        doc = json.loads(f.read_text(encoding='utf-8'))
+        doc, original_ordinals = selected_pair_input(a, f)
         if doc.get('check') != 'two passes agree, quotes found':
             print(f'{doc.get("id") or f.stem}: not two-pass checked; left out'); continue
-        builder, records = records_of(doc, a.include_optical)
+        builder, records = records_of(doc, a.include_optical, original_ordinals=original_ordinals)
         sid = builder.source_id
         if source_collision(inventory, sid, doc.get('doi')):
             print(f'{sid}: protected source identity; no presentation changed'); continue
-        reactors = [((p.get('recipe') or {}).get('reactor') or {}).get('value') for p in doc.get('pairs') or []
+        reactors = [((p.get('recipe') or {}).get('reactor') or {}).get('value') for _, p in original_ordinal_pairs(doc, original_ordinals)
                     if ((p.get('recipe') or {}).get('steps') or (p.get('recipe') or {}).get('chemicals')) and _composition_from(p) is not None]
         reactor_by_record = dict(zip((r['record_id'] for r in records), reactors))
         accepted = []
@@ -691,10 +754,10 @@ def cmd_records(a):
     inventory_path = repo / 'recipe-atlas/data/inventory-evidence.json'; inventory = json.loads(inventory_path.read_text(encoding='utf-8'))
     on_site = {p['doi'].lower() for p in inventory['per_paper'] if p.get('doi') and p.get('review_status') != 'source_extracted'}
     for f in sorted(Path(a.pairs).glob('*.pairs.json')):
-        doc = json.loads(f.read_text(encoding='utf-8'))
+        doc, original_ordinals = selected_pair_input(a, f)
         if doc.get('check') != 'two passes agree, quotes found':
             print(f'{doc.get("id") or f.stem}: not two-pass checked; left out'); continue
-        builder, records = records_of(doc, a.include_optical); ids = []
+        builder, records = records_of(doc, a.include_optical, original_ordinals=original_ordinals); ids = []
         if (doc.get('doi') or '').lower() in on_site:
             print(f'{doc["id"]}: {doc["doi"]} is already on the site as a reviewed paper; skipped'); continue
         if source_collision(inventory, builder.source_id, doc.get('doi')):
@@ -729,10 +792,10 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = ap.add_subparsers(dest='cmd', required=True)
     r = sub.add_parser('records'); r.add_argument('pairs'); r.add_argument('--repo', required=True); r.add_argument('--replace', action='store_true')
-    r.add_argument('--include-optical', action='store_true', help='also write absorption and emission peaks and quantum yield (held back by default)'); r.set_defaults(fn=cmd_records)
+    r.add_argument('--include-optical', action='store_true', help='also write absorption and emission peaks and quantum yield (held back by default)'); r.add_argument('--original-ordinals', type=Path, help='optional exact pair-byte and original ordinal selection metadata'); r.set_defaults(fn=cmd_records)
     s = sub.add_parser('sync'); s.add_argument('pairs'); s.add_argument('--repo', required=True)
     s.add_argument('--dist', help='dist folder of a site build attempt; its material pages decide which routes each material lists')
-    s.add_argument('--include-optical', action='store_true'); s.set_defaults(fn=cmd_sync)
+    s.add_argument('--include-optical', action='store_true'); s.add_argument('--original-ordinals', type=Path, help='optional exact pair-byte and original ordinal selection metadata'); s.set_defaults(fn=cmd_sync)
     a = ap.parse_args(); a.fn(a)
 
 

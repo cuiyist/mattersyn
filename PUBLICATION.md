@@ -1,3 +1,11 @@
+### 2026-10-26 — Source8 publication accepted; Source9 remains prospective
+
+Source8 is Live at Site L8 `d09790d8a9432ef1487d8505c2b48af23f60b49a` from public Source M9, after all 13 normal checks, GUI, Pages run 40335807382 and anonymous verification. Live totals are 2,627 papers / 6,433 records / 4,312 pairs / 1,122 material families; Source8 added 3 / 4 / 7 papers, records and figures once.
+
+Batch144 completed 2 successful two-pass papers / 2 pair files / 3 figures in 2.0094 extraction minutes, check exit 0 and no failed or redo passes. Accepted queue status is 3,174 physical rows, 455 IN: read 2,253 (402 IN), attempted 75 (30 IN), unread 846 (23 IN). Source9’s saved 10 / 18 / 70 private pool has no import or Live credit. Historical omissions, failures and the five waiting owner questions are preserved; no audit, calibration, accuracy or training credit is added.
+
+The separately completed fresh 101-role generated-copy cleanup has independent closed-journal accounting: 11,278 files / 3,027,156,383 logical bytes removed; whole-attempt success remains false. The old failed attempt receives zero credit. M2 report `1c6e01d1ae1f4f776b07d79eadff612986907507` was anonymously byte-verified. Logical counts are separate from nonisolated physical free-space observations; no anticipated gain funds later work.
+
 ## Waiting-batch caption correction — 2026-10-26T10:16:59.623441+00:00
 
 The complete Source8 local build passed all 13 normal phases, but its subsequent visual inspection caught a material-formula typo in two Co3O4 figure-caption paraphrases. Both captions now use neutral sample wording; their four mirrored Reader fields alone changed. All 6,433 scientific record bytes, six audited-only exports, seven crop files and source locators are unchanged. The original successful build, failed visual observation and earlier sandbox-only synthetic-test failures are retained. No Source8 paper is live. Fresh exact-head checks and visual verification remain required before publication. Choice: correct this waiting-batch display defect before other engineering; do not infer a replacement scientific value or phase. Unsupported unit-cell coordinates remain explicitly unresolved.

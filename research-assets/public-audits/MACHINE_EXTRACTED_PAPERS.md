@@ -1,10 +1,10 @@
-## Source8 pending normal release (no Live credit)
+## Source8 Live verified (2026-10-26T14:26:46Z; 3 papers / 4 records / 7 figures)
 
 | DOI | Source ID | Record IDs | Origin | Review status | Live verified | Publication credit | Limited rare read |
 |---|---|---|---|---|---|---|---|
-| 10.1360/02wb0203 | lin2003-02wb0203 | lin2003-02wb0203-nanocrystalline-co3o4-1 | B107 / particles36 | source_extracted | pending | 0 | no |
-| 10.1023/a:1008682014444 | burgard1998-a-1008682014444 | burgard1998-a-1008682014444-sno2-sb-4-mol-1 | B143 / particles36 | source_extracted | pending | 0 | yes; zero confirmed omissions |
-| 10.1023/b:hype.0000043205.63937.22 | singhal2004-b-hype-0000043205-63937-22 | singhal2004-b-hype-0000043205-63937-22-ni0-5zn0-5fe2o4-1, singhal2004-b-hype-0000043205-63937-22-ni0-5zn0-5fe2o4-annealed-at-1000c-2 | B142 / particles36 | source_extracted | pending | 0 | yes; four whole-object omissions |
+| 10.1360/02wb0203 | lin2003-02wb0203 | lin2003-02wb0203-nanocrystalline-co3o4-1 | B107 / particles36 | source_extracted | 2026-10-26T14:26:46Z | 1 | no |
+| 10.1023/a:1008682014444 | burgard1998-a-1008682014444 | burgard1998-a-1008682014444-sno2-sb-4-mol-1 | B143 / particles36 | source_extracted | 2026-10-26T14:26:46Z | 1 | yes; zero confirmed omissions |
+| 10.1023/b:hype.0000043205.63937.22 | singhal2004-b-hype-0000043205-63937-22 | singhal2004-b-hype-0000043205-63937-22-ni0-5zn0-5fe2o4-1, singhal2004-b-hype-0000043205-63937-22-ni0-5zn0-5fe2o4-annealed-at-1000c-2 | B142 / particles36 | source_extracted | 2026-10-26T14:26:46Z | 1 | yes; four whole-object omissions |
 
 ## Huang verified Live — 2026-10-26T07:04:43+00:00
 
@@ -2886,3 +2886,18 @@ Source-extracted contributions only; saved limited-read markers add no independe
 | 10.1557/jmr.2007.0060 | al2007-jmr-2007-0060-ni-15-fe-nanocrystalline-coating-2, al2007-jmr-2007-0060-zr58ni13-6cu18al10-4-amorphous-alloy-1 | B68 | 2026-10-18T21:54:25+00:00 | yes |
 
 Source-extracted contributions only; saved limited-read markers add no independent audit/training credit. Earlier index rows/footer remain unchanged.
+
+## Source9 pending normal release (no Live credit)
+
+| DOI | Source id | Record ids | Batch | Status | Live verified | Credit | Rare-material read |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 10.1021/cs401118x | han2014-cs401118x | han2014-cs401118x-carbon-quantum-dots-cqds-5-nm-1 | particles37 | source_extracted | pending | 0 | no; common material |
+| 10.1021/jp047078c | wuister2004-jp047078c | wuister2004-jp047078c-cdte-qds-in-top-dda-1, wuister2004-jp047078c-cdse-qds-in-top-topo-hda-2 | particles37 | source_extracted | pending | 0 | no; common material |
+| 10.1039/d1na00069a | qu2021-d1na00069a | qu2021-d1na00069a-cise-1-16-1, qu2021-d1na00069a-cise-1-8-2, qu2021-d1na00069a-cise-1-4-3, qu2021-d1na00069a-cise-1-2-4 | particles37 | source_extracted | pending | 0 | no; common material |
+| 10.1021/cm3015594 | deng2012-cm3015594 | deng2012-cm3015594-cis-zns-core-shell-qds-1 | particles37 | source_extracted | pending | 0 | no; common material |
+| 10.1021/acs.iecr.6b02698 | ji2016-acs-iecr-6b02698 | ji2016-acs-iecr-6b02698-cis-zns-core-shell-qds-1 | particles37 | source_extracted | pending | 0 | yes; saved deletion-only read |
+| 10.1021/acsanm.2c04240 | purohit2023-acsanm-2c04240 | purohit2023-acsanm-2c04240-liyf4-16-5-yb3-0-4-tm3-nps-1 | particles37 | source_extracted | pending | 0 | yes; saved deletion-only read |
+| 10.1016/j.supflu.2024.106341 | mamakhel2024-j-supflu-2024-106341 | mamakhel2024-j-supflu-2024-106341-zno-nanoparticles-synthesized-at-300-c-5, mamakhel2024-j-supflu-2024-106341-bi2o3-nanoparticles-synthesized-at-250-c-6, mamakhel2024-j-supflu-2024-106341-cr2o3-nanoparticles-synthesized-at-400-c-7, mamakhel2024-j-supflu-2024-106341-alooh-nanoparticles-synthesized-at-400-c-8 | particles37 | source_extracted | pending | 0 | yes; saved deletion-only read |
+| 10.1021/acs.jpcc.5c05899 | yang2026-acs-jpcc-5c05899 | yang2026-acs-jpcc-5c05899-cis-a-1, yang2026-acs-jpcc-5c05899-cis-b-2 | particles37 | source_extracted | pending | 0 | no; common material |
+| 10.1021/acs.jpcc.8b01053 | huang2018-acs-jpcc-8b01053 | huang2018-acs-jpcc-8b01053-cdte-qds-synthesized-via-pdpa-method-1 | particles37 | source_extracted | pending | 0 | no; common material |
+| 10.1021/acs.jpclett.6c00098 | chen2026-acs-jpclett-6c00098 | chen2026-acs-jpclett-6c00098-r-s-cspbbr3-sio2-pqds-1 | particles37 | source_extracted | pending | 0 | no; common material |
