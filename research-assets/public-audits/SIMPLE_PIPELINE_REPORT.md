@@ -1,3 +1,7 @@
+## Waiting-batch caption correction — 2026-10-26T10:16:59.623441+00:00
+
+The complete Source8 local build passed all 13 normal phases, but its subsequent visual inspection caught a material-formula typo in two Co3O4 figure-caption paraphrases. Both captions now use neutral sample wording; their four mirrored Reader fields alone changed. All 6,433 scientific record bytes, six audited-only exports, seven crop files and source locators are unchanged. The original successful build, failed visual observation and earlier sandbox-only synthetic-test failures are retained. No Source8 paper is live. Fresh exact-head checks and visual verification remain required before publication. Choice: correct this waiting-batch display defect before other engineering; do not infer a replacement scientific value or phase. Unsupported unit-cell coordinates remain explicitly unresolved.
+
 ## Source8 prepared; publication pending — 2026-10-26T09:28:36.562729+00:00
 
 Queue: 3,177 physical entries / 458 effective in scope. Saved-read unpublished: 2,254 (403 in scope); attempted: 75 (30 in scope); unread: 848 (25 in scope). These are administrative counts, not unique-primary, readiness or exhaustion certification. The three papers below remain in the unpublished queue until anonymous Site verification.
