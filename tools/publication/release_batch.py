@@ -22,13 +22,220 @@ Paper text is never read.
 Standard library only; works on Windows, macOS and Linux.
 """
 from __future__ import annotations
-import argparse, datetime as dt, hashlib, json, random, shutil, subprocess, sys, time, urllib.error, urllib.parse, urllib.request
+import argparse, datetime as dt, hashlib, json, os, random, shutil, stat, subprocess, sys, time, urllib.error, urllib.parse, urllib.request
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 from scoped_status import eligible_scoped_status
 
 SITE_CONTROL = {'.git', '.github', '.release-control', 'tools', '.gitattributes'}  # never replaced by the build
 CI_WORKFLOW = 'MatterSyn source and build checks'
+
+
+# Inline proposal only. Dependencies are the parent's os/stat/shutil globals.
+RAW_INPUT_DIRS = ('scripts', 'templates', 'data', 'static', 'tests')
+
+
+def _plain_generated(path, directory):
+    value = path.lstat()
+    kind = stat.S_ISDIR(value.st_mode) if directory else stat.S_ISREG(value.st_mode)
+    if (not kind or getattr(value, 'st_file_attributes', 0) & 1024
+            or (not directory and value.st_nlink != 1)):
+        raise SystemExit(f'generated input is not ordinary/unshared: {path}')
+    return value.st_dev, value.st_ino
+
+
+def _raw_work_scope(work, intended):
+    # Root supplies the intended workspace explicitly; never infer it from work.
+    if intended is None or not intended.is_absolute():
+        raise SystemExit('--retire-generated-raw requires absolute --raw-workspace')
+    workspace = intended.resolve(strict=True)
+    if (workspace != intended or work.resolve(strict=False) != work
+            or work == workspace or not work.is_relative_to(workspace)):
+        raise SystemExit('fresh work must resolve strictly inside the intended workspace')
+    _plain_generated(workspace, True)
+    # Existing ancestors must be ordinary, so mkdir cannot traverse a junction.
+    here = work.parent
+    while here != workspace:
+        _plain_generated(here, True)
+        if here.resolve(strict=True) != here:
+            raise SystemExit('aliased generated-work ancestor')
+        here = here.parent
+    return workspace
+
+
+def _check_generated_tree(root):
+    pending = [root]
+    while pending:
+        here = pending.pop()
+        _plain_generated(here, True)
+        with os.scandir(here) as entries:
+            for entry in entries:
+                path = here / entry.name
+                # Windows DirEntry's cached stat may report st_nlink=0. Obtain
+                # fresh explicit stat; the strict single-link requirement stays.
+                value = os.stat(path, follow_symlinks=False)
+                if getattr(value, 'st_file_attributes', 0) & 1024:
+                    raise SystemExit(f'generated reparse input: {path}')
+                if stat.S_ISDIR(value.st_mode):
+                    pending.append(path)
+                elif not stat.S_ISREG(value.st_mode) or value.st_nlink != 1:
+                    raise SystemExit(f'generated linked/special input: {path}')
+
+
+class _FreshRawCopies:
+    """Current fresh children only, under the release tool's exclusive owner model.
+
+    This cannot adopt old outputs and is not a malicious-writer sandbox.
+    """
+    def __init__(self, work, workspace):
+        self.work, self.workspace = work, _raw_work_scope(work, workspace)
+        self.workspace_identity = _plain_generated(self.workspace, True)
+        self.owner = _plain_generated(work, True)
+        self.states = {}
+        self._same_work()
+
+    def _inside(self, path, exists=True):
+        if (path.resolve(strict=exists) != path or path == self.work
+                or not path.is_relative_to(self.work)
+                or not path.is_relative_to(self.workspace)):
+            raise SystemExit('generated target escaped its fresh work/workspace')
+        return path
+
+    def _same_work(self):
+        if (self.work.resolve(strict=True) != self.work
+                or _plain_generated(self.workspace, True) != self.workspace_identity
+                or _plain_generated(self.work, True) != self.owner):
+            raise SystemExit('fresh generated work/workspace identity changed')
+        _raw_work_scope(self.work, self.workspace)
+
+    def arm(self, phase):
+        self._same_work()
+        if phase not in ('candidate', 'final') or phase in self.states:
+            raise SystemExit('one fresh build per normal phase')
+        target = self._inside(self.work / phase, exists=False)
+        try:
+            target.lstat()
+        except FileNotFoundError:
+            self.states[phase] = 'armed'
+        else:
+            raise SystemExit('build output must be absent before its own child')
+
+    def retire(self, phase):
+        # The only caller is immediately after run(build_release...) returns0.
+        self._same_work()
+        if self.states.get(phase) != 'armed':
+            raise SystemExit('no fresh completed-build lifecycle; never replay')
+        output = self._inside(self.work / phase)
+        project = self._inside(output / 'project')
+        copied = self._inside(project / 'recipe-atlas')
+        frames = [(p, _plain_generated(p, True)) for p in (output, project, copied)]
+        dist = self._inside(copied / 'dist')
+        dist_identity = _plain_generated(dist, True)
+        roots = [self._inside(copied / name) for name in RAW_INPUT_DIRS]
+        identities = [_plain_generated(p, True) for p in roots]
+        for root in roots:
+            _check_generated_tree(root)
+        self.states[phase] = 'retiring'  # partial failure cannot be retried/adopted
+        for root, identity in zip(roots, identities):
+            self._same_work()
+            self._inside(root)
+            if (any(_plain_generated(p, True) != old for p, old in frames)
+                    or _plain_generated(dist, True) != dist_identity
+                    or _plain_generated(root, True) != identity):
+                raise SystemExit('generated output identity changed')
+            shutil.rmtree(root)
+            try:
+                root.lstat()
+            except FileNotFoundError:
+                pass
+            else:
+                raise SystemExit('raw input remains; stop before next allocation')
+        if _plain_generated(dist, True) != dist_identity:
+            raise SystemExit('retained dist identity changed')
+        self.states[phase] = 'retired'
+
+
+# Inline extension of the fresh-owned raw lifecycle. No standalone entry point.
+PHASE_CAPACITY_RESERVE = 100 * 1024 ** 3
+PHASE_CAPACITY_STEPS = {
+    'candidate': ('snapshot', 'build'),
+    'final': ('allowlist', 'build'),
+    'staging': ('worktree', 'copy', 'controls', 'export', 'receipts'),
+    'publication': ('validate', 'copy', 'controls', 'git', 'verify'),
+}
+
+
+def _unique_budget_keys(pairs):
+    result = {}
+    for key, value in pairs:
+        if key in result:
+            raise ValueError('duplicate phase-budget key')
+        result[key] = value
+    return result
+
+
+def _read_phase_budget(path, workspace):
+    # One physically bounded consumed buffer; no hash-then-separate-parse read.
+    with path.open('rb') as source:
+        raw = source.read(16385)
+    if len(raw) > 16384:
+        raise SystemExit('phase-budget JSON exceeds 16KiB')
+    try:
+        data = json.loads(raw.decode('utf-8'), object_pairs_hook=_unique_budget_keys)
+    except (ValueError, UnicodeError) as error:
+        raise SystemExit('invalid phase-budget JSON') from error
+    if (type(data) is not dict or set(data) != {'schema', 'workspace', 'reserve_bytes', 'coverage', 'phases'}
+            or data['schema'] != 'mattersyn-complete-owned-phase-peaks/1'
+            or data['coverage'] != 'all_remaining_phase_and_concurrent_owned_writes'
+            or type(data['reserve_bytes']) is not int
+            or data['reserve_bytes'] != PHASE_CAPACITY_RESERVE
+            or type(data['workspace']) is not str):
+        raise SystemExit('phase-budget schema/coverage/fixed100GiB reserve')
+    intended = Path(data['workspace'])
+    if (not intended.is_absolute() or intended.resolve(strict=True) != intended
+            or intended != workspace):
+        raise SystemExit('phase-budget workspace differs from explicit workspace')
+    phases = data['phases']
+    if type(phases) is not dict or set(phases) != set(PHASE_CAPACITY_STEPS):
+        raise SystemExit('phase-budget requires all four phases')
+    for phase, steps in PHASE_CAPACITY_STEPS.items():
+        values = phases[phase]
+        if (type(values) is not dict or set(values) != set(steps)
+                or any(type(value) is not int or value <= 0 for value in values.values())):
+            raise SystemExit(f'complete positive integer remaining peaks required: {phase}')
+    return phases
+
+
+class _PhaseCapacity:
+    """Caller estimates, never certified savings or anticipated cleanup credit.
+
+    Each step value covers its COMPLETE remaining owned positive peak, including
+    concurrent owned writes, memory/temp/FS/Git/control overhead and margin. The
+    caller must include these; this class only enforces their fresh-free gate.
+    """
+    def __init__(self, budget, work, workspace, source, site):
+        self.work, self.workspace = work, _raw_work_scope(work, workspace)
+        self.workspace_identity = _plain_generated(self.workspace, True)
+        self.repos = [(path, _plain_generated(path, True)) for path in (source, site)]
+        for path, identity in self.repos:
+            _raw_work_scope(path, self.workspace)
+            if identity[0] != self.workspace_identity[0]:
+                raise SystemExit('phase-budget checkout is on another filesystem')
+        self.phases = _read_phase_budget(budget, self.workspace)
+
+    def admit(self, phase, step):
+        _raw_work_scope(self.work, self.workspace)
+        if _plain_generated(self.workspace, True) != self.workspace_identity:
+            raise SystemExit('phase-budget workspace identity changed')
+        for path, identity in self.repos:
+            _raw_work_scope(path, self.workspace)
+            if _plain_generated(path, True) != identity:
+                raise SystemExit('phase-budget checkout identity changed')
+        peak = self.phases[phase][step]
+        free = shutil.disk_usage(self.workspace).free
+        if type(free) is not int or free < 0 or free - peak < PHASE_CAPACITY_RESERVE:
+            raise SystemExit(f'phase capacity HOLD before {phase}/{step}: '
+                             f'free={free}, complete remaining peak={peak}, reserve={PHASE_CAPACITY_RESERVE}')
 
 
 def now():
@@ -544,6 +751,9 @@ def main():
     ap.add_argument('--verify', action='store_true', help='after --push check live, or retry checking a previously pushed release')
     ap.add_argument('--ledger', type=Path, help='private metrics ledger (JSONL) to append live_verified events to')
     ap.add_argument('--sync-gate-tools', action='store_true', help='also copy tools/mattersyn-release into the site')
+    ap.add_argument('--retire-generated-raw', action='store_true', help='fresh dry run only: remove own copied raw inputs after each successful build; retain every dist and check')
+    ap.add_argument('--raw-workspace', type=Path, help='explicit absolute existing workspace containing --work; required with raw retirement or phase budgets')
+    ap.add_argument('--phase-budget', type=Path, help='optional complete positive per-step owned peak JSON; fresh free minus peak must retain fixed100GiB')
     ap.add_argument('--source-repo', default='cuiyist/mattersyn')
     ap.add_argument('--site-url', default='https://cuiyist.github.io/mattersyn-site/')
     ap.add_argument('--skip-ci-check', action='store_true', help='dry runs only: do not require source CI success')
@@ -551,6 +761,10 @@ def main():
     a = ap.parse_args()
     py = sys.executable
     src, site, work = a.source.resolve(), a.site.resolve(), a.work.resolve()
+    if a.raw_workspace is not None and not (a.retire_generated_raw or a.phase_budget):
+        raise SystemExit('--raw-workspace requires raw retirement or phase budgets')
+    raw_workspace = _raw_work_scope(work, a.raw_workspace) if (a.retire_generated_raw or a.phase_budget) else None
+    capacity = _PhaseCapacity(a.phase_budget, work, raw_workspace, src, site) if a.phase_budget else None
     times = {}; t0 = time.monotonic()
     def mark(stage): times[stage] = round(time.monotonic() - t0, 1)
 
@@ -563,7 +777,10 @@ def main():
         raise SystemExit('--skip-ci-check is only for dry runs')
     if a.push and not a.verify:
         raise SystemExit('--push requires --verify so every new paper route is checked after deployment')
+    if a.retire_generated_raw and (a.push or a.verify):
+        raise SystemExit('--retire-generated-raw applies only to a fresh dry run')
     if a.push or a.verify:
+        if capacity: capacity.admit('publication', 'validate')
         plan = validate_prepared(work, src, site, a.release_id, a.reviewer, a.sync_gate_tools,
                                  a.source_repo, a.site_url)
         commit = plan['source_commit']
@@ -581,10 +798,13 @@ def main():
             if not ok:
                 raise SystemExit(f'source CI has not passed for {commit} (runs: {seen}); wait for CI')
             added_papers = plan['new_papers']
+            if capacity: capacity.admit('publication', 'copy')
             stage_dist(final, site)
+            if capacity: capacity.admit('publication', 'controls')
             stage_controls(src, site, work / 'site-allowlist.json', a.sync_gate_tools)
             if tree_digest(site, ('.git',)) != plan['preview_tree_sha256']:
                 raise SystemExit('site staging differs from the reviewed, gated preview')
+            if capacity: capacity.admit('publication', 'git')
             git(site, 'add', '-A')
             body = '\n'.join(f'- {p} ({len(added_papers[p])} records)' for p in sorted(added_papers)) or '- no new source papers'
             run(['git', '-C', site, 'commit', '-q', '-m', f'Publish {len(added_papers)} papers ({a.release_id})', '-m',
@@ -602,6 +822,7 @@ def main():
             if (pushed.get('source_commit') != commit or git(site, 'rev-parse', 'HEAD') != pushed.get('site_commit') or
                     not site_built_from(site, commit)):
                 raise SystemExit('site checkout no longer matches the pushed release')
+        if capacity: capacity.admit('publication', 'verify')
         result = verify_live(a.site_url, final, commit, plan['paper_routes'], plan['material_routes'],
                              changed_paths=sorted(set(plan['files_added'])|set(plan['files_changed'])))
         receipt = work / 'live-verification.json'
@@ -619,6 +840,8 @@ def main():
         print(json.dumps(summary, indent=1))
         return 0 if result['passed'] else 1
 
+    if a.retire_generated_raw and work.exists():
+        raise SystemExit('raw-input lifecycle cannot adopt an existing work directory')
     if work.exists() and any(work.iterdir()):
         raise SystemExit('dry-run --work must be new or empty')
     commit = git(src, 'rev-parse', 'HEAD')
@@ -627,21 +850,30 @@ def main():
         ok, seen = wait_for_ci(a.source_repo, commit, a.wait_ci)
         if not ok:
             raise SystemExit(f'source CI has not passed for {commit} (runs: {seen}); push it and wait for CI')
-    work.mkdir(parents=True, exist_ok=True)
+    if capacity: capacity.admit('candidate', 'snapshot')
+    work.mkdir(parents=True, exist_ok=not a.retire_generated_raw)
+    raw_lifecycle = _FreshRawCopies(work, raw_workspace) if a.retire_generated_raw else None
     mark('checks')
     snap = work / 'snapshot.json'
     run([py, src / 'recipe-atlas/scripts/make_runtime_snapshot.py', '--root', src, '--blueprint', src / 'publication/build-inputs.json', '--output', snap], cwd=src)
     common = ['--snapshot', snap, '--registry', src / 'publication/asset-rights-registry.json',
               '--artifact-transform', src / 'tools/publication/source_link_artifacts.py']
+    if capacity: capacity.admit('candidate', 'build')
+    if raw_lifecycle: raw_lifecycle.arm('candidate')
     run([py, src / 'recipe-atlas/scripts/build_release.py', '--candidate', '--output', work / 'candidate', *common], cwd=src)
+    if raw_lifecycle: raw_lifecycle.retire('candidate')
     cand = work / 'candidate/project/recipe-atlas/dist'
     mark('candidate_build')
+    if capacity: capacity.admit('final', 'allowlist')
     allow = work / 'site-allowlist.json'
     run([py, src / 'tools/publication/prepare_allowlist.py', '--root', cand, '--guard', src / 'tools/mattersyn-release/public_release_guard.py',
          '--policy', src / 'publication/public-release-policy.json', '--registry', src / 'publication/asset-rights-registry.json',
          '--repo', 'mattersyn-site', '--source-commit', commit, '--release-id', a.release_id, '--reviewer', a.reviewer, '--out', allow], cwd=src)
+    if capacity: capacity.admit('final', 'build')
+    if raw_lifecycle: raw_lifecycle.arm('final')
     run([py, src / 'recipe-atlas/scripts/build_release.py', '--output', work / 'final', *common,
          '--gate', src / 'tools/mattersyn-release/gate.py', '--allowlist', allow, '--policy', src / 'publication/public-release-policy.json'], cwd=src)
+    if raw_lifecycle: raw_lifecycle.retire('final')
     final = work / 'final/project/recipe-atlas/dist'
     candidate_hash = tree_digest(cand)
     if candidate_hash != tree_digest(final):
@@ -651,13 +883,17 @@ def main():
     paper_routes = new_paper_routes(final, added_papers)
     material_routes = new_material_routes(final, added_papers)
     preview = work / 'site-preview'
+    if capacity: capacity.admit('staging', 'worktree')
     git(site, 'worktree', 'add', '--detach', str(preview), 'HEAD')
+    if capacity: capacity.admit('staging', 'copy')
     added, changed, removed = stage_dist(final, preview)
+    if capacity: capacity.admit('staging', 'controls')
     stage_controls(src, preview, allow, a.sync_gate_tools)
     rc = preview / '.release-control'
     # The site boundary gate executes from the reviewed preview worktree. Suppress
     # Python bytecode there: an incidental __pycache__ would otherwise enter the
     # preview tree hash but never be staged into the publish checkout.
+    if capacity: capacity.admit('staging', 'export')
     run([py, '-B', preview / 'tools/mattersyn-release/export_release.py', '--source-root', preview,
          '--destination', work / 'site-stage', '--allowlist', rc / 'site-allowlist.json',
          '--registry', rc / 'asset-rights-registry.json', '--policy', rc / 'site-policy.json',
@@ -676,7 +912,9 @@ def main():
             'site_manifest_sha256': sha256(work / 'site-manifest.json'),
             'site_boundary_sha256': sha256(work / 'site-boundary.json'),
             'site_stage_tree_sha256': tree_digest(work / 'site-stage'),
-            'files_added': added, 'files_changed': changed, 'files_removed': removed}
+            'files_added': added, 'files_changed': changed, 'files_removed': removed,
+            'generated_raw_inputs_retired': bool(raw_lifecycle)}
+    if capacity: capacity.admit('staging', 'receipts')
     write_json(work / 'release-plan.json', plan)
     template = {'schema': 'mattersyn-release-browser-review/1', 'source_commit': commit,
                 'site_base_commit': site_base, 'release_id': a.release_id,

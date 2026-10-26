@@ -1,4 +1,14 @@
-Queue: 3,177 physical entries (458 effective IN); saved-read 2,251 (400 IN), attempted 75 (30 IN), unread 851 (28 IN). Huang is Source-only and is not added to Site totals. Physical entries do not certify primary uniqueness, readiness or exhaustion.
+Queue at 2026-10-26T03:09:01.092643+00:00: 3,178 physical entries (459 effective IN); saved-read 2,254 (403 IN), attempted 75 (30 IN), unread 849 (26 IN). Source has 6,429 records; verified Live remains 2,623 papers / 6,428 records / 4,307 pairs / 1,122 families. Counts are administrative, not unique-primary, readiness or exhaustion certification.
+
+## Source7 release-workspace controls and queue snapshot
+
+Source7 is a code/documentation update based on public Source M7. The normal release tool now has optional generated raw-source retirement and a phase-budget interface; all nine normal commands, release gates and four dist copies remain unchanged. The 67 focused tests passed; earlier sandbox temporary-directory, MSYS and hardlink failures remain retained. At this Source preparation snapshot, all13 checks, same-head GUI review and exact CI remain required before merging; the focused tests do not replace them. No numeric Site phase budget is adopted, and the full 40-GiB Site release remains parked. Every write still needs fresh complete-all-unfinished funding above the fixed 100-GiB reserve; prospective cleanup gains provide no funding.
+
+The [safe cleanup report](https://github.com/cuiyist/mattersyn2/blob/a3105f36f7828cdac1996b13e136621304d3aac3/CLEANUP_REPORT_2026-10-12.md) records the failed crop-copy attempt with zero verified removal credit. Its genuine external exit was -1, RESULT was absent, complete stdout was unavailable and all 101 role closures remain unknown/unclosed. The protected-server timestamp-representation guard was not waived; no physical-absence or unchanged-filesystem claim follows. All original failures, journals, protections and Source14 refused scopes/parents remain preserved. Earlier successful cleanups receive no new credit.
+
+Source records and assets are unchanged: Source has 6,429 records, including Huang pending Site publication. Verified Site 0cedb7a8e9bb945d6522657c4e4d79695faf1acd remains 2,623 papers / 6,428 records / 4,307 pairs / 1,122 material families. This update adds no paper, scientific audit, permission or Site publication credit. The paused audited lane, Worker A/B holds and five owner questions remain unchanged.
+
+Accepted queue at 2026-10-26T03:09:01.092643+00:00: 3,178 physical entries (459 IN): saved-read 2,254 (403 IN), attempted 75 (30 IN), unread 849 (26 IN). The same existing B142 physical row moved from unread to read after two successful passes, 1.1073 extraction minutes, zero failed passes/redos, check exit0, one saved pair and three figures. Its old queue label and official processing DOI remain separate; no row was appended, no DOI equivalence asserted and no scientific-admission or publication credit added. These administrative counts do not certify unique primary papers, readiness or exhaustion. Earlier dated history is retained below.
 
 ## Source5 verified Source merge; current queue and storage
 
