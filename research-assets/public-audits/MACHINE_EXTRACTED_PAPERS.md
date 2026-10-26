@@ -1,8 +1,16 @@
-## Source5 Huang staged, publication pending
+## Source8 pending normal release (no Live credit)
 
 | DOI | Source ID | Record IDs | Origin | Review status | Live verified | Publication credit | Limited rare read |
 |---|---|---|---|---|---|---|---|
-| 10.1021/acs.jpclett.9b02386 | huang2019-acs-jpclett-9b02386 | huang2019-acs-jpclett-9b02386-cu-assisted-inp-zns-core-shell-qds-1 | B116 / Source5 | source_extracted | pending | 0 | no |
+| 10.1360/02wb0203 | lin2003-02wb0203 | lin2003-02wb0203-nanocrystalline-co3o4-1 | B107 / particles36 | source_extracted | pending | 0 | no |
+| 10.1023/a:1008682014444 | burgard1998-a-1008682014444 | burgard1998-a-1008682014444-sno2-sb-4-mol-1 | B143 / particles36 | source_extracted | pending | 0 | yes; zero confirmed omissions |
+| 10.1023/b:hype.0000043205.63937.22 | singhal2004-b-hype-0000043205-63937-22 | singhal2004-b-hype-0000043205-63937-22-ni0-5zn0-5fe2o4-1, singhal2004-b-hype-0000043205-63937-22-ni0-5zn0-5fe2o4-annealed-at-1000c-2 | B142 / particles36 | source_extracted | pending | 0 | yes; four whole-object omissions |
+
+## Huang verified Live — 2026-10-26T07:04:43+00:00
+
+| DOI | Source ID | Record IDs | Origin | Review status | Live verified | Publication credit | Limited rare read |
+|---|---|---|---|---|---|---|---|
+| 10.1021/acs.jpclett.9b02386 | huang2019-acs-jpclett-9b02386 | huang2019-acs-jpclett-9b02386-cu-assisted-inp-zns-core-shell-qds-1 | B116 / Source5; Site ac17f6bb | source_extracted | 2026-10-26T07:04:43+00:00 | 1 | no |
 
 ## Source4 Kalita verified website publication
 

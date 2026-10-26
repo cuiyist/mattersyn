@@ -1,0 +1,327 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "lin2003-02wb0203-nanocrystalline-co3o4-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "CAO Lin (2003): nanocrystalline Co3O4",
+  "material": {
+    "formula": "Co3O4",
+    "family": "Co3O4 nanocrystals",
+    "elements": [
+      "Co",
+      "O"
+    ],
+    "components": [
+      "Co3O4"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Synthesis as described in the source",
+  "sources": [
+    {
+      "id": "lin2003-02wb0203",
+      "doi": "10.1360/02wb0203",
+      "title": "Preparation of nanocrystalline Co3O4 and its properties as supercapacitors",
+      "authors": "Lin CAO; Yingke ZHOU; Mei LU; Hulin LI",
+      "year": 2003,
+      "url": "https://doi.org/10.1360/02wb0203",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "lin2003-02wb0203",
+    "recipe_family": "lin2003-02wb0203-nanocrystalline-co3o4-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "nanoparticle",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "lin2003-02wb0203",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "lin2003-02wb0203-nanocrystalline-co3o4-1--naoh",
+      "name": "NaOH",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "concentration": {
+          "value": 0.1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mol/L",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0.1 mol/L",
+          "evidence": [
+            {
+              "source_id": "lin2003-02wb0203",
+              "locator": "Main PDF p.1"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "lin2003-02wb0203",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "lin2003-02wb0203-nanocrystalline-co3o4-1--after-s01-titrate",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "lin2003-02wb0203-nanocrystalline-co3o4-1--naoh"
+      ]
+    },
+    {
+      "id": "lin2003-02wb0203-nanocrystalline-co3o4-1--after-s02-heat",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "lin2003-02wb0203-nanocrystalline-co3o4-1--after-s01-titrate"
+      ]
+    },
+    {
+      "id": "lin2003-02wb0203-nanocrystalline-co3o4-1--after-s03-filter",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "lin2003-02wb0203-nanocrystalline-co3o4-1--after-s02-heat"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-titrate",
+      "action": "titrate",
+      "label": "Add NaOH solution to the aqueous solution under magnetic stirring",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "lin2003-02wb0203-nanocrystalline-co3o4-1--naoh"
+      ],
+      "outputs": [
+        "lin2003-02wb0203-nanocrystalline-co3o4-1--after-s01-titrate"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Add NaOH solution to the aqueous solution under magnetic stirring",
+      "evidence": [
+        {
+          "source_id": "lin2003-02wb0203",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "s02-heat",
+      "action": "heat",
+      "label": "Heat the gel solution until floccules precipitated",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-titrate"
+      ],
+      "inputs": [
+        "lin2003-02wb0203-nanocrystalline-co3o4-1--after-s01-titrate"
+      ],
+      "outputs": [
+        "lin2003-02wb0203-nanocrystalline-co3o4-1--after-s02-heat"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Heat the gel solution until floccules precipitated",
+      "evidence": [
+        {
+          "source_id": "lin2003-02wb0203",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "s03-filter",
+      "action": "filter",
+      "label": "Filter the floccules using centrifugal filtration",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-heat"
+      ],
+      "inputs": [
+        "lin2003-02wb0203-nanocrystalline-co3o4-1--after-s02-heat"
+      ],
+      "outputs": [
+        "lin2003-02wb0203-nanocrystalline-co3o4-1--after-s03-filter"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Filter the floccules using centrifugal filtration",
+      "evidence": [
+        {
+          "source_id": "lin2003-02wb0203",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "lin2003-02wb0203-nanocrystalline-co3o4-1--product",
+      "source_sample_label": "nanocrystalline Co3O4",
+      "batch_id": null,
+      "material_state_id": "lin2003-02wb0203-nanocrystalline-co3o4-1--after-s03-filter",
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": "nanoparticle",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "lin2003-02wb0203",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "lin2003-02wb0203",
+          "locator": "Main PDF"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
