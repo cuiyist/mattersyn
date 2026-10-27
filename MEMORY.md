@@ -1,3 +1,29 @@
+2026-10-27 import choice: use the independently reviewed serial-import estimate of 24 GiB (12 GiB own writes plus 12 GiB other activity). It covers the unchanged normal-five import only; original 32 GiB code, separate full-build budgets, the 100 GiB reserve and every release check remain. No large jobs overlap.
+
+Current 2026-10-27: Ge verified live; next 12 papers / 14 records / 69 figures await funded normal import. Thirteen completed generated-copy scopes account for 58,017,167,258 logical bytes once; reserve and all checks remain. Safe cleanup report: https://github.com/cuiyist/mattersyn2/blob/001af6b24c5ccd790fae0083faaae49f8631781b/CLEANUP_REPORT_2026-10-12.md
+
+Paper index: [MACHINE_EXTRACTED_PAPERS.md](research-assets/public-audits/MACHINE_EXTRACTED_PAPERS.md).
+
+Queue at 2026-10-27T09:33:48.016562+00:00: **3,163 physical entries; 444 IN, 802 OUT, 1,917 uncertain**. Saved-read unpublished: 2,250 (399 IN); attempted: 75 (30 IN); unread: 838 (15 IN). These are physical rows, not a certified count of unique primary papers or release readiness. Metadata-only local scope proposals have not changed this queue.
+
+## Ge verified Live; next twelve-paper release prepared
+
+Ge is verified Live at [Site b907996d](https://github.com/cuiyist/mattersyn-site/commit/b907996d618536b3da4c605748aa7527c6cf3e2a), from [Source PR104](https://github.com/cuiyist/mattersyn/pull/104), ordinary merge 09e4852bf04fff779ff984b229008387533886ae. All normal checks, desktop/phone figure-caption and reference-cell inspection, [Pages40470740670](https://github.com/cuiyist/mattersyn-site/actions/runs/40470740670), and anonymous verification passed: 82 files checked, zero mismatches. Totals: **2,638 papers / 6,455 records / 4,334 recipe-structure pairs / 1,125 material families**. Its one paper, four records and six captioned figures count once. Built-site logical size: 4,733,401,579 bytes. No audit, calibration, accuracy or training credit is added.
+
+Source11 / particles39 is prepared privately: 12 papers, 14 eligible original-ordinal records and 69 captioned crops; no Live credit yet. Saved two-pass outputs and earlier limited rare-material reads are reused. Three new whole-object omissions were adopted: one optical object in Farid and one reaction-time object plus one conflated step in Vlasovets. Pati's earlier two whole-object omissions remain. No replacement scientific values were written. Common materials received no extra audit. The current selection retains Titania ordinal 2 and Yang ordinal 2; omitted variants are not renumbered. The film variant of the Titania paper stays excluded by the particle scope. The unresolved jp500471s caption remains held. Song continues the historical whole-paper Q24 omission.
+
+Automatic approval rejected private-payload/source-evidence commands needed for Sathyan (10.1021/acs.jpcc.5c06964) and Jordan (10.1021/acs.jpcc.4c07446). Both papers are omitted from this job; their original failure and subsequent command history remain retained. Those exclusions are not scientific findings or successful reads.
+
+Bounded script fixes in this batch: recognize complete SICI DOI syntax; coalesce contiguous image strips and select figure geometry beside merged captions while retaining all crop-size, coverage and caption checks; improve only the caption paraphrasing SYSTEM wording. The frozen extraction prompt/schema and quote-found, number-in-quote and both-passes-agree rules are unchanged. Original caption failures remain retained. Choice: reuse completed valid saved outputs and omit refused or unresolved items; keep all release gates.
+
+Storage: the three completed Ge build copies independently account for 189,735 removed files / 14,131,056,366 logical bytes, with no unknown or held member outcomes. The completed preview independently accounts for another 63,245 / 4,710,352,122 logical bytes. All twelve scopes in this once-counted cleanup series total 685,229 files / 53,306,815,136 logical bytes; earlier 42 holds remain preserved. These logical totals do not measure isolated physical gain or assert folder absence. The latest actual C free observation is 143644520448 bytes. The [safe report saved on GitHub](https://github.com/cuiyist/mattersyn2/blob/3fd4d03279aded4d2ad7d51a10b844abbb766e64/CLEANUP_REPORT_2026-10-12.md) includes both the three-build and preview appendices, anonymously byte-verified. PDFs, page text, passes, quoted pairs, training files, active model/server and working checkouts remain protected. Every large operation must retain at least 107,374,182,400 actual free bytes after all unfinished positive allocations.
+
+Local metadata refill obtained 50 official DOI responses, with no mismatch; 50 titles and 11 available abstracts stayed local. An initial scope run had nine technical validation failures. A schema-only retry for those 45 members completed; its metadata-only proposal counts await independent closure and do not authorize full-paper processing or publication. All original failures are preserved.
+
+The audited lane, Worker A/B and five waiting owner questions remain paused and unchanged. Next: unchanged normal import, all 13 local Source checks, Source visual review, exact CI and ordinary merge, complete Site build, desktop/phone visual review, Pages and anonymous verification. No new batch is counted before verification.
+
+Earlier dated history follows unchanged.
+
 Paper index: [MACHINE_EXTRACTED_PAPERS.md](research-assets/public-audits/MACHINE_EXTRACTED_PAPERS.md).
 ### 2026-10-26 — Source9 verified Live; current physical queue reconciled
 
