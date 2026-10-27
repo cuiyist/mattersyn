@@ -1,3 +1,22 @@
+## Current milestone 2026-10-27T09:33:48.016562+00:00
+
+Ge is verified Live once at Site b907996d (one paper/four records/six figures). Source11 rows below are pending, not Live credit. Earlier pending Ge text below is historical and superseded. Sathyan and Jordan remain excluded after automatic review refusals.
+
+| DOI | Source ID | Record IDs | Origin | Review status | Live verified | Publication credit | Limited rare read |
+|---|---|---|---|---|---|---|---|
+| 10.1557/jmr.2002.0103 | li2002-jmr-2002-0103 | li2002-jmr-2002-0103-nanocrystalline-ktiopo4-1 | Source11 / particles39 | source_extracted | pending | 0 | no; common material |
+| 10.1002/1521-3862(200010)6:5<239::aid-cvde239>3.0.co;2-q | seifried2000-1521-3862-200010-6-5-239-aid-c | seifried2000-1521-3862-200010-6-5-239-aid-c-nanocrystalline-titania-particles-2 | Source11 / particles39 | source_extracted | pending | 0 | no; common material |
+| 10.1023/a:1023013913102 | pati2002-a-1023013913102 | pati2002-a-1023013913102-caal2o4-1, pati2002-a-1023013913102-ca3al2o6-2 | Source11 / particles39 | source_extracted | pending | 0 | yes; prior two omissions |
+| 10.1023/a:1010068903324 | schmidt1999-a-1010068903324 | schmidt1999-a-1010068903324-palladium-nanoparticles-1 | Source11 / particles39 | source_extracted | pending | 0 | no; common material |
+| 10.1002/1521-396x(200202)189:3<691::aid-pssa691>3.0.co;2-3 | gajbhiye2002-1521-396x-200202-189-3-691-aid | gajbhiye2002-1521-396x-200202-189-3-691-aid-ni3n-1 | Source11 / particles39 | source_extracted | pending | 0 | yes; zero confirmed omissions |
+| 10.1021/acs.analchem.1c02441 | yang2021-acs-analchem-1c02441 | yang2021-acs-analchem-1c02441-gqd-2-2 | Source11 / particles39 | source_extracted | pending | 0 | yes; prior read reused |
+| 10.1021/acsanm.5c02386 | farid2025-acsanm-5c02386 | farid2025-acsanm-5c02386-acgs-zns-qds-ag-cu-1-2-3-8-mmol-zns-105-1 | Source11 / particles39 | source_extracted | pending | 0 | yes; one object omitted |
+| 10.1021/acsanm.5c00658 | vlasovets2025-acsanm-5c00658 | vlasovets2025-acsanm-5c00658-cfs-coreshell-qds-1 | Source11 / particles39 | source_extracted | pending | 0 | yes; two objects omitted |
+| 10.1021/acsami.4c16554 | ye2025-acsami-4c16554 | ye2025-acsami-4c16554-mes-0-1, ye2025-acsami-4c16554-mes-3-2 | Source11 / particles39 | source_extracted | pending | 0 | no; common material |
+| 10.1021/acsanm.5c03233 | patel2025-acsanm-5c03233 | patel2025-acsanm-5c03233-phen-cs3cu2cl5-pqds-1 | Source11 / particles39 | source_extracted | pending | 0 | yes; prior read reused |
+| 10.1021/acsomega.5c01222 | subedi2025-acsomega-5c01222 | subedi2025-acsomega-5c01222-bi2se3-qds-1 | Source11 / particles39 | source_extracted | pending | 0 | no; common material |
+| 10.1021/acs.jpcc.9b11656 | sabah2020-acs-jpcc-9b11656 | sabah2020-acs-jpcc-9b11656-cdse-cds-zns-coremulti-shell-quantum-dot-1 | Source11 / particles39 | source_extracted | pending | 0 | no; common material |
+
 Source10 effective local status (2026-10-27T05:41:48.634219+00:00): **Ge-only, Lu1paper/4records/6figures, pending normal checks and publication; Live credit0. Song10.1021/acsanm.4c02691 is OWNER-LEFT-OUT as a whole paper, continuing Q24 October22. This explicitly supersedes its historical pending row below; do not select it again without a new explicit owner instruction.** Original pending table bytes and all prior evidence are retained.
 
 ## Source8 Live verified (2026-10-26T14:26:46Z; 3 papers / 4 records / 7 figures)
@@ -2909,4 +2928,4 @@ Source-extracted contributions only; saved limited-read markers add no independe
 | DOI | Source id | Record ids | Batch | Status | Live verified | Credit | Rare-material read |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 10.1021/acsanm.4c02691 | song2024-acsanm-4c02691 | song2024-acsanm-4c02691-cba-cspbcl3pqds-1 | particles38 | source_extracted | pending | 0 | yes; saved deletion-only read |
-| 10.1021/acs.langmuir.0c02477 | lu2020-acs-langmuir-0c02477 | lu2020-acs-langmuir-0c02477-pvp-geqds-1, lu2020-acs-langmuir-0c02477-ppa-geqds-2, lu2020-acs-langmuir-0c02477-ani-geqds-3, lu2020-acs-langmuir-0c02477-bna-geqds-4 | particles38 | source_extracted | pending | 0 | no; common material |
+| 10.1021/acs.langmuir.0c02477 | lu2020-acs-langmuir-0c02477 | lu2020-acs-langmuir-0c02477-pvp-geqds-1, lu2020-acs-langmuir-0c02477-ppa-geqds-2, lu2020-acs-langmuir-0c02477-ani-geqds-3, lu2020-acs-langmuir-0c02477-bna-geqds-4 | particles38 | source_extracted | 2026-10-27T08:13:59Z | 1 | no; common material |

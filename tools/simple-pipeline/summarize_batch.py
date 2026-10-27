@@ -25,7 +25,9 @@ FIELDS = ('composition', 'precursor_with_amount', 'reaction_temperature', 'react
 def normalized_doi(value):
     value = re.sub(r'^https?://(?:dx\.)?doi\.org/', '', str(value or '').strip(), flags=re.I)
     value = re.sub(r'^doi:\s*', '', value, flags=re.I)
-    return value.casefold() if re.fullmatch(r'10\.\d{4,9}/[^\s"<>]+', value) else ''
+    pattern = (r'10\.\d{4,9}/[^\s"<>]+'
+               r'(?:<[^<>\s",;]+::(?i:AID)-[^<>\s",;]+>\d+\.\d+\.(?i:CO);2-[A-Za-z0-9])?')
+    return value.casefold() if re.fullmatch(pattern, value) else ''
 
 
 def finite_number(value):

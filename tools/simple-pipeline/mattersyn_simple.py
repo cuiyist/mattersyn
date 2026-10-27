@@ -113,7 +113,9 @@ def same_text(a, b):
 
 
 # ---------- reading papers ----------
-DOI = re.compile(r'10\.\d{4,9}/[^\s"<>,;]+')
+DOI = re.compile(
+    r'10\.\d{4,9}/[^\s"<>,;]+'
+    r'(?:<[^<>\s",;]+::(?i:AID)-[^<>\s",;]+>\d+\.\d+\.(?i:CO);2-[A-Za-z0-9])?')
 
 
 def tidy_doi(text):
@@ -254,10 +256,14 @@ def figure_text_blocks(page):
     """Keep block geometry, restoring a detached top-left figure label to reading order."""
     blocks = [b for b in page.get_text('blocks') if b[6] == 0 and b[4].strip()]
     reordered = {}
+    physical = []
     label_only = re.compile(r'(Figure|Fig\.?|Scheme|Chart)\s*(S?\d+)\s*[.:|]?', re.I)
     for block in page.get_text('dict')['blocks']:
         if block.get('type') != 0: continue
         bbox = block['bbox']
+        text = '\n'.join(''.join(span.get('text', '') for span in line.get('spans', []))
+                         for line in block.get('lines', [])).strip()
+        if text: physical.append((*bbox, text, block.get('number', 0), 0))
         candidates = []
         for line in block.get('lines', []):
             text = ''.join(span.get('text', '') for span in line.get('spans', [])).strip()
@@ -268,8 +274,17 @@ def figure_text_blocks(page):
                 candidates.append(text)
         if len(candidates) == 1:
             reordered[tuple(round(v, 3) for v in bbox)] = candidates[0]
-    result = []
+    # Some PDF text APIs merge separately bounded adjacent figure captions.
+    separated = []
     for block in blocks:
+        parts = [p for p in physical if p[0] >= block[0] - 1 and p[1] >= block[1] - 1
+                 and p[2] <= block[2] + 1 and p[3] <= block[3] + 1]
+        if sum(bool(CAPTION.match(p[4]) or CAPTION_PLAIN.match(p[4])) for p in parts) > 1:
+            separated.extend(parts)
+        else:
+            separated.append(block)
+    result = []
+    for block in separated:
         label = reordered.get(tuple(round(v, 3) for v in block[:4]))
         lines = block[4].splitlines()
         matches = [i for i, line in enumerate(lines) if label and line.strip() == label]
@@ -282,6 +297,32 @@ def figure_text_blocks(page):
     return result
 
 
+
+def coalesce_image_strips(rectangles):
+    """Join only aligned, contiguous thin raster strips before size filtering."""
+    strips = [r for r in rectangles if r.width > 3 and 0 < r.height <= 3]
+    result = [r for r in rectangles if not (r.width > 3 and 0 < r.height <= 3)]
+    run = None
+    for r in sorted(strips, key=lambda g: (round(g.x0, 2), round(g.x1, 2), g.y0)):
+        if (run is not None and abs(run.x0 - r.x0) < 0.02 and abs(run.x1 - r.x1) < 0.02
+                and abs(r.y0 - run.y1) < 0.02):
+            run |= r
+        else:
+            if run is not None: result.append(run)
+            run = type(r)(r)
+    if run is not None: result.append(run)
+    return result
+
+
+def left_caption_image(cap, images, page_width):
+    """A unique adjacent raster image may sit left of a side caption."""
+    matches = [g for g in images if g.width >= 60 and g.height >= 60
+               and g.x0 >= max(0, cap.x0 - page_width * 0.55)
+               and 0 <= cap.x0 - g.x1 <= 18
+               and min(g.y1, cap.y1) - max(g.y0, cap.y0) > 0.5 * min(g.height, cap.height)]
+    return matches[0] if len(matches) == 1 else None
+
+
 def find_figures(pdf_path):
     """Yield (page number, label, caption, clip rectangle) for each figure whose caption and graphics are found."""
     try:
@@ -292,7 +333,9 @@ def find_figures(pdf_path):
         for page in doc:
             W, H = page.rect.width, page.rect.height
             blocks = figure_text_blocks(page)
-            graphics = [fitz.Rect(i['bbox']) for i in page.get_image_info()] + [fitz.Rect(d['rect']) for d in page.get_drawings()]
+            images = coalesce_image_strips([fitz.Rect(i['bbox']) for i in page.get_image_info()])
+            images = [g for g in images if g.width > 3 and g.height > 3 and g.get_area() < 0.9 * W * H]
+            graphics = images + [fitz.Rect(d['rect']) for d in page.get_drawings()]
             graphics = [g for g in graphics if g.width > 3 and g.height > 3 and g.get_area() < 0.9 * W * H]
             body = [fitz.Rect(b[:4]) for b in blocks if len(b[4].split()) >= 15 and not CAPTION.match(b[4])]
             captions = [fitz.Rect(b[:4]) for b in blocks if CAPTION.match(b[4])]
@@ -306,7 +349,10 @@ def find_figures(pdf_path):
                 in_col = [r for r in body + [c for c in captions if c != cap] if min(r.x1, x1) - max(r.x0, x0) > 0.5 * r.width]
                 top = max([r.y1 for r in in_col if r.y1 <= cap.y0 + 1], default=0)
                 bottom = min([r.y0 for r in in_col if r.y0 >= cap.y1 - 1], default=H)
-                for region in (fitz.Rect(x0, top, x1, cap.y0), fitz.Rect(x0, cap.y1, x1, bottom)):  # figure above, else below
+                regions = [fitz.Rect(x0, top, x1, cap.y0), fitz.Rect(x0, cap.y1, x1, bottom)]
+                side = left_caption_image(cap, images, W)
+                if side is not None: regions.insert(0, fitz.Rect(side.x0, side.y0, cap.x0, side.y1))
+                for region in regions:  # uniquely adjacent on the left, otherwise above or below
                     inside = [g & region for g in graphics if (g & region).get_area() > 0.5 * g.get_area()]
                     if not inside: continue
                     clip = inside[0]
