@@ -129,17 +129,64 @@ def germanium_reviewed_regression_checks(hub, byid):
                  if byid.get(rid, {}).get("quality", {}).get("review_status") == "source_extracted"}
     component_architectures = {"core_shell", "heterostructure", "composite", "alloy", "phase_mixture", "unresolved"}
 
+    def source_evidence(rows, source_id):
+        # This sufficient proof needs a physical page, not the producer's unlocated fallback.
+        return (isinstance(rows, list) and bool(rows) and all(
+            isinstance(row, dict) and row.get("source_id") == source_id
+            and isinstance(locator := row.get("locator"), str)
+            and locator.startswith("Main PDF p.")
+            and (page := locator[len("Main PDF p."):]).isascii()
+            and page.isdigit() and int(page) > 0
+            for row in rows))
+
+    def source_bound_dialysis(record, product):
+        """A positive isolation proof; never infer a missing method or change record data."""
+        source_id = record.get("lineage", {}).get("source_group")
+        if not (isinstance(source_id, str) and source_id
+                and sum(isinstance(row, dict) and row.get("id") == source_id
+                        for row in record.get("sources", [])) == 1
+                and "geqds" in str(product.get("source_sample_label", "")).casefold().replace("-", " ").split()
+                and product.get("recipe_link") == "explicit"
+                and source_evidence(product.get("link_evidence"), source_id)
+                and source_evidence(product.get("composition", {}).get("evidence"), source_id)):
+            return False
+        state_id = product.get("material_state_id")
+        states = [state for state in record.get("material_states", [])
+                  if isinstance(state, dict) and state.get("id") == state_id]
+        if not (isinstance(state_id, str) and state_id and len(states) == 1
+                and states[0].get("kind") == "product"):
+            return False
+        for operation in record.get("operations", []):
+            duration = operation.get("parameters", {}).get("duration", {})
+            value = duration.get("value")
+            if (operation.get("action") == "dialyze"
+                    and operation.get("stage") in {"synthesis", "workup"}
+                    and isinstance(operation.get("outputs"), list)
+                    and operation["outputs"].count(state_id) == 1
+                    and source_evidence(operation.get("evidence"), source_id)
+                    and duration.get("status") == "reported"
+                    and type(value) in (int, float) and 0 < value < float("inf")
+                    and str(duration.get("unit", "")).strip().casefold()
+                        in {"s", "sec", "second", "seconds", "min", "minute", "minutes",
+                            "h", "hr", "hour", "hours", "d", "day", "days"}
+                    and source_evidence(duration.get("evidence"), source_id)):
+                return True
+        return False
+
     def direct_particle(record):
         material, products = record.get("material", {}), record.get("products", [])
         return (material.get("formula") == "Ge" and material.get("components") == ["Ge"]
                 and material.get("elements") == ["Ge"] and material.get("architecture") == "single_material"
-                and str(record.get("method", "")).strip().casefold() in {"heat-up", "hot-injection", "colloidal synthesis", "microwave", "metathesis"}
-                and bool(products) and all(
+                and bool(products)
+                and (str(record.get("method", "")).strip().casefold() in {"heat-up", "hot-injection", "colloidal synthesis", "microwave", "metathesis"}
+                     or str(record.get("method", "")).strip().casefold() == "synthesis as described in the source"
+                     and all(source_bound_dialysis(record, product) for product in products))
+                and all(
                     product.get("composition", {}).get("value") == "Ge"
                     and product.get("composition", {}).get("status") == "reported"
                     and ("nanocrystal" in (label := str(product.get("source_sample_label", "")).casefold())
                          or "nanoparticle" in label or "quantum dot" in label
-                         or bool(set(label.replace("-", " ").split()) & {"cqd", "cqds", "qd", "qds", "nc", "ncs"}))
+                         or bool(set(label.replace("-", " ").split()) & {"cqd", "cqds", "qd", "qds", "nc", "ncs", "geqds"}))
                     and not any(word in label for word in ("embedded", "matrix", "substrate", "supported", "film", "device", "implant", "well"))
                     for product in products))
 

@@ -1,3 +1,5 @@
+Source10 effective local status (2026-10-27T05:41:48.634219+00:00): **Ge-only, Lu1paper/4records/6figures, pending normal checks and publication; Live credit0. Song10.1021/acsanm.4c02691 is OWNER-LEFT-OUT as a whole paper, continuing Q24 October22. This explicitly supersedes its historical pending row below; do not select it again without a new explicit owner instruction.** Original pending table bytes and all prior evidence are retained.
+
 ## Source8 Live verified (2026-10-26T14:26:46Z; 3 papers / 4 records / 7 figures)
 
 | DOI | Source ID | Record IDs | Origin | Review status | Live verified | Publication credit | Limited rare read |
@@ -2887,17 +2889,24 @@ Source-extracted contributions only; saved limited-read markers add no independe
 
 Source-extracted contributions only; saved limited-read markers add no independent audit/training credit. Earlier index rows/footer remain unchanged.
 
-## Source9 pending normal release (no Live credit)
+## Source9 Live verified (2026-10-26T22:49:33Z; 10 papers / 18 records / 70 figures)
 
 | DOI | Source id | Record ids | Batch | Status | Live verified | Credit | Rare-material read |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| 10.1021/cs401118x | han2014-cs401118x | han2014-cs401118x-carbon-quantum-dots-cqds-5-nm-1 | particles37 | source_extracted | pending | 0 | no; common material |
-| 10.1021/jp047078c | wuister2004-jp047078c | wuister2004-jp047078c-cdte-qds-in-top-dda-1, wuister2004-jp047078c-cdse-qds-in-top-topo-hda-2 | particles37 | source_extracted | pending | 0 | no; common material |
-| 10.1039/d1na00069a | qu2021-d1na00069a | qu2021-d1na00069a-cise-1-16-1, qu2021-d1na00069a-cise-1-8-2, qu2021-d1na00069a-cise-1-4-3, qu2021-d1na00069a-cise-1-2-4 | particles37 | source_extracted | pending | 0 | no; common material |
-| 10.1021/cm3015594 | deng2012-cm3015594 | deng2012-cm3015594-cis-zns-core-shell-qds-1 | particles37 | source_extracted | pending | 0 | no; common material |
-| 10.1021/acs.iecr.6b02698 | ji2016-acs-iecr-6b02698 | ji2016-acs-iecr-6b02698-cis-zns-core-shell-qds-1 | particles37 | source_extracted | pending | 0 | yes; saved deletion-only read |
-| 10.1021/acsanm.2c04240 | purohit2023-acsanm-2c04240 | purohit2023-acsanm-2c04240-liyf4-16-5-yb3-0-4-tm3-nps-1 | particles37 | source_extracted | pending | 0 | yes; saved deletion-only read |
-| 10.1016/j.supflu.2024.106341 | mamakhel2024-j-supflu-2024-106341 | mamakhel2024-j-supflu-2024-106341-zno-nanoparticles-synthesized-at-300-c-5, mamakhel2024-j-supflu-2024-106341-bi2o3-nanoparticles-synthesized-at-250-c-6, mamakhel2024-j-supflu-2024-106341-cr2o3-nanoparticles-synthesized-at-400-c-7, mamakhel2024-j-supflu-2024-106341-alooh-nanoparticles-synthesized-at-400-c-8 | particles37 | source_extracted | pending | 0 | yes; saved deletion-only read |
-| 10.1021/acs.jpcc.5c05899 | yang2026-acs-jpcc-5c05899 | yang2026-acs-jpcc-5c05899-cis-a-1, yang2026-acs-jpcc-5c05899-cis-b-2 | particles37 | source_extracted | pending | 0 | no; common material |
-| 10.1021/acs.jpcc.8b01053 | huang2018-acs-jpcc-8b01053 | huang2018-acs-jpcc-8b01053-cdte-qds-synthesized-via-pdpa-method-1 | particles37 | source_extracted | pending | 0 | no; common material |
-| 10.1021/acs.jpclett.6c00098 | chen2026-acs-jpclett-6c00098 | chen2026-acs-jpclett-6c00098-r-s-cspbbr3-sio2-pqds-1 | particles37 | source_extracted | pending | 0 | no; common material |
+| 10.1021/cs401118x | han2014-cs401118x | han2014-cs401118x-carbon-quantum-dots-cqds-5-nm-1 | particles37 | source_extracted | 2026-10-26T22:49:33Z | 1 | no; common material |
+| 10.1021/jp047078c | wuister2004-jp047078c | wuister2004-jp047078c-cdte-qds-in-top-dda-1, wuister2004-jp047078c-cdse-qds-in-top-topo-hda-2 | particles37 | source_extracted | 2026-10-26T22:49:33Z | 1 | no; common material |
+| 10.1039/d1na00069a | qu2021-d1na00069a | qu2021-d1na00069a-cise-1-16-1, qu2021-d1na00069a-cise-1-8-2, qu2021-d1na00069a-cise-1-4-3, qu2021-d1na00069a-cise-1-2-4 | particles37 | source_extracted | 2026-10-26T22:49:33Z | 1 | no; common material |
+| 10.1021/cm3015594 | deng2012-cm3015594 | deng2012-cm3015594-cis-zns-core-shell-qds-1 | particles37 | source_extracted | 2026-10-26T22:49:33Z | 1 | no; common material |
+| 10.1021/acs.iecr.6b02698 | ji2016-acs-iecr-6b02698 | ji2016-acs-iecr-6b02698-cis-zns-core-shell-qds-1 | particles37 | source_extracted | 2026-10-26T22:49:33Z | 1 | yes; saved deletion-only read |
+| 10.1021/acsanm.2c04240 | purohit2023-acsanm-2c04240 | purohit2023-acsanm-2c04240-liyf4-16-5-yb3-0-4-tm3-nps-1 | particles37 | source_extracted | 2026-10-26T22:49:33Z | 1 | yes; saved deletion-only read |
+| 10.1016/j.supflu.2024.106341 | mamakhel2024-j-supflu-2024-106341 | mamakhel2024-j-supflu-2024-106341-zno-nanoparticles-synthesized-at-300-c-5, mamakhel2024-j-supflu-2024-106341-bi2o3-nanoparticles-synthesized-at-250-c-6, mamakhel2024-j-supflu-2024-106341-cr2o3-nanoparticles-synthesized-at-400-c-7, mamakhel2024-j-supflu-2024-106341-alooh-nanoparticles-synthesized-at-400-c-8 | particles37 | source_extracted | 2026-10-26T22:49:33Z | 1 | yes; saved deletion-only read |
+| 10.1021/acs.jpcc.5c05899 | yang2026-acs-jpcc-5c05899 | yang2026-acs-jpcc-5c05899-cis-a-1, yang2026-acs-jpcc-5c05899-cis-b-2 | particles37 | source_extracted | 2026-10-26T22:49:33Z | 1 | no; common material |
+| 10.1021/acs.jpcc.8b01053 | huang2018-acs-jpcc-8b01053 | huang2018-acs-jpcc-8b01053-cdte-qds-synthesized-via-pdpa-method-1 | particles37 | source_extracted | 2026-10-26T22:49:33Z | 1 | no; common material |
+| 10.1021/acs.jpclett.6c00098 | chen2026-acs-jpclett-6c00098 | chen2026-acs-jpclett-6c00098-r-s-cspbbr3-sio2-pqds-1 | particles37 | source_extracted | 2026-10-26T22:49:33Z | 1 | no; common material |
+
+## Source10 pending normal release (no Live credit)
+
+| DOI | Source id | Record ids | Batch | Status | Live verified | Credit | Rare-material read |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 10.1021/acsanm.4c02691 | song2024-acsanm-4c02691 | song2024-acsanm-4c02691-cba-cspbcl3pqds-1 | particles38 | source_extracted | pending | 0 | yes; saved deletion-only read |
+| 10.1021/acs.langmuir.0c02477 | lu2020-acs-langmuir-0c02477 | lu2020-acs-langmuir-0c02477-pvp-geqds-1, lu2020-acs-langmuir-0c02477-ppa-geqds-2, lu2020-acs-langmuir-0c02477-ani-geqds-3, lu2020-acs-langmuir-0c02477-bna-geqds-4 | particles38 | source_extracted | pending | 0 | no; common material |

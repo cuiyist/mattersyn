@@ -1482,6 +1482,11 @@ def export_public_release(source_root: str | Path, destination: str | Path, allo
             "source_refs": entry.get("source_refs", []),
             "projection_reason": reason,
         })
+    # The write/manifest pass has consumed every prepared payload. Release
+    # those byte references before the independent full-stage validation.
+    prepared.clear()
+    raw = projected = None
+
     release_manifest = {
         "schema_version": MANIFEST_SCHEMA,
         "repo": repo,

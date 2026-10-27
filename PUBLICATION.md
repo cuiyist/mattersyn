@@ -1,3 +1,9 @@
+### 2026-10-26 — Source9 verified Live; current physical queue reconciled
+
+Source9 is Live at Site `30aa2f8a97d2bd6007796283b569322187b7a657` from Source merge `a1b101837db3af0b8c012d0b89f720f39cc6170c` (PR103), verified 2026-10-26T22:49:33Z. Live totals are 2,637 papers / 6,451 records / 4,330 pairs / 1,125 material families; its ten-paper / 18-record / 70-figure contribution is counted once. Pages40413640924 and anonymous252/all216 verification passed.
+
+Accepted queue status is 3,164 physical rows (445 IN, 802 OUT, 1,917 uncertain): read 2,243 (392 IN), attempted 75 (30 IN), unread 846 (23 IN). Four public generated-copy cleanup roles closed: 252,880 files / 18,830,150,140 logical bytes; journals/scaffolding retained, no whole-folder or isolated physical-gain claim. B145's nineteen remain not started after preflight; the Source10 two-paper / five-record / eleven-binding materialization remains private. Preserve historical omissions, failures, paused audit/owner entries and all five waiting questions; no audit, calibration, accuracy or training credit is added.
+
 ### 2026-10-26 — Source8 publication accepted; Source9 remains prospective
 
 Source8 is Live at Site L8 `d09790d8a9432ef1487d8505c2b48af23f60b49a` from public Source M9, after all 13 normal checks, GUI, Pages run 40335807382 and anonymous verification. Live totals are 2,627 papers / 6,433 records / 4,312 pairs / 1,122 material families; Source8 added 3 / 4 / 7 papers, records and figures once.
