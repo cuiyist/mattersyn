@@ -137,4 +137,114 @@ class DirectGe(unittest.TestCase):
         self.hub['record_ids'].append('unknown');self.assertFalse(self.checks()[2]);self.hub['record_ids'].pop()
         self.byid[DIRECT]['quality']['review_status']='draft';self.assertFalse(self.checks()[2])
 
+
+class DialysisIsolation(unittest.TestCase):
+    def setUp(self):
+        self.byid, self.hub = fixtures()
+        r = self.byid[DIRECT]
+        r['method'] = 'Synthesis as described in the source'
+        state = DIRECT + '--after-s01-dialyze'
+        evidence = lambda page: [{'source_id': DIRECT, 'locator': 'Main PDF p.' + str(page)}]
+        r['material_states'] = [{'id': state, 'kind': 'product'}]
+        r['operations'] = [{'action': 'dialyze', 'stage': 'synthesis', 'outputs': [state],
+                            'evidence': evidence(2), 'parameters': {'duration': {
+                                'value': 3, 'unit': 'day', 'status': 'reported', 'evidence': evidence(2)}}}]
+        r['products'] = [{'source_sample_label': 'PVP-GeQDs', 'material_state_id': state,
+                          'recipe_link': 'explicit', 'link_evidence': evidence(2),
+                          'composition': {'value': 'Ge', 'status': 'reported', 'evidence': evidence(1)}}]
+    def passes(self):
+        return all(ok for ok, _ in Q['germanium_reviewed_regression_checks'](self.hub, self.byid))
+    def test_four_labels_accept_source_bound_isolation_without_mutation(self):
+        for label in ['PVP-GeQDs', 'PPA-GeQDs', 'ANI-GeQDs', 'BNA-GeQDs']:
+            self.byid[DIRECT]['products'][0]['source_sample_label'] = label
+            before = copy.deepcopy((self.byid, self.hub))
+            with self.subTest(label=label):
+                self.assertTrue(self.passes()); self.assertEqual((self.byid, self.hub), before)
+    def test_known_method_GeQDs_needs_no_fallback(self):
+        r = self.byid[DIRECT]; r['method'] = 'Microwave'
+        r.pop('material_states'); r['operations'] = [{'stage': 'synthesis'}]
+        r['products'][0].pop('link_evidence'); self.assertTrue(self.passes())
+    def test_only_exact_generic_placeholder_uses_isolation(self):
+        for method in ['Chemical reduction', 'Ion implantation', 'Milling', 'Microwave deposition', '', 'Synthesis as described elsewhere']:
+            self.byid[DIRECT]['method'] = method
+            with self.subTest(method=method): self.assertFalse(self.passes())
+    def test_exact_GeQDs_token_and_every_context_guard(self):
+        for label in ['Ge', 'Ge CQDs', 'Ge QDs', 'GeQDsfilm', 'xGeQDs', 'GeQD'] + ['GeQDs ' + w for w in ['embedded','matrix','substrate','supported','film','device','implant','well']]:
+            self.byid[DIRECT]['products'][0]['source_sample_label'] = label
+            with self.subTest(label=label): self.assertFalse(self.passes())
+    def test_reported_single_Ge_material_and_product_still_required(self):
+        r = self.byid[DIRECT]
+        for key, value in [('formula','GeO2'), ('components',['Ge','SiO2']), ('elements',['Ge','O']), ('architecture','composite')]:
+            old = copy.deepcopy(r['material']); r['material'][key] = value
+            with self.subTest(key=key): self.assertFalse(self.passes())
+            r['material'] = old
+        for key, value in [('value','GeO2'), ('status','inferred')]:
+            old = copy.deepcopy(r['products'][0]['composition']); r['products'][0]['composition'][key] = value
+            with self.subTest(key=key): self.assertFalse(self.passes())
+            r['products'][0]['composition'] = old
+    def test_all_four_evidence_sites_are_required_and_same_source(self):
+        r = self.byid[DIRECT]
+        sites = [(r['operations'][0], 'evidence'), (r['operations'][0]['parameters']['duration'], 'evidence'),
+                 (r['products'][0], 'link_evidence'), (r['products'][0]['composition'], 'evidence')]
+        for owner, key in sites:
+            old = copy.deepcopy(owner[key])
+            for bad in [None, [], {}, [{'source_id':'other', 'locator':'Main PDF p.2'}],
+                        [{'source_id':DIRECT, 'locator':'Main PDF'}], [{'source_id':DIRECT, 'locator':'Main PDF p.0'}],
+                        [{'source_id':DIRECT, 'locator':''}], old + [{'source_id':'other', 'locator':'Main PDF p.2'}]]:
+                owner[key] = bad
+                with self.subTest(key=key, bad=bad): self.assertFalse(self.passes())
+            owner[key] = old
+    def test_primary_source_must_exist_uniquely(self):
+        r = self.byid[DIRECT]; old = copy.deepcopy(r['sources'])
+        for sources in [[], [{'id':'other'}], old + old]:
+            r['sources'] = sources
+            with self.subTest(sources=sources): self.assertFalse(self.passes())
+        r['sources'] = old; r['lineage']['source_group'] = 'other'; self.assertFalse(self.passes())
+    def test_duration_must_be_positive_finite_reported_time(self):
+        d = self.byid[DIRECT]['operations'][0]['parameters']['duration']; original = copy.deepcopy(d)
+        for key, value in [('value',0), ('value',-1), ('value',True), ('value',float('nan')), ('value',float('inf')),
+                           ('value','3'), ('status','inferred'), ('status','not_reported'), ('unit','mg'), ('unit','')]:
+            d.clear(); d.update(copy.deepcopy(original)); d[key] = value
+            with self.subTest(key=key, value=value): self.assertFalse(self.passes())
+    def test_dialysis_action_and_producer_stage_are_explicit(self):
+        op = self.byid[DIRECT]['operations'][0]
+        for stage in ['synthesis', 'workup']:
+            op['stage'] = stage
+            with self.subTest(stage=stage): self.assertTrue(self.passes())
+        for stage in ['characterization', '', None]:
+            op['stage'] = stage
+            with self.subTest(stage=stage): self.assertFalse(self.passes())
+        op['stage'] = 'synthesis'
+        for action in ['wash', 'dialysis', 'dialyze sample', '', None]:
+            op['action'] = action
+            with self.subTest(action=action): self.assertFalse(self.passes())
+    def test_output_must_identify_unique_declared_product_state(self):
+        r = self.byid[DIRECT]; op = r['operations'][0]; state = r['products'][0]['material_state_id']
+        for outputs in [[], ['other'], state, [state,state]]:
+            op['outputs'] = outputs
+            with self.subTest(outputs=outputs): self.assertFalse(self.passes())
+        op['outputs'] = [state]
+        for states in [[], [{'id':'other','kind':'product'}], [{'id':state,'kind':'reaction_batch'}],
+                       [{'id':state,'kind':'product'}, {'id':state,'kind':'product'}]]:
+            r['material_states'] = states
+            with self.subTest(states=states): self.assertFalse(self.passes())
+    def test_explicit_product_recipe_link_required(self):
+        p = self.byid[DIRECT]['products'][0]
+        for link in ['inferred','unmatched','',None]:
+            p['recipe_link'] = link
+            with self.subTest(link=link): self.assertFalse(self.passes())
+    def test_every_product_needs_own_positive_isolation_proof(self):
+        r = self.byid[DIRECT]; other = copy.deepcopy(r['products'][0]); other['material_state_id'] = 'unlinked'
+        r['products'].append(other); self.assertFalse(self.passes())
+    def test_no_DOI_or_record_ID_exception(self):
+        r = self.byid.pop(DIRECT); new = 'different-synthetic-isolated-Ge'
+        r['record_id'] = new; r['sources'][0]['doi'] = '10.synthetic/not-a-real-paper'
+        self.byid[new] = r; self.hub['record_ids'].remove(DIRECT); self.hub['record_ids'].append(new); self.hub['direct_record_ids'] = [new]
+        self.assertTrue(self.passes())
+    def test_reviewed_Heath_scope_cannot_be_changed_by_isolation(self):
+        rid = next(iter(HEATH)); self.byid[rid] = copy.deepcopy(self.byid[DIRECT]); self.byid[rid]['record_id'] = rid
+        self.hub['direct_record_ids'].append(rid)
+        checks = [ok for ok, _ in Q['germanium_reviewed_regression_checks'](self.hub, self.byid)]
+        self.assertFalse(checks[0]); self.assertFalse(checks[1])
+
 if __name__=='__main__':unittest.main()
