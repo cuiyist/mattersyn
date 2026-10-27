@@ -1931,7 +1931,7 @@
     "paused_audit_lane_unchanged": true
   },
   "schema": "mattersyn-curation-control/1",
-  "status": "ACTIVE_SIMPLE_PIPELINE_BULK42_NORMAL_SOURCE_CHECKS",
+  "status": "ACTIVE_SIMPLE_PIPELINE_BULK42_CORRECTED_SOURCE_PREPARATION",
   "recorded_at": "2026-10-20T20:28:06.479159+00:00",
   "authorization": "Owner October 10 evening: continue the separate source_extracted simple-pipeline website job; the audited lane and its open questions remain paused. Use local two-pass extraction, unchanged quote/number/agreement checks and normal release tools.",
   "supersedes_hold": "October 10 evening authorizes only the separate source_extracted simple-pipeline job. The audited lane, original findings, denominator and open owner questions stay paused.",
@@ -3301,8 +3301,8 @@
       "counts_in_live_homepage": false
     }
   },
-  "current_task": "One42-paper /62-record /231-captioned-crop candidate release is prepared. The normal Source checks, exact-head CI and full Site release remain; the next50 uncertain papers continue on two local Qwen workers.",
-  "next_step": "Commit the exact reviewed Source payload, run all13 normal checks and desktop/phone review on three new pages, then exact-head CI and ordinary merge. Complete the normal Site release, Pages and anonymous verification before Live credit. Keep the next local run reading.",
+  "current_task": "Corrected three stale unpublished inventory groups and four orphan binding IDs after the local final-build failure. All remaining private build, site, atlas and quality checks pass. Preparing a new exact commit for all13 normal checks;42paper/62record/231crop release remains unpublished. Next50 q151 runs locally.",
+  "next_step": "Complete reviewed Source preparation, commit, all13 fresh normal checks, three new desktop/phone page reviews, exact-head CI and ordinary merge. Then run the normal Site release, Pages and anonymous verification. Keep local reading active; preserve original failed checks and all paused audit questions.",
   "machine_extracted_paper_list": {
     "path": "research-assets/public-audits/MACHINE_EXTRACTED_PAPERS.md",
     "sha256": "11aae0b833bdf6136cc6ff06777ccb3cd111fe05561db1c1d11732dd2041f19d",
@@ -3469,7 +3469,7 @@
     "result_receipt_sha256": "9a4e26a112197d8976482a6f9d843509f982b85a86b85bd49c4aa25b4776d4cd",
     "status": "parked; generation completed but strict whole-attempt coverage failed"
   },
-  "updated_at": "2026-10-27T17:14:30.291171+00:00",
+  "updated_at": "2026-10-27T18:05:16.506801+00:00",
   "last_verified_publication": {
   "source_commit": "98f7addfc3c2434e2346d56429228fac50db4105",
   "site_commit": "b5e4617eede867d238b1206c0f64e0239de16076",
@@ -43821,7 +43821,7 @@
       "new_records": 0
     }
   ],
-  "updated_at_utc": "2026-10-27T17:14:30.291171+00:00",
+  "updated_at_utc": "2026-10-27T18:05:16.506801+00:00",
   "pending_figure_caption_delivery": {
     "observed_at_utc": "2026-10-11T23:07:48.007667+00:00",
     "status": "batch07_deployed_batch08_prepared_older_display_repair_pending_release",
@@ -64284,7 +64284,7 @@
   }
 },
 
-  "actual_C_free_bytes": 133701283840,
+  "actual_C_free_bytes": 118679396352,
 
   "Source5_current_normal_progress": {
   "doi": "10.1021/acs.jpclett.9b02386",
@@ -64482,8 +64482,8 @@
 },
 
   "Root_Oct27_bulk_actual": {
-  "observed_at_utc": "2026-10-27T17:14:30.291171+00:00",
-  "Source_base": "f7823b290b0cb530d457ed7c16e035b16c88dfc1",
+  "observed_at_utc": "2026-10-27T18:05:16.506801+00:00",
+  "Source_base": "a577ecdc55fcd8090f9875666820551054d0cdf2",
   "Source_branch": "simple-particles-bulk40-20261027-r1",
   "Source_worktree_dirty": true,
   "verified_Live": {
@@ -64529,11 +64529,11 @@
     "DOI_identity_hold": 1
   },
   "active_next50": {
-    "batch": "q150",
-    "exec_session": 72448,
-    "controller_pid": 52656,
+    "batch": "q151",
+    "exec_session": 14355,
+    "controller_pid": 47340,
     "phase": "extract",
-    "successful_two_pass_papers": 22,
+    "successful_two_pass_papers": 13,
     "maximum_workers": 2,
     "server_PID": 19184
   },
@@ -64555,7 +64555,7 @@
     "all_239_batch_crops_captioned": true
   },
   "storage": {
-    "C_free_bytes": 133701283840,
+    "C_free_bytes": 118679396352,
     "cleanup_trigger_bytes": 400000000000,
     "minimum_remaining_after_estimate_bytes": 40000000000,
     "cleanup_delays_batch": false,
@@ -64579,6 +64579,13 @@
     "pair_files": 50,
     "figures": 181,
     "check_return": 0
+  },
+  {
+    "batch": "q150",
+    "successful_two_pass_papers": 50,
+    "pair_files": 50,
+    "figures": 163,
+    "check_return": 0
   }
 ],
 
@@ -64591,6 +64598,53 @@
   "scientific_replacement_values": 0
 },
 
-  "original_failures_preserved": true
+  "original_failures_preserved": true,
+
+  "full_new_commit_checks_required": true,
+
+  "previous_full_build_failure": {
+  "Source_commit": "a577ecdc55fcd8090f9875666820551054d0cdf2",
+  "normal_phases_passed": 12,
+  "final_phase_failed": true,
+  "unpublished_inventory_entries_removed": 3,
+  "orphan_unpublished_binding_record_ids_removed": 4,
+  "private_remaining_build_checks_passed": true,
+  "original_failed_results_preserved": true
+},
+
+  "daily_physical_queue": {
+  "rows": 3163,
+  "saved_read_rows": 2421,
+  "attempted_without_usable_output": 77,
+  "pending": 665,
+  "dated_title_scope_counts": {
+    "IN": 444,
+    "OUT": 802,
+    "uncertain": 1917
+  },
+  "new_150_processed_scope": {
+    "IN": 26,
+    "route_OUT": 49,
+    "isolation_or_normal_no_eligible_omitted": 75,
+    "IN_already_Live_duplicate": 1
+  },
+  "unique_primary_paper_count_certified": false
+}
+},
+
+  "Root_Oct27_working_queue_projection": {
+  "observed_at_utc": "2026-10-27T18:04:59Z",
+  "physical_rows": 3163,
+  "IN": 460,
+  "OUT_or_omitted": 936,
+  "uncertain": 1767,
+  "unchanged_rows_using_prior_labels": 3012,
+  "scope": "Working disposition projection, includes operational eligibility/display/bibliography omissions; no global scientific re-audit or release readiness claim",
+  "prior_title_axis": {
+    "IN": 444,
+    "OUT": 802,
+    "uncertain": 1917
+  },
+  "census_evidence_sha256": "c7edacae366fed5a1f3788ddedddb2629416ddb2f1a390cb35d7636e77fe6fd5"
 }
 }
