@@ -5,6 +5,7 @@ MATTERSYN_TO_SITE_TEST_MODULE environment variable.
 """
 import ast
 import copy
+import html
 import os
 from pathlib import Path
 import re
@@ -14,13 +15,14 @@ import unittest
 MODULE = Path(os.environ.get('MATTERSYN_TO_SITE_TEST_MODULE', str(Path(__file__).with_name('to_site.py'))))
 tree = ast.parse(MODULE.read_bytes())
 slug = next(n for n in tree.body if isinstance(n, ast.FunctionDef) and n.name == 'slug')
+citation_title = next(n for n in tree.body if isinstance(n, ast.FunctionDef) and n.name == 'citation_title')
 builder = next(n for n in tree.body if isinstance(n, ast.ClassDef) and n.name == 'Builder')
 methods = [n for n in builder.body if isinstance(n, ast.FunctionDef) and n.name in {'__init__', 'source'}]
 if len(methods) != 2:
     raise AssertionError('Expected normal Builder constructor/source methods')
 minimal = ast.ClassDef(name='Builder', bases=[], keywords=[], body=methods, decorator_list=[])
-module = ast.fix_missing_locations(ast.Module(body=[slug, minimal], type_ignores=[]))
-namespace = {'re': re, 'unicodedata': unicodedata}
+module = ast.fix_missing_locations(ast.Module(body=[slug, citation_title, minimal], type_ignores=[]))
+namespace = {'re': re, 'html': html, 'unicodedata': unicodedata}
 exec(compile(module, str(MODULE), 'exec'), namespace)
 Builder = namespace['Builder']
 
@@ -124,6 +126,29 @@ class AuthorFormats(unittest.TestCase):
                 before = copy.deepcopy(original)
                 with self.assertRaises(ValueError):
                     Builder(original)
+                self.assertEqual(original, before)
+
+
+    def test_citation_inline_markup_entities_and_plain_titles_preserve_other_fields(self):
+        cases = (
+            ('AgInS<sub>2</sub>/ZnS', 'AgInS2/ZnS'),
+            (['<i>Ag</i><sup>+</sup> &amp; <b>Zn</b> &#945; &#x3B2;'], 'Ag+ & Zn α β'),
+            ('<em>A</em> <strong>B</strong> &lt; 5', 'A B < 5'),
+            ('Plain title: Ag < 2 & Zn > 1', 'Plain title: Ag < 2 & Zn > 1'),
+            ('<unknown>Ag</unknown> &unknown; &notbogus;', '<unknown>Ag</unknown> &unknown; &notbogus;'),
+            ('<sub class="x">2</sub>', '<sub class="x">2</sub>'),
+        )
+        for title, expected in cases:
+            with self.subTest(title=title):
+                original = document(title=title, authors=[{'given': 'Ada', 'family': 'Lovelace'}],
+                                    pairs=[{'original_ordinal': 2, 'value': 1.25, 'status': 'source_extracted'}])
+                before = copy.deepcopy(original)
+                actual = Builder(original)
+                plain = Builder(document(title=expected, authors=original['authors'], pairs=original['pairs']))
+                self.assertEqual(actual.source()['title'], expected)
+                self.assertEqual(actual.source(), plain.source())
+                self.assertEqual(actual.source_id, plain.source_id)
+                self.assertEqual(actual.doc['pairs'], before['pairs'])
                 self.assertEqual(original, before)
 
 
