@@ -1,0 +1,340 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "lin2005-la049489q-cdse-cds-80-2",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Yang-Wei Lin; Ming-Mu Hsieh; Ching-Piao Liu; Huan-Tsung Chang (2005): CdSe/CdS(80)",
+  "material": {
+    "formula": "CdSe/CdS(80)",
+    "family": "CdSe/CdS(80) nanocrystals",
+    "elements": [
+      "Cd",
+      "Se",
+      "S"
+    ],
+    "components": [
+      "CdSe",
+      "CdS(80)"
+    ],
+    "architecture": "unresolved"
+  },
+  "method": "Synthesis as described in the source",
+  "sources": [
+    {
+      "id": "lin2005-la049489q",
+      "doi": "10.1021/la049489q",
+      "title": "Photoassisted Synthesis of CdSe and Core−Shell CdSe/CdS Quantum Dots",
+      "authors": "Yang-Wei Lin; Ming-Mu Hsieh; Ching-Piao Liu; Huan-Tsung Chang",
+      "year": 2005,
+      "url": "https://doi.org/10.1021/la049489q",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "lin2005-la049489q",
+    "recipe_family": "lin2005-la049489q-cdse-cds-80-2",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": 5.0,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "5 nm",
+      "evidence": [
+        {
+          "source_id": "lin2005-la049489q",
+          "locator": "Main PDF p.5"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "lin2005-la049489q-cdse-cds-80-2--thioacetamide",
+      "name": "thioacetamide",
+      "formula": null,
+      "role": "chalcogen_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "lin2005-la049489q",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "lin2005-la049489q-cdse-cds-80-2--after-s01-add",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "lin2005-la049489q-cdse-cds-80-2--thioacetamide"
+      ]
+    },
+    {
+      "id": "lin2005-la049489q-cdse-cds-80-2--after-s02-heat",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "lin2005-la049489q-cdse-cds-80-2--after-s01-add"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-add",
+      "action": "add",
+      "label": "Add thioacetamide to CdSe QDs",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "lin2005-la049489q-cdse-cds-80-2--thioacetamide"
+      ],
+      "outputs": [
+        "lin2005-la049489q-cdse-cds-80-2--after-s01-add"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "lin2005-la049489q",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Add thioacetamide to CdSe QDs",
+      "evidence": [
+        {
+          "source_id": "lin2005-la049489q",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-heat",
+      "action": "heat",
+      "label": "Heat under N2 atmosphere",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-add"
+      ],
+      "inputs": [
+        "lin2005-la049489q-cdse-cds-80-2--after-s01-add"
+      ],
+      "outputs": [
+        "lin2005-la049489q-cdse-cds-80-2--after-s02-heat"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 80,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "80 °C",
+          "evidence": [
+            {
+              "source_id": "lin2005-la049489q",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 24,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "24 h",
+          "evidence": [
+            {
+              "source_id": "lin2005-la049489q",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "lin2005-la049489q",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Heat under N2 atmosphere",
+      "evidence": [
+        {
+          "source_id": "lin2005-la049489q",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "lin2005-la049489q-cdse-cds-80-2--product",
+      "source_sample_label": "CdSe/CdS(80)",
+      "batch_id": null,
+      "material_state_id": "lin2005-la049489q-cdse-cds-80-2--after-s02-heat",
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "lin2005-la049489q",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reactor: round-bottom flask (Main PDF p.2).",
+        "Reaction temperature: 80 degC (Main PDF p.2).",
+        "Reaction time: 24 h (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "lin2005-la049489q-cdse-cds-80-2--size",
+      "sample_id": "lin2005-la049489q-cdse-cds-80-2--product",
+      "property": "diameter",
+      "technique": "TEM",
+      "value": {
+        "value": 5.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "5 nm",
+        "evidence": [
+          {
+            "source_id": "lin2005-la049489q",
+            "locator": "Main PDF p.5"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "lin2005-la049489q",
+          "locator": "Main PDF p.5"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Amount of thioacetamide not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

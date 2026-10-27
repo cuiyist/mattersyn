@@ -1,0 +1,337 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "mitchell1999-j-1151-2916-1999-tb02070-x-nanocrystalline-b-sic-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Brian S. Mitchell; Haoyue Zhang; Nikica Maljkovic; Martin Ade; Dirk Kurtenbach; Eberhard Müller (1999): nanocrystalline b-SiC",
+  "material": {
+    "formula": "SiC",
+    "family": "SiC nanocrystals",
+    "elements": [
+      "Si",
+      "C"
+    ],
+    "components": [
+      "SiC"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Pyrolysis",
+  "sources": [
+    {
+      "id": "mitchell1999-j-1151-2916-1999-tb02070-x",
+      "doi": "10.1111/j.1151-2916.1999.tb02070.x",
+      "title": "Formation of Nanocrystalline Silicon Carbide Powder from Chlorine‐Containing Polycarbosilane Precursors",
+      "authors": "Brian S. Mitchell; Haoyue Zhang; Nikica Maljkovic; Martin Ade; Dirk Kurtenbach; Eberhard Müller",
+      "year": 1999,
+      "url": "https://doi.org/10.1111/j.1151-2916.1999.tb02070.x",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "mitchell1999-j-1151-2916-1999-tb02070-x",
+    "recipe_family": "mitchell1999-j-1151-2916-1999-tb02070-x-nanocrystalline-b-sic-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "SiC",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "mitchell1999-j-1151-2916-1999-tb02070-x",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "equiaxed",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "mitchell1999-j-1151-2916-1999-tb02070-x",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "mitchell1999-j-1151-2916-1999-tb02070-x-nanocrystalline-b-sic-1--bis-chloromethysilane-s",
+      "name": "bis(chloromethysilane)s",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "mitchell1999-j-1151-2916-1999-tb02070-x",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "mitchell1999-j-1151-2916-1999-tb02070-x-nanocrystalline-b-sic-1--styrene",
+      "name": "styrene",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "mitchell1999-j-1151-2916-1999-tb02070-x",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "mitchell1999-j-1151-2916-1999-tb02070-x-nanocrystalline-b-sic-1--after-s01-heat",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "mitchell1999-j-1151-2916-1999-tb02070-x-nanocrystalline-b-sic-1--bis-chloromethysilane-s",
+        "mitchell1999-j-1151-2916-1999-tb02070-x-nanocrystalline-b-sic-1--styrene"
+      ]
+    },
+    {
+      "id": "mitchell1999-j-1151-2916-1999-tb02070-x-nanocrystalline-b-sic-1--after-s02-heat",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "mitchell1999-j-1151-2916-1999-tb02070-x-nanocrystalline-b-sic-1--after-s01-heat",
+        "mitchell1999-j-1151-2916-1999-tb02070-x-nanocrystalline-b-sic-1--bis-chloromethysilane-s",
+        "mitchell1999-j-1151-2916-1999-tb02070-x-nanocrystalline-b-sic-1--styrene"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-heat",
+      "action": "heat",
+      "label": "Heating to 700°C for prepyrolysis",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "mitchell1999-j-1151-2916-1999-tb02070-x-nanocrystalline-b-sic-1--bis-chloromethysilane-s",
+        "mitchell1999-j-1151-2916-1999-tb02070-x-nanocrystalline-b-sic-1--styrene"
+      ],
+      "outputs": [
+        "mitchell1999-j-1151-2916-1999-tb02070-x-nanocrystalline-b-sic-1--after-s01-heat"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 700,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "700 °C",
+          "evidence": [
+            {
+              "source_id": "mitchell1999-j-1151-2916-1999-tb02070-x",
+              "locator": "Main PDF p.1"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1 h",
+          "evidence": [
+            {
+              "source_id": "mitchell1999-j-1151-2916-1999-tb02070-x",
+              "locator": "Main PDF p.1"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Heating to 700°C for prepyrolysis",
+      "evidence": [
+        {
+          "source_id": "mitchell1999-j-1151-2916-1999-tb02070-x",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "s02-heat",
+      "action": "heat",
+      "label": "Heating to 1600°C for pyrolysis",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-heat"
+      ],
+      "inputs": [
+        "mitchell1999-j-1151-2916-1999-tb02070-x-nanocrystalline-b-sic-1--after-s01-heat",
+        "mitchell1999-j-1151-2916-1999-tb02070-x-nanocrystalline-b-sic-1--bis-chloromethysilane-s",
+        "mitchell1999-j-1151-2916-1999-tb02070-x-nanocrystalline-b-sic-1--styrene"
+      ],
+      "outputs": [
+        "mitchell1999-j-1151-2916-1999-tb02070-x-nanocrystalline-b-sic-1--after-s02-heat"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Heating to 1600°C for pyrolysis",
+      "evidence": [
+        {
+          "source_id": "mitchell1999-j-1151-2916-1999-tb02070-x",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "mitchell1999-j-1151-2916-1999-tb02070-x-nanocrystalline-b-sic-1--product",
+      "source_sample_label": "nanocrystalline b-SiC",
+      "batch_id": null,
+      "material_state_id": "mitchell1999-j-1151-2916-1999-tb02070-x-nanocrystalline-b-sic-1--after-s02-heat",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "SiC",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "mitchell1999-j-1151-2916-1999-tb02070-x",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": "equiaxed",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "mitchell1999-j-1151-2916-1999-tb02070-x",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "mitchell1999-j-1151-2916-1999-tb02070-x",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "notes": [
+        "Reactor: alumina tube (Main PDF p.1).",
+        "Reaction time: 1 h (Main PDF p.1)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Amount of bis(chloromethysilane)s not reported in the extracted text.",
+      "Amount of styrene not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

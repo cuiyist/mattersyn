@@ -72,5 +72,60 @@ class AuthorFormats(unittest.TestCase):
                 self.assertEqual(original, before)
 
 
+    def test_structured_official_authors_equal_written_names_and_preserve_input(self):
+        cases = (
+            ([{'given': 'Ada', 'family': 'Lovelace', 'ORCID': 'https://orcid.org/fixture', 'sequence': 'first'},
+              {'given': 'Grace M.', 'family': 'Hopper', 'sequence': 'additional'}],
+             ['Ada Lovelace', 'Grace M. Hopper']),
+            ([{'name': 'Synthetic Research Group'}], ['Synthetic Research Group']),
+            ([{'family': 'Lovelace'}, {'given': 'Ada'}], ['Lovelace', 'Ada']),
+            (['Written Name', {'given': '  Ada ', 'family': ' Lovelace  '}],
+             ['Written Name', 'Ada Lovelace']),
+        )
+        for authors, expected_names in cases:
+            with self.subTest(authors=authors):
+                original = document(authors=authors)
+                before = copy.deepcopy(original)
+                actual = Builder(original)
+                expected = Builder(document(authors=expected_names))
+                self.assertEqual(actual.source_id, expected.source_id)
+                self.assertEqual(actual.source(), expected.source())
+                self.assertEqual(original, before)
+
+    def test_structured_authors_do_not_invent_missing_or_coerce_invalid_names(self):
+        for author in ({}, {'ORCID': 'identifier-only'}, {'name': ''}, {'name': 3},
+                       {'given': None, 'family': 'Lovelace'}, {'given': 'Ada', 'family': 3},
+                       {'given': ' ', 'family': ' '}):
+            with self.subTest(author=author):
+                original = document(authors=[author])
+                before = copy.deepcopy(original)
+                with self.assertRaises(ValueError):
+                    Builder(original)
+                self.assertEqual(original, before)
+
+
+    def test_singleton_title_list_equals_written_title_without_input_changes(self):
+        original = document(title=['Exact written title'], authors=[{'given': 'Ada', 'family': 'Lovelace'}], journal=['Journal unchanged'])
+        before = copy.deepcopy(original)
+        actual = Builder(original)
+        expected = Builder(document(title='Exact written title', authors=['Ada Lovelace'], journal=['Journal unchanged']))
+        self.assertEqual(actual.source(), expected.source())
+        self.assertEqual(actual.source_id, expected.source_id)
+        self.assertEqual(actual.doc['journal'], before['journal'])
+        self.assertEqual(original, before)
+        for title in ('Written string', '', None):
+            row = document(title=title)
+            self.assertIs(Builder(row).doc, row)
+
+    def test_ambiguous_empty_and_invalid_title_lists_refuse(self):
+        for title in ([], [''], [' '], [None], [3], ['First', 'Second']):
+            with self.subTest(title=title):
+                original = document(title=title)
+                before = copy.deepcopy(original)
+                with self.assertRaises(ValueError):
+                    Builder(original)
+                self.assertEqual(original, before)
+
+
 if __name__ == '__main__':
     unittest.main()

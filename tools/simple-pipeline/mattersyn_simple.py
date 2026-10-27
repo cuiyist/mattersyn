@@ -771,8 +771,15 @@ def cmd_build(a):
     if not a.quotes: docs = [public_document(d) for d in docs]
     rows = []
     for d in docs:
+        display_title = d.get('title')
+        if isinstance(display_title, list):
+            if len(display_title) != 1 or not isinstance(display_title[0], str) or not display_title[0].strip():
+                raise ValueError('Display title list must contain exactly one nonblank string')
+            display_title = display_title[0]
+        else:
+            display_title = display_title or d['id']
         link = f'<a href="https://doi.org/{html.escape(d["doi"])}">{html.escape(d["doi"])}</a>' if d.get('doi') else ''
-        body = [f'<h1>{html.escape(d.get("title") or d["id"])}</h1><p>{link} <span class="tag">{html.escape(a.label)}</span></p>']
+        body = [f'<h1>{html.escape(display_title)}</h1><p>{link} <span class="tag">{html.escape(a.label)}</span></p>']
         for kind, heading in (('structure', 'Structure figures'), ('property', 'Property figures'), ('other', 'Other figures')):
             figs = [f for f in d.get('figures') or [] if kind in (f.get('categories') or ['other'])]
             if figs: body.append(f'<h2>{heading}</h2>')
@@ -796,7 +803,7 @@ def cmd_build(a):
             body.append('</div>')
             rows.append(f'<tr><td><a href="p/{d["id"]}.html">{html.escape(p.get("product") or d["id"])}</a></td><td>{show(st.get("composition"))}</td>'
                         f'<td>{show(st.get("phase"))}</td><td>{show(st.get("size"))}</td><td>{show(rc.get("reaction_temperature"))}</td><td>{show(rc.get("reaction_time"))}</td><td>{link}</td></tr>')
-        page = f'<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{html.escape(d.get("title") or d["id"])}</title><style>{CSS}</style><main><p><a href="../index.html">All pairs</a></p>{"".join(body)}</main></html>'
+        page = f'<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{html.escape(display_title)}</title><style>{CSS}</style><main><p><a href="../index.html">All pairs</a></p>{"".join(body)}</main></html>'
         (out / 'p' / f'{d["id"]}.html').write_text(page, encoding='utf-8')
     public = [{k: v for k, v in d.items()} for d in docs]
     (out / 'pairs.json').write_text(json.dumps(public, ensure_ascii=False), encoding='utf-8')

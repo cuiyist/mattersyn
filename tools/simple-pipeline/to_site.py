@@ -253,11 +253,29 @@ def components_of(composition):
 
 class Builder:
     def __init__(self, doc, include_optical=False):
+        title = doc.get('title')
+        if isinstance(title, list):
+            if len(title) != 1 or not isinstance(title[0], str) or not title[0].strip():
+                raise ValueError('Title list must contain exactly one nonblank string')
+            doc = dict(doc, title=title[0])
         authors = doc.get('authors')
         if isinstance(authors, list):
-            if not authors or any(not isinstance(name, str) or not name.strip() for name in authors):
-                raise ValueError('Authors list must contain nonblank strings')
-            doc = dict(doc, authors='; '.join(authors))
+            names = []
+            for name in authors:
+                if isinstance(name, dict):
+                    if 'name' in name:
+                        name = name['name']
+                    else:
+                        parts = [name.get(key, '') for key in ('given', 'family')]
+                        if any(not isinstance(part, str) for part in parts):
+                            raise ValueError('Author name fields must be strings')
+                        name = ' '.join(part.strip() for part in parts if part.strip())
+                if not isinstance(name, str) or not name.strip():
+                    raise ValueError('Authors list must contain nonblank names')
+                names.append(name)
+            if not names:
+                raise ValueError('Authors list must contain nonblank names')
+            doc = dict(doc, authors='; '.join(names))
         elif authors is not None and not isinstance(authors, str):
             raise ValueError('Unsupported authors representation')
         self.doc = doc; self.include_optical = include_optical

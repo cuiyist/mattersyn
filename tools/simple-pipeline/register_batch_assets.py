@@ -135,6 +135,11 @@ def register(repo, record_ids, recorded_at, direction_id, reviewer, guard, apply
         if any(matches):
             if not all(len(m) == 1 and m[0] is matches[0][0] for m in matches):
                 raise ValueError(f'ambiguous or incomplete prior delivery: {path}')
+            existing = matches[0][0]
+            for key in ('source_bindings', 'provenance_bindings'):
+                for binding in asset[key]:
+                    if binding not in existing.setdefault(key, []):
+                        existing[key].append(copy.deepcopy(binding))
         else:
             registry['assets'].append(asset); added_assets += 1
         for delivery in asset['delivery_paths']:
@@ -146,7 +151,12 @@ def register(repo, record_ids, recorded_at, direction_id, reviewer, guard, apply
                                             'requires_source_refs': True})
                 added_rules += 1
             elif reason: raise ValueError(f'existing path rule blocks {delivery["path"]}: {reason}')
-    assert registry['assets'][:len(original_assets)] == original_assets
+    assert len(registry['assets']) >= len(original_assets)
+    binding_keys = ('source_bindings', 'provenance_bindings')
+    for before, after in zip(original_assets, registry['assets']):
+        assert {k: v for k, v in before.items() if k not in binding_keys} == {k: v for k, v in after.items() if k not in binding_keys}
+        for key in binding_keys:
+            assert after.get(key, [])[:len(before.get(key, []))] == before.get(key, [])
     assert policy['path_rules'][:len(original_rules)] == original_rules
     config = dict(policy, asset_rights_registry=registry)
     for (path, _), (asset, raw) in candidates.items():

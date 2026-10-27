@@ -28,14 +28,19 @@ PDFs whose DOI is not on the site and whose synthesis produces free isolable
 nanocrystals or nanoparticles. Solution/colloidal and free-particle gas/plasma/
 laser formation are in scope, including later assembly into films or devices.
 Continuous films, bulk alloys/ceramics/glass, device-only studies and particles
-formed only in solids or on substrates are out. Uncertain isolability is out of
-new batches. Screen available titles/abstracts, or saved pairs for read papers,
-locally before spending model time; apply this to every unpublished batch.
+formed only in solids or on substrates are out. Owner update, October 27: do not
+read papers already classified OUT. For uncertain papers, run the normal two-pass
+extraction and check, then decide scope from the product in the saved pair file.
+If isolability is still uncertain after reading, omit the paper before publication.
+Title-only and metadata-only scope proposals need no further closure or review.
+Work in this order: saved IN papers with current two-pass results; unread uncertain
+papers; then saved uncertain papers and saved rows missing current two-pass output.
 Do not remove or reread live papers for this scope update. List title-based live
 outside-scope contributions only in the repository owner revisit list. Refill
 from the existing screened list when the in-scope queue runs out; if none can be
-found, record exhaustion and stop building batches. The first batch has 20 papers;
-subsequent batches have about 50, without padding with out-of-scope papers. Expand globs in PowerShell
+found, record exhaustion and stop building batches. Each release now carries at
+least 40 new papers, or everything ready if fewer than 40 are ready after 12 hours.
+Release single papers only at the end of the job. Expand globs in PowerShell
 before invoking Python; `*.pdf` is not expanded by Python's argument parser:
 
 ```powershell
@@ -133,8 +138,8 @@ replace exact-source CI, browser review, boundary gates, deployment or anonymous
 verification. Use one ordinary batch merge for each release so it can be reverted.
 The root integrator alone mutates shared repositories and publishes.
 
-For batch 1, inspect three new pages at desktop and phone widths; inspect one page
-in later batches. Ship working figures, diagrams and supported unit-cell displays
+For every batch, inspect three new pages at desktop and phone widths, plus every
+page whose display code changed. Ship working figures, diagrams and supported unit-cell displays
 with the batch. A conceptual or composition-reference cell must retain its label.
 No hidden or broken display is released. While a batch builds and deploys, the
 local model may extract the next disjoint batch.
@@ -161,8 +166,17 @@ Push canonical records, registered crops, diagrams, no-quote pairs and the singl
 safe job report with the batch. Update `research-assets/curation-control.json`.
 Report actual deployment counts, omissions/reasons, rare-material deletions,
 script fixes, choices and built-site bytes. Do not claim a publication rate from
-an extraction count. Reconstructible local build/candidate copies may be removed
-only under the owner's storage instructions after their deployment is verified.
+an extraction count. Owner update, October 27: 400 GB free on C is a cleanup
+trigger, not a gate. A read, import, build or release may start when actual free
+space minus its estimated need leaves at least 40 GB. Clean completed rebuildable
+copies between batches or while the model reads; cleanup must not delay a batch.
+Remove each generated copy after its final consuming phase. When no rebuildable
+copies remain, stop cleaning until the next batch is deployed.
+Record storage in one line per batch: C free before/after and GB removed. Update
+the existing mattersyn2 cleanup report at most once a day, with no separate
+verification step. At the top of the main report, once daily, give papers live,
+papers read, and IN / OUT / uncertain counts. The job is complete only when no
+unread or uncertain papers remain and every in-scope paper is live.
 Private text/pass/pair files are retained for training. This package deletes none.
 
 ## Focused regression tests
