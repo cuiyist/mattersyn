@@ -1,3 +1,9 @@
+Current owner rules, October27: website active; read uncertain papers with normal two-pass extraction and decide product scope afterward. Reuse saved IN results first. Release >=40 papers or all ready after12hours. C cleanup trigger400GB is not a gate; operations leave >=40GB after estimated need, and cleanup never delays a batch. Keep all release checks and three desktop/phone new-page reviews. Audit lane, WorkerA/B and five older questions remain paused. See tools/simple-pipeline/README.md and the single SIMPLE_PIPELINE_REPORT.md.
+
+Paper revisit index: research-assets/public-audits/MACHINE_EXTRACTED_PAPERS.md (repository only).
+
+Earlier dated checkpoints:
+
 2026-10-27 import choice: use the independently reviewed serial-import estimate of 24 GiB (12 GiB own writes plus 12 GiB other activity). It covers the unchanged normal-five import only; original 32 GiB code, separate full-build budgets, the 100 GiB reserve and every release check remain. No large jobs overlap.
 
 Current 2026-10-27: Ge verified live; next 12 papers / 14 records / 69 figures await funded normal import. Thirteen completed generated-copy scopes account for 58,017,167,258 logical bytes once; reserve and all checks remain. Safe cleanup report: https://github.com/cuiyist/mattersyn2/blob/001af6b24c5ccd790fae0083faaae49f8631781b/CLEANUP_REPORT_2026-10-12.md

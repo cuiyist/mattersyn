@@ -144,4 +144,48 @@ class RegistrationTest(unittest.TestCase):
         self.assertIsNotNone(guard.user_directed_display_error(bad, 'mattersyn-site', chart_path))
 
 
+    def test_existing_asset_appends_corrected_record_bindings_and_is_idempotent(self):
+        self.run_registration()
+        registry = helper.read(self.registry_path)
+        crop = next(a for a in registry['assets'] if a['classification'] == 'source_figure')
+        # A historical sparse source binding must be retained, not overwritten.
+        crop['source_bindings'] = [{'doi': self.doi, 'url': 'https://doi.org/' + self.doi}]
+        old_record_hash = helper.digest(self.record_path.read_bytes())
+        before = copy.deepcopy(registry['assets'])
+        self.put('publication/asset-rights-registry.json', registry)
+        policy = helper.read(self.policy_path)
+        policy['asset_rights_registry_sha256'] = helper.digest(self.registry_path.read_bytes())
+        self.put('publication/public-release-policy.json', policy)
+        self.assertEqual(guard.user_directed_display_error(crop, 'mattersyn-site', self.fig_path),
+                         'user_directed_display_source_binding_missing')
+        record = helper.read(self.record_path)
+        record['fixture_correction'] = 'A corrected current record; crop bytes unchanged'
+        self.put(str(self.record_path.relative_to(self.repo)), record)
+        current_hash = helper.digest(self.record_path.read_bytes())
+        self.assertNotEqual(old_record_hash, current_hash)
+        disk_before = self.registry_path.read_bytes(), self.policy_path.read_bytes()
+        self.run_registration(False)
+        self.assertEqual(disk_before, (self.registry_path.read_bytes(), self.policy_path.read_bytes()))
+        result = self.run_registration()
+        self.assertEqual((result['new_assets'], result['new_exact_path_rules']), (0, 0))
+        after = helper.read(self.registry_path)['assets']
+        self.assertEqual(len(after), len(before))
+        for previous, current in zip(before, after):
+            keys = ('source_bindings', 'provenance_bindings')
+            self.assertEqual({k: v for k, v in previous.items() if k not in keys},
+                             {k: v for k, v in current.items() if k not in keys})
+            for key in keys:
+                self.assertEqual(current.get(key, [])[:len(previous.get(key, []))], previous.get(key, []))
+        refreshed = next(a for a in after if a['classification'] == 'source_figure')
+        self.assertEqual(len(refreshed['source_bindings']), 2)
+        self.assertEqual([p['source_record_sha256'] for p in refreshed['provenance_bindings']],
+                         [old_record_hash, current_hash])
+        config = guard.load_config(self.policy_path, self.registry_path)
+        projection = guard.history_project('mattersyn-site', self.fig_path, self.fig_raw, config)
+        self.assertEqual((projection['action'], projection['content']), ('allow', self.fig_raw))
+        stable = self.registry_path.read_bytes(), self.policy_path.read_bytes()
+        self.run_registration()
+        self.assertEqual(stable, (self.registry_path.read_bytes(), self.policy_path.read_bytes()))
+
+
 if __name__ == '__main__': unittest.main()

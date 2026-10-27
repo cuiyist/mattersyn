@@ -1,3 +1,42 @@
+## Bulk42 pending normal release (2026-10-27T17:14:30.291171+00:00; no Live credit)
+
+Twelve earlier Source-only papers plus these30 new papers form one42-paper candidate release. Date live remains pending until deployment and anonymous verification. Original ordinals and source_extracted status remain. This repository-only list adds no audit or training credit.
+
+| DOI | Source ID | Record IDs | Batch | Review status | Date live | Credit | Limited rare read |
+|---|---|---|---|---|---|---|---|
+| 10.1002/(sici)1099-0739(199907)13:7<501::aid-aoc866>3.0.co;2-m | quinelato1999-sici-1099-0739-199907-13-7-501 | quinelato1999-sici-1099-0739-199907-13-7-501-zro212-mol-ceo2-1 | particles40 / bulk42 | source_extracted | pending | 0 | yes, once, deletion-only |
+| 10.1002/1521-3951(200103)224:1<291::aid-pssb291>3.0.co;2-s | bol2001-1521-3951-200103-224-1-291-aid | bol2001-1521-3951-200103-224-1-291-aid-zns-mn2-nanoparticles-with-pp-passivatio-1 | particles40 / bulk42 | source_extracted | pending | 0 | no, common material |
+| 10.1002/jab.770020406 | kossovsky1991-jab-770020406 | kossovsky1991-jab-770020406-nanocrystalline-epstein-barr-virus-ebv-d-1 | particles40 / bulk42 | source_extracted | pending | 0 | no, common material |
+| 10.1007/s10973-006-7760-6 | mesquita2007-s10973-006-7760-6 | mesquita2007-s10973-006-7760-6-plt10-1, mesquita2007-s10973-006-7760-6-plt15-2, mesquita2007-s10973-006-7760-6-plt20-3 | particles40 / bulk42 | source_extracted | pending | 0 | yes, once, deletion-only |
+| 10.1007/s11106-007-0004-x | shevchenko2007-s11106-007-0004-x | shevchenko2007-s11106-007-0004-x-95-mole-zro2-2-mole-ceo2-3-mole-y2o3-1 | particles40 / bulk42 | source_extracted | pending | 0 | yes, once, deletion-only |
+| 10.1021/acs.chemmater.5b02040 | tyrakowski2015-acs-chemmater-5b02040 | tyrakowski2015-acs-chemmater-5b02040-znse-cds-zns-qds-1 | particles40 / bulk42 | source_extracted | pending | 0 | yes, once, deletion-only |
+| 10.1021/acs.inorgchem.4c01664 | khan2024-acs-inorgchem-4c01664 | khan2024-acs-inorgchem-4c01664-ni2p-nanoparticles-1 | particles40 / bulk42 | source_extracted | pending | 0 | yes, once, deletion-only |
+| 10.1021/acs.inorgchem.5c05727 | cui2026-acs-inorgchem-5c05727 | cui2026-acs-inorgchem-5c05727-aigzs-1-1 | particles40 / bulk42 | source_extracted | pending | 0 | yes, once, deletion-only |
+| 10.1021/acs.jpcc.8b01206 | zou2018-acs-jpcc-8b01206 | zou2018-acs-jpcc-8b01206-n-cdse-qds-1, zou2018-acs-jpcc-8b01206-h-cdse-qds-2 | particles40 / bulk42 | source_extracted | pending | 0 | yes, once, deletion-only |
+| 10.1021/acsaelm.5c00503 | zhang2025-acsaelm-5c00503 | zhang2025-acsaelm-5c00503-inp-zns-zns-qds-466-nm-emission-1, zhang2025-acsaelm-5c00503-inp-zns-zns-qds-451-nm-emission-2, zhang2025-acsaelm-5c00503-inp-zns-zns-qds-421-nm-emission-3 | particles40 / bulk42 | source_extracted | pending | 0 | yes, once, deletion-only |
+| 10.1021/acsami.0c11337 | delices2020-acsami-0c11337 | delices2020-acsami-0c11337-ais-zns-csqds-fast-injection-1 | particles40 / bulk42 | source_extracted | pending | 0 | yes, once, deletion-only |
+| 10.1021/acsami.5b10208 | naphade2016-acsami-5b10208 | naphade2016-acsami-5b10208-mapbi3-based-2-d-perovskite-nanosheets-1, naphade2016-acsami-5b10208-mapbbr3-based-2-d-perovskite-nanosheets-2, naphade2016-acsami-5b10208-mapbi1-5br1-5-based-2-d-perovskite-nanos-3 | particles40 / bulk42 | source_extracted | pending | 0 | yes, once, deletion-only |
+| 10.1021/acsami.5c06892 | wang2025-acsami-5c06892 | wang2025-acsami-5c06892-inp-znse-coreshell-quantum-dots-1 | particles40 / bulk42 | source_extracted | pending | 0 | no, common material |
+| 10.1021/acsami.5c07628 | yao2025-acsami-5c07628 | yao2025-acsami-5c07628-chitosan-derived-carbon-dots-cds-1 | particles40 / bulk42 | source_extracted | pending | 0 | yes, once, deletion-only |
+| 10.1021/acsomega.9b02686 | perikala2019-acsomega-9b02686 | perikala2019-acsomega-9b02686-bare-carbon-dots-cds-1, perikala2019-acsomega-9b02686-surface-functionalized-carbon-dots-sfcds-2 | particles40 / bulk42 | source_extracted | pending | 0 | yes, once, deletion-only |
+| 10.1021/acsphotonics.2c01228 | gong2023-acsphotonics-2c01228 | gong2023-acsphotonics-2c01228-ci-pbs-qds-1 | particles40 / bulk42 | source_extracted | pending | 0 | yes, once, deletion-only |
+| 10.1021/jp306915p | dethlefsen2012-jp306915p | dethlefsen2012-jp306915p-cdse-ln-cores-1 | particles40 / bulk42 | source_extracted | pending | 0 | yes, once, deletion-only |
+| 10.1021/jp3092013 | fitzmorris2012-jp3092013 | fitzmorris2012-jp3092013-css-qds-1 | particles40 / bulk42 | source_extracted | pending | 0 | yes, once, deletion-only |
+| 10.1021/jp905695f | aldeek2009-jp905695f | aldeek2009-jp905695f-cdte-cds-zno-mpa-qds-zn-cd-0-8-1 | particles40 / bulk42 | source_extracted | pending | 0 | yes, once, deletion-only |
+| 10.1021/jp9611582 | heath1997-jp9611582 | heath1997-jp9611582-20-a-au-nanocrystals-capped-with-oleylam-1, heath1997-jp9611582-40-a-au-nanocrystals-capped-with-oleylam-2, heath1997-jp9611582-20-a-au-nanocrystals-capped-with-dodecan-3, heath1997-jp9611582-18-a-ag-nanocrystals-capped-with-dodecan-4, heath1997-jp9611582-40-a-au-nanocrystals-capped-with-dodecan-5, heath1997-jp9611582-35-a-ag-nanocrystals-capped-with-dodecan-6, heath1997-jp9611582-28-a-ag-nanocrystals-capped-with-dodecan-7, heath1997-jp9611582-75-a-au-nanocrystals-capped-with-dodecan-8 | particles40 / bulk42 | source_extracted | pending | 0 | no, common material |
+| 10.1021/la049489q | lin2005-la049489q | lin2005-la049489q-cdse-80-1, lin2005-la049489q-cdse-cds-80-2 | particles40 / bulk42 | source_extracted | pending | 0 | yes, once, deletion-only |
+| 10.1021/la802294e | deng2008-la802294e | deng2008-la802294e-znse-qds-tga-capped-1 | particles40 / bulk42 | source_extracted | pending | 0 | no, common material |
+| 10.1021/nl3012962 | wei2012-nl3012962 | wei2012-nl3012962-cds-b-2, wei2012-nl3012962-cds-c-3 | particles40 / bulk42 | source_extracted | pending | 0 | yes, once, deletion-only |
+| 10.1023/a:1008918110156 | bouyer2000-a-1008918110156 | bouyer2000-a-1008918110156-hydroxyapatite-nanocrystal-suspension-1 | particles40 / bulk42 | source_extracted | pending | 0 | no, common material |
+| 10.1023/a:1012510731102 | hartridge2001-a-1012510731102 | hartridge2001-a-1012510731102-ce1xlnxo2x-2x-2-nanocrystals-1 | particles40 / bulk42 | source_extracted | pending | 0 | yes, once, deletion-only |
+| 10.1103/physrevb.60.1928 | cerullo1999-physrevb-60-1928 | cerullo1999-physrevb-60-1928-inas-nanocrystals-1, cerullo1999-physrevb-60-1928-cdse-nanocrystals-2 | particles40 / bulk42 | source_extracted | pending | 0 | no, common material |
+| 10.1111/j.1151-2916.1999.tb02070.x | mitchell1999-j-1151-2916-1999-tb02070-x | mitchell1999-j-1151-2916-1999-tb02070-x-nanocrystalline-b-sic-1 | particles40 / bulk42 | source_extracted | pending | 0 | no, common material |
+| 10.1111/j.1151-2916.2003.tb03449.x | li2003-j-1151-2916-2003-tb03449-x | li2003-j-1151-2916-2003-tb03449-x-nanocrystalline-cubic-phase-nbn-powder-1 | particles40 / bulk42 | source_extracted | pending | 0 | yes, once, deletion-only |
+| 10.1134/1.1130642 | golubenko1998-1-1130642 | golubenko1998-1-1130642-nanocrystalline-bao6fe2o3-particles-1 | particles40 / bulk42 | source_extracted | pending | 0 | yes, once, deletion-only |
+| 10.1557/jmr.1998.0355 | host1998-jmr-1998-0355 | host1998-jmr-1998-0355-graphite-encapsulated-nickel-nanocrystal-1 | particles40 / bulk42 | source_extracted | pending | 0 | no, common material |
+
+Earlier milestones follow unchanged.
+
 ## Current milestone 2026-10-27T09:33:48.016562+00:00
 
 Ge is verified Live once at Site b907996d (one paper/four records/six figures). Source11 rows below are pending, not Live credit. Earlier pending Ge text below is historical and superseded. Sathyan and Jordan remain excluded after automatic review refusals.

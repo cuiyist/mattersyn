@@ -11,7 +11,7 @@ Records get the review status "source_extracted": extracted from the paper and c
 automatically, not yet reviewed by an expert. They are never marked as reviewed.
 """
 from __future__ import annotations
-import argparse, json, re, sys, unicodedata
+import argparse, html, json, re, sys, unicodedata
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[2]/'recipe-atlas/scripts'))
 from reader_presentation_registry import load_reviewed_reader, source_paths, write_reviewed_reader
@@ -251,13 +251,46 @@ def components_of(composition):
     return parts
 
 
+def citation_title(value):
+    """Flatten common citation-only inline formatting; retain unknown markup."""
+    if not isinstance(value, str):
+        return value
+    value = re.sub(r'&(?:#(?:[xX][0-9A-Fa-f]+|[0-9]+)|[A-Za-z][A-Za-z0-9]+);',
+                   lambda m: html.unescape(m[0]) if m[0].startswith('&#') or m[0][1:] in html.entities.html5 else m[0], value)
+    tags = re.findall(r'</?[A-Za-z][^>]*>', value)
+    if any(not re.fullmatch(r'</?(?:sub|sup|i|b|em|strong)\s*>', tag, flags=re.IGNORECASE) for tag in tags):
+        return value
+    return re.sub(r'</?(?:sub|sup|i|b|em|strong)\s*>', '', value, flags=re.IGNORECASE)
+
+
 class Builder:
     def __init__(self, doc, include_optical=False):
+        title = doc.get('title')
+        if isinstance(title, list):
+            if len(title) != 1 or not isinstance(title[0], str) or not title[0].strip():
+                raise ValueError('Title list must contain exactly one nonblank string')
+            doc = dict(doc, title=title[0])
+        title = citation_title(doc.get('title'))
+        if title != doc.get('title'):
+            doc = dict(doc, title=title)
         authors = doc.get('authors')
         if isinstance(authors, list):
-            if not authors or any(not isinstance(name, str) or not name.strip() for name in authors):
-                raise ValueError('Authors list must contain nonblank strings')
-            doc = dict(doc, authors='; '.join(authors))
+            names = []
+            for name in authors:
+                if isinstance(name, dict):
+                    if 'name' in name:
+                        name = name['name']
+                    else:
+                        parts = [name.get(key, '') for key in ('given', 'family')]
+                        if any(not isinstance(part, str) for part in parts):
+                            raise ValueError('Author name fields must be strings')
+                        name = ' '.join(part.strip() for part in parts if part.strip())
+                if not isinstance(name, str) or not name.strip():
+                    raise ValueError('Authors list must contain nonblank names')
+                names.append(name)
+            if not names:
+                raise ValueError('Authors list must contain nonblank names')
+            doc = dict(doc, authors='; '.join(names))
         elif authors is not None and not isinstance(authors, str):
             raise ValueError('Unsupported authors representation')
         self.doc = doc; self.include_optical = include_optical

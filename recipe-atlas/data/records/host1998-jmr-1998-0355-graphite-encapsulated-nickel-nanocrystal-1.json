@@ -1,0 +1,390 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "host1998-jmr-1998-0355-graphite-encapsulated-nickel-nanocrystal-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Jonathon J. Host; Vinayak P. Dravid; Mao-Hua Teng (1998): graphite encapsulated nickel nanocrystals",
+  "material": {
+    "formula": "Ni",
+    "family": "Ni nanocrystals",
+    "elements": [
+      "Ni"
+    ],
+    "components": [
+      "Ni"
+    ],
+    "architecture": "core_shell"
+  },
+  "method": "Tungsten-arc encapsulation",
+  "sources": [
+    {
+      "id": "host1998-jmr-1998-0355",
+      "doi": "10.1557/jmr.1998.0355",
+      "title": "Systematic Study of Graphite Encapsulated Nickel Nanocrystal Synthesis with Formation Mechanism Implications",
+      "authors": "Jonathon J. Host; Vinayak P. Dravid; Mao-Hua Teng",
+      "year": 1998,
+      "url": "https://doi.org/10.1557/jmr.1998.0355",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "host1998-jmr-1998-0355",
+    "recipe_family": "host1998-jmr-1998-0355-graphite-encapsulated-nickel-nanocrystal-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Ni",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "host1998-jmr-1998-0355",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "face-centered cubic",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "host1998-jmr-1998-0355",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "host1998-jmr-1998-0355-graphite-encapsulated-nickel-nanocrystal-1--carbon",
+      "name": "carbon",
+      "formula": null,
+      "role": "nonmetal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "host1998-jmr-1998-0355",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "host1998-jmr-1998-0355-graphite-encapsulated-nickel-nanocrystal-1--after-s01-dissolve",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "host1998-jmr-1998-0355-graphite-encapsulated-nickel-nanocrystal-1--carbon"
+      ]
+    },
+    {
+      "id": "host1998-jmr-1998-0355-graphite-encapsulated-nickel-nanocrystal-1--after-s02-arc",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "host1998-jmr-1998-0355-graphite-encapsulated-nickel-nanocrystal-1--after-s01-dissolve",
+        "host1998-jmr-1998-0355-graphite-encapsulated-nickel-nanocrystal-1--carbon"
+      ]
+    },
+    {
+      "id": "host1998-jmr-1998-0355-graphite-encapsulated-nickel-nanocrystal-1--after-s03-cool",
+      "name": "mixture after step 3",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "host1998-jmr-1998-0355-graphite-encapsulated-nickel-nanocrystal-1--after-s02-arc",
+        "host1998-jmr-1998-0355-graphite-encapsulated-nickel-nanocrystal-1--carbon"
+      ]
+    },
+    {
+      "id": "host1998-jmr-1998-0355-graphite-encapsulated-nickel-nanocrystal-1--after-s04-transfer",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "host1998-jmr-1998-0355-graphite-encapsulated-nickel-nanocrystal-1--after-s03-cool",
+        "host1998-jmr-1998-0355-graphite-encapsulated-nickel-nanocrystal-1--carbon"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-dissolve",
+      "action": "dissolve",
+      "label": "Carbon predissolved in nickel",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "host1998-jmr-1998-0355-graphite-encapsulated-nickel-nanocrystal-1--carbon"
+      ],
+      "outputs": [
+        "host1998-jmr-1998-0355-graphite-encapsulated-nickel-nanocrystal-1--after-s01-dissolve"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "helium",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "host1998-jmr-1998-0355",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Carbon predissolved in nickel",
+      "evidence": [
+        {
+          "source_id": "host1998-jmr-1998-0355",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "s02-arc",
+      "action": "arc",
+      "label": "Nickel and carbon coevaporated from the melt pool",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-dissolve"
+      ],
+      "inputs": [
+        "host1998-jmr-1998-0355-graphite-encapsulated-nickel-nanocrystal-1--after-s01-dissolve",
+        "host1998-jmr-1998-0355-graphite-encapsulated-nickel-nanocrystal-1--carbon"
+      ],
+      "outputs": [
+        "host1998-jmr-1998-0355-graphite-encapsulated-nickel-nanocrystal-1--after-s02-arc"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "helium",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "host1998-jmr-1998-0355",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Nickel and carbon coevaporated from the melt pool",
+      "evidence": [
+        {
+          "source_id": "host1998-jmr-1998-0355",
+          "locator": "Main PDF p.6"
+        }
+      ]
+    },
+    {
+      "id": "s03-cool",
+      "action": "cool",
+      "label": "Particles cool and graphite layers form",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-arc"
+      ],
+      "inputs": [
+        "host1998-jmr-1998-0355-graphite-encapsulated-nickel-nanocrystal-1--after-s02-arc",
+        "host1998-jmr-1998-0355-graphite-encapsulated-nickel-nanocrystal-1--carbon"
+      ],
+      "outputs": [
+        "host1998-jmr-1998-0355-graphite-encapsulated-nickel-nanocrystal-1--after-s03-cool"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "helium",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "host1998-jmr-1998-0355",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Particles cool and graphite layers form",
+      "evidence": [
+        {
+          "source_id": "host1998-jmr-1998-0355",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "s04-transfer",
+      "action": "transfer",
+      "label": "Particle suspension transferred to TEM grid",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s03-cool"
+      ],
+      "inputs": [
+        "host1998-jmr-1998-0355-graphite-encapsulated-nickel-nanocrystal-1--after-s03-cool",
+        "host1998-jmr-1998-0355-graphite-encapsulated-nickel-nanocrystal-1--carbon"
+      ],
+      "outputs": [
+        "host1998-jmr-1998-0355-graphite-encapsulated-nickel-nanocrystal-1--after-s04-transfer"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "helium",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "host1998-jmr-1998-0355",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Particle suspension transferred to TEM grid",
+      "evidence": [
+        {
+          "source_id": "host1998-jmr-1998-0355",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "host1998-jmr-1998-0355-graphite-encapsulated-nickel-nanocrystal-1--product",
+      "source_sample_label": "graphite encapsulated nickel nanocrystals",
+      "batch_id": null,
+      "material_state_id": "host1998-jmr-1998-0355-graphite-encapsulated-nickel-nanocrystal-1--after-s04-transfer",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Ni",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "host1998-jmr-1998-0355",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "face-centered cubic",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "host1998-jmr-1998-0355",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "host1998-jmr-1998-0355",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "notes": [
+        "Reactor: vertical electrodes in a helium atmosphere (Main PDF p.1)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of carbon not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

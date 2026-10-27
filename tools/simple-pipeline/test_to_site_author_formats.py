@@ -5,6 +5,7 @@ MATTERSYN_TO_SITE_TEST_MODULE environment variable.
 """
 import ast
 import copy
+import html
 import os
 from pathlib import Path
 import re
@@ -14,13 +15,14 @@ import unittest
 MODULE = Path(os.environ.get('MATTERSYN_TO_SITE_TEST_MODULE', str(Path(__file__).with_name('to_site.py'))))
 tree = ast.parse(MODULE.read_bytes())
 slug = next(n for n in tree.body if isinstance(n, ast.FunctionDef) and n.name == 'slug')
+citation_title = next(n for n in tree.body if isinstance(n, ast.FunctionDef) and n.name == 'citation_title')
 builder = next(n for n in tree.body if isinstance(n, ast.ClassDef) and n.name == 'Builder')
 methods = [n for n in builder.body if isinstance(n, ast.FunctionDef) and n.name in {'__init__', 'source'}]
 if len(methods) != 2:
     raise AssertionError('Expected normal Builder constructor/source methods')
 minimal = ast.ClassDef(name='Builder', bases=[], keywords=[], body=methods, decorator_list=[])
-module = ast.fix_missing_locations(ast.Module(body=[slug, minimal], type_ignores=[]))
-namespace = {'re': re, 'unicodedata': unicodedata}
+module = ast.fix_missing_locations(ast.Module(body=[slug, citation_title, minimal], type_ignores=[]))
+namespace = {'re': re, 'html': html, 'unicodedata': unicodedata}
 exec(compile(module, str(MODULE), 'exec'), namespace)
 Builder = namespace['Builder']
 
@@ -69,6 +71,84 @@ class AuthorFormats(unittest.TestCase):
                 before = copy.deepcopy(original)
                 with self.assertRaises(ValueError):
                     Builder(original)
+                self.assertEqual(original, before)
+
+
+    def test_structured_official_authors_equal_written_names_and_preserve_input(self):
+        cases = (
+            ([{'given': 'Ada', 'family': 'Lovelace', 'ORCID': 'https://orcid.org/fixture', 'sequence': 'first'},
+              {'given': 'Grace M.', 'family': 'Hopper', 'sequence': 'additional'}],
+             ['Ada Lovelace', 'Grace M. Hopper']),
+            ([{'name': 'Synthetic Research Group'}], ['Synthetic Research Group']),
+            ([{'family': 'Lovelace'}, {'given': 'Ada'}], ['Lovelace', 'Ada']),
+            (['Written Name', {'given': '  Ada ', 'family': ' Lovelace  '}],
+             ['Written Name', 'Ada Lovelace']),
+        )
+        for authors, expected_names in cases:
+            with self.subTest(authors=authors):
+                original = document(authors=authors)
+                before = copy.deepcopy(original)
+                actual = Builder(original)
+                expected = Builder(document(authors=expected_names))
+                self.assertEqual(actual.source_id, expected.source_id)
+                self.assertEqual(actual.source(), expected.source())
+                self.assertEqual(original, before)
+
+    def test_structured_authors_do_not_invent_missing_or_coerce_invalid_names(self):
+        for author in ({}, {'ORCID': 'identifier-only'}, {'name': ''}, {'name': 3},
+                       {'given': None, 'family': 'Lovelace'}, {'given': 'Ada', 'family': 3},
+                       {'given': ' ', 'family': ' '}):
+            with self.subTest(author=author):
+                original = document(authors=[author])
+                before = copy.deepcopy(original)
+                with self.assertRaises(ValueError):
+                    Builder(original)
+                self.assertEqual(original, before)
+
+
+    def test_singleton_title_list_equals_written_title_without_input_changes(self):
+        original = document(title=['Exact written title'], authors=[{'given': 'Ada', 'family': 'Lovelace'}], journal=['Journal unchanged'])
+        before = copy.deepcopy(original)
+        actual = Builder(original)
+        expected = Builder(document(title='Exact written title', authors=['Ada Lovelace'], journal=['Journal unchanged']))
+        self.assertEqual(actual.source(), expected.source())
+        self.assertEqual(actual.source_id, expected.source_id)
+        self.assertEqual(actual.doc['journal'], before['journal'])
+        self.assertEqual(original, before)
+        for title in ('Written string', '', None):
+            row = document(title=title)
+            self.assertIs(Builder(row).doc, row)
+
+    def test_ambiguous_empty_and_invalid_title_lists_refuse(self):
+        for title in ([], [''], [' '], [None], [3], ['First', 'Second']):
+            with self.subTest(title=title):
+                original = document(title=title)
+                before = copy.deepcopy(original)
+                with self.assertRaises(ValueError):
+                    Builder(original)
+                self.assertEqual(original, before)
+
+
+    def test_citation_inline_markup_entities_and_plain_titles_preserve_other_fields(self):
+        cases = (
+            ('AgInS<sub>2</sub>/ZnS', 'AgInS2/ZnS'),
+            (['<i>Ag</i><sup>+</sup> &amp; <b>Zn</b> &#945; &#x3B2;'], 'Ag+ & Zn α β'),
+            ('<em>A</em> <strong>B</strong> &lt; 5', 'A B < 5'),
+            ('Plain title: Ag < 2 & Zn > 1', 'Plain title: Ag < 2 & Zn > 1'),
+            ('<unknown>Ag</unknown> &unknown; &notbogus;', '<unknown>Ag</unknown> &unknown; &notbogus;'),
+            ('<sub class="x">2</sub>', '<sub class="x">2</sub>'),
+        )
+        for title, expected in cases:
+            with self.subTest(title=title):
+                original = document(title=title, authors=[{'given': 'Ada', 'family': 'Lovelace'}],
+                                    pairs=[{'original_ordinal': 2, 'value': 1.25, 'status': 'source_extracted'}])
+                before = copy.deepcopy(original)
+                actual = Builder(original)
+                plain = Builder(document(title=expected, authors=original['authors'], pairs=original['pairs']))
+                self.assertEqual(actual.source()['title'], expected)
+                self.assertEqual(actual.source(), plain.source())
+                self.assertEqual(actual.source_id, plain.source_id)
+                self.assertEqual(actual.doc['pairs'], before['pairs'])
                 self.assertEqual(original, before)
 
 

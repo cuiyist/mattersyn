@@ -56,6 +56,12 @@ def same_bytes(a, b):
 
 def preserve_files(files, destination):
     """Preserve every prior byte; never overwrite a different earlier snapshot."""
+    if os.name == 'nt':
+        absolute = os.path.abspath(destination)
+        if not absolute.startswith('\\\\?\\'):
+            absolute = ('\\\\?\\UNC\\' + absolute[2:] if absolute.startswith('\\\\')
+                        else '\\\\?\\' + absolute)
+        destination = Path(absolute)
     files = [p for p in files if p.is_file()]
     if not files:
         return
