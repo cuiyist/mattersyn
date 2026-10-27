@@ -1,3 +1,15 @@
+## 2026-10-27 — 42-paper release: factual page-scope binding repair
+
+Verified Live remains 2,638 papers / 6,455 records / 4,334 pairs at Site b907996d618536b3da4c605748aa7527c6cf3e2a. No new publication is claimed. The dated daily queue census remains below.
+
+Daily queue census observed at 20:05 UTC: 3,163 physical input rows; 2,498 saved-read rows (608 with current two-pass evidence and 1,890 historical); Scope 481 IN / 865 OUT / 1,817 uncertain. These are dated queue observations, not distinct-primary-paper or readiness certifications. Later completed batches and conservative scope omissions remain separately recorded pending the next daily roll-up.
+
+Source PR106 merged after all thirteen local phases, actual desktop/phone review and all three exact-head CI jobs passed. Both normal Site builds passed; the subsequent route gate found five prior-batch inventory rows with page count 0 and no selected pages. The five document scopes are now rebound to retained original model-input page sidecars. Scientific records, source locators, figure crops, original ordinals, six audited exports, review status and every release check are unchanged. Fresh exact-head checks, all-42 route validation, GUI, CI and normal Site publication remain required. The original failed release and all earlier failures remain recorded.
+
+The local model continues reading the next batch. New releases retain the owner minimum of 40 papers, or all ready after 12 hours. The 400 GB cleanup trigger and 40 GB remaining-write reserve apply; cleanup is not a release gate. Rodzik is omitted from a later private pool after automatic review rejected an overbroad figure-recovery scan; there was no retry. The audited lane, Worker A/B and the five older owner questions remain paused.
+
+Earlier dated report entries follow unchanged.
+
 ## Daily status — 2026-10-27, owner speed instruction active
 
 Verified live remains **2,638 papers / 6,455 records / 4,334 pairs**. Working queue at 2026-10-27T18:05:16.506801+00:00: **2,421 saved-read rows /77 attempted without usable output /665 pending**, from3,163 physical rows. No unique-primary-paper count is claimed. Historical title labels remain444 IN /802 OUT /1,917 uncertain; these are not the current unread workload. The latest150 initially uncertain papers completed normal two-pass extraction/check:26 product-IN,49 route-OUT, and75 isolation or normal-no-eligible omissions. One of those26 was resolved as already Live and is excluded. None of these150 returns to unread because its old title label remains uncertain. At19:04 UTC, q151 has completed:48 successful two-pass papers,47 pair files,174 crops and check exit0; two papers failed after the allowed redo and stay out. The missing-pair case remains separately held. q152 is reading the next50 original PDFs locally; q153 is prepared without PDF copies.
