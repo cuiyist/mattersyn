@@ -2,6 +2,17 @@
 
 Daily queue census at 2026-10-28T04:34:49.509746+00:00: **2,721 papers Live**. The unchanged3,163 physical queue rows contain **2,825 saved-read rows** (935 current positive two-pass results;1,890 historical saved reads not revalidated),89 attempted rows without a usable current result, and249 remaining rows, including Q159's21 partial/pending rows. The dated diagnostic scope projection is **530 IN /979 OUT /1,654 uncertain**; the remaining249 split into5 IN /38 OUT /206 uncertain. These are physical-row workload counts, not deduplicated primary-paper totals or publication-ready counts, and Live papers have not been subtracted automatically. The original accepted title-axis counts and every omission remain preserved; this report does not mutate the queue.
 
+### Pending local batch particles3-after41-20261028
+
+At 2026-10-28T09:15:41.794712+00:00, three additional papers / three records / eight captioned crops are prepared locally from Source M16. The local Source dataset contains 6,577 records. Normal records, dataset bootstrap, local atlas build, sync, caption binding/application, asset/rights registration and quote-free original-ordinal export completed. The complete Source check suite, candidate browser review, exact-head CI, ordinary merge and Site deployment/anonymous verification are still required. No additional paper is Live: Site f91d472 remains 2,721 papers / 6,574 records / 4,453 pairs / 1,167 material families.
+
+This candidate is held from main merge and deployment until at least 40 new papers are ready, or the ready-pool 12-hour threshold at 2026-10-28T12:44:48Z is reached. Additional ready papers may be combined before release. The existing YAG deletion-only source read is reused; common papers receive no extra audit. New records retain source_extracted status and the six training exports remain audited-only.
+
+Storage for this pending batch: C free 158720659456 -> 157827530752 bytes at local preparation; 0 GB removed in this preparation. The conservative remaining budget is 58 GiB with a 40000000000-byte floor; physical changes include unrelated activity and are not deletion credit.
+
+Choice: use otherwise idle CPU time for the accepted candidate and keep the owner size/time release condition; leave the occupied GPU and unrelated programs untouched.
+
+
 Batch correction: before publication, the duplicate Co Figure4 crop was replaced with the correct six-panel figure, retaining its caption and PDF page locator; no recipe facts were changed. The first Source-only documentation dry was held by the existing privacy boundary for two local evidence paths in the new current checkpoint. Only those two values now use the boundary's public redaction; private proofs remain local and no policy or check was changed.
 
 Verified Live at 2026-10-28T04:13:20Z: the41-paper particles41 batch is published at Site f91d47217b35ba77881f5ae6cae5d577a386b2dc, built from Source d95c1fedddc5fc27a22c98a2a4eab3d40a156ad0 / ordinary PR108 main4421db986162dc68940555541f5d2d1e820b1169. It adds57 selected original-ordinal source_extracted records and179 captioned crops. Verified totals are2,721 papers /6,574 records /4,453 recipe-structure pairs /1,167 material families. The built website contains64,603 files /4,837,271,317 logical bytes. These data remain unreviewed; no independent audit, accuracy, calibration or training credit is added. Earlier42-paper credit stays once only.
