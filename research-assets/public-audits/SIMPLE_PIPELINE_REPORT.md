@@ -1,3 +1,17 @@
+## Verified normal three-paper batch — 2026-10-28T14:18:02+00:00
+
+The 12-hour exception was respected after the 2026-10-28T12:44:48Z deadline. Scope omissions for this three-paper batch:0. The normal Site publication added three saved particle papers, three original-ordinal source_extracted records and eight figure crops with paraphrased captions. SourceH16 `b951a05b13814cbab70b16f59096282c8240d13f`, ordinary SourceM17 `c4146dbf09c58eed3bbc035c0cf869f344aee863`; actual Site `be411a5c01a1805f1ef3c9b68713f6300f956213`. Actual accepted Live totals: 2724 papers / 6577 records / 4456 pairs / 1167 families. The genuine build contains 64633 files / 4838951200 logical bytes. Root genuine normal publication, Pages and anonymous verification support these facts; prior failed attempts remain historical. This is source-extracted material, not an independent expert audit or training/accuracy credit. Existing YAG deletion-only read/adoption and all original ordinals/rare flags remain unchanged.
+
+Storage (one Source16 boundary r3 closed window): 53309 files / 4.675264068 GB (4675264068 logical bytes), C observed 117263110144 → 122011742208 bytes;84 protected metadata holds remain excluded. Physical change is unattributed; no historical-campaign total or pending outcome is counted.
+
+Technical history retained: an initial read-only Native probe held before leaf work; a later fresh unchanged probe passed. One renewal failed because a relative metadata argument was supplied; correcting it to absolute preserved the guards and closed r3. No program was identified or stopped, and no automatic approval refusal was retried.
+
+Next step: Publish this report and DOI index through the normal Source checks, GUI, exact-head CI and ordinary merge. Continue the saved Q159 two-pass work with its six checked IN papers and21 pending rows when the unchanged protected Qwen CUDA configuration fits available GPU memory; preserve saved passes and quoted files. Keep the audit lane, Worker A/B queue and five older owner questions paused.. Root-reported GPU capacity is parked at26081MiB free versus29446.23MiB unchanged requirement; no other GPU work is stopped.
+
+Existing04:34 dated daily queue census, failures/refusals, five waiting questions and paused audit lanes remain in the retained history below. This Source report line is not a new M2 daily report or a fresh queue census.
+
+
+### Retained prior checkpoint (historical)
 ## Daily status — 2026-10-28
 
 Daily queue census at 2026-10-28T04:34:49.509746+00:00: **2,721 papers Live**. The unchanged3,163 physical queue rows contain **2,825 saved-read rows** (935 current positive two-pass results;1,890 historical saved reads not revalidated),89 attempted rows without a usable current result, and249 remaining rows, including Q159's21 partial/pending rows. The dated diagnostic scope projection is **530 IN /979 OUT /1,654 uncertain**; the remaining249 split into5 IN /38 OUT /206 uncertain. These are physical-row workload counts, not deduplicated primary-paper totals or publication-ready counts, and Live papers have not been subtracted automatically. The original accepted title-axis counts and every omission remain preserved; this report does not mutate the queue.
