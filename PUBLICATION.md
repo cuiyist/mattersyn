@@ -1,3 +1,8 @@
+Current verified Live: Site f91d47217b35ba77881f5ae6cae5d577a386b2dc at2026-10-28T04:13:20Z, from Source d95c1fedddc5fc27a22c98a2a4eab3d40a156ad0 / ordinary PR108 main4421db986162dc68940555541f5d2d1e820b1169. The41-paper batch adds57 source_extracted records and179 captioned crops; totals2,721 papers /6,574 records /4,453 pairs /1,167 families. Normal dry, GUI, Pages40629484203 and anonymous712-file/all41-route verification passed. Original publisher normal main returned0; its lost tool-session87343 OS exit remains unknown and the genuine closed-publisher reconciliation is retained. Built size64,603 files /4,837,271,317 bytes. No audit or training credit. Reading is capacity-parked in the04:23:40Z GPU observation; audit/Worker lanes and five owner questions remain paused. Earlier queue counts remain dated projections.
+
+
+Superseded checkpoint retained below.
+
 Current 2026-10-28: the42-paper batch is verified Live at Site b9aac64a97b5931bc2080829617d673fc394bee6, from Source 0bba18950df3f806a88a381d635eaf392c32aa3c / ordinary main fdd45844d9ba2796399d5ddd8885a7662085d80e, at 2026-10-28T00:20:17+00:00. It adds62 source_extracted records and231 captioned figures. Actual verified totals: 2680 papers /6517 records /4396 pairs. No audit or training credit is added. See research-assets/public-audits/SIMPLE_PIPELINE_REPORT.md.
 
 Superseded pre-Live checkpoint retained below.
