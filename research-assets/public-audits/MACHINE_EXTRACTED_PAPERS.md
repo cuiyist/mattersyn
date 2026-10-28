@@ -3016,3 +3016,14 @@ Source-extracted contributions only; saved limited-read markers add no independe
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 10.1021/acsanm.4c02691 | song2024-acsanm-4c02691 | song2024-acsanm-4c02691-cba-cspbcl3pqds-1 | particles38 | source_extracted | pending | 0 | yes; saved deletion-only read |
 | 10.1021/acs.langmuir.0c02477 | lu2020-acs-langmuir-0c02477 | lu2020-acs-langmuir-0c02477-pvp-geqds-1, lu2020-acs-langmuir-0c02477-ppa-geqds-2, lu2020-acs-langmuir-0c02477-ani-geqds-3, lu2020-acs-langmuir-0c02477-bna-geqds-4 | particles38 | source_extracted | 2026-10-27T08:13:59Z | 1 | no; common material |
+
+
+## Pending local batch particles3-after41-20261028
+
+These source_extracted rows are proposed locally; they are not Live and are not reviewed or audited.
+
+| DOI | Record IDs | Batch | Date Live | Rare-material read |
+|---|---|---|---|---|
+| 10.1111/j.1151-2916.2003.tb03535.x | liu2003-j-1151-2916-2003-tb03535-x-nanocrystalline-yag-y3al5o12-powder-1 | particles3-after41-20261028 | Not Live; pending release threshold | yes; existing one deletion-only read |
+| 10.1038/35023100 | michler2000-35023100-cdse-zns-quantum-dot-1 | particles3-after41-20261028 | Not Live; pending release threshold | not required; common material |
+| 10.1246/cl.2006.1344 | li2006-cl-2006-1344-hollow-tio2-microspheres-1 | particles3-after41-20261028 | Not Live; pending release threshold | not required; common material |
