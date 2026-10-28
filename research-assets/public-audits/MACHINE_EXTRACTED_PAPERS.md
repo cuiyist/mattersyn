@@ -3024,6 +3024,6 @@ These source_extracted rows are proposed locally; they are not Live and are not 
 
 | DOI | Record IDs | Batch | Date Live | Rare-material read |
 |---|---|---|---|---|
-| 10.1111/j.1151-2916.2003.tb03535.x | liu2003-j-1151-2916-2003-tb03535-x-nanocrystalline-yag-y3al5o12-powder-1 | particles3-after41-20261028 | Not Live; pending release threshold | yes; existing one deletion-only read |
-| 10.1038/35023100 | michler2000-35023100-cdse-zns-quantum-dot-1 | particles3-after41-20261028 | Not Live; pending release threshold | not required; common material |
-| 10.1246/cl.2006.1344 | li2006-cl-2006-1344-hollow-tio2-microspheres-1 | particles3-after41-20261028 | Not Live; pending release threshold | not required; common material |
+| 10.1111/j.1151-2916.2003.tb03535.x | liu2003-j-1151-2916-2003-tb03535-x-nanocrystalline-yag-y3al5o12-powder-1 | particles3-after41-20261028 | verified normal Site release; source_extracted/unreviewed; 2026-10-28T14:18:02+00:00; Site be411a5c01a1805f1ef3c9b68713f6300f956213 | yes; existing one deletion-only read |
+| 10.1038/35023100 | michler2000-35023100-cdse-zns-quantum-dot-1 | particles3-after41-20261028 | verified normal Site release; source_extracted/unreviewed; 2026-10-28T14:18:02+00:00; Site be411a5c01a1805f1ef3c9b68713f6300f956213 | not required; common material |
+| 10.1246/cl.2006.1344 | li2006-cl-2006-1344-hollow-tio2-microspheres-1 | particles3-after41-20261028 | verified normal Site release; source_extracted/unreviewed; 2026-10-28T14:18:02+00:00; Site be411a5c01a1805f1ef3c9b68713f6300f956213 | not required; common material |
