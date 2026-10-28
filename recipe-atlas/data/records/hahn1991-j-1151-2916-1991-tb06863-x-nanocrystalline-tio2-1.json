@@ -1,0 +1,313 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "hahn1991-j-1151-2916-1991-tb06863-x-nanocrystalline-tio2-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Horst Hahn and Robert S. Averback (1991): nanocrystalline TiO2",
+  "material": {
+    "formula": "TiO2",
+    "family": "TiO2 nanocrystals",
+    "elements": [
+      "Ti",
+      "O"
+    ],
+    "components": [
+      "TiO2"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Synthesis as described in the source",
+  "sources": [
+    {
+      "id": "hahn1991-j-1151-2916-1991-tb06863-x",
+      "doi": "10.1111/j.1151-2916.1991.tb06863.x",
+      "title": "Low-Temperature Creep of Nanocrystalline Titanium(IV) Oxide",
+      "authors": "Horst Hahn and Robert S. Averback",
+      "year": 1991,
+      "url": "https://doi.org/10.1111/j.1151-2916.1991.tb06863.x",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "hahn1991-j-1151-2916-1991-tb06863-x",
+    "recipe_family": "hahn1991-j-1151-2916-1991-tb06863-x-nanocrystalline-tio2-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "hahn1991-j-1151-2916-1991-tb06863-x-nanocrystalline-tio2-1--ti-metal",
+      "name": "Ti metal",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "hahn1991-j-1151-2916-1991-tb06863-x",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "hahn1991-j-1151-2916-1991-tb06863-x-nanocrystalline-tio2-1--o2",
+      "name": "O2",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "hahn1991-j-1151-2916-1991-tb06863-x",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "hahn1991-j-1151-2916-1991-tb06863-x-nanocrystalline-tio2-1--after-s01-evaporate",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "hahn1991-j-1151-2916-1991-tb06863-x-nanocrystalline-tio2-1--ti-metal"
+      ]
+    },
+    {
+      "id": "hahn1991-j-1151-2916-1991-tb06863-x-nanocrystalline-tio2-1--after-s02-press",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "hahn1991-j-1151-2916-1991-tb06863-x-nanocrystalline-tio2-1--after-s01-evaporate"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-evaporate",
+      "action": "evaporate",
+      "label": "Ti metal is evaporated from a tungsten boat using Joule heating in a He atmosphere",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "hahn1991-j-1151-2916-1991-tb06863-x-nanocrystalline-tio2-1--ti-metal"
+      ],
+      "outputs": [
+        "hahn1991-j-1151-2916-1991-tb06863-x-nanocrystalline-tio2-1--after-s01-evaporate"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 100,
+          "minimum": null,
+          "maximum": null,
+          "unit": "Pa",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "100 Pa",
+          "evidence": [
+            {
+              "source_id": "hahn1991-j-1151-2916-1991-tb06863-x",
+              "locator": "Main PDF p.1"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Ti metal is evaporated from a tungsten boat using Joule heating in a He atmosphere",
+      "evidence": [
+        {
+          "source_id": "hahn1991-j-1151-2916-1991-tb06863-x",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "s02-press",
+      "action": "press",
+      "label": "The powder is pressed at pressures up to 0.7 GPa in hardened steel sleeves at temperatures as high as 480°C",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-evaporate"
+      ],
+      "inputs": [
+        "hahn1991-j-1151-2916-1991-tb06863-x-nanocrystalline-tio2-1--after-s01-evaporate"
+      ],
+      "outputs": [
+        "hahn1991-j-1151-2916-1991-tb06863-x-nanocrystalline-tio2-1--after-s02-press"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 480,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "480 °C",
+          "evidence": [
+            {
+              "source_id": "hahn1991-j-1151-2916-1991-tb06863-x",
+              "locator": "Main PDF p.1"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "The powder is pressed at pressures up to 0.7 GPa in hardened steel sleeves at temperatures as high as 480°C",
+      "evidence": [
+        {
+          "source_id": "hahn1991-j-1151-2916-1991-tb06863-x",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "hahn1991-j-1151-2916-1991-tb06863-x-nanocrystalline-tio2-1--product",
+      "source_sample_label": "nanocrystalline TiO2",
+      "batch_id": null,
+      "material_state_id": "hahn1991-j-1151-2916-1991-tb06863-x-nanocrystalline-tio2-1--after-s02-press",
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "hahn1991-j-1151-2916-1991-tb06863-x",
+          "locator": "Main PDF"
+        }
+      ],
+      "notes": [
+        "Reactor: chamber with a tungsten boat and liquid-nitrogen-cooled shroud (Main PDF p.1)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of Ti metal not reported in the extracted text.",
+      "Amount of O2 not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

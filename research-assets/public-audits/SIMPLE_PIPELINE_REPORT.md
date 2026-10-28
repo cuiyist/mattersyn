@@ -1,3 +1,23 @@
+Source particles41 local preparation: 41 saved papers, 57 selected original-ordinal source-extracted records and 179 figures with retained caption provenance are pending normal Source and Site release. The working Source contains 6574 records; the latest genuinely verified Live milestone remains 2680 papers, 6517 records, 4396 recipe pairs and 1156 material families. The new41 have no Live credit. Original saved pairs, passes, PDFs, caption packets, earlier failures and Root-adopted deletion-only derivatives remain; common-material caption work is not a scientific audit. q157 completed 50 attempts with49 successful two-pass papers,49 saved pairs and153 figures (Root19d2bb/0); its separate post-read helper failure is retained. q158 is active with controller15600 on the same protected server19184 (Root00:30 observation); q159 is prepared only. All old owner questions, paused audit lanes and Worker A/B remain paused.
+
+
+Normal179-caption binding and57-record/435-asset registration are complete. An optional full-reference diagnostic was refused before execution and left out; no paper was omitted for it. No normal release check was disabled.
+
+## Daily status — 2026-10-28
+
+At 2026-10-28T00:20:17+00:00, the normal Pages deployment and anonymous checks verified the42-paper batch at Site b9aac64a97b5931bc2080829617d673fc394bee6. The batch adds62 source_extracted records and231 captioned figures:12 papers/14 records/69 figures from the earlier Source-only batch, and30 papers/48 records/162 figures from the bulk import. Verified totals are 2680 papers, 6517 records and 4396 pairs. Original identities, ordinals and recorded limited-read markers remain; no independent audit or training credit is added.
+
+Saved pure-Scope snapshot at 2026-10-27T20:05:47.360659+00:00: **481 IN /865 OUT /1817 uncertain**, across3,163 physical rows. Historical title labels remain 444 IN /802 OUT /1917 uncertain. Eligibility, bibliography, figures and operational omissions are separate from Scope. This dated projection neither mutates the queue nor certifies unique papers or release readiness.
+
+Rodzik remains omitted after automatic review refusal; no retry. The earlier preparer timestamp-comparison failure and failed Site13c route check remain historical. cs13b and cs13c remain excluded after their fresh automatic approval refusals; neither delete item is retried. These histories add no current failed-release, audit or training claim.
+
+The extra private 12 GiB physical-RAM/commit launch gate was removed by Root; RAM remains telemetry. All normal release gates and the 40 GB remaining-disk floor are unchanged, and the first failed attempt is preserved.
+
+A private caption-binding pointer lookup unintentionally included quote-bearing saved JSON in a truncated Codex tool response. The lookup stopped; exposure volume remains unknown, original history remains, and no paper payload was uploaded to GitHub.
+
+The current private next-batch packet contains 41 candidate papers, 57 selected record IDs and 179 crops, with no admission or Live credit. All 179 caption references were privately bound by Root on 2026-10-28 UTC; normal Source integration and publication remain pending.
+
+### Retained pre-Live checkpoint (historical; failures and waiting items preserved)
 ## 2026-10-27 — 42-paper release: factual page-scope binding repair
 
 Verified Live remains 2,638 papers / 6,455 records / 4,334 pairs at Site b907996d618536b3da4c605748aa7527c6cf3e2a. No new publication is claimed. The dated daily queue census remains below.
@@ -32,7 +52,7 @@ Next private readiness: q147 contributes3 papers/3 selected records/13 captioned
 
 Owner October27 rules govern: read uncertain papers, decide isolable-particle scope from checked products/routes, and skip known OUT. Use saved IN first, unread uncertain next, then saved uncertain/missing-current outputs. Keep three new desktop/phone page reviews plus changed display-code pages, every release check, neutral display, captions and audited-only exports. The400GB cleanup threshold is a trigger; operations leave at least40GB after estimated need. Cleanup never delays a batch; mattersyn2 reporting is at most daily. Audit lane, WorkerA/B, five older owner questions and sampling denominators remain paused and unchanged.
 
-Storage for this pending batch: C free **121.45 → 107.08 GB**; **18.06 GB logical removed**,218,147 completed generated files. Concurrent physical change is not isolated reclaim. Protected inputs and the active model/server remain. Completed rebuildable generated copies are retired only after their consumers finish; original failure logs and reconstruction inputs stay retained.
+Storage for this batch: C free **74.568 GB before the last cleanup -> 56.137 GB at the actual post-Live observation**; the last closed cleanup (22:17-22:21 UTC) removed **4.640 GB logical (4,640,493,128 bytes)**. Once-only completed manual retirement totals **31.979724689 GB logical across376,421 generated files**. Normal unmeasured raw retirements add **+0 verified logical bytes**. These C points do not measure isolated physical gain; protected inputs, the active server, failure history and reconstruction controls remain. Both refused cs13b and cs13c copies stay untouched; neither delete item is retried.
 
 Choice: fix the waiting title display before pushing, retain one42-paper release and keep the next local batch reading. The cleanup prefix lookup now uses an equivalent normalized ancestor-set index; all native file/hash/consumer guards are unchanged. The original interrupted read-only qualifier remains on record. The next50-paper model output allowance is2GiB, over23times the largest measured completed50-paper output; full build, transport and background allowances remain separate. Older dated checkpoints retain their original facts and rules.
 
@@ -3730,3 +3750,5 @@ Q27 normal build at Source9e4eefd was correctly stopped by the Ge consistency ch
 Q30 current operational metadata supplement (2026-10-24T01:14:34.851276+00:00): B138 launch recorded controller17928 on existing server19184; saved run-state at 2026-10-24T01:14:02.768893+00:00 reports phase extract, 22/23 successful two-pass papers. This saved metadata is not a new native liveness or final completion assertion. B137 has six eligible papers/six records with all44 caption keys closed; four limited rare-paper reads caused six whole-object deletions and zero whole-paper holds. Pool/publication credit is not inferred. Earlier Q30 private compatibility attempts failed closed on nested argv arrays, canonicalized output argv and nested process-stdout receipt shape. Immutable R3/R4/R5 adapters corrected these interfaces; ownership, source boundary, quote/two-pass and all release checks remain enabled. Original failures, native results and cleanup accounting are retained. Q30 remains unpublished; the earlier dated census/history above is preserved.
 
 Source8 pre-publication build follow-up: the complete build correctly rejected a stale primary Reader split-file checksum after the two caption corrections. Refreshing that exact checksum binding preserves all Reader display data, scientific records and release checks. The failed run remains recorded; this batch is still unpublished.
+
+Pending 41-paper batch: corrected the cobalt Figure 4 crop before publication after the visual check found a duplicate of Figure 3; all six schematic panels are now visible. The existing caption and scientific values are unchanged; normal Reader, rights and release checksum bindings are refreshed. The generated inventory also received a JSON-equivalent CRLF-to-LF formatting correction after the normal whitespace check.

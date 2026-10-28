@@ -1,0 +1,464 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "leff1995-j100018a041-thiol-capped-au-nanocrystals-au-s-molar-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Daniel V. Leff (1995): thiol-capped Au nanocrystals (Au/S molar ratio 3.5:1, diameter 68.3 ± 3.8 Å)",
+  "material": {
+    "formula": "Au",
+    "family": "Au nanocrystals",
+    "elements": [
+      "Au"
+    ],
+    "components": [
+      "Au"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Synthesis as described in the source",
+  "sources": [
+    {
+      "id": "leff1995-j100018a041",
+      "doi": "10.1021/j100018a041",
+      "title": "Thermodynamic Control of Gold Nanocrystal Size: Experiment and Theory",
+      "authors": "Daniel V. Leff, Pamela C. Ohara, James R. Heath, and William M. Gelbart",
+      "year": 1995,
+      "url": "https://doi.org/10.1021/j100018a041",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "leff1995-j100018a041",
+    "recipe_family": "leff1995-j100018a041-thiol-capped-au-nanocrystals-au-s-molar-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "phase": {
+      "value": "face-centered cubic (fee)",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "leff1995-j100018a041",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "sphere",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "leff1995-j100018a041",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "leff1995-j100018a041-thiol-capped-au-nanocrystals-au-s-molar-1--after-s01-shake",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "leff1995-j100018a041-thiol-capped-au-nanocrystals-au-s-molar-1--after-s02-separate",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "leff1995-j100018a041-thiol-capped-au-nanocrystals-au-s-molar-1--after-s01-shake"
+      ]
+    },
+    {
+      "id": "leff1995-j100018a041-thiol-capped-au-nanocrystals-au-s-molar-1--after-s03-rotovap",
+      "name": "mixture after step 3",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "leff1995-j100018a041-thiol-capped-au-nanocrystals-au-s-molar-1--after-s02-separate"
+      ]
+    },
+    {
+      "id": "leff1995-j100018a041-thiol-capped-au-nanocrystals-au-s-molar-1--after-s04-precipitate",
+      "name": "mixture after step 4",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "leff1995-j100018a041-thiol-capped-au-nanocrystals-au-s-molar-1--after-s03-rotovap"
+      ]
+    },
+    {
+      "id": "leff1995-j100018a041-thiol-capped-au-nanocrystals-au-s-molar-1--after-s05-filter",
+      "name": "mixture after step 5",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "leff1995-j100018a041-thiol-capped-au-nanocrystals-au-s-molar-1--after-s04-precipitate"
+      ]
+    },
+    {
+      "id": "leff1995-j100018a041-thiol-capped-au-nanocrystals-au-s-molar-1--after-s06-dry",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "leff1995-j100018a041-thiol-capped-au-nanocrystals-au-s-molar-1--after-s05-filter"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-shake",
+      "action": "shake",
+      "label": "Shake mixture to remove color from aqueous phase",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "leff1995-j100018a041-thiol-capped-au-nanocrystals-au-s-molar-1--after-s01-shake"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "leff1995-j100018a041",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Shake mixture to remove color from aqueous phase",
+      "evidence": [
+        {
+          "source_id": "leff1995-j100018a041",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-separate",
+      "action": "separate",
+      "label": "Separate organic phase from aqueous phase",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-shake"
+      ],
+      "inputs": [
+        "leff1995-j100018a041-thiol-capped-au-nanocrystals-au-s-molar-1--after-s01-shake"
+      ],
+      "outputs": [
+        "leff1995-j100018a041-thiol-capped-au-nanocrystals-au-s-molar-1--after-s02-separate"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "leff1995-j100018a041",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Separate organic phase from aqueous phase",
+      "evidence": [
+        {
+          "source_id": "leff1995-j100018a041",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-rotovap",
+      "action": "rotovap",
+      "label": "Rotovap organic phase to 5 mL",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-separate"
+      ],
+      "inputs": [
+        "leff1995-j100018a041-thiol-capped-au-nanocrystals-au-s-molar-1--after-s02-separate"
+      ],
+      "outputs": [
+        "leff1995-j100018a041-thiol-capped-au-nanocrystals-au-s-molar-1--after-s03-rotovap"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "leff1995-j100018a041",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Rotovap organic phase to 5 mL",
+      "evidence": [
+        {
+          "source_id": "leff1995-j100018a041",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s04-precipitate",
+      "action": "precipitate",
+      "label": "Precipitate product with ethanol",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s03-rotovap"
+      ],
+      "inputs": [
+        "leff1995-j100018a041-thiol-capped-au-nanocrystals-au-s-molar-1--after-s03-rotovap"
+      ],
+      "outputs": [
+        "leff1995-j100018a041-thiol-capped-au-nanocrystals-au-s-molar-1--after-s04-precipitate"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 4,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "4 h",
+          "evidence": [
+            {
+              "source_id": "leff1995-j100018a041",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Precipitate product with ethanol",
+      "evidence": [
+        {
+          "source_id": "leff1995-j100018a041",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s05-filter",
+      "action": "filter",
+      "label": "Filter precipitate with polypropylene filter paper",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s04-precipitate"
+      ],
+      "inputs": [
+        "leff1995-j100018a041-thiol-capped-au-nanocrystals-au-s-molar-1--after-s04-precipitate"
+      ],
+      "outputs": [
+        "leff1995-j100018a041-thiol-capped-au-nanocrystals-au-s-molar-1--after-s05-filter"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Filter precipitate with polypropylene filter paper",
+      "evidence": [
+        {
+          "source_id": "leff1995-j100018a041",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s06-dry",
+      "action": "dry",
+      "label": "Dry filtrate on vacuum line",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s05-filter"
+      ],
+      "inputs": [
+        "leff1995-j100018a041-thiol-capped-au-nanocrystals-au-s-molar-1--after-s05-filter"
+      ],
+      "outputs": [
+        "leff1995-j100018a041-thiol-capped-au-nanocrystals-au-s-molar-1--after-s06-dry"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Dry filtrate on vacuum line",
+      "evidence": [
+        {
+          "source_id": "leff1995-j100018a041",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "leff1995-j100018a041-thiol-capped-au-nanocrystals-au-s-molar-1--product",
+      "source_sample_label": "thiol-capped Au nanocrystals (Au/S molar ratio 3.5:1, diameter 68.3 ± 3.8 Å)",
+      "batch_id": null,
+      "material_state_id": "leff1995-j100018a041-thiol-capped-au-nanocrystals-au-s-molar-1--after-s06-dry",
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "phase": {
+        "value": "face-centered cubic (fee)",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "leff1995-j100018a041",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "sphere",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "leff1995-j100018a041",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "leff1995-j100018a041",
+          "locator": "Main PDF"
+        }
+      ],
+      "notes": [
+        "Reaction time: 12 h (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
