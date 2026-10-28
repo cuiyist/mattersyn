@@ -1,3 +1,7 @@
+Current 2026-10-28: the42-paper batch is verified Live at Site b9aac64a97b5931bc2080829617d673fc394bee6, from Source 0bba18950df3f806a88a381d635eaf392c32aa3c / ordinary main fdd45844d9ba2796399d5ddd8885a7662085d80e, at 2026-10-28T00:20:17+00:00. It adds62 source_extracted records and231 captioned figures. Actual verified totals: 2680 papers /6517 records /4396 pairs. No audit or training credit is added. See research-assets/public-audits/SIMPLE_PIPELINE_REPORT.md.
+
+Superseded pre-Live checkpoint retained below.
+
 Current 2026-10-27: Source PR106 is merged; the combined 42-paper Site release remains unpublished. Five missing page-scope inventory bindings are being corrected from saved input sidecars, with all scientific records and audit statuses unchanged. See research-assets/public-audits/SIMPLE_PIPELINE_REPORT.md. Owner Oct27 rules: uncertain inputs get normal two-pass reading then product scope; releases at least40 papers or all ready after12h; cleanup trigger400GB is not a gate and MatterSyn writes retain40GB after estimated need. Audit/Worker lanes and five older owner questions remain paused.
 
 2026-10-27 import choice: use the independently reviewed serial-import estimate of 24 GiB (12 GiB own writes plus 12 GiB other activity). It covers the unchanged normal-five import only; original 32 GiB code, separate full-build budgets, the 100 GiB reserve and every release check remain. No large jobs overlap.

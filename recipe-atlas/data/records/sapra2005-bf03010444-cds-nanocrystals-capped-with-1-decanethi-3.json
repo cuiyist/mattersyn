@@ -1,0 +1,350 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "sapra2005-bf03010444-cds-nanocrystals-capped-with-1-decanethi-3",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Sameer Sapra and D D Sarma (2005): CdS nanocrystals capped with 1-decanethiol",
+  "material": {
+    "formula": "CdS",
+    "family": "CdS nanocrystals",
+    "elements": [
+      "Cd",
+      "S"
+    ],
+    "components": [
+      "CdS"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Synthesis as described in the source",
+  "sources": [
+    {
+      "id": "sapra2005-bf03010444",
+      "doi": "10.1007/bf03010444",
+      "title": "Simultaneous control of nanocrystal size and nanocrystal–nanocrystal separation in CdS nanocrystal assembly",
+      "authors": "Sameer Sapra and D D Sarma",
+      "year": 2005,
+      "url": "https://doi.org/10.1007/bf03010444",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "sapra2005-bf03010444",
+    "recipe_family": "sapra2005-bf03010444-cds-nanocrystals-capped-with-1-decanethi-3",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdS",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "sapra2005-bf03010444",
+          "locator": "Main PDF p.5"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "wurtzite and zincblende",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "sapra2005-bf03010444",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "sphere",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "sapra2005-bf03010444",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "sapra2005-bf03010444-cds-nanocrystals-capped-with-1-decanethi-3--sodium-sulfide",
+      "name": "sodium sulfide",
+      "formula": null,
+      "role": "chalcogen_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "concentration": {
+          "value": 0.2,
+          "minimum": null,
+          "maximum": null,
+          "unit": "M",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0.2 M",
+          "evidence": [
+            {
+              "source_id": "sapra2005-bf03010444",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "sapra2005-bf03010444",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "sapra2005-bf03010444-cds-nanocrystals-capped-with-1-decanethi-3--after-s01-add",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "sapra2005-bf03010444-cds-nanocrystals-capped-with-1-decanethi-3--sodium-sulfide"
+      ]
+    },
+    {
+      "id": "sapra2005-bf03010444-cds-nanocrystals-capped-with-1-decanethi-3--after-s02-reflux",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "sapra2005-bf03010444-cds-nanocrystals-capped-with-1-decanethi-3--after-s01-add"
+      ]
+    },
+    {
+      "id": "sapra2005-bf03010444-cds-nanocrystals-capped-with-1-decanethi-3--after-s03-centrifuge",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "sapra2005-bf03010444-cds-nanocrystals-capped-with-1-decanethi-3--after-s02-reflux"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-add",
+      "action": "add",
+      "label": "Add sodium sulfide solution dropwise",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "sapra2005-bf03010444-cds-nanocrystals-capped-with-1-decanethi-3--sodium-sulfide"
+      ],
+      "outputs": [
+        "sapra2005-bf03010444-cds-nanocrystals-capped-with-1-decanethi-3--after-s01-add"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Add sodium sulfide solution dropwise",
+      "evidence": [
+        {
+          "source_id": "sapra2005-bf03010444",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-reflux",
+      "action": "reflux",
+      "label": "Reflux the reaction mixture overnight",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-add"
+      ],
+      "inputs": [
+        "sapra2005-bf03010444-cds-nanocrystals-capped-with-1-decanethi-3--after-s01-add"
+      ],
+      "outputs": [
+        "sapra2005-bf03010444-cds-nanocrystals-capped-with-1-decanethi-3--after-s02-reflux"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Reflux the reaction mixture overnight",
+      "evidence": [
+        {
+          "source_id": "sapra2005-bf03010444",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-centrifuge",
+      "action": "centrifuge",
+      "label": "Centrifuge to obtain solid powder samples",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-reflux"
+      ],
+      "inputs": [
+        "sapra2005-bf03010444-cds-nanocrystals-capped-with-1-decanethi-3--after-s02-reflux"
+      ],
+      "outputs": [
+        "sapra2005-bf03010444-cds-nanocrystals-capped-with-1-decanethi-3--after-s03-centrifuge"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Centrifuge to obtain solid powder samples",
+      "evidence": [
+        {
+          "source_id": "sapra2005-bf03010444",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "sapra2005-bf03010444-cds-nanocrystals-capped-with-1-decanethi-3--product",
+      "source_sample_label": "CdS nanocrystals capped with 1-decanethiol",
+      "batch_id": null,
+      "material_state_id": "sapra2005-bf03010444-cds-nanocrystals-capped-with-1-decanethi-3--after-s03-centrifuge",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdS",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "sapra2005-bf03010444",
+            "locator": "Main PDF p.5"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "wurtzite and zincblende",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "sapra2005-bf03010444",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "sphere",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "sapra2005-bf03010444",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": "1-decanethiol",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "sapra2005-bf03010444",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "sapra2005-bf03010444",
+          "locator": "Main PDF p.5"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Size not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

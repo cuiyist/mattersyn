@@ -1,0 +1,331 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "qin2005-s10853-005-3874-7-nanocrystalline-zno-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "X. J. QIN (2005): nanocrystalline ZnO",
+  "material": {
+    "formula": "ZnO",
+    "family": "ZnO nanocrystals",
+    "elements": [
+      "Zn",
+      "O"
+    ],
+    "components": [
+      "ZnO"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Homogeneous precipitation",
+  "sources": [
+    {
+      "id": "qin2005-s10853-005-3874-7",
+      "doi": "10.1007/s10853-005-3874-7",
+      "title": "Sintering characteristics of nanocrystalline ZnO",
+      "authors": "X. J. QIN, G. J. SHAO, R. P. LIU, W. K. WANG",
+      "year": 2005,
+      "url": "https://doi.org/10.1007/s10853-005-3874-7",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "qin2005-s10853-005-3874-7",
+    "recipe_family": "qin2005-s10853-005-3874-7-nanocrystalline-zno-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "ZnO",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "qin2005-s10853-005-3874-7",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "zinc blende",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "qin2005-s10853-005-3874-7",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": 20,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "20 nm",
+      "evidence": [
+        {
+          "source_id": "qin2005-s10853-005-3874-7",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "qin2005-s10853-005-3874-7-nanocrystalline-zno-1--zno",
+      "name": "ZnO",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "qin2005-s10853-005-3874-7",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "qin2005-s10853-005-3874-7-nanocrystalline-zno-1--after-s01-grind",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "qin2005-s10853-005-3874-7-nanocrystalline-zno-1--zno"
+      ]
+    },
+    {
+      "id": "qin2005-s10853-005-3874-7-nanocrystalline-zno-1--after-s02-compact",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "qin2005-s10853-005-3874-7-nanocrystalline-zno-1--after-s01-grind",
+        "qin2005-s10853-005-3874-7-nanocrystalline-zno-1--zno"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-grind",
+      "action": "grind",
+      "label": "Grinding the ZnO powder",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "qin2005-s10853-005-3874-7-nanocrystalline-zno-1--zno"
+      ],
+      "outputs": [
+        "qin2005-s10853-005-3874-7-nanocrystalline-zno-1--after-s01-grind"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 0.5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0.5 h",
+          "evidence": [
+            {
+              "source_id": "qin2005-s10853-005-3874-7",
+              "locator": "Main PDF p.1"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Grinding the ZnO powder",
+      "evidence": [
+        {
+          "source_id": "qin2005-s10853-005-3874-7",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "s02-compact",
+      "action": "compact",
+      "label": "Compacting into disks",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-grind"
+      ],
+      "inputs": [
+        "qin2005-s10853-005-3874-7-nanocrystalline-zno-1--after-s01-grind",
+        "qin2005-s10853-005-3874-7-nanocrystalline-zno-1--zno"
+      ],
+      "outputs": [
+        "qin2005-s10853-005-3874-7-nanocrystalline-zno-1--after-s02-compact"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Compacting into disks",
+      "evidence": [
+        {
+          "source_id": "qin2005-s10853-005-3874-7",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "qin2005-s10853-005-3874-7-nanocrystalline-zno-1--product",
+      "source_sample_label": "nanocrystalline ZnO",
+      "batch_id": null,
+      "material_state_id": "qin2005-s10853-005-3874-7-nanocrystalline-zno-1--after-s02-compact",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "ZnO",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "qin2005-s10853-005-3874-7",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "zinc blende",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "qin2005-s10853-005-3874-7",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "qin2005-s10853-005-3874-7",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [
+    {
+      "id": "qin2005-s10853-005-3874-7-nanocrystalline-zno-1--size",
+      "sample_id": "qin2005-s10853-005-3874-7-nanocrystalline-zno-1--product",
+      "property": "crystallite_size",
+      "technique": "XRD",
+      "value": {
+        "value": 20,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "20 nm",
+        "evidence": [
+          {
+            "source_id": "qin2005-s10853-005-3874-7",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "qin2005-s10853-005-3874-7",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of ZnO not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

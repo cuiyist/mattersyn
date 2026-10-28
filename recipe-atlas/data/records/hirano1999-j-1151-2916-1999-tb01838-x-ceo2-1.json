@@ -1,0 +1,396 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "hirano1999-j-1151-2916-1999-tb01838-x-ceo2-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Masanori Hirano and Etsuro Kato (1999): CeO2",
+  "material": {
+    "formula": "CeO2",
+    "family": "CeO2 nanocrystals",
+    "elements": [
+      "Ce",
+      "O"
+    ],
+    "components": [
+      "CeO2"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Hydrothermal",
+  "sources": [
+    {
+      "id": "hirano1999-j-1151-2916-1999-tb01838-x",
+      "doi": "10.1111/j.1151-2916.1999.tb01838.x",
+      "title": "Hydrothermal Synthesis of Nanocrystalline Cerium(IV) Oxide Powders",
+      "authors": "Masanori Hirano and Etsuro Kato",
+      "year": 1999,
+      "url": "https://doi.org/10.1111/j.1151-2916.1999.tb01838.x",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "hirano1999-j-1151-2916-1999-tb01838-x",
+    "recipe_family": "hirano1999-j-1151-2916-1999-tb01838-x-ceo2-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CeO2",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "hirano1999-j-1151-2916-1999-tb01838-x",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "fluorite",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "hirano1999-j-1151-2916-1999-tb01838-x",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "angular",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "hirano1999-j-1151-2916-1999-tb01838-x",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "hirano1999-j-1151-2916-1999-tb01838-x-ceo2-1--cerium-iv-sulfate-tetrahydrate",
+      "name": "cerium(IV) sulfate tetrahydrate",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "hirano1999-j-1151-2916-1999-tb01838-x",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "hirano1999-j-1151-2916-1999-tb01838-x-ceo2-1--urea",
+      "name": "urea",
+      "formula": null,
+      "role": "ligand",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "hirano1999-j-1151-2916-1999-tb01838-x",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "hirano1999-j-1151-2916-1999-tb01838-x-ceo2-1--after-s01-heat",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "hirano1999-j-1151-2916-1999-tb01838-x-ceo2-1--cerium-iv-sulfate-tetrahydrate",
+        "hirano1999-j-1151-2916-1999-tb01838-x-ceo2-1--urea"
+      ]
+    },
+    {
+      "id": "hirano1999-j-1151-2916-1999-tb01838-x-ceo2-1--after-s02-wash",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "hirano1999-j-1151-2916-1999-tb01838-x-ceo2-1--after-s01-heat"
+      ]
+    },
+    {
+      "id": "hirano1999-j-1151-2916-1999-tb01838-x-ceo2-1--after-s03-dry",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "hirano1999-j-1151-2916-1999-tb01838-x-ceo2-1--after-s02-wash"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-heat",
+      "action": "heat",
+      "label": "Heat solution under hydrothermal conditions",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "hirano1999-j-1151-2916-1999-tb01838-x-ceo2-1--cerium-iv-sulfate-tetrahydrate",
+        "hirano1999-j-1151-2916-1999-tb01838-x-ceo2-1--urea"
+      ],
+      "outputs": [
+        "hirano1999-j-1151-2916-1999-tb01838-x-ceo2-1--after-s01-heat"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 180,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "180 °C",
+          "evidence": [
+            {
+              "source_id": "hirano1999-j-1151-2916-1999-tb01838-x",
+              "locator": "Main PDF p.1"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "5 h",
+          "evidence": [
+            {
+              "source_id": "hirano1999-j-1151-2916-1999-tb01838-x",
+              "locator": "Main PDF p.1"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "hirano1999-j-1151-2916-1999-tb01838-x",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Heat solution under hydrothermal conditions",
+      "evidence": [
+        {
+          "source_id": "hirano1999-j-1151-2916-1999-tb01838-x",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "s02-wash",
+      "action": "wash",
+      "label": "Wash precipitated powders",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-heat"
+      ],
+      "inputs": [
+        "hirano1999-j-1151-2916-1999-tb01838-x-ceo2-1--after-s01-heat"
+      ],
+      "outputs": [
+        "hirano1999-j-1151-2916-1999-tb01838-x-ceo2-1--after-s02-wash"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Wash precipitated powders",
+      "evidence": [
+        {
+          "source_id": "hirano1999-j-1151-2916-1999-tb01838-x",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "s03-dry",
+      "action": "dry",
+      "label": "Dry powders in oven",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-wash"
+      ],
+      "inputs": [
+        "hirano1999-j-1151-2916-1999-tb01838-x-ceo2-1--after-s02-wash"
+      ],
+      "outputs": [
+        "hirano1999-j-1151-2916-1999-tb01838-x-ceo2-1--after-s03-dry"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Dry powders in oven",
+      "evidence": [
+        {
+          "source_id": "hirano1999-j-1151-2916-1999-tb01838-x",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "hirano1999-j-1151-2916-1999-tb01838-x-ceo2-1--product",
+      "source_sample_label": "CeO2",
+      "batch_id": null,
+      "material_state_id": "hirano1999-j-1151-2916-1999-tb01838-x-ceo2-1--after-s03-dry",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CeO2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "hirano1999-j-1151-2916-1999-tb01838-x",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "fluorite",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "hirano1999-j-1151-2916-1999-tb01838-x",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "angular",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "hirano1999-j-1151-2916-1999-tb01838-x",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": "urea",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "hirano1999-j-1151-2916-1999-tb01838-x",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "hirano1999-j-1151-2916-1999-tb01838-x",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "notes": [
+        "Reactor: 25 cm³ Teflon bottle in a stainless-steel vessel (Main PDF p.1).",
+        "Reaction temperature: 180 degC (Main PDF p.1)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Size not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of cerium(IV) sulfate tetrahydrate not reported in the extracted text.",
+      "Amount of urea not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

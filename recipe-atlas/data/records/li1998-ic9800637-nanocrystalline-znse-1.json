@@ -1,0 +1,529 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "li1998-ic9800637-nanocrystalline-znse-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Yadong Li (1998): nanocrystalline ZnSe",
+  "material": {
+    "formula": "ZnSe",
+    "family": "ZnSe nanocrystals",
+    "elements": [
+      "Zn",
+      "Se"
+    ],
+    "components": [
+      "ZnSe"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Solvothermal",
+  "sources": [
+    {
+      "id": "li1998-ic9800637",
+      "doi": "10.1021/ic9800637",
+      "title": "A Solvothermal Elemental Reaction To Produce Nanocrystalline ZnSe",
+      "authors": "Yadong Li, Yi Ding, Yitai Qian, Yue Zhang, and Li Yang",
+      "year": 1998,
+      "url": "https://doi.org/10.1021/ic9800637",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "li1998-ic9800637",
+    "recipe_family": "li1998-ic9800637-nanocrystalline-znse-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "phase": {
+      "value": "zinc blende",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "li1998-ic9800637",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": 13.5,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "13.5 nm",
+      "evidence": [
+        {
+          "source_id": "li1998-ic9800637",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "platelet | sphere",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "li1998-ic9800637",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "li1998-ic9800637-nanocrystalline-znse-1--zinc-powder",
+      "name": "zinc powder",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "li1998-ic9800637",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "li1998-ic9800637-nanocrystalline-znse-1--selenium-powder",
+      "name": "selenium powder",
+      "formula": null,
+      "role": "chalcogen_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "li1998-ic9800637",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "li1998-ic9800637-nanocrystalline-znse-1--pyridine",
+      "name": "pyridine",
+      "formula": null,
+      "role": "solvent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "li1998-ic9800637",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "li1998-ic9800637-nanocrystalline-znse-1--after-s01-add",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "li1998-ic9800637-nanocrystalline-znse-1--zinc-powder",
+        "li1998-ic9800637-nanocrystalline-znse-1--selenium-powder"
+      ]
+    },
+    {
+      "id": "li1998-ic9800637-nanocrystalline-znse-1--after-s02-fill",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "li1998-ic9800637-nanocrystalline-znse-1--after-s01-add",
+        "li1998-ic9800637-nanocrystalline-znse-1--pyridine"
+      ]
+    },
+    {
+      "id": "li1998-ic9800637-nanocrystalline-znse-1--after-s03-seal",
+      "name": "mixture after step 3",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "li1998-ic9800637-nanocrystalline-znse-1--after-s02-fill"
+      ]
+    },
+    {
+      "id": "li1998-ic9800637-nanocrystalline-znse-1--after-s04-cool",
+      "name": "mixture after step 4",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "li1998-ic9800637-nanocrystalline-znse-1--after-s03-seal"
+      ]
+    },
+    {
+      "id": "li1998-ic9800637-nanocrystalline-znse-1--after-s05-filter",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "li1998-ic9800637-nanocrystalline-znse-1--after-s04-cool"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-add",
+      "action": "add",
+      "label": "Add zinc and selenium powders",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "li1998-ic9800637-nanocrystalline-znse-1--zinc-powder",
+        "li1998-ic9800637-nanocrystalline-znse-1--selenium-powder"
+      ],
+      "outputs": [
+        "li1998-ic9800637-nanocrystalline-znse-1--after-s01-add"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Add zinc and selenium powders",
+      "evidence": [
+        {
+          "source_id": "li1998-ic9800637",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "s02-fill",
+      "action": "fill",
+      "label": "Fill autoclave with pyridine",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-add"
+      ],
+      "inputs": [
+        "li1998-ic9800637-nanocrystalline-znse-1--after-s01-add",
+        "li1998-ic9800637-nanocrystalline-znse-1--pyridine"
+      ],
+      "outputs": [
+        "li1998-ic9800637-nanocrystalline-znse-1--after-s02-fill"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Fill autoclave with pyridine",
+      "evidence": [
+        {
+          "source_id": "li1998-ic9800637",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "s03-seal",
+      "action": "seal",
+      "label": "Seal autoclave and heat",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-fill"
+      ],
+      "inputs": [
+        "li1998-ic9800637-nanocrystalline-znse-1--after-s02-fill"
+      ],
+      "outputs": [
+        "li1998-ic9800637-nanocrystalline-znse-1--after-s03-seal"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 180,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "180 °C",
+          "evidence": [
+            {
+              "source_id": "li1998-ic9800637",
+              "locator": "Main PDF p.1"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 8,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "8 h",
+          "evidence": [
+            {
+              "source_id": "li1998-ic9800637",
+              "locator": "Main PDF p.1"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Seal autoclave and heat",
+      "evidence": [
+        {
+          "source_id": "li1998-ic9800637",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "s04-cool",
+      "action": "cool",
+      "label": "Cool to room temperature",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s03-seal"
+      ],
+      "inputs": [
+        "li1998-ic9800637-nanocrystalline-znse-1--after-s03-seal"
+      ],
+      "outputs": [
+        "li1998-ic9800637-nanocrystalline-znse-1--after-s04-cool"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Cool to room temperature",
+      "evidence": [
+        {
+          "source_id": "li1998-ic9800637",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "s05-filter",
+      "action": "filter",
+      "label": "Filter and wash precipitate",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s04-cool"
+      ],
+      "inputs": [
+        "li1998-ic9800637-nanocrystalline-znse-1--after-s04-cool"
+      ],
+      "outputs": [
+        "li1998-ic9800637-nanocrystalline-znse-1--after-s05-filter"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Filter and wash precipitate",
+      "evidence": [
+        {
+          "source_id": "li1998-ic9800637",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "li1998-ic9800637-nanocrystalline-znse-1--product",
+      "source_sample_label": "nanocrystalline ZnSe",
+      "batch_id": null,
+      "material_state_id": "li1998-ic9800637-nanocrystalline-znse-1--after-s05-filter",
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "phase": {
+        "value": "zinc blende",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "li1998-ic9800637",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "platelet | sphere",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "li1998-ic9800637",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "li1998-ic9800637",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "notes": [
+        "Reactor: 100 mL Teflon-lined autoclave (Main PDF p.1).",
+        "Reaction temperature: 180 degC (Main PDF p.1).",
+        "Reaction time: 8 h (Main PDF p.1)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "li1998-ic9800637-nanocrystalline-znse-1--size",
+      "sample_id": "li1998-ic9800637-nanocrystalline-znse-1--product",
+      "property": "crystallite_size",
+      "technique": "XRD",
+      "value": {
+        "value": 13.5,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "13.5 nm",
+        "evidence": [
+          {
+            "source_id": "li1998-ic9800637",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "li1998-ic9800637",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Ligand not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Amount of zinc powder not reported in the extracted text.",
+      "Amount of selenium powder not reported in the extracted text.",
+      "Amount of pyridine not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
