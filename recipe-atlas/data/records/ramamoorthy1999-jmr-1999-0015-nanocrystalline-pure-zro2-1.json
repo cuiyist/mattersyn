@@ -1,0 +1,314 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "ramamoorthy1999-jmr-1999-0015-nanocrystalline-pure-zro2-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "R. Ramamoorthy; S. Ramasamy; D. Sundararaman (1999): nanocrystalline pure ZrO2",
+  "material": {
+    "formula": "ZrO2",
+    "family": "ZrO2 nanocrystals",
+    "elements": [
+      "Zr",
+      "O"
+    ],
+    "components": [
+      "ZrO2"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Precipitation",
+  "sources": [
+    {
+      "id": "ramamoorthy1999-jmr-1999-0015",
+      "doi": "10.1557/jmr.1999.0015",
+      "title": "Annealing effects on phase transformation and powder microstructure of nanocrystalline zirconia polymorphs",
+      "authors": "R. Ramamoorthy; S. Ramasamy; D. Sundararaman",
+      "year": 1999,
+      "url": "https://doi.org/10.1557/jmr.1999.0015",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "ramamoorthy1999-jmr-1999-0015",
+    "recipe_family": "ramamoorthy1999-jmr-1999-0015-nanocrystalline-pure-zro2-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "ZrO2",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "ramamoorthy1999-jmr-1999-0015",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "monoclinic",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "ramamoorthy1999-jmr-1999-0015",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": 10,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "10 nm",
+      "evidence": [
+        {
+          "source_id": "ramamoorthy1999-jmr-1999-0015",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "spherical",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "ramamoorthy1999-jmr-1999-0015",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "ramamoorthy1999-jmr-1999-0015-nanocrystalline-pure-zro2-1--after-s01-neutralize",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "ramamoorthy1999-jmr-1999-0015-nanocrystalline-pure-zro2-1--after-s02-anneal",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "ramamoorthy1999-jmr-1999-0015-nanocrystalline-pure-zro2-1--after-s01-neutralize"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-neutralize",
+      "action": "neutralize",
+      "label": "Neutralize the acidic sol with ammonia",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "ramamoorthy1999-jmr-1999-0015-nanocrystalline-pure-zro2-1--after-s01-neutralize"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Neutralize the acidic sol with ammonia",
+      "evidence": [
+        {
+          "source_id": "ramamoorthy1999-jmr-1999-0015",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-anneal",
+      "action": "anneal",
+      "label": "Anneal the powders at various temperatures",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-neutralize"
+      ],
+      "inputs": [
+        "ramamoorthy1999-jmr-1999-0015-nanocrystalline-pure-zro2-1--after-s01-neutralize"
+      ],
+      "outputs": [
+        "ramamoorthy1999-jmr-1999-0015-nanocrystalline-pure-zro2-1--after-s02-anneal"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 200,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "200 °C",
+          "evidence": [
+            {
+              "source_id": "ramamoorthy1999-jmr-1999-0015",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Anneal the powders at various temperatures",
+      "evidence": [
+        {
+          "source_id": "ramamoorthy1999-jmr-1999-0015",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "ramamoorthy1999-jmr-1999-0015-nanocrystalline-pure-zro2-1--product",
+      "source_sample_label": "nanocrystalline pure ZrO2",
+      "batch_id": null,
+      "material_state_id": "ramamoorthy1999-jmr-1999-0015-nanocrystalline-pure-zro2-1--after-s02-anneal",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "ZrO2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ramamoorthy1999-jmr-1999-0015",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "monoclinic",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ramamoorthy1999-jmr-1999-0015",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "spherical",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ramamoorthy1999-jmr-1999-0015",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "ramamoorthy1999-jmr-1999-0015",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reaction temperature: 200 degC (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "ramamoorthy1999-jmr-1999-0015-nanocrystalline-pure-zro2-1--size",
+      "sample_id": "ramamoorthy1999-jmr-1999-0015-nanocrystalline-pure-zro2-1--product",
+      "property": "crystallite_size",
+      "technique": "XRD",
+      "value": {
+        "value": 10,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "10 nm",
+        "evidence": [
+          {
+            "source_id": "ramamoorthy1999-jmr-1999-0015",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "ramamoorthy1999-jmr-1999-0015",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Ligand not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction time not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

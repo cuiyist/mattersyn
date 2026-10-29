@@ -1,0 +1,344 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "vogel1997-la960426k-cds-nanoparticles-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Walter Vogel; Joachim Urban; Manisha Kundu; S. K. Kulkarni (1997): CdS nanoparticles",
+  "material": {
+    "formula": "CdS",
+    "family": "CdS nanocrystals",
+    "elements": [
+      "Cd",
+      "S"
+    ],
+    "components": [
+      "CdS"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Synthesis as described in the source",
+  "sources": [
+    {
+      "id": "vogel1997-la960426k",
+      "doi": "10.1021/la960426k",
+      "title": "Sphalerite−Wurtzite Intermediates in Nanocrystalline CdS",
+      "authors": "Walter Vogel; Joachim Urban; Manisha Kundu; S. K. Kulkarni",
+      "year": 1997,
+      "url": "https://doi.org/10.1021/la960426k",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "vogel1997-la960426k",
+    "recipe_family": "vogel1997-la960426k-cds-nanoparticles-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdS",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "vogel1997-la960426k",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "sphalerite and wurtzite",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "vogel1997-la960426k",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "vogel1997-la960426k-cds-nanoparticles-1--cdcl2",
+      "name": "CdCl2",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "concentration": {
+          "value": 0.01,
+          "minimum": null,
+          "maximum": null,
+          "unit": "M",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0.01 M",
+          "evidence": [
+            {
+              "source_id": "vogel1997-la960426k",
+              "locator": "Main PDF p.1"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "vogel1997-la960426k",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "vogel1997-la960426k-cds-nanoparticles-1--na2s",
+      "name": "Na2S",
+      "formula": null,
+      "role": "chalcogen_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "concentration": {
+          "value": 0.01,
+          "minimum": null,
+          "maximum": null,
+          "unit": "M",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0.01 M",
+          "evidence": [
+            {
+              "source_id": "vogel1997-la960426k",
+              "locator": "Main PDF p.1"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "vogel1997-la960426k",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "vogel1997-la960426k-cds-nanoparticles-1--after-s01-mix",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "vogel1997-la960426k-cds-nanoparticles-1--cdcl2"
+      ]
+    },
+    {
+      "id": "vogel1997-la960426k-cds-nanoparticles-1--after-s02-add",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "vogel1997-la960426k-cds-nanoparticles-1--after-s01-mix",
+        "vogel1997-la960426k-cds-nanoparticles-1--na2s"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-mix",
+      "action": "mix",
+      "label": "Mixing CdCl2 and mercaptoethanol",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "vogel1997-la960426k-cds-nanoparticles-1--cdcl2"
+      ],
+      "outputs": [
+        "vogel1997-la960426k-cds-nanoparticles-1--after-s01-mix"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "vogel1997-la960426k",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Mixing CdCl2 and mercaptoethanol",
+      "evidence": [
+        {
+          "source_id": "vogel1997-la960426k",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "s02-add",
+      "action": "add",
+      "label": "Adding Na2S dropwise",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-mix"
+      ],
+      "inputs": [
+        "vogel1997-la960426k-cds-nanoparticles-1--after-s01-mix",
+        "vogel1997-la960426k-cds-nanoparticles-1--na2s"
+      ],
+      "outputs": [
+        "vogel1997-la960426k-cds-nanoparticles-1--after-s02-add"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "vogel1997-la960426k",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Adding Na2S dropwise",
+      "evidence": [
+        {
+          "source_id": "vogel1997-la960426k",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "vogel1997-la960426k-cds-nanoparticles-1--product",
+      "source_sample_label": "CdS nanoparticles",
+      "batch_id": null,
+      "material_state_id": "vogel1997-la960426k-cds-nanoparticles-1--after-s02-add",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdS",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "vogel1997-la960426k",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "sphalerite and wurtzite",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "vogel1997-la960426k",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": "mercaptoethanol",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "vogel1997-la960426k",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "vogel1997-la960426k",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Shape not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
