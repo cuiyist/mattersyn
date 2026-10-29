@@ -1,52 +1,52 @@
-## Pending particles43-20261029 — local preparation, zero new Live credit
+## particles43 verified Live — 2026-10-29T19:14:06+00:00
 
-43 primary papers / 69 selected original-ordinal source_extracted records / 263 paraphrased crops are staged locally. Normal data/assets/caption/rights preparation and the quote-free archive are complete. All remaining Source and Site release checks must pass before these rows become Live. Expert-audit and audited-training credit is zero.
+43 primary papers / 69 selected original-ordinal source_extracted/unreviewed records / 263 captioned crops verified Live at 2026-10-29T19:14:06+00:00 on Site 27774f81ee149a7ed30957f39fa222df440dc933 after genuine normal publisher, exact-head Pages and anonymous verification. No new scientific audit or training credit. All previous history and paused audit denominators remain unchanged.
 
 | DOI | Source id | Record ids | Batch | Status | Live verified | Expert / training credit |
 |---|---|---|---|---|---|---|
-| 10.1246/cl.2007.912 | wang2007-cl-2007-912 | wang2007-cl-2007-912-hexagonal-phase-laf3-yb3-er3-1, wang2007-cl-2007-912-hexagonal-phase-nagdf4-yb3-er3-2, wang2007-cl-2007-912-cubic-phase-nayf4-yb3-er3-3, wang2007-cl-2007-912-hexagonal-phase-nayf4-yb3-er3-submicrocr-4 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
-| 10.1111/j.1151-2916.2002.tb00194.x | singh2002-j-1151-2916-2002-tb00194-x | singh2002-j-1151-2916-2002-tb00194-x-nanocrystalline-calcia-1 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
-| 10.1006/jssc.1998.7808 | millot1998-jssc-1998-7808 | millot1998-jssc-1998-7808-fe2-5ti0-5o4-soft-chemistry-1 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
-| 10.1021/jp953719f | guzelian1996-jp953719f | guzelian1996-jp953719f-inp-nanocrystals-1 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
-| 10.1557/jmr.1999.0210 | ennas1999-jmr-1999-0210 | ennas1999-jmr-1999-0210-nanocrystalline-gfe2o3-1 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
-| 10.1021/ja301285x | nag2012-ja301285x | nag2012-ja301285x-4-2-nm-wurtzite-cdse-ncs-capped-with-oct-1 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
-| 10.1103/physrevlett.89.186802 | crooker2002-physrevlett-89-186802 | crooker2002-physrevlett-89-186802-monodisperse-12-4-a-cdse-zns-nqds-1 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
-| 10.1021/acs.nanolett.4c02454 | xie2024-acs-nanolett-4c02454 | xie2024-acs-nanolett-4c02454-agingazns-aigzs-ncs-1 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
-| 10.1021/la3046548 | pascaud2013-la3046548 | pascaud2013-la3046548-nca1-1, pascaud2013-la3046548-nca2-2, pascaud2013-la3046548-nca3-3 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
-| 10.1063/1.1558235 | sudfeld2003-1-1558235 | sudfeld2003-1-1558235-co-nanoparticles-1 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
-| 10.1021/acsenergylett.5c03820 | roshan2026-acsenergylett-5c03820 | roshan2026-acsenergylett-5c03820-inas-znse-core-shell-qd1-1, roshan2026-acsenergylett-5c03820-inas-znse-core-shell-qd2-2, roshan2026-acsenergylett-5c03820-inas-znse-core-shell-qd3-3, roshan2026-acsenergylett-5c03820-inas-znse-core-shell-qd4-4 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
-| 10.1007/s10562-008-9798-5 | baiju2009-s10562-008-9798-5 | baiju2009-s10562-008-9798-5-mixed-phase-nanocrystalline-tio2-with-5-1, baiju2009-s10562-008-9798-5-mixed-phase-nanocrystalline-tio2-with-40-2, baiju2009-s10562-008-9798-5-mixed-phase-nanocrystalline-tio2-with-60-3 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
-| 10.1103/physrevb.81.245301 | grinbom2010-physrevb-81-245301 | grinbom2010-physrevb-81-245301-pbse-pbs-core-shell-cqd-with-core-radius-1, grinbom2010-physrevb-81-245301-pbse-pbs-core-shell-cqd-with-core-radius-2, grinbom2010-physrevb-81-245301-pbse-pbs-core-shell-cqd-with-core-radius-3 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
-| 10.1002/ange.200700847 | wu2007-ange-200700847 | wu2007-ange-200700847-hybrid-silicananocrystalorganic-dye-supe-1 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
-| 10.1021/jp075848p | breus2007-jp075848p | breus2007-jp075848p-cdse-zns-core-shell-quantum-dots-1 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
-| 10.1021/acs.chemmater.9b01277 | bhatia2019-acs-chemmater-9b01277 | bhatia2019-acs-chemmater-9b01277-fapbbr3-nanocubes-pbbr2-fabr-1-1-1, bhatia2019-acs-chemmater-9b01277-fapbbr3-nanorods-pbbr2-fabr-1-3-2 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
-| 10.1016/j.ijbiomac.2023.126453 | santos2023-j-ijbiomac-2023-126453 | santos2023-j-ijbiomac-2023-126453-qds-ecti-conjugate-1 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
-| 10.1021/cg701048d | niu2008-cg701048d | niu2008-cg701048d-sno2-r-fe2o3-snchs-1 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
-| 10.1021/cm903824e | vercelli2010-cm903824e | vercelli2010-cm903824e-pbse-ncs-2-4-nm-1, vercelli2010-cm903824e-pbse-ncs-2-8-nm-2 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
-| 10.1002/bio.982 | ma2007-bio-982 | ma2007-bio-982-cdte-quantum-dot-fluorescent-microsphere-1 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
-| 10.1021/ja209121x | yang2011-ja209121x | yang2011-ja209121x-aupd-coreshell-octahedra-1, yang2011-ja209121x-aupd-coreshell-concave-cubes-2 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
-| 10.1021/jp991009u | brock1999-jp991009u | brock1999-jp991009u-tea-manganese-oxide-colloid-2, brock1999-jp991009u-tpa-manganese-oxide-colloid-3, brock1999-jp991009u-tba-manganese-oxide-colloid-4 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
-| 10.1021/nn4002825 | bae2013-nn4002825 | bae2013-nn4002825-c-s-qd-1-5-nm-7-0-nm-1 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
-| 10.1021/ja5081037 | qian2014-ja5081037 | qian2014-ja5081037-perfluorodecyl-capped-silicon-nanocrysta-1 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
-| 10.1021/cm049221k | jana2004-cm049221k | jana2004-cm049221k-fe3o4-nanocrystals-8-nm-1, jana2004-cm049221k-fe3o4-nanocrystals-30-nm-2, jana2004-cm049221k-fe3o4-nanocrystals-30-nm-cubes-3 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
-| 10.1021/cm303361s | hens2013-cm303361s | hens2013-cm303361s-q-cdse-oa-1, hens2013-cm303361s-q-pbse-oa-2 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
-| 10.1021/la904031s | beckham2010-la904031s | beckham2010-la904031s-quantum-dot-coated-sio2-microparticles-q-1 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
-| 10.1002/smll.200500239 | donega2005-smll-200500239 | donega2005-smll-200500239-cdse-nanocrystals-1 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
-| 10.1021/jp054472h | lu2005-jp054472h | lu2005-jp054472h-cdse-zns-core-shell-quantum-dots-1 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
-| 10.1021/nl102539a | deka2010-nl102539a | deka2010-nl102539a-cdse-core-cds-arms-octapods-1, deka2010-nl102539a-all-cdse-octapods-2, deka2010-nl102539a-cdse-core-cdte-arms-multiarmed-nanocryst-3 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
-| 10.1021/nl0703424 | anikeeva2007-nl0703424 | anikeeva2007-nl0703424-cdse-zns-core-shell-qds-red-1, anikeeva2007-nl0703424-znse-cdse-zns-core-shell-shell-qds-green-2, anikeeva2007-nl0703424-zncds-alloyed-qds-blue-3 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
-| 10.1021/la1009169 | yan2010-la1009169 | yan2010-la1009169-cd0-4zn0-6s-nanocrystals-capped-with-pma-1 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
-| 10.1021/cm402148s | tan2013-cm402148s | tan2013-cm402148s-cdse-cds-core-shell-qds-1 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
-| 10.1021/ja2049463 | wang2011-ja2049463 | wang2011-ja2049463-tio2-hollow-spheres-1 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
-| 10.1063/1.3194151 | wang2009-1-3194151 | wang2009-1-3194151-colloidal-hgte-nanocrystal-quantum-dots-1 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
-| 10.1021/la9040198 | petushkov2010-la9040198 | petushkov2010-la9040198-nanocrystalline-nay-fau-phase-1 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
-| 10.1021/jp5111218 | franco2014-jp5111218 | franco2014-jp5111218-mpa-cdte-qds-1 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
-| 10.1021/cs400913h | liu2014-cs400913h | liu2014-cs400913h-au-nanoparticles-cqds-composite-1 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
-| 10.1063/1.2970995 | mei2008-1-2970995 | mei2008-1-2970995-znse-qd1-d-3-6-nm-1, mei2008-1-2970995-znse-qd2-d-3-0-nm-2, mei2008-1-2970995-znse-qd3-d-2-6-nm-3 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
-| 10.1016/j.mseb.2024.117417 | jourshabani2024-j-mseb-2024-117417 | jourshabani2024-j-mseb-2024-117417-cqd-1 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
-| 10.1063/1.1830684 | beecher2004-1-1830684 | beecher2004-1-1830684-6-8-nm-diam-copt3-nanocrystals-1 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
-| 10.1006/jssc.1999.8566 | nachimuthu2000-jssc-1999-8566 | nachimuthu2000-jssc-1999-8566-nanocrystalline-ceo2-1 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
-| 10.1021/jp809538z | xu2009-jp809538z | xu2009-jp809538z-cds-zns-qd-peva-nanofilms-1 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
+| 10.1246/cl.2007.912 | wang2007-cl-2007-912 | wang2007-cl-2007-912-hexagonal-phase-laf3-yb3-er3-1, wang2007-cl-2007-912-hexagonal-phase-nagdf4-yb3-er3-2, wang2007-cl-2007-912-cubic-phase-nayf4-yb3-er3-3, wang2007-cl-2007-912-hexagonal-phase-nayf4-yb3-er3-submicrocr-4 | particles43-20261029 | Live; source_extracted/unreviewed | 2026-10-29T19:14:06+00:00; Site 27774f81ee149a7ed30957f39fa222df440dc933 | 0 |
+| 10.1111/j.1151-2916.2002.tb00194.x | singh2002-j-1151-2916-2002-tb00194-x | singh2002-j-1151-2916-2002-tb00194-x-nanocrystalline-calcia-1 | particles43-20261029 | Live; source_extracted/unreviewed | 2026-10-29T19:14:06+00:00; Site 27774f81ee149a7ed30957f39fa222df440dc933 | 0 |
+| 10.1006/jssc.1998.7808 | millot1998-jssc-1998-7808 | millot1998-jssc-1998-7808-fe2-5ti0-5o4-soft-chemistry-1 | particles43-20261029 | Live; source_extracted/unreviewed | 2026-10-29T19:14:06+00:00; Site 27774f81ee149a7ed30957f39fa222df440dc933 | 0 |
+| 10.1021/jp953719f | guzelian1996-jp953719f | guzelian1996-jp953719f-inp-nanocrystals-1 | particles43-20261029 | Live; source_extracted/unreviewed | 2026-10-29T19:14:06+00:00; Site 27774f81ee149a7ed30957f39fa222df440dc933 | 0 |
+| 10.1557/jmr.1999.0210 | ennas1999-jmr-1999-0210 | ennas1999-jmr-1999-0210-nanocrystalline-gfe2o3-1 | particles43-20261029 | Live; source_extracted/unreviewed | 2026-10-29T19:14:06+00:00; Site 27774f81ee149a7ed30957f39fa222df440dc933 | 0 |
+| 10.1021/ja301285x | nag2012-ja301285x | nag2012-ja301285x-4-2-nm-wurtzite-cdse-ncs-capped-with-oct-1 | particles43-20261029 | Live; source_extracted/unreviewed | 2026-10-29T19:14:06+00:00; Site 27774f81ee149a7ed30957f39fa222df440dc933 | 0 |
+| 10.1103/physrevlett.89.186802 | crooker2002-physrevlett-89-186802 | crooker2002-physrevlett-89-186802-monodisperse-12-4-a-cdse-zns-nqds-1 | particles43-20261029 | Live; source_extracted/unreviewed | 2026-10-29T19:14:06+00:00; Site 27774f81ee149a7ed30957f39fa222df440dc933 | 0 |
+| 10.1021/acs.nanolett.4c02454 | xie2024-acs-nanolett-4c02454 | xie2024-acs-nanolett-4c02454-agingazns-aigzs-ncs-1 | particles43-20261029 | Live; source_extracted/unreviewed | 2026-10-29T19:14:06+00:00; Site 27774f81ee149a7ed30957f39fa222df440dc933 | 0 |
+| 10.1021/la3046548 | pascaud2013-la3046548 | pascaud2013-la3046548-nca1-1, pascaud2013-la3046548-nca2-2, pascaud2013-la3046548-nca3-3 | particles43-20261029 | Live; source_extracted/unreviewed | 2026-10-29T19:14:06+00:00; Site 27774f81ee149a7ed30957f39fa222df440dc933 | 0 |
+| 10.1063/1.1558235 | sudfeld2003-1-1558235 | sudfeld2003-1-1558235-co-nanoparticles-1 | particles43-20261029 | Live; source_extracted/unreviewed | 2026-10-29T19:14:06+00:00; Site 27774f81ee149a7ed30957f39fa222df440dc933 | 0 |
+| 10.1021/acsenergylett.5c03820 | roshan2026-acsenergylett-5c03820 | roshan2026-acsenergylett-5c03820-inas-znse-core-shell-qd1-1, roshan2026-acsenergylett-5c03820-inas-znse-core-shell-qd2-2, roshan2026-acsenergylett-5c03820-inas-znse-core-shell-qd3-3, roshan2026-acsenergylett-5c03820-inas-znse-core-shell-qd4-4 | particles43-20261029 | Live; source_extracted/unreviewed | 2026-10-29T19:14:06+00:00; Site 27774f81ee149a7ed30957f39fa222df440dc933 | 0 |
+| 10.1007/s10562-008-9798-5 | baiju2009-s10562-008-9798-5 | baiju2009-s10562-008-9798-5-mixed-phase-nanocrystalline-tio2-with-5-1, baiju2009-s10562-008-9798-5-mixed-phase-nanocrystalline-tio2-with-40-2, baiju2009-s10562-008-9798-5-mixed-phase-nanocrystalline-tio2-with-60-3 | particles43-20261029 | Live; source_extracted/unreviewed | 2026-10-29T19:14:06+00:00; Site 27774f81ee149a7ed30957f39fa222df440dc933 | 0 |
+| 10.1103/physrevb.81.245301 | grinbom2010-physrevb-81-245301 | grinbom2010-physrevb-81-245301-pbse-pbs-core-shell-cqd-with-core-radius-1, grinbom2010-physrevb-81-245301-pbse-pbs-core-shell-cqd-with-core-radius-2, grinbom2010-physrevb-81-245301-pbse-pbs-core-shell-cqd-with-core-radius-3 | particles43-20261029 | Live; source_extracted/unreviewed | 2026-10-29T19:14:06+00:00; Site 27774f81ee149a7ed30957f39fa222df440dc933 | 0 |
+| 10.1002/ange.200700847 | wu2007-ange-200700847 | wu2007-ange-200700847-hybrid-silicananocrystalorganic-dye-supe-1 | particles43-20261029 | Live; source_extracted/unreviewed | 2026-10-29T19:14:06+00:00; Site 27774f81ee149a7ed30957f39fa222df440dc933 | 0 |
+| 10.1021/jp075848p | breus2007-jp075848p | breus2007-jp075848p-cdse-zns-core-shell-quantum-dots-1 | particles43-20261029 | Live; source_extracted/unreviewed | 2026-10-29T19:14:06+00:00; Site 27774f81ee149a7ed30957f39fa222df440dc933 | 0 |
+| 10.1021/acs.chemmater.9b01277 | bhatia2019-acs-chemmater-9b01277 | bhatia2019-acs-chemmater-9b01277-fapbbr3-nanocubes-pbbr2-fabr-1-1-1, bhatia2019-acs-chemmater-9b01277-fapbbr3-nanorods-pbbr2-fabr-1-3-2 | particles43-20261029 | Live; source_extracted/unreviewed | 2026-10-29T19:14:06+00:00; Site 27774f81ee149a7ed30957f39fa222df440dc933 | 0 |
+| 10.1016/j.ijbiomac.2023.126453 | santos2023-j-ijbiomac-2023-126453 | santos2023-j-ijbiomac-2023-126453-qds-ecti-conjugate-1 | particles43-20261029 | Live; source_extracted/unreviewed | 2026-10-29T19:14:06+00:00; Site 27774f81ee149a7ed30957f39fa222df440dc933 | 0 |
+| 10.1021/cg701048d | niu2008-cg701048d | niu2008-cg701048d-sno2-r-fe2o3-snchs-1 | particles43-20261029 | Live; source_extracted/unreviewed | 2026-10-29T19:14:06+00:00; Site 27774f81ee149a7ed30957f39fa222df440dc933 | 0 |
+| 10.1021/cm903824e | vercelli2010-cm903824e | vercelli2010-cm903824e-pbse-ncs-2-4-nm-1, vercelli2010-cm903824e-pbse-ncs-2-8-nm-2 | particles43-20261029 | Live; source_extracted/unreviewed | 2026-10-29T19:14:06+00:00; Site 27774f81ee149a7ed30957f39fa222df440dc933 | 0 |
+| 10.1002/bio.982 | ma2007-bio-982 | ma2007-bio-982-cdte-quantum-dot-fluorescent-microsphere-1 | particles43-20261029 | Live; source_extracted/unreviewed | 2026-10-29T19:14:06+00:00; Site 27774f81ee149a7ed30957f39fa222df440dc933 | 0 |
+| 10.1021/ja209121x | yang2011-ja209121x | yang2011-ja209121x-aupd-coreshell-octahedra-1, yang2011-ja209121x-aupd-coreshell-concave-cubes-2 | particles43-20261029 | Live; source_extracted/unreviewed | 2026-10-29T19:14:06+00:00; Site 27774f81ee149a7ed30957f39fa222df440dc933 | 0 |
+| 10.1021/jp991009u | brock1999-jp991009u | brock1999-jp991009u-tea-manganese-oxide-colloid-2, brock1999-jp991009u-tpa-manganese-oxide-colloid-3, brock1999-jp991009u-tba-manganese-oxide-colloid-4 | particles43-20261029 | Live; source_extracted/unreviewed | 2026-10-29T19:14:06+00:00; Site 27774f81ee149a7ed30957f39fa222df440dc933 | 0 |
+| 10.1021/nn4002825 | bae2013-nn4002825 | bae2013-nn4002825-c-s-qd-1-5-nm-7-0-nm-1 | particles43-20261029 | Live; source_extracted/unreviewed | 2026-10-29T19:14:06+00:00; Site 27774f81ee149a7ed30957f39fa222df440dc933 | 0 |
+| 10.1021/ja5081037 | qian2014-ja5081037 | qian2014-ja5081037-perfluorodecyl-capped-silicon-nanocrysta-1 | particles43-20261029 | Live; source_extracted/unreviewed | 2026-10-29T19:14:06+00:00; Site 27774f81ee149a7ed30957f39fa222df440dc933 | 0 |
+| 10.1021/cm049221k | jana2004-cm049221k | jana2004-cm049221k-fe3o4-nanocrystals-8-nm-1, jana2004-cm049221k-fe3o4-nanocrystals-30-nm-2, jana2004-cm049221k-fe3o4-nanocrystals-30-nm-cubes-3 | particles43-20261029 | Live; source_extracted/unreviewed | 2026-10-29T19:14:06+00:00; Site 27774f81ee149a7ed30957f39fa222df440dc933 | 0 |
+| 10.1021/cm303361s | hens2013-cm303361s | hens2013-cm303361s-q-cdse-oa-1, hens2013-cm303361s-q-pbse-oa-2 | particles43-20261029 | Live; source_extracted/unreviewed | 2026-10-29T19:14:06+00:00; Site 27774f81ee149a7ed30957f39fa222df440dc933 | 0 |
+| 10.1021/la904031s | beckham2010-la904031s | beckham2010-la904031s-quantum-dot-coated-sio2-microparticles-q-1 | particles43-20261029 | Live; source_extracted/unreviewed | 2026-10-29T19:14:06+00:00; Site 27774f81ee149a7ed30957f39fa222df440dc933 | 0 |
+| 10.1002/smll.200500239 | donega2005-smll-200500239 | donega2005-smll-200500239-cdse-nanocrystals-1 | particles43-20261029 | Live; source_extracted/unreviewed | 2026-10-29T19:14:06+00:00; Site 27774f81ee149a7ed30957f39fa222df440dc933 | 0 |
+| 10.1021/jp054472h | lu2005-jp054472h | lu2005-jp054472h-cdse-zns-core-shell-quantum-dots-1 | particles43-20261029 | Live; source_extracted/unreviewed | 2026-10-29T19:14:06+00:00; Site 27774f81ee149a7ed30957f39fa222df440dc933 | 0 |
+| 10.1021/nl102539a | deka2010-nl102539a | deka2010-nl102539a-cdse-core-cds-arms-octapods-1, deka2010-nl102539a-all-cdse-octapods-2, deka2010-nl102539a-cdse-core-cdte-arms-multiarmed-nanocryst-3 | particles43-20261029 | Live; source_extracted/unreviewed | 2026-10-29T19:14:06+00:00; Site 27774f81ee149a7ed30957f39fa222df440dc933 | 0 |
+| 10.1021/nl0703424 | anikeeva2007-nl0703424 | anikeeva2007-nl0703424-cdse-zns-core-shell-qds-red-1, anikeeva2007-nl0703424-znse-cdse-zns-core-shell-shell-qds-green-2, anikeeva2007-nl0703424-zncds-alloyed-qds-blue-3 | particles43-20261029 | Live; source_extracted/unreviewed | 2026-10-29T19:14:06+00:00; Site 27774f81ee149a7ed30957f39fa222df440dc933 | 0 |
+| 10.1021/la1009169 | yan2010-la1009169 | yan2010-la1009169-cd0-4zn0-6s-nanocrystals-capped-with-pma-1 | particles43-20261029 | Live; source_extracted/unreviewed | 2026-10-29T19:14:06+00:00; Site 27774f81ee149a7ed30957f39fa222df440dc933 | 0 |
+| 10.1021/cm402148s | tan2013-cm402148s | tan2013-cm402148s-cdse-cds-core-shell-qds-1 | particles43-20261029 | Live; source_extracted/unreviewed | 2026-10-29T19:14:06+00:00; Site 27774f81ee149a7ed30957f39fa222df440dc933 | 0 |
+| 10.1021/ja2049463 | wang2011-ja2049463 | wang2011-ja2049463-tio2-hollow-spheres-1 | particles43-20261029 | Live; source_extracted/unreviewed | 2026-10-29T19:14:06+00:00; Site 27774f81ee149a7ed30957f39fa222df440dc933 | 0 |
+| 10.1063/1.3194151 | wang2009-1-3194151 | wang2009-1-3194151-colloidal-hgte-nanocrystal-quantum-dots-1 | particles43-20261029 | Live; source_extracted/unreviewed | 2026-10-29T19:14:06+00:00; Site 27774f81ee149a7ed30957f39fa222df440dc933 | 0 |
+| 10.1021/la9040198 | petushkov2010-la9040198 | petushkov2010-la9040198-nanocrystalline-nay-fau-phase-1 | particles43-20261029 | Live; source_extracted/unreviewed | 2026-10-29T19:14:06+00:00; Site 27774f81ee149a7ed30957f39fa222df440dc933 | 0 |
+| 10.1021/jp5111218 | franco2014-jp5111218 | franco2014-jp5111218-mpa-cdte-qds-1 | particles43-20261029 | Live; source_extracted/unreviewed | 2026-10-29T19:14:06+00:00; Site 27774f81ee149a7ed30957f39fa222df440dc933 | 0 |
+| 10.1021/cs400913h | liu2014-cs400913h | liu2014-cs400913h-au-nanoparticles-cqds-composite-1 | particles43-20261029 | Live; source_extracted/unreviewed | 2026-10-29T19:14:06+00:00; Site 27774f81ee149a7ed30957f39fa222df440dc933 | 0 |
+| 10.1063/1.2970995 | mei2008-1-2970995 | mei2008-1-2970995-znse-qd1-d-3-6-nm-1, mei2008-1-2970995-znse-qd2-d-3-0-nm-2, mei2008-1-2970995-znse-qd3-d-2-6-nm-3 | particles43-20261029 | Live; source_extracted/unreviewed | 2026-10-29T19:14:06+00:00; Site 27774f81ee149a7ed30957f39fa222df440dc933 | 0 |
+| 10.1016/j.mseb.2024.117417 | jourshabani2024-j-mseb-2024-117417 | jourshabani2024-j-mseb-2024-117417-cqd-1 | particles43-20261029 | Live; source_extracted/unreviewed | 2026-10-29T19:14:06+00:00; Site 27774f81ee149a7ed30957f39fa222df440dc933 | 0 |
+| 10.1063/1.1830684 | beecher2004-1-1830684 | beecher2004-1-1830684-6-8-nm-diam-copt3-nanocrystals-1 | particles43-20261029 | Live; source_extracted/unreviewed | 2026-10-29T19:14:06+00:00; Site 27774f81ee149a7ed30957f39fa222df440dc933 | 0 |
+| 10.1006/jssc.1999.8566 | nachimuthu2000-jssc-1999-8566 | nachimuthu2000-jssc-1999-8566-nanocrystalline-ceo2-1 | particles43-20261029 | Live; source_extracted/unreviewed | 2026-10-29T19:14:06+00:00; Site 27774f81ee149a7ed30957f39fa222df440dc933 | 0 |
+| 10.1021/jp809538z | xu2009-jp809538z | xu2009-jp809538z-cds-zns-qd-peva-nanofilms-1 | particles43-20261029 | Live; source_extracted/unreviewed | 2026-10-29T19:14:06+00:00; Site 27774f81ee149a7ed30957f39fa222df440dc933 | 0 |
 
 ## particles12 verified Live — 2026-10-29T05:28:13+00:00
 
@@ -3974,3 +3974,155 @@ Existing product-scope decisions from saved metadata; uncertain isolability rema
 | Defect and transport properties of nanocrystalline CeO2−&lt;i&gt;x&lt;/i&gt; | 10.1063/1.117366 | Q180 | uncertain_isolability_terminal_omission |
 | Thermal stability and grain growth behavior of mechanically alloyed nanocrystalline Fe-Cu alloys | 10.1063/1.353890 | Q180 | explicit_excluded_route_or_retained_product |
 | Thermal stability of the nanocrystalline Fe–Co–Hf–B–Cu alloy | 10.1063/1.369805 | Q180 | uncertain_isolability_terminal_omission |
+
+
+## Q181–Q184 queue scope omissions — saved metadata titles
+
+These entries retain their already adopted product-scope disposition for this job. Unresolved isolability is an operational omission, not a scientific claim that particles cannot form. Titles are from saved official metadata only; no source was reread. Technical IN omissions, already-Live annotations and all older history remain unchanged. This repository-only list is excluded from the built site.
+
+| Saved title | Original queue DOI label | Cohort | Existing omission diagnostic |
+|---|---|---|---|
+| Improved Breakdown Strength and Energy Density in Thin-Film Polyimide Nanocomposites with Small Barium Strontium Titanate Nanocrystal Fillers | 10.1021/jp312519r | Q181 | uncertain_isolability_terminal_omission |
+| Controlled stoichiometric synthesis of DNA–quantum dot conjugates using Ni-mediated coordination chemistry | 10.1039/c0cc03462b | Q181 | uncertain_isolability_terminal_omission |
+| Tuning Energetic Levels in Nanocrystal Quantum Dots through Surface Manipulations | 10.1021/nl0732171 | Q181 | uncertain_isolability_terminal_omission |
+| Noninvasive detection of charge rearrangement in a quantum dot | 10.1063/1.2730129 | Q181 | uncertain_isolability_terminal_omission |
+| Asymmetric Hydrosilylation of Prochiral Ketones Catalyzed by Nanocrystalline Copper(II) Oxide | 10.1002/adsc.200600481 | Q181 | uncertain_isolability_terminal_omission |
+| Nitriding of Nanocrystalline Iron in the Atmospheres with Variable Nitriding Potential | 10.1021/jp500349d | Q181 | uncertain_isolability_terminal_omission |
+| Hybridized quantum dot-wetting layer states in photoluminescence of In(Ga)As/GaAs dot chain samples | 10.1063/1.3151707 | Q181 | uncertain_isolability_terminal_omission |
+| Precise Control of Quantum Dot Location within the P3HT- <i>b</i> -P2VP/QD Nanowires Formed by Crystallization-Driven 1D Growth of Hybrid Dimeric Seeds | 10.1021/ja410165f | Q181 | explicit_excluded_route_or_retained_product |
+| Electron spin resonance and spin–valley physics in a silicon double quantum dot | 10.1038/ncomms4860 | Q181 | uncertain_isolability_terminal_omission |
+| Adsorption Mechanism of Arsenic on Nanocrystalline Titanium Dioxide | 10.1021/es052040e | Q181 | uncertain_isolability_terminal_omission |
+| Nanogap quantum dot photodetectors with high sensitivity and bandwidth | 10.1063/1.3356224 | Q181 | uncertain_isolability_terminal_omission |
+| Probing the impact of microstructure on the electroluminescence properties of Ge-nanocrystal enriched Er-doped<mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mrow><mml:msub><mml:mrow><mml:mtext>SiO</mml:mtext></mml:mrow><mml:mn>2</mml:mn></mml:msub></mml:mrow></mml:math>layers | 10.1103/physrevb.79.161302 | Q181 | uncertain_isolability_terminal_omission |
+| Investigating the Role of Zeolite Nanocrystal Seeds in the Synthesis of Mesoporous Catalysts with Zeolite Wall Structure | 10.1021/cm201619y | Q181 | uncertain_isolability_terminal_omission |
+| Nanocrystalline Semiconductors: Synthesis, Properties, and Perspectives | 10.1021/cm000843p | Q181 | uncertain_isolability_terminal_omission |
+| Scanning near-field optical microscope working with a CdSe∕ZnS quantum dot based optical detector | 10.1063/1.2204621 | Q181 | uncertain_isolability_terminal_omission |
+| Photoluminescence studies of self-assembled InSb, GaSb, and AlSb quantum dot heterostructures | 10.1063/1.115747 | Q181 | explicit_excluded_route_or_retained_product |
+| A Versatile and Tunable Coating Strategy Allows Control of Nanocrystal Delivery to Cell Types in the Liver | 10.1021/bc1003179 | Q181 | uncertain_isolability_terminal_omission |
+| Dynamic Study of Highly Efficient CdS/CdSe Quantum Dot-Sensitized Solar Cells Fabricated by Electrodeposition | 10.1021/nn203375g | Q181 | explicit_excluded_route_or_retained_product |
+| Properties of nanocrystalline electrodeposited CoFeP alloy with low phosphorus content | 10.1007/s10008-006-0252-6 | Q181 | uncertain_isolability_terminal_omission |
+| Photon-assisted tunneling through a quantum dot at high microwave frequencies | 10.1063/1.114406 | Q181 | uncertain_isolability_terminal_omission |
+| Biosynthesis of Nanocrystal Akaganéite from FeCl<sub>2</sub> Solution Oxidized by <i>Acidithiobacillus ferrooxidans</i> Cells | 10.1021/es702933v | Q181 | uncertain_isolability_terminal_omission |
+| Influence of Interparticle Electrostatic Repulsion in the Initial Stage of Aqueous Semiconductor Nanocrystal Growth | 10.1021/jp710110n | Q181 | uncertain_isolability_terminal_omission |
+| Nanocrystalline intermetallics on mesoporous carbon for direct formic acid fuel cell anodes | 10.1038/nchem.553 | Q181 | explicit_excluded_route_or_retained_product |
+| Formation of extended states in disordered two-dimensional In0.4Ga0.6As/GaAs(311)B quantum dot superlattices | 10.1063/1.373706 | Q181 | uncertain_isolability_terminal_omission |
+| Measurement of effective magnetic anisotropy of nanocrystalline Fe-Cu-Nb-Si-B soft magnetic alloys | 10.1063/1.355078 | Q181 | uncertain_isolability_terminal_omission |
+| Type-II Core/Shell CdS/ZnSe Nanocrystals: Synthesis, Electronic Structures, and Spectroscopic Properties | 10.1021/ja068351m | Q181 | uncertain_isolability_terminal_omission |
+| Addition, Suppression, and Inhibition in the Electrophoretic Deposition of Nanocrystal Mixture Films for CdSe Nanocrystals with γ-Fe<sub>2</sub>O<sub>3</sub> and Au Nanocrystals | 10.1021/nl034634q | Q181 | uncertain_isolability_terminal_omission |
+| Disorder induced Raman scattering of nanocrystalline carbon | 10.1063/1.108324 | Q181 | uncertain_isolability_terminal_omission |
+| Electrical control of Kondo effect and superconducting transport in a side-gated InAs quantum dot Josephson junction | 10.1103/physrevb.82.054512 | Q181 | uncertain_isolability_terminal_omission |
+| Silicon hydride composition of plasma-deposited hydrogenated amorphous and nanocrystalline silicon films and surfaces | 10.1116/1.581520 | Q181 | uncertain_isolability_terminal_omission |
+| Field emission properties of nanocrystalline chemically vapor deposited-diamond films | 10.1116/1.590857 | Q181 | uncertain_isolability_terminal_omission |
+| Air-Stable Operation of Transparent, Colloidal Quantum Dot Based LEDs with a Unipolar Device Architecture | 10.1021/nl902425g | Q181 | uncertain_isolability_terminal_omission |
+| Grain-size-induced relaxor properties in nanocrystalline perovskite films | 10.1103/physrevb.69.214106 | Q181 | uncertain_isolability_terminal_omission |
+| High Activity Phosphine-Free Selenium Precursor Solution for Semiconductor Nanocrystal Growth | 10.1021/cm903813r | Q181 | uncertain_isolability_terminal_omission |
+| Full Spectral and Angular Characterization of Highly Directional Emission from Nanocrystal Quantum Dots Positioned on Circular Plasmonic Lenses | 10.1021/nl502652k | Q181 | uncertain_isolability_terminal_omission |
+| Polyethylene glycol-based bidentate ligands to enhance quantum dot and gold nanoparticle stability in biological media | 10.1038/nprot.2008.243 | Q181 | uncertain_isolability_terminal_omission |
+| Photoelectrochemical Generation of Hydrogen from Water Using a CdSe Quantum Dot-Sensitized Photocathode | 10.1021/cs5021035 | Q181 | uncertain_isolability_terminal_omission |
+| Narrow ridge waveguide high power single mode 1.3-μm InAs/InGaAs ten-layer quantum dot lasers | 10.1007/s11671-007-9066-4 | Q181 | uncertain_isolability_terminal_omission |
+| Controlled Self-Assembly of Quantum Dot−Block Copolymer Colloids in Multiphase Microfluidic Reactors | 10.1021/la902427r | Q181 | explicit_excluded_route_or_retained_product |
+| Suppression of Spin Relaxation in an InAs Nanowire Double Quantum Dot | 10.1103/physrevlett.99.036801 | Q181 | uncertain_isolability_terminal_omission |
+| Ripening and annealing effects in InAs/GaAs(001) quantum dot formation | 10.1063/1.1759788 | Q181 | uncertain_isolability_terminal_omission |
+| Electronic Transport in Metal Nanocrystal Arrays: The Effect of Structural Disorder on Scaling Behavior | 10.1103/physrevlett.87.186807 | Q181 | uncertain_isolability_terminal_omission |
+| Gate-defined graphene double quantum dot and excited state spectroscopy | 10.1021/nl9040912 | Q181 | uncertain_isolability_terminal_omission |
+| Fano effect in a quantum-ring–quantum-dot system with tunable coupling | 10.1103/physrevb.73.205326 | Q181 | uncertain_isolability_terminal_omission |
+| Observation of whispering gallery modes in nanocrystalline diamond microdisks | 10.1063/1.2709626 | Q181 | explicit_excluded_route_or_retained_product |
+| Modeling High-Efficiency Quantum Dot Sensitized Solar Cells | 10.1021/nn101534y | Q181 | uncertain_isolability_terminal_omission |
+| Highly Efficient Quantum-Dot Light-Emitting Diodes with DNA−CTMA as a Combined Hole-Transporting and Electron-Blocking Layer | 10.1021/nn8009079 | Q181 | uncertain_isolability_terminal_omission |
+| Microstructure of novel superhard nanocrystalline-amorphous composites as analyzed by high resolution transmission electron microscopy | 10.1116/1.589778 | Q181 | uncertain_isolability_terminal_omission |
+| Importance of Recombination at the TCO/Electrolyte Interface for High Efficiency Quantum Dot Sensitized Solar Cells | 10.1021/jp306782q | Q182 | explicit_excluded_route_or_retained_product |
+| Biexcitonic resonance in the nonlinear optical response of an InAs quantum dot ensemble | 10.1103/physrevb.69.045306 | Q182 | uncertain_isolability_terminal_omission |
+| Weak coupling interactions of colloidal lead sulphide nanocrystals with silicon photonic crystal nanocavities near 1.55μm at room temperature | 10.1063/1.2714097 | Q182 | uncertain_isolability_terminal_omission |
+| Fabrication of Quantum Dot Microarrays Using Electron Beam Lithography for Applications in Analyte Sensing and Cellular Dynamics | 10.1021/nn401424y | Q182 | uncertain_isolability_terminal_omission |
+| Band Gap and Composition Engineering on a Nanocrystal (BCEN) in Solution | 10.1021/ar100025m | Q182 | uncertain_isolability_terminal_omission |
+| Phonons in InAs quantum dot structures | 10.1002/pssc.200881766 | Q182 | uncertain_isolability_terminal_omission |
+| Circularly polarized emission from colloidal nanocrystal quantum dots confined in microcavities formed by chiral mirrors | 10.1063/1.2751129 | Q182 | uncertain_isolability_terminal_omission |
+| Stimulated emission from trap electronic states in oxide of nanocrystal Si | 10.1063/1.2937835 | Q182 | explicit_excluded_route_or_retained_product |
+| Counting Statistics of Single Electron Transport in a Quantum Dot | 10.1103/physrevlett.96.076605 | Q182 | uncertain_isolability_terminal_omission |
+| Transmission of low-energy electrons in boron-doped nanocrystalline diamond films | 10.1063/1.1544648 | Q182 | uncertain_isolability_terminal_omission |
+| Demonstration of quantum dots and quantum wires with removable impurities | 10.1063/1.110731 | Q182 | uncertain_isolability_terminal_omission |
+| Scalable implementation of strongly coupled cavity-quantum dot devices | 10.1063/1.3100781 | Q182 | uncertain_isolability_terminal_omission |
+| Photoluminescence from nanocrystalline graphite monofluoride | 10.1063/1.3491265 | Q182 | explicit_excluded_route_or_retained_product |
+| Highly Efficient Photoelectrochemical Hydrogen Generation Using a Quantum Dot Coupled Hierarchical ZnO Nanowires Array | 10.1021/am404259y | Q182 | explicit_excluded_route_or_retained_product |
+| Shape-Controlled Synthesis of Pd Nanocrystals and Their Catalytic Applications | 10.1021/ar300209w | Q182 | uncertain_isolability_terminal_omission |
+| Nonradiative damage measured by cathodoluminescence in etched multiple quantum well GaAs/AlGaAs quantum dots | 10.1116/1.584668 | Q182 | uncertain_isolability_terminal_omission |
+| A graphene quantum dot-assisted morin–KMnO <sub>4</sub> chemiluminescence system for the precise recognition of cypermethrin | 10.1039/c7nj02343j | Q182 | uncertain_isolability_terminal_omission |
+| Nanopositioning of a diamond nanocrystal containing a single nitrogen-vacancy defect center | 10.1063/1.3120558 | Q182 | uncertain_isolability_terminal_omission |
+| Nanocrystalline Diamond Nanoelectrode Arrays and Ensembles | 10.1021/nn2005409 | Q182 | uncertain_isolability_terminal_omission |
+| Hydrophobic iron oxide and CdSe/ZnS nanocrystal loaded polyglutamate/polyelectrolyte micro- and nanocapsules | 10.1039/c0nr00232a | Q182 | uncertain_isolability_terminal_omission |
+| Optically Detected Magnetic Resonance Study of Electron/Hole Traps on CdSe Quantum Dot Surfaces | 10.1021/jp981880v | Q182 | uncertain_isolability_terminal_omission |
+| Approach to Dark Spin Cooling in a Diamond Nanocrystal | 10.1021/nn400239n | Q182 | uncertain_isolability_terminal_omission |
+| Activation volume for nanocrystal growth in amorphous Nd9Fe85B6 | 10.1063/1.3000565 | Q182 | explicit_excluded_route_or_retained_product |
+| Interdot carrier transfer in asymmetric bilayer InAs∕GaAs quantum dot structures | 10.1063/1.1861980 | Q182 | explicit_excluded_route_or_retained_product |
+| Electroluminescence from a Single-Nanocrystal Transistor | 10.1021/nl0516005 | Q182 | uncertain_isolability_terminal_omission |
+| Size and strain effects in the E1-like optical transitions of InAs/InP self-assembled quantum dot structures | 10.1063/1.122963 | Q182 | uncertain_isolability_terminal_omission |
+| Aharonov-Bohm Signature for Neutral Polarized Excitons in Type-II Quantum Dot Ensembles | 10.1103/physrevlett.92.126402 | Q182 | uncertain_isolability_terminal_omission |
+| Photo-Activated Luminescence of CdSe Quantum Dot Monolayers | 10.1021/jp001771s | Q182 | uncertain_isolability_terminal_omission |
+| Subdiffusive Exciton Transport in Quantum Dot Solids | 10.1021/nl501190s | Q182 | uncertain_isolability_terminal_omission |
+| Compositional evolution and magnetic properties of nanocrystalline Fe73.5Cu1Nb3Si13.5B9 | 10.1063/1.350455 | Q182 | uncertain_isolability_terminal_omission |
+| Synthesis of micro-and nanocrystalline powders of alkali metaniobates and metatantalates | 10.1134/s0020168507060209 | Q182 | uncertain_isolability_terminal_omission |
+| Interfacial Carbon Nanoplatelet Formation by Ion Irradiation of Graphene on Iridium(111) | 10.1021/nn503874n | Q182 | uncertain_isolability_terminal_omission |
+| Tuning of the Fano Effect through a Quantum Dot in an Aharonov-Bohm Interferometer | 10.1103/physrevlett.88.256806 | Q182 | uncertain_isolability_terminal_omission |
+| Electron-conducting quantum-dot solids with ionic charge compensation | 10.1039/b302839a | Q182 | uncertain_isolability_terminal_omission |
+| Graphite Nanoplatelet Enabled Embeddable Fiber Sensor for in Situ Curing Monitoring and Structural Health Monitoring of Polymeric Composites | 10.1021/am5017039 | Q182 | explicit_excluded_route_or_retained_product |
+| Mechanisms of Quantum Dot Energy Engineering by Metalorganic Vapor Phase Epitaxy on Patterned Nonplanar Substrates | 10.1021/nl0702012 | Q182 | uncertain_isolability_terminal_omission |
+| Local Charge Transport in Two-Dimensional PbSe Nanocrystal Arrays Studied by Electrostatic Force Microscopy | 10.1021/nl050828p | Q182 | uncertain_isolability_terminal_omission |
+| Nanocrystal indium doped zinc oxide prepared by spray pyrolysis method | 10.1063/1.2733542 | Q182 | explicit_excluded_route_or_retained_product |
+| Quantum Dot Weathering Results in Microbial Toxicity | 10.1021/es8023385 | Q182 | uncertain_isolability_terminal_omission |
+| Graphite Nanoplatelet−Epoxy Composite Thermal Interface Materials | 10.1021/jp071761s | Q182 | explicit_excluded_route_or_retained_product |
+| Nanoelectromechanical nonvolatile memory device incorporating nanocrystalline Si dots | 10.1063/1.2360143 | Q182 | uncertain_isolability_terminal_omission |
+| 3D graphene-mixed metal oxide-supported carbon palladium quantum dot nanoarchitectures – A facile bifunctional electrocatalyst for direct ethylene glycol fuel cells and oxygen evolution reactions | 10.1016/j.ijhydene.2016.07.179 | Q182 | explicit_excluded_route_or_retained_product |
+| Progress of nanocrystalline growth kinetics based on oriented attachment | 10.1039/b9nr00047j | Q182 | uncertain_isolability_terminal_omission |
+| Microstructural evolution during the heat treatment of nanocrystalline alloys | 10.1557/jmr.2007.0403 | Q182 | uncertain_isolability_terminal_omission |
+| Structural Studies of Nanocrystalline Nitrogen–Helium Solids by Raman Spectroscopy | 10.1007/s10909-006-9226-4 | Q183 | uncertain_isolability_terminal_omission |
+| Synthesis, properties and perspectives of hybrid nanocrystal structures | 10.1039/b517790c | Q183 | uncertain_isolability_terminal_omission |
+| Efficient, Stable, Small, and Water-Soluble Doped ZnSe Nanocrystal Emitters as Non-Cadmium Biomedical Labels | 10.1021/nl062336y | Q183 | uncertain_isolability_terminal_omission |
+| Dependence of electrical conductivity of nanocrystalline silicon on structural properties and the effect of substrate bias | 10.1080/13642818708208621 | Q183 | uncertain_isolability_terminal_omission |
+| Double quantum dot with tunable coupling in an enhancement-mode silicon metal-oxide semiconductor device with lateral geometry | 10.1063/1.3518058 | Q183 | uncertain_isolability_terminal_omission |
+| Enhancing memory efficiency of Si nanocrystal floating gate memories with high-κ gate oxides | 10.1063/1.2339562 | Q183 | explicit_excluded_route_or_retained_product |
+| Preventing Interfacial Recombination in Colloidal Quantum Dot Solar Cells by Doping the Metal Oxide | 10.1021/nn400656n | Q183 | uncertain_isolability_terminal_omission |
+| Novel nanowire array based highly efficient quantum dot sensitized solar cell | 10.1039/c0cc00542h | Q183 | explicit_excluded_route_or_retained_product |
+| Ultrasensitive Detection and Quantification of Acidic Disaccharides Using Capillary Electrophoresis and Quantum Dot-Based Fluorescence Resonance Energy Transfer | 10.1021/ac402242v | Q183 | uncertain_isolability_terminal_omission |
+| Properties of wetting layer states in low density InAs quantum dot nanostructures emitting at 1.3 μm: Effects of InGaAs capping | 10.1063/1.3518049 | Q183 | uncertain_isolability_terminal_omission |
+| Mn-Doped ZnS Quantum Dot Imbedded Two-Fragment Imprinting Silica for Enhanced Room Temperature Phosphorescence Probing of Domoic Acid | 10.1021/ac400250j | Q183 | uncertain_isolability_terminal_omission |
+| Conductance peak splitting in hole transport through a SiGe double quantum dot | 10.1063/1.1377320 | Q183 | uncertain_isolability_terminal_omission |
+| Transient Optical Studies of Interfacial Charge Transfer at Nanostructured Metal Oxide/PbS Quantum Dot/Organic Hole Conductor Heterojunctions | 10.1021/ja909172p | Q183 | uncertain_isolability_terminal_omission |
+| Local electrical and dielectric properties of nanocrystalline yttria-stabilized zirconia | 10.1007/s10853-008-2553-x | Q183 | uncertain_isolability_terminal_omission |
+| Supramolecular Assembly of Single-Source Metal–Chalcogenide Nanocrystal Precursors | 10.1021/acs.langmuir.8b01043 | Q183 | uncertain_isolability_terminal_omission |
+| Growth and Chemical Mixing Behavior of Au and Ag Nanocrystal Mixtures | 10.1017/s1431927605507967 | Q183 | explicit_excluded_route_or_retained_product |
+| Particle size effect on magnetotransport properties of nanocrystalline Nd0.7Sr0.3MnO3 | 10.1007/s11051-006-9101-x | Q183 | uncertain_isolability_terminal_omission |
+| Quantum nature of a strongly coupled single quantum dot–cavity system | 10.1038/nature05586 | Q183 | uncertain_isolability_terminal_omission |
+| Enhanced Fluorescence Intermittency of CdSe-ZnS Quantum-Dot Clusters | 10.1103/physrevlett.97.237402 | Q183 | uncertain_isolability_terminal_omission |
+| Micromagnetic structures of nanocrystalline ferromagnetic materials – comparison of simulation and experiment | 10.1002/pssa.200723606 | Q183 | uncertain_isolability_terminal_omission |
+| Nanocrystalline Ba0.97Ca0.03SO4:Eu for ion beams dosimetry | 10.1063/1.2955459 | Q183 | explicit_excluded_route_or_retained_product |
+| Measuring the interface stress of nanocrystalline iron | 10.1063/1.2888751 | Q183 | uncertain_isolability_terminal_omission |
+| Photocurrent and photoluminescence of a single self-assembled quantum dot in electric fields | 10.1063/1.1369148 | Q183 | uncertain_isolability_terminal_omission |
+| Ball milling of stainless steel scrap chips to produce nanocrystalline powder | 10.1007/s10853-006-1371-2 | Q183 | uncertain_isolability_terminal_omission |
+| Periodic arrays of epitaxial self-assembled SiGe quantum dot molecules grown on patterned Si substrates | 10.1063/1.2358003 | Q183 | uncertain_isolability_terminal_omission |
+| Probing local electronic states in the quantum Hall regime with a side-coupled quantum dot | 10.1103/physrevb.81.245302 | Q183 | uncertain_isolability_terminal_omission |
+| CdS/CdSe-Cosensitized TiO<sub>2</sub> Photoanode for Quantum-Dot-Sensitized Solar Cells by a Microwave-Assisted Chemical Bath Deposition Method | 10.1021/am200648b | Q183 | uncertain_isolability_terminal_omission |
+| Quantized rectification in a quantum dot nanojunction | 10.1103/physrevb.80.075317 | Q183 | uncertain_isolability_terminal_omission |
+| Colloidal chemical synthesis and characterization of InAs nanocrystal quantum dots | 10.1063/1.117605 | Q183 | uncertain_isolability_terminal_omission |
+| Cascade optical excitation of an artificial exciton molecule in a coupled quantum dot | 10.1002/pssc.200776597 | Q183 | uncertain_isolability_terminal_omission |
+| Shape-Directed Binary Assembly of Anisotropic Nanoplates: A Nanocrystal Puzzle with Shape-Complementary Building Blocks | 10.1021/nl401370n | Q183 | uncertain_isolability_terminal_omission |
+| Determining angles of incidence and heights of quantum dot faces by analyzing X-ray diffuse and specular scattering | 10.1134/s1063784209040185 | Q183 | uncertain_isolability_terminal_omission |
+| Defect and nanocrystal cathodoluminescence of synthetic opals infilled with Si and Pt | 10.1063/1.1346653 | Q183 | uncertain_isolability_terminal_omission |
+| Nanocrystal Superlattices with Thermally Degradable Hybrid Inorganic−Organic Capping Ligands | 10.1021/ja106841f | Q183 | uncertain_isolability_terminal_omission |
+| Single Quantum Dot-Micelles Coated with Silica Shell as Potentially Non-Cytotoxic Fluorescent Cell Tracers | 10.1021/ja061137d | Q183 | uncertain_isolability_terminal_omission |
+| Nanowire−Quantum Dot Hybridized Cell for Harvesting Sound and Solar Energies | 10.1021/jz101195n | Q183 | uncertain_isolability_terminal_omission |
+| Effect of polarization type on properties of Ni–W nanocrystalline electrodeposits | 10.1007/s10800-009-9796-3 | Q183 | uncertain_isolability_terminal_omission |
+| Driven coherent oscillations of a single electron spin in a quantum dot | 10.1038/nature05065 | Q183 | uncertain_isolability_terminal_omission |
+| SiGe quantum dot single-hole transistor fabricated by atomic force microscope nanolithography and silicon epitaxial-regrowth | 10.1063/1.2358398 | Q183 | uncertain_isolability_terminal_omission |
+| Structural and magnetic properties of the nanocrystalline alloy Fe86Zr7Cu1B6 | 10.1063/1.371784 | Q183 | explicit_excluded_route_or_retained_product |
+| Thiocyanate-Capped Nanocrystal Colloids: Vibrational Reporter of Surface Chemistry and Solution-Based Route to Enhanced Coupling in Nanocrystal Solids | 10.1021/ja206303g | Q183 | uncertain_isolability_terminal_omission |
+| Inter- and Intra-Agglomerate Fracture in Nanocrystalline Nickel | 10.1103/physrevlett.100.105502 | Q183 | uncertain_isolability_terminal_omission |
+| Sonochemical synthesis of nanocrystalline LaFeO3 | 10.1039/b310110j | Q183 | uncertain_isolability_terminal_omission |
+| Luminescence Photophysics in Semiconductor Nanocrystals | 10.1021/ar9700320 | Q183 | uncertain_isolability_terminal_omission |
+| Polymorphism in Micro-, Submicro-, and Nanocrystalline NaNbO<sub>3</sub> | 10.1021/jp052974p | Q184 | uncertain_isolability_terminal_omission |
+| Investigation of the surface chemical and electronic states of pyridine-capped CdSe nanocrystal films after plasma treatments using H2, O2, and Ar gases | 10.1116/1.3431079 | Q184 | uncertain_isolability_terminal_omission |
+| Ligand-Engineered HgTe Colloidal Quantum Dot Solids for Infrared Photodetectors | 10.1021/acs.nanolett.2c00950 | Q184 | uncertain_isolability_terminal_omission |
+| Temperature-Dependent Electron Transport through Silver Nanocrystal Superlattices | 10.1021/jp011227z | Q184 | uncertain_isolability_terminal_omission |
+| Photoconduction in Annealed and Chemically Treated CdSe/ZnS Inorganic Nanocrystal Films | 10.1021/jp710173q | Q184 | uncertain_isolability_terminal_omission |
+| Influence of Nanocrystal Size on the Optoelectronic Properties of Thin, Solution-Cast Sn-Doped In<sub>2</sub>O<sub>3</sub> Films | 10.1021/acs.chemmater.9b00538 | Q184 | uncertain_isolability_terminal_omission |
+| Assembly and Separation of Semiconductor Quantum Dot Dimers and Trimers | 10.1021/ja2077284 | Q184 | uncertain_isolability_terminal_omission |
+| Synthesis of monodisperse cobalt nanocrystals and their assembly into magnetic superlattices (invited) | 10.1063/1.370357 | Q184 | uncertain_isolability_terminal_omission |
