@@ -1,3 +1,53 @@
+## Pending particles43-20261029 — local preparation, zero new Live credit
+
+43 primary papers / 69 selected original-ordinal source_extracted records / 263 paraphrased crops are staged locally. Normal data/assets/caption/rights preparation and the quote-free archive are complete. All remaining Source and Site release checks must pass before these rows become Live. Expert-audit and audited-training credit is zero.
+
+| DOI | Source id | Record ids | Batch | Status | Live verified | Expert / training credit |
+|---|---|---|---|---|---|---|
+| 10.1246/cl.2007.912 | wang2007-cl-2007-912 | wang2007-cl-2007-912-hexagonal-phase-laf3-yb3-er3-1, wang2007-cl-2007-912-hexagonal-phase-nagdf4-yb3-er3-2, wang2007-cl-2007-912-cubic-phase-nayf4-yb3-er3-3, wang2007-cl-2007-912-hexagonal-phase-nayf4-yb3-er3-submicrocr-4 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
+| 10.1111/j.1151-2916.2002.tb00194.x | singh2002-j-1151-2916-2002-tb00194-x | singh2002-j-1151-2916-2002-tb00194-x-nanocrystalline-calcia-1 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
+| 10.1006/jssc.1998.7808 | millot1998-jssc-1998-7808 | millot1998-jssc-1998-7808-fe2-5ti0-5o4-soft-chemistry-1 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
+| 10.1021/jp953719f | guzelian1996-jp953719f | guzelian1996-jp953719f-inp-nanocrystals-1 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
+| 10.1557/jmr.1999.0210 | ennas1999-jmr-1999-0210 | ennas1999-jmr-1999-0210-nanocrystalline-gfe2o3-1 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
+| 10.1021/ja301285x | nag2012-ja301285x | nag2012-ja301285x-4-2-nm-wurtzite-cdse-ncs-capped-with-oct-1 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
+| 10.1103/physrevlett.89.186802 | crooker2002-physrevlett-89-186802 | crooker2002-physrevlett-89-186802-monodisperse-12-4-a-cdse-zns-nqds-1 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
+| 10.1021/acs.nanolett.4c02454 | xie2024-acs-nanolett-4c02454 | xie2024-acs-nanolett-4c02454-agingazns-aigzs-ncs-1 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
+| 10.1021/la3046548 | pascaud2013-la3046548 | pascaud2013-la3046548-nca1-1, pascaud2013-la3046548-nca2-2, pascaud2013-la3046548-nca3-3 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
+| 10.1063/1.1558235 | sudfeld2003-1-1558235 | sudfeld2003-1-1558235-co-nanoparticles-1 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
+| 10.1021/acsenergylett.5c03820 | roshan2026-acsenergylett-5c03820 | roshan2026-acsenergylett-5c03820-inas-znse-core-shell-qd1-1, roshan2026-acsenergylett-5c03820-inas-znse-core-shell-qd2-2, roshan2026-acsenergylett-5c03820-inas-znse-core-shell-qd3-3, roshan2026-acsenergylett-5c03820-inas-znse-core-shell-qd4-4 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
+| 10.1007/s10562-008-9798-5 | baiju2009-s10562-008-9798-5 | baiju2009-s10562-008-9798-5-mixed-phase-nanocrystalline-tio2-with-5-1, baiju2009-s10562-008-9798-5-mixed-phase-nanocrystalline-tio2-with-40-2, baiju2009-s10562-008-9798-5-mixed-phase-nanocrystalline-tio2-with-60-3 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
+| 10.1103/physrevb.81.245301 | grinbom2010-physrevb-81-245301 | grinbom2010-physrevb-81-245301-pbse-pbs-core-shell-cqd-with-core-radius-1, grinbom2010-physrevb-81-245301-pbse-pbs-core-shell-cqd-with-core-radius-2, grinbom2010-physrevb-81-245301-pbse-pbs-core-shell-cqd-with-core-radius-3 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
+| 10.1002/ange.200700847 | wu2007-ange-200700847 | wu2007-ange-200700847-hybrid-silicananocrystalorganic-dye-supe-1 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
+| 10.1021/jp075848p | breus2007-jp075848p | breus2007-jp075848p-cdse-zns-core-shell-quantum-dots-1 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
+| 10.1021/acs.chemmater.9b01277 | bhatia2019-acs-chemmater-9b01277 | bhatia2019-acs-chemmater-9b01277-fapbbr3-nanocubes-pbbr2-fabr-1-1-1, bhatia2019-acs-chemmater-9b01277-fapbbr3-nanorods-pbbr2-fabr-1-3-2 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
+| 10.1016/j.ijbiomac.2023.126453 | santos2023-j-ijbiomac-2023-126453 | santos2023-j-ijbiomac-2023-126453-qds-ecti-conjugate-1 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
+| 10.1021/cg701048d | niu2008-cg701048d | niu2008-cg701048d-sno2-r-fe2o3-snchs-1 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
+| 10.1021/cm903824e | vercelli2010-cm903824e | vercelli2010-cm903824e-pbse-ncs-2-4-nm-1, vercelli2010-cm903824e-pbse-ncs-2-8-nm-2 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
+| 10.1002/bio.982 | ma2007-bio-982 | ma2007-bio-982-cdte-quantum-dot-fluorescent-microsphere-1 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
+| 10.1021/ja209121x | yang2011-ja209121x | yang2011-ja209121x-aupd-coreshell-octahedra-1, yang2011-ja209121x-aupd-coreshell-concave-cubes-2 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
+| 10.1021/jp991009u | brock1999-jp991009u | brock1999-jp991009u-tea-manganese-oxide-colloid-2, brock1999-jp991009u-tpa-manganese-oxide-colloid-3, brock1999-jp991009u-tba-manganese-oxide-colloid-4 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
+| 10.1021/nn4002825 | bae2013-nn4002825 | bae2013-nn4002825-c-s-qd-1-5-nm-7-0-nm-1 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
+| 10.1021/ja5081037 | qian2014-ja5081037 | qian2014-ja5081037-perfluorodecyl-capped-silicon-nanocrysta-1 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
+| 10.1021/cm049221k | jana2004-cm049221k | jana2004-cm049221k-fe3o4-nanocrystals-8-nm-1, jana2004-cm049221k-fe3o4-nanocrystals-30-nm-2, jana2004-cm049221k-fe3o4-nanocrystals-30-nm-cubes-3 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
+| 10.1021/cm303361s | hens2013-cm303361s | hens2013-cm303361s-q-cdse-oa-1, hens2013-cm303361s-q-pbse-oa-2 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
+| 10.1021/la904031s | beckham2010-la904031s | beckham2010-la904031s-quantum-dot-coated-sio2-microparticles-q-1 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
+| 10.1002/smll.200500239 | donega2005-smll-200500239 | donega2005-smll-200500239-cdse-nanocrystals-1 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
+| 10.1021/jp054472h | lu2005-jp054472h | lu2005-jp054472h-cdse-zns-core-shell-quantum-dots-1 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
+| 10.1021/nl102539a | deka2010-nl102539a | deka2010-nl102539a-cdse-core-cds-arms-octapods-1, deka2010-nl102539a-all-cdse-octapods-2, deka2010-nl102539a-cdse-core-cdte-arms-multiarmed-nanocryst-3 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
+| 10.1021/nl0703424 | anikeeva2007-nl0703424 | anikeeva2007-nl0703424-cdse-zns-core-shell-qds-red-1, anikeeva2007-nl0703424-znse-cdse-zns-core-shell-shell-qds-green-2, anikeeva2007-nl0703424-zncds-alloyed-qds-blue-3 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
+| 10.1021/la1009169 | yan2010-la1009169 | yan2010-la1009169-cd0-4zn0-6s-nanocrystals-capped-with-pma-1 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
+| 10.1021/cm402148s | tan2013-cm402148s | tan2013-cm402148s-cdse-cds-core-shell-qds-1 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
+| 10.1021/ja2049463 | wang2011-ja2049463 | wang2011-ja2049463-tio2-hollow-spheres-1 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
+| 10.1063/1.3194151 | wang2009-1-3194151 | wang2009-1-3194151-colloidal-hgte-nanocrystal-quantum-dots-1 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
+| 10.1021/la9040198 | petushkov2010-la9040198 | petushkov2010-la9040198-nanocrystalline-nay-fau-phase-1 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
+| 10.1021/jp5111218 | franco2014-jp5111218 | franco2014-jp5111218-mpa-cdte-qds-1 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
+| 10.1021/cs400913h | liu2014-cs400913h | liu2014-cs400913h-au-nanoparticles-cqds-composite-1 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
+| 10.1063/1.2970995 | mei2008-1-2970995 | mei2008-1-2970995-znse-qd1-d-3-6-nm-1, mei2008-1-2970995-znse-qd2-d-3-0-nm-2, mei2008-1-2970995-znse-qd3-d-2-6-nm-3 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
+| 10.1016/j.mseb.2024.117417 | jourshabani2024-j-mseb-2024-117417 | jourshabani2024-j-mseb-2024-117417-cqd-1 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
+| 10.1063/1.1830684 | beecher2004-1-1830684 | beecher2004-1-1830684-6-8-nm-diam-copt3-nanocrystals-1 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
+| 10.1006/jssc.1999.8566 | nachimuthu2000-jssc-1999-8566 | nachimuthu2000-jssc-1999-8566-nanocrystalline-ceo2-1 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
+| 10.1021/jp809538z | xu2009-jp809538z | xu2009-jp809538z-cds-zns-qd-peva-nanofilms-1 | particles43-20261029 | Pending; source_extracted/unreviewed | not yet Live | 0 |
+
 ## particles12 verified Live — 2026-10-29T05:28:13+00:00
 
 Twelve particle papers / 17 selected original-ordinal source_extracted/unreviewed records / 57 paraphrased figure crops are verified Live at 2026-10-29T05:28:13+00:00 on Site `c163c589be272876c591943a65d56854ed5ae1e3` after the normal publisher, exact-head Pages and anonymous checks passed. Common papers received no extra audit. The four rare reads were single deletion-only reads, with unsupported whole objects deleted and original data retained; they are not independent expert audits. Training credit remains 0. The existing live title-based outside-scope list and paused audit denominators are unchanged.
@@ -3048,3 +3098,879 @@ These source_extracted rows are proposed locally; they are not Live and are not 
 | 10.1111/j.1151-2916.2003.tb03535.x | liu2003-j-1151-2916-2003-tb03535-x-nanocrystalline-yag-y3al5o12-powder-1 | particles3-after41-20261028 | verified normal Site release; source_extracted/unreviewed; 2026-10-28T14:18:02+00:00; Site be411a5c01a1805f1ef3c9b68713f6300f956213 | yes; existing one deletion-only read |
 | 10.1038/35023100 | michler2000-35023100-cdse-zns-quantum-dot-1 | particles3-after41-20261028 | verified normal Site release; source_extracted/unreviewed; 2026-10-28T14:18:02+00:00; Site be411a5c01a1805f1ef3c9b68713f6300f956213 | not required; common material |
 | 10.1246/cl.2006.1344 | li2006-cl-2006-1344-hollow-tio2-microspheres-1 | particles3-after41-20261028 | verified normal Site release; source_extracted/unreviewed; 2026-10-28T14:18:02+00:00; Site be411a5c01a1805f1ef3c9b68713f6300f956213 | not required; common material |
+
+
+## Q162–Q177 queue scope omissions — saved titles, 2026-10-29
+
+These completed queue entries were omitted for this job under their existing product-scope decisions. Unresolved isolability is an operational omission, not a claim that the material can never form free particles. Titles come only from saved metadata; no source was reread for this list. Already-Live records and the separate historical Live title annotations are unchanged. This repository-only list is excluded from the built site.
+
+| Saved title | Original queue DOI label | Cohort | Existing omission diagnostic |
+|---|---|---|---|
+| Recent Advances in Methane Gas Sensors | 10.1155/2009_861968 | Q162 | uncertain_isolability_terminal_omission |
+| Self-assembled InAs/GaAs quantum dots and quantum dot laser | 10.1007/bf02884185 | Q162 | explicit_excluded_route_or_retained_product |
+| Influence of Sr Content on the Ethanol Sensitivity of Nanocrystalline La1−xSrxFeO3 | 10.1006/jssc.1996.7239 | Q162 | uncertain_isolability_terminal_omission |
+| Nanocrystalline metals prepared by high-energy ball milling | 10.1007/bf02646980 | Q162 | explicit_excluded_route_or_retained_product |
+| Optical spectroscopy of quasimonolayer InAs at the onset of quantum-dot nucleation | 10.1103/physrevb.60.2592 | Q162 | uncertain_isolability_terminal_omission |
+| Synthesis of nanocrystalline TiO2 by tartarate gel method | 10.1007/bf02707273 | Q162 | uncertain_isolability_terminal_omission |
+| Phosphor Quantum Dots | 10.1002/9780470985687.ch2 | Q162 | uncertain_isolability_terminal_omission |
+| Photoelectric spectroscopy of InAs/GaAs quantum dot heterostructures in a semiconductor/electrolyte system | 10.1134/1.1371619 | Q162 | uncertain_isolability_terminal_omission |
+| Quantum-dot injection heterolaser with 3.3 W output power | 10.1134/1.1262530 | Q162 | explicit_excluded_route_or_retained_product |
+| Using Porous Silicon as a Hydrogenating Agent: Derivatization of the Surface of Luminescent Nanocrystalline Silicon with Benzoquinone | 10.1021/ja9708979 | Q162 | explicit_excluded_route_or_retained_product |
+| ChemInform Abstract: Microstructure and Field Emission of Nanocrystalline Diamond Prepared from C60 Precursors. | 10.1002/chin.199747003 | Q162 | explicit_excluded_route_or_retained_product |
+| Readily superplastic forging at high strain rates in an aluminium-based alloy produced from nanocrystalline powders | 10.1007/bf00354013 | Q162 | explicit_excluded_route_or_retained_product |
+| A study of nanocrystalline iron and aluminium metals and Fe3Al intermetallic by mechanical alloying | 10.1007/bf01184564 | Q162 | uncertain_isolability_terminal_omission |
+| Low Temperature Sintering and Deformation of Nanocrystalline TiO&lt;sub&gt;2&lt;/sub&gt; | 10.1557/proc-196-71 | Q162 | explicit_excluded_route_or_retained_product |
+| Synthesis of Nanocrystalline Diamond Films by Microwave Plasma CVD | 10.1002/9781118380826.ch4 | Q162 | explicit_excluded_route_or_retained_product |
+| Rehybridization of electronic structure in compressed two-dimensional quantum dot superlattices | 10.1103/physrevb.59.1633 | Q162 | uncertain_isolability_terminal_omission |
+| Fabrication of thin film Ag/CuCl layered quantum dot composites using solid state diffusion | 10.1023/a_1018501108791 | Q162 | explicit_excluded_route_or_retained_product |
+| Photoluminescence of strain-induced coupled InGaAs/GaAs quantum-dot pairs | 10.1007/s11664-000-0038-z | Q162 | explicit_excluded_route_or_retained_product |
+| Bulk Modulus and Young's Modulus of Nanocrystalline γ‐Alumina | 10.1111/j.1151-2916.1994.tb04524.x | Q162 | uncertain_isolability_terminal_omission |
+| Nanocrystalline Ge filaments in the pores of a mesosilicate | 10.1103/physrevb.52.r2285 | Q162 | explicit_excluded_route_or_retained_product |
+| Mechanically Activated Synthesis of Nanocrystalline Powders of Ferroelectric Bismuth Vanadate | 10.1006/jssc.1998.7981 | Q162 | explicit_excluded_route_or_retained_product |
+| Preparation and optical absorption of InAs nanocrystal-embedded thin films | 10.1007/bf02896275 | Q162 | explicit_excluded_route_or_retained_product |
+| Effect of interphase boundaries on resistivity and thermopower of nanocrystalline Re-Si thin film composites | 10.1103/physrevb.58.9644 | Q162 | explicit_excluded_route_or_retained_product |
+| Dopants in nanocrystalline tin dioxide | 10.1023/a_1024916020690 | Q162 | uncertain_isolability_terminal_omission |
+| Synthesis and nanoindentation study of high-velocity oxygen fuel thermal-sprayed nanocrystalline and near-nanocrystalline Ni coatings | 10.1007/s11661-002-0126-1 | Q162 | uncertain_isolability_terminal_omission |
+| Structural investigations of nanocrystalline Ti–Al and Ni by PAC | 10.1023/a_1017000112463 | Q162 | uncertain_isolability_terminal_omission |
+| Iron exchange-field penetration into the amorphous interphase of nanocrystalline materials | 10.1103/physrevb.51.3281 | Q162 | uncertain_isolability_terminal_omission |
+| Single Quantum Dot Nonlinear Optical Spectroscopy | 10.1002/1521-3951(200009)221_1_5__aid-pssb5_3.0.co;2-h | Q162 | uncertain_isolability_terminal_omission |
+| Optical properties of nanocrystalline silicon embedded in SiO2 | 10.1007/bf02880392 | Q162 | explicit_excluded_route_or_retained_product |
+| Magnetic‐Field‐Directed Growth of CoPt&lt;sub&gt;3&lt;/sub&gt; Nanocrystal Microwires | 10.1002/adma.200401566 | Q162 | uncertain_isolability_terminal_omission |
+| On the mechanism of microcrack formation in nanocrystalline Fe–Ni electrodeposits | 10.1023/a_1018693005002 | Q162 | explicit_excluded_route_or_retained_product |
+| Nanocrystalline materials prepared through crystallization by ball milling | 10.1002/adma.19970090216 | Q162 | explicit_excluded_route_or_retained_product |
+| Oxidation resistance of sputtered Ni3(AlCr) nanocrystalline coating | 10.1007/bf01668513 | Q162 | explicit_excluded_route_or_retained_product |
+| Mechanical properties, ductility, and grain size of nanocrystalline iron produced by mechanical attrition | 10.1007/s11661-998-0106-1 | Q162 | uncertain_isolability_terminal_omission |
+| Narrowing of the palladium-hydrogen miscibility gap in nanocrystalline palladium | 10.1103/physrevb.48.84 | Q162 | uncertain_isolability_terminal_omission |
+| Mössbauer and PAC studies of nanocrystalline Fe | 10.1007/bf02065717 | Q162 | explicit_excluded_route_or_retained_product |
+| Nanocrystalline silicon superlattices: building blocks for quantum devices | 10.1016/s0921-5107(99)00292-5 | Q162 | explicit_excluded_route_or_retained_product |
+| Phase Diagram of a Quantum Dot with Steep Walls in Strong Magnetic Fields | 10.1002/1521-3951(200103)224_2_555__aid-pssb555_3.3.co;2-6 | Q162 | uncertain_isolability_terminal_omission |
+| Superplasticity‐like Deformation of Nanocrystalline Monoclinic Zirconia at Elevated Temperatures | 10.1111/j.1551-2916.2004.01122.x | Q162 | uncertain_isolability_terminal_omission |
+| Nanocrystalline silicon prepared at high growth rate using helium dilution | 10.1007/s12034-008-0073-6 | Q163 | explicit_excluded_route_or_retained_product |
+| Gold-Nanocrystal-Enhanced Bioluminescent Nanocapsules | 10.1021/nn504371h | Q163 | uncertain_isolability_terminal_omission |
+| Nanocrystalline Spinel from Freeze-Dried Nitrates: Synthesis, Energetics of Product Formation, and Cation Distribution | 10.1021/cm9706659 | Q163 | uncertain_isolability_terminal_omission |
+| High resistivity nanocrystalline FeRhN films | 10.1063/1.372548 | Q163 | uncertain_isolability_terminal_omission |
+| Anomalous defect behaviour resulting from the hydriding of nanocrystalline palladium | 10.1080/09500839308242425 | Q163 | uncertain_isolability_terminal_omission |
+| Quantum Dot Loaded Liposomes As Fluorescent Labels for Immunoassay | 10.1021/ac401729y | Q163 | uncertain_isolability_terminal_omission |
+| Detection of Single-Electron Charging in an Individual InAs Quantum Dot by Noncontact Atomic-Force Microscopy | 10.1103/physrevlett.94.056802 | Q163 | uncertain_isolability_terminal_omission |
+| Effect of Air Exposure on Surface Properties, Electronic Structure, and Carrier Relaxation in PbSe Nanocrystals | 10.1021/nn100131w | Q163 | uncertain_isolability_terminal_omission |
+| Newly Synthesized Silicon Quantum Dot–Polystyrene Nanocomposite Having Thermally Robust Positive Charge Trapping | 10.1021/am400356r | Q163 | explicit_excluded_route_or_retained_product |
+| Admittance spectroscopy of GeSi-based quantum dot systems: Experiment and theory | 10.1103/physrevb.76.245304 | Q163 | uncertain_isolability_terminal_omission |
+| Controlled Nanoplatelet Deposition of 2D Chromium Trihalide Solid Solutions | 10.1021/acs.chemmater.2c03785 | Q163 | uncertain_isolability_terminal_omission |
+| Strain-Induced Formation of Fourfold Symmetric SiGe Quantum Dot Molecules | 10.1103/physrevlett.111.265501 | Q163 | uncertain_isolability_terminal_omission |
+| Plasmon-Modulated Light Scattering from Gold Nanocrystal-Decorated Hollow Mesoporous Silica Microspheres | 10.1021/nn101804v | Q163 | uncertain_isolability_terminal_omission |
+| Measurement of the Spin Relaxation Time of Single Electrons in a Silicon Metal-Oxide-Semiconductor-Based Quantum Dot | 10.1103/physrevlett.104.096801 | Q163 | uncertain_isolability_terminal_omission |
+| Silicon‐nanocrystal‐based photosensor integrated on low‐temperature polysilicon panels | 10.1889/1.2953485 | Q163 | explicit_excluded_route_or_retained_product |
+| Characteristic of (Pb&lt;sub&gt;1‐x&lt;/sub&gt;Zn&lt;sub&gt;x&lt;/sub&gt;)S tandem structured quantum dot‐sensitized solar cell having wide light absorbance | 10.1002/pssc.201000513 | Q163 | uncertain_isolability_terminal_omission |
+| Crystallite Size Dependence of Lithium Intercalation in Nanocrystalline Rutile | 10.1021/jp8087995 | Q163 | uncertain_isolability_terminal_omission |
+| Preparation, treatment and characterisation of nanocrystalline mesoporous ordered layers | 10.1007/s10971-006-8990-6 | Q163 | uncertain_isolability_terminal_omission |
+| Single Nanocrystal Arrays on Patterned Poly(ethylene glycol) Copolymer Microstructures Using Selective Wetting and Drying | 10.1021/la049217n | Q163 | uncertain_isolability_terminal_omission |
+| Measuring Charge Carrier Diffusion in Coupled Colloidal Quantum Dot Solids | 10.1021/nn402197a | Q163 | uncertain_isolability_terminal_omission |
+| Nanocrystalline soft magnetic materials: intergrain coupling and spin freezing effects | 10.1002/pssb.200301669 | Q163 | uncertain_isolability_terminal_omission |
+| Raman spectroscopy of nanocrystalline and amorphous GaN | 10.1063/1.1875743 | Q163 | uncertain_isolability_terminal_omission |
+| Solution-Phase Single Quantum Dot Fluorescence Resonance Energy Transfer | 10.1021/ja0657253 | Q163 | uncertain_isolability_terminal_omission |
+| Noise-induced spectral shift measured in a double quantum dot | 10.1103/physrevb.80.115315 | Q163 | uncertain_isolability_terminal_omission |
+| Quantum dot to quantum wire transition of&lt;mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"&gt;&lt;mml:mi&gt;m&lt;/mml:mi&gt;&lt;/mml:math&gt;-plane GaN islands | 10.1103/physrevb.79.035313 | Q163 | explicit_excluded_route_or_retained_product |
+| A molecular state of correlated electrons in a quantum dot | 10.1038/nphys944 | Q163 | uncertain_isolability_terminal_omission |
+| Electron and hole tunneling in a moderate density quantum dot ensemble with shallow confinement potentials | 10.1063/1.121836 | Q163 | uncertain_isolability_terminal_omission |
+| High-temperature evolution of coercivity in nanocrystalline alloys | 10.1103/physrevb.66.224418 | Q163 | uncertain_isolability_terminal_omission |
+| Strongly Nonlinear Dependence of Energy Transfer Rate on sp&lt;sup&gt;2&lt;/sup&gt; Carbon Content in Reduced Graphene Oxide-Quantum Dot Hybrid Structures | 10.1021/jz502414y | Q163 | uncertain_isolability_terminal_omission |
+| Electrophoretic Isolation of Discrete Au Nanocrystal/DNA Conjugates | 10.1021/nl005508e | Q163 | uncertain_isolability_terminal_omission |
+| On the origin of ultrahigh cryogenic strength of nanocrystalline metals | 10.1063/1.1799238 | Q163 | uncertain_isolability_terminal_omission |
+| PbSe Nanocrystal Excitonic Solar Cells | 10.1021/nl901930g | Q163 | uncertain_isolability_terminal_omission |
+| Dislocations in nanocrystalline grains | 10.1063/1.2210295 | Q163 | uncertain_isolability_terminal_omission |
+| Demonstration of a 256×256 middle-wavelength infrared focal plane array based on InGaAs/InGaP quantum dot infrared photodetectors | 10.1063/1.1688000 | Q163 | uncertain_isolability_terminal_omission |
+| Prepositioned single quantum dot in a lateral electric field | 10.1103/physrevb.78.195301 | Q163 | uncertain_isolability_terminal_omission |
+| Time resolved single electron detection in a quantum dot | 10.1063/1.1994336 | Q163 | uncertain_isolability_terminal_omission |
+| Nanometer-scale control of single quantum dot nucleation through focused ion-beam implantation | 10.1103/physrevb.76.235301 | Q163 | uncertain_isolability_terminal_omission |
+| Dielectric properties of nanocrystalline TiO2 prepared using spark plasma sintering | 10.1007/s10832-006-8574-4 | Q163 | explicit_excluded_route_or_retained_product |
+| Observation of a nanocrystalline-to-amorphous phase transition in luminescent porous silicon | 10.1063/1.114376 | Q163 | explicit_excluded_route_or_retained_product |
+| Charge sensing of excited states in an isolated double quantum dot | 10.1103/physrevb.71.115333 | Q163 | uncertain_isolability_terminal_omission |
+| Effect of exciton migration on the light emission properties in silicon nanocrystal ensembles | 10.1063/1.3138811 | Q163 | uncertain_isolability_terminal_omission |
+| Tunable Fano‐Kondo effect in a quantum dot with an Aharonov‐Bohmring | 10.1002/pssc.200672880 | Q163 | uncertain_isolability_terminal_omission |
+| On the complex behavior of strain relaxation in (In,Ga)As/GaAs(001) quantum dot molecules | 10.1063/1.3176409 | Q163 | explicit_excluded_route_or_retained_product |
+| Gate induced crossover between Fabry–Pérot and quantum dot behavior in a single walled carbon nanotube hole transistor | 10.1063/1.3268461 | Q163 | uncertain_isolability_terminal_omission |
+| Highly Sensitive Immunoassay for the Diagnosis of Acute Myocardial Infarction Using Silica Spheres Encapsulating a Quantum Dot Layer | 10.1021/ac502412x | Q164 | uncertain_isolability_terminal_omission |
+| Photoexcited carrier transfer in InGaAs quantum dot structures: Dependence on the dot density | 10.1063/1.126359 | Q164 | uncertain_isolability_terminal_omission |
+| Out-of-Equilibrium Singlet-Triplet Kondo Effect in a Single C60 Quantum Dot | 10.1007/s10909-008-9840-4 | Q164 | uncertain_isolability_terminal_omission |
+| Electrical charging of a single quantum dot by a spin polarized electron | 10.1063/1.2973397 | Q164 | explicit_excluded_route_or_retained_product |
+| Light‐Emission Performance of Silicon Nanocrystals Deduced from Single Quantum Dot Spectroscopy | 10.1002/adfm.200800397 | Q164 | uncertain_isolability_terminal_omission |
+| Synthesis and local structure of doped nanocrystalline zinc oxides | 10.1063/1.2349430 | Q164 | uncertain_isolability_terminal_omission |
+| Electron dephasing in nanocrystalline silicon thin films | 10.1063/1.2840179 | Q164 | uncertain_isolability_terminal_omission |
+| Graphite-Nanoplatelet-Decorated Polymer Nanofiber with Improved Thermal, Electrical, and Mechanical Properties | 10.1021/am401420k | Q164 | explicit_excluded_route_or_retained_product |
+| Observation of multicharged excitons and biexcitons in a single InGaAs quantum dot | 10.1103/physrevb.63.161305 | Q164 | uncertain_isolability_terminal_omission |
+| Inserting one single Mn ion into a quantum dot | 10.1063/1.2387116 | Q164 | uncertain_isolability_terminal_omission |
+| Effects of Si doping on normal incidence InAs∕In0.15Ga0.85As dots-in-well quantum dot infrared photodetectors | 10.1063/1.2189973 | Q164 | uncertain_isolability_terminal_omission |
+| Microcontact printing of quantum dot bioconjugate arrays for localized capture and detection of biomolecules | 10.1007/s10544-007-9144-5 | Q164 | uncertain_isolability_terminal_omission |
+| Oriented Nanocrystal Mosaic in Monodispersed CaCO&lt;sub&gt;3&lt;/sub&gt;Microspheres with Functional Organic Molecules | 10.1021/cg201301x | Q164 | uncertain_isolability_terminal_omission |
+| Coupled-stripe quantum-well-assisted AlGaAs–GaAs–InGaAs–InAs quantum-dot laser | 10.1063/1.1473686 | Q164 | uncertain_isolability_terminal_omission |
+| AC thermal imaging of a microwire with a fluorescent nanocrystal: Influence of the near field on the thermal contrast | 10.1063/1.3233940 | Q164 | uncertain_isolability_terminal_omission |
+| Single Dot Spectroscopy of Two-Color Quantum Dot/Quantum Shell Nanostructures | 10.1021/jp806621q | Q164 | uncertain_isolability_terminal_omission |
+| Para-sexiphenyl-CdSe/ZnS nanocrystal hybrid light emitting diodes | 10.1063/1.3086295 | Q164 | uncertain_isolability_terminal_omission |
+| Fatigue and Fracture of a Bulk Nanocrystalline NiFe Alloy | 10.1007/s11661-008-9487-4 | Q164 | explicit_excluded_route_or_retained_product |
+| Improved ductility of nanocrystalline Fe73.5Nb3Cu1Si13.5B9 obtained by direct-current joule heating | 10.1063/1.110326 | Q164 | uncertain_isolability_terminal_omission |
+| Quantum dot with internal substructure | 10.1063/1.2730131 | Q164 | uncertain_isolability_terminal_omission |
+| Conjugated polymers/semiconductor nanocrystals hybrid materials—preparation, electrical transport properties and applications | 10.1039/c0nr00403k | Q164 | uncertain_isolability_terminal_omission |
+| Selective Excitation of a Single Quantum Dot in a Photonic Crystal Nanocavity by using Cavity Resonance | 10.1063/1.2730294 | Q164 | uncertain_isolability_terminal_omission |
+| Phototransistor with nanocrystalline Si/amorphous Si bilayer channel | 10.1063/1.3422479 | Q164 | uncertain_isolability_terminal_omission |
+| Ultratough nanocrystalline copper with a narrow grain size distribution | 10.1063/1.1779342 | Q164 | explicit_excluded_route_or_retained_product |
+| Carrier Localization and Cooling in Dye-Sensitized Nanocrystalline Titanium Dioxide | 10.1021/jp025844e | Q164 | uncertain_isolability_terminal_omission |
+| Deformation mechanism in nanocrystalline Al: Partial dislocation slip | 10.1063/1.1594836 | Q164 | uncertain_isolability_terminal_omission |
+| A Few Electron-Hole Semiconducting Carbon Nanotube Quantum Dot | 10.1063/1.1812154 | Q164 | explicit_excluded_route_or_retained_product |
+| Single electron and hole quantum dot transistors operating above 110 K | 10.1116/1.588306 | Q164 | uncertain_isolability_terminal_omission |
+| Single Quantum Dot Coupled to a Scanning Optical Antenna: A Tunable Superemitter | 10.1103/physrevlett.95.017402 | Q164 | uncertain_isolability_terminal_omission |
+| Nanocrystalline Graphite Growth on Sapphire by Carbon Molecular Beam Epitaxy | 10.1021/jp110650d | Q164 | uncertain_isolability_terminal_omission |
+| Single molecule resolution of the antimicrobial action of quantum dot-labeled sushi peptide on live bacteria | 10.1186/1741-7007-7-22 | Q164 | uncertain_isolability_terminal_omission |
+| Quantum Dot Molecules Assembled with Genetically Engineered Proteins | 10.1021/nl034578t | Q164 | uncertain_isolability_terminal_omission |
+| Infrared Colloidal Quantum Dots for Photovoltaics: Fundamentals and Recent Progress | 10.1002/adma.201001491 | Q164 | uncertain_isolability_terminal_omission |
+| Direct Spectroscopic Evidence for the Formation of One-Dimensional Wetting Wires During the Growth of InGaAs/GaAs Quantum Dot Chains | 10.1021/nl060271t | Q164 | uncertain_isolability_terminal_omission |
+| Preparation of anatase-type TiO2 nanocrystal/acetylene black composites by a dry process, and their electrochemical lithium insertion | 10.1039/b405249h | Q164 | uncertain_isolability_terminal_omission |
+| Site-selective formation of Si nanocrystal in SiO2 by femtosecond laser irradiation and Al deoxidization effects | 10.1063/1.2905289 | Q164 | uncertain_isolability_terminal_omission |
+| A New Rapid Reduction−Carbonization Route to Nanocrystalline β-SiC | 10.1021/cm981071o | Q164 | uncertain_isolability_terminal_omission |
+| Scanning tunneling microscope and tunneling stabilized magnetic force microscope characterization of magnetic nanocrystalline materials | 10.1116/1.587654 | Q164 | explicit_excluded_route_or_retained_product |
+| Mechanical properties and deformation mechanisms of nanocrystalline Fe/Cu 60/40 composites | 10.1007/s10853-010-4848-y | Q164 | uncertain_isolability_terminal_omission |
+| First- and second-order Raman scattering in nanocrystalline silicon | 10.1103/physrevb.64.073304 | Q164 | uncertain_isolability_terminal_omission |
+| Nanocrystalline 3C-SiC Electrode for Biosensing Applications | 10.1021/ac201315q | Q164 | uncertain_isolability_terminal_omission |
+| Single wall carbon nanotube double quantum dot | 10.1063/1.2402887 | Q164 | uncertain_isolability_terminal_omission |
+| Optical properties of nanocrystalline silicon deposited by PECVD | 10.1007/s10854-007-9230-8 | Q164 | explicit_excluded_route_or_retained_product |
+| Very small-size and high-density β-FeSi2 nanocrystal assemblies grown on a Si(100) substrate using an embedded solid-phase epitaxy and bionanoprocess with protein ferritin | 10.1063/1.2813642 | Q164 | explicit_excluded_route_or_retained_product |
+| On the modeling of lattice thermal conductivity in semiconductor quantum dot superlattices | 10.1063/1.1668317 | Q165 | uncertain_isolability_terminal_omission |
+| Statistical electron excitation in a double quantum dot induced by two independent quantum point contacts | 10.1103/physrevb.79.035303 | Q165 | uncertain_isolability_terminal_omission |
+| Diffusion of boron in nanocrystalline iron A new type of diffusion kinetics: Type C′ | 10.1080/09500839308240500 | Q165 | explicit_excluded_route_or_retained_product |
+| Biomimetic Self-Assembling Copolymer−Hydroxyapatite Nanocomposites with the Nanocrystal Size Controlled by Citrate | 10.1021/cm200355n | Q165 | explicit_excluded_route_or_retained_product |
+| Small aperture fabrication for single quantum dot spectroscopy | 10.1116/1.590429 | Q165 | uncertain_isolability_terminal_omission |
+| Evolution of morphology in nanocrystalline thin films during ion irradiation | 10.1103/physrevb.68.075419 | Q165 | uncertain_isolability_terminal_omission |
+| Laser-Induced Fabrication of Multicolor Perovskite Quantum Dot Patterns with Multiple Information Encryption Modes | 10.1021/acsami.4c16760 | Q165 | uncertain_isolability_terminal_omission |
+| NMR and X-ray Absorption Study of Lithium Intercalation in Micro- and Nanocrystalline Anatase | 10.1021/cm990007j | Q165 | uncertain_isolability_terminal_omission |
+| Tunable Noise Cross Correlations in a Double Quantum Dot | 10.1103/physrevlett.98.056801 | Q165 | uncertain_isolability_terminal_omission |
+| Lactic acid–magnesium oxide nanocrystal interactions: how nanoparticle size and shape affect chemistry and template oligomerization | 10.1039/b908132a | Q165 | uncertain_isolability_terminal_omission |
+| Fracture in electrophoretically deposited CdSe nanocrystal films | 10.1063/1.3118630 | Q165 | uncertain_isolability_terminal_omission |
+| High-pressure Raman study on nanocrystalline CeO2 | 10.1063/1.1333720 | Q165 | uncertain_isolability_terminal_omission |
+| Nanocrystal Growth on Graphene with Various Degrees of Oxidation | 10.1021/ja100329d | Q165 | uncertain_isolability_terminal_omission |
+| Structural Properties of Pure and Nickel-Modified Nanocrystalline Tungsten Trioxide | 10.1021/jp304082t | Q165 | uncertain_isolability_terminal_omission |
+| Mechanosynthesis and magnetic characterization of nanocrystalline manganese ferrites | 10.1007/s10854-010-0257-x | Q165 | explicit_excluded_route_or_retained_product |
+| Field-induced growth of a quantum dot from Ge2H6 precursor gas using the scanning tunneling microscope | 10.1116/1.1358885 | Q165 | explicit_excluded_route_or_retained_product |
+| Kinetics of the amorphous-to-nanocrystalline transformation in Fe73.5Cu1Nb3Si13.5B9 | 10.1063/1.354581 | Q165 | uncertain_isolability_terminal_omission |
+| Mössbauer study of the surface crystallization of the amorphous and nanocrystalline Fe81Zr7B12 alloy | 10.1063/1.363209 | Q165 | explicit_excluded_route_or_retained_product |
+| Vertical stacks of shape-engineered InAs∕InAlGaAs quantum dot and its influences on the lasing characteristics | 10.1063/1.2721854 | Q165 | explicit_excluded_route_or_retained_product |
+| Energy dependence of quantum dot formation by ion sputtering | 10.1103/physrevb.63.165329 | Q165 | uncertain_isolability_terminal_omission |
+| CdSe nanocrystal based chem-/bio- sensors | 10.1039/b517613c | Q165 | uncertain_isolability_terminal_omission |
+| Trilayer hybrid polymer-quantum dot light-emitting diodes | 10.1063/1.1699476 | Q165 | uncertain_isolability_terminal_omission |
+| Excitation-induced germanium quantum dot formation on Si(100)-(2×1) | 10.1063/1.3462436 | Q165 | uncertain_isolability_terminal_omission |
+| Cellular Trafficking of Quantum Dot-Ligand Bioconjugates and Their Induction of Changes in Normal Routing of Unconjugated Ligands | 10.1021/nl0803848 | Q165 | uncertain_isolability_terminal_omission |
+| Trapping levels in nanocrystalline porous silicon | 10.1063/1.126581 | Q165 | uncertain_isolability_terminal_omission |
+| Nanocrystal Recovery by Use of Carrier Particles | 10.1021/cg401432m | Q165 | uncertain_isolability_terminal_omission |
+| Cryogenic scanning tunneling microscope for quantum dot spectroscopy | 10.1063/1.1379608 | Q165 | uncertain_isolability_terminal_omission |
+| Enhanced infrared photovoltaic efficiency in PbS nanocrystal/semiconducting polymer composites: 600-fold increase in maximum power output via control of the ligand barrier | 10.1063/1.2137895 | Q165 | uncertain_isolability_terminal_omission |
+| Linear electro–optic tensor ratio determination and quadratic electro–optic modulation of electrostatically self-assembled CdSe quantum dot films | 10.1063/1.1457446 | Q165 | uncertain_isolability_terminal_omission |
+| Nanocrystalline Anatase Titania-Supported Vanadia Catalysts: Facet-Dependent Structure of Vanadia | 10.1021/acs.jpcc.5b01486 | Q165 | uncertain_isolability_terminal_omission |
+| Vibrational modes and strain in GaN/AlN quantum dot stacks: dependence on spacer thickness | 10.1002/pssc.200674745 | Q165 | uncertain_isolability_terminal_omission |
+| Structure and magnetic properties of bulk nanocrystalline SmCo6.6Nb0.4 permanent magnets | 10.1063/1.2749182 | Q165 | uncertain_isolability_terminal_omission |
+| Anomalous x-ray diffraction on InAs/GaAs quantum dot systems | 10.1063/1.1491293 | Q165 | uncertain_isolability_terminal_omission |
+| Quantum Dot Bioconjugation during Core–Shell Synthesis | 10.1002/ange.200703648 | Q165 | uncertain_isolability_terminal_omission |
+| On the origin of the uniaxial anisotropy in nanocrystalline soft-magnetic materials | 10.1063/1.364164 | Q165 | uncertain_isolability_terminal_omission |
+| Colloidal nanocrystal-based light-emitting diodes fabricated on plastic toward flexible quantum dot optoelectronics | 10.1063/1.3074335 | Q165 | uncertain_isolability_terminal_omission |
+| Interface diffusion and amorphous intergranular layers in nanocrystalline Fe90Zr7B3 | 10.1063/1.1697614 | Q165 | explicit_excluded_route_or_retained_product |
+| Paramagnetic Lipid-Coated Silica Nanoparticles with a Fluorescent Quantum Dot Core: A New Contrast Agent Platform for Multimodality Imaging | 10.1021/bc800368x | Q165 | uncertain_isolability_terminal_omission |
+| Two-electron bunching in transport through a quantum dot induced by Kondo correlations | 10.1103/physrevb.77.241303 | Q165 | uncertain_isolability_terminal_omission |
+| Processes of quantum dot formation in the InAs on GaAs(001) system: A reflectance anisotropy spectroscopy study | 10.1116/1.590175 | Q165 | uncertain_isolability_terminal_omission |
+| Superfast densification of nanocrystalline oxide powders by spark plasma sintering | 10.1007/s10853-006-0605-7 | Q165 | uncertain_isolability_terminal_omission |
+| Optical detection of asymmetric quantum-dot molecules in double-layer InAs/GaAs structures | 10.1134/s1063782606010143 | Q165 | explicit_excluded_route_or_retained_product |
+| Single-electron tunneling in a single PbS nanocrystal nucleated on 11-mercaptoundecanoic acid self-assembled monolayer at room temperature | 10.1063/1.1382827 | Q165 | explicit_excluded_route_or_retained_product |
+| Scaleable synthesis route for silicon nanocrystal assemblies | 10.1002/pssa.200674320 | Q166 | uncertain_isolability_terminal_omission |
+| Nitrogen at the&lt;mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"&gt;&lt;mml:mrow&gt;&lt;mml:mtext&gt;Si-nanocrystal&lt;/mml:mtext&gt;&lt;mml:mo&gt;/&lt;/mml:mo&gt;&lt;mml:msub&gt;&lt;mml:mrow&gt;&lt;mml:mtext&gt;SiO&lt;/mml:mtext&gt;&lt;/mml:mrow&gt;&lt;mml:mn&gt;2&lt;/mml:mn&gt;&lt;/mml:msub&gt;&lt;/mml:mrow&gt;&lt;/mml:math&gt;interface and its influence on luminescence and interface defects | 10.1103/physrevb.82.195401 | Q166 | uncertain_isolability_terminal_omission |
+| Low core losses of nanocrystalline Fe–M–B (&lt;i&gt;M&lt;/i&gt;=Zr, Hf, or Nb) alloys | 10.1063/1.354555 | Q166 | uncertain_isolability_terminal_omission |
+| Deterministic emitter-cavity coupling using a single-site controlled quantum dot | 10.1103/physrevb.82.033301 | Q166 | uncertain_isolability_terminal_omission |
+| Photocurrent Induced by Nonradiative Energy Transfer from Nanocrystal Quantum Dots to Adjacent Silicon Nanowire Conducting Channels: Toward a New Solar Cell Paradigm | 10.1021/nl903104k | Q166 | uncertain_isolability_terminal_omission |
+| Dopant-Induced Shape Evolution of Colloidal Nanocrystals: The Case of Zinc Oxide | 10.1021/ja103956p | Q166 | uncertain_isolability_terminal_omission |
+| Effects of Ultrasonic Nanocrystal Surface Modification (UNSM) on Residual Stress State and Fatigue Strength of AISI 304 | 10.1007/s11665-009-9445-3 | Q166 | uncertain_isolability_terminal_omission |
+| Optical studies of a two-dimensional photonic crystal with the InAs/InGaAs quantum-dot structure as an active region | 10.1134/s1063782606070141 | Q166 | uncertain_isolability_terminal_omission |
+| Real‐space mapping of exciton wave function in a GaAs quantum dot by near‐field optical imaging spectroscopy | 10.1002/pssb.200303039 | Q166 | uncertain_isolability_terminal_omission |
+| Glass supported ZnSe microring strongly coupled to a single CdSe quantum dot | 10.1063/1.2998403 | Q166 | uncertain_isolability_terminal_omission |
+| Anisotropic photoconductivity of InGaAs quantum dot chains measured by terahertz pulse spectroscopy | 10.1063/1.1807959 | Q166 | uncertain_isolability_terminal_omission |
+| Time-temperature-transformation study of a nanocrystalline Fe91Zr7B2 soft magnetic alloy | 10.1063/1.361536 | Q166 | uncertain_isolability_terminal_omission |
+| Microfluidic Technology: Uncovering the Mechanisms of Nanocrystal Nucleation and Growth | 10.1021/acs.accounts.7b00088 | Q166 | uncertain_isolability_terminal_omission |
+| Grain-size dependence of plastic deformation in nanocrystalline Fe | 10.1063/1.1569035 | Q166 | explicit_excluded_route_or_retained_product |
+| Spin blockade and lifetime-enhanced transport in a few-electron Si/SiGe double quantum dot | 10.1038/nphys988 | Q166 | uncertain_isolability_terminal_omission |
+| Elastic moduli of grain boundaries in nanocrystalline MgO ceramics | 10.1557/jmr.2005.0094 | Q166 | uncertain_isolability_terminal_omission |
+| Structural properties of the donor indium in nanocrystalline ZnO | 10.1007/s10751-005-9081-8 | Q166 | uncertain_isolability_terminal_omission |
+| Integrated Semiconductor Nanocrystal and Epitaxical Nanostructure Systems: Structural and Optical Behavior | 10.1021/nl047947+ | Q166 | uncertain_isolability_terminal_omission |
+| Morphology Response to Strain Field Interferences in Stacks of Highly Ordered Quantum Dot Arrays | 10.1103/physrevlett.91.196103 | Q166 | uncertain_isolability_terminal_omission |
+| Influence of paramagnetic defects on multicolored luminescence from nanocrystalline silicon | 10.1063/1.2399933 | Q166 | uncertain_isolability_terminal_omission |
+| Characterization of nanocrystalline materials by X-ray line profile analysis | 10.1007/s10853-006-0696-1 | Q166 | uncertain_isolability_terminal_omission |
+| Highly Efficient CdSe-Sensitized TiO&lt;sub&gt;2&lt;/sub&gt; Photoelectrode for Quantum-Dot-Sensitized Solar Cell Applications | 10.1021/cm802254u | Q166 | uncertain_isolability_terminal_omission |
+| Diffusion of bismuth and gold in nanocrystalline copper | 10.1063/1.354477 | Q166 | uncertain_isolability_terminal_omission |
+| Dynamically Modulating the Surface Plasmon Resonance of Doped Semiconductor Nanocrystals | 10.1021/nl202597n | Q166 | uncertain_isolability_terminal_omission |
+| Carrier‐induced coherent acoustic phonon excitation in strain engineered InAs/GaAs quantum dot clusters | 10.1002/pssc.200671570 | Q166 | uncertain_isolability_terminal_omission |
+| Photoluminescence energy and linewidth in GaN/AlN stackings of quantum dot planes | 10.1063/1.1753085 | Q166 | uncertain_isolability_terminal_omission |
+| Transport properties of annealed CdSe colloidal nanocrystal solids | 10.1063/1.1523148 | Q166 | uncertain_isolability_terminal_omission |
+| Strong directional dependence of single-quantum-dot fine structure | 10.1063/1.2067713 | Q166 | uncertain_isolability_terminal_omission |
+| Particle Tracking Single Protein-Functionalized Quantum Dot Diffusion and Binding at Silica Surfaces | 10.1021/la802144e | Q166 | uncertain_isolability_terminal_omission |
+| Partitioning of Si in a Fe87Zr7Si4B2 nanocrystalline soft magnetic alloy | 10.1063/1.117176 | Q166 | uncertain_isolability_terminal_omission |
+| A quantum dot-based “off–on” fluorescent probe for biological detection of zinc ions | 10.1039/c3an36742h | Q166 | uncertain_isolability_terminal_omission |
+| Strengthening and softening of nanocrystalline nickel during multistep nanoindentation | 10.1063/1.2197289 | Q166 | uncertain_isolability_terminal_omission |
+| Deep levels in GaAs(001)/InAs/InGaAs/GaAs self-assembled quantum dot structures and their effect on quantum dot devices | 10.1063/1.3359704 | Q166 | uncertain_isolability_terminal_omission |
+| Lithographic quantum dot for sensitive infrared photon detection | 10.1002/pssc.200880658 | Q166 | uncertain_isolability_terminal_omission |
+| Mechanical strength of nanocrystalline/amorphous Al90Fe5Gd5 composites produced by rolling | 10.1063/1.1897434 | Q166 | uncertain_isolability_terminal_omission |
+| Coulomb blockade and Kondo effect in a few-electron silicon/silicon-germanium quantum dot | 10.1063/1.2431760 | Q166 | uncertain_isolability_terminal_omission |
+| Raster-scan imaging with normal-incidence, midinfrared InAs/GaAs quantum dot infrared photodetectors | 10.1063/1.1476387 | Q166 | uncertain_isolability_terminal_omission |
+| Direct measurements of spin relaxation times of electrons in tunnel-coupled Ge/Si quantum dot arrays | 10.1103/physrevb.81.113303 | Q166 | uncertain_isolability_terminal_omission |
+| Magnetic phase transitions in nanocrystalline erbium | 10.1063/1.338894 | Q166 | explicit_excluded_route_or_retained_product |
+| Phase-type quantum-dot-array diffraction grating | 10.1063/1.3053344 | Q166 | explicit_excluded_route_or_retained_product |
+| Synthesis and applications of nanocrystalline nitride materials | 10.1039/b817407e | Q166 | uncertain_isolability_terminal_omission |
+| Observation of excited states in a graphene quantum dot | 10.1063/1.3064128 | Q166 | uncertain_isolability_terminal_omission |
+| Dynamical Self-Assembly of Nanocrystal Superlattices during Colloidal Droplet Evaporation by&lt;i&gt;in situ&lt;/i&gt;Small Angle X-Ray Scattering | 10.1103/physrevlett.93.135503 | Q166 | uncertain_isolability_terminal_omission |
+| Thermomechanics of Nanocrystalline Nickel under High Pressure−Temperature Conditions | 10.1021/nl062685s | Q166 | uncertain_isolability_terminal_omission |
+| Surface Plasmon−Quantum Dot Coupling from Arrays of Nanoholes | 10.1021/jp054129c | Q167 | uncertain_isolability_terminal_omission |
+| Nonlinear optical properties of semiconductor nanocrystals | 10.1080/000187398243537 | Q167 | uncertain_isolability_terminal_omission |
+| Modification of Carbon Nanotubes: Water-Soluble Polymers Nanocrystal Wrapping to Periodic Patterning with Assistance of Supercritical CO&lt;sub&gt;2&lt;/sub&gt; | 10.1021/ma800514a | Q167 | uncertain_isolability_terminal_omission |
+| Narrow-Band Absorption-Enhanced Quantum Dot/J-Aggregate Conjugates | 10.1021/ja902813q | Q167 | uncertain_isolability_terminal_omission |
+| Enhancing the Optical Excitation Efficiency of a Single Self-Assembled Quantum Dot with a Plasmonic Nanoantenna | 10.1021/nl102548t | Q167 | uncertain_isolability_terminal_omission |
+| Imaging a coupled quantum dot-quantum point contact system | 10.1063/1.2787163 | Q167 | uncertain_isolability_terminal_omission |
+| Biodistribution of Quantum Dot Nanoparticles in Perfused Skin: Evidence of Coating Dependency and Periodicity in Arterial Extraction | 10.1021/nl071563c | Q167 | uncertain_isolability_terminal_omission |
+| Phase formation and martensitic transformation in mechanically alloyed nanocrystalline Fe—Ni | 10.1063/1.353162 | Q167 | explicit_excluded_route_or_retained_product |
+| Cuprous sulfide on Ni foam as a counter electrode for flexible quantum dot sensitized solar cells | 10.1039/c6ta04934f | Q167 | uncertain_isolability_terminal_omission |
+| Multi-island single-electron devices from self-assembled colloidal nanocrystal chains | 10.1063/1.2189012 | Q167 | uncertain_isolability_terminal_omission |
+| Nanocrystal‐Based Luminescent Composites for Nanoimprinting Lithography | 10.1002/smll.200600690 | Q167 | explicit_excluded_route_or_retained_product |
+| Photocurrent Enhancement of HgTe Quantum Dot Photodiodes by Plasmonic Gold Nanorod Structures | 10.1021/nn502510u | Q167 | uncertain_isolability_terminal_omission |
+| Quantum Transport in Boron‐Doped Nanocrystalline Diamond | 10.1002/cvde.200700038 | Q167 | uncertain_isolability_terminal_omission |
+| Size-dependent elasticity of nanocrystalline titania | 10.1103/physrevb.79.125406 | Q167 | uncertain_isolability_terminal_omission |
+| Single molecule studies of quantum dot fluorescence intermittency: evidence for both dark and light-assisted blinking dynamics | 10.1080/00268970902933820 | Q167 | uncertain_isolability_terminal_omission |
+| Single molecule studies of quantum dot conjugates in a submicrometer fluidic channel | 10.1039/b416161k | Q167 | uncertain_isolability_terminal_omission |
+| From Single Molecules to Nanoscopically Structured Functional Materials: Au Nanocrystal Growth on TiO&lt;sub&gt;2&lt;/sub&gt; Nanowires Controlled by Surface‐Bound Silicatein | 10.1002/anie.200503770 | Q167 | uncertain_isolability_terminal_omission |
+| Integration of Colloidal Nanocrystals into Lithographically Patterned Devices | 10.1021/nl049488i | Q167 | uncertain_isolability_terminal_omission |
+| Temperature dependence of exciton transfer in hybrid quantum well/nanocrystal heterostructures | 10.1063/1.2776865 | Q167 | uncertain_isolability_terminal_omission |
+| Ultrafast carrier dynamics in nanocrystalline silicon | 10.1103/physrevb.64.161309 | Q167 | uncertain_isolability_terminal_omission |
+| Atomic diffusion bonding of wafers with thin nanocrystalline metal films | 10.1116/1.3437515 | Q167 | uncertain_isolability_terminal_omission |
+| Multicolored Light-Emitting Diodes Based on All-Quantum-Dot Multilayer Films Using Layer-by-Layer Assembly Method | 10.1021/nl100168s | Q167 | uncertain_isolability_terminal_omission |
+| Effect of the Structure of Cobalt Nanocrystal Organization on the Collective Magnetic Properties | 10.1021/jp0301711 | Q167 | uncertain_isolability_terminal_omission |
+| Improved quantum confinement of self-assembled high-density InAs quantum dot molecules in AlGaAs∕GaAs quantum well structures by molecular beam epitaxy | 10.1116/1.2835064 | Q167 | uncertain_isolability_terminal_omission |
+| Mapping quantum dot-in-well structures on the nanoscale using the plasmon peak in electron energy loss spectra | 10.1103/physrevb.72.075339 | Q167 | uncertain_isolability_terminal_omission |
+| Staircase in the Electron Mobility of a ZnO Quantum Dot Assembly due to Shell Filling | 10.1103/physrevlett.89.036801 | Q167 | explicit_excluded_route_or_retained_product |
+| Characterization and Properties of Nanocrystalline EuAlO[sub 3] | 10.1063/1.3322311 | Q167 | uncertain_isolability_terminal_omission |
+| Fluorescence Resonance Energy Transfer Between Quantum Dot Donors and Dye-Labeled Protein Acceptors | 10.1021/ja037088b | Q167 | uncertain_isolability_terminal_omission |
+| TEM Characterization of CdSe Quantum Dot Sensitized ZnO Nanowires | 10.1017/s1431927607076544 | Q167 | explicit_excluded_route_or_retained_product |
+| Self-assembled gold nanocrystal micelles act as an excellent artificial nanozyme with ribonuclease activity | 10.1007/s00775-009-0478-8 | Q167 | uncertain_isolability_terminal_omission |
+| Enhancing the Efficiency of Solution-Processed Polymer:Colloidal Nanocrystal Hybrid Photovoltaic Cells Using Ethanedithiol Treatment | 10.1021/nn305823w | Q167 | uncertain_isolability_terminal_omission |
+| Two-Photon Coherent Control of a Single Quantum Dot | 10.1103/physrevlett.92.227401 | Q167 | uncertain_isolability_terminal_omission |
+| A Solvent-Stable Nanocrystal-Silica Composite Laser | 10.1021/ja057980d | Q167 | explicit_excluded_route_or_retained_product |
+| Kinetic Size Selection Mechanisms in Heteroepitaxial Quantum Dot Molecules | 10.1103/physrevlett.92.135504 | Q167 | uncertain_isolability_terminal_omission |
+| Nanocrystal Formation in Silicon Oxy-Nitride Films for Photovoltaic Applications: Optical and Electrical Properties | 10.1021/acs.jpcc.5b02286 | Q167 | uncertain_isolability_terminal_omission |
+| Deformation twins in nanocrystalline Al | 10.1063/1.1633975 | Q167 | uncertain_isolability_terminal_omission |
+| Quantum dot in high magnetic fields: Correlated tunneling of electrons probes the spin configuration at the edge of the dot | 10.1103/physrevb.64.033302 | Q167 | uncertain_isolability_terminal_omission |
+| Nanocrystal‐Mediated Crystallization of Silicon and Germanium Nanowires in Organic Solvents: The Role of Catalysis and Solid‐Phase Seeding | 10.1002/anie.200601078 | Q167 | uncertain_isolability_terminal_omission |
+| Traps in germanium nanocrystal memory and effect on charge retention: Modeling and experimental measurements | 10.1063/1.1931031 | Q167 | uncertain_isolability_terminal_omission |
+| Stacking-fault structure explains unusual elasticity of nanocrystalline diamonds | 10.1063/1.3077124 | Q167 | uncertain_isolability_terminal_omission |
+| Droplet evaporation-induced ferritin self-assembled monolayer as a template for nanocrystal flash memory | 10.1063/1.2737362 | Q167 | explicit_excluded_route_or_retained_product |
+| Nanograin Composite Model Studies of Nanocrystalline Gadolinia‐Doped Ceria | 10.1111/j.1551-2916.2010.04200.x | Q167 | explicit_excluded_route_or_retained_product |
+| Micromechanical properties of nanocrystalline titanium obtained by cryorolling | 10.1063/1.3481266 | Q167 | uncertain_isolability_terminal_omission |
+| Different Hierarchical Nanostructured Carbons as Counter Electrodes for CdS Quantum Dot Solar Cells | 10.1021/am201452s | Q167 | explicit_excluded_route_or_retained_product |
+| Correlation between defect density and current leakage in InAs∕GaAs quantum dot-in-well structures | 10.1063/1.3168492 | Q167 | uncertain_isolability_terminal_omission |
+| A Triple Quantum Dot in a Single-Wall Carbon Nanotube | 10.1021/nl072948y | Q168 | uncertain_isolability_terminal_omission |
+| Synthesis and Spectroscopic Properties of Silica−Dye−Semiconductor Nanocrystal Hybrid Particles | 10.1021/la103415e | Q168 | uncertain_isolability_terminal_omission |
+| Theranostics of Epitaxially Condensed Colloidal Nanocrystal Clusters, through a Soft Biomineralization Route | 10.1021/cm404053v | Q168 | uncertain_isolability_terminal_omission |
+| Nanocrystalline iron nitride films with perpendicular magnetic anisotropy | 10.1063/1.2840185 | Q168 | uncertain_isolability_terminal_omission |
+| Colloidal nanocrystal solar cells | 10.1007/s00604-007-0806-z | Q168 | uncertain_isolability_terminal_omission |
+| Supercapacitors of Nanocrystalline Metal–Organic Frameworks | 10.1021/nn5027092 | Q168 | uncertain_isolability_terminal_omission |
+| Electronic and optical properties of boron-doped nanocrystalline diamond films | 10.1103/physrevb.79.045206 | Q168 | uncertain_isolability_terminal_omission |
+| Analysis of heavily tailed size distributions of ZnTe/ZnSe quantum dot structures by using the bootstrap methodology | 10.1063/1.1506407 | Q168 | uncertain_isolability_terminal_omission |
+| Efficient CdSe Quantum Dot-Sensitized Solar Cells Prepared by an Improved Successive Ionic Layer Adsorption and Reaction Process | 10.1021/nl902438d | Q168 | explicit_excluded_route_or_retained_product |
+| Microstructure of nanocrystalline diamond powders studied by powder diffractometry | 10.1063/1.1863459 | Q168 | uncertain_isolability_terminal_omission |
+| Impedance spectroscopy study of the nanocrystalline ferroelectric (PbMg)(ZrTi)O3 system | 10.1007/s00339-005-3330-1 | Q168 | uncertain_isolability_terminal_omission |
+| Location-Specific Biological Functionalization on Nanotubes: Attachment of Proteins at the Ends of Nanotubes Using Au Nanocrystal Masks | 10.1021/nl034038w | Q168 | uncertain_isolability_terminal_omission |
+| Quantum-dot crystal defects | 10.1063/1.3013461 | Q168 | uncertain_isolability_terminal_omission |
+| Fine structure and magnetic properties of Mn- and Co-doped nanocrystalline γ-Fe2O3 | 10.1063/1.355550 | Q168 | uncertain_isolability_terminal_omission |
+| Cobalt sulfide counter electrode using hydrothermal method for quantum dot-sensitized solar cells | 10.1016/j.jelechem.2015.05.003 | Q168 | uncertain_isolability_terminal_omission |
+| Plasmon Bleaching Dynamics in Colloidal Gold–Iron Oxide Nanocrystal Heterodimers | 10.1021/nl2039875 | Q168 | uncertain_isolability_terminal_omission |
+| Performance enhancement of triboelectric nanogenerators based on polyvinylidene fluoride/graphene quantum dot composite nanofibers | 10.1016/j.jallcom.2019.05.202 | Q168 | explicit_excluded_route_or_retained_product |
+| Observation of the Fano-Kondo Antiresonance in a Quantum Wire with a Side-Coupled Quantum Dot | 10.1103/physrevlett.95.066801 | Q168 | uncertain_isolability_terminal_omission |
+| An electrically injected quantum dot spin polarized single photon source | 10.1063/1.3357426 | Q168 | uncertain_isolability_terminal_omission |
+| Photon Antibunching from a Single Quantum-Dot-Microcavity System in the Strong Coupling Regime | 10.1103/physrevlett.98.117402 | Q168 | uncertain_isolability_terminal_omission |
+| Microwave band on-chip coil technique for single electron spin resonance in a quantum dot | 10.1063/1.2799735 | Q168 | uncertain_isolability_terminal_omission |
+| Periodic Mesoporous Hydridosilica − Synthesis of an “Impossible” Material and Its Thermal Transformation into Brightly Photoluminescent Periodic Mesoporous Nanocrystal Silicon-Silica Composite | 10.1021/ja111495x | Q168 | uncertain_isolability_terminal_omission |
+| Depleted-Heterojunction Colloidal Quantum Dot Solar Cells | 10.1021/nn100335g | Q168 | uncertain_isolability_terminal_omission |
+| Enhanced single-photon emission from a quantum dot in a micropost microcavity | 10.1063/1.1577828 | Q168 | uncertain_isolability_terminal_omission |
+| Cryosol Synthesis of Nanocrystalline Alumina | 10.1021/cm9803206 | Q168 | uncertain_isolability_terminal_omission |
+| Effect of H-Bonded Liquid Crystal Polymers on CdSe Quantum Dot Alignment within Nanocomposite | 10.1021/ma701983y | Q168 | explicit_excluded_route_or_retained_product |
+| Quenching of CdSe quantum dot emission, a new approach for biosensing | 10.1039/b500664c | Q168 | uncertain_isolability_terminal_omission |
+| Moving Preisach model analysis of nanocrystalline SmFeCo | 10.1063/1.364608 | Q168 | uncertain_isolability_terminal_omission |
+| Ultrafast Hole- and Electron-Transfer Dynamics in CdS–Dibromofluorescein (DBF) Supersensitized Quantum Dot Solar Cell Materials | 10.1021/jz402315p | Q168 | uncertain_isolability_terminal_omission |
+| Direct Correlation between Ultrafast Injection and Photoanode Performance in Quantum Dot Sensitized Solar Cells | 10.1021/jp108499h | Q168 | uncertain_isolability_terminal_omission |
+| Electric Field Induced Removal of the Biexciton Binding Energy in a Single Quantum Dot | 10.1021/nl1037424 | Q168 | uncertain_isolability_terminal_omission |
+| Recent Advances in Quantum Dot Surface Chemistry | 10.1021/am405196u | Q168 | uncertain_isolability_terminal_omission |
+| Quantum dot photonic crystal nanocavities at 1300 nm for telecom‐wavelength single‐photon sources | 10.1002/pssc.200671612 | Q168 | uncertain_isolability_terminal_omission |
+| Development of a tunable donor quantum dot in silicon | 10.1063/1.3299726 | Q168 | uncertain_isolability_terminal_omission |
+| Electrically driven high-Q quantum dot-micropillar cavities | 10.1063/1.2890166 | Q168 | uncertain_isolability_terminal_omission |
+| Reproduction of mouse-pup ultrasonic vocalizations by nanocrystalline silicon thermoacoustic emitter | 10.1063/1.2168498 | Q168 | uncertain_isolability_terminal_omission |
+| Peptide-Mediated Constructs of Quantum Dot Nanocomposites for Enzymatic Control of Nonradiative Energy Transfer | 10.1021/nl104295b | Q168 | uncertain_isolability_terminal_omission |
+| InAs quantum dot superluminescent diodes with trench structure | 10.1007/s10854-009-9936-x | Q168 | uncertain_isolability_terminal_omission |
+| Making sense of nanocrystal lattice fringes | 10.1063/1.2135414 | Q168 | uncertain_isolability_terminal_omission |
+| Interface Driven Energy Filtering of Thermoelectric Power in Spark Plasma Sintered Bi &lt;sub&gt;2&lt;/sub&gt; Te &lt;sub&gt;2.7&lt;/sub&gt; Se &lt;sub&gt;0.3&lt;/sub&gt; Nanoplatelet Composites | 10.1021/nl302017w | Q168 | explicit_excluded_route_or_retained_product |
+| Nanocrystal‐Mediated Crystallization of Silicon and Germanium Nanowires in Organic Solvents: The Role of Catalysis and Solid‐Phase Seeding | 10.1002/ange.200601078 | Q168 | uncertain_isolability_terminal_omission |
+| Size dependence of CH stretching features on diamond nanocrystal surfaces: Infrared spectroscopy and density functional theory calculations | 10.1063/1.1620503 | Q168 | uncertain_isolability_terminal_omission |
+| Reversible adsorption-enhanced quantum confinement in semiconductor quantum dots | 10.1063/1.1532109 | Q168 | uncertain_isolability_terminal_omission |
+| Charge transport in mixed CdSe and CdTe colloidal nanocrystal films | 10.1103/physrevb.82.155201 | Q169 | uncertain_isolability_terminal_omission |
+| Carrier kinetics in quantum dots through continuous wave photoluminescence modeling: A systematic study on a sample with surface dot density gradient | 10.1063/1.1586953 | Q169 | uncertain_isolability_terminal_omission |
+| Enhanced photoresponse in ZnO nanowires decorated with CdTe quantum dot | 10.1063/1.2822896 | Q169 | explicit_excluded_route_or_retained_product |
+| Optical, electronic, and transport properties of nanocrystalline titanium nitride thin films | 10.1063/1.1403677 | Q169 | uncertain_isolability_terminal_omission |
+| Ordered Structure Rearrangements in Heated Gold Nanocrystal Superlattices | 10.1021/nl403458q | Q169 | uncertain_isolability_terminal_omission |
+| Efficient spatial redistribution of quantum dot spontaneous emission from two-dimensional photonic crystals | 10.1063/1.2757134 | Q169 | uncertain_isolability_terminal_omission |
+| Multiple Andreev Reflections in a Carbon Nanotube Quantum Dot | 10.1103/physrevlett.91.057005 | Q169 | uncertain_isolability_terminal_omission |
+| Rapidly in situ forming biodegradable hydrogels by combining alginate and hydroxyapatite nanocrystal | 10.1007/s11431-009-0332-9 | Q169 | explicit_excluded_route_or_retained_product |
+| Single-electron quantum dot in Si∕SiGe with integrated charge sensing | 10.1063/1.2816331 | Q169 | uncertain_isolability_terminal_omission |
+| X-ray reciprocal space mapping of GaAs/AlAs quantum wires and quantum dots | 10.1063/1.113606 | Q169 | explicit_excluded_route_or_retained_product |
+| Two-Photon Absorbing Nanocrystal Sensors for Ratiometric Detection of Oxygen | 10.1021/ja902712b | Q169 | uncertain_isolability_terminal_omission |
+| Transient luminescence of dense InAs/GaAs quantum dot arrays | 10.1103/physrevb.67.045326 | Q169 | uncertain_isolability_terminal_omission |
+| One-step, solvothermal synthesis of graphene-CdS and graphene-ZnS quantum dot nanocomposites and their interesting photovoltaic properties | 10.1007/s12274-010-0046-0 | Q169 | uncertain_isolability_terminal_omission |
+| An experimental investigation on the effective magnetic anisotropy of nanocrystalline Fe89Zr7B4 soft magnetic alloys | 10.1063/1.362471 | Q169 | explicit_excluded_route_or_retained_product |
+| Ag Nanocrystal Junctions as the Site for Surface-Enhanced Raman Scattering of Single Rhodamine 6G Molecules | 10.1021/jp0025476 | Q169 | uncertain_isolability_terminal_omission |
+| Nanocrystalline ceria: Synthesis, structure-sensitive properties, and promising applications | 10.1134/s1070363210030412 | Q169 | uncertain_isolability_terminal_omission |
+| High Throughput Synthesis of Uniform Biocompatible Polymer Beads with High Quantum Dot Loading Using Microfluidic Jet-Mode Breakup | 10.1021/la4041198 | Q169 | explicit_excluded_route_or_retained_product |
+| Isolated quantum dot in application to terahertz photon counting | 10.1103/physrevb.73.081310 | Q169 | uncertain_isolability_terminal_omission |
+| Copper-Free Click Chemistry for Highly Luminescent Quantum Dot Conjugates: Application to &lt;i&gt;in Vivo&lt;/i&gt; Metabolic Imaging | 10.1021/bc900564w | Q169 | uncertain_isolability_terminal_omission |
+| Analogy Between Atoms in a Nanocrystal and Nanocrystals in a Supracrystal: Is It Real or Just a Highly Probable Speculation? | 10.1021/jz200134x | Q169 | uncertain_isolability_terminal_omission |
+| Collapse of nonequilibrium charge states in an isolated quantum dot using surface acoustic waves | 10.1103/physrevb.75.115310 | Q169 | uncertain_isolability_terminal_omission |
+| Fabrication using x-ray nanolithography and measurement of Coulomb blockade in a variable-sized quantum dot | 10.1116/1.587481 | Q169 | uncertain_isolability_terminal_omission |
+| Photolithographic patterning of subwavelength top emitting colloidal quantum dot based inorganic light emitting diodes on silicon | 10.1063/1.3373832 | Q169 | uncertain_isolability_terminal_omission |
+| Enhanced Real-Time Monitoring of Adeno-Associated Virus Trafficking by Virus–Quantum Dot Conjugates | 10.1021/nn102651p | Q169 | uncertain_isolability_terminal_omission |
+| Suppression of electron trapping by quantum dot emitters using a grafted polystyrene shell | 10.1039/c9mh00551j | Q169 | uncertain_isolability_terminal_omission |
+| Electronic transport through a quantum dot network | 10.1103/physrevb.70.205306 | Q169 | uncertain_isolability_terminal_omission |
+| Nanocrystal-induced line narrowing of surface acoustic phonons in the Raman spectra of embedded&lt;mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"&gt;&lt;mml:mrow&gt;&lt;mml:msub&gt;&lt;mml:mrow&gt;&lt;mml:mtext&gt;Ge&lt;/mml:mtext&gt;&lt;/mml:mrow&gt;&lt;mml:mi&gt;x&lt;/mml:mi&gt;&lt;/mml:msub&gt;&lt;mml:msub&gt;&lt;mml:mrow&gt;&lt;mml:mtext&gt;Si&lt;/mml:mtext&gt;&lt;/mml:mrow&gt;&lt;mml:mrow&gt;&lt;mml:mn&gt;1&lt;/mml:mn&gt;&lt;mml:mo&gt;−&lt;/mml:mo&gt;&lt;mml:mi&gt;x&lt;/mml:mi&gt;&lt;/mml:mrow&gt;&lt;/mml:msub&gt;&lt;/mml:mrow&gt;&lt;/mml:math&gt;alloy nanocrystals | 10.1103/physrevb.78.165319 | Q169 | uncertain_isolability_terminal_omission |
+| Sol–Gel Route to Nanocrystalline Lithium Metasilicate Particles | 10.1111/j.1551-2916.2008.02389.x | Q169 | uncertain_isolability_terminal_omission |
+| Improved photovoltaic performance of quantum dot-sensitized solar cells based on highly electrocatalytic Ca-doped CuS counter electrodes | 10.1016/j.jphotochem.2018.03.013 | Q169 | uncertain_isolability_terminal_omission |
+| Quantum Dot Behavior in Graphene Nanoconstrictions | 10.1021/nl803291b | Q169 | uncertain_isolability_terminal_omission |
+| Resolving Electron Transfer Kinetics at the Nanocrystal/Solution Interface | 10.1021/ja057474o | Q169 | uncertain_isolability_terminal_omission |
+| Spin manipulation in a double quantum-dot–quantum-wire coupled system | 10.1116/1.2218866 | Q169 | uncertain_isolability_terminal_omission |
+| Multibandgap quantum dot ensembles for solar-matched infrared energy harvesting | 10.1038/s41467-018-06342-7 | Q169 | uncertain_isolability_terminal_omission |
+| Magnetocaloric properties of nanocrystalline La0.125Ca0.875MnO3 | 10.1063/1.3152785 | Q169 | uncertain_isolability_terminal_omission |
+| Nanocrystalline solids | 10.1107/s0021889890011013 | Q169 | uncertain_isolability_terminal_omission |
+| Electrically driven quantum dot single photon source | 10.1002/pssc.200673201 | Q169 | uncertain_isolability_terminal_omission |
+| Enhanced Optical Properties of Graphene Oxide–Au Nanocrystal Composites | 10.1021/la204047a | Q169 | uncertain_isolability_terminal_omission |
+| Nanocrystalline composites with high strength obtained in Zr–Ti–Ni–Cu–Al bulk amorphous alloys | 10.1063/1.124254 | Q169 | explicit_excluded_route_or_retained_product |
+| Spin structure of nanocrystalline terbium | 10.1103/physrevb.69.054402 | Q169 | uncertain_isolability_terminal_omission |
+| Photo-oxidation-enhanced coupling in densely packed CdSe quantum-dot films | 10.1063/1.1590735 | Q169 | uncertain_isolability_terminal_omission |
+| Understanding the cation-selective ligand passivation for AgBiS2 nanocrystal photovoltaics | 10.1016/j.cej.2023.145674 | Q169 | uncertain_isolability_terminal_omission |
+| Exchange Control of Nuclear Spin Diffusion in a Double Quantum Dot | 10.1103/physrevlett.104.236802 | Q169 | uncertain_isolability_terminal_omission |
+| Controlling Nanocrystal Density and Location on Carbon Nanotube Templates | 10.1021/cm802648m | Q169 | uncertain_isolability_terminal_omission |
+| Decay dynamics of the positively charged exciton in a single charge tunable self-assembled quantum dot | 10.1063/1.2234745 | Q169 | uncertain_isolability_terminal_omission |
+| Cascaded exciton emission of an individual strain-induced quantum dot | 10.1063/1.3216807 | Q169 | uncertain_isolability_terminal_omission |
+| Shot-Noise Detection in a Carbon Nanotube Quantum Dot | 10.1103/physrevlett.96.026803 | Q169 | uncertain_isolability_terminal_omission |
+| Distribution of internal strains in nanocrystalline Pd studied by x-ray diffraction | 10.1063/1.365307 | Q169 | uncertain_isolability_terminal_omission |
+| Theoretical and experimental examination of the intermediate-band concept for strain-balanced (In,Ga)As/Ga(As,P) quantum dot solar cells | 10.1103/physrevb.78.205321 | Q170 | uncertain_isolability_terminal_omission |
+| Pulsed-gate measurements of the singlet-triplet relaxation time in a two-electron double quantum dot | 10.1103/physrevb.72.161301 | Q170 | uncertain_isolability_terminal_omission |
+| Heterojunction PbS Nanocrystal Solar Cells with Oxide Charge-Transport Layers | 10.1021/nn404457c | Q170 | uncertain_isolability_terminal_omission |
+| Eleven Nanometer Alignment Precision of a Plasmonic Nanoantenna with a Self-Assembled GaAs Quantum Dot | 10.1021/nl403730q | Q170 | uncertain_isolability_terminal_omission |
+| Grain growth in nanocrystalline NbAl3 prepared by mechanical alloying | 10.1007/bf00353186 | Q170 | uncertain_isolability_terminal_omission |
+| Functionalizing self-assembled GaN quantum dot superlattices by Eu-implantation | 10.1063/1.3496624 | Q170 | uncertain_isolability_terminal_omission |
+| Solid–solid transformation mechanism for nanocrystalline sodalite from pillared clay | 10.1039/b304638a | Q170 | explicit_excluded_route_or_retained_product |
+| Can severe plastic deformation alone generate a nanocrystalline structure? | 10.1080/09500831003662537 | Q170 | explicit_excluded_route_or_retained_product |
+| Tunable electron counting statistics in a quantum dot at thermal equilibrium | 10.1103/physrevb.80.035321 | Q170 | uncertain_isolability_terminal_omission |
+| Onset of GaSb/GaAs quantum dot formation | 10.1002/pssc.200671605 | Q170 | explicit_excluded_route_or_retained_product |
+| Interference of ballistic electrons in an open quantum dot at high temperatures | 10.1134/s0021364008130080 | Q170 | uncertain_isolability_terminal_omission |
+| Large-Scale Synthesis of Nearly Monodisperse CdSe/CdS Core/Shell Nanocrystals Using Air-Stable Reagents via Successive Ion Layer Adsorption and Reaction | 10.1021/ja0363563 | Q170 | uncertain_isolability_terminal_omission |
+| Single-quantum-dot-based DNA nanosensor | 10.1038/nmat1508 | Q170 | uncertain_isolability_terminal_omission |
+| Antibody Quantum Dot Conjugates Developed via Copper-Free Click Chemistry for Rapid Analysis of Biological Samples Using a Microfluidic Microsphere Array System | 10.1021/bc500139u | Q170 | uncertain_isolability_terminal_omission |
+| Boron and sulfur co-doped TiO2 nanofilm as effective photoanode for high efficiency CdS quantum-dot-sensitized solar cells | 10.1016/j.jpowsour.2014.08.116 | Q170 | uncertain_isolability_terminal_omission |
+| Formation and magnetic properties of nanocrystalline mechanically alloyed Fe-Co | 10.1063/1.351177 | Q170 | explicit_excluded_route_or_retained_product |
+| Room-temperature defect tolerance of band-engineered InAs quantum dot heterostructures | 10.1063/1.2037872 | Q170 | uncertain_isolability_terminal_omission |
+| Is the Template of Self-Colloidal Assemblies the Only Factor That Controls Nanocrystal Shapes? | 10.1021/jp000268c | Q170 | uncertain_isolability_terminal_omission |
+| High-Yield Plasma Synthesis of Luminescent Silicon Nanocrystals | 10.1021/nl050066y | Q170 | uncertain_isolability_terminal_omission |
+| Evidence of Cd1−xMnxS nanocrystal growth in a glass matrix by the fusion method | 10.1063/1.3027471 | Q170 | explicit_excluded_route_or_retained_product |
+| Even-Odd Effect in Andreev Transport through a Carbon Nanotube Quantum Dot | 10.1103/physrevlett.99.126602 | Q170 | uncertain_isolability_terminal_omission |
+| Dependence of Nanocrystal Dimensionality on the Polymer Nanomorphology, Anisotropic Optical Absorption, and Carrier Transport in P3HT:TiO&lt;sub&gt;2&lt;/sub&gt; Bulk Heterojunctions | 10.1021/jp306921e | Q170 | uncertain_isolability_terminal_omission |
+| Determination of composition and strain field of a III∕V quaternary quantum dot system | 10.1063/1.1823602 | Q170 | uncertain_isolability_terminal_omission |
+| Characteristic creep behavior of nanocrystalline metals found for high-density gold | 10.1103/physrevb.66.214106 | Q170 | uncertain_isolability_terminal_omission |
+| Mode identification of high-quality-factor single-defect nanocavities in quantum dot-embedded photonic crystals | 10.1063/1.2714644 | Q170 | uncertain_isolability_terminal_omission |
+| Preparation of EuVO4/graphene quantum dot composites and their gas-sensitive properties | 10.1016/j.apsusc.2025.163755 | Q170 | uncertain_isolability_terminal_omission |
+| Synthesis of nanocrystalline solid solutions based on zirconia and hafnia | 10.1134/s1087659608020156 | Q170 | uncertain_isolability_terminal_omission |
+| Luminescence of nanocrystalline ZnS:Pb2+ | 10.1039/b100968k | Q170 | uncertain_isolability_terminal_omission |
+| An Accurate Single-Electron Pump Based on a Highly Tunable Silicon Quantum Dot | 10.1021/nl500927q | Q170 | uncertain_isolability_terminal_omission |
+| Plasmon enhanced CdS-quantum dot sensitized solar cell using ZnO nanorods array deposited with Ag nanoparticles as photoanode | 10.1016/j.physe.2014.12.007 | Q170 | uncertain_isolability_terminal_omission |
+| Ligand Bonding and Dynamics on Colloidal Nanocrystals at Room Temperature: The Case of Alkylamines on CdSe Nanocrystals | 10.1021/ja710909f | Q170 | uncertain_isolability_terminal_omission |
+| InAs Quantum Dot Arrays Decorating the Facets of GaAs Nanowires | 10.1021/nn101604k | Q170 | uncertain_isolability_terminal_omission |
+| Strain-driven alignment of In nanocrystals on InGaAs quantum dot arrays and coupled plasmon-quantum dot emission | 10.1063/1.3358122 | Q170 | explicit_excluded_route_or_retained_product |
+| Electroluminescence from heterostructures of poly(phenylene vinylene) and inorganic CdSe nanocrystals | 10.1063/1.367978 | Q170 | uncertain_isolability_terminal_omission |
+| Sensing Polymer/DNA Polyplex Dissociation Using Quantum Dot Fluorophores | 10.1021/nn1018939 | Q170 | uncertain_isolability_terminal_omission |
+| Microwave assisted synthesis of nanocrystalline YAG | 10.1007/s10853-006-0260-z | Q170 | uncertain_isolability_terminal_omission |
+| Synthesis and Stability of Nanocrystalline Lead Stannate | 10.1111/j.1151-2916.2004.tb07739.x | Q170 | uncertain_isolability_terminal_omission |
+| Quantum dot formation in InGaN/GaN quantum well structures with silicon doping and the mechanisms for radiative efficiency improvement | 10.1002/pssc.200303001 | Q170 | uncertain_isolability_terminal_omission |
+| Ultrafast Charge Separation at the CdSe/CdS Core/Shell Quantum Dot/Methylviologen Interface: Implications for Nanocrystal Solar Cells | 10.1021/jp111574w | Q170 | uncertain_isolability_terminal_omission |
+| Stable, Efficient, and All-Solution-Processed Quantum Dot Light-Emitting Diodes with Double-Sided Metal Oxide Nanoparticle Charge Transport Layers | 10.1021/am404540z | Q170 | uncertain_isolability_terminal_omission |
+| Inorganic nanocrystal-dynamic porous polymer assemblies with effective energy transfer for sensitive diagnosis of urine copper | 10.1039/d0sc04359a | Q170 | uncertain_isolability_terminal_omission |
+| Mesoscopic Void Structures in Cobalt Nanocrystal Films Formed from Drying Concentrated Colloidal Solutions | 10.1103/physrevlett.102.144502 | Q170 | uncertain_isolability_terminal_omission |
+| Is Stress Concentration Relevant for Nanocrystalline Metals? | 10.1021/nl201083t | Q170 | uncertain_isolability_terminal_omission |
+| Surface-Acoustic-Wave-Induced Transport in a Double Quantum Dot | 10.1103/physrevlett.96.136807 | Q170 | uncertain_isolability_terminal_omission |
+| Wetting layer states of InAs∕GaAs self-assembled quantum dot structures: Effect of intermixing and capping layer | 10.1063/1.2711146 | Q170 | uncertain_isolability_terminal_omission |
+| Multifunctional graphene incorporated polyacrylamide conducting gel electrolytes for efficient quasi-solid-state quantum dot-sensitized solar cells | 10.1016/j.jpowsour.2015.03.060 | Q170 | explicit_excluded_route_or_retained_product |
+| A multicolor quantum dot intersublevel detector with photoresponse in the terahertz range | 10.1063/1.2830994 | Q170 | uncertain_isolability_terminal_omission |
+| Facile Synthesis of Fluorescent Hyper-Cross-Linked β-Cyclodextrin-Carbon Quantum Dot Hybrid Nanosponges for Tumor Theranostic Application with Enhanced Antitumor Efficacy | 10.1021/acs.molpharmaceut.8b00508 | Q171 | explicit_excluded_route_or_retained_product |
+| Chemical Syntheses of Nanocrystalline Nickel Aluminides | 10.1021/cm9905186 | Q171 | uncertain_isolability_terminal_omission |
+| High-performance crosslinked colloidal quantum-dot light-emitting diodes | 10.1038/nphoton.2009.92 | Q171 | explicit_excluded_route_or_retained_product |
+| Properties and applications of quantum dot heterostructures grown by molecular beam epitaxy | 10.1007/s11671-006-9017-5 | Q171 | uncertain_isolability_terminal_omission |
+| Radiationless energy transfer in CdSe/ZnS quantum dot aggregates embedded in PMMA | 10.1002/pssa.201026590 | Q171 | uncertain_isolability_terminal_omission |
+| Influence of Surface Composition on Electronic Transport through Naked Nanocrystal Networks | 10.1021/cm404149u | Q171 | uncertain_isolability_terminal_omission |
+| Pt Alloy Nanocrystal Catalysts: Diminishing Sizes and Improving Stability | 10.1021/acs.jpcc.3c02840 | Q171 | uncertain_isolability_terminal_omission |
+| Oxyhalogenation of Activated Arenes with Nanocrystalline Ceria | 10.1021/cs300644s | Q171 | uncertain_isolability_terminal_omission |
+| Spin States of the First Four Holes in a Silicon Nanowire Quantum Dot | 10.1021/nl803440s | Q171 | uncertain_isolability_terminal_omission |
+| Highly Sensitive Multiplexed Heavy Metal Detection Using Quantum-Dot-Labeled DNAzymes | 10.1021/nn1021988 | Q171 | uncertain_isolability_terminal_omission |
+| Chloride Surface Terminated Silicon Nanocrystal Mediated Synthesis of Poly(3-hexylthiophene) | 10.1021/ja5075739 | Q171 | uncertain_isolability_terminal_omission |
+| Surface Chemistry Exchange of Alloyed Germanium Nanocrystals: A Pathway Toward Conductive Group IV Nanocrystal Films | 10.1021/jz3020875 | Q171 | uncertain_isolability_terminal_omission |
+| Structure-Property Relationships in Conventional and Nanocrystalline NiTi Intermetallic Alloy Wire | 10.1007/s11665-009-9369-y | Q171 | explicit_excluded_route_or_retained_product |
+| DNA Binding to Protein−Gold Nanocrystal Conjugates | 10.1021/bc0600867 | Q171 | uncertain_isolability_terminal_omission |
+| Nanocrystalline soft magnetic ribbons with high relative strain at fracture | 10.1063/1.2742598 | Q171 | uncertain_isolability_terminal_omission |
+| The nucleation process and magnetic interaction in nanocrystalline alloy Nd4Fe77Co3B16 | 10.1063/1.368660 | Q171 | uncertain_isolability_terminal_omission |
+| Imaging classical and quantum structures in an open quantum dot using scanning gate microscopy | 10.1116/1.2958239 | Q171 | uncertain_isolability_terminal_omission |
+| Patterning of Quantum Dot Bioconjugates via Particle Lithography | 10.1021/la103468u | Q171 | uncertain_isolability_terminal_omission |
+| Germanium nanocrystal density and size effects on carrier storage and emission | 10.1063/1.2985909 | Q171 | explicit_excluded_route_or_retained_product |
+| Deformation twinning mechanisms in nanocrystalline Ni | 10.1063/1.2172404 | Q171 | uncertain_isolability_terminal_omission |
+| Facet-Dependent and Au Nanocrystal-Enhanced Electrical and Photocatalytic Properties of Au−Cu&lt;sub&gt;2&lt;/sub&gt;O Core−Shell Heterostructures | 10.1021/ja109182y | Q171 | uncertain_isolability_terminal_omission |
+| Visible photo- and electroluminescence from electrochemically formed nanocrystalline Si thin film | 10.1063/1.117385 | Q171 | uncertain_isolability_terminal_omission |
+| Hydrogen-discriminating nanocrystalline doped-tin-oxide room-temperature microsensor | 10.1063/1.2132095 | Q171 | uncertain_isolability_terminal_omission |
+| Role of segregation in InAs/GaAs quantum dot structures capped with a GaAsSb strain-reduction layer | 10.1103/physrevb.80.165334 | Q171 | uncertain_isolability_terminal_omission |
+| Fabrication and evaluation of a carbon quantum dot/gold nanoparticle nanohybrid material integrated onto planar micro gold electrodes for potential bioelectrochemical sensing applications | 10.1016/j.electacta.2018.10.038 | Q171 | uncertain_isolability_terminal_omission |
+| Polymer Chain Dynamics in Intercalated Poly(ε-caprolactone)/Nanoplatelet Blends | 10.1021/ma3022647 | Q171 | uncertain_isolability_terminal_omission |
+| Interfacial structure of nanocrystalline Fe73.5Cu1Nb3Si13.5B9 studied by positron annihilation | 10.1063/1.359150 | Q171 | uncertain_isolability_terminal_omission |
+| Sensitive Detection of Polycyclic Aromatic Hydrocarbons Using CdTe Quantum Dot-Modified TiO&lt;sub&gt;2&lt;/sub&gt; Nanotube Array through Fluorescence Resonance Energy Transfer | 10.1021/es101760c | Q171 | explicit_excluded_route_or_retained_product |
+| Nanocrystal characterization by ellipsometry in porous silicon using model dielectric function | 10.1063/1.3068479 | Q171 | uncertain_isolability_terminal_omission |
+| Uptake and Intracellular Fate of Multifunctional Nanoparticles: A Comparison between Lipoplexes and Polyplexes via Quantum Dot Mediated Förster Resonance Energy Transfer | 10.1021/mp100466m | Q171 | uncertain_isolability_terminal_omission |
+| Flux-quantum-modulated Kondo conductance in a multielectron quantum dot | 10.1103/physrevb.66.161305 | Q171 | uncertain_isolability_terminal_omission |
+| Gate-defined quantum-dot devices realized in InGaAs/InP by incorporating a HfO2 layer as gate dielectric | 10.1063/1.3077188 | Q171 | uncertain_isolability_terminal_omission |
+| Synthesis of Nanocrystalline Lithium Zinc Ferrites Using Polyacrylic Acid, and Their Initial Densification | 10.1111/j.1151-2916.1999.tb01932.x | Q171 | uncertain_isolability_terminal_omission |
+| Amplitude-mode electrostatic force microscopy in UHV: Quantification of nanocrystal charge storage | 10.1103/physrevb.72.165420 | Q171 | uncertain_isolability_terminal_omission |
+| Subdiffraction Photon Guidance by Quantum-Dot Cascades | 10.1021/nl061958g | Q171 | uncertain_isolability_terminal_omission |
+| On the two-state microstructure of nanocrystalline chromium | 10.1063/1.359035 | Q171 | uncertain_isolability_terminal_omission |
+| Kinetic Monte Carlo simulation of InAs quantum dot growth on nonlithographically patterned substrates | 10.1116/1.2731335 | Q171 | uncertain_isolability_terminal_omission |
+| Structural, Optical, and Electrical Properties of Self-Assembled Films of PbSe Nanocrystals Treated with 1,2-Ethanedithiol | 10.1021/nn7003348 | Q171 | uncertain_isolability_terminal_omission |
+| Cellulose-precursor synthesis of nanocrystalline Ce0.8Gd0.2O2?? for SOFC anodes | 10.1007/s10008-004-0507-z | Q171 | explicit_excluded_route_or_retained_product |
+| High performance CdS quantum-dot-sensitized solar cells with Ti-based ceramic materials as catalysts on the counter electrode | 10.1016/j.jpowsour.2013.02.092 | Q171 | uncertain_isolability_terminal_omission |
+| Architectonic Quantum Dot Solids | 10.1021/ar980039x | Q171 | uncertain_isolability_terminal_omission |
+| Influence of the charge carrier tunneling processes on the recombination dynamics in single lateral quantum dot molecules | 10.1103/physrevb.82.085309 | Q171 | uncertain_isolability_terminal_omission |
+| Triggered Single Photons from a Quantum Dot | 10.1103/physrevlett.86.1502 | Q171 | uncertain_isolability_terminal_omission |
+| Thermomagnetic detection of recrystallization in FeCoNbBCu nanocrystalline alloys | 10.1063/1.1413957 | Q171 | uncertain_isolability_terminal_omission |
+| Strain-induced self-organized growth of nanostructures: From step bunching to ordering in quantum dot superlattices | 10.1116/1.1303736 | Q171 | uncertain_isolability_terminal_omission |
+| Nano–bio interaction between human immunoglobulin G and nontoxic, near-infrared emitting water-borne silicon quantum dot micelles | 10.1039/d3ra00552f | Q172 | uncertain_isolability_terminal_omission |
+| Quantum Dot Behavior in Bilayer Graphene Nanoribbons | 10.1021/nn2027566 | Q172 | uncertain_isolability_terminal_omission |
+| Double-inverse grain size dependence of deformation twinning in nanocrystalline Cu | 10.1103/physrevb.81.172104 | Q172 | uncertain_isolability_terminal_omission |
+| Symmetry-Controlled Colloidal Nanocrystals: Nonhydrolytic Chemical Synthesis and Shape Determining Parameters | 10.1021/jp052257v | Q172 | uncertain_isolability_terminal_omission |
+| Determination of the lateral periodicity of nanometer quantum dot arrays by triple crystal diffractometry | 10.1063/1.110384 | Q172 | uncertain_isolability_terminal_omission |
+| Nanocrystal-size-sensitive third-harmonic generation in nanostructured silicon | 10.1007/s00340-003-1121-y | Q172 | uncertain_isolability_terminal_omission |
+| Raman analysis of the quantum dot morphology | 10.1002/pssc.200673237 | Q172 | uncertain_isolability_terminal_omission |
+| Dry sliding tribological behavior of nanocrystalline and conventional polycrystalline copper | 10.1007/s11249-005-9007-2 | Q172 | explicit_excluded_route_or_retained_product |
+| Crystal growth in colloidal tin oxide nanocrystals induced by coalescence at room temperature | 10.1063/1.1605241 | Q172 | uncertain_isolability_terminal_omission |
+| Surface-Enhanced Emission from Single Semiconductor Nanocrystals | 10.1103/physrevlett.89.117401 | Q172 | uncertain_isolability_terminal_omission |
+| Cyclic Oxidation Behavior and Microstructure of Nanocrystalline Ni–20Cr–4Al Coating | 10.1007/s11085-010-9189-3 | Q172 | uncertain_isolability_terminal_omission |
+| High-pressure torsion-induced grain growth in electrodeposited nanocrystalline Ni | 10.1063/1.2159088 | Q172 | uncertain_isolability_terminal_omission |
+| Localized strain reduction in strain-compensated InAs∕GaAs stacked quantum dot structures | 10.1063/1.2730732 | Q172 | uncertain_isolability_terminal_omission |
+| Microcompression of nanocrystalline nickel | 10.1063/1.2183814 | Q172 | uncertain_isolability_terminal_omission |
+| Deterministic Fabrication of Uniform and Bright InGaN Quantum Dot Emitters toward Exciton Bohr Radius Regime by a Combination of Dry and Anisotropic, Controlled Wet Etching Techniques | 10.1021/acsaom.5c00521 | Q172 | explicit_excluded_route_or_retained_product |
+| Energetic and Entropic Contributions to Self-Assembly of Binary Nanocrystal Superlattices: Temperature as the Structure-Directing Factor | 10.1021/ja103083q | Q172 | uncertain_isolability_terminal_omission |
+| Ordered Multimodal Porous Carbon as Highly Efficient Counter Electrodes in Dye-Sensitized and Quantum-Dot Solar Cells | 10.1021/la1019873 | Q172 | uncertain_isolability_terminal_omission |
+| Size-Dependent Grain-Growth Kinetics Observed in Nanocrystalline Fe | 10.1103/physrevlett.86.842 | Q172 | explicit_excluded_route_or_retained_product |
+| Extrusion of Polysaccharide Nanocrystal Reinforced Polymer Nanocomposites through Compatibilization with Poly(ethylene oxide) | 10.1021/am501755p | Q172 | explicit_excluded_route_or_retained_product |
+| Control of Exciton Confinement in Quantum Dot–Organic Complexes through Energetic Alignment of Interfacial Orbitals | 10.1021/nl304098e | Q172 | uncertain_isolability_terminal_omission |
+| A Large-Scale Nanocrystal Database with Aligned Synthesis and Properties, Enabling Generative Inverse Design | 10.1021/acsnano.6c03070 | Q172 | uncertain_isolability_terminal_omission |
+| Dual-Size Silicon Nanocrystal-Embedded SiO&lt;sub&gt;&lt;i&gt;x&lt;/i&gt;&lt;/sub&gt; Nanocomposite as a High-Capacity Lithium Storage Material | 10.1021/acsnano.5b03166 | Q172 | uncertain_isolability_terminal_omission |
+| Nanocrystalline alloys studied by positron annihilation lifetime spectroscopy | 10.1002/pssc.200675843 | Q172 | uncertain_isolability_terminal_omission |
+| Room-temperature far-infrared emission from a self-organized InGaAs/GaAs quantum-dot laser | 10.1063/1.126646 | Q172 | uncertain_isolability_terminal_omission |
+| Scanning Tunneling Microscopy Determination of Single Nanocrystal Core Sizes via Correlation with Mass Spectrometry | 10.1021/jp0376931 | Q172 | uncertain_isolability_terminal_omission |
+| Organic and Inorganic Blocking Layers for Solution‐Processed Colloidal PbSe Nanocrystal Infrared Photodetectors | 10.1002/adfm.201001328 | Q172 | uncertain_isolability_terminal_omission |
+| AFM research on Fe-based nanocrystal crystallization mechanism | 10.1007/s11431-008-0007-y | Q172 | uncertain_isolability_terminal_omission |
+| Identifying Spinel Phases in Nearly Monodisperse Iron Oxide Colloidal Nanocrystal | 10.1021/jp9047677 | Q172 | uncertain_isolability_terminal_omission |
+| Deep Level Transient Spectroscopy in Quantum Dot Characterization | 10.1007/s11671-008-9133-5 | Q172 | uncertain_isolability_terminal_omission |
+| Power dependent photoluminescence of lateral quantum dot molecules: Indication of extended electron states | 10.1002/pssc.200671586 | Q172 | uncertain_isolability_terminal_omission |
+| Over 1.3μm continuous-wave laser emission from InGaSb quantum-dot laser diode fabricated on GaAs substrates | 10.1063/1.1931046 | Q172 | explicit_excluded_route_or_retained_product |
+| Chain Packing Analysis of the Passivating Layer on Nanocrystalline Quantum Dot Surfaces | 10.1021/jp0103880 | Q172 | uncertain_isolability_terminal_omission |
+| Tuneable magnetic susceptibility of nanocrystalline palladium | 10.1063/1.2216897 | Q172 | uncertain_isolability_terminal_omission |
+| The effect of nanocrystal surface structure on the luminescence properties: Photoemission study of HF-etched InP nanocrystals | 10.1063/1.2004901 | Q172 | uncertain_isolability_terminal_omission |
+| Direct Observation of Controlled Coupling in an Individual Quantum Dot Molecule | 10.1103/physrevlett.94.057402 | Q172 | uncertain_isolability_terminal_omission |
+| Synchrotron X‐ray Renninger scanning for studying strain in InAs/GaAs quantum dot system | 10.1002/pssa.200675673 | Q172 | uncertain_isolability_terminal_omission |
+| Micro-Raman, photoluminescence and photocurrent studies on the photostability of quantum dot sensitized photoanodes | 10.1016/j.jphotochem.2013.11.007 | Q172 | explicit_excluded_route_or_retained_product |
+| Optical properties of bilayer InAs/GaAs quantum dot structures: Influence of strain and surface morphology | 10.1103/physrevb.66.075316 | Q172 | uncertain_isolability_terminal_omission |
+| Deforming nanocrystalline nickel at ultrahigh strain rates | 10.1063/1.2173257 | Q172 | uncertain_isolability_terminal_omission |
+| Gain in p-doped quantum dot lasers | 10.1063/1.2405738 | Q172 | uncertain_isolability_terminal_omission |
+| Chlorophyll &lt;i&gt;b&lt;/i&gt;-modified nanocrystalline SnO2 semiconductor thin film as a photosensitive electrode | 10.1063/1.355703 | Q172 | uncertain_isolability_terminal_omission |
+| Nearly Monodisperse and Shape-Controlled CdSe Nanocrystals via Alternative Routes: Nucleation and Growth | 10.1021/ja0173167 | Q172 | uncertain_isolability_terminal_omission |
+| Intracellular Trafficking and Unpacking of siRNA/Quantum Dot-PEI Complexes Modified with and without Cell Penetrating Peptide: Confocal and Flow Cytometric FRET Analysis | 10.1021/bc900342p | Q172 | uncertain_isolability_terminal_omission |
+| Inhibitory Effects of a Phage-Derived Peptide on Au Nanocrystal Nucleation and Growth | 10.1021/la901222k | Q172 | uncertain_isolability_terminal_omission |
+| Nanocrystal-Powered Nanomotor | 10.1021/nl0510659 | Q172 | explicit_excluded_route_or_retained_product |
+| Raman study and theoretical calculations of strain in GaN quantum dot multilayers | 10.1103/physrevb.73.115313 | Q172 | uncertain_isolability_terminal_omission |
+| Highly Enhanced Affinity of Multidentate versus Bidentate Zwitterionic Ligands for Long-Term Quantum Dot Bioimaging | 10.1021/la302896x | Q173 | uncertain_isolability_terminal_omission |
+| Evidence for Spinodal Phase Separation in Two-Dimensional Nanocrystal Self-Assembly | 10.1021/jp002280a | Q173 | uncertain_isolability_terminal_omission |
+| Memory Window Improvement Effect in Boron-doped Si Nanocrystal Memory | 10.1063/1.2730134 | Q173 | explicit_excluded_route_or_retained_product |
+| Coherent Probing of Excited Quantum Dot States in an Interferometer | 10.1103/physrevlett.98.036805 | Q173 | uncertain_isolability_terminal_omission |
+| Mesoscopic Fano effect in a quantum dot embedded in an Aharonov-Bohm ring | 10.1103/physrevb.68.235304 | Q173 | uncertain_isolability_terminal_omission |
+| Formation mechanism of wide stacking faults in nanocrystalline Al | 10.1063/1.1734689 | Q173 | uncertain_isolability_terminal_omission |
+| Lasing in high-Q quantum-dot micropillar cavities | 10.1063/1.2266231 | Q173 | uncertain_isolability_terminal_omission |
+| Synthesis and characterization of metastable nanocrystalline cobalt | 10.1063/1.3072091 | Q173 | uncertain_isolability_terminal_omission |
+| Correlated Electron Tunneling through Two Separate Quantum Dot Systems with Strong Capacitive Interdot Coupling | 10.1103/physrevlett.101.186804 | Q173 | uncertain_isolability_terminal_omission |
+| Rapid room-temperature synthesis of nanocrystalline spinels as oxygen reduction and evolution electrocatalysts | 10.1038/nchem.931 | Q173 | uncertain_isolability_terminal_omission |
+| Nanocrystalline diamond lateral vacuum microtriode | 10.1063/1.3036008 | Q173 | uncertain_isolability_terminal_omission |
+| Fatigue life improvement for cruciform welded joint by mechanical surface treatment using hammer peening and ultrasonic nanocrystal surface modification* | 10.1111/j.1460-2695.2009.01361.x | Q173 | uncertain_isolability_terminal_omission |
+| Quantitative Structural Analysis of Binary Nanocrystal Superlattices by Electron Tomography | 10.1021/nl901212m | Q173 | uncertain_isolability_terminal_omission |
+| Anisotropic Noble Metal Nanocrystal Growth: The Role of Halides | 10.1021/cm402384j | Q173 | uncertain_isolability_terminal_omission |
+| Optical and structural properties of CdTe-CdTeO3 nanocrystalline composites | 10.1063/1.51213 | Q173 | explicit_excluded_route_or_retained_product |
+| Strong to weak localization transition and two-parameter scaling in a two-dimensional quantum dot array | 10.1103/physrevb.80.125308 | Q173 | uncertain_isolability_terminal_omission |
+| Hole transport in coupled SiGe quantum dots for quantum computation | 10.1063/1.1482425 | Q173 | uncertain_isolability_terminal_omission |
+| Inverse Grain-Size Effect on Twinning in Nanocrystalline Ni | 10.1103/physrevlett.101.025503 | Q173 | uncertain_isolability_terminal_omission |
+| Enhancement Effect of Illumination on the Photoluminescence of Water-Soluble CdTe Nanocrystals: Toward Highly Fluorescent CdTe/CdS Core−Shell Structure | 10.1021/cm049172b | Q173 | uncertain_isolability_terminal_omission |
+| Dramatically Enhanced Mechanical Performance of Nylon-6 Magnetic Composites with Nanostructured Hybrid One-Dimensional Carbon Nanotube−Two-Dimensional Clay Nanoplatelet Heterostructures | 10.1021/jp112284k | Q173 | explicit_excluded_route_or_retained_product |
+| Fluorescence resonance energy transfer between a quantum dot donor and a dye acceptor attached to DNA | 10.1039/b508911e | Q173 | uncertain_isolability_terminal_omission |
+| Spin fine structure of optically excited quantum dot molecules | 10.1103/physrevb.75.245318 | Q173 | uncertain_isolability_terminal_omission |
+| Engineering Monovalent Quantum Dot−Antibody Bioconjugates with a Hybrid Gel System | 10.1021/bc200004z | Q173 | uncertain_isolability_terminal_omission |
+| Observation of the single-electron regime in a highly tunable silicon quantum dot | 10.1063/1.3272858 | Q173 | uncertain_isolability_terminal_omission |
+| Assembly and Analysis of Ordered Semiconductor Quantum Dot Arrays by Focused Ion Beam Nanofabrication and Tomography | 10.1017/s1431927607072649 | Q173 | explicit_excluded_route_or_retained_product |
+| A Review of Fatigue Behavior in Nanocrystalline Metals | 10.1007/s11340-009-9301-2 | Q173 | uncertain_isolability_terminal_omission |
+| Determination of the&lt;mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"&gt;&lt;mml:mrow&gt;&lt;mml:mtext&gt;Ge-nanocrystal&lt;/mml:mtext&gt;&lt;mml:mo&gt;/&lt;/mml:mo&gt;&lt;mml:msub&gt;&lt;mml:mrow&gt;&lt;mml:mtext&gt;SiO&lt;/mml:mtext&gt;&lt;/mml:mrow&gt;&lt;mml:mn&gt;2&lt;/mml:mn&gt;&lt;/mml:msub&gt;&lt;/mml:mrow&gt;&lt;/mml:math&gt;matrix interface trap density from the small signal response of charge stored in the nanocrystals | 10.1103/physrevb.82.195415 | Q173 | uncertain_isolability_terminal_omission |
+| Structural nanocrystalline materials: an overview | 10.1007/s10853-006-0609-3 | Q173 | uncertain_isolability_terminal_omission |
+| Cyclometalated ruthenium complexes for sensitizing nanocrystalline TiO2 solar cells | 10.1039/b703636a | Q173 | uncertain_isolability_terminal_omission |
+| Chemistry of Doped Colloidal Nanocrystals | 10.1021/cm304104m | Q173 | uncertain_isolability_terminal_omission |
+| Thermal Annealing Effects of Plasmonic Cu &lt;sub&gt;1.8&lt;/sub&gt; S Nanocrystal Films and Their Photovoltaic Properties | 10.1021/jp506043n | Q173 | uncertain_isolability_terminal_omission |
+| P b ( ) centers at the Si-nanocrystal/SiO2 interface as the dominant photoluminescence quenching defect | 10.1063/1.3388176 | Q173 | uncertain_isolability_terminal_omission |
+| Fullerene-Grafted Copolymers Exhibiting High Electron Mobility without Nanocrystal Formation | 10.1021/ma402609y | Q173 | uncertain_isolability_terminal_omission |
+| Mesoscopic electrical conduction in nanocrystalline SrTiO3 | 10.1063/1.2171798 | Q173 | uncertain_isolability_terminal_omission |
+| Nanocrystal and surface alloy properties of bimetallic Gold-Platinum nanoparticles | 10.1007/s11671-006-9022-8 | Q173 | uncertain_isolability_terminal_omission |
+| Lateral quantum-dot replication in three-dimensional quantum-dot crystals | 10.1063/1.1954874 | Q173 | explicit_excluded_route_or_retained_product |
+| Size Selective Photoetching of CdSe Quantum Dot Sensitizers on Single-Crystal TiO &lt;sub&gt;2&lt;/sub&gt; | 10.1021/am507974h | Q173 | uncertain_isolability_terminal_omission |
+| Unique Chemical Reactivities of Nanocrystalline Metal Oxides toward Hydrogen Sulfide | 10.1021/cm011588r | Q173 | uncertain_isolability_terminal_omission |
+| Targeted Tumor Cell Internalization and Imaging of Multifunctional Quantum Dot-Conjugated Immunoliposomes in Vitro and in Vivo | 10.1021/nl801488u | Q173 | uncertain_isolability_terminal_omission |
+| Supersaturation-Controlled Synthesis of Dicalcium Phosphate Dihydrate and Nanocrystalline Calcium-Deficient Hydroxyapatite | 10.1021/ie300059d | Q173 | uncertain_isolability_terminal_omission |
+| Kinetic roughening of charge spreading in a two-dimensional silicon nanocrystal network detected by electrostatic force microscopy | 10.1103/physrevb.71.125303 | Q173 | uncertain_isolability_terminal_omission |
+| Diffusional narrowing of Ge on Si(100) coherent island quantum dot size distributions | 10.1063/1.119809 | Q173 | uncertain_isolability_terminal_omission |
+| A PbS nanocrystal-C60 photovoltaic device for infrared light harvesting | 10.1063/1.2790730 | Q173 | uncertain_isolability_terminal_omission |
+| Single photoelectron trapping, storage, and detection in a one-electron quantum dot | 10.1063/1.2134888 | Q173 | uncertain_isolability_terminal_omission |
+| High-Affinity Labeling and Tracking of Individual Histidine-Tagged Proteins in Live Cells Using Ni &lt;sup&gt;2+&lt;/sup&gt; Tris-nitrilotriacetic Acid Quantum Dot Conjugates | 10.1021/nl9001298 | Q174 | uncertain_isolability_terminal_omission |
+| Towards a Triple Quantum Dot Molecule: Experiment and Theory | 10.1063/1.2355216 | Q174 | uncertain_isolability_terminal_omission |
+| III–V Nanocrystals Capped with Molecular Metal Chalcogenide Ligands: High Electron Mobility and Ambipolar Photoresponse | 10.1021/ja308200f | Q174 | uncertain_isolability_terminal_omission |
+| Templating Route to Mesoporous Nanocrystalline Titania Nanofibers | 10.1021/cm050603f | Q174 | uncertain_isolability_terminal_omission |
+| Material structure and metastability of hydrogenated nanocrystalline silicon solar cells | 10.1063/1.2216022 | Q174 | uncertain_isolability_terminal_omission |
+| Strain-Induced Quantum Ring Hole States in a Gated Vertical Quantum Dot | 10.1103/physrevlett.89.096804 | Q174 | uncertain_isolability_terminal_omission |
+| Fabrication of Ferrimagnetic Ferrite Nanocrystal Clusters by a Double-Step Templated Reaction Using in Situ Polymerization of Phenylalanine | 10.1021/cg100124m | Q174 | uncertain_isolability_terminal_omission |
+| Quantum-dot nanodevices with carbon nanotubes | 10.1116/1.2201054 | Q174 | uncertain_isolability_terminal_omission |
+| Colloidal Nanocrystal-Based Gels and Aerogels: Material Aspects and Application Perspectives | 10.1021/jz201357r | Q174 | uncertain_isolability_terminal_omission |
+| Polarized front-illumination response in intraband quantum dot infrared photodetectors at 77&lt;mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"&gt;&lt;mml:mi mathvariant="normal"&gt;K&lt;/mml:mi&gt;&lt;/mml:math&gt; | 10.1103/physrevb.63.045323 | Q174 | uncertain_isolability_terminal_omission |
+| Lens-shaped all-epitaxial quantum dot microcavity | 10.1063/1.2099525 | Q174 | uncertain_isolability_terminal_omission |
+| Investigation of the interfacial defects in a nanocrystalline Ni-P alloy by positron annihilation spectroscopy | 10.1063/1.348377 | Q174 | uncertain_isolability_terminal_omission |
+| Designing High-Performance PbS and PbSe Nanocrystal Electronic Devices through Stepwise, Post-Synthesis, Colloidal Atomic Layer Deposition | 10.1021/nl404818z | Q174 | uncertain_isolability_terminal_omission |
+| An alternative approach of solid-state reaction to prepare nanocrystalline KNbO3 | 10.1007/s10853-010-4431-6 | Q174 | explicit_excluded_route_or_retained_product |
+| Enhanced retention characteristic of NiSi2/SiNx compound nanocrystal memory | 10.1063/1.3457870 | Q174 | uncertain_isolability_terminal_omission |
+| Shape‐Controlled Synthesis of Metal Nanocrystals: Simple Chemistry Meets Complex Physics? | 10.1002/anie.200802248 | Q174 | uncertain_isolability_terminal_omission |
+| Photon-Assisted Tunneling in a Carbon Nanotube Quantum Dot | 10.1021/nl062273j | Q174 | uncertain_isolability_terminal_omission |
+| Ultrasensitive solution-cast quantum dot photodetectors | 10.1038/nature04855 | Q174 | explicit_excluded_route_or_retained_product |
+| Investigation of short-range order in nanocrystal-forming Zr60Cu20Pd10Al10 metallic glass and the mechanism of nanocrystal formation | 10.1063/1.1404128 | Q174 | uncertain_isolability_terminal_omission |
+| Systematic Electron Crystallographic Studies of Self-Assembled Binary Nanocrystal Superlattices | 10.1021/nn1003259 | Q174 | uncertain_isolability_terminal_omission |
+| Influence of surface energy anisotropy on the dynamics of quantum dot growth | 10.1103/physrevb.82.085322 | Q174 | uncertain_isolability_terminal_omission |
+| Investigations on nanocrystalline Fe78B13Si9 alloys by positron annihilation spectroscopy | 10.1063/1.352042 | Q174 | uncertain_isolability_terminal_omission |
+| Integrated approach to quantum dot fabrication | 10.1116/1.586634 | Q174 | uncertain_isolability_terminal_omission |
+| Local Strain-Mediated Chemical Potential Control of Quantum Dot Self-Organization in Heteroepitaxy | 10.1103/physrevlett.92.025502 | Q174 | explicit_excluded_route_or_retained_product |
+| Detailed Measurements of Nuclear Spin Polarizations in a Single InAlAs Quantum Dot Through Overhauser Shift of Photoluminescence | 10.1007/s10948-007-0240-9 | Q174 | uncertain_isolability_terminal_omission |
+| A unified model for polystyrene–nanorod and polystyrene–nanoplatelet melt composites | 10.1007/s00397-008-0307-y | Q174 | uncertain_isolability_terminal_omission |
+| Highly Efficient Nanocrystalline Zirconosilicate Catalysts for the Aminolysis, Alcoholysis, and Hydroamination Reactions | 10.1021/cs400732f | Q174 | uncertain_isolability_terminal_omission |
+| Fast and Efficient Photodetection in Nanoscale Quantum-Dot Junctions | 10.1021/nl303008y | Q174 | uncertain_isolability_terminal_omission |
+| Electrochemical Control of Two-Color Emission from Colloidal Dot-in-Bulk Nanocrystals | 10.1021/nl501026r | Q174 | uncertain_isolability_terminal_omission |
+| Electronically Coupled Nanocrystal Superlattice Films by &lt;i&gt;in Situ&lt;/i&gt; Ligand Exchange at the Liquid–Air Interface | 10.1021/nn404566b | Q174 | uncertain_isolability_terminal_omission |
+| Location of Hole and Electron Traps on Nanocrystalline Anatase TiO &lt;sub&gt;2&lt;/sub&gt; | 10.1021/jp301680d | Q174 | uncertain_isolability_terminal_omission |
+| Excitonic gain and stimulated ultraviolet emission in nanocrystalline zinc-oxide powder | 10.1063/1.1316069 | Q174 | uncertain_isolability_terminal_omission |
+| Physicochemical Properties and Cellular Toxicity of Nanocrystal Quantum Dots Depend on Their Surface Modification | 10.1021/nl048715d | Q174 | uncertain_isolability_terminal_omission |
+| Quantum Dot Solar Cells. Electrophoretic Deposition of CdSe−C&lt;sub&gt;60&lt;/sub&gt; Composite Films and Capture of Photogenerated Electrons with &lt;i&gt;n&lt;/i&gt;C&lt;sub&gt;60&lt;/sub&gt; Cluster Shell | 10.1021/ja802810c | Q174 | uncertain_isolability_terminal_omission |
+| Quantum Dot Modified Multiwall Carbon Nanotubes | 10.1021/jp061453e | Q174 | explicit_excluded_route_or_retained_product |
+| Quantum-Dot-Based (Aero)gels: Control of the Optical Properties | 10.1021/jz300726n | Q174 | uncertain_isolability_terminal_omission |
+| Enhanced Intracellular Delivery of Quantum Dot and Adenovirus Nanoparticles Triggered by Acidic pH via Surface Charge Reversal | 10.1021/bc700464m | Q174 | uncertain_isolability_terminal_omission |
+| Characterization of nanocrystalline Ni33Zr67 alloy | 10.1063/1.363984 | Q174 | uncertain_isolability_terminal_omission |
+| 7-Mercapto-4-methylcoumarin as a reporter of thiol binding to the CdSe quantum dot surface | 10.1039/b900606k | Q174 | uncertain_isolability_terminal_omission |
+| Laplace-Transform Deep-Level Spectroscopy Characterization of the Intrinsic and Deep-Level States in Self-Assembled InAs Quantum-Dot Structures | 10.1063/1.3295427 | Q174 | uncertain_isolability_terminal_omission |
+| Optical properties of a carbon-zirconia quantum-dot photonic crystal | 10.1134/s0020168510050122 | Q174 | explicit_excluded_route_or_retained_product |
+| Hemispherical resonators with embedded nanocrystal quantum rod emitters | 10.1063/1.3517566 | Q174 | uncertain_isolability_terminal_omission |
+| Three-Dimensional Si/Ge Quantum Dot Crystals | 10.1021/nl0717199 | Q174 | uncertain_isolability_terminal_omission |
+| Tuning nanocrystal properties for quantum information processing | 10.1063/1.1994673 | Q175 | uncertain_isolability_terminal_omission |
+| High refractive index polyimide–nanocrystalline-titania hybrid optical materials | 10.1039/b717069f | Q175 | uncertain_isolability_terminal_omission |
+| Imaging a Single-Electron Quantum Dot | 10.1021/nl048405v | Q175 | uncertain_isolability_terminal_omission |
+| Fundamental photophysics and optical loss processes in Si-nanocrystal-doped microdisk resonators | 10.1103/physreva.78.023829 | Q175 | uncertain_isolability_terminal_omission |
+| Quantum Dot Formation through Controlled Hybrid Perovskite Decomposition within Metal Organic Framework Glass | 10.1021/acs.chemmater.5c02293 | Q175 | explicit_excluded_route_or_retained_product |
+| Unusual Elastic Behavior of Nanocrystalline Diamond Thin Films | 10.1103/physrevlett.100.016804 | Q175 | uncertain_isolability_terminal_omission |
+| Calorimetric measurements of the thermal relaxation in nanocrystalline platinum | 10.1063/1.350560 | Q175 | uncertain_isolability_terminal_omission |
+| Z-scheme visible-light-driven Ag3PO4 nanoparticle@MoS2 quantum dot/few-layered MoS2 nanosheet heterostructures with high efficiency and stability for photocatalytic selective oxidation | 10.1016/j.jcat.2016.11.013 | Q175 | uncertain_isolability_terminal_omission |
+| Magnetic Properties of LaMnO3 Nanocrystal Encapsulated in MCM-41 | 10.1063/1.2355114 | Q175 | explicit_excluded_route_or_retained_product |
+| Energy level engineering in InAs quantum dot nanostructures | 10.1063/1.1506419 | Q175 | uncertain_isolability_terminal_omission |
+| Formation of three-dimensional quantum-dot superlattices in amorphous systems: Experiments and Monte Carlo simulations | 10.1103/physrevb.79.035310 | Q175 | uncertain_isolability_terminal_omission |
+| Nanocrystals: Solution-based synthesis and applications as nanocatalysts | 10.1007/s12274-009-9007-x | Q175 | uncertain_isolability_terminal_omission |
+| Imaging Schottky Barriers and Ohmic Contacts in PbS Quantum Dot Devices | 10.1021/nl204116b | Q175 | uncertain_isolability_terminal_omission |
+| Thermally induced phase decomposition and nanocrystal formation in murataite ceramics | 10.1039/b411845f | Q175 | uncertain_isolability_terminal_omission |
+| Bias-selectable tricolor tunneling quantum dot infrared photodetector for atmospheric windows | 10.1063/1.2898521 | Q175 | uncertain_isolability_terminal_omission |
+| An essay on synthetic chemistry of colloidal nanocrystals | 10.1007/s12274-009-9047-2 | Q175 | uncertain_isolability_terminal_omission |
+| Nanocrystalline alumina dispersed in nanocrystalline nickel: enhanced mechanical properties | 10.1007/s10853-009-3330-1 | Q175 | uncertain_isolability_terminal_omission |
+| Anatase TiO &lt;sub&gt;2&lt;/sub&gt; nanosheets with exposed highly reactive (001) facets as an efficient photoanode for quantum dot-sensitized solar cells | 10.1039/c6ra10628e | Q175 | uncertain_isolability_terminal_omission |
+| Local structure and luminescence of nanocrystalline Y2O3:Eu | 10.1063/1.1513659 | Q175 | uncertain_isolability_terminal_omission |
+| Probing Spatially Dependent Photoinduced Charge Transfer Dynamics to TiO&lt;sub&gt;2&lt;/sub&gt; Nanoparticles Using Single Quantum Dot Modified Atomic Force Microscopy Tips | 10.1021/nl403181k | Q175 | explicit_excluded_route_or_retained_product |
+| Bioinspired Photoelectric Conversion System Based on Carbon-Quantum-Dot-Doped Dye–Semiconductor Complex | 10.1021/am400930h | Q175 | uncertain_isolability_terminal_omission |
+| Carrier transport in PbS nanocrystal conducting polymer composites | 10.1063/1.2140885 | Q175 | explicit_excluded_route_or_retained_product |
+| The thermal properties of nanocrystalline Pd from 16 to 300 K | 10.1080/13642819208207667 | Q175 | explicit_excluded_route_or_retained_product |
+| Bulk nanocrystalline stainless steel fabricated by equal channel angular pressing | 10.1557/jmr.2006.0214 | Q175 | explicit_excluded_route_or_retained_product |
+| Linewidth broadening of a quantum dot coupled to an off-resonant cavity | 10.1103/physrevb.82.045306 | Q175 | uncertain_isolability_terminal_omission |
+| Electron Microscopy Observation of TiO&lt;sub&gt;2&lt;/sub&gt; Nanocrystal Evolution in High-Temperature Atomic Layer Deposition | 10.1021/nl403566u | Q175 | explicit_excluded_route_or_retained_product |
+| Size-Dependent Deformation of Nanocrystalline Pt Nanopillars | 10.1021/nl3036993 | Q175 | uncertain_isolability_terminal_omission |
+| Magnetic hardening mechanism in nanocrystalline Nd2Fe14B with 0.1 at. % addition of Cr, Cu, or Zr | 10.1063/1.366778 | Q175 | uncertain_isolability_terminal_omission |
+| Optical Properties of Nanocrystal Interfaces in Compressed MgO Nanopowders | 10.1021/nn200062d | Q175 | uncertain_isolability_terminal_omission |
+| Origin of the green/blue luminescence from nanocrystalline silicon | 10.1063/1.112035 | Q175 | uncertain_isolability_terminal_omission |
+| Precision Patterning with Luminescent Nanocrystal-Functionalized Beads | 10.1021/la1023339 | Q175 | uncertain_isolability_terminal_omission |
+| Quantum Communication and Information Processing with Quantum Dots | 10.1007/s11128-006-0027-0 | Q175 | uncertain_isolability_terminal_omission |
+| IR Spectroscopic Studies of Adsorption of Dithiol-Containing Ligands on CdS Nanocrystal Films in Aqueous Solutions | 10.1021/la702165u | Q175 | uncertain_isolability_terminal_omission |
+| Quantum dot strain engineering of InAs∕InGaAs nanostructures | 10.1063/1.2424523 | Q175 | uncertain_isolability_terminal_omission |
+| Fano resonance in a quantum wire with a side-coupled quantum dot | 10.1103/physrevb.70.035319 | Q175 | uncertain_isolability_terminal_omission |
+| Spatial correlations and Raman scattering interferences in self-assembled quantum dot multilayers | 10.1103/physrevb.64.033306 | Q175 | uncertain_isolability_terminal_omission |
+| Intrinsic Dual-Emitting Carbon Quantum-Dot-Based Selective Ratiometric Fluorescent Mercaptopurine Detection | 10.1021/acsbiomaterials.2c00423 | Q175 | uncertain_isolability_terminal_omission |
+| Templated Nanocrystal Assembly on Biodynamic Artificial Microtubule Asters | 10.1021/nn303998k | Q175 | explicit_excluded_route_or_retained_product |
+| Efficient Quantum Dot−Quantum Dot and Quantum Dot−Dye Energy Transfer in Biotemplated Assemblies | 10.1021/nn102365v | Q175 | uncertain_isolability_terminal_omission |
+| Near-Field Optical Mapping of Exciton Wave Functions in a GaAs Quantum Dot | 10.1103/physrevlett.91.177401 | Q175 | uncertain_isolability_terminal_omission |
+| Quantum Dot Microdrop Laser | 10.1021/nl080661a | Q175 | uncertain_isolability_terminal_omission |
+| Amorphization of nanocrystalline 3C-SiC irradiated with Si&lt;sup&gt;+&lt;/sup&gt; ions | 10.1557/jmr.2010.0311 | Q175 | uncertain_isolability_terminal_omission |
+| Strong coupling for a single quantum dot in a microdisk | 10.1002/pssc.200562009 | Q175 | uncertain_isolability_terminal_omission |
+| Perturbation of the magneto-optical properties of nanocrystalline CdSSe | 10.1103/physrevb.77.115337 | Q175 | uncertain_isolability_terminal_omission |
+| Exciton dynamics in current-injected single quantum dot at 1.55μm | 10.1063/1.2909556 | Q175 | uncertain_isolability_terminal_omission |
+| Applications for Metal−Organic Frameworks (MOFs) as Quantum Dot Semiconductors | 10.1021/jp063600e | Q176 | uncertain_isolability_terminal_omission |
+| Solution-processed pentacene quantum-dot polymeric nanocomposite for infrared photodetection | 10.1063/1.2266791 | Q176 | uncertain_isolability_terminal_omission |
+| Formation by ball milling and recrystallization of Y-Ba-Cu-O nanocrystalline phases | 10.1063/1.357123 | Q176 | uncertain_isolability_terminal_omission |
+| Quantum Dot Micropatterning on Si | 10.1021/la703664r | Q176 | uncertain_isolability_terminal_omission |
+| Polarized Raman spectroscopy of multilayer Ge∕Si(001) quantum dot heterostructures | 10.1063/1.1776314 | Q176 | explicit_excluded_route_or_retained_product |
+| Single Molecule Raman Spectroscopy at the Junctions of Large Ag Nanocrystals | 10.1021/jp034632u | Q176 | uncertain_isolability_terminal_omission |
+| Colloidal quantum-dot light-emitting diodes with metal-oxide charge transport layers | 10.1038/nphoton.2008.34 | Q176 | uncertain_isolability_terminal_omission |
+| Organometallic based strategies for metal nanocrystal synthesis | 10.1039/b501835h | Q176 | uncertain_isolability_terminal_omission |
+| Mesoporous TiO&lt;sub&gt;2&lt;/sub&gt; Nanocrystal Clusters for Selective Enrichment of Phosphopeptides | 10.1021/ac1011206 | Q176 | uncertain_isolability_terminal_omission |
+| Coherent Exciton Delocalization in Strongly Coupled Quantum Dot Arrays | 10.1021/nl402725m | Q176 | uncertain_isolability_terminal_omission |
+| Load-Independent Friction: MoO&lt;sub&gt;3&lt;/sub&gt; Nanocrystal Lubricants | 10.1021/jp9920794 | Q176 | uncertain_isolability_terminal_omission |
+| Linker-Assisted Assembly and Interfacial Electron-Transfer Reactivity of Quantum Dot−Substrate Architectures | 10.1021/jz100571u | Q176 | uncertain_isolability_terminal_omission |
+| Control of valence band states in pyramidal quantum dot-in-dot semiconductor heterostructures | 10.1063/1.2820693 | Q176 | uncertain_isolability_terminal_omission |
+| Hierarchical Cu7S4 nanotubes assembled by hexagonal nanoplates with high catalytic performance for quantum dot-sensitized solar cells | 10.1016/j.jpowsour.2015.09.008 | Q176 | explicit_excluded_route_or_retained_product |
+| An Amphiphilic Approach to Nanocrystal Quantum Dot−Titania Nanocomposites | 10.1021/ja037539s | Q176 | explicit_excluded_route_or_retained_product |
+| Coupled strained-layer InGaAs quantum-well improvement of an InAs quantum dot AlGaAs–GaAs–InGaAs–InAs heterostructure laser | 10.1063/1.1430025 | Q176 | uncertain_isolability_terminal_omission |
+| Formation and magnetic properties of nanocrystalline mechanically alloyed Fe-Co and Fe-Ni | 10.1063/1.352573 | Q176 | uncertain_isolability_terminal_omission |
+| One-dimensional postwetting layer in InGaAs∕GaAs(100) quantum-dot chains | 10.1063/1.2169868 | Q176 | uncertain_isolability_terminal_omission |
+| Simulation of ellipsometric spectra from nanocrystalline silicon floating gate structures | 10.1103/physrevb.67.155326 | Q176 | uncertain_isolability_terminal_omission |
+| Nanoplatelet-based reconstructed hydrotalcites: towards more efficient solid base catalysts in aldol condensations | 10.1039/b417322h | Q176 | uncertain_isolability_terminal_omission |
+| Magnetism and optical properties of nanocrystalline Cu2O and TiO2 powders | 10.1134/s1063776107070151 | Q176 | uncertain_isolability_terminal_omission |
+| Iridium oxide-based nanocrystalline particles as oxygen evolution electrocatalysts | 10.1134/s1023193506100223 | Q176 | uncertain_isolability_terminal_omission |
+| Controlled Dephasing of a Quantum Dot: From Coherent to Sequential Tunneling | 10.1103/physrevlett.98.096803 | Q176 | uncertain_isolability_terminal_omission |
+| Structure and thermal stability of nanocrystalline silver studied by transmission electron microscopy and positron annihilation spectroscopy | 10.1080/01418619408242229 | Q176 | uncertain_isolability_terminal_omission |
+| Physics and technology of quantum dot semiconductor nanostructures for IR application | 10.3103/s1062873809010183 | Q176 | uncertain_isolability_terminal_omission |
+| Temperature-Dependent Hall and Field-Effect Mobility in Strongly Coupled All-Inorganic Nanocrystal Arrays | 10.1021/nl403889u | Q176 | explicit_excluded_route_or_retained_product |
+| Quantum dot manipulation in a single-walled carbon nanotube using a carbon nanotube gate | 10.1063/1.2402119 | Q176 | uncertain_isolability_terminal_omission |
+| Probing the Quenching of Quantum Dot Photoluminescence by Peptide-Labeled Ruthenium(II) Complexes | 10.1021/jp501039w | Q176 | uncertain_isolability_terminal_omission |
+| Excitonic molecule in a quantum dot: Photoluminescence lifetime of a single&lt;mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"&gt;&lt;mml:mrow&gt;&lt;mml:mi mathvariant="normal"&gt;In&lt;/mml:mi&gt;&lt;mml:mi mathvariant="normal"&gt;As&lt;/mml:mi&gt;&lt;mml:mo&gt;∕&lt;/mml:mo&gt;&lt;mml:mi mathvariant="normal"&gt;Ga&lt;/mml:mi&gt;&lt;mml:mi mathvariant="normal"&gt;As&lt;/mml:mi&gt;&lt;/mml:mrow&gt;&lt;/mml:math&gt;quantum dot | 10.1103/physrevb.72.155307 | Q176 | uncertain_isolability_terminal_omission |
+| Kondo Effect in a Semiconductor Quantum Dot with a Spin-Accumulated Lead | 10.1103/physrevlett.104.036804 | Q176 | uncertain_isolability_terminal_omission |
+| Double quantum dot with integrated charge readout fabricated by layered SFM-lithography | 10.1063/1.1994685 | Q176 | uncertain_isolability_terminal_omission |
+| Site-Specific Patterning of Highly Ordered Nanocrystal Superlattices through Biomolecular Surface Confinement | 10.1021/nn101593d | Q176 | uncertain_isolability_terminal_omission |
+| Interference through a Single Quantum Dot | 10.1063/1.1994335 | Q176 | uncertain_isolability_terminal_omission |
+| Hydriding kinetics of ball-milled nanocrystalline MgH&lt;sub&gt;2&lt;/sub&gt; powders | 10.1557/jmr.2007.0387 | Q176 | uncertain_isolability_terminal_omission |
+| Improved surface morphology of stacked 1.3μm InAs∕GaAs quantum dot active regions by introducing annealing processes | 10.1063/1.2337869 | Q176 | explicit_excluded_route_or_retained_product |
+| Defect density and diffusion length of holes in nanocrystalline silicon devices | 10.1063/1.1873062 | Q176 | uncertain_isolability_terminal_omission |
+| Dynamic Electron Microscopy of Semiconductor Nanowire and Quantum Dot Growth | 10.1063/1.2751924 | Q176 | uncertain_isolability_terminal_omission |
+| Partial-mediated slips in nanocrystalline Ni at high strain rate | 10.1063/1.2745250 | Q176 | uncertain_isolability_terminal_omission |
+| Optical investigation of the interdot carrier transfer process in InAs∕GaAs quantum-dot heterosystems | 10.1116/1.2138719 | Q176 | uncertain_isolability_terminal_omission |
+| Cryomechanically obtained nanocrystalline titanium: microstructure and mechanical properties | 10.1063/1.3266928 | Q176 | uncertain_isolability_terminal_omission |
+| Characterization and microwave resonance in nanocrystalline FeCoNi flake composite | 10.1063/1.2733610 | Q176 | uncertain_isolability_terminal_omission |
+| Quantized charge pumping through a quantum dot by surface acoustic waves | 10.1063/1.1757016 | Q176 | uncertain_isolability_terminal_omission |
+| Pushing Nanocrystal Synthesis toward Nanomanufacturing | 10.1021/nn800875p | Q176 | uncertain_isolability_terminal_omission |
+| Wafer-scale epitaxial modulation of quantum dot density | 10.1038/s41467-022-29116-8 | Q176 | explicit_excluded_route_or_retained_product |
+| Lanthanide-Doped Nanocrystals: Synthesis, Optical-Magnetic Properties, and Applications | 10.1021/ar100129p | Q176 | uncertain_isolability_terminal_omission |
+| Cracks in Magnetic Nanocrystal Films: Do Directional and Isotropic Crack Patterns Follow the Same Scaling Law? | 10.1021/nl801501y | Q177 | uncertain_isolability_terminal_omission |
+| 3D Printed Quantum Dot Light-Emitting Diodes | 10.1021/nl5033292 | Q177 | uncertain_isolability_terminal_omission |
+| Advance in Orientation Microscopy: Quantitative Analysis of Nanocrystalline Structures | 10.1021/nn1023126 | Q177 | uncertain_isolability_terminal_omission |
+| Creep-induced magnetic anisotropy and magnetostriction in a nanocrystalline Co based alloy | 10.1063/1.364635 | Q177 | uncertain_isolability_terminal_omission |
+| Optical properties of nanocrystalline FeSi2 and the effects of hydrogenation | 10.1063/1.2172711 | Q177 | explicit_excluded_route_or_retained_product |
+| Size-dependent photocurrent switching in chemical bath deposited CdSe quantum dot films | 10.1007/s10008-016-3442-x | Q177 | explicit_excluded_route_or_retained_product |
+| Formation and control of a correlated exciton two-qubit system in a coupled quantum dot | 10.1103/physrevb.79.205313 | Q177 | uncertain_isolability_terminal_omission |
+| Alternating-Color Quantum Dot Nanocomposites for Particle Tracking | 10.1021/nl103233b | Q177 | explicit_excluded_route_or_retained_product |
+| Electron Cotunneling in a Semiconductor Quantum Dot | 10.1103/physrevlett.86.878 | Q177 | uncertain_isolability_terminal_omission |
+| Hierarchical zeolite structures with designed shape by gel-casting of colloidal nanocrystal suspensions | 10.1039/b104275k | Q177 | explicit_excluded_route_or_retained_product |
+| Tuning vertically stacked InAs/GaAs quantum dot properties under spacer thickness effects for 1.3 μm emission | 10.1007/s00339-003-2455-3 | Q177 | explicit_excluded_route_or_retained_product |
+| Crystal Structures of Molecular Gold Nanocrystal Arrays | 10.1021/ar970239t | Q177 | uncertain_isolability_terminal_omission |
+| Effects of the quantum dot ripening in high-coverage InAs∕GaAs nanostructures | 10.1063/1.2795661 | Q177 | uncertain_isolability_terminal_omission |
+| Size-Dependent Multiple Twinning in Nanocrystal Superlattices | 10.1021/ja9074425 | Q177 | uncertain_isolability_terminal_omission |
+| Enhanced photovoltaic performance in nanoimprinted pentacene-PbS nanocrystal hybrid device | 10.1063/1.2890848 | Q177 | uncertain_isolability_terminal_omission |
+| Composition influence on positron annihilation parameters in ZnO‐based nanocrystal semiconductor powders | 10.1002/pssc.200675842 | Q177 | explicit_excluded_route_or_retained_product |
+| Charge-Qubit Operation of an Isolated Double Quantum Dot | 10.1103/physrevlett.95.090502 | Q177 | uncertain_isolability_terminal_omission |
+| Photoluminescence mapping on InAs/InGaAs quantum dot structures | 10.1002/pssc.200460708 | Q177 | uncertain_isolability_terminal_omission |
+| Microscale memory characteristics of virus-quantum dot hybrids | 10.1063/1.2742787 | Q177 | uncertain_isolability_terminal_omission |
+| Kondo Universal Scaling for a Quantum Dot Coupled to Superconducting Leads | 10.1103/physrevlett.99.136806 | Q177 | uncertain_isolability_terminal_omission |
+| Recent advances in the chemistry of lanthanide-doped upconversion nanocrystals | 10.1039/b809132n | Q177 | uncertain_isolability_terminal_omission |
+| Microfabricated gas sensor systems with sensitive nanocrystalline metal-oxide films | 10.1007/s11051-005-9036-7 | Q177 | uncertain_isolability_terminal_omission |
+| Raman Microprobe Analysis of Elastic Strain and Fracture in Electrophoretically Deposited CdSe Nanocrystal Films | 10.1021/nl051921g | Q177 | explicit_excluded_route_or_retained_product |
+| Synthesis, Characterization and Application of CdS Quantum Dot | 10.1063/1.3183451 | Q177 | explicit_excluded_route_or_retained_product |
+| Raman scattering investigation of the phase transition in nanocrystalline (Pb, Ca, La)TiO3 | 10.1063/1.371499 | Q177 | uncertain_isolability_terminal_omission |
+| Effects of Al on the magnetic properties of nanocrystalline Fe73.5Cu1Nb3Si13.5B9 alloys | 10.1063/1.352574 | Q177 | uncertain_isolability_terminal_omission |
+| Beyond the heteroepitaxial quantum dot: Self-assembling complex nanostructures controlled by strain and growth kinetics | 10.1103/physrevb.72.155323 | Q177 | explicit_excluded_route_or_retained_product |
+| Nanocrystalline FeNdB permanent magnets with enhanced remanence | 10.1063/1.362965 | Q177 | uncertain_isolability_terminal_omission |
+| Polarization-Selective Plasmon-Enhanced Silicon Quantum-Dot Luminescence | 10.1021/nl061494m | Q177 | uncertain_isolability_terminal_omission |
+| Correlation between the kinetics of the amorphous-to-nanocrystalline transformation and the diffusion in alloys | 10.1063/1.362882 | Q177 | uncertain_isolability_terminal_omission |
+| Glucose-derived porous carbon as a highly efficient and low-cost counter electrode for quantum dot-sensitized solar cells | 10.1039/d0nj00447b | Q177 | uncertain_isolability_terminal_omission |
+| Fabrication of coupled quantum dot arrays with a 100–150 nm period | 10.1116/1.585079 | Q177 | uncertain_isolability_terminal_omission |
+| Photostable Second‐Harmonic Generation from a Single KTiOPO&lt;sub&gt;4&lt;/sub&gt; Nanocrystal for Nonlinear Microscopy | 10.1002/smll.200701093 | Q177 | uncertain_isolability_terminal_omission |
+| Crystallographic and magnetic properties of nanocrystalline Fe78Al4Nb5B12Cu1 alloys | 10.1063/1.1433932 | Q177 | explicit_excluded_route_or_retained_product |
+| Graphene Nanoplatelet-Induced Strengthening of UltraHigh Molecular Weight Polyethylene and Biocompatibility In vitro | 10.1021/am300244s | Q177 | explicit_excluded_route_or_retained_product |
+| Heterostructuring Nanocrystal Quantum Dots Toward Intentional Suppression of Blinking and Auger Recombination | 10.1021/cm304161d | Q177 | uncertain_isolability_terminal_omission |
+| Engineering electron and hole tunneling with asymmetric InAs quantum dot molecules | 10.1063/1.2400397 | Q177 | uncertain_isolability_terminal_omission |
+| Self-Assembly of CdSe−ZnS Quantum Dot Bioconjugates Using an Engineered Recombinant Protein | 10.1021/ja002535y | Q177 | uncertain_isolability_terminal_omission |
+| Photoluminescence variation in dot-in-a-well structures with different InAs quantum dot densities | 10.1116/1.3010718 | Q177 | uncertain_isolability_terminal_omission |
+| Carbon Quantum Dot-Functionalized Aerogels for NO&lt;sub&gt;2&lt;/sub&gt; Gas Sensing | 10.1021/ac401880h | Q177 | explicit_excluded_route_or_retained_product |
+| Kinetics of Monodisperse Iron Oxide Nanocrystal Formation by “Heating-Up” Process | 10.1021/ja074633q | Q177 | uncertain_isolability_terminal_omission |
+| Exciton-Mediated Hydrosilylation on Photoluminescent Nanocrystalline Silicon | 10.1021/ja011116d | Q177 | uncertain_isolability_terminal_omission |
+| Coupling of quantum-dot light emission with a three-dimensional photonic-crystal nanocavity | 10.1038/nphoton.2008.202 | Q177 | uncertain_isolability_terminal_omission |
+| Nucleation of the nanocrystalline phase in Fe73.5Cu1Nb3Si13.5B9 (abstract) | 10.1063/1.355569 | Q177 | uncertain_isolability_terminal_omission |
+| In situ XRD study of nanocrystalline cobalt oxide reduction | 10.1134/s0023158409020086 | Q177 | uncertain_isolability_terminal_omission |
+| Silver Nanocrystal-Modified Silicon Nanowires as Substrates for Surface-Enhanced Raman and Hyper-Raman Scattering | 10.1021/ac060561u | Q177 | uncertain_isolability_terminal_omission |
+| Optical spectroscopy of nanocrystalline cubic Y2O3:Er3+ obtained by combustion synthesis | 10.1039/b003031g | Q177 | uncertain_isolability_terminal_omission |
+
+
+## Q178 queue scope omissions — saved titles, 2026-10-29
+
+These are existing completed product-scope omissions for this job. Unresolved isolability remains an operational omission. Saved titles only; no source reread, scientific correction, Live-record removal or new review credit. This list remains repository-only.
+
+| Saved title | Original queue DOI label | Cohort | Existing omission diagnostic |
+|---|---|---|---|
+| Optical properties of nanocrystalline diamond films by prism coupling technique | 10.1063/1.1524719 | Q178 | uncertain_isolability_terminal_omission |
+| Heat conduction in graphite-nanoplatelet-reinforced polymer nanocomposites | 10.1063/1.2221874 | Q178 | uncertain_isolability_terminal_omission |
+| Time‐resolved and single dot spectroscopy of type II InP/GaInP quantum dots | 10.1002/pssc.200303042 | Q178 | explicit_excluded_route_or_retained_product |
+| Quantum oscillations in magnetically doped colloidal nanocrystals | 10.1038/nnano.2010.252 | Q178 | uncertain_isolability_terminal_omission |
+| Tuning the Charge-Transfer Property of PbS-Quantum Dot/TiO&lt;sub&gt;2&lt;/sub&gt;-Nanobelt Nanohybrids via Quantum Confinement | 10.1021/jz100144w | Q178 | explicit_excluded_route_or_retained_product |
+| Nanofiber composite membrane using quantum dot hybridized SPEEK nanofiber for efficient through-plane proton conduction | 10.1016/j.memsci.2020.118198 | Q178 | uncertain_isolability_terminal_omission |
+| Non-Injection and Low-Temperature Approach to Colloidal Photoluminescent PbS Nanocrystals with Narrow Bandwidth | 10.1021/jp809171f | Q178 | uncertain_isolability_terminal_omission |
+| Plasmon Hybridization in Individual Gold Nanocrystal Dimers: Direct Observation of Bright and Dark Modes | 10.1021/nl903693v | Q178 | uncertain_isolability_terminal_omission |
+| Quantum-Size-Controlled Photoelectrochemical Fabrication of Epitaxial InGaN Quantum Dots | 10.1021/nl502151k | Q178 | uncertain_isolability_terminal_omission |
+| Shape Control of Colloidal Metal Nanocrystals | 10.1002/smll.200701295 | Q178 | uncertain_isolability_terminal_omission |
+| Nanocrystalline Cerium−Bismuth Oxides: Synthesis, Structural Characterization, and Redox Properties | 10.1021/cm1025848 | Q178 | uncertain_isolability_terminal_omission |
+| Modulated reflectivity probing of quantum dot and wetting layer states in InAs/GaInAsP/InP quantum dot laser structures | 10.1002/pssa.200673325 | Q178 | explicit_excluded_route_or_retained_product |
+| Cathodoluminescence study of InGaAs/GaAs quantum dot structures formed on the tetrahedral-shaped recesses on GaAs (111)B substrates | 10.1063/1.367295 | Q178 | uncertain_isolability_terminal_omission |
+| Structural Defects in Periodic and Quasicrystalline Binary Nanocrystal Superlattices | 10.1021/ja207154v | Q178 | uncertain_isolability_terminal_omission |
+| Constructing Functional Mesostructured Materials from Colloidal Nanocrystal Building Blocks | 10.1021/ar400133k | Q178 | uncertain_isolability_terminal_omission |
+| Temperature dependent contactless electroreflectance study of intersubband transitions in a self-assembled InAs/InP (001) quantum dot structure | 10.1063/1.1609651 | Q178 | uncertain_isolability_terminal_omission |
+| Electron transport through a silicon-germanium double quantum dot at 40mK | 10.1063/1.2404533 | Q178 | uncertain_isolability_terminal_omission |
+| ZnSe based colloidal nanocrystals: synthesis, shape control, core/shell, alloy and doped systems | 10.1039/b712086a | Q178 | uncertain_isolability_terminal_omission |
+| Spin-half Kondo effect in a single self-assembled InAs quantum dot with and without an applied magnetic field | 10.1103/physrevb.76.081303 | Q178 | uncertain_isolability_terminal_omission |
+| Nanocrystalline material development for high-power inductors | 10.1063/1.2829033 | Q178 | uncertain_isolability_terminal_omission |
+| Resonant scattering of a two-dimensional electron gas by quantum dot levels | 10.1063/1.1994344 | Q178 | uncertain_isolability_terminal_omission |
+| Nanocrystal Plasma Polymerization: From Colloidal Nanocrystals to Inorganic Architectures | 10.1021/ar800158d | Q178 | uncertain_isolability_terminal_omission |
+| Preparation of β-MnO &lt;sub&gt;2&lt;/sub&gt; nanocrystal/acetylene black composites for lithium batteries | 10.1039/b306780g | Q178 | explicit_excluded_route_or_retained_product |
+| Single phase nanocrystalline GaMnN thin films with high Mn content | 10.1063/1.2357701 | Q178 | explicit_excluded_route_or_retained_product |
+| Structure, hyperfine interactions, and magnetic behavior of amorphous and nanocrystalline Fe80M7B12Cu1 (M=Mo, Nb, Ti) alloys | 10.1063/1.369223 | Q178 | explicit_excluded_route_or_retained_product |
+| Transmission Phase of a Singly Occupied Quantum Dot in the Kondo Regime | 10.1103/physrevlett.100.226601 | Q178 | uncertain_isolability_terminal_omission |
+| Vibrational modes in nanocrystalline iron under high pressure | 10.1103/physrevb.69.144301 | Q178 | uncertain_isolability_terminal_omission |
+| Quantum dot structures grown on Al containing quaternary material for infrared photodetection beyond 10μm | 10.1063/1.2733603 | Q178 | uncertain_isolability_terminal_omission |
+| Bimodal counting statistics in single-electron tunneling through a quantum dot | 10.1103/physrevb.76.155307 | Q178 | uncertain_isolability_terminal_omission |
+| Coupling of electron states in the InAs/GaAs quantum dot molecule | 10.1134/s1063782606030146 | Q178 | uncertain_isolability_terminal_omission |
+| Triple Junction Transport and the Impact of Grain Boundary Width in Nanocrystalline Cu | 10.1021/nl300751q | Q178 | uncertain_isolability_terminal_omission |
+| A Quantum Dot Conjugated Sugar Ball and Its Cellular Uptake. On the Size Effects of Endocytosis in the Subviral Region | 10.1021/ja048792a | Q178 | uncertain_isolability_terminal_omission |
+| Integration of planar and bulk heterojunctions in polymer/nanocrystal hybrid photovoltaic cells | 10.1063/1.3189083 | Q178 | uncertain_isolability_terminal_omission |
+| Dark current and band profiles in low defect density thick multilayered GaAs/InAs self-assembled quantum dot structures for infrared detectors | 10.1063/1.3039799 | Q178 | uncertain_isolability_terminal_omission |
+| Quantum dot origin of luminescence in InGaN-GaN structures | 10.1103/physrevb.66.155310 | Q178 | uncertain_isolability_terminal_omission |
+| Magnetization of nanocrystalline dysprosium: Annealing effects | 10.1063/1.362478 | Q178 | uncertain_isolability_terminal_omission |
+| Toward a Mechanistic Understanding of Exciton-Mediated Hydrosilylation on Nanocrystalline Silicon | 10.1021/ja208604r | Q178 | explicit_excluded_route_or_retained_product |
+| Observation of Single Electron Transport via Multiple Quantum States of a Silicon Quantum Dot at Room Temperature | 10.1021/nl403204k | Q178 | uncertain_isolability_terminal_omission |
+| Microstructural evolution and nanocrystal formation in Pb+-implanted ZrSiO4 single crystals | 10.1063/1.1618917 | Q178 | explicit_excluded_route_or_retained_product |
+| A structural investigation of a Fe73.5Cu1Nb3Si13.5B9 nanocrystalline soft magnetic material | 10.1063/1.356086 | Q178 | uncertain_isolability_terminal_omission |
+| Fast Electrical Control of a Quantum Dot Strongly Coupled to a Photonic-Crystal Cavity | 10.1103/physrevlett.104.047402 | Q178 | uncertain_isolability_terminal_omission |
+| Thermal instability of electron traps in InAs/GaAs quantum dot structures | 10.1007/s10854-008-9703-4 | Q178 | uncertain_isolability_terminal_omission |
+| Engineering the Interfaces of ITO@Cu&lt;sub&gt;2&lt;/sub&gt;S Nanowire Arrays toward Efficient and Stable Counter Electrodes for Quantum-Dot-Sensitized Solar Cells | 10.1021/am504057y | Q178 | uncertain_isolability_terminal_omission |
+| Colloidal Quantum Dot Photovoltaics: Current Progress and Path to Gigawatt Scale Enabled by Smart Manufacturing | 10.1021/acsenergylett.0c01453 | Q178 | uncertain_isolability_terminal_omission |
+| Toward quantum interference of photons from independent quantum dots | 10.1063/1.3275702 | Q178 | uncertain_isolability_terminal_omission |
+| The Role of Order, Nanocrystal Size, and Capping Ligands in the Collective Mechanical Response of Three-Dimensional Nanocrystal Solids | 10.1021/ja100464a | Q178 | uncertain_isolability_terminal_omission |
+
+
+## Q179 queue scope omissions — saved titles, 2026-10-29
+
+These are existing completed product-scope omissions for this job, from saved title metadata only. The three missing-pair technical entries are not counted OUT. Publication-provenance or normal-eligibility omissions below do not change original product-IN decisions. This list remains repository-only; already-Live records are unchanged.
+
+| Saved title | Original queue DOI label | Cohort | Existing omission diagnostic |
+|---|---|---|---|
+| Maghemite Nanocrystal Impregnation by Hydrophobic Surface Modification of Mesoporous Silica | 10.1021/la063395u | Q179 | uncertain_isolability_terminal_omission |
+| Probing Confined Phonon Modes by Transport through a Nanowire Double Quantum Dot | 10.1103/physrevlett.104.036801 | Q179 | uncertain_isolability_terminal_omission |
+| Influence of nanocrystalline structure on work function of tungsten | 10.1116/1.2174024 | Q179 | uncertain_isolability_terminal_omission |
+| NiO as an Inorganic Hole-Transporting Layer in Quantum-Dot Light-Emitting Devices | 10.1021/nl0623208 | Q179 | uncertain_isolability_terminal_omission |
+| Thermal effects in InP/(Ga,In)P quantum-dot single-photon emitters | 10.1103/physrevb.80.161305 | Q179 | uncertain_isolability_terminal_omission |
+| The role of phase-matching and nanocrystal-size effects in three-wave mixing and CARS processes in porous gallium phosphide | 10.1007/s00340-006-2161-x | Q179 | uncertain_isolability_terminal_omission |
+| Improved device performance of InAs∕GaAs quantum dot solar cells with GaP strain compensation layers | 10.1063/1.2816904 | Q179 | explicit_excluded_route_or_retained_product |
+| A transmission electron microscopy study of defects formed through the capping layer of self-assembled InAs∕GaAs quantum dot samples | 10.1063/1.2197038 | Q179 | uncertain_isolability_terminal_omission |
+| Intermolecular Energy Transfer across Nanocrystalline Semiconductor Surfaces | 10.1021/jp0543680 | Q179 | uncertain_isolability_terminal_omission |
+| Automating Quantum Dot Barcode Assays Using Microfluidics and Magnetism for the Development of a Point-of-Care Device | 10.1021/am302633h | Q179 | uncertain_isolability_terminal_omission |
+| Minimization of germanium penetration, nanocrystal formation, charge storage, and retention in a trilayer memory structure with silicon nitride/hafnium dioxide stack as the tunnel dielectric | 10.1063/1.1757022 | Q179 | explicit_excluded_route_or_retained_product |
+| Inelastic mean-free path of electrons at nanocrystalline diamond surfaces | 10.1063/1.2159575 | Q179 | uncertain_isolability_terminal_omission |
+| g-factor and exchange energy in a few-electron lateral InGaAs quantum dot | 10.1063/1.3264053 | Q179 | uncertain_isolability_terminal_omission |
+| Quantum Dot on a Rope | 10.1021/ja0173728 | Q179 | explicit_excluded_route_or_retained_product |
+| Growth of deformation twins in room-temperature rolled nanocrystalline nickel | 10.1063/1.3104858 | Q179 | uncertain_isolability_terminal_omission |
+| Effect of microstructure on thermal expansion behaviour of nanocrystalline metallic materials | 10.1007/s10853-009-4006-6 | Q179 | uncertain_isolability_terminal_omission |
+| Efficiency of Hot Carrier Trapping by Outer-Sphere Redox Probes at Quantum Dot Interfaces | 10.1021/jp990952v | Q179 | uncertain_isolability_terminal_omission |
+| Oxidized nanocrystalline Fe–Cu pseudoalloy subjected to high pressure and electrodischarge pulses: Mössbauer and x-ray investigations | 10.1063/1.367263 | Q179 | explicit_excluded_route_or_retained_product |
+| Morphologically Selective Synthesis of Nanocrystalline Aluminum Nitride | 10.1021/cm980481+ | Q179 | uncertain_isolability_terminal_omission |
+| Structural and Electronic Characterization of Nanocrystalline Diamondlike Carbon Thin Films | 10.1021/am301252e | Q179 | explicit_excluded_route_or_retained_product |
+| Metastable excited states of a closed quantum dot with high sensitivity to infrared photons | 10.1103/physrevb.75.085417 | Q179 | uncertain_isolability_terminal_omission |
+| Influence of average size and interface passivation on the spectral emission of Si nanocrystals embedded in SiO2 | 10.1063/1.1423768 | Q179 | uncertain_isolability_terminal_omission |
+| CdSe Quantum Dot Sensitized Solar Cells. Shuttling Electrons Through Stacked Carbon Nanocups | 10.1021/ja903337c | Q179 | uncertain_isolability_terminal_omission |
+| Optical recognition of salivary proteins by use of molecularly imprinted poly(ethylene-co-vinyl alcohol)/quantum dot composite nanoparticles | 10.1007/s00216-010-3631-x | Q179 | explicit_excluded_route_or_retained_product |
+| Top-gated few-electron double quantum dot in Si/SiGe | 10.1016/j.physe.2007.07.028 | Q179 | uncertain_isolability_terminal_omission |
+| Percolating network of ultrafast transport channels in severely deformed nanocrystalline metals | 10.1063/1.3211966 | Q179 | uncertain_isolability_terminal_omission |
+| Aluminium based amorphous and nanocrystalline structure | 10.1007/s10751-006-9401-7 | Q179 | uncertain_isolability_terminal_omission |
+| Low-Dimensional Semiconductor Superlattices Formed by Geometric Control over Nanocrystal Attachment | 10.1021/nl303322k | Q179 | explicit_excluded_route_or_retained_product |
+| Polarized Raman spectroscopy and X-ray diffuse scattering in InGaAs/GaAs(100) quantum-dot chains | 10.1007/s10854-007-9381-7 | Q179 | uncertain_isolability_terminal_omission |
+| Norbornene-Derived Poly-&lt;scp&gt;d&lt;/scp&gt;-lysine Copolymers as Quantum Dot Carriers for Neuron Growth | 10.1021/bm300968y | Q179 | uncertain_isolability_terminal_omission |
+| A Versatile Strategy for Quantum Dot Ligand Exchange | 10.1021/ja067742y | Q179 | uncertain_isolability_terminal_omission |
+| Photoelectrochemical behavior of titania nanotube array grown on nanocrystalline titanium | 10.1007/s10853-009-3384-0 | Q179 | uncertain_isolability_terminal_omission |
+| pH-Responsive Capsules Derived from Nanocrystal Templating | 10.1021/la051638x | Q179 | uncertain_isolability_terminal_omission |
+| Colloidal Graphene Quantum Dots | 10.1021/jz100862f | Q179 | uncertain_isolability_terminal_omission |
+| Metamorphic InAs quantum dots: Photoluminescence features related to cooperative phenomena in the quantum dot-matrix system | 10.1134/s1063785007070152 | Q179 | uncertain_isolability_terminal_omission |
+| Characterization of CH stretches on diamond C(111) single- and nanocrystal surfaces by infrared absorption spectroscopy | 10.1063/1.472938 | Q179 | explicit_excluded_route_or_retained_product |
+| A single-molecule graphene quantum dot: a novel efficient photosensitizer for photodynamic cancer therapy | 10.1039/d5sc03226a | Q179 | uncertain_isolability_terminal_omission |
+| Cu&lt;sub&gt;2&lt;/sub&gt;ZnSnS&lt;sub&gt;4&lt;i&gt;x&lt;/i&gt;&lt;/sub&gt;Se&lt;sub&gt;4(1–&lt;i&gt;x&lt;/i&gt;)&lt;/sub&gt; Solar Cells from Polar Nanocrystal Inks | 10.1021/ja501218u | Q179 | explicit_excluded_route_or_retained_product |
+| Measuring current by counting electrons in a nanowire quantum dot | 10.1063/1.2892679 | Q179 | uncertain_isolability_terminal_omission |
+| Bulk-heterojunction hybrid solar cells based on colloidal nanocrystals and conjugated polymers | 10.1039/c0ee00143k | Q179 | uncertain_isolability_terminal_omission |
+| Stress dependence of coercivity in nanocrystalline Fe79Hf7B12Si2 glass-coated microwires | 10.1063/1.2177131 | Q179 | explicit_excluded_route_or_retained_product |
+| Coulomb blockade and the thermopower of a suspended quantum dot | 10.1134/s002136400603009x | Q179 | uncertain_isolability_terminal_omission |
+| Sugar−Quantum Dot Conjugates for a Selective and Sensitive Detection of Lectins | 10.1021/bc060204q | Q179 | uncertain_isolability_terminal_omission |
+
+Separate product-IN omissions: 10.1021/jp074980m, *Nanocrystalline Zeolites and Zeolite Structures: Synthesis, Characterization, and Applications*, was omitted as a secondary-attributed presentation based on saved bibliographic/caption provenance; no registered review subtype was invented. 10.1021/nn102301y remains a normal technical omission after unsupported composition and architecture facts were deleted; no eligible fallback record survived. Neither was relabelled product OUT.
+
+
+## Q180 queue scope omissions — saved titles, 2026-10-29
+
+Existing product-scope decisions from saved metadata; uncertain isolability remains an operational omission. Three rare papers remain next-batch private work, and the Pd-shape paper has no normal record; they are not relabelled OUT. Repository-only; no already-Live paper was reread or removed.
+
+| Saved title | Original queue DOI label | Cohort | Existing omission diagnostic |
+|---|---|---|---|
+| Bistability and self-pulsation in quantum-dot lasers with intracavity quantum-dot saturable absorbers | 10.1063/1.123644 | Q180 | uncertain_isolability_terminal_omission |
+| Microstructure and magnetism in FeTaN films deposited in the nanocrystalline state | 10.1063/1.363352 | Q180 | uncertain_isolability_terminal_omission |
+| Assembly and Transport of Nanocrystal CdSe Quantum Dot Nanocomposites Using Microtubules and Kinesin Motor Proteins | 10.1021/nl049811h | Q180 | uncertain_isolability_terminal_omission |
+| Nanocrystalline titanium dioxide-dispersed semiconducting polymer photodetectors | 10.1063/1.124126 | Q180 | uncertain_isolability_terminal_omission |
+| Wavelength control from 1.25 to 1.4 μm in InxGa1−xAs quantum dot structures grown by metal organic chemical vapor deposition | 10.1063/1.1352698 | Q180 | uncertain_isolability_terminal_omission |
+| Nanocrystalline glass-coated FeNiMoB microwires | 10.1063/1.2969057 | Q180 | explicit_excluded_route_or_retained_product |
+| Nanocrystalline metal electrodes for high-efficiency organic solar cells | 10.1063/1.1784879 | Q180 | explicit_excluded_route_or_retained_product |
+| Metal-free Inorganic Ligands for Colloidal Nanocrystals: S&lt;sup&gt;2–&lt;/sup&gt;, HS&lt;sup&gt;–&lt;/sup&gt;, Se&lt;sup&gt;2–&lt;/sup&gt;, HSe&lt;sup&gt;–&lt;/sup&gt;, Te&lt;sup&gt;2–&lt;/sup&gt;, HTe&lt;sup&gt;–&lt;/sup&gt;, TeS&lt;sub&gt;3&lt;/sub&gt;&lt;sup&gt;2–&lt;/sup&gt;, OH&lt;sup&gt;–&lt;/sup&gt;, and NH&lt;sub&gt;2&lt;/sub&gt;&lt;sup&gt;–&lt;/sup&gt; as Surface Ligands | 10.1021/ja2029415 | Q180 | uncertain_isolability_terminal_omission |
+| Three-dimensional mapping of a deformation field inside a nanocrystal | 10.1038/nature04867 | Q180 | explicit_excluded_route_or_retained_product |
+| Infrared Spectroscopic Studies of Monothiol Ligand Adsorption on CdS Nanocrystal Films in Aqueous Solutions | 10.1021/la061999s | Q180 | uncertain_isolability_terminal_omission |
+| Novel Micro- and Mesoporous Composite Molecular Sieve Assembled by Zeolite L Nanocrystal and Its Performance for the Hydrodesulfurization (HDS) of Fluid Catalytic Cracking (FCC) Gasoline | 10.1021/ef901368w | Q180 | uncertain_isolability_terminal_omission |
+| Alkali halide nanocrystal growth and etching studied by AFM and modeled by MD simulations | 10.1063/1.1628223 | Q180 | uncertain_isolability_terminal_omission |
+| Nanocrystalline Ferrites Prepared by Mechanical Activation and Mechanosynthesis | 10.1002/zaac.200500020 | Q180 | explicit_excluded_route_or_retained_product |
+| Quantum Confinement by an Order-Disorder Boundary in Nanocrystalline Silicon | 10.1103/physrevlett.104.176803 | Q180 | uncertain_isolability_terminal_omission |
+| Adsorption and Thermal Reaction of DMMP in Nanocrystalline NaY | 10.1021/la061341e | Q180 | uncertain_isolability_terminal_omission |
+| Comparison of amorphous silicon photodiodes and photoconductors for detection of quantum dot biomolecular tags | 10.1063/1.3259389 | Q180 | uncertain_isolability_terminal_omission |
+| Tumor Targeting of Functionalized Quantum Dot−Liposome Hybrids by Intravenous Administration | 10.1021/mp800187d | Q180 | uncertain_isolability_terminal_omission |
+| Visible Colloidal Nanocrystal Silicon Light-Emitting Diode | 10.1021/nl1044583 | Q180 | uncertain_isolability_terminal_omission |
+| Electrical and defect thermodynamic properties of nanocrystalline titanium dioxide | 10.1063/1.369208 | Q180 | uncertain_isolability_terminal_omission |
+| Ionic conductivity of nanocrystalline yttria-stabilized zirconia: Grain boundary and size effects | 10.1103/physrevb.81.184301 | Q180 | uncertain_isolability_terminal_omission |
+| Modeling and fabrication of electrically tunable quantum dot intersubband devices | 10.1063/1.3138135 | Q180 | uncertain_isolability_terminal_omission |
+| Soft magnetic properties of as-deposited Fe–Hf–C–N and Fe–Hf–N nanocrystalline thin films | 10.1063/1.367526 | Q180 | uncertain_isolability_terminal_omission |
+| Peptide-mediated surface-immobilized quantum dot hybrid nanoassemblies with controlled photoluminescence | 10.1039/b615010a | Q180 | uncertain_isolability_terminal_omission |
+| Nuclear and excitonic spin polarization formed using cross-linearly polarized pulse pair via half-localized state in a single self-assembled quantum dot | 10.1063/1.2927448 | Q180 | uncertain_isolability_terminal_omission |
+| Resonant Raman scattering by acoustic phonons in self-assembled quantum-dot multilayers: From a few layers to superlattices | 10.1103/physrevb.66.195320 | Q180 | uncertain_isolability_terminal_omission |
+| Mechanical Behavior of Nanocrystalline NaCl Islands on Cu(111) | 10.1103/physrevlett.104.185502 | Q180 | uncertain_isolability_terminal_omission |
+| Synthesis of Nanocrystalline Alumina Using Egg White | 10.1111/j.1551-2916.2005.00382.x | Q180 | uncertain_isolability_terminal_omission |
+| Mechanical activation of precursors for nanocrystalline materials | 10.1002/crat.200310001 | Q180 | uncertain_isolability_terminal_omission |
+| Statistical Analysis of Surface Reconstruction Domains on InAs Wetting Layer Preceding Quantum Dot Formation | 10.1007/s11671-010-9754-3 | Q180 | uncertain_isolability_terminal_omission |
+| Effect of an additional infrared excitation on the luminescence efficiency of a single InAs/GaAs quantum dot | 10.1103/physrevb.68.155317 | Q180 | uncertain_isolability_terminal_omission |
+| Shear-induced mesostructure in nanoplatelet-polymer networks | 10.1063/1.1609972 | Q180 | uncertain_isolability_terminal_omission |
+| Vertical quantum dot with a vertically coupled charge detector | 10.1063/1.2830979 | Q180 | uncertain_isolability_terminal_omission |
+| Microstructural and optical properties of self-organized GaN quantum-dot assemblies | 10.1063/1.1853502 | Q180 | uncertain_isolability_terminal_omission |
+| Spectral diffusion of the exciton transition in a single self-organized quantum dot | 10.1063/1.126196 | Q180 | explicit_excluded_route_or_retained_product |
+| Ge-rich Si1−xGex nanocrystal formation by the oxidation of an as-deposited thin amorphous Si0.7Ge0.3 layer | 10.1116/1.1458955 | Q180 | explicit_excluded_route_or_retained_product |
+| Pauli Spin Blockade of Heavy Holes in a Silicon Double Quantum Dot | 10.1021/acs.nanolett.5b02561 | Q180 | uncertain_isolability_terminal_omission |
+| Synthesis of Ultrasmall and Magic-Sized CdSe Nanocrystals | 10.1021/cm303318f | Q180 | uncertain_isolability_terminal_omission |
+| TiC Nanocrystal Formation from Carburization of Laser-Grown Ti/O/C Nanopowders for Nanostructured Ceramics | 10.1021/jp054471p | Q180 | uncertain_isolability_terminal_omission |
+| Formation kinetics of nanocrystalline FeBSi alloy by crystallization of the metallic glass | 10.1063/1.355809 | Q180 | explicit_excluded_route_or_retained_product |
+| Defect and transport properties of nanocrystalline CeO2−&lt;i&gt;x&lt;/i&gt; | 10.1063/1.117366 | Q180 | uncertain_isolability_terminal_omission |
+| Thermal stability and grain growth behavior of mechanically alloyed nanocrystalline Fe-Cu alloys | 10.1063/1.353890 | Q180 | explicit_excluded_route_or_retained_product |
+| Thermal stability of the nanocrystalline Fe–Co–Hf–B–Cu alloy | 10.1063/1.369805 | Q180 | uncertain_isolability_terminal_omission |

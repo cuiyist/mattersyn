@@ -190,11 +190,34 @@ def _embedded_product_formula(pair):
     return None
 
 
+def _explicit_compound_list_composition(pair):
+    """Navigation for whole compounds in an explicit multi-material product."""
+    structure = pair.get('structure') or {}
+    architecture = str((structure.get('architecture') or {}).get('value') or '').strip().lower()
+    if architecture not in {'core/shell', 'core_shell', 'heterostructure', 'composite', 'phase_mixture'}:
+        return None
+    # A product label keeps the existing source/original-ordinal record identity.
+    if not str(pair.get('product') or '').strip():
+        return None
+    value = (structure.get('composition') or {}).get('value')
+    if not isinstance(value, str) or ',' not in value:
+        return None
+    parts = [part.strip() for part in value.split(',')]
+    compound = rf'(?:(?:{ELEMENT})(?![a-z])(?:\d+(?:\.\d+)?)?)+'
+    if (len(parts) < 2 or len(set(parts)) != len(parts) or
+            not all(re.fullmatch(compound, part) and len(elements_of(part)) > 1 for part in parts)):
+        return None
+    return '/'.join(parts)
+
+
 def _composition_from(pair):
     """Keep reported facts; classify an explicit named embedded product system."""
     embedded = _embedded_product_formula(pair)
     if embedded is not None:
         return embedded
+    compound_list = _explicit_compound_list_composition(pair)
+    if compound_list is not None:
+        return compound_list
     value = ((pair.get('structure') or {}).get('composition') or {}).get('value')
     if value is not None and str(value).strip():
         return formula_from(value)
@@ -212,6 +235,10 @@ def first_upper(text):
 
 
 def elements_of(formula):
+    # Exact named perovskite navigation alias; retain the reported formula.
+    # FA follows the existing atlas FAPbI3 formamidinium element alias.
+    if formula == 'FAPbBr3':
+        return ['C', 'H', 'N', 'Pb', 'Br']
     formula = re.sub(r'(?<![A-Za-z0-9])TiO2\(B\)(?![A-Za-z0-9])', 'TiO2', formula or '')
     letters = re.sub(r'[^A-Za-z]', ' ', formula or '')
     letters = re.sub(r'([A-Za-z])[xyz](?=[A-Z]|$)', r'\1', letters)  # variable coefficient after an element
