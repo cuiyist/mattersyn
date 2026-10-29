@@ -1,0 +1,284 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "beckham2010-la904031s-quantum-dot-coated-sio2-microparticles-q-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Richard E. Beckham; Michael A. Bevan (2010): quantum-dot-coated SiO2 microparticles (QDSs)",
+  "material": {
+    "formula": "CdSe/ZnS",
+    "family": "CdSe/ZnS nanocrystals",
+    "elements": [
+      "Cd",
+      "Se",
+      "Zn",
+      "S"
+    ],
+    "components": [
+      "CdSe",
+      "ZnS"
+    ],
+    "architecture": "core_shell"
+  },
+  "method": "Other",
+  "sources": [
+    {
+      "id": "beckham2010-la904031s",
+      "doi": "10.1021/la904031s",
+      "title": "Confocal Laser Imaging and Annealing of Quantum-Dot-Coated Silica Colloidal Crystals",
+      "authors": "Richard E. Beckham; Michael A. Bevan",
+      "year": 2010,
+      "url": "https://doi.org/10.1021/la904031s",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "beckham2010-la904031s",
+    "recipe_family": "beckham2010-la904031s-quantum-dot-coated-sio2-microparticles-q-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdSe/ZnS",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "beckham2010-la904031s",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "beckham2010-la904031s-quantum-dot-coated-sio2-microparticles-q-1--dihydrolipoic-acid-dhla",
+      "name": "dihydrolipoic acid (DHLA)",
+      "formula": null,
+      "role": "ligand",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "beckham2010-la904031s",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "beckham2010-la904031s-quantum-dot-coated-sio2-microparticles-q-1--after-s01-synthesize",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "beckham2010-la904031s-quantum-dot-coated-sio2-microparticles-q-1--after-s02-functionalize",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "beckham2010-la904031s-quantum-dot-coated-sio2-microparticles-q-1--after-s01-synthesize",
+        "beckham2010-la904031s-quantum-dot-coated-sio2-microparticles-q-1--dihydrolipoic-acid-dhla"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-synthesize",
+      "action": "synthesize",
+      "label": "Synthesis of TOPO-capped CdSe/ZnS core-shell particles",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "beckham2010-la904031s-quantum-dot-coated-sio2-microparticles-q-1--after-s01-synthesize"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Synthesis of TOPO-capped CdSe/ZnS core-shell particles",
+      "evidence": [
+        {
+          "source_id": "beckham2010-la904031s",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "s02-functionalize",
+      "action": "functionalize",
+      "label": "Functionalization of QDs with DHLA",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-synthesize"
+      ],
+      "inputs": [
+        "beckham2010-la904031s-quantum-dot-coated-sio2-microparticles-q-1--after-s01-synthesize",
+        "beckham2010-la904031s-quantum-dot-coated-sio2-microparticles-q-1--dihydrolipoic-acid-dhla"
+      ],
+      "outputs": [
+        "beckham2010-la904031s-quantum-dot-coated-sio2-microparticles-q-1--after-s02-functionalize"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 24,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "24 h",
+          "evidence": [
+            {
+              "source_id": "beckham2010-la904031s",
+              "locator": "Main PDF p.1"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Functionalization of QDs with DHLA",
+      "evidence": [
+        {
+          "source_id": "beckham2010-la904031s",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "beckham2010-la904031s-quantum-dot-coated-sio2-microparticles-q-1--product",
+      "source_sample_label": "quantum-dot-coated SiO2 microparticles (QDSs)",
+      "batch_id": null,
+      "material_state_id": "beckham2010-la904031s-quantum-dot-coated-sio2-microparticles-q-1--after-s02-functionalize",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdSe/ZnS",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "beckham2010-la904031s",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "beckham2010-la904031s",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of dihydrolipoic acid (DHLA) not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

@@ -25,6 +25,57 @@ The twelve-paper release used the existing twelve-hour exception measured from t
 
 The once-daily secondary cleanup report was appended through its ordinary report-only path. Its first attempt held on the section line-ending marker before transport; LF normalization preserved the text and unchanged guards, and the append then passed without a separate verification step or Site publication.
 
+### Source19 local preparation through Q177 — 2026-10-29T13:33:49.743608+00:00
+
+**Pending only: 37 new primary papers / 61 source_extracted records / 217 captioned crops. Zero new Live credit.** Normal record import, data generation, Reader/figure/step-asset binding, validated-caption binding and asset-rights registration are complete for these local inputs. All previous record bytes and limited Reader lineage are preserved. Final file lists, source preparation and commit, all thirteen Source checks, desktop/phone visual review, exact-head CI, ordinary merge, Site release, Pages and anonymous verification remain pending. The next release requires forty new papers, or all ready after 2026-10-29T17:28:13Z.
+
+| Cohort | Successful two-pass / checked pairs | Product IN | OUT for this job | Technical not assessed | Final selected papers / records / crops |
+|---|---:|---:|---:|---:|---:|
+| Q162 | 48 / 47 | 8 | 39 | 3 | 5 / 8 / 36 |
+| Q163 | 50 / 50 | 6 | 44 | 0 | 3 / 3 / 15 |
+| Q164 | 50 / 50 | 6 | 44 | 0 | 2 / 4 / 11 |
+| Q165 | 50 / 50 | 7 | 43 | 0 | 4 / 11 / 15 |
+| Q166 | 50 / 48 | 4 | 44 | 2 | 2 / 3 / 12 |
+| Q167 | 50 / 48 | 3 | 45 | 2 | 3 / 4 / 18 |
+| Q168 | 50 / 49 | 6 | 43 | 1 | 4 / 7 / 26 |
+| Q169 | 50 / 49 | 2 | 47 | 1 | 0 / 0 / 0 |
+| Q170 | 50 / 50 | 3 | 47 | 0 | 1 / 1 / 4 |
+| Q171 | 50 / 50 | 5 | 45 | 0 | 2 / 5 / 11 |
+| Q172 | 50 / 49 | 3 | 46 | 1 | 1 / 1 / 3 |
+| Q173 | 50 / 49 | 5 | 44 | 1 | 4 / 8 / 16 |
+| Q174 | 50 / 50 | 7 | 43 | 0 | 2 / 2 / 19 |
+| Q175 | 50 / 48 | 3 | 45 | 2 | 1 / 1 / 10 |
+| Q176 | 50 / 50 | 5 | 45 | 0 | 1 / 1 / 3 |
+| Q177 | 50 / 50 | 3 | 47 | 0 | 2 / 2 / 18 |
+
+These are dated fifty-row cohort counts, not new unique-paper or calibrated-accuracy denominators. Ordinary record eligibility can omit an IN product without changing its original scope decision. Q175 separately omits a secondary encyclopedia presentation; Q176 omits a prepared-specimen identity that the once-read source did not support. Its two proposed identity deletions were not applied: the paper was left out without a replacement or derived copy. Q177 retains the NaY paper after one whole ligand-fact deletion and a normal reference refresh. Common caption work is not an audit, and these limited rare deletion-only reads add no expert-review or training credit.
+
+NaY remains the reported FAU framework label. The current automatic navigation tokenizer produces Na/Y tags; those tags do not establish a binary Na-Y composition or measured stoichiometry. No matching direct/default reference cell or Na-Y CIF was found in the normal staged and working-build bindings. This metadata/code check made no composition replacement and did not reread a source.
+
+The title-based Q162–Q177 job-omission list is now retained only in MACHINE_EXTRACTED_PAPERS.md. Historical OUT decisions, technical failures, automatic refusals, once-read evidence, paused audit questions and denominators remain preserved. The dated daily census above is unchanged; later saved-uncertain rereads do not automatically add physical read rows. Q178 is reading on the existing local two-worker Qwen server, with Q179 prepared ahead. No queue exhaustion or job completion is claimed.
+
+### Source19 local update through Q178 — 2026-10-29T14:00:32.050079+00:00
+
+Pending local inputs now total **39 new papers / 65 source_extracted records / 231 captioned crops**, with normal import, asset/caption binding, rights registration and quote-free exports prepared. This is zero new Live credit; the forty-paper or elapsed-twelve-hour release rule and every remaining release check still apply.
+
+Q178 completed fifty successful two-pass results and fifty checked pair files, final CHECK zero: **4 IN / 46 OUT for this job / 0 technical not assessed**. Normal eligibility retains two papers / four records / fourteen crops; the remaining IN variants have no synthesis operation and were not repaired. ZnSe originals 1–3 remain unchanged. The full Au/CQD composite had zero published full-identity routes; pure-Au counts were not substituted for common-material credit. Its one rare read closed in 88.088075 seconds; one reactor fact from a separate pure-Au control procedure was deleted to a private derived copy, without replacing the vessel or changing composite/carbon identity. One ordinary reference refresh passed; only the ten new composite captions were validated, with four common captions reused. These actions add no expert-audit or training credit.
+
+Q179 is reading on the same two-worker Qwen server, with Q180 prepared ahead. The dated daily census and all failure/refusal/audit histories remain unchanged.
+
+### Q179 completed; Source19 remains pending at 39 papers — 2026-10-29T14:37:25.216485+00:00
+
+Q179 returned fifty successful two-pass results / forty-seven checked pairs, final CHECK zero: **4 IN / 43 OUT for this job / 3 technical missing-pair entries**. Its original normal reference retained two papers / two records / sixteen crops before later omissions. Saved caption provenance identifies seven of twelve silicalite figures as adapted/reproduced from other references; that presentation was omitted under the primary-source rule without a PDF reread or invented registration subtype. The iron-oxide paper received its single permitted deletion-only read, closing in 95.447970 seconds. The definite composition and core-shell architecture concerned background/different referenced work and were deleted to a private derived copy; product and recipe values were unchanged. One normal reference refresh produced no eligible fallback record. No unsupported fact was restored to reach forty; no captions were validated for omitted entries. Final Q179 primary selection is zero.
+
+The prepared Source19 batch stays at **39 primary papers / 65 source_extracted records / 231 captioned crops**, with zero new Live credit. Q180 is reading on the same local two-worker server and Q181 is prepared ahead. Root continues toward forty new papers, or all ready after the existing twelve-hour boundary at 17:28:13Z. Completed work and all ordinary release checks are preserved; no duplicate build/controller or extra source read is introduced. The dated daily census, original IN decisions, technical failures, automatic refusals, audit questions and denominators remain unchanged.
+
+### particles43 release freeze — 2026-10-29T15:01:43.830081+00:00
+
+**43 new primary papers / 69 source_extracted records / 263 captioned crops are prepared locally; zero new Live credit.** This satisfies the forty-new-paper release threshold. The unchanged local two-worker model is reading the next cohort while Root proceeds with final file lists, normal Source preparation/commit, all thirteen Source checks, three new desktop/phone page reviews, exact-head CI, ordinary merge and the complete Site/Pages/anonymous release path. The canonical batch archive is quote-free; reviewed records and audited-only training exports remain protected.
+
+Q180 completed fifty successful two-pass results and fifty checked pairs, final CHECK zero: **8 IN / 42 OUT for this job / 0 technical not assessed**, thirteen selected original variants. The normal reference found seven papers / ten records / forty-five crops. The Pd-shape paper has no normal records. Four common papers—CQD, CoPt3, CeO2 and CdS-ZnS—supply the current four-paper / four-record / thirty-two-crop delta, with captions validated once and no extra source audit. Full identities were used for common-material credit, including the CdS-ZnS core/shell combination; pure-component counts were not substituted. Three rare papers / six variants remain private next-batch work and do not delay this release. Their unsupported fields, if any, will not be repaired to increase counts.
+
+The Q162–Q180 omission list now retains 842 existing OUT cohort rows as saved titles in MACHINE_EXTRACTED_PAPERS.md only. Original product-IN decisions, secondary-provenance omissions and ordinary technical failures remain separate. The dated daily census above is unchanged, and no semantic unique-paper count or accuracy/publication rate is inferred from these cohort rows. Historical failures, refusals, source-read limits, audit questions, sampling denominators and the five paused owner entries are preserved. No new independent audit/training or Live credit is claimed.
+
 ### Retained verified publication and history
 
 ## particles12 verified Live — 2026-10-29T05:28:13+00:00
