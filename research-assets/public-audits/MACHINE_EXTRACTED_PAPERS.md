@@ -1,3 +1,24 @@
+## particles12 pending normal release — 2026-10-29
+
+Twelve particle papers / 17 selected original-ordinal source_extracted records / 57 paraphrased figure crops are prepared locally. All normal release and anonymous verification gates remain required; no new Live credit is assigned. Common papers received no extra audit. The four rare reads were single deletion-only reads, with unsupported whole objects deleted and original data retained; they are not independent expert audits. The existing live title-based outside-scope list and paused audit denominators are unchanged.
+
+| DOI | Source id | Record ids | Batch | Status | Live verified | Credit | Rare-material read |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 10.1021/la960426k | vogel1997-la960426k | vogel1997-la960426k-cds-nanoparticles-1 | particles12-20261029 | pending normal Source/Site release; source_extracted/unreviewed | Not Live | 0 | not claimed; caption work is not a source audit |
+| 10.1002/(sici)1521-4095(199908)11:11<923::aid-adma923>3.0.co;2-t | huynh1999-sici-1521-4095-199908-11-11-92 | huynh1999-sici-1521-4095-199908-11-11-92-8-13-nm-cdse-nanocrystal-rods-p3ht-compo-1 | particles12-20261029 | pending normal Source/Site release; source_extracted/unreviewed | Not Live | 0 | not claimed; caption work is not a source audit |
+| 10.1557/jmr.1999.0015 | ramamoorthy1999-jmr-1999-0015 | ramamoorthy1999-jmr-1999-0015-nanocrystalline-pure-zro2-1, ramamoorthy1999-jmr-1999-0015-3-mol-y2o3zro2-3ysz-2, ramamoorthy1999-jmr-1999-0015-3-mol-caozro2-3csz-3 | particles12-20261029 | pending normal Source/Site release; source_extracted/unreviewed | Not Live | 0 | yes: one limited deletion-only rare read |
+| 10.1021/jp982397n | wong1998-jp982397n | wong1998-jp982397n-zno-nanocrystalline-particles-aged-at-35-1 | particles12-20261029 | pending normal Source/Site release; source_extracted/unreviewed | Not Live | 0 | not claimed; caption work is not a source audit |
+| 10.1007/s12034-008-0093-2 | yin2008-s12034-008-0093-2 | yin2008-s12034-008-0093-2-co9s8-nanocrystalline-sample-1-1 | particles12-20261029 | pending normal Source/Site release; source_extracted/unreviewed | Not Live | 0 | yes: one limited deletion-only rare read |
+| 10.1006/jssc.1998.7890 | knauth1998-jssc-1998-7890 | knauth1998-jssc-1998-7890-cu0-15ce0-85o2-x-1 | particles12-20261029 | pending normal Source/Site release; source_extracted/unreviewed | Not Live | 0 | yes: one limited deletion-only rare read |
+| 10.1007/bf01568084 | goldstein1996-bf01568084 | goldstein1996-bf01568084-silicon-nanocrystals-1 | particles12-20261029 | pending normal Source/Site release; source_extracted/unreviewed | Not Live | 0 | not claimed; caption work is not a source audit |
+| 10.1021/jp980864v | wang1998-jp980864v | wang1998-jp980864v-ag-nanocrystal-superlattices-1 | particles12-20261029 | pending normal Source/Site release; source_extracted/unreviewed | Not Live | 0 | not claimed; caption work is not a source audit |
+| 10.1039/b915240g | yeo2010-b915240g | yeo2010-b915240g-fe3o4-au-sio2-1, yeo2010-b915240g-au-h-sio2-2 | particles12-20261029 | pending normal Source/Site release; source_extracted/unreviewed | Not Live | 0 | yes: one limited deletion-only rare read |
+| 10.1021/jp961764x | harfenist1996-jp961764x | harfenist1996-jp961764x-ag-nanocrystal-arrays-1 | particles12-20261029 | pending normal Source/Site release; source_extracted/unreviewed | Not Live | 0 | not claimed; caption work is not a source audit |
+| 10.1557/mrs2005.8 | milliron2005-mrs2005-8 | milliron2005-mrs2005-8-cdse-nanospheres-1, milliron2005-mrs2005-8-cdse-nanorods-2, milliron2005-mrs2005-8-cdse-branched-nanocrystals-3 | particles12-20261029 | pending normal Source/Site release; source_extracted/unreviewed | Not Live | 0 | not claimed; caption work is not a source audit |
+| 10.1007/bf02869206 | kalyanasundaram1997-bf02869206 | kalyanasundaram1997-bf02869206-nanocrystalline-tio2-layer-1 | particles12-20261029 | pending normal Source/Site release; source_extracted/unreviewed | Not Live | 0 | not claimed; caption work is not a source audit |
+
+### Retained prior index (historical)
+
 ## particles41 verified Live — 2026-10-28T04:13:20+00:00
 
 The 41 saved papers below contribute 57 selected original-ordinal source-extracted records and 179 captioned figures locally. Their Source and Site release is pending; no Live credit is assigned. Limited rare reads are deletion-only single-reader passes, not independent accuracy audits. Caption paraphrasing does not establish a rare-material recipe read.

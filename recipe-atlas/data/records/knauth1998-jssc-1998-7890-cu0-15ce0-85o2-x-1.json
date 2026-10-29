@@ -1,0 +1,275 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "knauth1998-jssc-1998-7890-cu0-15ce0-85o2-x-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "P. Knauth; G. Schwitzgebel; A. Tschöpe; S. Villain (1998): Cu0.15Ce0.85O2-x",
+  "material": {
+    "formula": "Cu0.15Ce0.85O2-x",
+    "family": "Cu0.15Ce0.85O2-x nanocrystals",
+    "elements": [
+      "Cu",
+      "Ce",
+      "O"
+    ],
+    "components": [
+      "Cu0.15Ce0.85O2-x"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Inert gas condensation",
+  "sources": [
+    {
+      "id": "knauth1998-jssc-1998-7890",
+      "doi": "10.1006/jssc.1998.7890",
+      "title": "Emf Measurements on Nanocrystalline Copper-Doped Ceria",
+      "authors": "P. Knauth; G. Schwitzgebel; A. Tschöpe; S. Villain",
+      "year": 1998,
+      "url": "https://doi.org/10.1006/jssc.1998.7890",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "knauth1998-jssc-1998-7890",
+    "recipe_family": "knauth1998-jssc-1998-7890-cu0-15ce0-85o2-x-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Cu0.15Ce0.85O2-x",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "knauth1998-jssc-1998-7890",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "knauth1998-jssc-1998-7890-cu0-15ce0-85o2-x-1--cu15ce85-target",
+      "name": "Cu15Ce85 target",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "knauth1998-jssc-1998-7890",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "knauth1998-jssc-1998-7890-cu0-15ce0-85o2-x-1--after-s01-sputter",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "knauth1998-jssc-1998-7890-cu0-15ce0-85o2-x-1--cu15ce85-target"
+      ]
+    },
+    {
+      "id": "knauth1998-jssc-1998-7890-cu0-15ce0-85o2-x-1--after-s02-oxidize",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "knauth1998-jssc-1998-7890-cu0-15ce0-85o2-x-1--after-s01-sputter"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-sputter",
+      "action": "sputter",
+      "label": "Sputter mixed metal target",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "knauth1998-jssc-1998-7890-cu0-15ce0-85o2-x-1--cu15ce85-target"
+      ],
+      "outputs": [
+        "knauth1998-jssc-1998-7890-cu0-15ce0-85o2-x-1--after-s01-sputter"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "argon",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "knauth1998-jssc-1998-7890",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Sputter mixed metal target",
+      "evidence": [
+        {
+          "source_id": "knauth1998-jssc-1998-7890",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-oxidize",
+      "action": "oxidize",
+      "label": "Oxidize metallic nanoclusters",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-sputter"
+      ],
+      "inputs": [
+        "knauth1998-jssc-1998-7890-cu0-15ce0-85o2-x-1--after-s01-sputter"
+      ],
+      "outputs": [
+        "knauth1998-jssc-1998-7890-cu0-15ce0-85o2-x-1--after-s02-oxidize"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "argon",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "knauth1998-jssc-1998-7890",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Oxidize metallic nanoclusters",
+      "evidence": [
+        {
+          "source_id": "knauth1998-jssc-1998-7890",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "knauth1998-jssc-1998-7890-cu0-15ce0-85o2-x-1--product",
+      "source_sample_label": "Cu0.15Ce0.85O2-x",
+      "batch_id": null,
+      "material_state_id": "knauth1998-jssc-1998-7890-cu0-15ce0-85o2-x-1--after-s02-oxidize",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Cu0.15Ce0.85O2-x",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "knauth1998-jssc-1998-7890",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "knauth1998-jssc-1998-7890",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reactor: magnetron sputtering system (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of Cu15Ce85 target not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

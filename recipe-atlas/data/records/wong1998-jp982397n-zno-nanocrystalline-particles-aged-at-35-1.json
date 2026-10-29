@@ -1,0 +1,443 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "wong1998-jp982397n-zno-nanocrystalline-particles-aged-at-35-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Eva M. Wong; John E. Bonevich; Peter C. Searson (1998): ZnO nanocrystalline particles aged at 35 °C for 2 h",
+  "material": {
+    "formula": "ZnO",
+    "family": "ZnO nanocrystals",
+    "elements": [
+      "Zn",
+      "O"
+    ],
+    "components": [
+      "ZnO"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Synthesis as described in the source",
+  "sources": [
+    {
+      "id": "wong1998-jp982397n",
+      "doi": "10.1021/jp982397n",
+      "title": "Growth Kinetics of Nanocrystalline ZnO Particles from Colloidal Suspensions",
+      "authors": "Eva M. Wong; John E. Bonevich; Peter C. Searson",
+      "year": 1998,
+      "url": "https://doi.org/10.1021/jp982397n",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "wong1998-jp982397n",
+    "recipe_family": "wong1998-jp982397n-zno-nanocrystalline-particles-aged-at-35-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "ZnO",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "wong1998-jp982397n",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "zincite",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "wong1998-jp982397n",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": 3.8,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "3.8 nm",
+      "evidence": [
+        {
+          "source_id": "wong1998-jp982397n",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "wong1998-jp982397n-zno-nanocrystalline-particles-aged-at-35-1--naoh",
+      "name": "NaOH",
+      "formula": null,
+      "role": "nonmetal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "wong1998-jp982397n",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "wong1998-jp982397n-zno-nanocrystalline-particles-aged-at-35-1--after-s01-chill",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "wong1998-jp982397n-zno-nanocrystalline-particles-aged-at-35-1--after-s02-add",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "wong1998-jp982397n-zno-nanocrystalline-particles-aged-at-35-1--after-s01-chill",
+        "wong1998-jp982397n-zno-nanocrystalline-particles-aged-at-35-1--naoh"
+      ]
+    },
+    {
+      "id": "wong1998-jp982397n-zno-nanocrystalline-particles-aged-at-35-1--after-s03-heat",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "wong1998-jp982397n-zno-nanocrystalline-particles-aged-at-35-1--after-s02-add"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-chill",
+      "action": "chill",
+      "label": "Chill solution to 0 °C",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "wong1998-jp982397n-zno-nanocrystalline-particles-aged-at-35-1--after-s01-chill"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0 °C",
+          "evidence": [
+            {
+              "source_id": "wong1998-jp982397n",
+              "locator": "Main PDF p.1"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "wong1998-jp982397n",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Chill solution to 0 °C",
+      "evidence": [
+        {
+          "source_id": "wong1998-jp982397n",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "s02-add",
+      "action": "add",
+      "label": "Add NaOH solution",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-chill"
+      ],
+      "inputs": [
+        "wong1998-jp982397n-zno-nanocrystalline-particles-aged-at-35-1--after-s01-chill",
+        "wong1998-jp982397n-zno-nanocrystalline-particles-aged-at-35-1--naoh"
+      ],
+      "outputs": [
+        "wong1998-jp982397n-zno-nanocrystalline-particles-aged-at-35-1--after-s02-add"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0 °C",
+          "evidence": [
+            {
+              "source_id": "wong1998-jp982397n",
+              "locator": "Main PDF p.1"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1 min",
+          "evidence": [
+            {
+              "source_id": "wong1998-jp982397n",
+              "locator": "Main PDF p.1"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "wong1998-jp982397n",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Add NaOH solution",
+      "evidence": [
+        {
+          "source_id": "wong1998-jp982397n",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "s03-heat",
+      "action": "heat",
+      "label": "Heat in water bath",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-add"
+      ],
+      "inputs": [
+        "wong1998-jp982397n-zno-nanocrystalline-particles-aged-at-35-1--after-s02-add"
+      ],
+      "outputs": [
+        "wong1998-jp982397n-zno-nanocrystalline-particles-aged-at-35-1--after-s03-heat"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 2,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "2 h",
+          "evidence": [
+            {
+              "source_id": "wong1998-jp982397n",
+              "locator": "Main PDF p.1"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "wong1998-jp982397n",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Heat in water bath",
+      "evidence": [
+        {
+          "source_id": "wong1998-jp982397n",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "wong1998-jp982397n-zno-nanocrystalline-particles-aged-at-35-1--product",
+      "source_sample_label": "ZnO nanocrystalline particles aged at 35 °C for 2 h",
+      "batch_id": null,
+      "material_state_id": "wong1998-jp982397n-zno-nanocrystalline-particles-aged-at-35-1--after-s03-heat",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "ZnO",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "wong1998-jp982397n",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "zincite",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "wong1998-jp982397n",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "wong1998-jp982397n",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [
+    {
+      "id": "wong1998-jp982397n-zno-nanocrystalline-particles-aged-at-35-1--size",
+      "sample_id": "wong1998-jp982397n-zno-nanocrystalline-particles-aged-at-35-1--product",
+      "property": "diameter",
+      "technique": "TEM",
+      "value": {
+        "value": 3.8,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "3.8 nm",
+        "evidence": [
+          {
+            "source_id": "wong1998-jp982397n",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "wong1998-jp982397n",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of NaOH not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
