@@ -1,0 +1,465 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "kumar2024-acsnano-3c10792-histidine-cqds-2",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Vijay Bhooshan Kumar; Simcha K. Mirsky; Natan T. Shaked; Ehud Gazit (2024): histidine-CQDs",
+  "material": {
+    "formula": "C, N, O",
+    "family": "C, N, O nanocrystals",
+    "elements": [
+      "C",
+      "N",
+      "O"
+    ],
+    "components": [
+      "C, N, O"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Hydrothermal",
+  "sources": [
+    {
+      "id": "kumar2024-acsnano-3c10792",
+      "doi": "10.1021/acsnano.3c10792",
+      "title": "High Quantum Yield Amino Acid Carbon Quantum Dots with Unparalleled Refractive Index",
+      "authors": "Vijay Bhooshan Kumar; Simcha K. Mirsky; Natan T. Shaked; Ehud Gazit",
+      "year": 2024,
+      "url": "https://doi.org/10.1021/acsnano.3c10792",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "kumar2024-acsnano-3c10792",
+    "recipe_family": "kumar2024-acsnano-3c10792-histidine-cqds-2",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "C, N, O",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "kumar2024-acsnano-3c10792",
+          "locator": "Main PDF p.6"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "graphitic",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "kumar2024-acsnano-3c10792",
+          "locator": "Main PDF p.5"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": 4.0,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "4 nm",
+      "evidence": [
+        {
+          "source_id": "kumar2024-acsnano-3c10792",
+          "locator": "Main PDF p.5"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "kumar2024-acsnano-3c10792-histidine-cqds-2--histidine",
+      "name": "histidine",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "mass": {
+          "value": 100,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mg",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "100 mg",
+          "evidence": [
+            {
+              "source_id": "kumar2024-acsnano-3c10792",
+              "locator": "Main PDF p.11"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "kumar2024-acsnano-3c10792",
+          "locator": "Main PDF p.11"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "kumar2024-acsnano-3c10792-histidine-cqds-2--after-s01-dissolve",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "kumar2024-acsnano-3c10792-histidine-cqds-2--histidine"
+      ]
+    },
+    {
+      "id": "kumar2024-acsnano-3c10792-histidine-cqds-2--after-s02-heat",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "kumar2024-acsnano-3c10792-histidine-cqds-2--after-s01-dissolve",
+        "kumar2024-acsnano-3c10792-histidine-cqds-2--histidine"
+      ]
+    },
+    {
+      "id": "kumar2024-acsnano-3c10792-histidine-cqds-2--after-s03-filter",
+      "name": "mixture after step 3",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "kumar2024-acsnano-3c10792-histidine-cqds-2--after-s02-heat"
+      ]
+    },
+    {
+      "id": "kumar2024-acsnano-3c10792-histidine-cqds-2--after-s04-dialyze",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "kumar2024-acsnano-3c10792-histidine-cqds-2--after-s03-filter"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-dissolve",
+      "action": "dissolve",
+      "label": "Dissolve histidine in deionized water",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "kumar2024-acsnano-3c10792-histidine-cqds-2--histidine"
+      ],
+      "outputs": [
+        "kumar2024-acsnano-3c10792-histidine-cqds-2--after-s01-dissolve"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Dissolve histidine in deionized water",
+      "evidence": [
+        {
+          "source_id": "kumar2024-acsnano-3c10792",
+          "locator": "Main PDF p.11"
+        }
+      ]
+    },
+    {
+      "id": "s02-heat",
+      "action": "heat",
+      "label": "Heat in Teflon-lined autoclave",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-dissolve"
+      ],
+      "inputs": [
+        "kumar2024-acsnano-3c10792-histidine-cqds-2--after-s01-dissolve",
+        "kumar2024-acsnano-3c10792-histidine-cqds-2--histidine"
+      ],
+      "outputs": [
+        "kumar2024-acsnano-3c10792-histidine-cqds-2--after-s02-heat"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 200,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "200 °C",
+          "evidence": [
+            {
+              "source_id": "kumar2024-acsnano-3c10792",
+              "locator": "Main PDF p.11"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 6,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "6 h",
+          "evidence": [
+            {
+              "source_id": "kumar2024-acsnano-3c10792",
+              "locator": "Main PDF p.11"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Heat in Teflon-lined autoclave",
+      "evidence": [
+        {
+          "source_id": "kumar2024-acsnano-3c10792",
+          "locator": "Main PDF p.11"
+        }
+      ]
+    },
+    {
+      "id": "s03-filter",
+      "action": "filter",
+      "label": "Remove carbide slag using Millipore filtration",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-heat"
+      ],
+      "inputs": [
+        "kumar2024-acsnano-3c10792-histidine-cqds-2--after-s02-heat"
+      ],
+      "outputs": [
+        "kumar2024-acsnano-3c10792-histidine-cqds-2--after-s03-filter"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Remove carbide slag using Millipore filtration",
+      "evidence": [
+        {
+          "source_id": "kumar2024-acsnano-3c10792",
+          "locator": "Main PDF p.11"
+        }
+      ]
+    },
+    {
+      "id": "s04-dialyze",
+      "action": "dialyze",
+      "label": "Remove unreacted amino acids using dialysis",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s03-filter"
+      ],
+      "inputs": [
+        "kumar2024-acsnano-3c10792-histidine-cqds-2--after-s03-filter"
+      ],
+      "outputs": [
+        "kumar2024-acsnano-3c10792-histidine-cqds-2--after-s04-dialyze"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Remove unreacted amino acids using dialysis",
+      "evidence": [
+        {
+          "source_id": "kumar2024-acsnano-3c10792",
+          "locator": "Main PDF p.11"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "kumar2024-acsnano-3c10792-histidine-cqds-2--product",
+      "source_sample_label": "histidine-CQDs",
+      "batch_id": null,
+      "material_state_id": "kumar2024-acsnano-3c10792-histidine-cqds-2--after-s04-dialyze",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "C, N, O",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "kumar2024-acsnano-3c10792",
+            "locator": "Main PDF p.6"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "graphitic",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "kumar2024-acsnano-3c10792",
+            "locator": "Main PDF p.5"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": "amino acid functional groups",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "kumar2024-acsnano-3c10792",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "kumar2024-acsnano-3c10792",
+          "locator": "Main PDF p.11"
+        }
+      ],
+      "notes": [
+        "Reactor: 50 mL Teflon-lined autoclave (Main PDF p.11).",
+        "Reaction temperature: 200 degC (Main PDF p.11).",
+        "Reaction time: 6 h (Main PDF p.11)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "kumar2024-acsnano-3c10792-histidine-cqds-2--size",
+      "sample_id": "kumar2024-acsnano-3c10792-histidine-cqds-2--product",
+      "property": "diameter",
+      "technique": "TEM",
+      "value": {
+        "value": 4.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "4 nm",
+        "evidence": [
+          {
+            "source_id": "kumar2024-acsnano-3c10792",
+            "locator": "Main PDF p.5"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "kumar2024-acsnano-3c10792",
+          "locator": "Main PDF p.5"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Shape not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
