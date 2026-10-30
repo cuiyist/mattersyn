@@ -4390,3 +4390,24 @@ This one already selected omission concerns uncertain free-particle formation fr
 | DOI | Cohort | Saved title | Original variants | Operational reason |
 |---|---|---|---|---|
 | 10.1002/adma.200602333 | Q192 | Morphology‐Enhanced Low‐Temperature Sintering of Nanocrystalline Hydroxyapatite | 1 | The saved route contains only HA-powder drying, milling and calcination, with a mold named as reactor. It does not establish free-particle formation before the sintering study. Omit this job for uncertain in-scope particle formation; preserve the nanorod product and wet-precipitation labels without repairs or a definitive bulk-product finding. |
+
+
+## Source22 verified particle batch — 2026-10-30T20:57:42+00:00
+
+13 primary papers / 16 selected original-ordinal source_extracted/unreviewed records / 82 captioned crops verified at 2026-10-30T20:57:42+00:00 on Site 3c9902d60302710dd6666192e9385d9bfd1343af. All earlier index bytes and report history are preserved; no new scientific audit or training credit.
+
+| DOI | Source ID | Record IDs | Batch | Status | Live verification | Training |
+|---|---|---|---|---|---|---|
+| 10.1021/acs.langmuir.1c01773 | guo2021-acs-langmuir-1c01773 | guo2021-acs-langmuir-1c01773-ch3nh3pbbr3-qds-1 | particles13-20261030-r1 | Live; source_extracted/unreviewed | 2026-10-30T20:57:42+00:00; Site 3c9902d60302710dd6666192e9385d9bfd1343af | 0 |
+| 10.1021/jacs.7b04551 | kroupa2017-jacs-7b04551 | kroupa2017-jacs-7b04551-ag-pbse-qds-1 | particles13-20261030-r1 | Live; source_extracted/unreviewed | 2026-10-30T20:57:42+00:00; Site 3c9902d60302710dd6666192e9385d9bfd1343af | 0 |
+| 10.1021/acsenergylett.7b01257 | veldhuis2018-acsenergylett-7b01257 | veldhuis2018-acsenergylett-7b01257-cspbbr3-qds-1 | particles13-20261030-r1 | Live; source_extracted/unreviewed | 2026-10-30T20:57:42+00:00; Site 3c9902d60302710dd6666192e9385d9bfd1343af | 0 |
+| 10.1021/acs.jpclett.8b02408 | park2018-acs-jpclett-8b02408 | park2018-acs-jpclett-8b02408-sno2-qd-1 | particles13-20261030-r1 | Live; source_extracted/unreviewed | 2026-10-30T20:57:42+00:00; Site 3c9902d60302710dd6666192e9385d9bfd1343af | 0 |
+| 10.1021/acsanm.2c05452 | ali2023-acsanm-2c05452 | ali2023-acsanm-2c05452-mq-1-1, ali2023-acsanm-2c05452-mq-2-2, ali2023-acsanm-2c05452-mq-3-3 | particles13-20261030-r1 | Live; source_extracted/unreviewed | 2026-10-30T20:57:42+00:00; Site 3c9902d60302710dd6666192e9385d9bfd1343af | 0 |
+| 10.1021/am100996g | zhang2010-am100996g | zhang2010-am100996g-cdse-zns-qds-capped-with-dtc-lys-1 | particles13-20261030-r1 | Live; source_extracted/unreviewed | 2026-10-30T20:57:42+00:00; Site 3c9902d60302710dd6666192e9385d9bfd1343af | 0 |
+| 10.1021/jp027160c | donega2003-jp027160c | donega2003-jp027160c-cdse-nanocrystals-1-5-cd-se-ratio-240-c-1 | particles13-20261030-r1 | Live; source_extracted/unreviewed | 2026-10-30T20:57:42+00:00; Site 3c9902d60302710dd6666192e9385d9bfd1343af | 0 |
+| 10.1021/acs.nanolett.5c00980 | smith2025-acs-nanolett-5c00980 | smith2025-acs-nanolett-5c00980-cdxzn1x-3p2-qds-2 | particles13-20261030-r1 | Live; source_extracted/unreviewed | 2026-10-30T20:57:42+00:00; Site 3c9902d60302710dd6666192e9385d9bfd1343af | 0 |
+| 10.1021/acs.langmuir.0c02886 | adsetts2020-acs-langmuir-0c02886 | adsetts2020-acs-langmuir-0c02886-cqd-sample-1-1 | particles13-20261030-r1 | Live; source_extracted/unreviewed | 2026-10-30T20:57:42+00:00; Site 3c9902d60302710dd6666192e9385d9bfd1343af | 0 |
+| 10.1021/ic300473u | wang2012-ic300473u | wang2012-ic300473u-gsh-capped-cdte-zn2-qds-sample-2-1 | particles13-20261030-r1 | Live; source_extracted/unreviewed | 2026-10-30T20:57:42+00:00; Site 3c9902d60302710dd6666192e9385d9bfd1343af | 0 |
+| 10.1021/acssuschemeng.0c06260 | markovic2020-acssuschemeng-0c06260 | markovic2020-acssuschemeng-0c06260-f-doped-carbon-quantum-dots-fcqds-1, markovic2020-acssuschemeng-0c06260-cl-doped-carbon-quantum-dots-clcqds-2 | particles13-20261030-r1 | Live; source_extracted/unreviewed | 2026-10-30T20:57:42+00:00; Site 3c9902d60302710dd6666192e9385d9bfd1343af | 0 |
+| 10.1021/acs.jpcc.4c07930 | zhou2025-acs-jpcc-4c07930 | zhou2025-acs-jpcc-4c07930-cugas2-qds-synthesized-at-220-c-1 | particles13-20261030-r1 | Live; source_extracted/unreviewed | 2026-10-30T20:57:42+00:00; Site 3c9902d60302710dd6666192e9385d9bfd1343af | 0 |
+| 10.1039/b915622d | ge2010-b915622d | ge2010-b915622d-tga-capped-cdte-qds-1 | particles13-20261030-r1 | Live; source_extracted/unreviewed | 2026-10-30T20:57:42+00:00; Site 3c9902d60302710dd6666192e9385d9bfd1343af | 0 |
