@@ -28,6 +28,21 @@ SIZE_PROPERTY = {'tem': ('diameter', 'TEM'), 'hrtem': ('diameter', 'HRTEM'), 'st
 ELEMENT = r'A[cglmrstu]|B[aehikr]?|C[adeflmorsu]?|D[sy]|E[rsu]|F[emr]?|G[ade]|H[efgos]?|I[nr]?|Kr?|L[airu]|M[gnot]|N[abdeiop]?|Os?|P[abdmortu]?|R[abehnu]|S[bcegimnr]?|T[abcehilm]|U|V|W|Xe|Yb?|Z[nr]'
 
 
+def microscopy_grid_preparation(step, product):
+    """Recognize explicit placement of existing clusters, without demoting growth."""
+    if (step.get('action') or '').lower() != 'deposit':
+        return False
+    product = str(product or '').casefold()
+    if not re.search(r'\b(?:preformed|passivated)\b', product) or not re.search(r'\b(?:nano)?clusters\b', product):
+        return False
+    description = ' '.join(str(step.get('description') or '').casefold().split())
+    # The complete statement must describe placing existing clusters on a grid.
+    # A precursor, growth or reaction clause must retain the ordinary synthesis path.
+    return re.fullmatch(r'(?:deposit(?:ed)?\s+)?(?:the\s+)?(?:preformed|passivated)\s+'
+                        r'(?:(?:gold|metal|au)\s+)?(?:nano)?clusters\s+(?:on|onto)\s+'
+                        r'(?:(?:a|the)\s+)?copper\s+(?:(?:tem|microscopy)\s+)?grid\.?', description) is not None
+
+
 def public_figure_caption(figure):
     """An explicit public paraphrase only; raw captions and quotes stay local."""
     caption = figure.get('public_caption')
@@ -379,7 +394,7 @@ class Builder:
             state = {'id': f'{rid}--after-{oid}', 'name': 'product as isolated' if last else f'mixture after step {n}', 'kind': 'product' if last else 'reaction_batch',
                      'parent_ids': [x for x in [previous_state] if x] + [by_name[u.lower()] for u in s.get('uses') or [] if u.lower() in by_name]}
             states.append(state)
-            workup = (s.get('action') or '').lower() in WORKUP
+            workup = (s.get('action') or '').lower() in WORKUP or microscopy_grid_preparation(s, pair.get('product'))
             parameters = {}
             if s.get('temperature') is not None and temperature_unit_compatible(s.get('temperature_unit')): parameters['temperature'] = self.quantity(s['temperature'], temperature_unit_name(s.get('temperature_unit'), s['temperature']) or '°C', s.get('page'))
             if s.get('time') is not None: parameters['duration'] = self.quantity(s['time'], s.get('time_unit') or 'min', s.get('page'))
