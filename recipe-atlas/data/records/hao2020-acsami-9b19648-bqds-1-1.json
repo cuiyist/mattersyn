@@ -1,0 +1,458 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "hao2020-acsami-9b19648-bqds-1-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Jinqian Hao; Guoan Tai; Jianxin Zhou; Rui Wang; Chuang Hou; Wanlin Guo (2020): BQDs-1",
+  "material": {
+    "formula": "B",
+    "family": "B nanocrystals",
+    "elements": [
+      "B"
+    ],
+    "components": [
+      "B"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Synthesis as described in the source",
+  "sources": [
+    {
+      "id": "hao2020-acsami-9b19648",
+      "doi": "10.1021/acsami.9b19648",
+      "title": "Crystalline Semiconductor Boron Quantum Dots",
+      "authors": "Jinqian Hao; Guoan Tai; Jianxin Zhou; Rui Wang; Chuang Hou; Wanlin Guo",
+      "year": 2020,
+      "url": "https://doi.org/10.1021/acsami.9b19648",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "hao2020-acsami-9b19648",
+    "recipe_family": "hao2020-acsami-9b19648-bqds-1-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "B",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "hao2020-acsami-9b19648",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "α-rhombohedral",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "hao2020-acsami-9b19648",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": 2.46,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "2.46 nm",
+      "evidence": [
+        {
+          "source_id": "hao2020-acsami-9b19648",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "hao2020-acsami-9b19648-bqds-1-1--expanded-boron-powder",
+      "name": "expanded boron powder",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "mass": {
+          "value": 30,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mg",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "30 mg",
+          "evidence": [
+            {
+              "source_id": "hao2020-acsami-9b19648",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "hao2020-acsami-9b19648",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "hao2020-acsami-9b19648-bqds-1-1--acetonitrile",
+      "name": "acetonitrile",
+      "formula": null,
+      "role": "solvent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "volume": {
+          "value": 15,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "15 mL",
+          "evidence": [
+            {
+              "source_id": "hao2020-acsami-9b19648",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "hao2020-acsami-9b19648",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "hao2020-acsami-9b19648-bqds-1-1--after-s01-add",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "hao2020-acsami-9b19648-bqds-1-1--expanded-boron-powder",
+        "hao2020-acsami-9b19648-bqds-1-1--acetonitrile"
+      ]
+    },
+    {
+      "id": "hao2020-acsami-9b19648-bqds-1-1--after-s02-ultrasonicate",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "hao2020-acsami-9b19648-bqds-1-1--after-s01-add",
+        "hao2020-acsami-9b19648-bqds-1-1--expanded-boron-powder",
+        "hao2020-acsami-9b19648-bqds-1-1--acetonitrile"
+      ]
+    },
+    {
+      "id": "hao2020-acsami-9b19648-bqds-1-1--after-s03-centrifuge",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "hao2020-acsami-9b19648-bqds-1-1--after-s02-ultrasonicate",
+        "hao2020-acsami-9b19648-bqds-1-1--acetonitrile"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-add",
+      "action": "add",
+      "label": "Add boron powder and acetonitrile to the three-necked bottle",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "hao2020-acsami-9b19648-bqds-1-1--expanded-boron-powder",
+        "hao2020-acsami-9b19648-bqds-1-1--acetonitrile"
+      ],
+      "outputs": [
+        "hao2020-acsami-9b19648-bqds-1-1--after-s01-add"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Add boron powder and acetonitrile to the three-necked bottle",
+      "evidence": [
+        {
+          "source_id": "hao2020-acsami-9b19648",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-ultrasonicate",
+      "action": "ultrasonicate",
+      "label": "Perform probe ultrasonication at 400 W for 60 min",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-add"
+      ],
+      "inputs": [
+        "hao2020-acsami-9b19648-bqds-1-1--after-s01-add",
+        "hao2020-acsami-9b19648-bqds-1-1--expanded-boron-powder",
+        "hao2020-acsami-9b19648-bqds-1-1--acetonitrile"
+      ],
+      "outputs": [
+        "hao2020-acsami-9b19648-bqds-1-1--after-s02-ultrasonicate"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 60,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "60 min",
+          "evidence": [
+            {
+              "source_id": "hao2020-acsami-9b19648",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Perform probe ultrasonication at 400 W for 60 min",
+      "evidence": [
+        {
+          "source_id": "hao2020-acsami-9b19648",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-centrifuge",
+      "action": "centrifuge",
+      "label": "Centrifuge the solution at 1500 rpm for 60 min",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-ultrasonicate"
+      ],
+      "inputs": [
+        "hao2020-acsami-9b19648-bqds-1-1--after-s02-ultrasonicate",
+        "hao2020-acsami-9b19648-bqds-1-1--acetonitrile"
+      ],
+      "outputs": [
+        "hao2020-acsami-9b19648-bqds-1-1--after-s03-centrifuge"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 60,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "60 min",
+          "evidence": [
+            {
+              "source_id": "hao2020-acsami-9b19648",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Centrifuge the solution at 1500 rpm for 60 min",
+      "evidence": [
+        {
+          "source_id": "hao2020-acsami-9b19648",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "hao2020-acsami-9b19648-bqds-1-1--product",
+      "source_sample_label": "BQDs-1",
+      "batch_id": null,
+      "material_state_id": "hao2020-acsami-9b19648-bqds-1-1--after-s03-centrifuge",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "B",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "hao2020-acsami-9b19648",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "α-rhombohedral",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "hao2020-acsami-9b19648",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "hao2020-acsami-9b19648",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "notes": [
+        "Reactor: three-necked bottle (Main PDF p.2).",
+        "Reaction time: 60 min (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "hao2020-acsami-9b19648-bqds-1-1--size",
+      "sample_id": "hao2020-acsami-9b19648-bqds-1-1--product",
+      "property": "diameter",
+      "technique": "TEM",
+      "value": {
+        "value": 2.46,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "2.46 nm",
+        "evidence": [
+          {
+            "source_id": "hao2020-acsami-9b19648",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "hao2020-acsami-9b19648",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

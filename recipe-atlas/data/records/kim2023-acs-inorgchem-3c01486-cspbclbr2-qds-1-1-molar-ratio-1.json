@@ -1,0 +1,361 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "kim2023-acs-inorgchem-3c01486-cspbclbr2-qds-1-1-molar-ratio-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Jin Young Kim; Woongsik Jang; Jihyun Lim; Dong Hwan Wang (2023): CsPbClBr2 QDs (1:1 molar ratio)",
+  "material": {
+    "formula": "CsPbClBr2",
+    "family": "CsPbClBr2 nanocrystals",
+    "elements": [
+      "Cs",
+      "Pb",
+      "Cl",
+      "Br"
+    ],
+    "components": [
+      "CsPbClBr2"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Synthesis as described in the source",
+  "sources": [
+    {
+      "id": "kim2023-acs-inorgchem-3c01486",
+      "doi": "10.1021/acs.inorgchem.3c01486",
+      "title": "One-Pot Synthesis of All-Inorganic CsPbClBr2 Blue Perovskite Quantum Dots via Stoichiometric Precursor",
+      "authors": "Jin Young Kim; Woongsik Jang; Jihyun Lim; Dong Hwan Wang",
+      "year": 2023,
+      "url": "https://doi.org/10.1021/acs.inorgchem.3c01486",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "kim2023-acs-inorgchem-3c01486",
+    "recipe_family": "kim2023-acs-inorgchem-3c01486-cspbclbr2-qds-1-1-molar-ratio-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "kim2023-acs-inorgchem-3c01486-cspbclbr2-qds-1-1-molar-ratio-1--after-s01-inject",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "kim2023-acs-inorgchem-3c01486-cspbclbr2-qds-1-1-molar-ratio-1--after-s02-centrifuge",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "kim2023-acs-inorgchem-3c01486-cspbclbr2-qds-1-1-molar-ratio-1--after-s01-inject"
+      ]
+    },
+    {
+      "id": "kim2023-acs-inorgchem-3c01486-cspbclbr2-qds-1-1-molar-ratio-1--after-s03-dry",
+      "name": "mixture after step 3",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "kim2023-acs-inorgchem-3c01486-cspbclbr2-qds-1-1-molar-ratio-1--after-s02-centrifuge"
+      ]
+    },
+    {
+      "id": "kim2023-acs-inorgchem-3c01486-cspbclbr2-qds-1-1-molar-ratio-1--after-s04-redisperse",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "kim2023-acs-inorgchem-3c01486-cspbclbr2-qds-1-1-molar-ratio-1--after-s03-dry"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-inject",
+      "action": "inject",
+      "label": "Inject precursor solution into toluene and OA mixture",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "kim2023-acs-inorgchem-3c01486-cspbclbr2-qds-1-1-molar-ratio-1--after-s01-inject"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 25,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "25 °C",
+          "evidence": [
+            {
+              "source_id": "kim2023-acs-inorgchem-3c01486",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Inject precursor solution into toluene and OA mixture",
+      "evidence": [
+        {
+          "source_id": "kim2023-acs-inorgchem-3c01486",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-centrifuge",
+      "action": "centrifuge",
+      "label": "Centrifuge the solution to remove impurities",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-inject"
+      ],
+      "inputs": [
+        "kim2023-acs-inorgchem-3c01486-cspbclbr2-qds-1-1-molar-ratio-1--after-s01-inject"
+      ],
+      "outputs": [
+        "kim2023-acs-inorgchem-3c01486-cspbclbr2-qds-1-1-molar-ratio-1--after-s02-centrifuge"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "5 min",
+          "evidence": [
+            {
+              "source_id": "kim2023-acs-inorgchem-3c01486",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Centrifuge the solution to remove impurities",
+      "evidence": [
+        {
+          "source_id": "kim2023-acs-inorgchem-3c01486",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-dry",
+      "action": "dry",
+      "label": "Dry the precipitate",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-centrifuge"
+      ],
+      "inputs": [
+        "kim2023-acs-inorgchem-3c01486-cspbclbr2-qds-1-1-molar-ratio-1--after-s02-centrifuge"
+      ],
+      "outputs": [
+        "kim2023-acs-inorgchem-3c01486-cspbclbr2-qds-1-1-molar-ratio-1--after-s03-dry"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Dry the precipitate",
+      "evidence": [
+        {
+          "source_id": "kim2023-acs-inorgchem-3c01486",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s04-redisperse",
+      "action": "redisperse",
+      "label": "Redisperse the QDs in n-hexane",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s03-dry"
+      ],
+      "inputs": [
+        "kim2023-acs-inorgchem-3c01486-cspbclbr2-qds-1-1-molar-ratio-1--after-s03-dry"
+      ],
+      "outputs": [
+        "kim2023-acs-inorgchem-3c01486-cspbclbr2-qds-1-1-molar-ratio-1--after-s04-redisperse"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Redisperse the QDs in n-hexane",
+      "evidence": [
+        {
+          "source_id": "kim2023-acs-inorgchem-3c01486",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "kim2023-acs-inorgchem-3c01486-cspbclbr2-qds-1-1-molar-ratio-1--product",
+      "source_sample_label": "CsPbClBr2 QDs (1:1 molar ratio)",
+      "batch_id": null,
+      "material_state_id": "kim2023-acs-inorgchem-3c01486-cspbclbr2-qds-1-1-molar-ratio-1--after-s04-redisperse",
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "kim2023-acs-inorgchem-3c01486",
+          "locator": "Main PDF"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

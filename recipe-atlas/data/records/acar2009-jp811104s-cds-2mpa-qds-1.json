@@ -1,0 +1,366 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "acar2009-jp811104s-cds-2mpa-qds-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Havva Yagci Acar; Recep Kas; Ersin Yurtsever; Can Ozen; Ingo Lieberwirth (2009): CdS-2MPA QDs",
+  "material": {
+    "formula": "CdS",
+    "family": "CdS nanocrystals",
+    "elements": [
+      "Cd",
+      "S"
+    ],
+    "components": [
+      "CdS"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Synthesis as described in the source",
+  "sources": [
+    {
+      "id": "acar2009-jp811104s",
+      "doi": "10.1021/jp811104s",
+      "title": "Emergence of 2MPA as an Effective Coating for Highly Stable and Luminescent Quantum Dots",
+      "authors": "Havva Yagci Acar; Recep Kas; Ersin Yurtsever; Can Ozen; Ingo Lieberwirth",
+      "year": 2009,
+      "url": "https://doi.org/10.1021/jp811104s",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "acar2009-jp811104s",
+    "recipe_family": "acar2009-jp811104s-cds-2mpa-qds-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdS",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "acar2009-jp811104s",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "cubic",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "acar2009-jp811104s",
+          "locator": "Main PDF p.5"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "sphere",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "acar2009-jp811104s",
+          "locator": "Main PDF p.5"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "acar2009-jp811104s-cds-2mpa-qds-1--cadmium-acetate-dihydrate",
+      "name": "cadmium acetate dihydrate",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "acar2009-jp811104s",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "acar2009-jp811104s-cds-2mpa-qds-1--after-s01-dissolve",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "acar2009-jp811104s-cds-2mpa-qds-1--cadmium-acetate-dihydrate"
+      ]
+    },
+    {
+      "id": "acar2009-jp811104s-cds-2mpa-qds-1--after-s02-adjust-ph",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "acar2009-jp811104s-cds-2mpa-qds-1--after-s01-dissolve"
+      ]
+    },
+    {
+      "id": "acar2009-jp811104s-cds-2mpa-qds-1--after-s03-add",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "acar2009-jp811104s-cds-2mpa-qds-1--after-s02-adjust-ph"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-dissolve",
+      "action": "dissolve",
+      "label": "Dissolve cadmium acetate dihydrate in water",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "acar2009-jp811104s-cds-2mpa-qds-1--cadmium-acetate-dihydrate"
+      ],
+      "outputs": [
+        "acar2009-jp811104s-cds-2mpa-qds-1--after-s01-dissolve"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "acar2009-jp811104s",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Dissolve cadmium acetate dihydrate in water",
+      "evidence": [
+        {
+          "source_id": "acar2009-jp811104s",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "s02-adjust-ph",
+      "action": "adjust ph",
+      "label": "Adjust pH to 7.5 with NaOH",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-dissolve"
+      ],
+      "inputs": [
+        "acar2009-jp811104s-cds-2mpa-qds-1--after-s01-dissolve"
+      ],
+      "outputs": [
+        "acar2009-jp811104s-cds-2mpa-qds-1--after-s02-adjust-ph"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "acar2009-jp811104s",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Adjust pH to 7.5 with NaOH",
+      "evidence": [
+        {
+          "source_id": "acar2009-jp811104s",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-add",
+      "action": "add",
+      "label": "Add Na2S·3H2O solution dropwise",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-adjust-ph"
+      ],
+      "inputs": [
+        "acar2009-jp811104s-cds-2mpa-qds-1--after-s02-adjust-ph"
+      ],
+      "outputs": [
+        "acar2009-jp811104s-cds-2mpa-qds-1--after-s03-add"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 30,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "30 min",
+          "evidence": [
+            {
+              "source_id": "acar2009-jp811104s",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "acar2009-jp811104s",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Add Na2S·3H2O solution dropwise",
+      "evidence": [
+        {
+          "source_id": "acar2009-jp811104s",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "acar2009-jp811104s-cds-2mpa-qds-1--product",
+      "source_sample_label": "CdS-2MPA QDs",
+      "batch_id": null,
+      "material_state_id": "acar2009-jp811104s-cds-2mpa-qds-1--after-s03-add",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdS",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "acar2009-jp811104s",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "cubic",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "acar2009-jp811104s",
+            "locator": "Main PDF p.5"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "sphere",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "acar2009-jp811104s",
+            "locator": "Main PDF p.5"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": "2MPA",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "acar2009-jp811104s",
+            "locator": "Main PDF p.5"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "acar2009-jp811104s",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "notes": [
+        "Reaction time: 30 min (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Size not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Amount of cadmium acetate dihydrate not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
