@@ -1,0 +1,374 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "makhlouf2009-s10853-009-3457-0-nio-nanoparticles-s7-2",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Salah A. Makhlouf; Mohamed A. Kassem; M. A. Abdel-Rahim (2009): NiO nanoparticles (S7)",
+  "material": {
+    "formula": "NiO",
+    "family": "NiO nanocrystals",
+    "elements": [
+      "Ni",
+      "O"
+    ],
+    "components": [
+      "NiO"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Chemical precipitation",
+  "sources": [
+    {
+      "id": "makhlouf2009-s10853-009-3457-0",
+      "doi": "10.1007/s10853-009-3457-0",
+      "title": "Particle size-dependent electrical properties of nanocrystalline NiO",
+      "authors": "Salah A. Makhlouf; Mohamed A. Kassem; M. A. Abdel-Rahim",
+      "year": 2009,
+      "url": "https://doi.org/10.1007/s10853-009-3457-0",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "makhlouf2009-s10853-009-3457-0",
+    "recipe_family": "makhlouf2009-s10853-009-3457-0-nio-nanoparticles-s7-2",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "NiO",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "makhlouf2009-s10853-009-3457-0",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "fcc",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "makhlouf2009-s10853-009-3457-0",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "spherical",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "makhlouf2009-s10853-009-3457-0",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "makhlouf2009-s10853-009-3457-0-nio-nanoparticles-s7-2--nickel-nitrate",
+      "name": "nickel nitrate",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "makhlouf2009-s10853-009-3457-0",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "makhlouf2009-s10853-009-3457-0-nio-nanoparticles-s7-2--sodium-hydroxide",
+      "name": "sodium hydroxide",
+      "formula": null,
+      "role": "nonmetal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "makhlouf2009-s10853-009-3457-0",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "makhlouf2009-s10853-009-3457-0-nio-nanoparticles-s7-2--after-s01-mix",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "makhlouf2009-s10853-009-3457-0-nio-nanoparticles-s7-2--nickel-nitrate",
+        "makhlouf2009-s10853-009-3457-0-nio-nanoparticles-s7-2--sodium-hydroxide"
+      ]
+    },
+    {
+      "id": "makhlouf2009-s10853-009-3457-0-nio-nanoparticles-s7-2--after-s02-wash",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "makhlouf2009-s10853-009-3457-0-nio-nanoparticles-s7-2--after-s01-mix"
+      ]
+    },
+    {
+      "id": "makhlouf2009-s10853-009-3457-0-nio-nanoparticles-s7-2--after-s03-dry",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "makhlouf2009-s10853-009-3457-0-nio-nanoparticles-s7-2--after-s02-wash"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-mix",
+      "action": "mix",
+      "label": "Mix nickel nitrate and sodium hydroxide solutions",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "makhlouf2009-s10853-009-3457-0-nio-nanoparticles-s7-2--nickel-nitrate",
+        "makhlouf2009-s10853-009-3457-0-nio-nanoparticles-s7-2--sodium-hydroxide"
+      ],
+      "outputs": [
+        "makhlouf2009-s10853-009-3457-0-nio-nanoparticles-s7-2--after-s01-mix"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "makhlouf2009-s10853-009-3457-0",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Mix nickel nitrate and sodium hydroxide solutions",
+      "evidence": [
+        {
+          "source_id": "makhlouf2009-s10853-009-3457-0",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-wash",
+      "action": "wash",
+      "label": "Wash the precipitate with distilled water",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-mix"
+      ],
+      "inputs": [
+        "makhlouf2009-s10853-009-3457-0-nio-nanoparticles-s7-2--after-s01-mix"
+      ],
+      "outputs": [
+        "makhlouf2009-s10853-009-3457-0-nio-nanoparticles-s7-2--after-s02-wash"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Wash the precipitate with distilled water",
+      "evidence": [
+        {
+          "source_id": "makhlouf2009-s10853-009-3457-0",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-dry",
+      "action": "dry",
+      "label": "Dry the precipitate in air",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-wash"
+      ],
+      "inputs": [
+        "makhlouf2009-s10853-009-3457-0-nio-nanoparticles-s7-2--after-s02-wash"
+      ],
+      "outputs": [
+        "makhlouf2009-s10853-009-3457-0-nio-nanoparticles-s7-2--after-s03-dry"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 383,
+          "minimum": null,
+          "maximum": null,
+          "unit": "K",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "383 K",
+          "evidence": [
+            {
+              "source_id": "makhlouf2009-s10853-009-3457-0",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Dry the precipitate in air",
+      "evidence": [
+        {
+          "source_id": "makhlouf2009-s10853-009-3457-0",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "makhlouf2009-s10853-009-3457-0-nio-nanoparticles-s7-2--product",
+      "source_sample_label": "NiO nanoparticles (S7)",
+      "batch_id": null,
+      "material_state_id": "makhlouf2009-s10853-009-3457-0-nio-nanoparticles-s7-2--after-s03-dry",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "NiO",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "makhlouf2009-s10853-009-3457-0",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "fcc",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "makhlouf2009-s10853-009-3457-0",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "spherical",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "makhlouf2009-s10853-009-3457-0",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "makhlouf2009-s10853-009-3457-0",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reaction time: 3 h (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Amount of nickel nitrate not reported in the extracted text.",
+      "Amount of sodium hydroxide not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

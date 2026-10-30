@@ -335,7 +335,7 @@ def main():
         p.error('Report must be a new external file')
     guard = load_module(root / 'tools/mattersyn-release/public_release_guard.py')
     config = guard.load_config(root / 'publication/public-release-policy.json', root / 'publication/asset-rights-registry.json')
-    controls, plan = prepare(root, json.loads(a.reviews.read_bytes()), a.release_id, guard, config)
+    controls, plan = guard._opaque_image_invocation(prepare)(root, json.loads(a.reviews.read_bytes()), a.release_id, guard, config)
     if a.apply:
         plan = apply_transaction(root, controls, plan)
     output.parent.mkdir(parents=True, exist_ok=True)

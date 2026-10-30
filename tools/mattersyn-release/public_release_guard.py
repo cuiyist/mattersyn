@@ -918,6 +918,14 @@ _SANITATION_MEMO_HITS = 0
 _SANITATION_MEMO_MISSES = 0
 _OPAQUE_SANITATION_SCOPE = ContextVar("opaque_sanitation_scope", default=None)
 _OPAQUE_SANITATION_ACTIVE = set()
+# Compact unchanged-image verdicts only: no payload/output bytes, one export lifetime.
+_UNCHANGED_IMAGE_VERDICT_SCOPES = {}
+_UNCHANGED_IMAGE_VERDICT_MAX_ENTRIES = 131072
+_UNCHANGED_IMAGE_VERDICT_BASE = (
+    tuple(_SECRET_PATTERNS.items()), frozenset(IMAGE_SUFFIXES),
+    frozenset(TEXT_SUFFIXES), frozenset(TEXT_FILENAMES),
+    _sanitize_content_uncached, _is_image, PurePosixPath,
+)
 
 
 def _opaque_image_invocation(function):
@@ -929,11 +937,13 @@ def _opaque_image_invocation(function):
         token = _OPAQUE_SANITATION_SCOPE.set(scope)
         with _SANITATION_MEMO_LOCK:
             _OPAQUE_SANITATION_ACTIVE.add(scope)
+            _UNCHANGED_IMAGE_VERDICT_SCOPES[scope] = {}
         try:
             return function(*args, **kwargs)
         finally:
             with _SANITATION_MEMO_LOCK:
                 _OPAQUE_SANITATION_ACTIVE.discard(scope)
+                _UNCHANGED_IMAGE_VERDICT_SCOPES.pop(scope, None)
                 for key in list(_SANITATION_MEMO):
                     context = key[-1]
                     if isinstance(context, tuple) and context and context[0] is scope:
@@ -979,6 +989,8 @@ def sanitation_memo_state(*, clear=False, enabled=None):
             _SANITATION_MEMO_ENABLED = bool(enabled)
         if clear:
             _SANITATION_MEMO.clear()
+            for verdicts in _UNCHANGED_IMAGE_VERDICT_SCOPES.values():
+                verdicts.clear()
             _SANITATION_MEMO_HITS = _SANITATION_MEMO_MISSES = 0
             _SANITATION_MEMO_OUTPUT_BYTES = 0
         return {"enabled": _SANITATION_MEMO_ENABLED, "entries": len(_SANITATION_MEMO),
@@ -992,6 +1004,31 @@ def _sanitation_context(config):
     # still evaluated outside the memo. Coordinate/text formats are uncached.
     return None if config is None else (config.get("policy_sha256"),
                                        config.get("asset_rights_registry_sha256"))
+
+
+def _unchanged_image_verdict_memo(key):
+    """Reuse only the existing complete opaque context, with bounded small keys."""
+    context = key[-1]
+    if (type(context) is not tuple or len(context) != 10 or
+            context[1] != "opaque-image-v1" or
+            any(context[i + 7] is not _UNCHANGED_IMAGE_VERDICT_BASE[i + 4]
+                for i in range(3)) or
+            any(type(item) is not str for values in context[4:7] for item in values) or
+            context[3:7] != _UNCHANGED_IMAGE_VERDICT_BASE[:4]):
+        return None
+    pins = context[2]
+    if (pins is not None and (type(pins) is not tuple or len(pins) != 2 or
+            any(v is not None and (type(v) is not str or len(v) > 64) for v in pins))):
+        return None
+    if (type(key[0]) is not str or len(key[0]) > 64 or
+            (key[1] is not None and (type(key[1]) is not str or len(key[1]) > 64)) or
+            type(key[2]) is not str or len(key[2]) > 512 or
+            type(key[3]) is not str or len(key[3]) > 64 or
+            type(key[4]) is not int or not 0 <= key[4] < 2**63 or
+            type(_UNCHANGED_IMAGE_VERDICT_MAX_ENTRIES) is not int or
+            not 0 < _UNCHANGED_IMAGE_VERDICT_MAX_ENTRIES <= 131072):
+        return None
+    return _UNCHANGED_IMAGE_VERDICT_SCOPES.get(context[0])
 
 
 def _sanitize_content(path, raw, config=None, repo=None):
@@ -1012,6 +1049,14 @@ def _sanitize_content(path, raw, config=None, repo=None):
     except TypeError:
         return _sanitize_content_uncached(path, raw, config, repo)
     with _SANITATION_MEMO_LOCK:
+        verdicts = _unchanged_image_verdict_memo(key) if opaque else None
+        verdict = None if verdicts is None else verdicts.get(key)
+        if verdict is not None:
+            if _opaque_image_context(path, raw, config) != context:
+                return _sanitize_content_uncached(path, raw, config, repo)
+            _SANITATION_MEMO_HITS += 1
+            reason, stats = verdict
+            return raw, reason, dict(stats)
         hit = _SANITATION_MEMO.get(key)
         if hit is not None:
             if opaque and _opaque_image_context(path, raw, config) != context:
@@ -1023,6 +1068,14 @@ def _sanitize_content(path, raw, config=None, repo=None):
         _SANITATION_MEMO_MISSES += 1
     output, reason, stats = _sanitize_content_uncached(path, raw, config, repo)
     unchanged = output is raw or output == raw
+    if (opaque and unchanged and verdicts is not None and
+            type(reason) is str and len(reason) <= 128 and type(stats) is dict and
+            len(stats) <= 8 and all(type(k) is str and len(k) <= 64 and
+            type(v) is int and 0 <= v < 2**63 for k, v in stats.items())):
+        with _SANITATION_MEMO_LOCK:
+            if (_opaque_image_context(path, raw, config) == context and
+                    len(verdicts) < _UNCHANGED_IMAGE_VERDICT_MAX_ENTRIES):
+                verdicts[key] = (reason, tuple(stats.items()))
     retained = None if unchanged else output
     weight = len(retained) if isinstance(retained, bytes) else 0
     if weight <= _SANITATION_MEMO_MAX_OUTPUT_BYTES:

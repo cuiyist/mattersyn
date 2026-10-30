@@ -1,0 +1,262 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "bostedt2004-1-1828238-germanium-nanocrystals-1-6-nm-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "C. Bostedt; T. van Buuren; T. M. Willey; L. J. Terminello (2004): germanium nanocrystals (1.6 nm)",
+  "material": {
+    "formula": "Ge",
+    "family": "Ge nanocrystals",
+    "elements": [
+      "Ge"
+    ],
+    "components": [
+      "Ge"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Gas-phase condensation",
+  "sources": [
+    {
+      "id": "bostedt2004-1-1828238",
+      "doi": "10.1063/1.1828238",
+      "title": "Controlling the electronic structure of nanocrystal assemblies by variation of the particle-particle interaction",
+      "authors": "C. Bostedt; T. van Buuren; T. M. Willey; L. J. Terminello",
+      "year": 2004,
+      "url": "https://doi.org/10.1063/1.1828238",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "bostedt2004-1-1828238",
+    "recipe_family": "bostedt2004-1-1828238-germanium-nanocrystals-1-6-nm-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Ge",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "bostedt2004-1-1828238",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": 1.6,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "1.6 nm",
+      "evidence": [
+        {
+          "source_id": "bostedt2004-1-1828238",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "bostedt2004-1-1828238-germanium-nanocrystals-1-6-nm-1--ge-vapor",
+      "name": "Ge vapor",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "bostedt2004-1-1828238",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "bostedt2004-1-1828238-germanium-nanocrystals-1-6-nm-1--after-s01-condense",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "bostedt2004-1-1828238-germanium-nanocrystals-1-6-nm-1--ge-vapor"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-condense",
+      "action": "condense",
+      "label": "Condense Ge vapor in He buffer gas",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "bostedt2004-1-1828238-germanium-nanocrystals-1-6-nm-1--ge-vapor"
+      ],
+      "outputs": [
+        "bostedt2004-1-1828238-germanium-nanocrystals-1-6-nm-1--after-s01-condense"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "He",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "bostedt2004-1-1828238",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Condense Ge vapor in He buffer gas",
+      "evidence": [
+        {
+          "source_id": "bostedt2004-1-1828238",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "bostedt2004-1-1828238-germanium-nanocrystals-1-6-nm-1--product",
+      "source_sample_label": "germanium nanocrystals (1.6 nm)",
+      "batch_id": null,
+      "material_state_id": "bostedt2004-1-1828238-germanium-nanocrystals-1-6-nm-1--after-s01-condense",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Ge",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "bostedt2004-1-1828238",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": "none (bare)",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "bostedt2004-1-1828238",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "bostedt2004-1-1828238",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [
+    {
+      "id": "bostedt2004-1-1828238-germanium-nanocrystals-1-6-nm-1--size",
+      "sample_id": "bostedt2004-1-1828238-germanium-nanocrystals-1-6-nm-1--product",
+      "property": "particle_size",
+      "technique": "not reported",
+      "value": {
+        "value": 1.6,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "1.6 nm",
+        "evidence": [
+          {
+            "source_id": "bostedt2004-1-1828238",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "bostedt2004-1-1828238",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Shape not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of Ge vapor not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

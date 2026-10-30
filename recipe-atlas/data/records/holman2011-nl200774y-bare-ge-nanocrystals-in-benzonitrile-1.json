@@ -1,0 +1,349 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "holman2011-nl200774y-bare-ge-nanocrystals-in-benzonitrile-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Zachary C. Holman; Uwe R. Kortshagen (2011): bare Ge nanocrystals in benzonitrile",
+  "material": {
+    "formula": "Ge",
+    "family": "Ge nanocrystals",
+    "elements": [
+      "Ge"
+    ],
+    "components": [
+      "Ge"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Plasma synthesis",
+  "sources": [
+    {
+      "id": "holman2011-nl200774y",
+      "doi": "10.1021/nl200774y",
+      "title": "Nanocrystal Inks without Ligands: Stable Colloids of Bare Germanium Nanocrystals",
+      "authors": "Zachary C. Holman; Uwe R. Kortshagen",
+      "year": 2011,
+      "url": "https://doi.org/10.1021/nl200774y",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "holman2011-nl200774y",
+    "recipe_family": "holman2011-nl200774y-bare-ge-nanocrystals-in-benzonitrile-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Ge",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "holman2011-nl200774y",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "diamond cubic",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "holman2011-nl200774y",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": 6.0,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "6 nm",
+      "evidence": [
+        {
+          "source_id": "holman2011-nl200774y",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "nanocrystal",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "holman2011-nl200774y",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "holman2011-nl200774y-bare-ge-nanocrystals-in-benzonitrile-1--germanium-tetrachloride",
+      "name": "germanium tetrachloride",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "holman2011-nl200774y",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "holman2011-nl200774y-bare-ge-nanocrystals-in-benzonitrile-1--hydrogen-gas",
+      "name": "hydrogen gas",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "holman2011-nl200774y",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "holman2011-nl200774y-bare-ge-nanocrystals-in-benzonitrile-1--after-s01-dissociate",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "holman2011-nl200774y-bare-ge-nanocrystals-in-benzonitrile-1--germanium-tetrachloride",
+        "holman2011-nl200774y-bare-ge-nanocrystals-in-benzonitrile-1--hydrogen-gas"
+      ]
+    },
+    {
+      "id": "holman2011-nl200774y-bare-ge-nanocrystals-in-benzonitrile-1--after-s02-collect",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "holman2011-nl200774y-bare-ge-nanocrystals-in-benzonitrile-1--after-s01-dissociate"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-dissociate",
+      "action": "dissociate",
+      "label": "GeCl4 and H2 dissociated in plasma",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "holman2011-nl200774y-bare-ge-nanocrystals-in-benzonitrile-1--germanium-tetrachloride",
+        "holman2011-nl200774y-bare-ge-nanocrystals-in-benzonitrile-1--hydrogen-gas"
+      ],
+      "outputs": [
+        "holman2011-nl200774y-bare-ge-nanocrystals-in-benzonitrile-1--after-s01-dissociate"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "inert",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "holman2011-nl200774y",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "GeCl4 and H2 dissociated in plasma",
+      "evidence": [
+        {
+          "source_id": "holman2011-nl200774y",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "s02-collect",
+      "action": "collect",
+      "label": "NCs collected as powder downstream of plasma reactor",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-dissociate"
+      ],
+      "inputs": [
+        "holman2011-nl200774y-bare-ge-nanocrystals-in-benzonitrile-1--after-s01-dissociate"
+      ],
+      "outputs": [
+        "holman2011-nl200774y-bare-ge-nanocrystals-in-benzonitrile-1--after-s02-collect"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "NCs collected as powder downstream of plasma reactor",
+      "evidence": [
+        {
+          "source_id": "holman2011-nl200774y",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "holman2011-nl200774y-bare-ge-nanocrystals-in-benzonitrile-1--product",
+      "source_sample_label": "bare Ge nanocrystals in benzonitrile",
+      "batch_id": null,
+      "material_state_id": "holman2011-nl200774y-bare-ge-nanocrystals-in-benzonitrile-1--after-s02-collect",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Ge",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "holman2011-nl200774y",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "diamond cubic",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "holman2011-nl200774y",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "nanocrystal",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "holman2011-nl200774y",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": "none",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "holman2011-nl200774y",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "holman2011-nl200774y",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "notes": [
+        "Reactor: plasma reactor (Main PDF p.1)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "holman2011-nl200774y-bare-ge-nanocrystals-in-benzonitrile-1--size",
+      "sample_id": "holman2011-nl200774y-bare-ge-nanocrystals-in-benzonitrile-1--product",
+      "property": "particle_size",
+      "technique": "not reported",
+      "value": {
+        "value": 6.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "6 nm",
+        "evidence": [
+          {
+            "source_id": "holman2011-nl200774y",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "holman2011-nl200774y",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of germanium tetrachloride not reported in the extracted text.",
+      "Amount of hydrogen gas not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

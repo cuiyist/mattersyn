@@ -1,4 +1,5 @@
 import copy
+import io
 import json
 import os
 from pathlib import Path
@@ -9,6 +10,7 @@ from unittest.mock import patch
 
 from prepare_source_release import (BLUEPRINT, MANIFEST, PreparationError, apply_transaction,
                                     canonical, encoded, git, load_module, payload_binding, prepare, sha)
+import prepare_source_release as preparer
 from check_project_manifest import ManifestError, check
 from bind_source_allowlist import bind
 
@@ -269,6 +271,74 @@ class PrepareReleaseTests(unittest.TestCase):
             'reviewer': 'fixture-independent-release-reviewer', 'reviewed_at': '2026-09-26T01:00:00Z'}
         controls, _ = self.plan()
         self.assertEqual(json.loads(controls[BLUEPRINT])['withheld_input_count'], 1)
+
+    def test_cli_opaque_invocation_forwards_and_cleans_on_success_and_error(self):
+        self.reviewed_edit()
+        _, expected_plan = self.plan()
+        reviews = Path(self.temp.name) / 'cli-reviews.json'
+        reviews.write_bytes(encoded(self.receipt))
+        config = self.config()
+        real_prepare = preparer.prepare
+        previous_scope = self.guard._OPAQUE_SANITATION_SCOPE.get()
+        active_before = set(self.guard._OPAQUE_SANITATION_ACTIVE)
+        seen_scopes = []
+        synthetic_image = b'\x89PNG\r\n\x1a\nSYNTHETIC CLI SCOPE'
+
+        for fail in (False, True):
+            with self.subTest(preparation_error=fail):
+                report = Path(self.temp.name) / ('cli-error.json' if fail else 'cli-plan.json')
+                stdout = io.StringIO()
+
+                def observed_prepare(root, receipt, release_id, guard, actual_config):
+                    self.assertEqual(root, self.root.resolve())
+                    self.assertEqual(receipt, self.receipt)
+                    self.assertEqual(release_id, 'fixture-release')
+                    self.assertIs(guard, self.guard)
+                    self.assertIs(actual_config, config)
+                    scope = guard._OPAQUE_SANITATION_SCOPE.get()
+                    self.assertIsNot(scope, previous_scope)
+                    self.assertIn(scope, guard._OPAQUE_SANITATION_ACTIVE)
+                    seen_scopes.append(scope)
+                    # Exercise real sanitation while the CLI's real wrapper is active.
+                    self.assertEqual(guard._sanitize_content(
+                        'figures/cli-synthetic.png', synthetic_image, config, 'mattersyn')[0],
+                        synthetic_image)
+                    if fail:
+                        raise PreparationError('Synthetic CLI preparation failure')
+                    return real_prepare(root, receipt, release_id, guard, actual_config,
+                                        now='2026-09-26T01:00:00Z')
+
+                argv = ['prepare_source_release.py', '--root', str(self.root),
+                        '--reviews', str(reviews), '--release-id', 'fixture-release',
+                        '--report-out', str(report)]
+                with patch.object(preparer, 'load_module', return_value=self.guard), \
+                        patch.object(self.guard, 'load_config', return_value=config), \
+                        patch.object(preparer, 'prepare', side_effect=observed_prepare) as called, \
+                        patch.object(preparer, 'apply_transaction') as apply, \
+                        patch('sys.argv', argv), patch('sys.stdout', stdout):
+                    if fail:
+                        with self.assertRaisesRegex(PreparationError, 'Synthetic CLI preparation failure'):
+                            preparer.main()
+                    else:
+                        preparer.main()
+                    called.assert_called_once()
+                    apply.assert_not_called()
+
+                self.assertIs(self.guard._OPAQUE_SANITATION_SCOPE.get(), previous_scope)
+                self.assertEqual(self.guard._OPAQUE_SANITATION_ACTIVE, active_before)
+                if hasattr(self.guard, '_UNCHANGED_IMAGE_VERDICT_SCOPES'):
+                    self.assertNotIn(seen_scopes[-1], self.guard._UNCHANGED_IMAGE_VERDICT_SCOPES)
+                if fail:
+                    self.assertFalse(report.exists())
+                    self.assertEqual(stdout.getvalue(), '')
+                else:
+                    self.assertEqual(json.loads(report.read_bytes()), expected_plan)
+                    self.assertEqual(json.loads(stdout.getvalue()), {
+                        'commit_ready': False,
+                        'files': expected_plan['source_payload_binding']['file_count'],
+                        'published': False})
+        self.assertEqual(len(seen_scopes), 2)
+        self.assertIsNot(seen_scopes[0], seen_scopes[1])
 
 
 if __name__ == '__main__':
