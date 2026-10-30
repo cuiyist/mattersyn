@@ -247,4 +247,108 @@ class DialysisIsolation(unittest.TestCase):
         checks = [ok for ok, _ in Q['germanium_reviewed_regression_checks'](self.hub, self.byid)]
         self.assertFalse(checks[0]); self.assertFalse(checks[1])
 
+class NonSolutionParticleProof(unittest.TestCase):
+    def setUp(self):
+        self.byid, self.hub = fixtures()
+
+    def route(self, mode):
+        r = self.byid[DIRECT]
+        evidence = lambda page: [{'source_id': DIRECT, 'locator': 'Main PDF p.' + str(page)}]
+        final = DIRECT + '--product'
+        r['products'] = [{'source_sample_label': 'Ge nanocrystals', 'material_state_id': final,
+                          'recipe_link': 'explicit', 'link_evidence': evidence(2),
+                          'composition': {'value': 'Ge', 'status': 'reported', 'evidence': evidence(1)},
+                          'notes': []}]
+        r['material_states'] = [{'id': final, 'kind': 'product'}]
+        if mode in ('gas', 'laser'):
+            r['method'] = 'Gas-phase condensation' if mode == 'gas' else 'Pulsed laser ablation'
+            r['operations'] = [{'action': 'condense' if mode == 'gas' else 'ablate',
+                                'stage': 'synthesis', 'inputs': [DIRECT + '--Ge-feed'],
+                                'outputs': [final], 'evidence': evidence(2)}]
+        elif mode == 'plasma-dissociate':
+            mid = DIRECT + '--plasma-batch'
+            r['method'] = 'Plasma synthesis'
+            r['products'][0]['notes'] = ['Reactor: plasma reactor (Main PDF p.1).']
+            r['material_states'].insert(0, {'id': mid, 'kind': 'reaction_batch'})
+            r['operations'] = [
+                {'action': 'dissociate', 'stage': 'synthesis', 'inputs': [DIRECT + '--Ge-feed'],
+                 'outputs': [mid], 'evidence': evidence(1)},
+                {'action': 'collect', 'stage': 'workup', 'inputs': [mid],
+                 'outputs': [final], 'evidence': evidence(2)}]
+        elif mode == 'plasma-colloid':
+            mids = [DIRECT + '--collected', DIRECT + '--refluxed', DIRECT + '--dried']
+            r['method'] = 'Nonthermal plasma'
+            r['products'][0]['notes'] = ['Reactor: flow-through plasma reactor (Main PDF p.2).']
+            r['material_states'] = [{'id': s, 'kind': 'reaction_batch'} for s in mids] + r['material_states']
+            r['operations'] = [
+                {'action': 'collect', 'stage': 'workup', 'inputs': [], 'outputs': [mids[0]],
+                 'evidence': evidence(2), 'parameters': {'duration': {
+                     'value': 5, 'unit': 'min', 'status': 'reported', 'evidence': evidence(2)}}},
+                {'action': 'reflux', 'stage': 'synthesis', 'inputs': [mids[0], DIRECT + '--ligand'],
+                 'outputs': [mids[1]], 'evidence': evidence(2)},
+                {'action': 'dry', 'stage': 'workup', 'inputs': [mids[1]],
+                 'outputs': [mids[2]], 'evidence': evidence(2)},
+                {'action': 'filter', 'stage': 'workup', 'inputs': [mids[2]],
+                 'outputs': [final], 'evidence': evidence(2)}]
+        return r
+
+    def passes(self):
+        return all(ok for ok, _ in Q['germanium_reviewed_regression_checks'](self.hub, self.byid))
+
+    def test_source_bound_non_solution_modes_do_not_mutate_records_or_reviewed_scope(self):
+        for mode in ('gas', 'plasma-dissociate', 'plasma-colloid', 'laser'):
+            self.route(mode)
+            before = copy.deepcopy((self.byid, self.hub))
+            with self.subTest(mode=mode):
+                self.assertTrue(self.passes())
+                self.assertEqual((self.byid, self.hub), before)
+
+    def test_unlinked_ambiguous_cyclic_or_unlocated_producer_is_not_proof(self):
+        def duplicate_producer(r): r['operations'].append(copy.deepcopy(r['operations'][0]))
+        def cycle(r): r['operations'][0]['inputs'] = [r['products'][0]['material_state_id']]
+        mutations = [
+            lambda r: r['products'][0].update(recipe_link='inferred'),
+            lambda r: r['products'][0].update(link_evidence=[]),
+            lambda r: r['products'][0]['composition'].update(evidence=[{'source_id':'other','locator':'Main PDF p.1'}]),
+            lambda r: r['material_states'][0].update(kind='reaction_batch'),
+            lambda r: r['operations'][0].update(outputs=['unlinked']),
+            lambda r: r['operations'][0].update(stage='characterization'),
+            lambda r: r['operations'][0].update(evidence=[{'source_id':DIRECT,'locator':'Main PDF'}]),
+            duplicate_producer, cycle,
+        ]
+        for mutate in mutations:
+            r = self.route('gas'); mutate(r)
+            with self.subTest(mutation=mutate): self.assertFalse(self.passes())
+
+    def test_plasma_needs_its_source_bound_reactor_and_connected_collection(self):
+        for mode in ('plasma-dissociate', 'plasma-colloid'):
+            for notes in [[], ['Reactor: plasma reactor'], ['Reactor: plasma reactor (Main PDF p.99).'],
+                          ['Reactor: non-plasma reactor (Main PDF p.2).']]:
+                r = self.route(mode); r['products'][0]['notes'] = notes
+                with self.subTest(mode=mode, notes=notes): self.assertFalse(self.passes())
+        for value in [0, -1, True, float('inf'), float('nan')]:
+            r = self.route('plasma-colloid'); r['operations'][0]['parameters']['duration']['value'] = value
+            with self.subTest(duration=value): self.assertFalse(self.passes())
+        r = self.route('plasma-dissociate'); r['operations'][-1]['inputs'] = []
+        self.assertFalse(self.passes())
+
+    def test_method_name_or_precursor_preparation_alone_stays_held(self):
+        for method in ['Gas-phase condensation', 'Pulsed laser ablation', 'Nonthermal plasma',
+                       'Plasma synthesis', 'Naphthalide-mediated reduction']:
+            r = self.route('gas'); r['method'] = method
+            r['operations'][0].update(action='dissolve', inputs=[DIRECT+'--sodium', DIRECT+'--naphthalene'])
+            r['products'][0]['source_sample_label'] = 'ST12-Ge (nanocrystalline)'
+            with self.subTest(method=method): self.assertFalse(self.passes())
+
+    def test_new_proof_keeps_existing_particle_and_component_protections(self):
+        for label in ['Ge', 'Ge nanocrystals embedded in SiO2', 'Ge quantum dot substrate film']:
+            r = self.route('gas'); r['products'][0]['source_sample_label'] = label
+            with self.subTest(label=label): self.assertFalse(self.passes())
+        r = self.route('gas'); r['material']['architecture'] = 'composite'
+        self.assertFalse(self.passes())
+        r = self.route('gas'); r['material']['architecture'] = 'single_material'
+        r['products'][0]['composition']['status'] = 'inferred'
+        self.assertFalse(self.passes())
+
+
 if __name__=='__main__':unittest.main()

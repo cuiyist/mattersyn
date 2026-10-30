@@ -173,6 +173,104 @@ def germanium_reviewed_regression_checks(hub, byid):
                 return True
         return False
 
+    def source_bound_non_solution(record, product):
+        """Sufficient particle proof for explicit gas/plasma/ablation routes only."""
+        method = str(record.get("method", "")).strip().casefold()
+        formation = {"gas-phase condensation": "condense",
+                     "laser ablation": "ablate", "pulsed laser ablation": "ablate"}
+        plasma = method in {"nonthermal plasma", "plasma synthesis"}
+        if method not in formation and not plasma:
+            return False
+        source_id = record.get("lineage", {}).get("source_group")
+        if not (isinstance(source_id, str) and source_id
+                and sum(isinstance(row, dict) and row.get("id") == source_id
+                        for row in record.get("sources", [])) == 1
+                and product.get("recipe_link") == "explicit"
+                and source_evidence(product.get("link_evidence"), source_id)
+                and source_evidence(product.get("composition", {}).get("evidence"), source_id)):
+            return False
+        states = record.get("material_states", [])
+        if not (isinstance(states, list) and all(isinstance(s, dict) for s in states)):
+            return False
+        ids = [s.get("id") for s in states]
+        if not (all(isinstance(s, str) and s for s in ids) and len(ids) == len(set(ids))):
+            return False
+        by_state = dict(zip(ids, states))
+        state = product.get("material_state_id")
+        if not (isinstance(state, str) and state and state in by_state
+                and by_state[state].get("kind") == "product"):
+            return False
+        # The normal producer emits a linear state chain plus reagent references.
+        # Follow only declared states; never infer a missing formation step.
+        operations = record.get("operations", [])
+        if not isinstance(operations, list):
+            return False
+        chain, visited = [], set()
+        while state is not None:
+            if state in visited:
+                return False
+            visited.add(state)
+            producers = [op for op in operations if isinstance(op, dict)
+                         and isinstance(op.get("outputs"), list) and state in op["outputs"]]
+            if len(producers) != 1:
+                return False
+            op = producers[0]
+            if not (op["outputs"].count(state) == 1
+                    and op.get("stage") in {"synthesis", "workup"}
+                    and source_evidence(op.get("evidence"), source_id)
+                    and isinstance(op.get("inputs"), list)
+                    and all(isinstance(x, str) for x in op["inputs"])):
+                return False
+            chain.append(op)
+            parents = {x for x in op["inputs"] if x in by_state}
+            if len(parents) > 1:
+                return False
+            state = next(iter(parents)) if parents else None
+        if method in formation:
+            return any(op.get("action") == formation[method]
+                       and op.get("stage") == "synthesis" for op in chain)
+        # A plasma method name alone is insufficient. Its reactor note must
+        # carry the same physical source page as the dissociation/collection.
+        reactor_pages = set()
+        notes = product.get("notes", [])
+        if not isinstance(notes, list):
+            return False
+        for note in notes:
+            if not isinstance(note, str) or not note.startswith("Reactor: "):
+                continue
+            body, separator, tail = note.rpartition(" (Main PDF p.")
+            page = tail[:-2] if tail.endswith(").") else ""
+            words = set(body.casefold().replace("-", " ").split())
+            if (separator and {"plasma", "reactor"} <= words
+                    and not words.intersection({"no", "not", "non", "without"})
+                    and page.isascii() and page.isdigit() and int(page) > 0):
+                reactor_pages.add("Main PDF p." + page)
+        if not reactor_pages or not any(op.get("stage") == "synthesis" for op in chain):
+            return False
+        for op in chain:
+            if not reactor_pages.intersection(row["locator"] for row in op["evidence"]):
+                continue
+            if op.get("action") == "dissociate" and op.get("stage") == "synthesis":
+                return True
+            parameters = op.get("parameters") or {}
+            if not isinstance(parameters, dict):
+                return False
+            duration = parameters.get("duration") or {}
+            if not isinstance(duration, dict):
+                return False
+            value = duration.get("value")
+            if (op.get("action") == "collect" and op.get("stage") == "workup"
+                    and duration.get("status") == "reported"
+                    and type(value) in (int, float) and 0 < value < float("inf")
+                    and str(duration.get("unit", "")).strip().casefold()
+                        in {"s", "sec", "second", "seconds", "min", "minute", "minutes",
+                            "h", "hr", "hour", "hours", "d", "day", "days"}
+                    and source_evidence(duration.get("evidence"), source_id)
+                    and reactor_pages.intersection(row["locator"] for row in duration["evidence"])):
+                return True
+        return False
+
+
     def direct_particle(record):
         material, products = record.get("material", {}), record.get("products", [])
         return (material.get("formula") == "Ge" and material.get("components") == ["Ge"]
@@ -180,7 +278,8 @@ def germanium_reviewed_regression_checks(hub, byid):
                 and bool(products)
                 and (str(record.get("method", "")).strip().casefold() in {"heat-up", "hot-injection", "colloidal synthesis", "microwave", "metathesis"}
                      or str(record.get("method", "")).strip().casefold() == "synthesis as described in the source"
-                     and all(source_bound_dialysis(record, product) for product in products))
+                     and all(source_bound_dialysis(record, product) for product in products)
+                     or all(source_bound_non_solution(record, product) for product in products))
                 and all(
                     product.get("composition", {}).get("value") == "Ge"
                     and product.get("composition", {}).get("status") == "reported"
