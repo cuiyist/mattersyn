@@ -1,0 +1,444 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "demyanets2010-s1063774510010219-zno-nanocrystallites-and-microcrystallit-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "L. N. Demyanets; L. E. Li; A. S. Lavrikov; S. V. Nikitin (2010): ZnO nanocrystallites and microcrystallites",
+  "material": {
+    "formula": "ZnO",
+    "family": "ZnO nanocrystals",
+    "elements": [
+      "Zn",
+      "O"
+    ],
+    "components": [
+      "ZnO"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Pyrolytic",
+  "sources": [
+    {
+      "id": "demyanets2010-s1063774510010219",
+      "doi": "10.1134/s1063774510010219",
+      "title": "Nanocrystalline zinc oxide: Pyrolytic synthesis and spectroscopic characteristics",
+      "authors": "L. N. Demyanets; L. E. Li; A. S. Lavrikov; S. V. Nikitin",
+      "year": 2010,
+      "url": "https://doi.org/10.1134/s1063774510010219",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "demyanets2010-s1063774510010219",
+    "recipe_family": "demyanets2010-s1063774510010219-zno-nanocrystallites-and-microcrystallit-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "ZnO",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "demyanets2010-s1063774510010219",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "wurtzite",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "demyanets2010-s1063774510010219",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": 0.07,
+      "minimum": null,
+      "maximum": null,
+      "unit": "μm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "0.07 μm",
+      "evidence": [
+        {
+          "source_id": "demyanets2010-s1063774510010219",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "tetrapod | hexagonal prism | ribbon | comb | sail-like band",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "demyanets2010-s1063774510010219",
+          "locator": "Main PDF p.4"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "demyanets2010-s1063774510010219-zno-nanocrystallites-and-microcrystallit-1--zinc-acetate",
+      "name": "zinc acetate",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "demyanets2010-s1063774510010219",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "demyanets2010-s1063774510010219-zno-nanocrystallites-and-microcrystallit-1--cellulose-carrier",
+      "name": "cellulose carrier",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "demyanets2010-s1063774510010219",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "demyanets2010-s1063774510010219-zno-nanocrystallites-and-microcrystallit-1--after-s01-impregnate",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "demyanets2010-s1063774510010219-zno-nanocrystallites-and-microcrystallit-1--zinc-acetate",
+        "demyanets2010-s1063774510010219-zno-nanocrystallites-and-microcrystallit-1--cellulose-carrier"
+      ]
+    },
+    {
+      "id": "demyanets2010-s1063774510010219-zno-nanocrystallites-and-microcrystallit-1--after-s02-heat",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "demyanets2010-s1063774510010219-zno-nanocrystallites-and-microcrystallit-1--after-s01-impregnate",
+        "demyanets2010-s1063774510010219-zno-nanocrystallites-and-microcrystallit-1--zinc-acetate",
+        "demyanets2010-s1063774510010219-zno-nanocrystallites-and-microcrystallit-1--cellulose-carrier"
+      ]
+    },
+    {
+      "id": "demyanets2010-s1063774510010219-zno-nanocrystallites-and-microcrystallit-1--after-s03-cool",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "demyanets2010-s1063774510010219-zno-nanocrystallites-and-microcrystallit-1--after-s02-heat"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-impregnate",
+      "action": "impregnate",
+      "label": "Impregnate cellulose carrier with zinc acetate solution",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "demyanets2010-s1063774510010219-zno-nanocrystallites-and-microcrystallit-1--zinc-acetate",
+        "demyanets2010-s1063774510010219-zno-nanocrystallites-and-microcrystallit-1--cellulose-carrier"
+      ],
+      "outputs": [
+        "demyanets2010-s1063774510010219-zno-nanocrystallites-and-microcrystallit-1--after-s01-impregnate"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "demyanets2010-s1063774510010219",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Impregnate cellulose carrier with zinc acetate solution",
+      "evidence": [
+        {
+          "source_id": "demyanets2010-s1063774510010219",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-heat",
+      "action": "heat",
+      "label": "Heat cellulose carrier in furnace",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-impregnate"
+      ],
+      "inputs": [
+        "demyanets2010-s1063774510010219-zno-nanocrystallites-and-microcrystallit-1--after-s01-impregnate",
+        "demyanets2010-s1063774510010219-zno-nanocrystallites-and-microcrystallit-1--zinc-acetate",
+        "demyanets2010-s1063774510010219-zno-nanocrystallites-and-microcrystallit-1--cellulose-carrier"
+      ],
+      "outputs": [
+        "demyanets2010-s1063774510010219-zno-nanocrystallites-and-microcrystallit-1--after-s02-heat"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "10 min",
+          "evidence": [
+            {
+              "source_id": "demyanets2010-s1063774510010219",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "demyanets2010-s1063774510010219",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Heat cellulose carrier in furnace",
+      "evidence": [
+        {
+          "source_id": "demyanets2010-s1063774510010219",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-cool",
+      "action": "cool",
+      "label": "Cool furnace to room temperature",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-heat"
+      ],
+      "inputs": [
+        "demyanets2010-s1063774510010219-zno-nanocrystallites-and-microcrystallit-1--after-s02-heat"
+      ],
+      "outputs": [
+        "demyanets2010-s1063774510010219-zno-nanocrystallites-and-microcrystallit-1--after-s03-cool"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 17,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "17 h",
+          "evidence": [
+            {
+              "source_id": "demyanets2010-s1063774510010219",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "demyanets2010-s1063774510010219",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Cool furnace to room temperature",
+      "evidence": [
+        {
+          "source_id": "demyanets2010-s1063774510010219",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "demyanets2010-s1063774510010219-zno-nanocrystallites-and-microcrystallit-1--product",
+      "source_sample_label": "ZnO nanocrystallites and microcrystallites",
+      "batch_id": null,
+      "material_state_id": "demyanets2010-s1063774510010219-zno-nanocrystallites-and-microcrystallit-1--after-s03-cool",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "ZnO",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "demyanets2010-s1063774510010219",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "wurtzite",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "demyanets2010-s1063774510010219",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "tetrapod | hexagonal prism | ribbon | comb | sail-like band",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "demyanets2010-s1063774510010219",
+            "locator": "Main PDF p.4"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "demyanets2010-s1063774510010219",
+          "locator": "Main PDF p.7"
+        }
+      ],
+      "notes": [
+        "Reactor: TK-64 muffle furnace 64 l in volume (Main PDF p.2).",
+        "Reaction temperature: 1000 degC (Main PDF p.7).",
+        "Reaction time: 10 min (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "demyanets2010-s1063774510010219-zno-nanocrystallites-and-microcrystallit-1--size",
+      "sample_id": "demyanets2010-s1063774510010219-zno-nanocrystallites-and-microcrystallit-1--product",
+      "property": "particle_size",
+      "technique": "not reported",
+      "value": {
+        "value": 0.07,
+        "minimum": null,
+        "maximum": null,
+        "unit": "μm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "0.07 μm",
+        "evidence": [
+          {
+            "source_id": "demyanets2010-s1063774510010219",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "demyanets2010-s1063774510010219",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Ligand not reported in the extracted text.",
+      "Amount of zinc acetate not reported in the extracted text.",
+      "Amount of cellulose carrier not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
