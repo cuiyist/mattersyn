@@ -1,3 +1,13 @@
+## Daily metadata status — 2026-10-31 (America/Chicago)
+
+**Live: 2881 papers / 6813 records / 4692 combined pairs / 1208 material families. Read metadata: 3049 of 3163 accepted physical PDF rows. Operational Scope: 525 IN / 2133 OUT-or-omitted / 505 uncertain.**
+
+The snapshot at 2026-10-31T05:06:30.875679+00:00 includes completed Q190/Q191/Q192 and the independently completed null-DOI item. Read metadata comprises 2263 explicit-positive metadata rows and 786 historical saved reads not revalidated. Another 38 rows have attempted results without usable saved-read metadata, and 76 have no successful or terminal metadata in the named epochs. These are physical-row bookkeeping buckets; they are not unique primary-paper counts, an eligible reading feed, a uniform-current-code certificate, or an accuracy, readiness, expert-audit or audited-training claim.
+
+Operational Scope combines accepted-title fallback with saved adopted product decisions and operational omissions. The original accepted-title axis remains 444 IN / 802 OUT / 1917 uncertain; no fresh global scientific Scope reassessment is claimed. Revalidations update existing physical identities rather than adding cohort totals as new papers. The independently completed null-DOI item is IN with a normal no_synthesis_operation technical omission and zero eligible records; it is not counted as OUT or Live.
+
+Live is reused from the verified thirteen-paper release on Site `3c9902d60302710dd6666192e9385d9bfd1343af` at 2026-10-30T20:57:42Z. Source-only PR 123 and its ordinary merge `a8fc51322b370c724f00a927afaf1a8e9c817666` changed conversion tooling and contribute no Live papers or records. This daily header performs no website publication or new source read. The separately retained literal Live-membership projection remains dated and sparse; the current Live header does not refresh that coverage or establish global collection exhaustion. All earlier report sections, failure/refusal histories and denominators remain below unchanged.
+
 ## Verified particles13 publication — 2026-10-30T20:57:42+00:00
 
 **Live: 2881 papers / 6813 records / 4692 combined pairs / 1208 material families.** The frozen thirteen new primary papers / sixteen selected original-ordinal source_extracted records / 82 captioned crops receive publication credit only after the actual normal publisher returns zero, exact-head Source and Pages checks succeed and anonymous verification covers every frozen paper/material route on Site `3c9902d60302710dd6666192e9385d9bfd1343af`. Data remains source_extracted/unreviewed, with no new expert-audit or audited-training credit.
