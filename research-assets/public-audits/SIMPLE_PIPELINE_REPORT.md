@@ -1,3 +1,17 @@
+## Source23 verified particle batch — 2026-10-31T19:43:26+00:00
+
+10 primary papers / 12 selected original-ordinal source_extracted/unreviewed records / 35 captioned crops were verified on Site 6db65ab8b4f6a992e3c5d80d4884e712f655545f under particles10-20261031-r1. Actual global Live counters: 2891 papers, 6825 records, 4704 combined synthesis–structure pairs and 1211 direct material families. Public Source merge is 608df93efda9805ced2c197375e3da8b30ada658; this section is bound only after actual publisher0, Pages and anonymous verification. No new expert-review or training credit is granted.
+
+Saved scope decisions omit 14 post-read candidates for this job (Historical7: five; Historical17: nine), plus two pre-model title-based omissions and independent row2452. Six post-read entries retained no usable product pair; the other saved uncertainty and substrate/electrode-only reasons remain distinct. These operational omissions do not establish new bulk/film findings. Two additional Historical17 papers remain IN technical with zero eligible preparation records and are excluded from the OUT list. Original read, failure and ordinal history is retained; no live paper was re-audited or removed.
+
+The original nine-candidate denominator retains two title omissions before the seven-item model read; independent row2452 remains outside that denominator. Historical17 keeps all17 attempted-read outcomes and its two IN technical zero-record holds. Prior failures, pass/redo outcomes, unknown identities and all older report/index entries remain retained. Q19522 title lookup is still left out after its actual refusal with zero GETs; there is no retry or substitute route.
+
+Source transport original create ended9bf8c4/1 with RuntimeError after existing branch/PR125 creation; GET-only reconciliation f8fc2f/0 recovered that existing PR without replay. Exact-head normal Source CI41226899911 later passed allthree jobs and PR125 merged ordinarily. The original create result remains1.
+
+Storage (Source23 publication window): C free 79852122112 -> 63198834688 actual bytes (nonisolated); 30.330723914 decimal GB removed (30330723914 actual closed logical bytes), including the 30330723914-byte pinned unreported carry and 0 later actual closed bytes. Earlier reported windows are excluded by the retained carry proof. Logical removal and physical C change are distinct; no anticipated cleanup credit.
+
+This release does not assert global queue exhaustion or job completion. The existing daily census is retained without a new census.
+
 ## Daily metadata status — 2026-10-31 (America/Chicago)
 
 **Live: 2881 papers / 6813 records / 4692 combined pairs / 1208 material families. Read metadata: 3049 of 3163 accepted physical PDF rows. Operational Scope: 525 IN / 2133 OUT-or-omitted / 505 uncertain.**
