@@ -4411,3 +4411,44 @@ This one already selected omission concerns uncertain free-particle formation fr
 | 10.1021/acssuschemeng.0c06260 | markovic2020-acssuschemeng-0c06260 | markovic2020-acssuschemeng-0c06260-f-doped-carbon-quantum-dots-fcqds-1, markovic2020-acssuschemeng-0c06260-cl-doped-carbon-quantum-dots-clcqds-2 | particles13-20261030-r1 | Live; source_extracted/unreviewed | 2026-10-30T20:57:42+00:00; Site 3c9902d60302710dd6666192e9385d9bfd1343af | 0 |
 | 10.1021/acs.jpcc.4c07930 | zhou2025-acs-jpcc-4c07930 | zhou2025-acs-jpcc-4c07930-cugas2-qds-synthesized-at-220-c-1 | particles13-20261030-r1 | Live; source_extracted/unreviewed | 2026-10-30T20:57:42+00:00; Site 3c9902d60302710dd6666192e9385d9bfd1343af | 0 |
 | 10.1039/b915622d | ge2010-b915622d | ge2010-b915622d-tga-capped-cdte-qds-1 | particles13-20261030-r1 | Live; source_extracted/unreviewed | 2026-10-30T20:57:42+00:00; Site 3c9902d60302710dd6666192e9385d9bfd1343af | 0 |
+
+
+## Source23 verified particle batch — 2026-10-31T19:43:26+00:00
+
+10 primary papers / 12 selected original-ordinal source_extracted/unreviewed records / 35 captioned crops verified at 2026-10-31T19:43:26+00:00 on Site 6db65ab8b4f6a992e3c5d80d4884e712f655545f. Original RID/ordinal and both public archive lineages retained; no expert-training credit.
+
+| DOI | Source ID | Record IDs | Batch | Status | Live verification | Training |
+|---|---|---|---|---|---|---|
+| 10.1134/s1063774510010219 | demyanets2010-s1063774510010219 | demyanets2010-s1063774510010219-zno-nanocrystallites-and-microcrystallit-1 | particles10-20261031-r1 | Live; source_extracted/unreviewed | 2026-10-31T19:43:26+00:00; Site 6db65ab8b4f6a992e3c5d80d4884e712f655545f | 0 |
+| 10.1134/s1063774508070158 | trukhanov2008-s1063774508070158 | trukhanov2008-s1063774508070158-la0-50ba0-50mno3-1 | particles10-20261031-r1 | Live; source_extracted/unreviewed | 2026-10-31T19:43:26+00:00; Site 6db65ab8b4f6a992e3c5d80d4884e712f655545f | 0 |
+| 10.1021/ja990084f | sun1999-ja990084f | sun1999-ja990084f-ap-mgo-cl2-adduct-1 | particles10-20261031-r1 | Live; source_extracted/unreviewed | 2026-10-31T19:43:26+00:00; Site 6db65ab8b4f6a992e3c5d80d4884e712f655545f | 0 |
+| 10.1021/ja109955w | jirkovsky2011-ja109955w | jirkovsky2011-ja109955w-ru0-8co0-2o2-3 | particles10-20261031-r1 | Live; source_extracted/unreviewed | 2026-10-31T19:43:26+00:00; Site 6db65ab8b4f6a992e3c5d80d4884e712f655545f | 0 |
+| 10.1021/jp0645014 | amirav2006-jp0645014 | amirav2006-jp0645014-mns-nanocrystal-clusters-coral-shaped-as-1 | particles10-20261031-r1 | Live; source_extracted/unreviewed | 2026-10-31T19:43:26+00:00; Site 6db65ab8b4f6a992e3c5d80d4884e712f655545f | 0 |
+| 10.1103/physrevlett.86.127 | korgel2001-physrevlett-86-127 | korgel2001-physrevlett-86-127-c8-capped-silver-nanocrystals-1, korgel2001-physrevlett-86-127-c12-capped-silver-nanocrystals-2, korgel2001-physrevlett-86-127-c16-capped-silver-nanocrystals-3 | particles10-20261031-r1 | Live; source_extracted/unreviewed | 2026-10-31T19:43:26+00:00; Site 6db65ab8b4f6a992e3c5d80d4884e712f655545f | 0 |
+| 10.1002/pmic.200701072 | gokarna2008-pmic-200701072 | gokarna2008-pmic-200701072-qd-conjugated-psa-abs-1 | particles10-20261031-r1 | Live; source_extracted/unreviewed | 2026-10-31T19:43:26+00:00; Site 6db65ab8b4f6a992e3c5d80d4884e712f655545f | 0 |
+| 10.1006/jcis.2000.7009 | pingbo2000-jcis-2000-7009 | pingbo2000-jcis-2000-7009-dbs-surface-modified-nanocrystalline-zns-1 | particles10-20261031-r1 | Live; source_extracted/unreviewed | 2026-10-31T19:43:26+00:00; Site 6db65ab8b4f6a992e3c5d80d4884e712f655545f | 0 |
+| 10.1246/cl.2001.1024 | balint2001-cl-2001-1024 | balint2001-cl-2001-1024-pt-100-al2o3-1 | particles10-20261031-r1 | Live; source_extracted/unreviewed | 2026-10-31T19:43:26+00:00; Site 6db65ab8b4f6a992e3c5d80d4884e712f655545f | 0 |
+| 10.1002/9781118408414.ch11 | banerjee2006-9781118408414-ch11 | banerjee2006-9781118408414-ch11-hydroxyapatite-nanopowder-1 | particles10-20261031-r1 | Live; source_extracted/unreviewed | 2026-10-31T19:43:26+00:00; Site 6db65ab8b4f6a992e3c5d80d4884e712f655545f | 0 |
+## Source23 saved-title scope omissions for this job — repository only
+
+Saved scope decisions omit 14 post-read candidates for this job (Historical7: five; Historical17: nine), plus two pre-model title-based omissions and independent row2452. Six post-read entries retained no usable product pair; the other saved uncertainty and substrate/electrode-only reasons remain distinct. These operational omissions do not establish new bulk/film findings. Two additional Historical17 papers remain IN technical with zero eligible preparation records and are excluded from the OUT list. Original read, failure and ordinal history is retained; no live paper was re-audited or removed.
+
+| DOI | Cohort | Saved trusted title | Existing adopted omission |
+|---|---|---|---|
+| 10.1088/0268-1242/30/5/055005 | Historical7 | Excitation transfer in stacked quantum dot chains | Operational omission: successful normal read retained no usable product pair; free-particle synthesis is unestablished. |
+| 10.1088/0957-4484/26/25/255302 | Historical7 | SiGe quantum dot crystals with periods down to 35 nm | Operational omission: successful normal read retained no usable product pair; free-particle synthesis is unestablished. |
+| 10.1088/1361-6528/aac39c | Historical7 | Ultrastable, highly luminescent quantum dot composites based on advanced surface manipulation strategy for flexible lighting-emitting | Operational omission: successful normal read retained no usable product pair; free-particle synthesis is unestablished. |
+| 10.1088/0957-4484/1/1/011 | Historical7 | Non-equilibrium quantum dots: transport | Operational omission: successful normal read retained no usable product pair; free-particle synthesis is unestablished. |
+| 10.1134/s0031918x08020063 | Historical7 | Mössbauer Spectroscopy of the Nanocrystalline Materials | Uncertain free isolability after the saved normal read of mechanically alloyed/ground nanocrystalline material. |
+| 10.1103/physrevlett.86.4930 | Historical17 | Observation of Phonon Bottleneck in Quantum Dot Electronic Relaxation | Saved product is substrate/embedded epitaxial quantum dots, without a free isolable particle stage. |
+| 10.1021/jz200399n | Historical17 | Internal Photoreference Electrode: A Powerful Characterization Method for Photoelectrochemical Quantum Dot Sensitized Solar Cells | Saved formation is on an electrode; no retained free isolable particle stage. |
+| 10.1039/c0cc00642d | Historical17 | Electrocatalytic sulfur electrodes for CdS/CdSe quantum dot-sensitized solar cells | No retained free-particle preparation route; remaining saved product is an electrode. Normal no-synthesis status stays separate. |
+| 10.1021/nl034793+ | Historical17 | Kinetics of Nonequilibrium Nanocrystal Monolayer Formation:  Deposition from Liquid Carbon Dioxide | Operational omission: successful normal read retained no usable product pair; no definitive film finding is inferred. |
+| 10.1063/1.358852 | Historical17 | Annealing temperature dependence of effective magnetic anisotropy of Fe-Cu-Nb-Si-B nanocrystalline alloys | Free isolable particle preparation is unestablished after the saved normal read; no new bulk/film label. |
+| 10.1063/1.1383017 | Historical17 | Dipole–dipole interaction in superparamagnetic nanocrystalline Fe63.5Cr10Si13.5B9Cu1Nb3 | Free isolable particle preparation is unestablished after the saved normal read; no new bulk/film label. |
+| 10.1063/1.3263948 | Historical17 | Fivefold annealing twin in nanocrystalline Cu | Free isolable particle preparation is unestablished after the saved normal read; no new bulk/film label. |
+| 10.1103/physrevb.71.245305 | Historical17 | Collective behavior of single electron effects in a single layer Si quantum dot array at room temperature | Saved product is a substrate/embedded single-layer array, without a free isolable particle stage. |
+| 10.1063/1.1755419 | Historical17 | Unpinning of Fermi level in nanocrystalline semiconductors | Operational omission: successful normal read retained no usable product pair; no new physical material finding. |
+| 10.1088/0957-4484/25/21/215602 | Historical9_candidate_title_before_model | Vertically stacked quantum dot pairs fabricated by nanohole filling | Pre-model title omission: substrate/epitaxial nanostructure, without an isolated-particle route. |
+| 10.1088/0957-4484/22/18/185602 | Historical9_candidate_title_before_model | Coupled quantum dot–ring structures by droplet epitaxy | Pre-model title omission: substrate/epitaxial nanostructure, without an isolated-particle route. |
+| 10.1088/0022-3727/47/48/485303 | Independent2452_title_before_model | Ordering of low-density Ge quantum dot on patterned Si substrate | Independent pre-model title omission: quantum dots on patterned Si substrate. |
