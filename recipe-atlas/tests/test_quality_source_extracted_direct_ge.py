@@ -1,5 +1,5 @@
 """Synthetic metadata fixtures; direct Ge never changes historical reviewed routes."""
-import ast,copy,unittest
+import ast,copy,json,unittest
 from pathlib import Path
 
 def quality():
@@ -349,6 +349,130 @@ class NonSolutionParticleProof(unittest.TestCase):
         r = self.route('gas'); r['material']['architecture'] = 'single_material'
         r['products'][0]['composition']['status'] = 'inferred'
         self.assertFalse(self.passes())
+
+
+class EtchIsolation(unittest.TestCase):
+    """Use the complete committed Lai record; mutations never change its file."""
+    def setUp(self):
+        self.byid, self.hub = fixtures()
+        path = Path(__file__).resolve().parents[1] / 'data/records/lai2025-jacs-5c00423-dc-geqds-1.json'
+        self.actual = json.loads(path.read_bytes())
+        self.byid.pop(DIRECT)
+        self.rid = self.actual['record_id']
+        self.byid[self.rid] = copy.deepcopy(self.actual)
+        self.hub['record_ids'].remove(DIRECT)
+        self.hub['record_ids'].append(self.rid)
+        self.hub['direct_record_ids'] = [self.rid]
+
+    def fresh(self):
+        self.byid[self.rid] = copy.deepcopy(self.actual)
+        return self.byid[self.rid]
+
+    def passes(self):
+        return all(ok for ok, _ in Q['germanium_reviewed_regression_checks'](self.hub, self.byid))
+
+    def test_actual_full_record_passes_without_mutation_or_filling_unknowns(self):
+        before = copy.deepcopy((self.byid, self.hub))
+        self.assertEqual(self.actual['method'], 'Synthesis as described in the source')
+        self.assertIsNone(self.actual['products'][0]['morphology']['value'])
+        self.assertTrue(self.passes())
+        self.assertEqual((self.byid, self.hub), before)
+
+    def test_isolation_wording_is_positive_and_explicit_in_both_fields(self):
+        for key in ('label', 'description'):
+            for text in ['', 'HF-etching', 'HF-etching to isolate GeQDs',
+                         'Etching to isolate freestanding GeQDs',
+                         'HF-etching did not isolate freestanding GeQDs',
+                         'HF-etching failed to isolate freestanding GeQDs',
+                         'HF-etching to isolate freestanding GeQDs was proposed',
+                         'HF-etching to isolate freestanding GeQDs from precursors only']:
+                r = self.fresh(); r['operations'][1][key] = text
+                with self.subTest(key=key, text=text): self.assertFalse(self.passes())
+
+    def test_all_evidence_is_same_source_and_physically_located(self):
+        selectors = [lambda r: (r['products'][0], 'link_evidence'),
+                     lambda r: (r['products'][0]['composition'], 'evidence'),
+                     lambda r: (r['products'][0]['phase'], 'evidence'),
+                     lambda r: (r['products'][0]['surface'], 'evidence'),
+                     lambda r: (r['operations'][0], 'evidence'),
+                     lambda r: (r['operations'][0]['parameters']['temperature'], 'evidence'),
+                     lambda r: (r['operations'][1], 'evidence'),
+                     lambda r: (r['operations'][2], 'evidence')]
+        for select in selectors:
+            for bad in [None, [], [{'source_id':'wrong', 'locator':'Main PDF p.2'}],
+                        [{'source_id':self.actual['lineage']['source_group'], 'locator':'Main PDF'}],
+                        [{'source_id':self.actual['lineage']['source_group'], 'locator':'Main PDF p.0'}]]:
+                r = self.fresh(); owner, key = select(r); owner[key] = bad
+                with self.subTest(select=select, bad=bad): self.assertFalse(self.passes())
+
+    def test_wrong_page_cannot_supply_formation_etch_or_surface_corroboration(self):
+        for select in [lambda r: r['operations'][0],
+                       lambda r: r['operations'][0]['parameters']['temperature'],
+                       lambda r: r['operations'][1], lambda r: r['operations'][2],
+                       lambda r: r['products'][0]['phase'], lambda r: r['products'][0]['surface']]:
+            r = self.fresh(); select(r)['evidence'][0]['locator'] = 'Main PDF p.99'
+            with self.subTest(select=select): self.assertFalse(self.passes())
+
+    def test_chain_rejects_disconnect_cycle_duplicate_producer_or_state(self):
+        def disconnect(r):
+            r['operations'][2]['inputs'] = [r['material_states'][0]['id']]
+            r['material_states'][2]['parent_ids'] = r['operations'][2]['inputs'][:]
+        def cycle(r):
+            r['operations'][0]['inputs'] = [r['material_states'][2]['id']]
+            r['material_states'][0]['parent_ids'] = r['operations'][0]['inputs'][:]
+        for mutate in [disconnect, cycle,
+                       lambda r: r['operations'].append(copy.deepcopy(r['operations'][1])),
+                       lambda r: r['material_states'].append(copy.deepcopy(r['material_states'][1])),
+                       lambda r: r['operations'][1]['outputs'].append(r['material_states'][1]['id']),
+                       lambda r: r['operations'][1].update(outputs=['disconnected']),
+                       lambda r: r['material_states'][1].update(parent_ids=[]),
+                       lambda r: r['operations'][2].update(id=r['operations'][1]['id'])]:
+            r = self.fresh(); mutate(r)
+            with self.subTest(mutate=mutate): self.assertFalse(self.passes())
+
+    def test_formation_and_only_surface_finishing_are_required(self):
+        for mutate in [lambda r: r['operations'][0].update(action='dissolve'),
+                       lambda r: r['operations'][0].update(stage='characterization'),
+                       lambda r: r['operations'][1].update(action='wash'),
+                       lambda r: r['operations'][1].update(optional=True),
+                       lambda r: r['operations'][2].update(action='deposit'),
+                       lambda r: r['operations'][2].update(description='Surface functionalization into an embedded film')]:
+            r = self.fresh(); mutate(r)
+            with self.subTest(mutate=mutate): self.assertFalse(self.passes())
+        for key, value in [('value', 0), ('value', True), ('value', float('nan')), ('value', float('inf')),
+                           ('status', 'inferred'), ('unit', 'mg')]:
+            r = self.fresh(); r['operations'][0]['parameters']['temperature'][key] = value
+            with self.subTest(key=key, value=value): self.assertFalse(self.passes())
+
+    def test_generic_method_only_and_unchanged_identity_product_guards(self):
+        for method in ['Milling', 'Chemical reduction', 'Ion implantation', '']:
+            r = self.fresh(); r['method'] = method
+            with self.subTest(method=method): self.assertFalse(self.passes())
+        for label in ['Ge', 'GeQDsfilm', 'GeQDs precursor only', 'GeQDs film', 'GeQDs embedded in SiO2']:
+            r = self.fresh(); r['products'][0]['source_sample_label'] = label
+            if label == 'GeQDs precursor only':
+                r['operations'][1]['description'] = 'HF-etching to isolate freestanding GeQDs precursor only'
+            with self.subTest(label=label): self.assertFalse(self.passes())
+        for key, value in [('formula', 'GeO2'), ('components', ['Ge','SiO2']),
+                           ('elements', ['Ge','O']), ('architecture', 'composite')]:
+            r = self.fresh(); r['material'][key] = value
+            with self.subTest(key=key): self.assertFalse(self.passes())
+        for mutate in [lambda r: r['products'][0].update(recipe_link='inferred'),
+                       lambda r: r['products'][0]['composition'].update(status='inferred'),
+                       lambda r: r['material_states'][2].update(kind='reaction_batch'),
+                       lambda r: r['sources'].append(copy.deepcopy(r['sources'][0]))]:
+            r = self.fresh(); mutate(r)
+            with self.subTest(mutate=mutate): self.assertFalse(self.passes())
+
+    def test_each_product_needs_own_proof_and_no_DOI_or_record_ID_allowlist(self):
+        r = self.fresh(); other = copy.deepcopy(r['products'][0]); other['material_state_id'] = 'unlinked'
+        r['products'].append(other); self.assertFalse(self.passes())
+        r = self.fresh(); r['sources'][0]['doi'] = '10.synthetic/different-paper'
+        new_id = 'unlisted-source-bound-isolation'
+        self.byid.pop(self.rid); r['record_id'] = new_id; self.byid[new_id] = r
+        self.hub['record_ids'].remove(self.rid); self.hub['record_ids'].append(new_id)
+        self.hub['direct_record_ids'] = [new_id]
+        self.assertTrue(self.passes())
 
 
 if __name__=='__main__':unittest.main()

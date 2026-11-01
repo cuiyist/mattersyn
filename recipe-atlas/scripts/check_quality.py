@@ -173,6 +173,100 @@ def germanium_reviewed_regression_checks(hub, byid):
                 return True
         return False
 
+    def source_bound_etch_isolation(record, product):
+        """Sufficient source-bound HF isolation proof, without inferring a method."""
+        source_id = record.get("lineage", {}).get("source_group")
+        if not (isinstance(source_id, str) and source_id
+                and sum(isinstance(row, dict) and row.get("id") == source_id
+                        for row in record.get("sources", [])) == 1
+                and "geqds" in str(product.get("source_sample_label", "")).casefold().replace("-", " ").split()
+                and product.get("recipe_link") == "explicit"
+                and source_evidence(product.get("link_evidence"), source_id)
+                and source_evidence(product.get("composition", {}).get("evidence"), source_id)):
+            return False
+        states, operations = record.get("material_states", []), record.get("operations", [])
+        if not (isinstance(states, list) and all(isinstance(s, dict) for s in states)
+                and isinstance(operations, list) and all(isinstance(op, dict) for op in operations)):
+            return False
+        ids, op_ids = [s.get("id") for s in states], [op.get("id") for op in operations]
+        if not all(all(isinstance(x, str) and x for x in values)
+                   and len(values) == len(set(values)) for values in (ids, op_ids)):
+            return False
+        by_state = dict(zip(ids, states))
+        state = product.get("material_state_id")
+        if not (isinstance(state, str) and state in by_state and by_state[state].get("kind") == "product"):
+            return False
+        chain, visited = [], set()
+        while state is not None:
+            if state in visited:
+                return False
+            visited.add(state)
+            producers = [op for op in operations if isinstance(op.get("outputs"), list) and state in op["outputs"]]
+            if len(producers) != 1:
+                return False
+            op = producers[0]
+            inputs, parents = op.get("inputs"), by_state[state].get("parent_ids")
+            if not (op["outputs"] == [state] and op.get("stage") in {"synthesis", "workup"}
+                    and not op.get("optional", False) and source_evidence(op.get("evidence"), source_id)
+                    and isinstance(inputs, list) and bool(inputs)
+                    and all(isinstance(x, str) and x for x in inputs) and len(inputs) == len(set(inputs))
+                    and isinstance(parents, list) and len(parents) == len(inputs) and set(parents) == set(inputs)):
+                return False
+            chain.append(op)
+            state_parents = [x for x in inputs if x in by_state]
+            if len(state_parents) > 1:
+                return False
+            state = state_parents[0] if state_parents else None
+        chain.reverse()
+        # This narrow proof has one explicit formation, then isolation, then
+        # surface-only finishing. It cannot rescue precursor-only or film routes.
+        if not (len(chain) >= 2 and [op.get("action") for op in chain[:2]] == ["anneal", "etch"]
+                and chain[0].get("stage") == "synthesis"
+                and all(op.get("action") == "functionalize" for op in chain[2:])):
+            return False
+        formation, etch = chain[:2]
+        temperature = formation.get("parameters", {}).get("temperature", {})
+        value = temperature.get("value")
+        if not (temperature.get("status") == "reported" and type(value) in (int, float)
+                and 0 < value < float("inf")
+                and str(temperature.get("unit", "")).strip().casefold() in {"degc", "°c", "c", "k"}
+                and source_evidence(temperature.get("evidence"), source_id)
+                and {row["locator"] for row in formation["evidence"]}
+                    .intersection(row["locator"] for row in temperature["evidence"])):
+            return False
+        negative = {"no", "not", "non", "without", "never", "failed", "fails", "unable", "unsuccessful",
+                    "lack", "lacks", "lacking", "neither", "nor", "unisolated", "precursor", "precursors",
+                    "proposed", "planned", "would", "could", "may", "might", "attempt", "attempted",
+                    "embedded", "matrix", "substrate", "supported", "film", "films", "device", "implant", "well"}
+
+        def positive_text(op, required):
+            for key in ("label", "description"):
+                text = op.get(key)
+                if not isinstance(text, str):
+                    return False
+                words = set("".join(c if c.isalnum() else " " for c in text.casefold()).split())
+                if not required <= words or words.intersection(negative):
+                    return False
+            return True
+
+        phase = product.get("phase", {})
+        etch_pages = {row["locator"] for row in etch["evidence"]}
+        if not (positive_text(etch, {"hf", "etching", "isolate", "freestanding", "geqds"})
+                and phase.get("status") == "reported" and isinstance(phase.get("value"), str) and phase["value"].strip()
+                and source_evidence(phase.get("evidence"), source_id)
+                and etch_pages.intersection(row["locator"] for row in phase["evidence"])):
+            return False
+        for op in chain[2:]:
+            surface = product.get("surface", {})
+            if not (positive_text(op, {"surface", "functionalization"})
+                    and surface.get("status") == "reported"
+                    and isinstance(surface.get("value"), str) and surface["value"].strip()
+                    and source_evidence(surface.get("evidence"), source_id)
+                    and etch_pages.intersection(row["locator"] for row in op["evidence"])
+                        .intersection(row["locator"] for row in surface["evidence"])):
+                return False
+        return True
+
     def source_bound_non_solution(record, product):
         """Sufficient particle proof for explicit gas/plasma/ablation routes only."""
         method = str(record.get("method", "")).strip().casefold()
@@ -278,7 +372,8 @@ def germanium_reviewed_regression_checks(hub, byid):
                 and bool(products)
                 and (str(record.get("method", "")).strip().casefold() in {"heat-up", "hot-injection", "colloidal synthesis", "microwave", "metathesis"}
                      or str(record.get("method", "")).strip().casefold() == "synthesis as described in the source"
-                     and all(source_bound_dialysis(record, product) for product in products)
+                     and all(source_bound_dialysis(record, product)
+                             or source_bound_etch_isolation(record, product) for product in products)
                      or all(source_bound_non_solution(record, product) for product in products))
                 and all(
                     product.get("composition", {}).get("value") == "Ge"
