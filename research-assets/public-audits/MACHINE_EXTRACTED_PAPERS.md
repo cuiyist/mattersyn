@@ -4452,3 +4452,14 @@ Saved scope decisions omit 14 post-read candidates for this job (Historical7: fi
 | 10.1088/0957-4484/25/21/215602 | Historical9_candidate_title_before_model | Vertically stacked quantum dot pairs fabricated by nanohole filling | Pre-model title omission: substrate/epitaxial nanostructure, without an isolated-particle route. |
 | 10.1088/0957-4484/22/18/185602 | Historical9_candidate_title_before_model | Coupled quantum dot–ring structures by droplet epitaxy | Pre-model title omission: substrate/epitaxial nanostructure, without an isolated-particle route. |
 | 10.1088/0022-3727/47/48/485303 | Independent2452_title_before_model | Ordering of low-density Ge quantum dot on patterned Si substrate | Independent pre-model title omission: quantum dots on patterned Si substrate. |
+
+
+## Source24 verified particle batch — 2026-11-01T02:21:20+00:00
+
+3 primary papers / 4 selected original-ordinal source_extracted/unreviewed records / 7 captioned crops verified at 2026-11-01T02:21:20+00:00 on Site 6a60342b6ebd6eeb6d1508311771311d394ad89f. Original RID/ordinal lineage retained; no expert-training credit.
+
+| DOI | Source ID | Record IDs | Batch | Status | Live verification | Training |
+|---|---|---|---|---|---|---|
+| 10.1021/j100066a034 | katari1994-j100066a034 | katari1994-j100066a034-cdse-nanocrystals-1 | particles3-etch-20261031-r4 | Live; source_extracted/unreviewed | 2026-11-01T02:21:20+00:00; Site 6a60342b6ebd6eeb6d1508311771311d394ad89f | 0 |
+| 10.1021/acsomega.3c05795 | bhawawet2023-acsomega-3c05795 | bhawawet2023-acsomega-3c05795-aunps-synthesized-with-cbdeb-50-1-molar-1, bhawawet2023-acsomega-3c05795-aunps-synthesized-with-dbdeb-50-1-molar-2 | particles3-etch-20261031-r4 | Live; source_extracted/unreviewed | 2026-11-01T02:21:20+00:00; Site 6a60342b6ebd6eeb6d1508311771311d394ad89f | 0 |
+| 10.1021/jacs.5c00423 | lai2025-jacs-5c00423 | lai2025-jacs-5c00423-dc-geqds-1 | particles3-etch-20261031-r4 | Live; source_extracted/unreviewed | 2026-11-01T02:21:20+00:00; Site 6a60342b6ebd6eeb6d1508311771311d394ad89f | 0 |
