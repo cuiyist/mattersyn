@@ -1,3 +1,21 @@
+## Source24 verified saved-IN particle batch — 2026-11-01T02:21:20+00:00
+
+Three primary papers / four selected original-ordinal source_extracted/unreviewed records / seven captioned crops were verified on Site 6a60342b6ebd6eeb6d1508311771311d394ad89f under particles3-etch-20261031-r4. Actual global Live counters: 2894 papers, 6829 records, 4708 combined synthesis–structure pairs and 1211 direct material families. Public Source merge is 5a3e5578ae0287cc5ef8935e04ef37202bb6d92a. This section binds only actual normal publisher0, exact-head Pages and anonymous verification; it grants no expert-review or audited-training credit.
+
+Dated reused daily snapshot — 2026-10-31T05:06:30.875679Z: 3,049 of 3,163 physical rows read; operational Scope 525 IN / 2,133 OUT-or-omitted / 505 uncertain. These are the stored Oct31 census values, not a refreshed count. The two current rereads do not add two new physical rows. No new census or daily M2 update was run.
+
+Katari and Bhawawet reuse existing checked saved products with original ordinals. The two-paper current reread preserved both successful two-pass results and normal CHECK0, with no original or redo failures. One Ge record was ordinarily eligible; both BN ordinals remain IN technical because the normal builder returned no record for their unresolved composition. No composition or scientific value was repaired, and no common-paper source audit was added.
+
+Doss, Wang and Dagani remain IN technical; held Viswanath, Song and the separate3162 identity/hash gap are not relabeled OUT. An earlier private preparation containing a held input was isolated without public transport. Its history and all prior refusal controls remain retained. Private wrapper record-count and crop-path postconditions were corrected while preserving their failures and already completed normal outputs. No existing source result, failed pass, uncertainty or original ordinal is silently removed.
+
+The earlier complete-build Ge consistency failure remains retained. A narrow source-bound HF-etch isolation validator coverage fix was applied without changing scientific record bytes; its 50 targeted tests passed. This entry binds fresh normal release checks for the corrected Source head and does not relabel the earlier failed run as passing.
+
+Pages attempt1 failed with filesystem_operation_failed; the ordinary retry for the same Site head succeeded. The underlying cause remains unknown, and no filesystem diagnostic code fix was applied. Normal automatic raw retirement has no measured removal total and is excluded from this storage credit. Later Site-copy cleanup belongs to a new unreported carry.
+
+Storage (Source24 publication window): C free 89043603456 -> 61103575040 actual bytes (nonisolated); 55.101295116 decimal GB removed (55101295116 actual closed logical bytes), including the 55101295116-byte pinned unreported carry and 0 later actual closed bytes. Earlier reported windows are excluded by the retained carry proof. Logical removal and physical C change are distinct; no anticipated cleanup credit.
+
+This adds one Source24 storage line only after actual publication. Earlier report/index bytes, prior dated denominators and all old failure/refusal history remain preserved. The existing daily census and M2 update are not repeated. This release does not assert global queue exhaustion or job completion.
+
 ## Source23 verified particle batch — 2026-10-31T19:43:26+00:00
 
 10 primary papers / 12 selected original-ordinal source_extracted/unreviewed records / 35 captioned crops were verified on Site 6db65ab8b4f6a992e3c5d80d4884e712f655545f under particles10-20261031-r1. Actual global Live counters: 2891 papers, 6825 records, 4704 combined synthesis–structure pairs and 1211 direct material families. Public Source merge is 608df93efda9805ced2c197375e3da8b30ada658; this section is bound only after actual publisher0, Pages and anonymous verification. No new expert-review or training credit is granted.
