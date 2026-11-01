@@ -1,3 +1,14 @@
+<!-- mattersyn-daily-metadata-20261101-root-r1 -->
+## Daily metadata status - 2026-11-01 (America/Chicago)
+
+Verified Live remains 2894 papers / 6829 records / 4708 combined synthesis-structure pairs / 1211 direct material families, from the retained Source24 verified publication on Site 6a60342b6ebd6eeb6d1508311771311d394ad89f.
+
+Dated census reused unchanged, 2026-10-31T05:06:30.875679Z: 3049 of 3163 accepted physical rows read; operational Scope 525 IN / 2133 OUT-or-omitted / 505 uncertain. These are physical-row metadata buckets with historical reads and operational omissions, not unique primary-paper counts or uniform current two-pass coverage. This is not a fresh census.
+
+The current accepted-row3162 and three Springer results revalidate previously read IN rows: IN to IN, unique physical-read delta0. The private reference-ready pool is 3 papers / 4 records / 11 captioned crops; it has not been integrated into Source or Site and adds zero Live credit. The CdS zero-record omission remains IN technical.
+
+The retained local-pool readiness clock stays 2026-11-01T04:25:48Z, with its existing twelve-hour boundary at 2026-11-01T16:25:48Z. This header does not reset that clock or authorize publication. All previous report bytes, dated denominators, failures, refusals and technical holds remain below unchanged.
+
 ## Source24 verified saved-IN particle batch — 2026-11-01T02:21:20+00:00
 
 Three primary papers / four selected original-ordinal source_extracted/unreviewed records / seven captioned crops were verified on Site 6a60342b6ebd6eeb6d1508311771311d394ad89f under particles3-etch-20261031-r4. Actual global Live counters: 2894 papers, 6829 records, 4708 combined synthesis–structure pairs and 1211 direct material families. Public Source merge is 5a3e5578ae0287cc5ef8935e04ef37202bb6d92a. This section binds only actual normal publisher0, exact-head Pages and anonymous verification; it grants no expert-review or audited-training credit.
