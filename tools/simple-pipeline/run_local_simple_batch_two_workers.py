@@ -20,6 +20,8 @@ import threading
 import time
 import traceback
 
+from mattersyn_simple import check_pass_shape_valid
+
 
 _DIRECTORY_CREATION_LOCK = threading.Lock()
 
@@ -35,14 +37,13 @@ def utc():
 
 
 def invalid_passes(work, stem):
-    """The exact predicate used by the existing production controller/check."""
+    """Use the same whole-pass shape predicate as the engine CHECK command."""
     bad = []
     for letter in ('A', 'B'):
         path = Path(work) / f'{stem}.pass{letter}.json'
         try:
             data = json.loads(path.read_text(encoding='utf8'))
-            good = (isinstance(data, dict) and 'error' not in data and isinstance(data.get('pairs'), list)
-                    and all(isinstance(pair, dict) for pair in data['pairs']))
+            good = check_pass_shape_valid(data)
         except (OSError, UnicodeError, json.JSONDecodeError):
             good = False
         if not good:
