@@ -1,0 +1,552 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "mayo1992-jmr-1992-0973-nanocrystalline-zno-500-c-sintered-2",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "M. J. Mayo (1992): nanocrystalline ZnO (500 °C sintered)",
+  "material": {
+    "formula": "ZnO",
+    "family": "ZnO nanocrystals",
+    "elements": [
+      "Zn",
+      "O"
+    ],
+    "components": [
+      "ZnO"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Gas phase condensation",
+  "sources": [
+    {
+      "id": "mayo1992-jmr-1992-0973",
+      "doi": "10.1557/jmr.1992.0973",
+      "title": "Nanoindentation of nanocrystalline ZnO",
+      "authors": "M. J. Mayo, R. W. Siegel, Y. X. Liao, W. D. Nix",
+      "year": 1992,
+      "url": "https://doi.org/10.1557/jmr.1992.0973",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "mayo1992-jmr-1992-0973",
+    "recipe_family": "mayo1992-jmr-1992-0973-nanocrystalline-zno-500-c-sintered-2",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "ZnO",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "mayo1992-jmr-1992-0973",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": 24,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "24 nm",
+      "evidence": [
+        {
+          "source_id": "mayo1992-jmr-1992-0973",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "mayo1992-jmr-1992-0973-nanocrystalline-zno-500-c-sintered-2--zno-precursor",
+      "name": "ZnO precursor",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "mayo1992-jmr-1992-0973",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "mayo1992-jmr-1992-0973-nanocrystalline-zno-500-c-sintered-2--after-s01-heat",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "mayo1992-jmr-1992-0973-nanocrystalline-zno-500-c-sintered-2--zno-precursor"
+      ]
+    },
+    {
+      "id": "mayo1992-jmr-1992-0973-nanocrystalline-zno-500-c-sintered-2--after-s02-cool",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "mayo1992-jmr-1992-0973-nanocrystalline-zno-500-c-sintered-2--after-s01-heat"
+      ]
+    },
+    {
+      "id": "mayo1992-jmr-1992-0973-nanocrystalline-zno-500-c-sintered-2--after-s03-collect",
+      "name": "mixture after step 3",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "mayo1992-jmr-1992-0973-nanocrystalline-zno-500-c-sintered-2--after-s02-cool"
+      ]
+    },
+    {
+      "id": "mayo1992-jmr-1992-0973-nanocrystalline-zno-500-c-sintered-2--after-s04-anneal",
+      "name": "mixture after step 4",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "mayo1992-jmr-1992-0973-nanocrystalline-zno-500-c-sintered-2--after-s03-collect"
+      ]
+    },
+    {
+      "id": "mayo1992-jmr-1992-0973-nanocrystalline-zno-500-c-sintered-2--after-s05-anneal",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "mayo1992-jmr-1992-0973-nanocrystalline-zno-500-c-sintered-2--after-s04-anneal"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-heat",
+      "action": "heat",
+      "label": "Heat ZnO precursor in He + O2 atmosphere until sublimed",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "mayo1992-jmr-1992-0973-nanocrystalline-zno-500-c-sintered-2--zno-precursor"
+      ],
+      "outputs": [
+        "mayo1992-jmr-1992-0973-nanocrystalline-zno-500-c-sintered-2--after-s01-heat"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 1400,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1400 °C",
+          "evidence": [
+            {
+              "source_id": "mayo1992-jmr-1992-0973",
+              "locator": "Main PDF p.1"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "He + O2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "mayo1992-jmr-1992-0973",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Heat ZnO precursor in He + O2 atmosphere until sublimed",
+      "evidence": [
+        {
+          "source_id": "mayo1992-jmr-1992-0973",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "s02-cool",
+      "action": "cool",
+      "label": "Cool and condense ZnO vapor into nanocrystalline particles",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-heat"
+      ],
+      "inputs": [
+        "mayo1992-jmr-1992-0973-nanocrystalline-zno-500-c-sintered-2--after-s01-heat"
+      ],
+      "outputs": [
+        "mayo1992-jmr-1992-0973-nanocrystalline-zno-500-c-sintered-2--after-s02-cool"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "He + O2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "mayo1992-jmr-1992-0973",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Cool and condense ZnO vapor into nanocrystalline particles",
+      "evidence": [
+        {
+          "source_id": "mayo1992-jmr-1992-0973",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "s03-collect",
+      "action": "collect",
+      "label": "Collect particles on cold finger",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-cool"
+      ],
+      "inputs": [
+        "mayo1992-jmr-1992-0973-nanocrystalline-zno-500-c-sintered-2--after-s02-cool"
+      ],
+      "outputs": [
+        "mayo1992-jmr-1992-0973-nanocrystalline-zno-500-c-sintered-2--after-s03-collect"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Collect particles on cold finger",
+      "evidence": [
+        {
+          "source_id": "mayo1992-jmr-1992-0973",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "s04-anneal",
+      "action": "anneal",
+      "label": "Anneal particles in air at 300 °C for 4 h",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s03-collect"
+      ],
+      "inputs": [
+        "mayo1992-jmr-1992-0973-nanocrystalline-zno-500-c-sintered-2--after-s03-collect"
+      ],
+      "outputs": [
+        "mayo1992-jmr-1992-0973-nanocrystalline-zno-500-c-sintered-2--after-s04-anneal"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 300,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "300 °C",
+          "evidence": [
+            {
+              "source_id": "mayo1992-jmr-1992-0973",
+              "locator": "Main PDF p.1"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 4,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "4 h",
+          "evidence": [
+            {
+              "source_id": "mayo1992-jmr-1992-0973",
+              "locator": "Main PDF p.1"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "He + O2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "mayo1992-jmr-1992-0973",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Anneal particles in air at 300 °C for 4 h",
+      "evidence": [
+        {
+          "source_id": "mayo1992-jmr-1992-0973",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "s05-anneal",
+      "action": "anneal",
+      "label": "Anneal sample at 500 °C for 0.5 h",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s04-anneal"
+      ],
+      "inputs": [
+        "mayo1992-jmr-1992-0973-nanocrystalline-zno-500-c-sintered-2--after-s04-anneal"
+      ],
+      "outputs": [
+        "mayo1992-jmr-1992-0973-nanocrystalline-zno-500-c-sintered-2--after-s05-anneal"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 500,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "500 °C",
+          "evidence": [
+            {
+              "source_id": "mayo1992-jmr-1992-0973",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 0.5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0.5 h",
+          "evidence": [
+            {
+              "source_id": "mayo1992-jmr-1992-0973",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "He + O2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "mayo1992-jmr-1992-0973",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Anneal sample at 500 °C for 0.5 h",
+      "evidence": [
+        {
+          "source_id": "mayo1992-jmr-1992-0973",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "mayo1992-jmr-1992-0973-nanocrystalline-zno-500-c-sintered-2--product",
+      "source_sample_label": "nanocrystalline ZnO (500 °C sintered)",
+      "batch_id": null,
+      "material_state_id": "mayo1992-jmr-1992-0973-nanocrystalline-zno-500-c-sintered-2--after-s05-anneal",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "ZnO",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "mayo1992-jmr-1992-0973",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "mayo1992-jmr-1992-0973",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "notes": [
+        "Reactor: gas atmosphere (He + O2) (Main PDF p.1).",
+        "Reaction temperature: 1400 degC (Main PDF p.1)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "mayo1992-jmr-1992-0973-nanocrystalline-zno-500-c-sintered-2--size",
+      "sample_id": "mayo1992-jmr-1992-0973-nanocrystalline-zno-500-c-sintered-2--product",
+      "property": "diameter",
+      "technique": "TEM",
+      "value": {
+        "value": 24,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "24 nm",
+        "evidence": [
+          {
+            "source_id": "mayo1992-jmr-1992-0973",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "mayo1992-jmr-1992-0973",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of ZnO precursor not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

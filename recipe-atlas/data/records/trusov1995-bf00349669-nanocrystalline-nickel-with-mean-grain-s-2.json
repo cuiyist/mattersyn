@@ -1,0 +1,312 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "trusov1995-bf00349669-nanocrystalline-nickel-with-mean-grain-s-2",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "L. I. TRUSOV (1995): nanocrystalline nickel with mean grain size of 150 nm",
+  "material": {
+    "formula": "Ni",
+    "family": "Ni nanocrystals",
+    "elements": [
+      "Ni"
+    ],
+    "components": [
+      "Ni"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Evaporation-condensation",
+  "sources": [
+    {
+      "id": "trusov1995-bf00349669",
+      "doi": "10.1007/bf00349669",
+      "title": "Low temperature stress relaxation of nanocrystalline nickel",
+      "authors": "L. I. TRUSOV, T. P. KHVOSTANTSEVA, V. A. SOLOV'EV, V. A. MEL'NIKOVA",
+      "year": 1995,
+      "url": "https://doi.org/10.1007/bf00349669",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "trusov1995-bf00349669",
+    "recipe_family": "trusov1995-bf00349669-nanocrystalline-nickel-with-mean-grain-s-2",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Ni",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "trusov1995-bf00349669",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": 150,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "150 nm",
+      "evidence": [
+        {
+          "source_id": "trusov1995-bf00349669",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "trusov1995-bf00349669-nanocrystalline-nickel-with-mean-grain-s-2--nickel",
+      "name": "nickel",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "trusov1995-bf00349669",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "trusov1995-bf00349669-nanocrystalline-nickel-with-mean-grain-s-2--after-s01-compact",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "trusov1995-bf00349669-nanocrystalline-nickel-with-mean-grain-s-2--nickel"
+      ]
+    },
+    {
+      "id": "trusov1995-bf00349669-nanocrystalline-nickel-with-mean-grain-s-2--after-s02-encapsulate",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "trusov1995-bf00349669-nanocrystalline-nickel-with-mean-grain-s-2--after-s01-compact",
+        "trusov1995-bf00349669-nanocrystalline-nickel-with-mean-grain-s-2--nickel"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-compact",
+      "action": "compact",
+      "label": "Ultrafine Ni powder compacted under 200 MPa",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "trusov1995-bf00349669-nanocrystalline-nickel-with-mean-grain-s-2--nickel"
+      ],
+      "outputs": [
+        "trusov1995-bf00349669-nanocrystalline-nickel-with-mean-grain-s-2--after-s01-compact"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "argon",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "trusov1995-bf00349669",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Ultrafine Ni powder compacted under 200 MPa",
+      "evidence": [
+        {
+          "source_id": "trusov1995-bf00349669",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "s02-encapsulate",
+      "action": "encapsulate",
+      "label": "Tablets encapsulated into Ni foil",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-compact"
+      ],
+      "inputs": [
+        "trusov1995-bf00349669-nanocrystalline-nickel-with-mean-grain-s-2--after-s01-compact",
+        "trusov1995-bf00349669-nanocrystalline-nickel-with-mean-grain-s-2--nickel"
+      ],
+      "outputs": [
+        "trusov1995-bf00349669-nanocrystalline-nickel-with-mean-grain-s-2--after-s02-encapsulate"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "argon",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "trusov1995-bf00349669",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Tablets encapsulated into Ni foil",
+      "evidence": [
+        {
+          "source_id": "trusov1995-bf00349669",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "trusov1995-bf00349669-nanocrystalline-nickel-with-mean-grain-s-2--product",
+      "source_sample_label": "nanocrystalline nickel with mean grain size of 150 nm",
+      "batch_id": null,
+      "material_state_id": "trusov1995-bf00349669-nanocrystalline-nickel-with-mean-grain-s-2--after-s02-encapsulate",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Ni",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "trusov1995-bf00349669",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "trusov1995-bf00349669",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "notes": [
+        "Reaction temperature: 1073 K (Main PDF p.1).",
+        "Reaction time: 3 min (Main PDF p.1)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "trusov1995-bf00349669-nanocrystalline-nickel-with-mean-grain-s-2--size",
+      "sample_id": "trusov1995-bf00349669-nanocrystalline-nickel-with-mean-grain-s-2--product",
+      "property": "diameter",
+      "technique": "TEM",
+      "value": {
+        "value": 150,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "150 nm",
+        "evidence": [
+          {
+            "source_id": "trusov1995-bf00349669",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "trusov1995-bf00349669",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Amount of nickel not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
