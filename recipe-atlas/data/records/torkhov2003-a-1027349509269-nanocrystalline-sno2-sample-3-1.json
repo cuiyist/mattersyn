@@ -1,0 +1,279 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "torkhov2003-a-1027349509269-nanocrystalline-sno2-sample-3-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "D. S. Torkhov; A. A. Burukhin; B. R. Churagulov; M. N. Rumyantseva; V. D. Maksimov (2003): nanocrystalline SnO2 (sample 3)",
+  "material": {
+    "formula": "SnO2",
+    "family": "SnO2 nanocrystals",
+    "elements": [
+      "Sn",
+      "O"
+    ],
+    "components": [
+      "SnO2"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Hydrothermal",
+  "sources": [
+    {
+      "id": "torkhov2003-a-1027349509269",
+      "doi": "10.1023/a:1027349509269",
+      "title": "Hydrothermal Synthesis of Nanocrystalline SnO2 for Gas Sensors",
+      "authors": "D. S. Torkhov; A. A. Burukhin; B. R. Churagulov; M. N. Rumyantseva; V. D. Maksimov",
+      "year": 2003,
+      "url": "https://doi.org/10.1023/a:1027349509269",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "torkhov2003-a-1027349509269",
+    "recipe_family": "torkhov2003-a-1027349509269-nanocrystalline-sno2-sample-3-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "SnO2",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "torkhov2003-a-1027349509269",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "torkhov2003-a-1027349509269-nanocrystalline-sno2-sample-3-1--snso4",
+      "name": "SnSO4",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "concentration": {
+          "value": 0.2,
+          "minimum": null,
+          "maximum": null,
+          "unit": "M",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0.2 M",
+          "evidence": [
+            {
+              "source_id": "torkhov2003-a-1027349509269",
+              "locator": "Main PDF p.1"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "torkhov2003-a-1027349509269",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "torkhov2003-a-1027349509269-nanocrystalline-sno2-sample-3-1--h2o2",
+      "name": "H2O2",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "torkhov2003-a-1027349509269",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    },
+    {
+      "id": "torkhov2003-a-1027349509269-nanocrystalline-sno2-sample-3-1--distilled-water",
+      "name": "distilled water",
+      "formula": null,
+      "role": "solvent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "torkhov2003-a-1027349509269",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "torkhov2003-a-1027349509269-nanocrystalline-sno2-sample-3-1--after-s01-dissolve",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "torkhov2003-a-1027349509269-nanocrystalline-sno2-sample-3-1--snso4",
+        "torkhov2003-a-1027349509269-nanocrystalline-sno2-sample-3-1--distilled-water"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-dissolve",
+      "action": "dissolve",
+      "label": "Dissolve SnSO4 in distilled water",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "torkhov2003-a-1027349509269-nanocrystalline-sno2-sample-3-1--snso4",
+        "torkhov2003-a-1027349509269-nanocrystalline-sno2-sample-3-1--distilled-water"
+      ],
+      "outputs": [
+        "torkhov2003-a-1027349509269-nanocrystalline-sno2-sample-3-1--after-s01-dissolve"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Dissolve SnSO4 in distilled water",
+      "evidence": [
+        {
+          "source_id": "torkhov2003-a-1027349509269",
+          "locator": "Main PDF p.1"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "torkhov2003-a-1027349509269-nanocrystalline-sno2-sample-3-1--product",
+      "source_sample_label": "nanocrystalline SnO2 (sample 3)",
+      "batch_id": null,
+      "material_state_id": "torkhov2003-a-1027349509269-nanocrystalline-sno2-sample-3-1--after-s01-dissolve",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "SnO2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "torkhov2003-a-1027349509269",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "torkhov2003-a-1027349509269",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "notes": [
+        "Reactor: titanium autoclave with a hermetically sealed Teflon cell (Main PDF p.1)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of H2O2 not reported in the extracted text.",
+      "Amount of distilled water not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
