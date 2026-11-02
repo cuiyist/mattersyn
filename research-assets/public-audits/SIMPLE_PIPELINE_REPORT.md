@@ -1,3 +1,16 @@
+<!-- mattersyn-daily-metadata-20261102-root-r1 -->
+## Daily metadata status - 2026-11-02 (America/Chicago)
+
+Verified Live remains 2894 papers / 6829 records / 4708 combined synthesis-structure pairs / 1211 direct material families. Source contains 6865 total records, including a pending 22-paper / 36-record / 65-captioned-crop batch that remains Source-only and adds no Live or audited-training credit.
+
+Historical census reused unchanged, 2026-10-31T05:06:30.875679Z: 3049 of 3163 accepted physical rows read; operational Scope 525 IN / 2133 OUT-or-omitted / 505 uncertain. These dated physical-row buckets are not current global totals, unique primary-paper counts or uniform current two-pass coverage. This is not a fresh census.
+
+Separately, two current normal two-pass reads completed. The HgTe result remains IN technical with no eligible record because no synthesis operation survives; the other result is valid-empty, remains uncertain and is excluded from integration. These batch outcomes are not added to the historical census denominator and add no Live or audited-training credit.
+
+The separately cached Fe candidate is omitted because free-particle isolability remains uncertain. The checked Ni product is a coating without a separate checked free-particle synthesis route and is also omitted. These are local selection outcomes; historical counts remain unchanged.
+
+The local readiness clock remains 2026-11-01T04:25:48.166224Z, with its existing twelve-hour boundary at 2026-11-01T16:25:48.166224Z. No clock is reset, no DOI-index rows or storage line are added, and no new census is claimed. All previous report bytes, dated counts, failures, refusals and technical holds remain below unchanged. This entry does not claim global queue exhaustion or job completion.
+
 <!-- mattersyn-daily-metadata-20261101-root-r1 -->
 ## Daily metadata status - 2026-11-01 (America/Chicago)
 
