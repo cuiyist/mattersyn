@@ -1,3 +1,12 @@
+<!-- mattersyn-daily-metadata-20261103-root-r1 -->
+## Daily metadata status - 2026-11-03 (America/Chicago)
+
+Verified Live remains 2916 papers / 6865 records / 4744 combined synthesis-structure pairs / 1218 direct material families. This daily status entry carries forward the verified totals and adds no publication or expert-audited training credit.
+
+Historical census reused unchanged, 2026-10-31T05:06:30.875679Z: 3049 of 3163 accepted physical rows read; operational Scope 525 IN / 2133 OUT-or-omitted / 505 uncertain. These dated physical-row buckets are not fresh global totals, unique primary-paper counts or uniform current two-pass coverage. No new census is claimed.
+
+The complete prior report, including dated counts, release evidence, failures, refusals, technical holds and readiness history, remains below unchanged. This report-only daily header adds no DOI-index rows or Main storage-removal line and does not perform or consume the separate pending M2 daily update. It does not claim global queue exhaustion or job completion.
+
 ## Ready22 verified particle batch — 2026-11-02T13:13:05+00:00
 
 22 papers / 36 selected original-ordinal source_extracted/unreviewed records / 65 captioned crops were verified on Site 6a32840077a5187316ae30d7f5c2a214fa129d9d under ready22-20261101-r1. Actual global Live counters: 2916 papers, 6865 records, 4744 combined synthesis–structure pairs and 1218 direct material families. Paper Source release merge: a42b4fc0296a714462f5f59ff51b1beee76d9b79; latest public Source main used by Site: 946faa725717a67c884fe17e1771931c841dc486; retained paper Source head: da4b950eade8b54556a4cb1120739081ec9bea20. The normal publisher returned zero, both exact-head Pages jobs passed, and anonymous verification passed for 366 files, all 22 primary-paper routes and all 29 material-route bindings.
