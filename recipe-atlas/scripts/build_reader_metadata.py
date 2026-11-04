@@ -41,12 +41,12 @@ def main():
     view=display_view(data,ROOT,'reader-private-asset-provenance.json')
     # Records whose method is the generic extraction phrase get a route name derived
     # from their own steps and materials (route_labels.py); the record is unchanged.
-    labelled=0
-    for rid,entry in view['records'].items():
-        label='' if entry.get('method_label') else route_label(records[rid])
-        if label:entry['method_label']=label;labelled+=1
-    legacy_raw=source.read_bytes() if view is data and len(source_paths(source))==1 and not labelled else (json.dumps(view,ensure_ascii=False,separators=(',',':'))+'\n').encode('utf-8')
+    labels={rid:route_label(records[rid]) for rid,entry in view['records'].items() if not entry.get('method_label')}
+    labels={rid:label for rid,label in labels.items() if label}
+    # A labelled copy is a new object, so the unchanged-bytes shortcut below never applies to it.
+    if labels:view={**view,'records':{rid:({**entry,'method_label':labels[rid]} if rid in labels else entry) for rid,entry in view['records'].items()}}
+    legacy_raw=source.read_bytes() if view is data and len(source_paths(source))==1 else (json.dumps(view,ensure_ascii=False,separators=(',',':'))+'\n').encode('utf-8')
     payloads=public_parts(view,legacy_raw)
     for name,raw in payloads.items():(target.parent/name).write_bytes(raw)
-    print(json.dumps({'reader_projection_sha256':hashlib.sha256(target.read_bytes()).hexdigest(),'records':len(data['records']),'materials':len(data['materials']),'route_labels_added':labelled,'scientific_values_modified':False}))
+    print(json.dumps({'reader_projection_sha256':hashlib.sha256(target.read_bytes()).hexdigest(),'records':len(data['records']),'materials':len(data['materials']),'route_labels_added':len(labels),'scientific_values_modified':False}))
 if __name__=='__main__':main()
