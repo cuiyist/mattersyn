@@ -12,14 +12,12 @@ const either=(...tests)=>entry=>tests.some(test=>test(entry));
 const PHASE_TESTS=[
  [/zinc.?blende?|sphalerite|coloradoite|tiemannite/i,either(symbol(/F\s*-4\s*3\s*m/),named(/zinc.?blende|sphalerite/i))],
  [/wurtzite/i,either(symbol(/P\s*63\s*m\s*c/),named(/wurtzite/i))],
- [/rock.?salt|halite|galena|periclase|bunsenite|alabandite/i,either(named(/rock.?salt/i),entry=>group(entry)===225&&!/face.cent|\bfcc\b/i.test(entry.name||''))],
+ [/rock.?salt|halite|galena|periclase/i,either(named(/rock.?salt/i),entry=>group(entry)===225&&!/face.cent|\bfcc\b/i.test(entry.name||''))],
  [/face.cent(?:e?red)|\bfcc\b/i,inRange(225,225)],[/\bhcp\b|hexagonal close/i,inRange(194,194)],[/\bbcc\b|body.cent(?:e?red)/i,inRange(229,229)],
  [/anatase/i,named(/anatase/i)],[/rutile/i,named(/rutile/i)],[/brookite/i,named(/brookite/i)],[/chalcopyrite/i,named(/chalcopyrite/i)],
  [/spinel/i,named(/spinel/i)],[/calcite/i,named(/calcite/i)],[/aragonite/i,named(/aragonite/i)],[/baddeleyite/i,named(/baddeleyite/i)],
  [/bixbyite/i,named(/bixbyite/i)],[/perovskite/i,named(/perovskite/i)],[/cuprite/i,named(/cuprite/i)],[/hydroxy?l?apatite|\bapatite/i,named(/apatite/i)],
  [/herzenbergite/i,named(/herzenbergite/i)],[/\b2H\b/i,named(/\b2H\b/i)],[/\b3C\b/i,named(/\b3C\b/i)],[/\b6H\b/i,named(/\b6H\b/i)],
- [/kesterite/i,named(/kesterite/i)],[/scheelite|wulfenite/i,named(/scheelite|wulfenite/i)],[/pyrite|cattierite/i,named(/pyrite|cattierite/i)],[/aurivillius/i,named(/aurivillius/i)],
- [/russellite|\bP\s*21\s*ab\b/i,either(named(/russellite/i),inRange(29,29))],[/\bYAG\b|garnet/i,named(/garnet/i)],
  [/\bcubic\b/i,inRange(195,230)],[/tetragonal/i,inRange(75,142)],[/orthorhombic/i,inRange(16,74)],[/\bhexagonal\b/i,inRange(168,194)],
  [/trigonal|rhombohedral/i,inRange(143,167)],[/monoclinic/i,inRange(3,15)],[/triclinic/i,inRange(1,2)]
 ];
@@ -27,7 +25,7 @@ const tidy=value=>String(value||'').replace(/\s+/g,'');
 // Alloy, solid-solution and core/shell names stand for their end members, which are
 // shown as component references, as for composites. A name expands only when the
 // library has a bulk reference for every end member; otherwise nothing is shown for it.
-export const END_MEMBERS=Object.freeze({InGaAs:['InAs','GaAs'],InGaN:['InN','GaN'],AlGaAs:['AlAs','GaAs'],ZnSeS:['ZnSe','ZnS'],CdSeS:['CdSe','CdS'],CdZnS:['CdS','ZnS'],'CdSe-ZnS':['CdSe','ZnS'],InGaP:['InP','GaP'],ZnCdS:['ZnS','CdS'],CdTeSe:['CdTe','CdSe']});
+export const END_MEMBERS=Object.freeze({InGaAs:['InAs','GaAs'],InGaN:['InN','GaN'],AlGaAs:['AlAs','GaAs'],ZnSeS:['ZnSe','ZnS'],CdSeS:['CdSe','CdS'],CdZnS:['CdS','ZnS'],'CdSe-ZnS':['CdSe','ZnS']});
 function listedParts(r){
  const material=r?.material||{},listed=Array.isArray(material.components)&&material.components.length?material.components:String(material.formula||'').split(/[\/@]/);
  // "InP:Zn" is a doped host; the host cell is the useful comparison.
