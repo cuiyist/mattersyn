@@ -1,7 +1,8 @@
 """Split the public Reader presentation so a page loads only what it shows.
 
-Runs after build_reader_metadata.py and reads its public output
-(dist/data/reader-presentation.json and, when split, its part). It writes:
+Called at the end of build_reader_metadata.py (and runnable on its own) with
+that builder's root; reads its public output (dist/data/reader-presentation.json
+and, when split, its part) and writes:
 
   dist/data/reader/records/<record>.json    one record's presentation view
   dist/data/reader/materials/<material>.json one material's view and method labels
@@ -109,14 +110,14 @@ def load_chemistry(dist):
             'solution_contexts': read('solution-components.json'), 'product_bindings': read('product-bindings.json')}
 
 
-def main():
-    data = ROOT / 'dist/data'
+def main(root=ROOT):
+    data = Path(root) / 'dist/data'
     view = load_public_view(data)
     target = data / 'reader'
     if target.exists():
         shutil.rmtree(target)
     files = shards(view)
-    chemistry = load_chemistry(ROOT / 'dist')
+    chemistry = load_chemistry(Path(root) / 'dist')
     if chemistry['registry'].get('entries'):
         files.update(chemical_slices(view, chemistry))
     for rel, raw in files.items():

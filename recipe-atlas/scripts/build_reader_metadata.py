@@ -7,6 +7,7 @@ exact record/figure scopes. New contributions update and audit that sidecar firs
 import hashlib,json
 from pathlib import Path
 from asset_display import display_view
+from build_reader_shards import main as write_reader_shards
 from reader_presentation_registry import load_reviewed_reader, source_paths
 from public_reader_registry import public_parts
 ROOT=Path(__file__).resolve().parents[1]
@@ -41,5 +42,7 @@ def main():
     legacy_raw=source.read_bytes() if view is data and len(source_paths(source))==1 else (json.dumps(view,ensure_ascii=False,separators=(',',':'))+'\n').encode('utf-8')
     payloads=public_parts(view,legacy_raw)
     for name,raw in payloads.items():(target.parent/name).write_bytes(raw)
+    # Per-record and per-material files for the page loaders (build_reader_shards.py).
+    write_reader_shards(ROOT)
     print(json.dumps({'reader_projection_sha256':hashlib.sha256(target.read_bytes()).hexdigest(),'records':len(data['records']),'materials':len(data['materials']),'scientific_values_modified':False}))
 if __name__=='__main__':main()
