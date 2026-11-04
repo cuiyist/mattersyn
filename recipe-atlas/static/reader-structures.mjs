@@ -150,4 +150,17 @@ export async function mountReaderStructures(host,r,presentation={}){
   }catch(error){panel.append(el('p','This structure view could not load. The complete evidence record remains available.','reader-note'));console.error(error);}
  }
  await select(refs.length?'cell':'particle');
+ return {empty:await structureViewsEmpty(r,refs,finite,panels)};
+}
+// True when the views hold nothing for this record except standard placeholders:
+// no reference or custom unit cell, no non-applicability note, no product fact,
+// morphology illustration or source-figure morphology.
+const CUSTOM_CELL_SOURCES=new Set(['heo2003','lian2021']);
+export async function structureViewsEmpty(r,refs,finite,panels){
+ if(refs.length||finite.length||CUSTOM_CELL_SOURCES.has(r.lineage?.source_group))return false;
+ availability??=fetch(siteURL('assets/crystal-references/unit-cell-availability.json')).then(response=>response.ok?response.json():{record_exceptions:{}});
+ try{if((await availability).record_exceptions?.[r.record_id]?.kind==='not_applicable_nonperiodic')return false;}catch{return false;}
+ const particle=panels.querySelector?.('#reader-structure-particle');
+ if(!particle)return false;
+ return !particle.querySelector('.reader-product-facts > div, .reader-product-illustration, .reader-figure-morphology');
 }

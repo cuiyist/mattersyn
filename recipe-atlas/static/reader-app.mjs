@@ -34,9 +34,16 @@ const shortSourceAuthor=authors=>{const first=String(authors||'').split(/[,;]/)[
 
 const safeText=v=>typeof v==='string'?v:v?.text||v?.value||v?.note||'';
 
+// The generic extraction phrases are not route names; the reader shows no method label instead.
+export const GENERIC_METHOD=/^\s*(?:synthesis as described in the source|other)\s*$/i;
+// Exact synonyms shown under one name. Any other method text is shown as recorded.
+export const METHOD_SYNONYMS=Object.freeze({'mbe':'Molecular beam epitaxy','molecular beam epitaxy':'Molecular beam epitaxy','molecular-beam epitaxy':'Molecular beam epitaxy','solid source mbe':'Solid-source molecular beam epitaxy','solid source molecular beam epitaxy':'Solid-source molecular beam epitaxy','solid-source molecular beam epitaxy':'Solid-source molecular beam epitaxy','mocvd':'Metal-organic chemical vapor deposition','metal organic chemical vapor deposition':'Metal-organic chemical vapor deposition','metal-organic chemical vapor deposition':'Metal-organic chemical vapor deposition','metalorganic chemical vapor deposition':'Metal-organic chemical vapor deposition','movpe':'Metal-organic vapor phase epitaxy','cvd':'Chemical vapor deposition','pld':'Pulsed laser deposition','silar':'Successive ionic layer adsorption and reaction','hot injection':'Hot injection','hot-injection':'Hot injection','heat-up':'Heat-up','heat up':'Heat-up','sol-gel':'Sol-gel','sol–gel':'Sol-gel','sol gel':'Sol-gel'});
+// Method label for a record: a presentation or route label (derived at build time from the
+// record's own steps) wins; otherwise the recorded method, without the generic phrases.
+export function displayMethod(method,label){const text=String(label||'').trim()||shortMethod(method||'').trim();if(!text||GENERIC_METHOD.test(text))return '';return METHOD_SYNONYMS[text.toLowerCase()]||text;}
 export function methodBadges(r,presentation={}){
  const badges=el('div',undefined,'reader-badges');
- badges.append(badge(presentation.method_label||shortMethod(r.method)),badge((r.sources[0].year??'Year unverified')+' · '+shortSourceAuthor(r.sources[0].authors),'scope'));
+ {const label=displayMethod(r.method,presentation.method_label);if(label)badges.append(badge(label));}badges.append(badge((r.sources[0].year??'Year unverified')+' · '+shortSourceAuthor(r.sources[0].authors),'scope'));
  return badges;
 }
 
@@ -145,9 +152,16 @@ export function figureGallery(host,figures,r,category,presentation={}){
 
 }
 
+// A section that holds only a standard placeholder line for the selected record is hidden
+// with its heading and tab: Final structures without a unit cell, morphology or figure;
+// Properties without a result or figure; Chemical intuition with only the source pointer.
+// Sources always remain. Source-specific context modules keep every section.
+const KEEP_ALL_SECTIONS=new Set(['wu2008']);
+export function emptySections(r,flags){if(KEEP_ALL_SECTIONS.has(r?.lineage?.source_group))return new Set();return new Set(Object.entries(flags).filter(([,empty])=>empty).map(([id])=>id));}
+export function hideEmptySections(sections,empty){let n=0;for(const s of sections){s.hidden=empty.has(s.id);if(s.hidden)continue;const number=s.querySelector?.('.reader-number');if(number)number.textContent=String(++n).padStart(2,'0');}return empty;}
 export function interpretationFallback(r){return r.quality?.review_status==='source_extracted'?'Further interpretation is available in the original source.':'Interpretation is available with the original source and complete review.';}
-function intuition(host,r,presentation){const items=presentation.intuition||presentation.chemical_intuition||[];if(!items.length){host.append(el('p',interpretationFallback(r),'reader-note'),link('Source discussion →',reviewURL(r,presentation,'#source-intuition'),'reader-data-link'));return;}
- const grid=el('div',undefined,'reader-intuition');for(const item of items.slice(0,3)){const card=el('article');if(item.title)card.append(el('h3',item.title));card.append(el('p',item.summary||item.text||''),el('small',human(item.claim_type||'Source interpretation')),link('Evidence →',reviewURL(r,presentation,'#source-intuition'),'reader-data-link'));grid.append(card);}host.append(grid);if(items.length>3)host.append(link('All interpretations and references →',reviewURL(r,presentation,'#source-intuition'),'reader-data-link'));}
+function intuition(host,r,presentation){const items=presentation.intuition||presentation.chemical_intuition||[];if(!items.length){host.append(el('p',interpretationFallback(r),'reader-note'),link('Source discussion →',reviewURL(r,presentation,'#source-intuition'),'reader-data-link'));return false;}
+ const grid=el('div',undefined,'reader-intuition');for(const item of items.slice(0,3)){const card=el('article');if(item.title)card.append(el('h3',item.title));card.append(el('p',item.summary||item.text||''),el('small',human(item.claim_type||'Source interpretation')),link('Evidence →',reviewURL(r,presentation,'#source-intuition'),'reader-data-link'));grid.append(card);}host.append(grid);if(items.length>3)host.append(link('All interpretations and references →',reviewURL(r,presentation,'#source-intuition'),'reader-data-link'));return true;}
 function sourceDisagreements(host,pairs,r){if(!Array.isArray(pairs)||!pairs.length)return;const heading=el('h3','Source comparisons','reader-conflict-heading');heading.id='source-disagreements';host.append(heading,el('p','Each account retains its context and source locator. Unresolved discrepancies remain marked; distinct measurement bases are shown separately.','reader-conflict-intro'));for(const pair of pairs){if(!Array.isArray(pair.claims)||pair.claims.length<2){if(pair.context){const note=el('article',undefined,'reader-conflict');note.append(el('h4',pair.topic||pair.field||'Source qualification'),el('p',safeText(pair.context)),link('Complete source qualification →',recordURL(r.record_id)+'#evidence','reader-data-link'));host.append(note);}continue;}const card=el('article',undefined,'reader-conflict');const top=el('div',undefined,'reader-conflict-top');top.append(el('h4',pair.topic||pair.field||'Source disagreement'),badge(pair.status==='preserved_distinct'?'Distinct bases':'Unresolved','reader-conflict-status'));card.append(top);if(pair.context)card.append(el('p',pair.context,'reader-conflict-context'));const claims=el('div',undefined,'reader-conflict-claims');pair.claims.forEach((claim,index)=>{const item=el('section',undefined,'reader-conflict-claim');item.append(el('span',claim.label||`Report ${index+1}`,'reader-conflict-label'),el('p',safeText(claim.statement)||safeText(claim.value)||safeText(claim.claim)||'Claim text not supplied.'));const locator=claim.sourceLocator||claim.source_locator;if(locator)item.append(el('small',safeText(locator),'reader-conflict-locator'));const source=r.sources.find(s=>s.id===(claim.sourceId||claim.source_id));if(source)item.append(link(source.title+' ↗',sourceURL(source),'reader-data-link'));claims.append(item);});card.append(claims);host.append(card);}}
 function dataSwitch(r,active='reader'){const nav=el('nav',undefined,'reader-switch');nav.setAttribute('aria-label','Reader or data view');nav.append(link('Reader',recordURL(r.record_id,'reader'),active==='reader'?'active':''),link('Data and evidence',recordURL(r.record_id,'data'),active==='data'?'active':''),link('Download JSON ↓','data/records/'+r.record_id+'.json'));return nav;}
 export function renderProperties(host,figures,r,presentation={}){
@@ -188,6 +202,8 @@ export function renderProperties(host,figures,r,presentation={}){
   host.append(el('h3','Property results'),facts(measurements.slice(0,4)));
   if(measurements.length>4)host.append(disclosure('Additional property results ('+(measurements.length-4)+')',facts(measurements.slice(4))));
  }else if(!count)host.append(el('p','No property result is assigned to this method in the record. Related source evidence remains available below.','reader-note'));
+ // Only the standard placeholder: buildMethod hides the section and its tab.
+ host.dataset.readerEmpty=String(!measurements.length&&!count);
  return measurements.length;
 }
 
@@ -196,19 +212,20 @@ async function buildMethod(host,r,presentation){
 
  const protocol=el('div',undefined,'reader-protocol');sections[1].append(protocol);mountProtocol(protocol,r,siteURL('./'),presentation.protocol_art);sections[1].append(link('Full operations, branches and source notes →',recordURL(r.record_id)+'#protocol','reader-data-link'));
 
- const structureHost=el('div');sections[2].append(structureHost);const figs=presentation.figures||[];figureGallery(sections[2],figs,r,'structure',presentation);
+ const structureHost=el('div');sections[2].append(structureHost);const figs=presentation.figures||[];const structureFigures=figureGallery(sections[2],figs,r,'structure',presentation);
 
  renderProperties(sections[3],figs,r,presentation);
 
- sections[3].append(link('Complete measurements and source evidence →',recordURL(r.record_id)+'#properties','reader-data-link'));intuition(sections[4],r,presentation);
+ sections[3].append(link('Complete measurements and source evidence →',recordURL(r.record_id)+'#properties','reader-data-link'));const hasIntuition=intuition(sections[4],r,presentation);
 
  const sources=section('sources','06','Sources');for(const source of r.sources){const card=el('div',undefined,'reader-citation');card.append(el('strong',source.title),el('p',source.authors+' · '+(source.year??'Year unverified')),link((source.doi||'Source')+' ↗',sourceURL(source)),document.createTextNode(' · '),link(r.quality?.review_status==='source_extracted'?'Source details →':'Source review →',source.id===r.lineage.source_group?reviewURL(r,presentation):sourceURL(source)));sources.append(card);}sourceDisagreements(sources,presentation.conflictPairs,r);host.append(sources);
  if(/^data\/paper-reviews\/[a-z0-9-]+\/[a-z0-9-]+\.json$/.test(presentation.data_links?.contexts||''))sources.append(link('Download additional source contexts ↓',presentation.data_links.contexts,'reader-data-link'));
  const additionalFigures=sourceFigureRows(figs,true);if(additionalFigures.length){sources.append(el('h3','Additional source figures'),el('p','These figures retain their original specimen and context qualifications.','reader-note'));figureGallery(sources,additionalFigures,r,'source',presentation);}
  mountWuContext(host,sections,sources,r,presentation);
- await Promise.all([precursors(sections[0],r,presentation),mountReaderStructures(structureHost,r,presentation)]);
+ const [,structures]=await Promise.all([precursors(sections[0],r,presentation),mountReaderStructures(structureHost,r,presentation)]);
  const precursorFigures=figs.filter(f=>f.category==='precursor'||f.categories?.includes('precursor'));
  if(precursorFigures.length){sections[0].append(el('h3','Precursor characterization'));figureGallery(sections[0],precursorFigures,r,'precursor',presentation);}
+ return hideEmptySections([...sections,sources],emptySections(r,{structures:!!structures?.empty&&!structureFigures,properties:sections[3].dataset.readerEmpty==='true',intuition:!hasIntuition}));
 
 }
 
@@ -242,15 +259,15 @@ export async function mountReader(main,{materialId,recordId}={}){
 
  main.replaceChildren();const toolbar=el('div',undefined,'reader-view-toolbar');toolbar.append(link('Periodic table / '+baseTitle,'index.html','reader-breadcrumb'),el('span',records.some(r=>r.review_status==='source_extracted')?'Synthesis and evidence':'Reviewed synthesis and evidence','reader-version'));main.append(toolbar);
 
- const heading=el('header',undefined,'reader-heading');heading.append(el('h1',baseTitle),el('p',data?.name||'Synthesis and material evidence'));const componentLabel=componentScopeLabel(data);if(componentLabel)heading.append(badge(componentLabel,'scope'));main.append(heading);
+ const heading=el('header',undefined,'reader-heading');heading.append(el('h1',baseTitle));{const name=data?.name||'Synthesis and material evidence';if(name!==baseTitle)heading.append(el('p',name));}const componentLabel=componentScopeLabel(data);if(componentLabel)heading.append(badge(componentLabel,'scope'));main.append(heading);
 
  const selector=el('section');selector.append(el('h2','Synthesis methods'));const cards=el('div',undefined,'reader-methods');
 
- for(const meta of records){const card=button('',()=>select(meta.record_id),'reader-method-card');card.dataset.recordId=meta.record_id;card.append(el('small',(presentations.records?.[meta.record_id]?.method_label||shortMethod(meta.method)).toUpperCase()),el('strong',meta.title),el('small',String(meta.year||'')));if(pendingVariants(meta.pending_variants).length)card.append(el('small',PENDING_BADGE));cards.append(card);}selector.append(cards);if(records.length>6){[...cards.children].slice(6).forEach(x=>x.hidden=true);selector.append(button('Show all '+records.length+' methods',e=>{for(const c of cards.children)c.hidden=false;e.currentTarget.hidden=true;},'reader-chip'));}main.append(selector);
+ for(const meta of records){const card=button('',()=>select(meta.record_id),'reader-method-card');card.dataset.recordId=meta.record_id;const label=displayMethod(meta.method,presentations.records?.[meta.record_id]?.method_label||meta.method_label);if(label)card.append(el('small',label.toUpperCase()));card.append(el('strong',meta.title),el('small',String(meta.year||'')));if(pendingVariants(meta.pending_variants).length)card.append(el('small',PENDING_BADGE));cards.append(card);}selector.append(cards);if(records.length>6){[...cards.children].slice(6).forEach(x=>x.hidden=true);selector.append(button('Show all '+records.length+' methods',e=>{for(const c of cards.children)c.hidden=false;e.currentTarget.hidden=true;},'reader-chip'));}main.append(selector);
 
  const methodInfo=el('div',undefined,'reader-method-info'),nav=el('nav',undefined,'reader-nav');nav.setAttribute('aria-label','Reader sections');for(const [id,title] of [['precursors','Precursors'],['protocol','Synthesis protocol'],['structures','Final structures'],['properties','Properties'],['intuition','Chemical intuition'],['sources','Sources']])nav.append(link(title,'#'+id));const body=el('div');main.append(methodInfo,nav,body);let generation=0;
 
- async function select(rid){delete main.dataset.readerReady;const turn=++generation;active=rid;for(const c of cards.children)c.setAttribute('aria-pressed',String(c.dataset.recordId===rid));const r=await json('data/records/'+rid+'.json');if(turn!==generation)return;const presentation=presentations.records?.[rid]||{};methodInfo.replaceChildren();const badges=methodBadges(r,presentation);methodInfo.append(badges,el('p',r.sources[0].title,'reader-citation'),dataSwitch(r));renderPendingVariants(methodInfo,records.find(meta=>meta.record_id===rid)?.pending_variants);if(data?.component_only||data&&data.formula!==r.material.formula)methodInfo.append(el('p','This method produces '+r.material.formula+'. Evidence describes the named product and its components.','reader-note'));body.replaceChildren();const content=el('div');body.append(content);await buildMethod(content,r,presentation);if(turn!==generation)return;document.title=baseTitle+' · '+(presentation.method_label||shortMethod(r.method))+' | MatterSyn';const url=new URL(location.href);url.searchParams.set('method',rid);history.replaceState(null,'',url);main.dataset.readerReady=rid;await applyReaderFragment(main);}
+ async function select(rid){delete main.dataset.readerReady;const turn=++generation;active=rid;for(const c of cards.children)c.setAttribute('aria-pressed',String(c.dataset.recordId===rid));const r=await json('data/records/'+rid+'.json');if(turn!==generation)return;const presentation=presentations.records?.[rid]||{};methodInfo.replaceChildren();const badges=methodBadges(r,presentation);methodInfo.append(badges,el('p',r.sources[0].title,'reader-citation'),dataSwitch(r));renderPendingVariants(methodInfo,records.find(meta=>meta.record_id===rid)?.pending_variants);if(data?.component_only||data&&data.formula!==r.material.formula)methodInfo.append(el('p','This method produces '+r.material.formula+'. Evidence describes the named product and its components.','reader-note'));body.replaceChildren();const content=el('div');body.append(content);const hidden=await buildMethod(content,r,presentation);if(turn!==generation)return;for(const tab of nav.children)tab.hidden=hidden.has((tab.getAttribute?.('href')||'').slice(1));{const label=displayMethod(r.method,presentation.method_label);document.title=baseTitle+(label?' · '+label:'')+' | MatterSyn';}const url=new URL(location.href);url.searchParams.set('method',rid);history.replaceState(null,'',url);main.dataset.readerReady=rid;await applyReaderFragment(main);}
 
  if(data?.experimental_series?.length){
   const series=el('section',undefined,'reader-section');series.id='experimental-series';series.append(el('h2','Experimental series'),el('p','Published recipe parameters and optical measurements from an additional source. These rows are part of this material collection; they do not establish row-specific particle structures or complete preparation protocols.','reader-note'));

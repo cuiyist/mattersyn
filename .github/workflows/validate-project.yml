@@ -63,6 +63,8 @@ jobs:
         run: node --test recipe-atlas/tests/silver-reader.test.mjs
       - name: Test explicit pending-variant scope notices
         run: node --test recipe-atlas/tests/pending-variants.test.mjs
+      - name: Test material-page first view
+        run: node --test recipe-atlas/tests/reader-first-view.test.mjs
       - name: Validate the public source projection
         run: |
           python tools/publication/bind_source_allowlist.py \
