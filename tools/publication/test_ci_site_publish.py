@@ -25,11 +25,12 @@ class SitePublisherTest(unittest.TestCase):
         (seed / 'data/records').mkdir(parents=True)
         (seed / '.github/workflows').mkdir(parents=True)
         for i in range(5):
-            (seed / f'data/records/r{i}.json').write_text(json.dumps({'record_id': f'r{i}'}), encoding='utf-8')
-        (seed / 'index.html').write_text('<p>old</p>', encoding='utf-8')
-        (seed / 'gone.txt').write_text('remove me', encoding='utf-8')
-        (seed / '.github/workflows/pages.yml').write_text('name: pages\n', encoding='utf-8')
+            (seed / f'data/records/r{i}.json').write_bytes((json.dumps({'record_id': f'r{i}'})).encode('utf-8'))
+        (seed / 'index.html').write_bytes(('<p>old</p>').encode('utf-8'))
+        (seed / 'gone.txt').write_bytes(('remove me').encode('utf-8'))
+        (seed / '.github/workflows/pages.yml').write_bytes(('name: pages\n').encode('utf-8'))
         sh('git', 'init', '-q', '-b', 'main', cwd=seed)
+        sh('git', 'config', 'core.autocrlf', 'false', cwd=seed)  # exact bytes, as the site's '* -text'
         sh('git', 'add', '-A', cwd=seed)
         sh('git', '-c', 'user.name=t', '-c', 'user.email=t@example.invalid', 'commit', '-qm', 'Publish 1 papers', cwd=seed)
         self.remote = root / 'remote.git'
@@ -44,10 +45,10 @@ class SitePublisherTest(unittest.TestCase):
         (preview / 'data/records').mkdir(parents=True)
         (preview / '.github/workflows').mkdir(parents=True)
         for i in range(5):
-            (preview / f'data/records/r{i}.json').write_text(json.dumps({'record_id': f'r{i}'}), encoding='utf-8')
-        (preview / 'data/records/r5.json').write_text(json.dumps({'record_id': 'r5'}), encoding='utf-8')
-        (preview / 'index.html').write_text('<p>new</p>', encoding='utf-8')
-        (preview / '.github/workflows/pages.yml').write_text('name: pages\n', encoding='utf-8')
+            (preview / f'data/records/r{i}.json').write_bytes((json.dumps({'record_id': f'r{i}'})).encode('utf-8'))
+        (preview / 'data/records/r5.json').write_bytes((json.dumps({'record_id': 'r5'})).encode('utf-8'))
+        (preview / 'index.html').write_bytes(('<p>new</p>').encode('utf-8'))
+        (preview / '.github/workflows/pages.yml').write_bytes(('name: pages\n').encode('utf-8'))
         self.preview = preview
 
     def tearDown(self):
@@ -93,8 +94,8 @@ class SitePublisherTest(unittest.TestCase):
     def test_moved_site_main_fails_without_force(self):
         self.stage()
         other = Path(self.tmp.name) / 'other'
-        sh('git', 'clone', '-q', str(self.remote), str(other))
-        (other / 'index.html').write_text('<p>someone else</p>', encoding='utf-8')
+        sh('git', '-c', 'core.autocrlf=false', 'clone', '-q', str(self.remote), str(other))
+        (other / 'index.html').write_bytes(('<p>someone else</p>').encode('utf-8'))
         sh('git', '-c', 'user.name=t', '-c', 'user.email=t@example.invalid', 'commit', '-qam', 'other', cwd=other)
         sh('git', 'push', '-q', 'origin', 'main', cwd=other)
         moved = sh('git', '-C', str(self.remote), 'rev-parse', 'main')
@@ -111,9 +112,9 @@ class SitePublisherTest(unittest.TestCase):
         self.assertEqual(sh('git', '-C', str(self.remote), 'rev-parse', 'main'), self.base)
 
     def test_unchanged_site_pushes_nothing(self):
-        (self.preview / 'index.html').write_text('<p>old</p>', encoding='utf-8')
+        (self.preview / 'index.html').write_bytes(('<p>old</p>').encode('utf-8'))
         (self.preview / 'data/records/r5.json').unlink()
-        (self.preview / 'gone.txt').write_text('remove me', encoding='utf-8')
+        (self.preview / 'gone.txt').write_bytes(('remove me').encode('utf-8'))
         stage = self.stage()
         self.assertFalse(stage['files_added'] or stage['files_changed'] or stage['files_removed'])
         self.assertEqual(self.push(), 0)
