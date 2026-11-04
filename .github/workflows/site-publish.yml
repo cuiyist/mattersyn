@@ -12,9 +12,9 @@ on:
   workflow_dispatch:
     inputs:
       mode:
-        description: 'publish: build the current main and publish it. dry-run: rebuild the live site''s source commit and compare, without pushing.'
+        description: 'publish: build the current main and publish it. check: build and check the current main without pushing. dry-run: rebuild the live site''s source commit and compare, without pushing.'
         type: choice
-        options: [publish, dry-run]
+        options: [publish, check, dry-run]
         default: publish
   pull_request:
     paths:
