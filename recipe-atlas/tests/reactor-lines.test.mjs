@@ -124,7 +124,8 @@ function mountWithInertProviders(overrides={}){
  const actual={reactorEnvironmentText,createReactorLineDetails,reactorLineCaption,reactorDisplayRecord,reactorQuantityUnavailable,quantityValue,matchProtocolCondition,conditionFieldText,conditionDisclosureText,...overrides,kind:()=> 'context',mountProtocolReferences:()=>Promise.resolve()};
  const inert=()=>null;
  const code=source.replace(/^import .+;\r?\n/gm,'').replace('export function mountProtocol','function mountProtocol');
- return new Function(...names,code+'\nreturn mountProtocol;')(...names.map(name=>actual[name]||inert));
+ // Per-paper providers are now looked up in the lazily filled table P, not imported.
+ return new Function(...names,'__providers',code+'\nfor(const [name,provider] of Object.entries(__providers))P[name]=provider;\nreturn mountProtocol;')(...names.map(name=>actual[name]||inert),overrides);
 }
 test('the copied protocol mount displays new fields and prose, hides JSON, and qualifies unknown vessel',()=>dom(()=>{
  const r=record();r.operations=[operation(line(),{vessel_volume:quantity(25)})];

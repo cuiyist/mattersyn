@@ -57,6 +57,8 @@ jobs:
         run: node --test recipe-atlas/tests/yu1998-scene-scope.test.mjs
       - name: Test reader specimen and figure isolation
         run: node --test recipe-atlas/tests/reader-revision.test.mjs
+      - name: Test per-page Reader data and lazy protocol scripts
+        run: node --test recipe-atlas/tests/reader-page-data.test.mjs recipe-atlas/tests/reactor-lines.test.mjs
       - name: Test reviewed source figure access
         run: node --test recipe-atlas/tests/reader-source-figures.test.mjs recipe-atlas/tests/reader-figure-category.test.mjs recipe-atlas/tests/reader-extracted-status.test.mjs
       - name: Test separate silver cards and field masking

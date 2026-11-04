@@ -55,7 +55,7 @@ def main():
         (work/'private-build').mkdir();shutil.copyfile(a.display_overrides,work/'private-build/asset-display-overrides.json')
     try:
         if a.artifact_transform:runs.append(execute([sys.executable,str(a.artifact_transform.resolve()),'--phase','prebuild','--root',str((work/'dist').resolve()),'--source-root',str(work.resolve()),'--registry',str(a.registry.resolve())],work))
-        for script in ['build_dataset.py','build_reader_views.py','build_evidence_views.py','build_paper_reviews.py','build_atlas.py','build_inventory.py','build_reader_metadata.py']:
+        for script in ['build_dataset.py','build_reader_views.py','build_evidence_views.py','build_paper_reviews.py','build_atlas.py','build_inventory.py','build_reader_metadata.py','build_reader_shards.py']:
             runs.append(execute([sys.executable,'scripts/'+script],work))
         sys.path.insert(0,str(work/'scripts'));from generate_release_metadata import generate
         metadata=generate(work,snapshot)
