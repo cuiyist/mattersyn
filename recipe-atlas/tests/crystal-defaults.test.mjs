@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {defaultCrystalReferences,reportedPhases} from '../static/crystal-defaults.mjs';
+import {defaultCrystalReferences,reportedPhases,compositionParts} from '../static/crystal-defaults.mjs';
 const entry=(id,formula,name,sg)=>({id,formula,name,spaceGroupNumber:sg,cifPath:id+'.cif',modelPath:'models/'+id+'.json',referenceOnly:true});
 const ordered=entry('ordered','CoPt3','CoPt3 ordered L12 bulk reference',221);
 const fcc=entry('fcc','CoPt3','CoPt3 disordered fcc bulk reference',225);
@@ -134,4 +134,21 @@ test('InAs generic crystal receives only an independent matching composition ref
  assert.equal(refs[0].displayPolicy,'independent_reference');
  assert.equal(refs[0].roleByRecord[r.record_id],'Reference by composition');
  assert.ok(refs[0].scope.includes('not a structure of the synthesized sample'));
+});
+test('alloy and core/shell names show their end-member cells as component references',()=>{
+ const library=[entry('cdse-zb','CdSe','CdSe zinc blende bulk reference',216),entry('cds-zb','CdS','CdS zinc blende bulk reference',216),entry('zns-zb','ZnS','ZnS zinc blende bulk reference',216)];
+ const r=rec('zinc blende');r.material={formula:'CdSeS',components:['CdSeS']};
+ assert.deepEqual(compositionParts(r,library),['CdSe','CdS']);
+ const refs=defaultCrystalReferences(library,r);
+ assert.deepEqual(refs.map(e=>e.id),['cdse-zb','cds-zb']);
+ assert.ok(refs.every(e=>e.roleByRecord[r.record_id]==='Component reference'&&/not a structure of the synthesized sample/.test(e.scope)));
+ const shell=rec(null);shell.material={formula:'CdSe-ZnS',components:['CdSe-ZnS']};
+ assert.deepEqual(defaultCrystalReferences(library,shell).map(e=>e.id),['cdse-zb','zns-zb']);
+});
+test('an alloy whose end members are not all in the library shows no cell',()=>{
+ const library=[entry('inas-zb','InAs','InAs zinc blende bulk reference',216)];
+ const r=rec(null);r.material={formula:'InGaAs',components:['InGaAs']};
+ assert.deepEqual(compositionParts(r,library),[]);
+ assert.deepEqual(defaultCrystalReferences(library,r),[]);
+ assert.deepEqual(compositionParts(r),['InAs','GaAs'],'without a library the end members are listed');
 });
