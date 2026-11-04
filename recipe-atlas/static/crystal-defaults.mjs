@@ -10,13 +10,14 @@ const named=pattern=>entry=>pattern.test([entry.name,entry.phaseName].filter(Boo
 const either=(...tests)=>entry=>tests.some(test=>test(entry));
 // [words a paper may use for a phase, test a library entry must pass]
 const PHASE_TESTS=[
- [/zinc.?blende|sphalerite/i,either(symbol(/F\s*-4\s*3\s*m/),named(/zinc.?blende|sphalerite/i))],
+ [/zinc.?blende?|sphalerite|coloradoite|tiemannite/i,either(symbol(/F\s*-4\s*3\s*m/),named(/zinc.?blende|sphalerite/i))],
  [/wurtzite/i,either(symbol(/P\s*63\s*m\s*c/),named(/wurtzite/i))],
- [/rock.?salt|halite|galena/i,either(named(/rock.?salt/i),entry=>group(entry)===225&&!/face.cent|\bfcc\b/i.test(entry.name||''))],
+ [/rock.?salt|halite|galena|periclase/i,either(named(/rock.?salt/i),entry=>group(entry)===225&&!/face.cent|\bfcc\b/i.test(entry.name||''))],
  [/face.cent(?:e?red)|\bfcc\b/i,inRange(225,225)],[/\bhcp\b|hexagonal close/i,inRange(194,194)],[/\bbcc\b|body.cent(?:e?red)/i,inRange(229,229)],
  [/anatase/i,named(/anatase/i)],[/rutile/i,named(/rutile/i)],[/brookite/i,named(/brookite/i)],[/chalcopyrite/i,named(/chalcopyrite/i)],
  [/spinel/i,named(/spinel/i)],[/calcite/i,named(/calcite/i)],[/aragonite/i,named(/aragonite/i)],[/baddeleyite/i,named(/baddeleyite/i)],
- [/bixbyite/i,named(/bixbyite/i)],[/perovskite/i,named(/perovskite/i)],
+ [/bixbyite/i,named(/bixbyite/i)],[/perovskite/i,named(/perovskite/i)],[/cuprite/i,named(/cuprite/i)],[/hydroxy?l?apatite|\bapatite/i,named(/apatite/i)],
+ [/herzenbergite/i,named(/herzenbergite/i)],[/\b2H\b/i,named(/\b2H\b/i)],[/\b3C\b/i,named(/\b3C\b/i)],[/\b6H\b/i,named(/\b6H\b/i)],
  [/\bcubic\b/i,inRange(195,230)],[/tetragonal/i,inRange(75,142)],[/orthorhombic/i,inRange(16,74)],[/\bhexagonal\b/i,inRange(168,194)],
  [/trigonal|rhombohedral/i,inRange(143,167)],[/monoclinic/i,inRange(3,15)],[/triclinic/i,inRange(1,2)]
 ];

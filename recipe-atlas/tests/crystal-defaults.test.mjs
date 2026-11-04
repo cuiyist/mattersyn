@@ -152,3 +152,18 @@ test('an alloy whose end members are not all in the library shows no cell',()=>{
  assert.deepEqual(defaultCrystalReferences(library,r),[]);
  assert.deepEqual(compositionParts(r),['InAs','GaAs'],'without a library the end members are listed');
 });
+test('mineral and polytype phase names select the matching new bulk references',()=>{
+ const lib=[entry('hgte','HgTe','HgTe zinc blende (coloradoite) bulk reference',216),entry('mgo','MgO','MgO rock salt (periclase) bulk reference',225),
+  entry('sic3c','SiC','SiC 3C (zinc blende-type, β-SiC) bulk reference',216),entry('sic6h','SiC','SiC 6H hexagonal (α-SiC) bulk reference',186),
+  entry('ws2','WS2','WS2 2H hexagonal bulk reference',194),entry('hap','Ca10(PO4)6(OH)2','Ca10(PO4)6(OH)2 hexagonal hydroxyapatite bulk reference',176)];
+ const pick=(formula,phase)=>{const r=rec(phase);r.material={formula};return defaultCrystalReferences(lib,r).map(e=>e.id);};
+ assert.deepEqual(pick('HgTe','coloradoite'),['hgte']);
+ assert.deepEqual(pick('HgTe','zinc blend'),['hgte']);
+ assert.deepEqual(pick('MgO','periclase'),['mgo']);
+ assert.deepEqual(pick('SiC','3C-SiC'),['sic3c']);
+ assert.deepEqual(pick('SiC','cubic (3C-SiC)'),['sic3c']);
+ assert.deepEqual(pick('SiC',null),['sic3c','sic6h']);
+ assert.deepEqual(pick('WS2','2H-phase'),['ws2']);
+ assert.deepEqual(pick('Ca10(PO4)6(OH)2','hydroxyapatite'),['hap']);
+ assert.deepEqual(pick('Ca10(PO4)6(OH)2','anatase and rutile'),[]);
+});
