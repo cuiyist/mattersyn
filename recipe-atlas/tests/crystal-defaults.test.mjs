@@ -167,3 +167,17 @@ test('mineral and polytype phase names select the matching new bulk references',
  assert.deepEqual(pick('Ca10(PO4)6(OH)2','hydroxyapatite'),['hap']);
  assert.deepEqual(pick('Ca10(PO4)6(OH)2','anatase and rutile'),[]);
 });
+test('second-batch phase names and end members select their references',()=>{
+ const lib=[entry('czts','Cu2ZnSnS4','Cu2ZnSnS4 tetragonal kesterite bulk reference',121),entry('pbmo','PbMoO4','PbMoO4 tetragonal scheelite-type (wulfenite) bulk reference',88),
+  entry('cos2','CoS2','CoS2 cubic pyrite-type (cattierite) bulk reference',205),entry('bto','Bi4Ti3O12','Bi4Ti3O12 orthorhombic Aurivillius-type layered perovskite (average cell) bulk reference',69),
+  entry('bwo','Bi2WO6','Bi2WO6 orthorhombic (russellite) bulk reference',29),entry('yag','Y3Al5O12','Y3Al5O12 cubic garnet (YAG) bulk reference',230),
+  entry('inp','InP','InP zinc blende bulk reference',216),entry('gap','GaP','GaP zinc blende bulk reference',216)];
+ const pick=(formula,phase,components)=>{const r=rec(phase);r.material={formula,...(components?{components}:{})};return defaultCrystalReferences(lib,r).map(e=>e.id);};
+ assert.deepEqual(pick('Cu2ZnSnS4','kesterite CZTS'),['czts']);
+ assert.deepEqual(pick('PbMoO4','tetragonal scheelite-type'),['pbmo']);
+ assert.deepEqual(pick('CoS2','cubic pyrite'),['cos2']);
+ assert.deepEqual(pick('Bi4Ti3O12','Aurivillius-type layered perovskite'),['bto']);
+ assert.deepEqual(pick('Bi2WO6','P21ab'),['bwo']);
+ assert.deepEqual(pick('Y3Al5O12:Ce','Crystalline NC YAG:Ce by HRTEM'),['yag']);
+ assert.deepEqual(pick('InGaP','cubic',['InGaP']),['inp','gap']);
+});
