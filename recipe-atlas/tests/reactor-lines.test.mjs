@@ -121,7 +121,7 @@ test('the retained original fact helper demonstrates the hidden-note and raw-JSO
 function mountWithInertProviders(overrides={}){
  const source=readFileSync(new URL('../static/protocol-visuals.mjs',import.meta.url),'utf8');
  const names=[...source.matchAll(/^import \{([^}]+)\} from .+;$/gm)].flatMap(m=>m[1].split(',').map(n=>n.trim().split(/\s+as\s+/).at(-1)));
- const actual={reactorEnvironmentText,createReactorLineDetails,reactorLineCaption,reactorDisplayRecord,reactorQuantityUnavailable,quantityValue,matchProtocolCondition,conditionFieldText,conditionDisclosureText,...overrides,kind:()=> 'context',mountProtocolReferences:()=>Promise.resolve()};
+ const actual={readReactorLineNote,reactorEnvironmentText,createReactorLineDetails,reactorLineCaption,reactorDisplayRecord,reactorQuantityUnavailable,quantityValue,matchProtocolCondition,conditionFieldText,conditionDisclosureText,...overrides,kind:()=> 'context',mountProtocolReferences:()=>Promise.resolve()};
  const inert=()=>null;
  const code=source.replace(/^import .+;\r?\n/gm,'').replace('export function mountProtocol','function mountProtocol');
  // Per-paper providers are now looked up in the lazily filled table P, not imported.
@@ -418,4 +418,37 @@ test('source-extracted mount keeps real field formatters and source data unchang
  assert.match(host.textContent,/Not recorded in this field/);assert.match(host.textContent,/Conditions and source/);
  assert.doesNotMatch(host.textContent,/Temperature null|Environment null|Endpoint: null/);
  assert.equal(JSON.stringify(r),before);
+}));
+
+// The reported-field renderer applies to bound pre-drawn images only. Per-paper
+// providers, unsupported images and the original downloadable record remain intact.
+test('a bound operation uses its shared scene and one uniform caption',()=>dom(()=>{
+ const r=record(),op=operation();r.operations=[op];const before=JSON.stringify(r),host=new Element('div');
+ const caveat='Schematic: vessel shapes and colors are illustrative.';
+ const binding={asset_path:'assets/protocol/fixture.svg',caption:'Old repeated image caption.',source_locator:'Fixture page 2'};
+ mountWithInertProviders({selectProtocolArt:()=>binding,REPORTED_SCENE_CAVEAT:caveat,
+  createReportedProtocolScene:(shown,record,options)=>{
+   assert.equal(shown.id,op.id);assert.equal(options.formatQuantity(quantity(25)),'25 mL');
+   assert.equal(options.readReactorLine,readReactorLineNote);
+   const art=new Element('div');art.dataset.renderer='reported-fields';art.append(new Element('svg'));return art;
+  }})(host,r);
+ assert.equal(host.textContent.split(caveat).length-1,1);
+ assert.doesNotMatch(host.textContent,/Old repeated image caption|Conceptual vessel:/);
+ assert.equal(flatten(host).filter(n=>n.tagName==='IMG').length,0);
+ assert.equal(JSON.stringify(r),before);
+}));
+
+test('an unmatched bound operation retains its exact image and caption',()=>dom(()=>{
+ const r=record();r.operations=[operation()];const host=new Element('div');
+ const binding={asset_path:'assets/protocol/fixture.svg',caption:'Existing exact illustration.',source_locator:'Fixture page 2'};
+ mountWithInertProviders({selectProtocolArt:()=>binding,createReportedProtocolScene:()=>null})(host,r,'https://example.invalid/');
+ const image=flatten(host).find(n=>n.tagName==='IMG');assert.equal(image.src,'https://example.invalid/assets/protocol/fixture.svg');
+ assert.match(host.textContent,/Existing exact illustration/);
+}));
+
+test('an existing per-paper protocol module keeps precedence outside bound images',()=>dom(()=>{
+ const r=record();r.operations=[operation()];const host=new Element('div'),custom=new Element('div');custom.dataset.scene='paper-fixture';
+ mountWithInertProviders({selectProtocolArt:()=>null,createRusch2026Art:()=>custom,
+  createReportedProtocolScene:()=>{throw Error('Do not replace the per-paper module');}})(host,r);
+ assert.ok(flatten(host).includes(custom));
 }));

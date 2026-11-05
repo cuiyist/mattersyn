@@ -1,3 +1,34 @@
+<!-- reader-protocol-scenes-20261105-C -->
+# Reader protocol drawings — C prepared for GitHub checks
+
+| Task | Pull request / release | Site commit | Result |
+| --- | --- | --- | --- |
+| C: protocol drawings | Source branch `reader-protocol-scenes-20261105-r1`; pull request and release pending | Not yet released | Own-record shared scenes prepared; full build, release checks and publication run in GitHub Actions. |
+| D: thin-recipe rereads | No revision pull request or release yet | Not yet released | Local two-pass reading started for a first cohort of 200 already-live papers / 303 eligible recipes. No improved or kept revisions are credited yet. |
+
+C1 uses the actual Reader presentation and artwork-selection precedence. Its denominator is **6,307 Reader records / 22,456 operation uses**. An image reused by two records counts as two uses. Categories are disjoint:
+
+| Drawing path | Before | C candidate |
+| --- | ---: | ---: |
+| Pre-drawn action/process boxes | 14,706 | 4,354 |
+| Pre-drawn vessel/apparatus drawings | 4,084 | 1,604 |
+| Per-paper protocol modules | 1,235 | 1,235 |
+| Shared browser scenes | 2,431 | 15,263 |
+| All Reader step uses | 22,456 | 22,456 |
+
+The candidate adds **12,832** record-driven scenes, replacing **68.29% of 18,790 pre-drawn uses**. Shared scenes rise from **10.83% to 67.97%** of all Reader steps. The other **5,958** steps retain their existing image because the conservative rules do not identify a supported current-step apparatus/action. All 16,875 pre-drawn asset files remain unchanged. The separate Source-wide inventory is **6,865 records / 23,475 operations**: 18,790 pre-drawn, 1,990 per-paper and 2,695 shared/browser-fallback uses; it is not substituted for the Reader denominator.
+
+The shared module draws reported solution vessels, injection and gas delivery, workup tubes/centrifuges/filters, reported deposition systems, furnaces, mill jars and closed reactors. Names are taken from the current operation's own additions. Temperatures, durations, atmosphere and flux fields are shown only when reported. Missing values are omitted; carried material states and contradictory input names do not become new reagent claims. Labels are unscaled 13 px HTML with wrapping. One common caveat appears below a new scene. Handmade/per-paper modules, canonical records, review status, Download JSON, figures and `to_site.py` are unchanged.
+
+Validation prepared: 92 focused changed/affected-file tests passed locally. No test was deleted or disabled; the existing parser/helper assertions remain, and three mount assertions now cover the new bound-image branch, unmatched-image retention and per-paper preservation. New scene tests cover apparatus choice, reported-only details, escaping, missing values, label size and immutability. GitHub retains before/after screenshots and receipts for the ten benchmark defaults and five named route examples, each at desktop and phone widths. The local before capture completed 30 target/viewports without load, script, overflow or Download JSON mismatches. Candidate and live visual review remain pending; no Live claim is made for C.
+
+D uses the same local Qwen model, extraction prompt, two passes and CHECK. The owner requested CPU operation while another GPU workload runs. Only already-live eligible recipes are candidates; existing figures and all checked values must survive any accepted next revision. Raw extraction/CHECK completion is not revision or publication credit. D's first-200 stop rule uses the eligible-recipe denominator. No new paper is admitted and no D record has been changed by this C code release.
+
+Verified Live totals remain **2,916 papers / 6,865 records**. B1 and B2 remain complete in the retained ledger below. Audit, Worker A/B and the five older owner entries remain paused. No local site build, full local test suite, new repository copy or direct Site push was used.
+
+---
+Prior report retained verbatim:
+
 <!-- mattersyn-reader-followup-20261105-b2 -->
 ## Reader follow-up — B1 live; B2 COD retry prepared
 
