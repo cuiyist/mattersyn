@@ -79,6 +79,15 @@ class SitePublisherTest(unittest.TestCase):
         self.assertEqual(stage['files_removed'], ['gone.txt'])
         self.assertEqual(sh('git', '-C', str(self.site), 'count-objects', '-v').count('count: 0'), 1)
 
+    def test_live_check_names_only_built_files(self):
+        (self.preview / '.github/workflows/pages.yml').write_bytes(('name: pages v2\n').encode('utf-8'))
+        (self.preview / '.release-control').mkdir()
+        (self.preview / '.release-control/site-allowlist.json').write_bytes(b'{}')
+        stage = self.stage()
+        self.assertIn('.github/workflows/pages.yml', stage['files_changed'])
+        self.assertIn('.release-control/site-allowlist.json', stage['files_added'])
+        self.assertEqual(publisher.built_changed_paths(stage), ['data/records/r5.json', 'index.html'])
+
     def test_one_ordinary_commit_is_pushed_on_top_of_site_main(self):
         self.stage()
         self.assertEqual(self.push(), 0)

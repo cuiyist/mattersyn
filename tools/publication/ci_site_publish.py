@@ -421,6 +421,14 @@ def wait_for_pages(site_repo, site_commit, minutes, token=None, sleep=time.sleep
         sleep(poll_s)
 
 
+def built_changed_paths(stage):
+    """The added or changed built site files, as release_batch.stage_dist lists them for verify_live.
+
+    The staged tree also carries the site control paths (rb.SITE_CONTROL); the site boundary gate
+    checks those, and they are not part of the built site that the live check compares."""
+    return sorted({p for p in stage['files_added'] + stage['files_changed'] if p.split('/')[0] not in rb.SITE_CONTROL})
+
+
 def cmd_verify(a):
     work = a.work.resolve()
     push = read_json(work / 'push.json')
@@ -436,7 +444,7 @@ def cmd_verify(a):
     log(f'Pages run finished: {runs}; anonymous live check')
     result = rb.verify_live(a.site_url, work / DIST, stage['source_commit'], stage['paper_routes'],
                             stage['material_routes'],
-                            changed_paths=sorted(set(stage['files_added']) | set(stage['files_changed'])))
+                            changed_paths=built_changed_paths(stage))
     result['pages_runs'] = runs
     rb.write_json(work / 'receipts/live-verification.json', result)
     if not result['passed']:
