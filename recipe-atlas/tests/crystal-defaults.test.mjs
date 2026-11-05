@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {defaultCrystalReferences,reportedPhases} from '../static/crystal-defaults.mjs';
+import {defaultCrystalReferences,reportedPhases,compositionParts} from '../static/crystal-defaults.mjs';
 const entry=(id,formula,name,sg)=>({id,formula,name,spaceGroupNumber:sg,cifPath:id+'.cif',modelPath:'models/'+id+'.json',referenceOnly:true});
 const ordered=entry('ordered','CoPt3','CoPt3 ordered L12 bulk reference',221);
 const fcc=entry('fcc','CoPt3','CoPt3 disordered fcc bulk reference',225);
@@ -134,4 +134,50 @@ test('InAs generic crystal receives only an independent matching composition ref
  assert.equal(refs[0].displayPolicy,'independent_reference');
  assert.equal(refs[0].roleByRecord[r.record_id],'Reference by composition');
  assert.ok(refs[0].scope.includes('not a structure of the synthesized sample'));
+});
+test('alloy and core/shell names show their end-member cells as component references',()=>{
+ const library=[entry('cdse-zb','CdSe','CdSe zinc blende bulk reference',216),entry('cds-zb','CdS','CdS zinc blende bulk reference',216),entry('zns-zb','ZnS','ZnS zinc blende bulk reference',216)];
+ const r=rec('zinc blende');r.material={formula:'CdSeS',components:['CdSeS']};
+ assert.deepEqual(compositionParts(r,library),['CdSe','CdS']);
+ const refs=defaultCrystalReferences(library,r);
+ assert.deepEqual(refs.map(e=>e.id),['cdse-zb','cds-zb']);
+ assert.ok(refs.every(e=>e.roleByRecord[r.record_id]==='Component reference'&&/not a structure of the synthesized sample/.test(e.scope)));
+ const shell=rec(null);shell.material={formula:'CdSe-ZnS',components:['CdSe-ZnS']};
+ assert.deepEqual(defaultCrystalReferences(library,shell).map(e=>e.id),['cdse-zb','zns-zb']);
+});
+test('an alloy whose end members are not all in the library shows no cell',()=>{
+ const library=[entry('inas-zb','InAs','InAs zinc blende bulk reference',216)];
+ const r=rec(null);r.material={formula:'InGaAs',components:['InGaAs']};
+ assert.deepEqual(compositionParts(r,library),[]);
+ assert.deepEqual(defaultCrystalReferences(library,r),[]);
+ assert.deepEqual(compositionParts(r),['InAs','GaAs'],'without a library the end members are listed');
+});
+test('mineral and polytype phase names select the matching new bulk references',()=>{
+ const lib=[entry('hgte','HgTe','HgTe zinc blende (coloradoite) bulk reference',216),entry('mgo','MgO','MgO rock salt (periclase) bulk reference',225),
+  entry('sic3c','SiC','SiC 3C (zinc blende-type, β-SiC) bulk reference',216),entry('sic6h','SiC','SiC 6H hexagonal (α-SiC) bulk reference',186),
+  entry('ws2','WS2','WS2 2H hexagonal bulk reference',194),entry('hap','Ca10(PO4)6(OH)2','Ca10(PO4)6(OH)2 hexagonal hydroxyapatite bulk reference',176)];
+ const pick=(formula,phase)=>{const r=rec(phase);r.material={formula};return defaultCrystalReferences(lib,r).map(e=>e.id);};
+ assert.deepEqual(pick('HgTe','coloradoite'),['hgte']);
+ assert.deepEqual(pick('HgTe','zinc blend'),['hgte']);
+ assert.deepEqual(pick('MgO','periclase'),['mgo']);
+ assert.deepEqual(pick('SiC','3C-SiC'),['sic3c']);
+ assert.deepEqual(pick('SiC','cubic (3C-SiC)'),['sic3c']);
+ assert.deepEqual(pick('SiC',null),['sic3c','sic6h']);
+ assert.deepEqual(pick('WS2','2H-phase'),['ws2']);
+ assert.deepEqual(pick('Ca10(PO4)6(OH)2','hydroxyapatite'),['hap']);
+ assert.deepEqual(pick('Ca10(PO4)6(OH)2','anatase and rutile'),[]);
+});
+test('second-batch phase names and end members select their references',()=>{
+ const lib=[entry('czts','Cu2ZnSnS4','Cu2ZnSnS4 tetragonal kesterite bulk reference',121),entry('pbmo','PbMoO4','PbMoO4 tetragonal scheelite-type (wulfenite) bulk reference',88),
+  entry('cos2','CoS2','CoS2 cubic pyrite-type (cattierite) bulk reference',205),entry('bto','Bi4Ti3O12','Bi4Ti3O12 orthorhombic Aurivillius-type layered perovskite (average cell) bulk reference',69),
+  entry('bwo','Bi2WO6','Bi2WO6 orthorhombic (russellite) bulk reference',29),entry('yag','Y3Al5O12','Y3Al5O12 cubic garnet (YAG) bulk reference',230),
+  entry('inp','InP','InP zinc blende bulk reference',216),entry('gap','GaP','GaP zinc blende bulk reference',216)];
+ const pick=(formula,phase,components)=>{const r=rec(phase);r.material={formula,...(components?{components}:{})};return defaultCrystalReferences(lib,r).map(e=>e.id);};
+ assert.deepEqual(pick('Cu2ZnSnS4','kesterite CZTS'),['czts']);
+ assert.deepEqual(pick('PbMoO4','tetragonal scheelite-type'),['pbmo']);
+ assert.deepEqual(pick('CoS2','cubic pyrite'),['cos2']);
+ assert.deepEqual(pick('Bi4Ti3O12','Aurivillius-type layered perovskite'),['bto']);
+ assert.deepEqual(pick('Bi2WO6','P21ab'),['bwo']);
+ assert.deepEqual(pick('Y3Al5O12:Ce','Crystalline NC YAG:Ce by HRTEM'),['yag']);
+ assert.deepEqual(pick('InGaP','cubic',['InGaP']),['inp','gap']);
 });
