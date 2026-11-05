@@ -90,6 +90,11 @@ function recipeVessel(r) {
 
 function addedNames(o, r, sceneKind) {
   const action = words(o.action), label = words(o.label);
+  // A deposition input can describe the layer being grown rather than a feed.
+  // Only explicit charging/supply actions name chamber reagents. Reported flux
+  // conditions still draw their own feed, independently of these input names.
+  const chamberCharge = /\b(?:add(?:ed|ing)?|inject(?:ed|ing)?|suppl(?:y|ied|ying)|feed(?:ing)?|fed|load(?:ed|ing)?)\b/;
+  if (sceneKind === 'chamber' && !positive(action, chamberCharge) && !positive(label, chamberCharge)) return [];
   const adds = /\b(?:add\w*|dissolv\w*|prepar\w*|mix\w*|stir\w*|inject\w*|supply\w*|deposit\w*|load\w*|combin\w*|precipitat\w*|redisper\w*|resuspend\w*)\b/;
   if (!positive(action, adds) && !positive(label, /\b(?:add(?:ed|ing)?|inject(?:ed|ing)?|suppl(?:y|ied)|deposit(?:ed|ing)?)\b/)) return [];
   const materials = new Map((r.materials || []).filter(m => !['apparatus', 'substrate'].includes(m.role))

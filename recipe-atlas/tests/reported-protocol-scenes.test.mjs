@@ -81,6 +81,26 @@ test('only current-step reported flux and substrate inputs are represented', () 
   assert.equal(d.conditions[0].key, 'Ga_flux');
 });
 
+test('deposited layer compositions are not asserted as chamber reagents or feeds', () => {
+  for (const name of ['GaAs', 'Al0.3Ga0.7As', 'Silicon']) {
+    const r = rec({method: 'MBE', materials: [{id: 'layer', name, role: 'metal_precursor'}]});
+    const d = choose(op('deposit', `Deposit ${name} buffer layer`, {inputs: ['layer']}), r);
+    assert.equal(d.kind, 'chamber');
+    assert.deepEqual(d.added, []);
+    assert.equal(d.sourceFeed, false);
+  }
+});
+
+test('explicit chamber supply names and reported deposition flux remain visible', () => {
+  const r = rec({method: 'MBE', materials: [{id: 'source', name: 'Gallium', role: 'metal_precursor'}]});
+  const supplied = choose(op('supply', 'Supply gallium', {inputs: ['source']}), r);
+  assert.deepEqual(supplied.added, ['Gallium']);
+  assert.equal(supplied.sourceFeed, true);
+  const deposited = choose(op('deposit', 'Deposit a layer', {inputs: ['source'], parameters: {Ga_flux: q(1, 'ML/s')}}), r);
+  assert.deepEqual(deposited.added, []);
+  assert.equal(deposited.sourceFeed, true);
+});
+
 test('hydrothermal/solvothermal current reaction steps use a closed reactor', () => {
   for (const method of ['Hydrothermal', 'Solvothermal']) {
     const d = choose(op('heat'), rec({method}));
