@@ -206,3 +206,12 @@ test('third-batch alloy names and phase words select their references',()=>{
  assert.deepEqual(pick('Se','trigonal'),['se']);
  assert.deepEqual(pick('Se','Rhombohedral (R-Se)'),[]);
 });
+test('fourth-batch names select their references',()=>{
+ const lib=[entry('nayf4','NaYF4','NaYF4 cubic α (disordered fluorite-type) bulk reference',225),entry('ag3aus2','Ag3AuS2','Ag3AuS2 cubic (uytenbogaardtite) bulk reference',213),
+  entry('inp','InP','InP zinc blende bulk reference',216),entry('gap','GaP','GaP zinc blende bulk reference',216)];
+ const pick=(formula,phase)=>{const r=rec(phase);r.material={formula,components:[formula]};return defaultCrystalReferences(lib,r).map(e=>e.id);};
+ assert.deepEqual(pick('NaYF4:Yb3+','cubic'),['nayf4']);
+ assert.deepEqual(pick('NaYF4:20','hexagonal'),[]);
+ assert.deepEqual(pick('Ag3AuS2','uytenbogaardtite'),['ag3aus2']);
+ assert.deepEqual(pick('In1−xGaxP','zinc blende'),['inp','gap']);
+});
