@@ -88,6 +88,58 @@ function recipeVessel(r) {
   return {value, scope: 'recipe'};
 }
 
+function literalStockCharges(o, aliases) {
+  // Read only an imperative addition clause in this operation. A destination,
+  // prior preparation, conditional charge or carried mixture is not an addition.
+  const escape = value => value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const ownTexts = [text(o.description), text(o.label)];
+  const conditional = /\b(?:if|unless|optionally|optional|may|might|could|would|for later|as needed)\b/i;
+  const negatedCharge = /\b(?:do not|never|avoid|omit|without)\s+(?:add\w*|inject\w*|introduc\w*|load\w*|supply\w*|feed\w*|pour\w*)\b/i;
+  // A short label must not override a conditional/negative own description.
+  if (ownTexts.some(own => conditional.test(own) || negatedCharge.test(own))) return [];
+  for (const own of ownTexts) {
+    const names = [];
+    for (const clause of own.split(/\.(?=\s|$)|[;\n]/)) {
+      const charge = /^\s*(?:(?:then|slowly|rapidly|carefully|dropwise|immediately)\s+)*(?:add|inject|introduce|load|supply|feed|pour)\s+(.+)$/i.exec(clause);
+      if (!charge) continue;
+      const object = charge[1].split(/\b(?:to|into|onto|through|over|under|at|with|without|in|while|for|using|after|before|and|except|excluding|rather than)\b/i)[0];
+      if (/\b(?:no|not|never|avoid|omit|prevent)\b/i.test(object)) continue;
+      for (const alias of aliases) {
+        const name = escape(alias).replace(/\s+/g, '\\s+');
+        const match = new RegExp('(^|[^A-Za-z0-9])((?:(?:fresh(?:ly prepared)?|aqueous)\\s+)*' + name
+          + '(?:\\s+(?:solution|stock|suspension|dispersion|mixture))?)(?=$|[^A-Za-z0-9])', 'i').exec(object);
+        if (match && !names.includes(match[2])) names.push(match[2]);
+      }
+    }
+    if (names.length) return names.filter(name => !names.some(other => other !== name
+      && other.toLowerCase().includes(name.toLowerCase())));
+  }
+  return [];
+}
+
+function preparedInputStockNames(id, o, r) {
+  // A state may label a freshly added stock only with an unambiguous explicit
+  // preparation-output link. Never expand carried states or every stock component.
+  if ((r.material_states || []).filter(state => state.id === id).length !== 1
+      || (r.materials || []).some(material => material.id === id)) return [];
+  const operations = r.operations || [];
+  const current = operations.map((step, index) => ({step, index})).filter(({step}) => step === o || step.id && step.id === o.id);
+  const producers = operations.map((step, index) => ({step, index})).filter(({step}) => (step.outputs || []).includes(id));
+  if (current.length !== 1 || producers.length !== 1) return [];
+  const {step: prep, index} = producers[0];
+  if (!prep.id || index >= current[0].index || prep.outputs.length !== 1
+      || operations.filter(step => step.id === prep.id).length !== 1) return [];
+  const stocks = (r.stocks || []).filter(stock => (stock.preparation_operation_ids || []).includes(prep.id));
+  if (stocks.length !== 1) return [];
+  const aliases = (stocks[0].components || []).flatMap(component => {
+    const matches = (r.materials || []).filter(material => material.id === component.material_id);
+    if (matches.length !== 1 || !(prep.inputs || []).includes(component.material_id)
+        || ['apparatus', 'substrate'].includes(matches[0].role)) return [];
+    return [matches[0].name, matches[0].formula].filter(present).map(text);
+  });
+  return literalStockCharges(o, [...new Set(aliases)]);
+}
+
 function addedNames(o, r, sceneKind) {
   const action = words(o.action), label = words(o.label);
   // A deposition input can describe the layer being grown rather than a feed.
@@ -105,7 +157,10 @@ function addedNames(o, r, sceneKind) {
   const usedEarlier = new Set(index > 0 ? r.operations.slice(0, index).flatMap(step => step.inputs || []) : []);
   const names = [];
   for (const id of o.inputs || []) {
-    if (carried.has(id)) continue;
+    if (carried.has(id)) {
+      names.push(...preparedInputStockNames(id, o, r));
+      continue;
+    }
     const name = materials.get(id) || stocks.get(id);
     if (!present(name)) continue;
     // A repeated input may just describe the mixture already in the vessel.
@@ -128,6 +183,7 @@ function addedNames(o, r, sceneKind) {
 export function reportedProtocolSceneSpec(o, r = {}, options = {}) {
   if (!o || !present(o.action)) return null;
   const action = words(o.action), own = words([o.action, o.label].filter(Boolean).join(' '));
+  const ownDetails = words([o.action, o.label, o.description].filter(Boolean).join(' '));
   if (/^(?:do not|never|avoid|omit|without)\b/.test(action)) return null;
   const method = words(options.routeLabel || r.method);
   const line = reactorFacts(o, r, options);
@@ -136,6 +192,12 @@ export function reportedProtocolSceneSpec(o, r = {}, options = {}) {
   const system = words([stepVessel?.value, vessel?.value, method].filter(Boolean).join(' '));
   const environment = reportedText(line?.atmosphere) || reportedText(o.environment);
   const preparatory = /\b(?:for later|before|prior to|subsequent)\b/.test(own);
+  const waferHeating = positive(action, /\b(?:heat\w*|desorb\w*)\b/)
+    && positive(ownDetails, /\b(?:wafer|substrate)\b/);
+  const liquidContext = positive(ownDetails, /\b(?:aqueous|solution|solvent|slurry|suspension|dispersion|dissolv\w*|water|ethanol|methanol|toluene|hexane|oleylamine|octadecene)\b/)
+    && !positive(ownDetails, /\b(?:water|solvent) vapou?r\b/);
+  const unsupportedSolidPreparation = positive(ownDetails, /\bmortar\b|\bpestle\b/)
+    || positive(ownDetails, /\b(?:powders?|wafer|substrate|dry solids?)\b/) && !liquidContext;
   let kind = null;
   if (positive(action, /\bcentrifug\w*\b/)) kind = 'centrifuge';
   else if (positive(action, /\bfilter\w*\b/)) kind = 'filter';
@@ -143,13 +205,17 @@ export function reportedProtocolSceneSpec(o, r = {}, options = {}) {
   else if (positive(action, /\bdry\w*\b/)) kind = 'dry-tube';
   else if (positive(action, /\bevaporat\w*\b/) && /\bsolvent\b/.test(own)) kind = 'dry-tube';
   else if (positive(own, /\bball mill\w*\b/) && /\b(?:mill\w*|grind\w*)\b/.test(action)) kind = 'mill-jar';
-  else if (!preparatory && positive(action, depositionAction) && (positive(system, chamberSystem) || positive(own, chamberSystem))) kind = 'chamber';
+  else if (!preparatory && (positive(action, depositionAction) || waferHeating)
+      && (positive(system, chamberSystem) || positive(own, chamberSystem))) kind = 'chamber';
   else if (!preparatory && positive(action, /\b(?:heat\w*|react\w*|hold\w*|load\w*|hydrothermal|solvothermal)\b/)
       && (positive(system, closedSystem) || positive(own, closedSystem))) kind = 'closed-reactor';
   else if (positive(action, /\bcalcin\w*|\bsinter\w*/)
       || positive(action, /\bheat\w*\b/) && positive([own, system, reportedText(line?.heating_method)].join(' '), /furnace|solid state/)
       || positive(action, /\banneal\w*\b/) && positive([own, system].join(' '), /furnace|solid state/)) kind = 'furnace';
   else if (positive(action, solutionAction)) {
+    // Dry preparation is not evidence of a liquid charge. Keep its admitted
+    // original image when no supported solid apparatus was selected above.
+    if (unsupportedSolidPreparation) return null;
     if (!preparatory && (positive(action, /\breflux\w*\b/)
         || positive(action, /\b(?:heat\w*|react\w*)\b/) && positive(own, /\breflux\w*\b/))
         && !/\bwithout\b.*\bcondenser\b/.test(own)) kind = 'reflux';

@@ -27,7 +27,30 @@ test('positive current-step actions select injection, degassing, cooling and ref
 test('a later technique mentioned in feed preparation does not choose that apparatus', () => {
   assert.equal(choose(op('dissolve', 'Prepare a feed for later reflux')).kind, 'solution');
   assert.equal(choose(op('heat', 'Heat a feed before transfer to an autoclave')).kind, 'solution');
-  assert.equal(choose(op('prepare', 'Prepare the substrate before MBE growth'), rec({method: 'MBE'})).kind, 'solution');
+  assert.equal(choose(op('prepare', 'Prepare the substrate before MBE growth'), rec({method: 'MBE'})), null);
+});
+
+test('wafer desorption uses its reported epitaxy system without a liquid vessel', () => {
+  const d = choose(op('heat', 'Wafer temperature raised to 620 C for desorption', {parameters: {temperature: q(620)}}), rec({method: 'Molecular beam epitaxy'}));
+  assert.equal(d.kind, 'chamber');
+  assert.equal(d.sourceFeed, false);
+  assert.deepEqual(d.added, []);
+  assert.equal(choose(op('heat', 'Heat the wafer')), null);
+});
+
+test('dry powder preparation keeps its image instead of borrowing a liquid vessel', () => {
+  assert.equal(choose(op('mix', 'Resulting powder was well mixed using an agate mortar and pestle'),
+    rec({products: [{notes: ['Reactor: closed aluminum crucible (Main PDF p.2).']}]})), null);
+  assert.equal(choose(op('mix', 'Mix Mg and B powders in the stoichiometric ratio of MgB2'),
+    rec({method: 'Powder-in-tube', products: [{notes: ['Reactor: planetary ball mill (Main PDF p.2).']}]})), null);
+});
+
+test('explicit liquid powder processing remains supported without borrowing neighboring context', () => {
+  assert.equal(choose(op('dissolve', 'Dissolve powder in water')).kind, 'solution');
+  assert.equal(choose(op('mix', 'Mix the powder into an aqueous suspension')).kind, 'solution');
+  assert.equal(choose(op('mix', 'Mix powder without water')), null);
+  assert.equal(choose(op('mix', 'Mix dry powder under water vapor')), null);
+  assert.equal(choose(op('mix', 'Mix powder'), rec({method: 'Aqueous synthesis'})), null);
 });
 
 test('negated actions do not become a new apparatus selection', () => {
@@ -301,3 +324,108 @@ test('all matched families produce diagram geometry without fetching or mutating
     assert.equal(JSON.stringify(r), before);
   }
 }));
+
+function fixture(description = 'Slowly add fresh aqueous NaBH4 solution under vigorous stirring.') {
+  const prep = {id: 'reductant-solution', action: 'dissolve', inputs: ['nabh4', 'water'], outputs: ['reductant-state']};
+  const current = {id: 'reduce', action: 'add', label: 'Reduce under stirring', description,
+    inputs: ['ligand-state', 'reductant-state'], outputs: ['reduced-state'], parameters: {}};
+  const record = {method: 'Other', materials: [
+    {id: 'nabh4', name: 'Sodium borohydride', formula: 'NaBH4', role: 'reducing_agent'},
+    {id: 'water', name: 'Water', formula: 'H2O', role: 'solvent'},
+    {id: 'ligand', name: 'Oleylamine', role: 'ligand'}],
+    stocks: [{id: 'reductant-stock', name: 'Prepare fresh aqueous reductant', preparation_operation_ids: ['reductant-solution'],
+      components: [{material_id: 'nabh4'}, {material_id: 'water'}]}],
+    material_states: [{id: 'ligand-state'}, {id: 'reductant-state'}, {id: 'reduced-state'}],
+    operations: [prep, current]};
+  return {record, current, prep};
+}
+const added = ({record, current}) => descriptor(current, record).added;
+
+test('unique preparation-output stock link names only this step literal solution charge', () => {
+  const f = fixture();
+  assert.deepEqual(added(f), ['fresh aqueous NaBH4 solution']);
+  assert.equal(added(f).some(name => /water|0\.78|40|mmol|mol\/l/i.test(name)), false);
+});
+
+test('decimal quantities do not split a charge clause or become an inferred dose label', () => {
+  assert.deepEqual(added(fixture('Add 0.5 mL fresh aqueous NaBH4 solution under stirring.')),
+    ['fresh aqueous NaBH4 solution']);
+});
+
+test('material name is matched literally without deriving a synonym', () => {
+  assert.deepEqual(added(fixture('Add sodium borohydride solution into the stirred mixture.')), ['sodium borohydride solution']);
+  assert.deepEqual(added(fixture('Add borohydride solution.')), []);
+});
+
+test('a carried mixture with no current addition clause supplies no new label', () => {
+  for (const description of ['Stir the fresh aqueous NaBH4 solution.', 'Heat the NaBH4 solution.',
+    'After adding NaBH4 solution, stir the mixture.', 'Prepare NaBH4 solution for later addition.',
+    'Add the ligand to the NaBH4 solution.', 'Add the prepared solution.']) {
+    assert.deepEqual(added(fixture(description)), [], description);
+  }
+});
+
+test('negated conditional and future additions do not label the stock', () => {
+  for (const description of ['Do not add NaBH4 solution.', 'Without adding NaBH4 solution, stir.',
+    'Add no NaBH4 solution.', 'Add solution without NaBH4.', 'Optionally add NaBH4 solution.',
+    'Add NaBH4 solution if necessary.', 'The NaBH4 solution will be added later.']) {
+    assert.deepEqual(added(fixture(description)), [], description);
+  }
+});
+
+test('a positive short label cannot override a negative or conditional description', () => {
+  for (const description of ['Do not add NaBH4 solution.', 'Add NaBH4 solution if necessary.',
+    'Without adding NaBH4 solution, stir.']) {
+    const f = fixture(description); f.current.label = 'Add NaBH4 solution';
+    assert.deepEqual(added(f), [], description);
+  }
+});
+
+test('only literal component mentions are returned, not all stock constituents', () => {
+  assert.deepEqual(added(fixture('Add fresh aqueous NaBH4 solution in water.')), ['fresh aqueous NaBH4 solution']);
+  assert.deepEqual(added(fixture('Inject H2O into the mixture.')), ['H2O']);
+  assert.deepEqual(added(fixture('Add NaBH4X solution.')), []);
+});
+
+test('unlinked or ambiguous stock preparation is omitted', () => {
+  for (const alter of [
+    f => {f.record.stocks[0].preparation_operation_ids = ['unrelated'];},
+    f => {f.record.stocks.push({...f.record.stocks[0], id: 'second-stock'});},
+    f => {f.record.operations.unshift({...f.prep, id: 'other-producer'});},
+    f => {f.prep.outputs.push('other-state');},
+    f => {f.record.operations.reverse();},
+    f => {f.record.material_states.push({id: 'reductant-state'});},
+    f => {f.prep.inputs = ['water'];},
+    f => {f.record.stocks[0].components = [{material_id: 'unknown'}];},
+    f => {f.record.operations.push({...f.current});},
+  ]) {
+    const f = fixture(); alter(f); assert.deepEqual(added(f), []);
+  }
+});
+
+test('a stock-linked state is never borrowed from a non-input or another step description', () => {
+  const f = fixture('Stir the mixture.'); f.prep.description = 'Add fresh aqueous NaBH4 solution.';
+  assert.deepEqual(added(f), []);
+  f.current.description = 'Add fresh aqueous NaBH4 solution.'; f.current.inputs = ['ligand-state'];
+  assert.deepEqual(added(f), []);
+});
+
+test('direct material/stock behavior and chamber composition exclusion remain intact', () => {
+  const f = fixture(); f.current.inputs.push('ligand');
+  assert.deepEqual(added(f), ['fresh aqueous NaBH4 solution', 'Oleylamine']);
+  f.current.action = 'deposit'; f.current.label = 'Deposit NaBH4 layer'; f.current.description = 'Deposit NaBH4 layer.';
+  f.record.method = 'MBE';
+  assert.deepEqual(added(f), []);
+});
+
+test('the current label may supply a literal addition when its description does not', () => {
+  const f = fixture('Stir continuously.'); f.current.label = 'Add fresh aqueous NaBH4 solution';
+  assert.deepEqual(added(f), ['fresh aqueous NaBH4 solution']);
+});
+
+test('stock mapping and literal labels do not mutate frozen records', () => {
+  const f = fixture(); const raw = JSON.stringify(f.record);
+  const freeze = value => {if (value && typeof value === 'object') {Object.values(value).forEach(freeze); Object.freeze(value);}};
+  freeze(f.record); assert.deepEqual(added(f), ['fresh aqueous NaBH4 solution']);
+  assert.equal(JSON.stringify(f.record), raw);
+});
