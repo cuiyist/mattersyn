@@ -12,14 +12,16 @@ const either=(...tests)=>entry=>tests.some(test=>test(entry));
 const PHASE_TESTS=[
  [/zinc.?blende?|sphalerite|coloradoite|tiemannite/i,either(symbol(/F\s*-4\s*3\s*m/),named(/zinc.?blende|sphalerite/i))],
  [/wurtzite/i,either(symbol(/P\s*63\s*m\s*c/),named(/wurtzite/i))],
- [/rock.?salt|halite|galena|periclase|bunsenite|alabandite/i,either(named(/rock.?salt/i),entry=>group(entry)===225&&!/face.cent|\bfcc\b/i.test(entry.name||''))],
+ [/rock.?salt|halite|galena|periclase|bunsenite|alabandite|sylvite/i,either(named(/rock.?salt/i),entry=>group(entry)===225&&!/face.cent|\bfcc\b/i.test(entry.name||''))],
  [/face.cent(?:e?red)|\bfcc\b/i,inRange(225,225)],[/\bhcp\b|hexagonal close/i,inRange(194,194)],[/\bbcc\b|body.cent(?:e?red)/i,inRange(229,229)],
  [/anatase/i,named(/anatase/i)],[/rutile/i,named(/rutile/i)],[/brookite/i,named(/brookite/i)],[/chalcopyrite/i,named(/chalcopyrite/i)],
  [/spinel/i,named(/spinel/i)],[/calcite/i,named(/calcite/i)],[/aragonite/i,named(/aragonite/i)],[/baddeleyite/i,named(/baddeleyite/i)],
  [/bixbyite/i,named(/bixbyite/i)],[/perovskite/i,named(/perovskite/i)],[/cuprite/i,named(/cuprite/i)],[/hydroxy?l?apatite|\bapatite/i,named(/apatite/i)],
  [/herzenbergite/i,named(/herzenbergite/i)],[/\b2H\b/i,named(/\b2H\b/i)],[/\b3C\b/i,named(/\b3C\b/i)],[/\b6H\b/i,named(/\b6H\b/i)],
- [/kesterite/i,named(/kesterite/i)],[/scheelite|wulfenite/i,named(/scheelite|wulfenite/i)],[/pyrite|cattierite/i,named(/pyrite|cattierite/i)],[/aurivillius/i,named(/aurivillius/i)],
- [/russellite|\bP\s*21\s*ab\b/i,either(named(/russellite/i),inRange(29,29))],[/\bYAG\b|garnet/i,named(/garnet/i)],
+ [/kesterite/i,named(/kesterite/i)],[/scheelite|wulfenite/i,named(/scheelite|wulfenite/i)],[/pyrite|cattierite|vaesite/i,named(/pyrite|cattierite|vaesite/i)],[/aurivillius/i,named(/aurivillius/i)],
+ [/russellite|\bP\s*21\s*ab\b/i,either(named(/russellite/i),inRange(29,29))],[/\bYAG\b|garnet/i,named(/garnet/i)],[/hausmannite|hetaerolite/i,named(/hausmannite|hetaerolite/i)],[/tenorite/i,named(/tenorite/i)],
+ // Rhombohedral R-Se (Se6 rings) is not the trigonal chain allotrope; no library cell matches it.
+ [/\bR-Se\b|\bSe6\b/i,named(/\bR-Se\b|\bSe6\b/i)],
  [/\bcubic\b/i,inRange(195,230)],[/tetragonal/i,inRange(75,142)],[/orthorhombic/i,inRange(16,74)],[/\bhexagonal\b/i,inRange(168,194)],
  [/trigonal|rhombohedral/i,inRange(143,167)],[/monoclinic/i,inRange(3,15)],[/triclinic/i,inRange(1,2)]
 ];
@@ -27,7 +29,10 @@ const tidy=value=>String(value||'').replace(/\s+/g,'');
 // Alloy, solid-solution and core/shell names stand for their end members, which are
 // shown as component references, as for composites. A name expands only when the
 // library has a bulk reference for every end member; otherwise nothing is shown for it.
-export const END_MEMBERS=Object.freeze({InGaAs:['InAs','GaAs'],InGaN:['InN','GaN'],AlGaAs:['AlAs','GaAs'],ZnSeS:['ZnSe','ZnS'],CdSeS:['CdSe','CdS'],CdZnS:['CdS','ZnS'],'CdSe-ZnS':['CdSe','ZnS'],InGaP:['InP','GaP'],ZnCdS:['ZnS','CdS'],CdTeSe:['CdTe','CdSe']});
+export const END_MEMBERS=Object.freeze({InGaAs:['InAs','GaAs'],InGaN:['InN','GaN'],AlGaAs:['AlAs','GaAs'],ZnSeS:['ZnSe','ZnS'],CdSeS:['CdSe','CdS'],CdZnS:['CdS','ZnS'],'CdSe-ZnS':['CdSe','ZnS'],InGaP:['InP','GaP'],ZnCdS:['ZnS','CdS'],CdTeSe:['CdTe','CdSe'],SiGe:['Si','Ge'],'CuInSexS2−x':['CuInSe2','CuInS2'],'CuInSexS2-x':['CuInSe2','CuInS2']});
+// Composition-specific alloy names (In0.41Ga0.59As) stand for the same end members.
+const ALLOY_PATTERNS=[[/^In\d*\.?\d+Ga\d*\.?\d+As$/,['InAs','GaAs']],[/^Al\d*\.?\d+Ga\d*\.?\d+As$/,['AlAs','GaAs']],[/^In\d*\.?\d+Ga\d*\.?\d+N$/,['InN','GaN']]];
+const endMembers=part=>END_MEMBERS[part]||ALLOY_PATTERNS.find(([pattern])=>pattern.test(part))?.[1];
 // A doped formula names a host and a dopant in either order ("InP:Zn", "Mn:ZnO",
 // "Co2+:CdS"); the host cell is the useful comparison. When exactly one side is a bare
 // element or ion it is the dopant; otherwise the first side is the host.
@@ -44,7 +49,7 @@ function listedParts(r){
 }
 export function compositionParts(r,entries=null){
  const bulkFormulas=entries&&new Set(entries.filter(bulkReference).map(entry=>tidy(entry.formula)));
- return [...new Set(listedParts(r).flatMap(part=>{const members=END_MEMBERS[part];if(!members)return [part];return !bulkFormulas||members.every(m=>bulkFormulas.has(m))?members:[];}))];
+ return [...new Set(listedParts(r).flatMap(part=>{const members=endMembers(part);if(!members)return [part];return !bulkFormulas||members.every(m=>bulkFormulas.has(m))?members:[];}))];
 }
 // Any periodic reference cell in the library qualifies; partial, computed and measured-sample models do not.
 function bulkReference(entry){return Boolean(entry.modelPath)&&entry.referenceOnly!==false&&entry.measuredSampleStructure!==true&&!/partial|comput|dft/i.test([entry.sourceType,entry.referenceType].join(' '));}

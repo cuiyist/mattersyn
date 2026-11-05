@@ -193,3 +193,16 @@ test('doped formulas compare with the host in either order, never with the dopan
  const r=rec(null);r.material={formula:'Cu:Al2O3',components:['Cu:Al2O3']};
  assert.deepEqual(defaultCrystalReferences(lib,r).map(e=>e.id),['al2o3']);
 });
+test('third-batch alloy names and phase words select their references',()=>{
+ const lib=[entry('inas','InAs','InAs zinc blende bulk reference',216),entry('gaas','GaAs','GaAs zinc blende bulk reference',216),
+  entry('si','Si','Si diamond bulk reference',227),entry('ge','Ge','Ge diamond bulk reference',227),
+  entry('mn3o4','Mn3O4','Mn3O4 tetragonal spinel (hausmannite) bulk reference',141),entry('se','Se','Se trigonal (helical chains) bulk reference',152),
+  entry('kcl','KCl','KCl rock salt (sylvite) bulk reference',225)];
+ const pick=(formula,phase)=>{const r=rec(phase);r.material={formula,components:[formula]};return defaultCrystalReferences(lib,r).map(e=>e.id);};
+ assert.deepEqual(pick('In0.41Ga0.59As',null),['inas','gaas']);
+ assert.deepEqual(pick('SiGe',null),['si','ge']);
+ assert.deepEqual(pick('Mn3O4','hausmannite'),['mn3o4']);
+ assert.deepEqual(pick('KCl','sylvite'),['kcl']);
+ assert.deepEqual(pick('Se','trigonal'),['se']);
+ assert.deepEqual(pick('Se','Rhombohedral (R-Se)'),[]);
+});
