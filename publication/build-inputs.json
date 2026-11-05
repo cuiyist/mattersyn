@@ -1,7 +1,7 @@
 {
   "published_baseline_commit": "5363bea2c1de410b75a3356fecc99731f7c9140f",
-  "release_id": "daily-metadata-20261103-r1",
-  "updated_at": "2026-11-03T06:12:20.996160+00:00",
+  "release_id": "combined-pr135-139-20261105",
+  "updated_at": "2026-11-05T01:21:27.586983+00:00",
   "record_count": 6865,
   "input_files": [
     {
@@ -10,9 +10,14 @@
       "bytes": 78
     },
     {
+      "path": ".github/workflows/site-publish.yml",
+      "sha256": "0a44f0061aad4b8d125604a6840896ec3bc93fb368aae2a1f529b4f21abaa5b9",
+      "bytes": 10903
+    },
+    {
       "path": ".github/workflows/validate-project.yml",
-      "sha256": "6172cd3f97ebaa735b81c6a71ae2b1c289b11b41f635384c48cdc4c8d321854b",
-      "bytes": 5975
+      "sha256": "d9056f4b141dc02344af3d74f20b891c9b3d0c8d0451e9375ee95b265ae60e4e",
+      "bytes": 6386
     },
     {
       "path": ".gitignore",
@@ -46,13 +51,13 @@
     },
     {
       "path": "publication/asset-rights-registry.json",
-      "sha256": "6a4b39fda0bf67be9273093eb07d8df41b54129f6d757549520264e6983910bc",
-      "bytes": 94725996
+      "sha256": "2813463679b60f203eea1c96774846ef6927462ede117d596e2dcf6d8b32f4a4",
+      "bytes": 94889862
     },
     {
       "path": "publication/public-release-policy.json",
-      "sha256": "3fe0f3b3f92c2736f8cb6680bdd078e7dc73d89f89ad02a964ee4d42890e37d3",
-      "bytes": 188661
+      "sha256": "3de212afdbbbf48595340fa289d533d2447c6d53f02d1da0c977fd6e5f4795c8",
+      "bytes": 247819
     },
     {
       "path": "recipe-atlas/CHANGELOG.md",
@@ -35956,8 +35961,13 @@
     },
     {
       "path": "recipe-atlas/scripts/build_atlas.py",
-      "sha256": "67c6d4b5a00fc3270eb12684da21fa17d27476d59572041f2f9a5abac677d94f",
-      "bytes": 20171
+      "sha256": "78f3ff4fa61750342b24084f24e5cda988dc11461c6ec01ce551fca3472a0347",
+      "bytes": 20419
+    },
+    {
+      "path": "recipe-atlas/scripts/build_cod_reference_model.py",
+      "sha256": "b6dc795fd6007b489c780a19cf8803cb89de400d403c216682e627f75c5ac7e4",
+      "bytes": 7698
     },
     {
       "path": "recipe-atlas/scripts/build_dataset.py",
@@ -35980,9 +35990,19 @@
       "bytes": 7962
     },
     {
+      "path": "recipe-atlas/scripts/build_protocol_registry.mjs",
+      "sha256": "70467c923aab8bcea52680e62f3e1b9bae684057fc3a8cba224dc4243f676099",
+      "bytes": 5908
+    },
+    {
       "path": "recipe-atlas/scripts/build_reader_metadata.py",
-      "sha256": "15a4b6cd7e0542c1858f3214bba6846f855be34907478a89eac946007d93ff49",
-      "bytes": 3196
+      "sha256": "957df60c33abf90960efd327abe7438c6f44d9db512c9bf3059351f3986fcfaf",
+      "bytes": 4048
+    },
+    {
+      "path": "recipe-atlas/scripts/build_reader_shards.py",
+      "sha256": "95b03750e63c0d9120b56a5d0991768c309b99cc161774acc00ca12528075acb",
+      "bytes": 6846
     },
     {
       "path": "recipe-atlas/scripts/build_reader_views.py",
@@ -36026,8 +36046,8 @@
     },
     {
       "path": "recipe-atlas/scripts/crystal_reference_pins.json",
-      "sha256": "f8814843d29f6a2ae59abeada7240f8fd3574b09f8a25dff53036322f82c5b8f",
-      "bytes": 127331
+      "sha256": "b0665b2e366c9bf2c9d719222ba83937a59562f077d14eab4978a381ddf44b35",
+      "bytes": 163639
     },
     {
       "path": "recipe-atlas/scripts/dataset_lib.py",
@@ -36060,6 +36080,11 @@
       "bytes": 2335
     },
     {
+      "path": "recipe-atlas/scripts/material_names.py",
+      "sha256": "f4fcc66b25602afaf3c299213fceef9623418e78f834cc688c83d5e6ca6eedad",
+      "bytes": 7134
+    },
+    {
       "path": "recipe-atlas/scripts/preliminary_contract.py",
       "sha256": "3402e25aabb6b22ea2996f3c7de138c6cef8403789a5cc5b4733899d07674b07",
       "bytes": 8809
@@ -36088,6 +36113,11 @@
       "path": "recipe-atlas/scripts/review_scope.py",
       "sha256": "afdecc9a24dfc5694c56fe1b4fbb506d29dc736e30e3b85975ab67eee08a95f8",
       "bytes": 6953
+    },
+    {
+      "path": "recipe-atlas/scripts/route_labels.py",
+      "sha256": "08c03ce4e17b70dc6b0dd9be2db1261935fbf9d13a1d46dcb4a536e27769127c",
+      "bytes": 8894
     },
     {
       "path": "recipe-atlas/scripts/schema_definition.py",
@@ -77330,6 +77360,11 @@
       "bytes": 2103
     },
     {
+      "path": "recipe-atlas/static/assets/crystal-references/1010110.cif",
+      "sha256": "103a30487d753253f9f016c86d293aa1fc1bfcd8ba5a2083dcfe0cdab87a2bfc",
+      "bytes": 5148
+    },
+    {
       "path": "recipe-atlas/static/assets/crystal-references/1010146.cif",
       "sha256": "dae92a9da8c000121f86e0f5c0f133d39f65cb94ccfb005410f2c213532afb42",
       "bytes": 3197
@@ -77338,6 +77373,11 @@
       "path": "recipe-atlas/static/assets/crystal-references/1011037.cif",
       "sha256": "b606f3a28f1660d6fd8cd1160be23b7ae78dde0b59f31126ea65c1dcc01749f5",
       "bytes": 2367
+    },
+    {
+      "path": "recipe-atlas/static/assets/crystal-references/1011206.cif",
+      "sha256": "9bd44394f97293e81ee05a2a47e9feae3cd9c8da3928152d38c6e635b895fd64",
+      "bytes": 4681
     },
     {
       "path": "recipe-atlas/static/assets/crystal-references/1011368.cif",
@@ -77355,6 +77395,11 @@
       "bytes": 2326
     },
     {
+      "path": "recipe-atlas/static/assets/crystal-references/1509348.cif",
+      "sha256": "8add9f544aa8c140f558e05b1aaa8dd406d4aad29c7b0c2a916e4400096186a0",
+      "bytes": 2222
+    },
+    {
       "path": "recipe-atlas/static/assets/crystal-references/1509402.cif",
       "sha256": "13ff3c347d724b74f409d69852a08ea35bc2704e279e7693549f94aead0df277",
       "bytes": 2219
@@ -77368,6 +77413,11 @@
       "path": "recipe-atlas/static/assets/crystal-references/1509412.cif",
       "sha256": "813c72bc56ca1ad7e4427655639bb75fc355fb795b4184bf92eb16a2e654c6b3",
       "bytes": 2235
+    },
+    {
+      "path": "recipe-atlas/static/assets/crystal-references/1513087.cif",
+      "sha256": "9bdc61ca3a686b694ef9b52cce3e4d33b7686b655477f449fd2fe593f64f9432",
+      "bytes": 7410
     },
     {
       "path": "recipe-atlas/static/assets/crystal-references/1513965.cif",
@@ -77400,6 +77450,11 @@
       "bytes": 2194
     },
     {
+      "path": "recipe-atlas/static/assets/crystal-references/1530736.cif",
+      "sha256": "c144150998b7a4822c5d85b359663a3e895401336163c7d4e41b623228c5b033",
+      "bytes": 2022
+    },
+    {
       "path": "recipe-atlas/static/assets/crystal-references/1531230.cif",
       "sha256": "39fb3824c586e162cc2aecd62eb09d6fd92086c2aaadfc7792815ca622a7b707",
       "bytes": 1982
@@ -77415,6 +77470,11 @@
       "bytes": 5487
     },
     {
+      "path": "recipe-atlas/static/assets/crystal-references/1534182.cif",
+      "sha256": "185ec7317ab0931d1af83d5694d5601b8c6afff52c3ae218cbd35adfc3efcd89",
+      "bytes": 2462
+    },
+    {
       "path": "recipe-atlas/static/assets/crystal-references/1536218.cif",
       "sha256": "6e845e9baf4468bbb221a94a441b04dd83639cf22f8a75e2e58e9a5beca54e04",
       "bytes": 2528
@@ -77423,6 +77483,11 @@
       "path": "recipe-atlas/static/assets/crystal-references/1537699.cif",
       "sha256": "7667f3e9bfa522b72b98702d901c2b5abfa807d9ed7d700b7033b452787c7bf2",
       "bytes": 2005
+    },
+    {
+      "path": "recipe-atlas/static/assets/crystal-references/1537882.cif",
+      "sha256": "ef653304271598537fae365f71cdcb74a7bec6f079f3d2e2f9123e75ef69b36a",
+      "bytes": 2526
     },
     {
       "path": "recipe-atlas/static/assets/crystal-references/1538416.cif",
@@ -77443,6 +77508,26 @@
       "path": "recipe-atlas/static/assets/crystal-references/1542140.cif",
       "sha256": "a2310b32b89ac11c33dd6a413a0e31a4443a6a95da488c5c351296f751156550",
       "bytes": 2267
+    },
+    {
+      "path": "recipe-atlas/static/assets/crystal-references/1545320.cif",
+      "sha256": "4139f5d16c4811ec152b6bf97d1bb20bf6f895d4f3880db15c709162544e2759",
+      "bytes": 103657
+    },
+    {
+      "path": "recipe-atlas/static/assets/crystal-references/1563481.cif",
+      "sha256": "9a2a74d7e28a018b979c9a584aa908d76f59d0e093b77a91a9562288e5f5f1fc",
+      "bytes": 22334
+    },
+    {
+      "path": "recipe-atlas/static/assets/crystal-references/1570753.cif",
+      "sha256": "29d168a932fb6342b600723e5221faf03b9da8ce45d9421fe70d7175d459e913",
+      "bytes": 3037
+    },
+    {
+      "path": "recipe-atlas/static/assets/crystal-references/2003066.cif",
+      "sha256": "2e87d1222b85f364aeb019b50f7dda61efdf1e6ea8e21de161a236a90f97e495",
+      "bytes": 5327
     },
     {
       "path": "recipe-atlas/static/assets/crystal-references/2101865.cif",
@@ -77470,6 +77555,11 @@
       "bytes": 86119
     },
     {
+      "path": "recipe-atlas/static/assets/crystal-references/4127358.cif",
+      "sha256": "1096b279a4c8bbf873c2041621e86be6af7955774a7979834f2577e17ce9d00a",
+      "bytes": 11258
+    },
+    {
       "path": "recipe-atlas/static/assets/crystal-references/4335640.cif",
       "sha256": "63a8ea4c93d29840cb444a9843c0d654c35e765541de0200172ca3f3381be9f5",
       "bytes": 8164
@@ -77480,6 +77570,11 @@
       "bytes": 10508
     },
     {
+      "path": "recipe-atlas/static/assets/crystal-references/5910031.cif",
+      "sha256": "2c5b3196ea5854c618c4714b9b2f86bf32bb5d14f47497521649206e225eb816",
+      "bytes": 5198
+    },
+    {
       "path": "recipe-atlas/static/assets/crystal-references/7246298.cif",
       "sha256": "9f22f4a5a34531af1529418833387d3e3c7c79fc0ad774f1f8abb2e88ecdcd6f",
       "bytes": 2744
@@ -77488,6 +77583,11 @@
       "path": "recipe-atlas/static/assets/crystal-references/8104122.cif",
       "sha256": "92ebda00613a9984366d46678df7f3c2cffe26bf813189ec47b25e5dd6f4e83a",
       "bytes": 2240
+    },
+    {
+      "path": "recipe-atlas/static/assets/crystal-references/9000047.cif",
+      "sha256": "ec3852f4efc3092757a58dcc9e9cbac2adbbfb3ba039f2ef360db11f96136617",
+      "bytes": 4251
     },
     {
       "path": "recipe-atlas/static/assets/crystal-references/9000067.cif",
@@ -77545,6 +77645,11 @@
       "bytes": 2774
     },
     {
+      "path": "recipe-atlas/static/assets/crystal-references/9004750.cif",
+      "sha256": "ec486d6cf5c928275d57bce739b21f97d63ed5d15744f53f43477ab31e5c8619",
+      "bytes": 2657
+    },
+    {
       "path": "recipe-atlas/static/assets/crystal-references/9005812.cif",
       "sha256": "c543e8cbd792604f45ee290c282cef9b9016c22922d811a6da340164d442bdf3",
       "bytes": 5655
@@ -77560,6 +77665,11 @@
       "bytes": 2505
     },
     {
+      "path": "recipe-atlas/static/assets/crystal-references/9007497.cif",
+      "sha256": "413845012589e3125fd29c60c6f3b38508c75ddab6e54b00921e84807b07af44",
+      "bytes": 3247
+    },
+    {
       "path": "recipe-atlas/static/assets/crystal-references/9007572.cif",
       "sha256": "95f7f6c595122736c02ff02ee9bd397bb172cff25f7f654922b59d70fd527727",
       "bytes": 2638
@@ -77568,6 +77678,16 @@
       "path": "recipe-atlas/static/assets/crystal-references/9007660.cif",
       "sha256": "abdada2a8ea377f34af0d7eb634186808e6489bda58cf5b357f5cf879e476d9a",
       "bytes": 2503
+    },
+    {
+      "path": "recipe-atlas/static/assets/crystal-references/9008081.cif",
+      "sha256": "b046245f7a2312f5e3266e439ef8ac02420766d72eb480ef22069378d5d6056b",
+      "bytes": 2974
+    },
+    {
+      "path": "recipe-atlas/static/assets/crystal-references/9008393.cif",
+      "sha256": "98ad143c9b6a8875c7ce6208cd0f78418db085b76286690acc80618f952548d0",
+      "bytes": 2736
     },
     {
       "path": "recipe-atlas/static/assets/crystal-references/9008420.cif",
@@ -77590,6 +77710,11 @@
       "bytes": 4553
     },
     {
+      "path": "recipe-atlas/static/assets/crystal-references/9008468.cif",
+      "sha256": "0804d4ddcc3748a4cf355fc84df96f01a8a0d905c37430906367c2d846031830",
+      "bytes": 4504
+    },
+    {
       "path": "recipe-atlas/static/assets/crystal-references/9008470.cif",
       "sha256": "ecc80c2b26b98c67712b6418ab7175e6e4a86a6f277a58d7556459c8f0ff3566",
       "bytes": 4503
@@ -77600,9 +77725,29 @@
       "bytes": 4517
     },
     {
+      "path": "recipe-atlas/static/assets/crystal-references/9008478.cif",
+      "sha256": "410dc8854e398bf8e182feff628f9c690ebd55ee1d947a711ca808fd44e88580",
+      "bytes": 4520
+    },
+    {
       "path": "recipe-atlas/static/assets/crystal-references/9008480.cif",
       "sha256": "0373322030e51bc9aa4a3c04edcb15a7bd292a2fb9e80040de8c0f5c8442b8d4",
       "bytes": 4519
+    },
+    {
+      "path": "recipe-atlas/static/assets/crystal-references/9008513.cif",
+      "sha256": "335c8a7aaebda1a910e5618f218232d47bd87f071d9d8606ddf311729aedf60e",
+      "bytes": 2308
+    },
+    {
+      "path": "recipe-atlas/static/assets/crystal-references/9008522.cif",
+      "sha256": "573f2deb06634652057d81cb2c568186fce946f386799fb76cf365d418020881",
+      "bytes": 2374
+    },
+    {
+      "path": "recipe-atlas/static/assets/crystal-references/9008536.cif",
+      "sha256": "58d627740a3a7eae35f96e0a0f32be51c428792fb3b3d85f2215a9c082ad6591",
+      "bytes": 3382
     },
     {
       "path": "recipe-atlas/static/assets/crystal-references/9008565.cif",
@@ -77620,9 +77765,49 @@
       "bytes": 2600
     },
     {
+      "path": "recipe-atlas/static/assets/crystal-references/9008572.cif",
+      "sha256": "b264e78a9c683ed926d4af7c756ec3efd522b14956d856e5f942663350a22f85",
+      "bytes": 2205
+    },
+    {
+      "path": "recipe-atlas/static/assets/crystal-references/9008577.cif",
+      "sha256": "db7645c82e88cffbf4a2251796829074fc5ad66d38f7df4be76ecc011eb633f5",
+      "bytes": 2651
+    },
+    {
+      "path": "recipe-atlas/static/assets/crystal-references/9008671.cif",
+      "sha256": "bf0b4bae1964dab2ea778e91d7abc74508ca65fc335fd48bee5b635cd522f3c1",
+      "bytes": 4520
+    },
+    {
+      "path": "recipe-atlas/static/assets/crystal-references/9008675.cif",
+      "sha256": "2c0e6afb72e10b9c600fde6a7bbe500384c1ac0af7b3e406c34373b0b5572eca",
+      "bytes": 4501
+    },
+    {
+      "path": "recipe-atlas/static/assets/crystal-references/9008693.cif",
+      "sha256": "1331f24750f26da5f3c011180e47ffb6780515fbb8db6325b3cab9f820cb8a11",
+      "bytes": 4519
+    },
+    {
+      "path": "recipe-atlas/static/assets/crystal-references/9008785.cif",
+      "sha256": "5824718038f559bec094871f124cd7d27d97d52f52d853cd9b3db8da8f82e1a6",
+      "bytes": 2130
+    },
+    {
       "path": "recipe-atlas/static/assets/crystal-references/9008788.cif",
       "sha256": "a7a350ebe165854c7de603f4cebafea6cb846f1be2f2a5c97bc1099aa5a1e5fe",
       "bytes": 2529
+    },
+    {
+      "path": "recipe-atlas/static/assets/crystal-references/9008830.cif",
+      "sha256": "515db42362501dc3e61a93fa29e7c3bfea513ffbb8d401380e00e688e473e46f",
+      "bytes": 3285
+    },
+    {
+      "path": "recipe-atlas/static/assets/crystal-references/9008834.cif",
+      "sha256": "9fe7d862ea583dd7afefa3400c00d621b6c6650fad230d61066d74d39e9a0d0d",
+      "bytes": 3333
     },
     {
       "path": "recipe-atlas/static/assets/crystal-references/9008840.cif",
@@ -77630,9 +77815,34 @@
       "bytes": 3303
     },
     {
+      "path": "recipe-atlas/static/assets/crystal-references/9008845.cif",
+      "sha256": "2b011a3f401b638163cf663211726c2b72bf5c8a3ba32511df0d867382fba943",
+      "bytes": 3332
+    },
+    {
+      "path": "recipe-atlas/static/assets/crystal-references/9008846.cif",
+      "sha256": "0d332336cfc7b160621c427d716cbd4a3b4df34169606c7b5d112fae440d3558",
+      "bytes": 3287
+    },
+    {
+      "path": "recipe-atlas/static/assets/crystal-references/9008850.cif",
+      "sha256": "06e0c8b2b8e16abf2cf8511fd83891728782114c31b1198fe6733035925176af",
+      "bytes": 3257
+    },
+    {
       "path": "recipe-atlas/static/assets/crystal-references/9008851.cif",
       "sha256": "387eed8f70072b66346d0c884aa9b8eebed0eb1fe8daa4b97afe2d934e5998db",
       "bytes": 3329
+    },
+    {
+      "path": "recipe-atlas/static/assets/crystal-references/9008853.cif",
+      "sha256": "e6950893d7b0520c5c422ab7f6c48ce8664dabd1c91d6215457575311ff7f172",
+      "bytes": 3291
+    },
+    {
+      "path": "recipe-atlas/static/assets/crystal-references/9008856.cif",
+      "sha256": "d6d737b7905398a944b54abbf464b41db6045a83c402cb73d72e73adce9a3d6f",
+      "bytes": 3323
     },
     {
       "path": "recipe-atlas/static/assets/crystal-references/9008857.cif",
@@ -77650,9 +77860,29 @@
       "bytes": 2141
     },
     {
+      "path": "recipe-atlas/static/assets/crystal-references/9008868.cif",
+      "sha256": "c268ec45c4918f97bc6e2caa2d88691e52cd4d7610a5e0e54dc8e754ba711f4c",
+      "bytes": 2167
+    },
+    {
+      "path": "recipe-atlas/static/assets/crystal-references/9008869.cif",
+      "sha256": "7b8689030ebf2b1bbcf88c850f13bc6cbdc3f7eb3672e07962285efe7d67aa89",
+      "bytes": 2167
+    },
+    {
+      "path": "recipe-atlas/static/assets/crystal-references/9008871.cif",
+      "sha256": "72978b892d27ebc316b018d213ac8783341888d4c8d15163ee7bcbc4fa6c9beb",
+      "bytes": 2137
+    },
+    {
       "path": "recipe-atlas/static/assets/crystal-references/9008879.cif",
       "sha256": "0fe5d8c8d44529a9858bbd3582680567dce43532fd2edb5167ab2a93a59112b1",
       "bytes": 2209
+    },
+    {
+      "path": "recipe-atlas/static/assets/crystal-references/9008997.cif",
+      "sha256": "a2af9f093b8c00a3033b2c53492c8d5705c26a046dae1452785ef22af09d5dde",
+      "bytes": 2274
     },
     {
       "path": "recipe-atlas/static/assets/crystal-references/9009008.cif",
@@ -77670,6 +77900,11 @@
       "bytes": 2200
     },
     {
+      "path": "recipe-atlas/static/assets/crystal-references/9009404.cif",
+      "sha256": "6729b12919f00074d1d17792b6882b317f2e03b6f3ee0bccce2fc9e335c4bc30",
+      "bytes": 2845
+    },
+    {
       "path": "recipe-atlas/static/assets/crystal-references/9009852.cif",
       "sha256": "04a4f15837b47507b6e7a15d2cfa2c9dd81fca23d538938180045dd839b987b0",
       "bytes": 5350
@@ -77685,9 +77920,34 @@
       "bytes": 2790
     },
     {
+      "path": "recipe-atlas/static/assets/crystal-references/9010158.cif",
+      "sha256": "c674f9e3dfe06b65e68144b5c0c3fa05483e6e4998b4479298d8a5398aded5b5",
+      "bytes": 3026
+    },
+    {
       "path": "recipe-atlas/static/assets/crystal-references/9010967.cif",
       "sha256": "573deeef84637893ad4f7ee8c5bc1c71f7122330ea8887dd990d04058c3546ba",
       "bytes": 2415
+    },
+    {
+      "path": "recipe-atlas/static/assets/crystal-references/9011024.cif",
+      "sha256": "ec3481a056e2091afe058bce7dfcb3e2b90fc1c273e5790a0bf6b4d943dd1541",
+      "bytes": 2612
+    },
+    {
+      "path": "recipe-atlas/static/assets/crystal-references/9011091.cif",
+      "sha256": "6815de4784f761c54425826260c084bf25ed2831dd080c18219b17d94ba51702",
+      "bytes": 4184
+    },
+    {
+      "path": "recipe-atlas/static/assets/crystal-references/9011190.cif",
+      "sha256": "eb0ec2d1a8157a730cc4b2c12369fc3c13fac904cffe67299b31b8b5aeef1911",
+      "bytes": 2808
+    },
+    {
+      "path": "recipe-atlas/static/assets/crystal-references/9011274.cif",
+      "sha256": "e89c13250b2e299ba61a9ba22dd15822efe559571f5104944961cdb8747cd909",
+      "bytes": 4116
     },
     {
       "path": "recipe-atlas/static/assets/crystal-references/9011577.cif",
@@ -77700,6 +77960,11 @@
       "bytes": 2222
     },
     {
+      "path": "recipe-atlas/static/assets/crystal-references/9011799.cif",
+      "sha256": "4cf0045e02390a224bd5b36eb5308ee92a7d1a6312a9deaeca0fbae83043f593",
+      "bytes": 2533
+    },
+    {
       "path": "recipe-atlas/static/assets/crystal-references/9012064.cif",
       "sha256": "0e630707bba7deaf9d7db8f30f0bb9d87d50016279721cbdb4f5981ad77ed94b",
       "bytes": 3158
@@ -77710,6 +77975,11 @@
       "bytes": 2355
     },
     {
+      "path": "recipe-atlas/static/assets/crystal-references/9012191.cif",
+      "sha256": "411dfe1269d2f465297529c8809298808b82080b30166582da5625b72fd23d36",
+      "bytes": 2413
+    },
+    {
       "path": "recipe-atlas/static/assets/crystal-references/9012252.cif",
       "sha256": "d6857c163f8f90285e6661c3773c597761f54d3f99ef5118a71377573162d401",
       "bytes": 2945
@@ -77718,6 +77988,16 @@
       "path": "recipe-atlas/static/assets/crystal-references/9012326.cif",
       "sha256": "065ac5f3a3d14eb37bdb0489bd632607fccc891e26d4f276b959bd7621f28939",
       "bytes": 5254
+    },
+    {
+      "path": "recipe-atlas/static/assets/crystal-references/9013069.cif",
+      "sha256": "2dfac62a264b2c5ac2cf3ae37b93f055f0cd2b113b5269c7f5656569165941fe",
+      "bytes": 2839
+    },
+    {
+      "path": "recipe-atlas/static/assets/crystal-references/9013303.cif",
+      "sha256": "1df9c44430cc94f8da3a63073546d463087468a4fc8f8e5983a252aab1afe126",
+      "bytes": 2328
     },
     {
       "path": "recipe-atlas/static/assets/crystal-references/9013403.cif",
@@ -77870,6 +78150,16 @@
       "bytes": 8501
     },
     {
+      "path": "recipe-atlas/static/assets/crystal-references/models/agbis2-trigonal-matildite-cod-9011024.json",
+      "sha256": "7d42e4656e707c73621285582667118ff42f5a6895ac7dc905f27f1ab9ac594d",
+      "bytes": 9680
+    },
+    {
+      "path": "recipe-atlas/static/assets/crystal-references/models/aggas2-chalcopyrite-cod-1509348.json",
+      "sha256": "85411304cf03e75dca59846134ee4628be897ca9b94217940e009a7a1a0248bd",
+      "bytes": 11778
+    },
+    {
       "path": "recipe-atlas/static/assets/crystal-references/models/agins2-chalcopyrite-cod-1509402.json",
       "sha256": "7cba6c7dfe65b7a972a80cec688bfcdf0a130b0d6743fe770367863858091e36",
       "bytes": 10045
@@ -77888,6 +78178,16 @@
       "path": "recipe-atlas/static/assets/crystal-references/models/al-face-centered-cubic-cod-9008460.json",
       "sha256": "ef72e7b4bd03f889c1cca55ac9932b7cb372430a27db320702cb62fd54f8cd17",
       "bytes": 4556
+    },
+    {
+      "path": "recipe-atlas/static/assets/crystal-references/models/al2o3-corundum-cod-9008081.json",
+      "sha256": "85fb081cbfbcfdba90d976c5de186f28c6de72c93241cb73c79496155699f266",
+      "bytes": 19848
+    },
+    {
+      "path": "recipe-atlas/static/assets/crystal-references/models/alas-zinc-blende-cod-9008830.json",
+      "sha256": "7e9f0f2543c498810899979cff9613c7ba4fbaa941f941eff90a7433d109bb3a",
+      "bytes": 7229
     },
     {
       "path": "recipe-atlas/static/assets/crystal-references/models/aln-wurtzite-cod-9011657.json",
@@ -77930,9 +78230,34 @@
       "bytes": 13736
     },
     {
+      "path": "recipe-atlas/static/assets/crystal-references/models/bi2se3-rhombohedral-cod-1530736.json",
+      "sha256": "cfce115f324ff2bcc0270ab1500f88c37f297a28129e679addfcd2877f3f0a22",
+      "bytes": 5743
+    },
+    {
       "path": "recipe-atlas/static/assets/crystal-references/models/bi2te3-rhombohedral-cod-9012064.json",
       "sha256": "c9f5a6568418ac47e0a0961bd01f45edda22728d7e650128fd8c95d56474ea28",
       "bytes": 9831
+    },
+    {
+      "path": "recipe-atlas/static/assets/crystal-references/models/bi2wo6-orthorhombic-russellite-cod-9011799.json",
+      "sha256": "ca074e0a128152736dcaa9f0842e40c5e02d25e9d3c49c217bfbe2c145968d98",
+      "bytes": 23536
+    },
+    {
+      "path": "recipe-atlas/static/assets/crystal-references/models/bi4ti3o12-aurivillius-cod-1534182.json",
+      "sha256": "cccb91506f34d56d5baec7fc805cc7c6af9077903c1dcfc949ffa9db37b8ab2a",
+      "bytes": 44938
+    },
+    {
+      "path": "recipe-atlas/static/assets/crystal-references/models/bn-cubic-zinc-blende-cod-9008834.json",
+      "sha256": "efa1aad0ce36473dc1f52d0b34178ef7b7475055d94edd1a199e5b90cbb955bc",
+      "bytes": 7295
+    },
+    {
+      "path": "recipe-atlas/static/assets/crystal-references/models/bn-hexagonal-cod-9008997.json",
+      "sha256": "5fdb3edbb387e7a39355d47789f0bedf53df80a43f78b89e31ce5cdc53b3e760",
+      "bytes": 5088
     },
     {
       "path": "recipe-atlas/static/assets/crystal-references/models/bucci2024-zincblende-qd-nanowires-acsami4c00615-inas-zincblende-reference.json",
@@ -77953,6 +78278,11 @@
       "path": "recipe-atlas/static/assets/crystal-references/models/caco3-calcite-cod-9000095.json",
       "sha256": "f516659a0640381e647caf2a74a86741381decc75c1753ed4b437cee34597907",
       "bytes": 16562
+    },
+    {
+      "path": "recipe-atlas/static/assets/crystal-references/models/cawo4-scheelite-cod-1570753.json",
+      "sha256": "1e87cda1c6a5ae60f3007ef93fd897bc05e6763d67523f0477f53926d88132a3",
+      "bytes": 16531
     },
     {
       "path": "recipe-atlas/static/assets/crystal-references/models/cds-wurtzite-cod-9008862.json",
@@ -77995,6 +78325,11 @@
       "bytes": 10785
     },
     {
+      "path": "recipe-atlas/static/assets/crystal-references/models/ch3nh3pbbr3-cubic-perovskite-cod-1545320.json",
+      "sha256": "cdd80ee89beb40c6e777391a66ab02e2290779a351805b4c513381b1d3b43518",
+      "bytes": 226646
+    },
+    {
       "path": "recipe-atlas/static/assets/crystal-references/models/co-fcc-cod-9008466.json",
       "sha256": "7d45aaea0f4d4c1ebb57ab260ba2db4c60e4f2790ed8c3eeef17f6ac78787e54",
       "bytes": 4292
@@ -78003,6 +78338,16 @@
       "path": "recipe-atlas/static/assets/crystal-references/models/co-hcp-cod-9010967.json",
       "sha256": "45f6cb1f675970e4f172927f904ce70b4585383647e86829c683765ea7754ca7",
       "bytes": 3398
+    },
+    {
+      "path": "recipe-atlas/static/assets/crystal-references/models/co3o4-spinel-cod-5910031.json",
+      "sha256": "62502df901e7896b1a654b323e8708a9823686a14f9769153fa813da5bf14bda",
+      "bytes": 33957
+    },
+    {
+      "path": "recipe-atlas/static/assets/crystal-references/models/co9s8-cubic-cobaltpentlandite-cod-1011206.json",
+      "sha256": "aabdd5548863410ba7c9b409c8b7d0d33230774966c25747ac284edc02fd1a10",
+      "bytes": 40837
     },
     {
       "path": "recipe-atlas/static/assets/crystal-references/models/cofe2o4-spinel.json",
@@ -78030,6 +78375,11 @@
       "bytes": 4536
     },
     {
+      "path": "recipe-atlas/static/assets/crystal-references/models/cos2-pyrite-cattierite-cod-9008393.json",
+      "sha256": "f6ce58c3943b749dca2fce37035577f3e709fa6fdbf269e4bb506efe38ea9236",
+      "bytes": 9741
+    },
+    {
       "path": "recipe-atlas/static/assets/crystal-references/models/cs3cu2cl5-pnma-alternative-cod-7246298.json",
       "sha256": "1eaf2fc2bb3134c3ddae61ac7d16af5c079e8065d4a71ce71344c0de8a1c4eca",
       "bytes": 25498
@@ -78055,6 +78405,16 @@
       "bytes": 14566
     },
     {
+      "path": "recipe-atlas/static/assets/crystal-references/models/cspbi3-orthorhombic-delta-cod-4127358.json",
+      "sha256": "629f1d32af59033a102b027c5fb65a417360e3f2b03e95dce1d493d56e9a7985",
+      "bytes": 14403
+    },
+    {
+      "path": "recipe-atlas/static/assets/crystal-references/models/cu-face-centered-cubic-cod-9008468.json",
+      "sha256": "788aa1c7ae44a05f0ee8181b2d584eda0e5d3514c3e5e0bcf104d58438038b97",
+      "bytes": 5090
+    },
+    {
       "path": "recipe-atlas/static/assets/crystal-references/models/cu12sb4s13-tetrahedrite-cod-2101865.json",
       "sha256": "63e11472620319cf30bcb8ae3038ebf72ce91ad68e8b5b083fd834783573c525",
       "bytes": 35514
@@ -78065,6 +78425,11 @@
       "bytes": 27095
     },
     {
+      "path": "recipe-atlas/static/assets/crystal-references/models/cu2o-cuprite-cod-9007497.json",
+      "sha256": "bd8315be238ecd96ff903f7c8506d381ec0b8d5625a60563dfbc7fae160c90fe",
+      "bytes": 6289
+    },
+    {
       "path": "recipe-atlas/static/assets/crystal-references/models/cu2s-high-chalcocite-cod-1529746.json",
       "sha256": "7d2737d9346b16383ed0491a1a4dc7de286dd983d55acfeaf5df26948ff2f6d0",
       "bytes": 11765
@@ -78073,6 +78438,11 @@
       "path": "recipe-atlas/static/assets/crystal-references/models/cu2sns3-monoclinic-alternative-cod-1526187.json",
       "sha256": "aa393ee40ebd647aaf92aecadb6af81a7f600bca440e144145fbea0a8fec1aea",
       "bytes": 16176
+    },
+    {
+      "path": "recipe-atlas/static/assets/crystal-references/models/cu2znsns4-kesterite-cod-9004750.json",
+      "sha256": "7937d5c8d862b187d38fc141455a2675bf585125b9194d8a9ed06180d62b3437",
+      "bytes": 13048
     },
     {
       "path": "recipe-atlas/static/assets/crystal-references/models/cu3sbs3-skinnerite-cod-9004360.json",
@@ -78095,6 +78465,11 @@
       "bytes": 10154
     },
     {
+      "path": "recipe-atlas/static/assets/crystal-references/models/cuinse2-chalcopyrite-cod-1563481.json",
+      "sha256": "bb616d9ba216cf800e8c1f6cbcb7abe496bddf0f73261bfeaac9512853cd057b",
+      "bytes": 12054
+    },
+    {
       "path": "recipe-atlas/static/assets/crystal-references/models/cus-covellite-cod-9000523.json",
       "sha256": "12188cd3c3686059a38dd8f756c06665c8bf905d5ffacef7f33a7b7b9ef830b8",
       "bytes": 9070
@@ -78113,6 +78488,11 @@
       "path": "recipe-atlas/static/assets/crystal-references/models/fapbi3-pbesol-ordered-reference.json",
       "sha256": "6ddbaa4f330aba10e809ed7a545492ea64c96e882185c17f67e20b5d28207256",
       "bytes": 12186
+    },
+    {
+      "path": "recipe-atlas/static/assets/crystal-references/models/fe-body-centered-cubic-cod-9008536.json",
+      "sha256": "91178cc4b9932732ae4447f10461adec247e88dadf00fbff6e66958dc5b4526c",
+      "bytes": 4059
     },
     {
       "path": "recipe-atlas/static/assets/crystal-references/models/fe2o3-hematite-cod-9000139.json",
@@ -78140,6 +78520,26 @@
       "bytes": 3297
     },
     {
+      "path": "recipe-atlas/static/assets/crystal-references/models/fes2-pyrite-cod-9013069.json",
+      "sha256": "3cd59b04b85e3d982cf8597932f6b6b508db57d930852081827bfb5d022cd5ad",
+      "bytes": 9707
+    },
+    {
+      "path": "recipe-atlas/static/assets/crystal-references/models/gaas-zinc-blende-cod-9008845.json",
+      "sha256": "f082ef54fbc3008f4f19a6ab6731106407c8fac8600fb08c3308aad2832c4b94",
+      "bytes": 7295
+    },
+    {
+      "path": "recipe-atlas/static/assets/crystal-references/models/gan-wurtzite-cod-9008868.json",
+      "sha256": "6cff4d8b9710b0074ddacd0ab2dd72e7860863d33330423a1e3931ccc08aadf8",
+      "bytes": 5065
+    },
+    {
+      "path": "recipe-atlas/static/assets/crystal-references/models/gap-zinc-blende-cod-9008846.json",
+      "sha256": "6653a627d70f334afba01c962cbb4a0956ba4a9b281848efeeb62ee14ee32091",
+      "bytes": 7259
+    },
+    {
       "path": "recipe-atlas/static/assets/crystal-references/models/gdfeo3-orthorhombic-perovskite-cod-1528359.json",
       "sha256": "5046c6fd4f09b65a2243c93446f267178fb1d2019e4e85a07b2541056b0bd79e",
       "bytes": 12066
@@ -78165,9 +78565,24 @@
       "bytes": 6626
     },
     {
+      "path": "recipe-atlas/static/assets/crystal-references/models/hgse-zinc-blende-tiemannite-cod-9000047.json",
+      "sha256": "60dc9e855a48d52ecc57b283632806d9797ae1f2c7a5b18d6d2e0b8df04d0f1b",
+      "bytes": 7267
+    },
+    {
+      "path": "recipe-atlas/static/assets/crystal-references/models/hgte-zinc-blende-coloradoite-cod-9008850.json",
+      "sha256": "100d2b6c04124fe38cbe3c5813d20ab5039f4fd60e486f9cc0009ec6c1c47502",
+      "bytes": 7353
+    },
+    {
       "path": "recipe-atlas/static/assets/crystal-references/models/huang2026-reductant-inp-nanolett6c01798-inp-zinc-blende-reference.json",
       "sha256": "9758e7433fb9cd8f1c2548428fd0a531736dfdb220ef731c9fcf269956e7b18e",
       "bytes": 7909
+    },
+    {
+      "path": "recipe-atlas/static/assets/crystal-references/models/hydroxyapatite-hexagonal-cod-9011091.json",
+      "sha256": "52c3168d168ca7e4abd245bc72107bafe05dd0c6e38b3801a538b46089293d2b",
+      "bytes": 30351
     },
     {
       "path": "recipe-atlas/static/assets/crystal-references/models/in2o3-cubic-bixbyite-cod-2310009.json",
@@ -78180,14 +78595,29 @@
       "bytes": 8279
     },
     {
+      "path": "recipe-atlas/static/assets/crystal-references/models/inn-wurtzite-cod-9008869.json",
+      "sha256": "6882b9dbc043be6e8f675054b74a068f4383d6874facc8e74105dc08a4f66996",
+      "bytes": 5077
+    },
+    {
       "path": "recipe-atlas/static/assets/crystal-references/models/inp-zinc-blende.json",
       "sha256": "dca40ed6b36e9a5e11f32d28611a9223450c4214951a82fb0d566886e2d97641",
       "bytes": 6888
     },
     {
+      "path": "recipe-atlas/static/assets/crystal-references/models/insb-zinc-blende-cod-9008853.json",
+      "sha256": "57202ad51100b69a7388a4579b19f3316eef1b5d3977b2b97de9b224a8cbf479",
+      "bytes": 7277
+    },
+    {
       "path": "recipe-atlas/static/assets/crystal-references/models/ir-fcc.json",
       "sha256": "529b150fc3f36d80b0c3bf3527fd1ac436a1c3b76041d77c3c365c71423fae4d",
       "bytes": 4404
+    },
+    {
+      "path": "recipe-atlas/static/assets/crystal-references/models/ktiopo4-orthorhombic-cod-9011274.json",
+      "sha256": "c214f1e8dc86bf6935112f68a783d1e41d3fc188c42a5a149a8be7824232981b",
+      "bytes": 39469
     },
     {
       "path": "recipe-atlas/static/assets/crystal-references/models/la2moo43-monoclinic-alternative-cod-2107003.json",
@@ -78220,6 +78650,21 @@
       "bytes": 7604
     },
     {
+      "path": "recipe-atlas/static/assets/crystal-references/models/mgo-rock-salt-periclase-cod-9008671.json",
+      "sha256": "67ee2a4edf1eb2e08f1b82f18ca0fabea0e51edcd0f36d9f8f6cfcd57877352b",
+      "bytes": 7234
+    },
+    {
+      "path": "recipe-atlas/static/assets/crystal-references/models/mns-rock-salt-alabandite-cod-9008675.json",
+      "sha256": "16f76eada12ecbb27b3b28c1afcda9469e9f7457f4cb79a4f4b5b9bc86093a2b",
+      "bytes": 7240
+    },
+    {
+      "path": "recipe-atlas/static/assets/crystal-references/models/mns-wurtzite-rambergite-cod-9008871.json",
+      "sha256": "6bb23020eb52cde55b76878545438a09f9364d02afe431fca3ec09090436436f",
+      "bytes": 5149
+    },
+    {
       "path": "recipe-atlas/static/assets/crystal-references/models/mos2-2h-cod-9007660.json",
       "sha256": "bd9d78c9091ffdb437e3300e4ecd7c5ca4b8e8462c78fa459bf62a43b44f0b33",
       "bytes": 5575
@@ -78245,6 +78690,11 @@
       "bytes": 34074
     },
     {
+      "path": "recipe-atlas/static/assets/crystal-references/models/nio-rock-salt-bunsenite-cod-9008693.json",
+      "sha256": "b06056238fbb8dbd0d9e22b57996034d74ca1e67243e0484eebfefe5223f7a4e",
+      "bytes": 7234
+    },
+    {
       "path": "recipe-atlas/static/assets/crystal-references/models/nis-millerite-cod-9004078.json",
       "sha256": "2fc767e592d02b225bcc72f8db1511a616e5d569f3ceaa98dddc14fcdef187c4",
       "bytes": 12892
@@ -78258,6 +78708,11 @@
       "path": "recipe-atlas/static/assets/crystal-references/models/norberg-undoped-zno-unit-cell.json",
       "sha256": "d728f67a165a1ae7070e411697d0fca802a3ea52b390211cffe1265975019b77",
       "bytes": 4746
+    },
+    {
+      "path": "recipe-atlas/static/assets/crystal-references/models/p-black-orthorhombic-cod-9008572.json",
+      "sha256": "ecf77e5f866933ea75a046e3687254ce6d3be5d3409f82ef8d39705977dd03ef",
+      "bytes": 7263
     },
     {
       "path": "recipe-atlas/static/assets/crystal-references/models/park2020-bbn-heatup-cdse-cds-acsnano0c04091-cds-wurtzite-reference.json",
@@ -78280,6 +78735,11 @@
       "bytes": 3867
     },
     {
+      "path": "recipe-atlas/static/assets/crystal-references/models/pbmoo4-scheelite-wulfenite-cod-9009404.json",
+      "sha256": "eeb11677627a213338142fc46a20580020c8237691b0eda10a3deb2dc9903e87",
+      "bytes": 16439
+    },
+    {
       "path": "recipe-atlas/static/assets/crystal-references/models/pbs-rocksalt-cod-9013403.json",
       "sha256": "95ff81ddd0875bc041101fe13345dacdf1badac9b389ce967f981ebb4c97a0fc",
       "bytes": 8429
@@ -78300,6 +78760,16 @@
       "bytes": 6327
     },
     {
+      "path": "recipe-atlas/static/assets/crystal-references/models/pbtio3-tetragonal-perovskite-cod-9011190.json",
+      "sha256": "d2d30e09a1bc6f6ed1f45481fc8da23b01e2c4f840f72668e383ab35e24c990f",
+      "bytes": 5747
+    },
+    {
+      "path": "recipe-atlas/static/assets/crystal-references/models/pd-face-centered-cubic-cod-9008478.json",
+      "sha256": "e5d27c4a14fca9be7784a5ec5bceba3f89176a3cdfdadf014a8fb49fe791cd4d",
+      "bytes": 5078
+    },
+    {
       "path": "recipe-atlas/static/assets/crystal-references/models/peng2021-roomtemp-pbse-acsami1c13723-ideal-pbse-reference.json",
       "sha256": "d97dfea720fdcf796b0cf46670d6500ab3313d25530f863a8ed8d91ac9f26929",
       "bytes": 7103
@@ -78313,6 +78783,16 @@
       "path": "recipe-atlas/static/assets/crystal-references/models/pt-fcc-cod-9008480.json",
       "sha256": "dd31a462d1b3fcea34f2e02fa361a0516cf7197c468161a6649e0789c36cf3ee",
       "bytes": 5835
+    },
+    {
+      "path": "recipe-atlas/static/assets/crystal-references/models/ru-hexagonal-close-packed-cod-9008513.json",
+      "sha256": "b0e84a59bd4738b9f427a61491ddffe59035ca87cdc4df05222dcd03d50ed6fd",
+      "bytes": 4070
+    },
+    {
+      "path": "recipe-atlas/static/assets/crystal-references/models/s-orthorhombic-alpha-cod-9008577.json",
+      "sha256": "ab1cca510ab9e190a452ae50ab85f694ee94fcfb18fa91a523037591567f1c8f",
+      "bytes": 75163
     },
     {
       "path": "recipe-atlas/static/assets/crystal-references/models/sharma2025-au-cdte-qcd-acsanm5c03294-au-bulk-reference.json",
@@ -78340,6 +78820,16 @@
       "bytes": 571488
     },
     {
+      "path": "recipe-atlas/static/assets/crystal-references/models/sic-3c-zinc-blende-cod-9008856.json",
+      "sha256": "12e8cfccf7b1c55a674f089fef16601a15cba410ae96a65f0649f50f0e87aa1a",
+      "bytes": 7298
+    },
+    {
+      "path": "recipe-atlas/static/assets/crystal-references/models/sic-6h-hexagonal-cod-9010158.json",
+      "sha256": "89cce05696f20ab2a47b2118325ab4b7214b7c8e433de58d0bbba8a4ba30ef63",
+      "bytes": 9712
+    },
+    {
       "path": "recipe-atlas/static/assets/crystal-references/models/sn-tetragonal-tin-cod-9008570.json",
       "sha256": "617ed2c5d6c8ba2b29ba24b0719d82d2d75344ef745621d357050fa0bdc9d546",
       "bytes": 4551
@@ -78348,6 +78838,11 @@
       "path": "recipe-atlas/static/assets/crystal-references/models/sno2-cassiterite-cod-9009082.json",
       "sha256": "4d00573e1bd2db4c016ddb6fcc800f73e5d152b0030e8c2ddbd80da8305c18ee",
       "bytes": 7166
+    },
+    {
+      "path": "recipe-atlas/static/assets/crystal-references/models/sns-orthorhombic-herzenbergite-cod-9008785.json",
+      "sha256": "7aefcc685b0a90b98d8ab737ba0b95c1773f64c13a2f5bcf386efee0fb9aae03",
+      "bytes": 7317
     },
     {
       "path": "recipe-atlas/static/assets/crystal-references/models/snse-orthorhombic-cod-1537699.json",
@@ -78365,9 +78860,39 @@
       "bytes": 23994
     },
     {
+      "path": "recipe-atlas/static/assets/crystal-references/models/wc-hexagonal-qusongite-cod-9013303.json",
+      "sha256": "20e1f9aeabfbf95c92480e51dedfd5a5c9b6c2c563bde5c8411f124e98bf6542",
+      "bytes": 4051
+    },
+    {
+      "path": "recipe-atlas/static/assets/crystal-references/models/ws2-2h-cod-9012191.json",
+      "sha256": "ff322c7eee883f10711f7a78d1818539a57196b266eca28f4c70fcdfccab1076",
+      "bytes": 6294
+    },
+    {
+      "path": "recipe-atlas/static/assets/crystal-references/models/y2o3-cubic-bixbyite-cod-1537882.json",
+      "sha256": "2292a5ca0ac91ecaf9f9cd38f7efed1948146c0245b8d2f54ad7c25fd4752a61",
+      "bytes": 47300
+    },
+    {
+      "path": "recipe-atlas/static/assets/crystal-references/models/y3al5o12-garnet-cod-2003066.json",
+      "sha256": "3178a27b3f488f638b1edec108915f5b9445a173e63c1dbfc1f389f91a864518",
+      "bytes": 92781
+    },
+    {
       "path": "recipe-atlas/static/assets/crystal-references/models/zhou2022-inp-multishell-acsanm2c04509-inp-zincblende-reference.json",
       "sha256": "3b8fc29719ac761dd282fd3a32867334493bfda47875efc762b185d1abd69e3a",
       "bytes": 6848
+    },
+    {
+      "path": "recipe-atlas/static/assets/crystal-references/models/zn-hexagonal-close-packed-cod-9008522.json",
+      "sha256": "13cd0f89735f73ad87616bbdcd8db1bc6d10e5291736d907a3fc5405633f5e78",
+      "bytes": 4062
+    },
+    {
+      "path": "recipe-atlas/static/assets/crystal-references/models/zn2sno4-inverse-spinel-cod-1010110.json",
+      "sha256": "b9651703dbd19134199e4c555205f7967c0521065023af9b1ad8e71a32a60b0a",
+      "bytes": 36575
     },
     {
       "path": "recipe-atlas/static/assets/crystal-references/models/zn3p2-tetragonal-cod-1539991.json",
@@ -78378,6 +78903,11 @@
       "path": "recipe-atlas/static/assets/crystal-references/models/znal2o4-gahnite-cod-9015620.json",
       "sha256": "954a70a25851d7cb2e938b3c7d3adf0e31a6b12670ad164c76921aef1ba88948",
       "bytes": 39160
+    },
+    {
+      "path": "recipe-atlas/static/assets/crystal-references/models/znfe2o4-spinel-cod-1513087.json",
+      "sha256": "dd648111b35b42909476f7fb17f8e20424582bf6df506a27090261b65815a2b9",
+      "bytes": 38717
     },
     {
       "path": "recipe-atlas/static/assets/crystal-references/models/znga2o4-spinel-cod-4001767.json",
@@ -78456,8 +78986,8 @@
     },
     {
       "path": "recipe-atlas/static/assets/crystal-references/registry.json",
-      "sha256": "4935c24f84b5775c542dd0fbff15e1c61a292ec09b22430f39fe289918375f8b",
-      "bytes": 1044487
+      "sha256": "b50879c21c96fc3359d9abc0ddd85cf92935624bf9e1491ab838286f040568c4",
+      "bytes": 1135268
     },
     {
       "path": "recipe-atlas/static/assets/crystal-references/si-diamond-ideal-expanded-p1.cif",
@@ -244331,8 +244861,8 @@
     },
     {
       "path": "recipe-atlas/static/chemical-viewer.mjs",
-      "sha256": "eebf14525ac7c3c8eb082cb21c77acbab8725bab7ecbd085364a5367088a110e",
-      "bytes": 12949
+      "sha256": "81cc2239ae8eca506a72041a5aa6f0d2cd9fa90a9458732f76a9ba47ff0487c9",
+      "bytes": 13902
     },
     {
       "path": "recipe-atlas/static/chen2018ami-protocol.mjs",
@@ -244346,8 +244876,8 @@
     },
     {
       "path": "recipe-atlas/static/crystal-defaults.mjs",
-      "sha256": "e7865f267526cffdab500c99e5ed11337fa6b5bec78bf6e0a22cae81b9064a40",
-      "bytes": 5499
+      "sha256": "e32b44cbb3c955e6702d8638e523dcb6c6adc030d40d8fff1129d1f60763dab2",
+      "bytes": 7437
     },
     {
       "path": "recipe-atlas/static/crystal-viewer.mjs",
@@ -267165,19 +267695,29 @@
       "bytes": 550
     },
     {
+      "path": "recipe-atlas/static/protocol-module-registry.mjs",
+      "sha256": "47a3447b01aba656b9b82f2c90809affac294fcdcc5d245e6d3d252a8e47d4ee",
+      "bytes": 2327
+    },
+    {
+      "path": "recipe-atlas/static/protocol-modules.mjs",
+      "sha256": "454dde04a4675d8fde93ae5dccd48dba4f1e6616c3b43f11c59c67061570bc78",
+      "bytes": 5905
+    },
+    {
       "path": "recipe-atlas/static/protocol-operation-kind.mjs",
       "sha256": "b58deb8e129925ffc66d44fc9add61539d4f999b86e2e91778bcf0e7a860b0db",
       "bytes": 1268
     },
     {
       "path": "recipe-atlas/static/protocol-references.mjs",
-      "sha256": "35664f7ac9d0f4671eeb7803904fa25b128c1a8d1ac7c762fce63f055f2ce9da",
-      "bytes": 4323
+      "sha256": "c79970b88ccdb8a1935eae65fd25a897f7d471b26888a55ee4c8ab0c18982ad5",
+      "bytes": 4335
     },
     {
       "path": "recipe-atlas/static/protocol-visuals.mjs",
-      "sha256": "86bc6405d870d5041c27a673a56b09c5340aa079b58aa06c5d5a2d8daf1d4255",
-      "bytes": 22337
+      "sha256": "5eeb17dfa867e25c0c65d49694d6194147c94e9c2b2d6f234d601ecf96237418",
+      "bytes": 20123
     },
     {
       "path": "recipe-atlas/static/quantity-value.mjs",
@@ -267196,8 +267736,8 @@
     },
     {
       "path": "recipe-atlas/static/reader-app.mjs",
-      "sha256": "3a9862f06d60ecb96ca83ccda5225c67f981115505a41cd91d45fdacb48d0ed9",
-      "bytes": 30861
+      "sha256": "6f92b88260bfc89a0e2e00443209ad664f5160bab3ce274a75d3ad44253af7cc",
+      "bytes": 36543
     },
     {
       "path": "recipe-atlas/static/reader-figure-morphology.mjs",
@@ -267226,8 +267766,8 @@
     },
     {
       "path": "recipe-atlas/static/reader-structures.mjs",
-      "sha256": "cf4406d6f7fe0486b7ceee5f7e7f4f0f28ef4c2bd02790530e1e35a920c990df",
-      "bytes": 16250
+      "sha256": "97fb7f334c6cb16e5d7217af64b95c7169676bf9b61e41b84c36746c8c9803fc",
+      "bytes": 17264
     },
     {
       "path": "recipe-atlas/static/reader-utils.mjs",
@@ -267396,8 +267936,8 @@
     },
     {
       "path": "recipe-atlas/tests/crystal-defaults.test.mjs",
-      "sha256": "40ae369ea05c8f6403ea6f5e9d492a916278d94b12ba84d9a457d01b4806ecbb",
-      "bytes": 10632
+      "sha256": "3147978324dd5ce45528fd41c4dd36de20f18e60e0040eeb746fa47b867c88ac",
+      "bytes": 15232
     },
     {
       "path": "recipe-atlas/tests/figure-captions.test.mjs",
@@ -267471,8 +268011,8 @@
     },
     {
       "path": "recipe-atlas/tests/reactor-lines.test.mjs",
-      "sha256": "16f1dd8bd1745745db353ad082c0f3bf75b55d3647238e325ea3f3c2a438b482",
-      "bytes": 35660
+      "sha256": "9dd9172e4d3b4b651d7c3a4b9d88cdce6c5869ea134df526a726e9f974837094",
+      "bytes": 35846
     },
     {
       "path": "recipe-atlas/tests/reactor-scoped-compatibility.test.mjs",
@@ -267498,6 +268038,16 @@
       "path": "recipe-atlas/tests/reader-figure-category.test.mjs",
       "sha256": "0b4a2f4692976842ec88807345db0e9ebeabd0004ca756d84bed7d2cfb324b4d",
       "bytes": 2724
+    },
+    {
+      "path": "recipe-atlas/tests/reader-first-view.test.mjs",
+      "sha256": "3b27a790af8d8e78b15ceb50e08bac0064e0058ee3bd3ae8fb8fd50604709fc8",
+      "bytes": 4276
+    },
+    {
+      "path": "recipe-atlas/tests/reader-page-data.test.mjs",
+      "sha256": "527f61e6e4664c222bc7e81f90857c6efb0f19a1fa8b655cbce2961833cc2887",
+      "bytes": 4706
     },
     {
       "path": "recipe-atlas/tests/reader-property-summary.test.mjs",
@@ -267700,6 +268250,11 @@
       "bytes": 7193
     },
     {
+      "path": "recipe-atlas/tests/test_reader_first_view.py",
+      "sha256": "bf8430b5828e493bef2f1d48b3935a22a93a533fa94263b1a0eb751648f35510",
+      "bytes": 6042
+    },
+    {
       "path": "recipe-atlas/tests/test_reader_json_compaction.py",
       "sha256": "f668d8e705964f21bd44831cf1bfc64717d691f237d45b363ef9ba0bd9c37f90",
       "bytes": 11233
@@ -267708,6 +268263,11 @@
       "path": "recipe-atlas/tests/test_reader_render_contract.py",
       "sha256": "a4fe7bdf43dc818e34b376cab49b4cbc4203c5a6d53a337eeb7117fa2a2a7826",
       "bytes": 1267
+    },
+    {
+      "path": "recipe-atlas/tests/test_reader_shards.py",
+      "sha256": "24b200615032aa1c5e41d2d78458f5c82e0017096205ba7f168a4ca298d4761b",
+      "bytes": 1844
     },
     {
       "path": "recipe-atlas/tests/test_readme_projection.py",
@@ -278750,6 +279310,11 @@
       "bytes": 7534
     },
     {
+      "path": "tools/ci/site-pages-check.mjs",
+      "sha256": "2361d7ecf6bf43b1a0a2de4f02936fe89bd072c150b3d5826812e625149e9e2b",
+      "bytes": 6191
+    },
+    {
       "path": "tools/mattersyn-release/README.md",
       "sha256": "f47abbeeda9b8dc4cdacfaffaebbe6a48d1750b12c7fc603ff82e78a4c2c5143",
       "bytes": 4033
@@ -278940,6 +279505,11 @@
       "bytes": 8370
     },
     {
+      "path": "tools/publication/ci_site_publish.py",
+      "sha256": "7abde3893ed250ab86791493cb98a409f408cb9022cec355c481e7cfe40784a2",
+      "bytes": 28348
+    },
+    {
       "path": "tools/publication/correct_source_links.py",
       "sha256": "c6da8a2e1185b5033258c9a0cfb2183aabf0a4f4dcece5bb16683d04e6df7cef",
       "bytes": 2633
@@ -279013,6 +279583,11 @@
       "path": "tools/publication/test_baseline_control.py",
       "sha256": "a65333708fb6a8a7b2d0b4522959f20a61b7335ba173b676365917d0f3fee004",
       "bytes": 4186
+    },
+    {
+      "path": "tools/publication/test_ci_site_publish.py",
+      "sha256": "78d97e490410f0d8a2e76ed4dea4f022ac70443d48d1dffc70d97c20655d42b0",
+      "bytes": 7664
     },
     {
       "path": "tools/publication/test_display_projection.py",

@@ -7,8 +7,10 @@ exact record/figure scopes. New contributions update and audit that sidecar firs
 import hashlib,json
 from pathlib import Path
 from asset_display import display_view
+from build_reader_shards import main as write_reader_shards
 from reader_presentation_registry import load_reviewed_reader, source_paths
 from public_reader_registry import public_parts
+from route_labels import route_label
 ROOT=Path(__file__).resolve().parents[1]
 
 def validate_reader_view(rid,view):
@@ -38,8 +40,16 @@ def main():
         if not set(view['record_ids']).issubset(data['records']):raise ValueError('Missing Reader method: '+hid)
     target=ROOT/'dist/data/reader-presentation.json';target.parent.mkdir(parents=True,exist_ok=True)
     view=display_view(data,ROOT,'reader-private-asset-provenance.json')
+    # Records whose method is the generic extraction phrase get a route name derived
+    # from their own steps and materials (route_labels.py); the record is unchanged.
+    labels={rid:route_label(records[rid]) for rid,entry in view['records'].items() if not entry.get('method_label')}
+    labels={rid:label for rid,label in labels.items() if label}
+    # A labelled copy is a new object, so the unchanged-bytes shortcut below never applies to it.
+    if labels:view={**view,'records':{rid:({**entry,'method_label':labels[rid]} if rid in labels else entry) for rid,entry in view['records'].items()}}
     legacy_raw=source.read_bytes() if view is data and len(source_paths(source))==1 else (json.dumps(view,ensure_ascii=False,separators=(',',':'))+'\n').encode('utf-8')
     payloads=public_parts(view,legacy_raw)
     for name,raw in payloads.items():(target.parent/name).write_bytes(raw)
-    print(json.dumps({'reader_projection_sha256':hashlib.sha256(target.read_bytes()).hexdigest(),'records':len(data['records']),'materials':len(data['materials']),'scientific_values_modified':False}))
+    # Per-record and per-material files for the page loaders (build_reader_shards.py).
+    write_reader_shards(ROOT)
+    print(json.dumps({'reader_projection_sha256':hashlib.sha256(target.read_bytes()).hexdigest(),'records':len(data['records']),'materials':len(data['materials']),'route_labels_added':len(labels),'scientific_values_modified':False}))
 if __name__=='__main__':main()

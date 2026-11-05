@@ -1,0 +1,219 @@
+name: MatterSyn site publish
+# Builds the public site from a main commit that passed "MatterSyn source and build checks",
+# runs the release checks of tools/publication/release_batch.py, and pushes the result to
+# cuiyist/mattersyn-site as one ordinary commit. Pull requests that change this workflow
+# run a dry run instead: they rebuild the source commit the live site was published from
+# and compare the result with the site's main, file by file, without pushing.
+on:
+  workflow_run:
+    workflows: ['MatterSyn source and build checks']
+    types: [completed]
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'publish: build the current main and publish it. check: build and check the current main without pushing. dry-run: rebuild the live site''s source commit and compare, without pushing.'
+        type: choice
+        options: [publish, check, dry-run]
+        default: publish
+  pull_request:
+    paths:
+      - .github/workflows/site-publish.yml
+      - tools/publication/ci_site_publish.py
+      - tools/publication/release_batch.py
+      - tools/ci/site-pages-check.mjs
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: ${{ github.event_name == 'pull_request' && format('mattersyn-site-dry-run-{0}', github.ref) || 'mattersyn-site-publish' }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+env:
+  PYTHONUTF8: '1'
+  PYTHONIOENCODING: utf-8
+  PYTHONDONTWRITEBYTECODE: '1'
+  SOURCE_REPO: ${{ github.repository }}
+  SITE_REPO: cuiyist/mattersyn-site
+  SITE_URL: https://cuiyist.github.io/mattersyn-site/
+  CI_WORKFLOW: MatterSyn source and build checks
+  REVIEWER: 'GitHub Actions site publish workflow (automated release checks of a CI-passed source commit)'
+defaults:
+  run:
+    shell: bash
+jobs:
+  site:
+    if: >-
+      github.event_name != 'workflow_run' ||
+      (github.event.workflow_run.conclusion == 'success' &&
+       github.event.workflow_run.event == 'push' &&
+       github.event.workflow_run.head_branch == 'main')
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - name: Free runner disk and choose the work directory
+        run: |
+          df -h / /mnt 2>/dev/null || df -h /
+          sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc /usr/local/share/boost \
+            /opt/hostedtoolcache/CodeQL /usr/local/.ghcup /usr/share/swift || true
+          sudo docker image prune --all --force >/dev/null 2>&1 || true
+          root_free=$(df --output=avail -B1 / | tail -1)
+          # Linux runners usually have a second, larger temporary disk mounted at /mnt.
+          scratch_disk=/mnt; big="$scratch_disk/mattersyn"; mnt_free=0
+          if [ -d "$scratch_disk" ] && sudo mkdir -p "$big" && sudo chown "$(id -u):$(id -g)" "$big"; then
+            mnt_free=$(df --output=avail -B1 "$big" | tail -1)
+          fi
+          if [ "$mnt_free" -gt "$root_free" ]; then WORK="$big"; else WORK="$RUNNER_TEMP/mattersyn"; mkdir -p "$WORK"; fi
+          echo "WORK=$WORK" >> "$GITHUB_ENV"
+          echo "Work directory: $WORK"; df -h "$WORK"
+
+      - name: Check out this workflow's helpers
+        uses: actions/checkout@v4
+        with:
+          path: driver
+          sparse-checkout: |
+            tools/publication
+            tools/ci
+          persist-credentials: false
+
+      - name: Clone the site without checkout
+        run: |
+          git clone --quiet --filter=blob:none --no-checkout --depth 1 --branch main \
+            "https://github.com/$SITE_REPO" "$WORK/site"
+          git -C "$WORK/site" sparse-checkout set --no-cone '/data/records/'
+          git -C "$WORK/site" checkout --quiet main
+          echo "SITE_BASE=$(git -C "$WORK/site" rev-parse HEAD)" >> "$GITHUB_ENV"
+          echo "Site main: $(git -C "$WORK/site" log -1 --format='%H %s')"
+          du -sh "$WORK/site"
+
+      - name: Choose the mode and the source commit
+        env:
+          EVENT: ${{ github.event_name }}
+          INPUT_MODE: ${{ inputs.mode }}
+          RUN_SHA: ${{ github.event.workflow_run.head_sha }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          site_source=$(git -C "$WORK/site" show HEAD:data/release-snapshot.json | python3 -c 'import json,sys;print(json.load(sys.stdin)["source_commit"])')
+          echo "Live site was built from source $site_source"
+          if [ "$EVENT" = pull_request ]; then mode=dry-run; elif [ "$EVENT" = workflow_dispatch ]; then mode="$INPUT_MODE"; else mode=publish; fi
+          if [ "$mode" = dry-run ]; then
+            message=$(git -C "$WORK/site" log -1 --format=%B)
+            case "$message" in
+              Publish*) built=$(printf '%s\n' "$message" | sed -n 's/.*Built from cuiyist\/mattersyn \([0-9a-f]\{40\}\).*/\1/p' | head -1)
+                if [ -n "$built" ] && [ "$built" != "$site_source" ]; then
+                  echo "::error::The site's last Publish commit names $built but data/release-snapshot.json names $site_source"; exit 1
+                fi;;
+            esac
+            commit="$site_source"
+            release_id=$(git -C "$WORK/site" show HEAD:.release-control/site-allowlist.json | python3 -c 'import json,sys;print(json.load(sys.stdin)["release_id"])')
+          else
+            if [ "$EVENT" = workflow_run ]; then commit="$RUN_SHA"; else commit=$(git ls-remote "https://github.com/$SOURCE_REPO" refs/heads/main | cut -f1); fi
+            passed=$(gh api "repos/$SOURCE_REPO/actions/runs?head_sha=$commit&event=push&per_page=50" \
+              --jq "[.workflow_runs[] | select(.name == \"$CI_WORKFLOW\" and .conclusion == \"success\")] | length")
+            if [ "$passed" = 0 ]; then echo "::error::$CI_WORKFLOW has not passed on a push of $commit to main"; exit 1; fi
+            if [ "$site_source" != "$commit" ]; then
+              order=$(gh api "repos/$SOURCE_REPO/compare/$commit...$site_source" --jq .status)
+              if [ "$order" = ahead ]; then
+                echo "::notice::The live site is already built from $site_source, which is newer than $commit; nothing to publish."
+                echo "SKIP=1" >> "$GITHUB_ENV"
+              fi
+            fi
+            release_id="site-${commit:0:12}"
+          fi
+          echo "MODE=$mode" >> "$GITHUB_ENV"; echo "SOURCE_COMMIT=$commit" >> "$GITHUB_ENV"; echo "RELEASE_ID=$release_id" >> "$GITHUB_ENV"
+          echo "Mode: $mode; source commit: $commit; release id: $release_id"
+
+      - name: Fetch the source commit
+        if: env.SKIP != '1'
+        run: |
+          git init --quiet "$WORK/source"
+          git -C "$WORK/source" remote add origin "https://github.com/$SOURCE_REPO"
+          git -C "$WORK/source" fetch --quiet --no-tags --depth 1 origin "$SOURCE_COMMIT"
+          git -C "$WORK/source" checkout --quiet --detach FETCH_HEAD
+          test "$(git -C "$WORK/source" rev-parse HEAD)" = "$SOURCE_COMMIT"
+          du -sh "$WORK/source"; df -h "$WORK"
+
+      - uses: actions/setup-python@v5
+        if: env.SKIP != '1'
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        if: env.SKIP != '1'
+        with:
+          node-version: '22'
+
+      - name: Install the build validator
+        if: env.SKIP != '1'
+        run: python -m pip install -r "$WORK/source/requirements-build-lock.txt"
+
+      - name: Build candidate and final site (build checks, allowlist, final equals candidate)
+        if: env.SKIP != '1'
+        run: |
+          python driver/tools/publication/ci_site_publish.py build --source "$WORK/source" --work "$WORK/w" \
+            --release-id "$RELEASE_ID" --reviewer "$REVIEWER" --expect-commit "$SOURCE_COMMIT"
+          df -h "$WORK"
+
+      - name: Stage the site tree and run the site boundary gate
+        if: env.SKIP != '1'
+        run: python driver/tools/publication/ci_site_publish.py stage --source "$WORK/source" --work "$WORK/w" --site "$WORK/site"
+
+      - name: Compare with the live site (dry run)
+        if: env.SKIP != '1' && env.MODE == 'dry-run'
+        run: python driver/tools/publication/ci_site_publish.py compare --work "$WORK/w" --site "$WORK/site"
+
+      - name: Install Chromium for the page checks
+        if: env.SKIP != '1'
+        run: |
+          npm install --silent --no-save --prefix "$WORK/pw" playwright@1.48.2
+          npx --prefix "$WORK/pw" playwright install --with-deps chromium >/dev/null
+          echo "PLAYWRIGHT_DIR=$WORK/pw" >> "$GITHUB_ENV"
+
+      - name: Check the staged site in a browser (affected routes and the ten benchmark pages)
+        if: env.SKIP != '1'
+        run: |
+          mkdir -p "$WORK/serve" && ln -s "$WORK/w/site-preview" "$WORK/serve/mattersyn-site"
+          (cd "$WORK/serve" && python -m http.server 8172 --bind 127.0.0.1 >/dev/null 2>&1 &)
+          sleep 2
+          strict=--strict; [ "$MODE" = dry-run ] && strict=
+          node driver/tools/ci/site-pages-check.mjs --base http://127.0.0.1:8172/mattersyn-site/ \
+            --index "$WORK/w/site-preview/data/materials-index.json" --routes "$WORK/w/receipts/review-routes.json" \
+            --out "$WORK/w/receipts/browser" $strict
+
+      - name: Publish to mattersyn-site
+        if: env.SKIP != '1' && env.MODE == 'publish'
+        env:
+          SITE_PUSH_TOKEN: ${{ secrets.SITE_PUSH_TOKEN }}
+        run: |
+          python driver/tools/publication/ci_site_publish.py push --work "$WORK/w" --site "$WORK/site" \
+            --run-url "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+
+      - name: Wait for the site's Pages run and check the live site anonymously
+        if: env.SKIP != '1' && env.MODE == 'publish'
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python driver/tools/publication/ci_site_publish.py verify --work "$WORK/w" --site-repo "$SITE_REPO" --site-url "$SITE_URL"
+
+      - name: Screenshot the ten benchmark pages on the live site
+        if: env.SKIP != '1' && env.MODE == 'publish'
+        run: |
+          if python -c 'import json,os,sys;sys.exit(0 if json.load(open(os.environ["WORK"]+"/w/push.json")).get("pushed") else 1)'; then
+            node driver/tools/ci/site-pages-check.mjs --base "$SITE_URL" --index "$WORK/w/site-preview/data/materials-index.json" \
+              --out "$WORK/w/receipts/live-pages"
+          else
+            echo "Nothing was pushed; the staged-site screenshots are in receipts/browser."
+          fi
+
+      - name: Summary
+        if: always() && env.SKIP != '1'
+        run: python driver/tools/publication/ci_site_publish.py summary --work "$WORK/w" || true
+
+      - name: Keep receipts and screenshots
+        if: always() && env.SKIP != '1'
+        uses: actions/upload-artifact@v4
+        with:
+          name: mattersyn-site-${{ env.MODE }}-${{ env.SOURCE_COMMIT }}
+          path: |
+            ${{ env.WORK }}/w/build.json
+            ${{ env.WORK }}/w/stage.json
+            ${{ env.WORK }}/w/push.json
+            ${{ env.WORK }}/w/receipts/
+          retention-days: 14
