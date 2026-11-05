@@ -28,10 +28,19 @@ const tidy=value=>String(value||'').replace(/\s+/g,'');
 // shown as component references, as for composites. A name expands only when the
 // library has a bulk reference for every end member; otherwise nothing is shown for it.
 export const END_MEMBERS=Object.freeze({InGaAs:['InAs','GaAs'],InGaN:['InN','GaN'],AlGaAs:['AlAs','GaAs'],ZnSeS:['ZnSe','ZnS'],CdSeS:['CdSe','CdS'],CdZnS:['CdS','ZnS'],'CdSe-ZnS':['CdSe','ZnS'],InGaP:['InP','GaP'],ZnCdS:['ZnS','CdS'],CdTeSe:['CdTe','CdSe']});
+// A doped formula names a host and a dopant in either order ("InP:Zn", "Mn:ZnO",
+// "Co2+:CdS"); the host cell is the useful comparison. When exactly one side is a bare
+// element or ion it is the dopant; otherwise the first side is the host.
+const BARE_ELEMENT=/^[A-Z][a-z]?(?:\d*[+-])?$/;
+export function dopedHost(part){
+ const sides=String(part).split(':').map(tidy).filter(Boolean);
+ if(sides.length<2)return sides[0]||'';
+ const compounds=sides.filter(side=>!BARE_ELEMENT.test(side));
+ return compounds.length===1?compounds[0]:sides[0].replace(/\d*[+-]$/,'');
+}
 function listedParts(r){
  const material=r?.material||{},listed=Array.isArray(material.components)&&material.components.length?material.components:String(material.formula||'').split(/[\/@]/);
- // "InP:Zn" is a doped host; the host cell is the useful comparison.
- return [...new Set(listed.map(part=>tidy(String(part).split(':')[0])).filter(Boolean))];
+ return [...new Set(listed.map(dopedHost).filter(Boolean))];
 }
 export function compositionParts(r,entries=null){
  const bulkFormulas=entries&&new Set(entries.filter(bulkReference).map(entry=>tidy(entry.formula)));

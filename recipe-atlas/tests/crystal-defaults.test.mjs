@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {defaultCrystalReferences,reportedPhases,compositionParts} from '../static/crystal-defaults.mjs';
+import {defaultCrystalReferences,reportedPhases,compositionParts,dopedHost} from '../static/crystal-defaults.mjs';
 const entry=(id,formula,name,sg)=>({id,formula,name,spaceGroupNumber:sg,cifPath:id+'.cif',modelPath:'models/'+id+'.json',referenceOnly:true});
 const ordered=entry('ordered','CoPt3','CoPt3 ordered L12 bulk reference',221);
 const fcc=entry('fcc','CoPt3','CoPt3 disordered fcc bulk reference',225);
@@ -180,4 +180,16 @@ test('second-batch phase names and end members select their references',()=>{
  assert.deepEqual(pick('Bi2WO6','P21ab'),['bwo']);
  assert.deepEqual(pick('Y3Al5O12:Ce','Crystalline NC YAG:Ce by HRTEM'),['yag']);
  assert.deepEqual(pick('InGaP','cubic',['InGaP']),['inp','gap']);
+});
+test('doped formulas compare with the host in either order, never with the dopant',()=>{
+ assert.equal(dopedHost('InP:Zn'),'InP');
+ assert.equal(dopedHost('Mn:ZnO'),'ZnO');
+ assert.equal(dopedHost('Cu:Al2O3'),'Al2O3');
+ assert.equal(dopedHost('Co2+:CdS'),'CdS');
+ assert.equal(dopedHost('La2(MoO4)3:Yb,Er'),'La2(MoO4)3');
+ assert.equal(dopedHost('Si:Er'),'Si');
+ assert.equal(dopedHost('Ge:H'),'Ge');
+ const lib=[entry('cu','Cu','Cu face-centered cubic bulk reference',225),entry('al2o3','Al2O3','Al2O3 corundum bulk reference',167)];
+ const r=rec(null);r.material={formula:'Cu:Al2O3',components:['Cu:Al2O3']};
+ assert.deepEqual(defaultCrystalReferences(lib,r).map(e=>e.id),['al2o3']);
 });
