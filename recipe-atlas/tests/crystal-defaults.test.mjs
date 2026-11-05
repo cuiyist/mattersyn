@@ -1,10 +1,73 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import {readFileSync,readdirSync} from 'node:fs';
+import {createHash} from 'node:crypto';
 import {defaultCrystalReferences,reportedPhases,compositionParts,dopedHost} from '../static/crystal-defaults.mjs';
 const entry=(id,formula,name,sg)=>({id,formula,name,spaceGroupNumber:sg,cifPath:id+'.cif',modelPath:'models/'+id+'.json',referenceOnly:true});
 const ordered=entry('ordered','CoPt3','CoPt3 ordered L12 bulk reference',221);
 const fcc=entry('fcc','CoPt3','CoPt3 disordered fcc bulk reference',225);
 const rec=(phase,target)=>({record_id:'synthetic-r',lineage:{source_group:'synthetic'},material:{formula:'CoPt3'},products:[{phase:{value:phase}}],intended_target:{phase:{value:target}}});
+
+const mapiId='ch3nh3pbi3-tetragonal-perovskite-cod-2107954';
+const crystalRoot=new URL('../static/assets/crystal-references/',import.meta.url);
+const crystalLibrary=JSON.parse(readFileSync(new URL('registry.json',crystalRoot),'utf8'));
+const mapi=crystalLibrary.entries.find(ref=>ref.id===mapiId);
+const mapiRecord=phase=>({...rec(phase),material:{formula:'CH3NH3PbI3'}});
+
+test('ambient methylammonium lead iodide retains exact COD assets and statistical reference exclusions',()=>{
+ assert.ok(mapi);
+ assert.equal(mapi.spaceGroupNumber,97);
+ for(const [key,value] of Object.entries({referenceOnly:true,trainingEligible:false,measuredSampleStructure:false,
+   defaultForSample:false,partialOccupancy:true,displayPolicy:'independent_reference',referenceType:'literature_bulk_reference'}))
+  assert.equal(mapi[key],value,key);
+ assert.deepEqual(mapi.record_ids,[]);assert.deepEqual(mapi.material_ids,[]);
+ assert.match(mapi.scope,/293 K/);assert.match(mapi.scope,/not a structure of any synthesized sample/);
+ const cif=readFileSync(new URL(mapi.cifPath,crystalRoot));
+ const modelBytes=readFileSync(new URL(mapi.modelPath,crystalRoot));
+ assert.equal(createHash('sha256').update(cif).digest('hex'),mapi.cifSha256);
+ assert.equal(mapi.cifSha256,'2c71e90403f878f3b8775c84490aee4e7d285b3f8d97d29c05b9725a9b1dc654');
+ assert.match(cif.toString('utf8'),/_cell_measurement_temperature\s+293\b/);
+ assert.equal(createHash('sha256').update(modelBytes).digest('hex'),mapi.modelSha256);
+ const model=JSON.parse(modelBytes),counts={};
+ for(const atom of model.atoms)for(const component of atom.components||[{element:atom.element,occupancy:atom.occupancy??1}])
+  counts[component.element]=(counts[component.element]||0)+component.occupancy;
+ assert.deepEqual(counts,{Pb:4,I:12,C:4,N:4,H:24});
+ assert.equal(model.training_eligible,false);assert.equal(model.measured_sample_structure,false);
+ assert.ok(model.renderingNotes.some(note=>note.includes('statistical crystallographic populations')));
+});
+
+test('the ambient MAPI cell matches its composition and tetragonal or unspecified phase only',()=>{
+ const before=JSON.stringify(mapi);
+ for(const phase of [null,'tetragonal','tetragonal perovskite'])
+  assert.deepEqual(defaultCrystalReferences([mapi],mapiRecord(phase)).map(ref=>ref.id),[mapiId]);
+ for(const phase of ['cubic','wurtzite','monoclinic','unknown phase'])
+  assert.deepEqual(defaultCrystalReferences([mapi],mapiRecord(phase)),[],phase);
+ assert.deepEqual(defaultCrystalReferences([mapi],{...mapiRecord(null),material:{formula:'CH3NH3PbBr3'}}),[]);
+ assert.equal(JSON.stringify(mapi),before);
+});
+
+test('the MAPI addition preserves other formulas and the six existing matching contexts',()=>{
+ const old=crystalLibrary.entries.filter(ref=>ref.id!==mapiId);
+ const selected=(library,record)=>{
+  const explicit=library.filter(ref=>(ref.record_ids||[]).includes(record.record_id));
+  return explicit.length?explicit:defaultCrystalReferences(library,record,crystalLibrary.excluded_materials);
+ };
+ const required=new Set(['heo2017-pbs-perovskite-acsami7b12046-r19-perovskite-model-1',
+  'heo2017-pbs-perovskite-acsami7b12046-r20-perovskite-model-2p5',
+  'heo2017-pbs-perovskite-acsami7b12046-r21-perovskite-model-5',
+  'naphade2016-acsami-5b10208-mapbi3-based-2-d-perovskite-nanosheets-1',
+  'zhang2017-acs-chemmater-7b01100-ch3nh3pbi3-quantum-dots-qds-with-tunable-1',
+  'zhao2017-acsnano-7b00404-mapbi3-nanocrystal-thin-film-with-fpmai-1']);
+ const records=new URL('../data/records/',import.meta.url),found=new Set();
+ for(const name of readdirSync(records).filter(name=>name.endsWith('.json'))){
+  const record=JSON.parse(readFileSync(new URL(name,records),'utf8')),before=JSON.stringify(record);
+  const prior=selected(old,record).map(ref=>ref.id),after=selected(crystalLibrary.entries,record).map(ref=>ref.id);
+  if(record.material?.formula!=='CH3NH3PbI3')assert.deepEqual(after,prior,name);
+  if(after.includes(mapiId)){assert.equal(record.material.formula,'CH3NH3PbI3');found.add(record.record_id);}
+  assert.equal(JSON.stringify(record),before);
+ }
+ assert.deepEqual([...found].sort(),[...required].sort());
+});
 test('unreported phase permits all bulk composition forms with explicit scope',()=>{
  const refs=defaultCrystalReferences([ordered,fcc],rec(null));assert.equal(refs.length,2);assert.ok(refs.every(e=>e.scope.includes('The record does not assign a crystal phase; available bulk references are shown for comparison.')&&e.scope.includes('not a structure')));
 });

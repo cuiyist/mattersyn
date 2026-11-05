@@ -1,3 +1,30 @@
+<!-- mattersyn-reader-followup-20261105-b2 -->
+## Reader follow-up — B1 live; B2 COD retry prepared
+
+| Task | Pull request / release | Site commit | Result |
+| --- | --- | --- | --- |
+| B1: fixed method labels | [PR143](https://github.com/cuiyist/mattersyn/pull/143), Source merge `1e6ff3c7b8d09b49b298f97431611980e2b6b5a6` | `c94a8bbb627ef8f6d12529d70aeb5cf38f54aa94` | Live; publisher, Pages, anonymous and desktop/phone review passed. |
+| B2: four-family COD retry | Source branch `reader-cod-retries-20261105-r1`; CI publication pending | Pending | One ambient reference prepared; three families remain held below. |
+
+Verified Live totals remain **2,916 papers / 6,865 records**. B1/B2 add no papers, record changes, review-status changes or audited-training credit. The dated census is retained: **3,049 / 3,163 physical rows read; 525 IN / 2,133 OUT-or-omitted / 505 uncertain**, at 2026-10-31T05:06:30.875679Z. This is not a fresh census or a global completion claim.
+
+B1 gave **23 of 945** previously unlabeled recipes a route name (2.43%): **Thermal decomposition 6, Chemical reduction 8, Reflux 9**; 922 remain unlabeled. All previous labels and record bytes stayed unchanged. [Publisher42076815839](https://github.com/cuiyist/mattersyn/actions/runs/42076815839) passed for the exact merge; candidate and final trees matched. Pages42084136113 and anonymous verification passed (99 files, zero mismatches), as did the workflow's ten live benchmark pages. Root also inspected ZnO, Cu and CdTe at1440px and390px: correct new labels, no overflow/script errors, and three downloaded JSON files byte-identical to canonical records.
+
+B2 searches used COD formula/phase metadata only; no papers or model server were read. The original COD CIF bytes and the existing model generator are used. The proposed entry remains an independent bulk reference, not a structure or phase assignment for a synthesized sample; statistical sites and all sample/training exclusions remain explicit.
+
+| Retried family | Result |
+| --- | --- |
+| CH3NH3PbI3 | Add [COD2107954](https://www.crystallography.net/cod/2107954.html):293K, tetragonal perovskite, I422 (No.97). Original CIF27,400B, SHA256 `2c71e90403f878f3b8775c84490aee4e7d285b3f8d97d29c05b9725a9b1dc654`; generated model85,879B, SHA256 `0f7e091f372275ba50e744bb6656af5e7a2b57f05f95e3795d13ad6656d6ae4a`.144 total sites (128 statistical and 16 fully occupied) give occupancy-weighted C4/H24/I12/N4/Pb4. |
+| NiFe2O4 | Hold. Exact-formula entries2300289/2300295 are ambient but their coordinate/occupancy inventories do not match NiFe2O4;5910064 also has the wrong elemental inventory. No occupancies or labels are repaired. |
+| Cu7Te4 | Hold. Only1539629 was found; its temperature is unreported and no alternative ambient entry was substantiated. The current1e-4 orbit calculation gives Cu14Te8, preserving the difference from the older omission calculation; this does not establish ambient provenance. Its trigonal SG156 also does not satisfy the existing hexagonal selector. |
+| Cd3As2 | Hold. Clean4337945 is100K;5910128 has no substantiated ambient temperature and inconsistent cubic-group/cell metadata. No low-temperature structure is relabeled ambient. |
+
+Prepared coverage: **one compound family / one reference; zero alloy families**. Exactly one material hub changes:CH3NH3PbI3, with three existing synthesis recipes and three existing model-context records gaining the reference (two tetragonal, four without a specific phase). No other primary formula or component gains a cell. All226 earlier library entries, prior pins, rights rows and CIF exceptions are preserved. The new original CIF and generated model each have rights rows; the two repository delivery paths have exact-hash `cod_archive_annotation_v1` exceptions under the owner-approved pattern.36 focused tests pass, covering immutable original assets, weighted composition, reference/sample exclusions, phase filtering and unchanged other families. Full source/build/release checks and publication remain on GitHub.
+
+Cleanup is separately [reported once for November5](https://github.com/cuiyist/mattersyn2/blob/88283e829e8e53f2367fac6a3d0141e09015045f/CLEANUP_REPORT_2026-10-12.md); no earlier removal credit is repeated here. The existing Source checkout now uses A3(c)'s sparse option, omitting Git-backed figure assets while retaining every record, all data/code and the crystal library. All6,865 record files stayed byte-exact. Actual C free after this workspace change was404,614,635,520B (nonisolated); no Git history, owner folder, Site checkout or protected evidence was removed. No local site/candidate build, full suite, new repository copy or direct Site push was run.
+
+Audit, Worker A/B and the five older owner entries remain paused. Earlier reports, failures, refusals and denominators follow unchanged.
+
 <!-- mattersyn-reader-followup-20261105-b1 -->
 ## Reader follow-up — November 5, 2026
 
