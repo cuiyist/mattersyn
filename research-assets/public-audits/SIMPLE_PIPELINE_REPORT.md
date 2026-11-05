@@ -1,3 +1,21 @@
+<!-- mattersyn-reader-followup-20261105-b1 -->
+## Reader follow-up — November 5, 2026
+
+Live totals remain **2,916 papers / 6,865 records**. No new papers, record edits, review-status changes or audited-training credit are included. The dated read/scope census and all historical failures and denominators below remain unchanged.
+
+| Task | Pull request / release | Site commit | Result |
+| --- | --- | --- | --- |
+| B1: additional fixed route labels | Source branch `reader-route-labels-20261105-r1`; CI publication pending | Pending | Prepared: 23 of 945 previously unlabeled recipes receive a route name (2.43%); 922 remain unlabeled. |
+| B2: four-family COD retry | Not started; follows B1 publication | Pending | Formula-only COD research retained; no new reference is live. |
+
+B1 adds Thermal decomposition (6), Chemical reduction (8) and Reflux (9), using only a record's own structured operations and material roles. Existing positive rules keep precedence. Tests cover synthesis cues, workup, precursor preparation, negation, reduced pressure, pre-reduced particles and dilution. All existing nonempty route outputs and nongeneric methods are preserved across the 6,865-record comparison. No paper or model was used, and Download JSON remains the original unchanged record. Full builds and release checks run in GitHub Actions.
+
+Prior CI release ledger: source `d1b10b90a32b538aad700a3529a16676535b5282` produced Site `e773dfacedb5d86e67ab7a652e00fdf334b192cd` in [run 41963431357](https://github.com/cuiyist/mattersyn/actions/runs/41963431357). Its Pages run passed, but its artifact's `live-verification.json` reports **failed** because the changed-file inventory did not name unique built files. The earlier successful run 41960654847 contains no live-verification receipt. Neither is relabeled as an anonymous verification success. The later source `3582f8b3bbb475b8ee62d47fac6b86366818c6a6` produced Site `979b361218f14bae0f5813b9f59cbe6292ea4b6c` in [run 41980868064](https://github.com/cuiyist/mattersyn/actions/runs/41980868064); its artifact binds successful Pages 41985982249 and anonymous verification at 2026-11-05T07:35:31Z (42 files, zero mismatches). These website-only releases add no paper or record counts and are not republished.
+
+The audit lane, Worker A/B queue and five older waiting-on-owner entries remain paused. No paper reading or imports have started. No local site build, candidate build, full test suite, new checkout or direct Site push is part of this work.
+
+Earlier report follows unchanged.
+
 <!-- mattersyn-daily-metadata-20261103-root-r1 -->
 ## Daily metadata status - 2026-11-03 (America/Chicago)
 

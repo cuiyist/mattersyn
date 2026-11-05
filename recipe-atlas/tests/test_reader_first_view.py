@@ -62,6 +62,48 @@ class RouteLabelTest(unittest.TestCase):
         self.assertEqual(route_label(record([op('heat', temperature=300), op('inject')], method='Other')), 'Hot injection')
 
 
+    def test_thermal_decomposition_fallback_requires_a_synthesis_step(self):
+        self.assertEqual(route_label(record([op('heat', 'Thermal decomposition of a metal precursor', temperature=250)])), 'Thermal decomposition')
+        self.assertEqual(route_label(record([op('decompose', 'Decompose the precursor', temperature=300)])), 'Thermal decomposition')
+        self.assertEqual(route_label(record([op('heat', 'Pyrolysis in ammonia', temperature=300)])), 'Thermal decomposition')
+        self.assertEqual(route_label(record([op('wash', 'Wash to remove decomposition products')])), '')
+        self.assertEqual(route_label(record([op('cool', 'Cooled after pyrolysis')])), '')
+        self.assertEqual(route_label(record([op('heat', 'Heat slowly to prevent thermal decomposition', temperature=250)])), '')
+        self.assertEqual(route_label(record([op('synthesize', 'Synthesize selenium precursor by thermal decomposition')])), '')
+
+    def test_chemical_reduction_fallback_requires_its_own_positive_step(self):
+        mats = [material('metal salt', 'metal_precursor')]
+        self.assertEqual(route_label(record([op('reduce', 'Reduce metal ions')], mats)), 'Chemical reduction')
+        self.assertEqual(route_label(record([op('add', 'Add reductant to reduce metal ions')], mats)), 'Chemical reduction')
+        self.assertEqual(route_label(record([op('heat', 'Heat under reduced pressure')], mats)), '')
+        self.assertEqual(route_label(record([op('reduce', 'Reduce particle size')], mats)), '')
+        self.assertEqual(route_label(record([op('wash', 'Wash the reduced particles')], mats)), '')
+        self.assertEqual(route_label(record([op('react', 'React without reduction of the metal ions')], mats)), '')
+        self.assertEqual(route_label(record([op('add', 'Add previously reduced metal nanoparticles')], mats)), '')
+        self.assertEqual(route_label(record([op('heat', 'Heat the reduced metal nanoparticles')], mats)), '')
+        self.assertEqual(route_label(record([op('reduce', 'Reduce the metal salt concentration by dilution')], mats)), '')
+        self.assertEqual(route_label(record([op('mix')], mats + [material('NaBH4', 'reducing_agent')])), '')
+
+    def test_reflux_fallback_requires_precursors_not_purification(self):
+        mats = [material('metal salt', 'metal_precursor'), material('sulfide', 'chalcogen_precursor')]
+        self.assertEqual(route_label(record([op('reflux', 'Reflux the reaction mixture')], mats)), 'Reflux')
+        self.assertEqual(route_label(record([op('heat', 'Heat and reflux the solution', temperature=100)], mats)), 'Reflux')
+        self.assertEqual(route_label(record([op('reflux', 'Reflux to remove impurities')], mats)), '')
+        self.assertEqual(route_label(record([op('reflux', 'Prepare tetrameric precursor')], mats)), '')
+        self.assertEqual(route_label(record([op('reflux', 'Reflux QDs for ligand exchange')], mats)), '')
+        self.assertEqual(route_label(record([op('sonicate', 'Sonicate the dispersion')], mats)), '')
+        self.assertEqual(route_label(record([op('heat', 'Heat the mixture without reflux')], mats)), '')
+        self.assertEqual(route_label(record([op('heat', 'Precursor preparation under reflux')], mats)), '')
+        self.assertEqual(route_label(record([op('reflux', 'Reflux the precursor to prepare a stock solution')], mats)), '')
+        self.assertEqual(route_label(record([op('reflux', 'Reflux without a reduction step')], mats)), 'Reflux')
+
+    def test_existing_routes_and_ambiguous_autoclaves_keep_precedence(self):
+        mats = [material('metal salt', 'metal_precursor'), material('sulfide', 'chalcogen_precursor')]
+        self.assertEqual(route_label(record([op('heat', 'Hydrothermal chemical reduction')], mats)), 'Hydrothermal')
+        steps = [op('heat', 'React in a Teflon-lined autoclave'), op('reduce', 'Reduce metal ions')]
+        self.assertEqual(route_label(record(steps, mats + [material('water', 'solvent'), material('ethanol', 'solvent')])), '')
+
+
 class OrderTest(unittest.TestCase):
     def test_completeness_counts_amounts_conditions_size_phase_morphology(self):
         r = record([op('heat', temperature=200, duration=q(10, 'min')), op('cool'), op('stir', environment='N2')],
