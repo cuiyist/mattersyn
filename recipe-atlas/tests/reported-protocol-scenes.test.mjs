@@ -49,7 +49,17 @@ test('workup stays distinct from the recipe synthesis system', () => {
 });
 
 test('plain wash does not infer a centrifuge or a filter', () => {
-  assert.equal(choose(op('wash')).kind, 'workup-tube');
+  const d = choose(op('wash'));
+  assert.equal(d.kind, 'workup-tube');
+  assert.equal(d.vesselKind, 'tube');
+  assert.equal(d.vessel, null);
+});
+
+test('workup uses a generic tube symbol unless its own vessel is reported', () => {
+  for (const action of ['precipitate', 'wash', 'redisperse', 'dry']) {
+    assert.equal(choose(op(action)).vesselKind, 'tube');
+    assert.equal(choose(op(action, action, {vessel: {status: 'reported', value: 'Beaker'}})).vesselKind, 'beaker');
+  }
 });
 
 test('deposition uses its own reported system while ordinary solution growth does not', () => {

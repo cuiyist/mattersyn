@@ -174,7 +174,10 @@ export function reportedProtocolSceneSpec(o, r = {}, options = {}) {
     || positive(own, /\b(?:beam|flux|source feed)\b/)
     || /\b(?:as|sb)[24]\b|\b(?:beam|flux)\b/i.test(environment));
   return {
-    kind, heating, gasLine, environment, vessel: useVessel, vesselKind: vesselKind(useVessel),
+    kind, heating, gasLine, environment, vessel: useVessel,
+    // Workup gets the requested generic tube symbol without claiming a reported
+    // vessel name, capacity or fittings. A reported shape still takes precedence.
+    vesselKind: useVessel ? vesselKind(useVessel) : workup ? 'tube' : 'plain',
     added, conditions, sourceFeed,
     beamSystem: /\bmbe\b|molecular beam epitax/.test(system + ' ' + own),
     // Only explicit current-step substrate inputs are named. No recipe-wide
