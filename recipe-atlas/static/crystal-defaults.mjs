@@ -19,7 +19,7 @@ const PHASE_TESTS=[
  [/bixbyite/i,named(/bixbyite/i)],[/perovskite/i,named(/perovskite/i)],[/cuprite/i,named(/cuprite/i)],[/hydroxy?l?apatite|\bapatite/i,named(/apatite/i)],
  [/herzenbergite/i,named(/herzenbergite/i)],[/\b2H\b/i,named(/\b2H\b/i)],[/\b3C\b/i,named(/\b3C\b/i)],[/\b6H\b/i,named(/\b6H\b/i)],
  [/kesterite/i,named(/kesterite/i)],[/scheelite|wulfenite/i,named(/scheelite|wulfenite/i)],[/pyrite|cattierite|vaesite/i,named(/pyrite|cattierite|vaesite/i)],[/aurivillius/i,named(/aurivillius/i)],
- [/russellite|\bP\s*21\s*ab\b/i,either(named(/russellite/i),inRange(29,29))],[/\bYAG\b|garnet/i,named(/garnet/i)],[/hausmannite|hetaerolite/i,named(/hausmannite|hetaerolite/i)],[/tenorite/i,named(/tenorite/i)],
+ [/russellite|\bP\s*21\s*ab\b/i,either(named(/russellite/i),inRange(29,29))],[/\bYAG\b|garnet/i,named(/garnet/i)],[/hausmannite|hetaerolite/i,named(/hausmannite|hetaerolite/i)],[/tenorite/i,named(/tenorite/i)],[/uytenbogaardtite/i,named(/uytenbogaardtite/i)],
  // Rhombohedral R-Se (Se6 rings) is not the trigonal chain allotrope; no library cell matches it.
  [/\bR-Se\b|\bSe6\b/i,named(/\bR-Se\b|\bSe6\b/i)],
  [/\bcubic\b/i,inRange(195,230)],[/tetragonal/i,inRange(75,142)],[/orthorhombic/i,inRange(16,74)],[/\bhexagonal\b/i,inRange(168,194)],
@@ -29,7 +29,7 @@ const tidy=value=>String(value||'').replace(/\s+/g,'');
 // Alloy, solid-solution and core/shell names stand for their end members, which are
 // shown as component references, as for composites. A name expands only when the
 // library has a bulk reference for every end member; otherwise nothing is shown for it.
-export const END_MEMBERS=Object.freeze({InGaAs:['InAs','GaAs'],InGaN:['InN','GaN'],AlGaAs:['AlAs','GaAs'],ZnSeS:['ZnSe','ZnS'],CdSeS:['CdSe','CdS'],CdZnS:['CdS','ZnS'],'CdSe-ZnS':['CdSe','ZnS'],InGaP:['InP','GaP'],ZnCdS:['ZnS','CdS'],CdTeSe:['CdTe','CdSe'],SiGe:['Si','Ge'],'CuInSexS2−x':['CuInSe2','CuInS2'],'CuInSexS2-x':['CuInSe2','CuInS2']});
+export const END_MEMBERS=Object.freeze({InGaAs:['InAs','GaAs'],InGaN:['InN','GaN'],AlGaAs:['AlAs','GaAs'],ZnSeS:['ZnSe','ZnS'],CdSeS:['CdSe','CdS'],CdZnS:['CdS','ZnS'],'CdSe-ZnS':['CdSe','ZnS'],InGaP:['InP','GaP'],ZnCdS:['ZnS','CdS'],CdTeSe:['CdTe','CdSe'],SiGe:['Si','Ge'],'CuInSexS2−x':['CuInSe2','CuInS2'],'CuInSexS2-x':['CuInSe2','CuInS2'],'In1−xGaxP':['InP','GaP'],'In1-xGaxP':['InP','GaP']});
 // Composition-specific alloy names (In0.41Ga0.59As) stand for the same end members.
 const ALLOY_PATTERNS=[[/^In\d*\.?\d+Ga\d*\.?\d+As$/,['InAs','GaAs']],[/^Al\d*\.?\d+Ga\d*\.?\d+As$/,['AlAs','GaAs']],[/^In\d*\.?\d+Ga\d*\.?\d+N$/,['InN','GaN']]];
 const endMembers=part=>END_MEMBERS[part]||ALLOY_PATTERNS.find(([pattern])=>pattern.test(part))?.[1];
