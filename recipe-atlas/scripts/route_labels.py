@@ -7,7 +7,7 @@ rules are fixed and deliberately conservative: the first rule that applies wins,
 and when none applies the label is empty, so the reader shows no method label
 rather than the generic phrase. No model is called.
 
-Route names use the canonical spelling of reader-utils.mjs METHOD_SYNONYMS, which
+Route names use the canonical spelling of reader-app.mjs METHOD_SYNONYMS, which
 shows synonyms under one name (MBE as Molecular beam epitaxy) for every record.
 `completeness(record)` is the reader's ordering score. The record is never modified.
 """
@@ -148,6 +148,40 @@ def _heat_up(record, operations):
     return reached
 
 
+def _negates_route(label, route):
+    return re.search(r'\b(?:no|not|without|avoid\w*|prevent\w*|suppress\w*)\b[^.;]*' + route, label)
+
+
+def _additional_route_label(record, operations):
+    """Last-resort names from positive synthesis steps, never workup keywords alone."""
+    roles = {m.get('role') for m in record.get('materials') or []}
+    candidates = []
+    for op in operations:
+        action, label = _text(op.get('action')), _text(op.get('label'))
+        if re.search(r'\b(?:wash|rins|purif|remov|centrifug|redisper|resuspend)\w*|ligand[- ]exchange|work[- ]?up', label):
+            continue
+        if ('precursor' in label and re.search(r'\b(?:prepar\w*|synthesiz\w*|synthesis)\b', label)) or re.search(r'\bstock[- ]solution\b', label):
+            continue
+        candidates.append((op, action, label))
+    for op, action, label in candidates:
+        if not _negates_route(label, r'\b(?:thermal\w*\s+decompos\w*|decompos\w*|pyroly\w*)') and action in {'heat', 'decompose', 'calcine', 'react', 'synthesize'} and (
+                re.search(r'\bthermal(?:ly)?\s+decompos|\bpyroly(?:sis|[sz])', label) or
+                (action == 'decompose' and (_temperature(op) or 0) >= HOT_C)):
+            return 'Thermal decomposition'
+    if 'metal_precursor' in roles:
+        for _, action, label in candidates:
+            if not _negates_route(label, r'\breduc\w*') and action in {'reduce', 'heat', 'add', 'react', 'synthesize'} and (
+                    action == 'reduce' or re.search(r'\breduc(?:e|es|ing|tion)\b', label)) and not re.search(
+                    r'reduced[- ]pressure|\b(?:pre[- ]?reduced|(?:already|previously) reduced)\b|\breduc\w*\b.*\b(?:size|pressure|volume|temperature|concentration|dilution)\b', label):
+                return 'Chemical reduction'
+    if 'metal_precursor' in roles and roles & PRECURSORS:
+        if any(not _negates_route(label, r'\breflux\w*') and action in {'reflux', 'heat', 'react', 'grow', 'synthesize'} and
+               (action == 'reflux' or re.search(r'\breflux\w*\b', label))
+               for _, action, label in candidates):
+            return 'Reflux'
+    return ''
+
+
 def route_label(record):
     """Route name for a generic-method record, or '' when no fixed rule applies."""
     if not is_generic(record.get('method')):
@@ -170,7 +204,7 @@ def route_label(record):
         return 'Hot injection'
     if _heat_up(record, operations):
         return 'Heat-up'
-    return ''
+    return _additional_route_label(record, operations)
 
 
 def completeness(record):
