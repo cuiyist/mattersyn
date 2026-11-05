@@ -18,6 +18,24 @@ const cache=new Map();
 
 function json(path){if(path==='data/reader-presentation.json')return loadReaderPresentations(siteURL(path));if(!cache.has(path))cache.set(path,fetch(siteURL(path),{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Unavailable '+path);return r.json();}));return cache.get(path);}
 
+// Per-page Reader slices written by build_reader_shards.py. A material page loads its
+// material's method labels and then, for each record it opens, only that record's view;
+// record pages also load the record -> material index. The combined presentation file
+// is still used by the record Data view (reviewedProtocolArt).
+function fetchJSON(path){return fetch(siteURL(path),{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Unavailable '+path);return r.json();});}
+let readerIndexPromise;
+export function readerPresentations(withIndex,load=fetchJSON,combined=()=>json('data/reader-presentation.json')){const presentations={records:{},materials:{}};if(!withIndex)return Promise.resolve(presentations);readerIndexPromise??=load('data/reader/index.json');return readerIndexPromise.then(index=>{for(const [rid,mids] of Object.entries(index.record_materials||{})){presentations.records[rid]={};for(const mid of mids)(presentations.materials[mid]??={record_ids:[]}).record_ids.push(rid);}return presentations;},()=>combined());}
+// Started only when awaited, so unopened records are never fetched.
+function lazy(start){let promise;return {then(ok,fail){return (promise??=start()).then(ok,fail);}};}
+export async function attachReaderSlices(presentations,materialId,recordIds,load=fetchJSON,store=cache,combined=()=>json('data/reader-presentation.json')){
+ // A record outside every material page has no material file and no method labels.
+ const slice=materialId?await load('data/reader/materials/'+materialId+'.json').catch(()=>null):{method_labels:{}};
+ // A build without the per-page files still works from the combined presentation.
+ if(!slice){const all=await combined();Object.assign(presentations.records,all.records||{});Object.assign(presentations.materials,all.materials||{});return;}
+ for(const [rid,label] of Object.entries(slice?.method_labels||{}))presentations.records[rid]={...presentations.records[rid],method_label:label};
+ for(const rid of new Set(recordIds)){const path='data/records/'+rid+'.json',earlier=store.get(path);
+  store.set(path,lazy(()=>Promise.all([earlier??load(path),load('data/reader/records/'+rid+'.json').then(view=>{presentations.records[rid]=view;},()=>{})]).then(([record])=>record)));}
+}
 export async function reviewedProtocolArt(r){
  if(typeof r?.record_id!=='string')return null;
  const presentations=await json('data/reader-presentation.json'),binding=presentations?.records?.[r.record_id]?.protocol_art;
@@ -51,7 +69,7 @@ export function methodBadges(r,presentation={}){
 function installStyle(){if(document.querySelector('link[data-reader-css]'))return;const style=el('link');style.rel='stylesheet';style.href=siteURL('reader.css?v=0.41.9');style.dataset.readerCss='true';document.head.append(style);}
 async function precursors(host,r,presentation={}){
 
- const [data,thumbs,stockBindings]=await Promise.all([chemicalRegistry(),json('data/chemical-thumbnail-map.json'),json('data/reader-stock-bindings.json')]);if(!host.isConnected)return;function cardImage(entry){const img=chemicalImage(entry),item=thumbs.entries[entry.id];if(item?.thumbnail_path)img.src=siteURL(item.thumbnail_path);return img;}const chemicals=r.materials.filter(m=>!isEquipment(m)),grid=el('div',undefined,'reader-chemicals');
+ const [data,thumbs,stockBindings]=await Promise.all([chemicalRegistry(r.record_id),json('data/chemical-thumbnail-map.json'),json('data/reader-stock-bindings.json')]);if(!host.isConnected)return;function cardImage(entry){const img=chemicalImage(entry),item=thumbs.entries[entry.id];if(item?.thumbnail_path)img.src=siteURL(item.thumbnail_path);return img;}const chemicals=r.materials.filter(m=>!isEquipment(m)),grid=el('div',undefined,'reader-chemicals');
 
  for(const m of chemicals){const card=el('article',undefined,'reader-chemical');card.dataset.materialId=m.id;const entry=chemicalEntry(data,r.record_id,m.id);card.append(el('small',human(m.role)),el('h3',m.name),el('div',entry?.displayFormula||entry?.formula||m.formula||'Source-defined composition','reader-formula'));
 
@@ -86,7 +104,7 @@ async function precursors(host,r,presentation={}){
   host.append(el('p','Source-reported alternatives retain their individual conditions and qualifications. Do not combine alternatives unless the procedure explicitly calls for a mixture.','reader-note'),choiceGrid);
  }
 
- const contextData=await json('assets/chemical-registry/solution-components.json');if(!host.isConnected)return;const contexts=contextData.contexts.filter(c=>c.record_id===r.record_id),used=new Set(),stockList=el('div',undefined,'reader-stock-list');
+ const contextData=await chemicalRegistry(r.record_id).then(slice=>slice.solutionContexts?{contexts:slice.solutionContexts}:json('assets/chemical-registry/solution-components.json'));if(!host.isConnected)return;const contexts=contextData.contexts.filter(c=>c.record_id===r.record_id),used=new Set(),stockList=el('div',undefined,'reader-stock-list');
 
  function stockCard(stock,context){const name=stock?.name||context.label,d=el('details',undefined,'reader-stock');d.dataset.stockId=stock?.id||context.id||normal(name);d.append(el('summary',name));const body=el('div',undefined,'reader-stock-body'),facts=el('div',undefined,'reader-stock-facts'),images=el('div',undefined,'reader-stock-components');
 
@@ -233,7 +251,7 @@ export async function mountReader(main,{materialId,recordId}={}){
 
  installStyle();installReaderHashNavigation();main.className='reader-main';main.replaceChildren(el('div','Loading material…','reader-loading'));
 
- const [index,presentations]=await Promise.all([json('data/materials-index.json'),json('data/reader-presentation.json')]);
+ const [index,presentations]=await Promise.all([json('data/materials-index.json'),readerPresentations(!materialId)]);
 
  let material=materialId?resolveMaterialEntry(index.materials,materialId):null;
 
@@ -248,6 +266,7 @@ export async function mountReader(main,{materialId,recordId}={}){
  if(!material&&materialId)throw Error('This material does not have a reviewed synthesis page.');
 
  let data=material?await json('data/materials/'+material.id+'.json'):null;
+ await attachReaderSlices(presentations,material?.id,[...(data?.records||[]).map(row=>row.record_id),...(recordId?[recordId]:[])]);
 
  const records=(data?.records||[]).filter(r=>r.is_synthesis_route&&r.collection==='reviewed_literature');
 
@@ -279,7 +298,7 @@ export async function mountReader(main,{materialId,recordId}={}){
 
 }
 
-export async function bootstrapRecord(r){installStyle();const presentations=await json('data/reader-presentation.json');const eligible=!!presentations.records?.[r.record_id];const original=document.querySelector('main');if(!eligible||new URLSearchParams(location.search).get('view')==='data'){if(eligible){const nav=dataSwitch(r,'data');nav.classList.add('reader-data-nav');original.prepend(nav);}return false;}
+export async function bootstrapRecord(r){installStyle();const presentations=await readerPresentations(true);const eligible=!!presentations.records?.[r.record_id];const original=document.querySelector('main');if(!eligible||new URLSearchParams(location.search).get('view')==='data'){if(eligible){const nav=dataSwitch(r,'data');nav.classList.add('reader-data-nav');original.prepend(nav);}return false;}
 
  const main=el('main');original.replaceWith(main);try{await mountReader(main,{recordId:new URLSearchParams(location.search).get('method')||r.record_id});}catch(error){main.replaceWith(original);original.prepend(el('p','Reader view unavailable. Complete data is shown below.','reader-note'));console.error(error);return false;}return true;
 

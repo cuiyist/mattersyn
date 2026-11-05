@@ -2,7 +2,19 @@ const base=new URL('assets/chemical-registry/',import.meta.url);
 let registryPromise,dialog,viewer;
 export const hasRotatableChemicalModel=entry=>Boolean(entry?.model3dPath||entry?.component3dModels?.length);
 const el=(tag,text,cls)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(cls)n.className=cls;return n;};
-export function chemicalRegistry(){return registryPromise??=Promise.all(['registry.json','bindings.json'].map(async name=>{const r=await fetch(new URL(name,base),{cache:'no-store'});if(!r.ok)throw Error('Chemical registry unavailable');return r.json();})).then(([registry,bindings])=>({registry,bindings,entries:new Map(registry.entries.map(x=>[x.id,x]))}));}
+// With a record id, only that record's entries, bindings and solution contexts are loaded
+// (data/reader/chemicals/<record>.json, written by build_reader_shards.py); without one, or
+// if that file is missing, the complete registry. Both caches are shared by every loaded
+// version of this module, so a page fetches each file once.
+const shared=globalThis.__mattersynChemicalRegistry??={full:null,records:new Map()};
+const asRegistry=({registry,bindings,solutionContexts})=>({registry,bindings,solutionContexts,entries:new Map(registry.entries.map(x=>[x.id,x]))});
+export function chemicalRegistry(recordId){
+ if(typeof recordId==='string'&&/^[A-Za-z0-9][A-Za-z0-9._-]*$/.test(recordId)){
+  if(!shared.records.has(recordId))shared.records.set(recordId,fetch(new URL('../../data/reader/chemicals/'+recordId+'.json',base),{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Chemical slice unavailable');return r.json();}).then(asRegistry).catch(()=>chemicalRegistry()));
+  return shared.records.get(recordId);
+ }
+ return registryPromise??=shared.full??=Promise.all(['registry.json','bindings.json'].map(async name=>{const r=await fetch(new URL(name,base),{cache:'no-store'});if(!r.ok)throw Error('Chemical registry unavailable');return r.json();})).then(([registry,bindings])=>asRegistry({registry,bindings}));
+}
 export function chemicalEntry(data,recordId,materialId){
  const entry=data.entries.get(data.bindings.recordBindings[recordId]?.[materialId]);
  const note=data.bindings.bindingNotes?.[recordId]?.[materialId],overrides=note?.binding_approved?note.viewOverrides:null;

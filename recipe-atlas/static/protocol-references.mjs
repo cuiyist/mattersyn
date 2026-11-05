@@ -10,7 +10,7 @@ export function showEquipment(material){
  equipmentDialog.replaceChildren(header,art,el('p','Equipment schematic · geometry and colors are illustrative.'));if(!equipmentDialog.open)equipmentDialog.showModal();
 }
 export async function mountProtocolReferences(host,r,o){
- const data=await chemicalRegistry();if(!host.isConnected)return;
+ const data=await chemicalRegistry(r?.record_id);if(!host.isConnected)return;
  const inventory=new Map(r.materials.map(m=>[m.id,m]));
  const ids=new Set([...(o.inputs||[]),...(o.optional_inputs||[])]);
  for(const stock of r.stocks||[])if(ids.has(stock.id))for(const c of stock.components)ids.add(c.material_id);
