@@ -55,6 +55,8 @@ jobs:
         run: node --test recipe-atlas/tests/crystal-defaults.test.mjs
       - name: Test shared thermal stage illustrations
         run: node --test recipe-atlas/tests/generic-thermal-scenes.test.mjs
+      - name: Test reported protocol scenes and screenshot target contract
+        run: node --test recipe-atlas/tests/reported-protocol-scenes.test.mjs tools/ci/protocol-scenes-check.test.mjs
       - name: Test source-scoped apparatus context
         run: node --test recipe-atlas/tests/yu1998-scene-scope.test.mjs
       - name: Test reader specimen and figure isolation
@@ -95,6 +97,39 @@ jobs:
             --snapshot "$RUNNER_TEMP/build-snapshot.json" \
             --registry publication/asset-rights-registry.json \
             --artifact-transform tools/publication/source_link_artifacts.py
+      - name: Detect protocol display changes for the fixed before/after comparison
+        if: matrix.os == 'ubuntu-latest'
+        env:
+          COMPARISON_BASE: ${{ github.event.pull_request.base.sha || github.event.before || 'HEAD^' }}
+        run: |
+          python - <<'PY' >> "$GITHUB_ENV"
+          import os, subprocess
+          base = os.environ['COMPARISON_BASE']
+          if not base.strip('0'): base = 'HEAD^'
+          paths = subprocess.check_output(['git', 'diff', '--name-only', base, 'HEAD'], text=True).splitlines()
+          changed = any(p in {'recipe-atlas/static/protocol-visuals.mjs', 'recipe-atlas/static/reported-protocol-scenes.mjs'} or p.startswith('tools/ci/protocol-scenes-') for p in paths)
+          print('PROTOCOL_SCENES_CHANGED=' + str(int(changed)))
+          PY
+      - name: Capture the fifteen protocol steps before and after the display change
+        if: matrix.os == 'ubuntu-latest' && env.PROTOCOL_SCENES_CHANGED == '1'
+        run: |
+          npm install --silent --no-save --prefix "$RUNNER_TEMP/protocol-pw" playwright@1.48.2
+          npx --prefix "$RUNNER_TEMP/protocol-pw" playwright install --with-deps chromium >/dev/null
+          export PLAYWRIGHT_DIR="$RUNNER_TEMP/protocol-pw"
+          mkdir -p "$RUNNER_TEMP/protocol-serve" "$RUNNER_TEMP/protocol-scenes"
+          ln -s "$RUNNER_TEMP/candidate/project/recipe-atlas/dist" "$RUNNER_TEMP/protocol-serve/mattersyn-site"
+          python -m http.server 8173 --bind 127.0.0.1 --directory "$RUNNER_TEMP/protocol-serve" >"$RUNNER_TEMP/protocol-server.log" 2>&1 &
+          SERVER_PID=$!
+          trap 'kill "$SERVER_PID"' EXIT
+          node tools/ci/protocol-scenes-check.mjs --base https://cuiyist.github.io/mattersyn-site/ --out "$RUNNER_TEMP/protocol-scenes/before" --phase before
+          node tools/ci/protocol-scenes-check.mjs --base http://127.0.0.1:8173/mattersyn-site/ --out "$RUNNER_TEMP/protocol-scenes/after" --phase after
+      - name: Retain protocol before/after screenshots
+        if: always() && matrix.os == 'ubuntu-latest' && env.PROTOCOL_SCENES_CHANGED == '1'
+        uses: actions/upload-artifact@v4
+        with:
+          name: mattersyn-protocol-scenes-${{ github.sha }}
+          path: ${{ runner.temp }}/protocol-scenes/
+          retention-days: 14
       - name: Retain test receipts
         if: always()
         uses: actions/upload-artifact@v4
