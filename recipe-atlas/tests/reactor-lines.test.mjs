@@ -5,6 +5,8 @@ import {readReactorLineNote,reactorEnvironmentText,createReactorLineDetails,reac
 import {quantityValue} from '../static/quantity-value.mjs';
 import {matchProtocolCondition} from '../static/protocol-conditions.mjs';
 import {conditionFieldText,conditionDisclosureText} from '../static/source-field-copy.mjs';
+import {createReportedProtocolScene,REPORTED_SCENE_CAVEAT} from '../static/reported-protocol-scenes.mjs';
+import {selectProtocolArt} from '../static/protocol-art-binding.mjs';
 
 // Invented fixtures only. No production record, source, asset, HTTP or model I/O.
 const keys=['vessel_type','atmosphere','schlenk_line','glovebox','heating_method','stirring','addition_method','cooling_method'];
@@ -23,9 +25,13 @@ class Element{
  setAttribute(k,v){this.attributes[k]=String(v);}
  getAttribute(k){return this.attributes[k]??null;}
  addEventListener(){}
+ cloneNode(deep=false){const n=new Element(this.tagName);for(const key of ['className','innerHTML','_text'])if(this[key]!==undefined)n[key]=this[key];n.dataset={...this.dataset};n.attributes={...this.attributes};n.style={...this.style};if(deep)n.children=this.children.map(c=>c.cloneNode(true));return n;}
+ get firstElementChild(){return this.children[0]||null;}
+ showModal(){this.open=true;}
+ close(){this.open=false;}
 }
 const flatten=n=>[n,...n.children.flatMap(flatten)];
-function dom(run){const previous=globalThis.document;globalThis.document={createElement:tag=>new Element(tag)};try{return run();}finally{globalThis.document=previous;}}
+function dom(run){const previous=globalThis.document;globalThis.document={createElement:tag=>new Element(tag),createElementNS:(_,tag)=>new Element(tag),body:new Element('body')};try{return run();}finally{globalThis.document=previous;}}
 
 test('reported categories have readable labels, yes/no values and their own source locator links',()=>dom(()=>{
  const metadata=line({reactor_line_id:'fixture-local-line',vessel_type:reported('vial'),atmosphere:reported('Ar'),schlenk_line:reported(false),glovebox:reported(true),heating_method:reported('oven'),stirring:reported(true),addition_method:reported('dropwise'),cooling_method:reported('natural cooling')});
@@ -420,8 +426,8 @@ test('source-extracted mount keeps real field formatters and source data unchang
  assert.equal(JSON.stringify(r),before);
 }));
 
-// The reported-field renderer applies to bound pre-drawn images only. Per-paper
-// providers, unsupported images and the original downloadable record remain intact.
+// The reported-field renderer applies to bound images and generated revision steps.
+// Per-paper providers, unsupported images and original operation paths remain intact.
 test('a bound operation uses its shared scene and one uniform caption',()=>dom(()=>{
  const r=record(),op=operation();r.operations=[op];const before=JSON.stringify(r),host=new Element('div');
  const caveat='Schematic: vessel shapes and colors are illustrative.';
@@ -451,4 +457,63 @@ test('an existing per-paper protocol module keeps precedence outside bound image
  mountWithInertProviders({selectProtocolArt:()=>null,createRusch2026Art:()=>custom,
   createReportedProtocolScene:()=>{throw Error('Do not replace the per-paper module');}})(host,r);
  assert.ok(flatten(host).includes(custom));
+}));
+
+function generatedRevisionRecord(id='d2-s02-heat',status='source_extracted'){
+ const r=record(),op=operation();r.record_id='fixture-revision-record';r.quality={review_status:status};
+ op.id=id;op.action='heat';op.label='Heat the fixture solution';op.description='Heat the fixture solution.';
+ op.environment={value:'Fixture nitrogen',status:'reported',note:'',evidence:[]};
+ op.parameters={temperature:quantity(80,'degC')};r.operations=[op];return r;
+}
+const reportedProviders={selectProtocolArt:()=>null,createReportedProtocolScene,REPORTED_SCENE_CAVEAT};
+
+test('unbound generated revision steps use own reported fields regardless of review status',()=>dom(()=>{
+ for(const id of ['d2-s02-heat','d3-s02-heat','d10-s02-heat'])for(const status of ['source_extracted','source_reviewed','unknown']){
+  const r=generatedRevisionRecord(id,status),before=JSON.stringify(r),host=new Element('div');
+  mountWithInertProviders(reportedProviders)(host,r);
+  const scene=flatten(host).find(n=>n.dataset.renderer==='reported-fields');assert.ok(scene,id+' '+status);
+  assert.equal(scene.dataset.scene,'solution');assert.match(host.textContent,/80 °C|80 degC/);assert.match(host.textContent,/Fixture nitrogen/);
+  const labels=flatten(scene).filter(n=>['DT','DD'].includes(n.tagName));assert.ok(labels.length>=4);assert.ok(labels.every(n=>parseFloat(n.style.fontSize)>=12));
+  assert.equal(host.textContent.split(REPORTED_SCENE_CAVEAT).length-1,1);
+  assert.equal(JSON.stringify(r),before);assert.doesNotMatch(scene.innerHTML||'',/Fixture nitrogen|fixture solution/);
+ }
+}));
+
+test('a generated step missing from an existing binding uses the rich fallback',()=>dom(()=>{
+ const r=generatedRevisionRecord(),binding={record_id:r.record_id,bindings:[{operation_id:'old-step',asset_path:'assets/protocol/old.svg',asset_sha256:'a'.repeat(64),caption:'Old admitted image.',source_locator:'Fixture page 1'}]},host=new Element('div');
+ mountWithInertProviders({...reportedProviders,selectProtocolArt})(host,r,'./',binding);
+ assert.ok(flatten(host).some(n=>n.dataset.renderer==='reported-fields'));assert.equal(flatten(host).filter(n=>n.tagName==='IMG').length,0);
+ assert.doesNotMatch(host.textContent,/Old admitted image/);
+}));
+
+test('unsupported generated actions retain the existing generic fallback',()=>dom(()=>{
+ const r=generatedRevisionRecord();r.operations[0].action='unsupported_fixture';r.operations[0].label='Unsupported fixture';r.operations[0].description='Unsupported fixture';
+ const host=new Element('div');mountWithInertProviders(reportedProviders)(host,r);
+ assert.ok(flatten(host).some(n=>n.dataset.scene==='context'));assert.ok(!flatten(host).some(n=>n.dataset.renderer==='reported-fields'));
+ assert.ok(!host.textContent.includes(REPORTED_SCENE_CAVEAT));
+}));
+
+test('original and malformed non-generated IDs never enter the new fallback',()=>dom(()=>{
+ for(const id of ['charge-and-heat','s01-heat','d0-s01-heat','d1-s01-heat','d01-s01-heat','d02-s01-heat','d2-','d2.0-s01-heat','d2-s01-heat/extra']){
+  const r=generatedRevisionRecord(id),host=new Element('div');
+  mountWithInertProviders({selectProtocolArt:()=>null,createReportedProtocolScene:()=>{throw Error('Original ID entered new fallback');}})(host,r);
+  assert.ok(!flatten(host).some(n=>n.dataset.renderer==='reported-fields'));
+ }
+}));
+
+test('a per-paper provider still wins for a generated operation',()=>dom(()=>{
+ const r=generatedRevisionRecord(),custom=new Element('div'),host=new Element('div');custom.dataset.scene='paper-fixture';
+ mountWithInertProviders({selectProtocolArt:()=>null,createRusch2026Art:()=>custom,createReportedProtocolScene:()=>{throw Error('Per-paper provider replaced');}})(host,r);
+ assert.ok(flatten(host).includes(custom));
+}));
+
+test('an unbound rich revision scene enlarges the same safe labels with one caveat',()=>dom(()=>{
+ const r=generatedRevisionRecord();r.operations[0].parameters.temperature.qualifier='<fixture markup>';
+ const before=JSON.stringify(r),host=new Element('div');mountWithInertProviders(reportedProviders)(host,r);
+ const expand=flatten(host).find(n=>n.tagName==='BUTTON'&&n.textContent==='Enlarge operation diagram ↗');assert.ok(expand);assert.equal(typeof expand.onclick,'function');expand.onclick();
+ const dialog=document.body.children[0];assert.equal(dialog.tagName,'DIALOG');assert.equal(dialog.open,true);
+ assert.equal(dialog.textContent.split(REPORTED_SCENE_CAVEAT).length-1,1);
+ assert.ok(flatten(dialog).some(n=>n.tagName==='DD'&&n.textContent.includes('<fixture markup>')));
+ assert.ok(flatten(dialog).filter(n=>['DT','DD'].includes(n.tagName)).every(n=>parseFloat(n.style.fontSize)>=12));
+ assert.equal(JSON.stringify(r),before);
 }));
