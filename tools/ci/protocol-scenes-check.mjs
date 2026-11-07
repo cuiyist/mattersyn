@@ -1,4 +1,4 @@
-// Capture the same fifteen selected protocol steps before and after a Reader change.
+// Capture the same eighteen selected protocol steps before and after a Reader change.
 // Importing this module or invoking it without arguments performs no browser I/O.
 //
 // node tools/ci/protocol-scenes-check.mjs --base <site-root> --out <fresh-dir> \
@@ -19,6 +19,11 @@ export const BENCHMARK_FORMULAS = Object.freeze(['CdSe', 'CdS', 'ZnS', 'InAs', '
 const TARGET_FILE = fileURLToPath(new URL('./protocol-scenes-targets.json', import.meta.url));
 const FIELDS = new Set(['id', 'group', 'formula', 'record_id', 'route', 'operation_index', 'operation_id', 'operation_label', 'record_json_bytes', 'record_json_sha256', 'minimum_label_px_after']);
 const EXAMPLES = ['gaas-droplet', 'hot-injection', 'hydrothermal', 'sol-gel', 'solid-state'];
+const STEP1_EXAMPLES = Object.freeze({
+  'extra-gaas-wu2010-step1': { formula: 'GaAs', record_id: 'wu2010-nl100217k-gaas-quantum-dot-pairs-qdps-in-al0-3ga0-1', operation_id: 's01-grow', material_id: 'gaas-889234' },
+  'extra-au-fan2006-step1': { formula: 'Au', record_id: 'fan2006-b600923a-ordered-gold-nanocrystal-silica-particle-1', operation_id: 's01-prepare', material_id: 'au-3325c2' },
+  'extra-pbs-reinhart2017-step1': { formula: 'PbS', record_id: 'reinhart2017-jacs-7b00158-3-mercaptopropionic-acid-3-mpa-capped-pb-1', operation_id: 's01-add', material_id: 'pbs-7e1774' },
+});
 const sha256 = (bytes) => createHash('sha256').update(bytes).digest('hex');
 const nonempty = (value) => typeof value === 'string' && value.trim().length > 0 && !/[\r\n\0]/.test(value);
 
@@ -26,18 +31,29 @@ export function validateTargets(value) {
   assert(value && typeof value === 'object' && !Array.isArray(value));
   assert.deepEqual(Object.keys(value).sort(), ['schema', 'targets']);
   assert.equal(value.schema, TARGET_SCHEMA);
-  assert(Array.isArray(value.targets) && value.targets.length === 15, 'Exactly fifteen fixed protocol targets are required');
+  assert(Array.isArray(value.targets) && value.targets.length === 18, 'Exactly eighteen fixed protocol targets are required');
   const ids = new Set();
-  const records = new Set();
+  const records = new Map();
   const defaults = [];
   const examples = [];
+  const step1Examples = [];
+  let namedWuDuplicate = false;
   for (const target of value.targets) {
     assert(target && typeof target === 'object' && !Array.isArray(target));
     assert(Object.keys(target).every((key) => FIELDS.has(key)), 'Unexpected target field');
     assert(nonempty(target.id) && /^[a-z0-9-]+$/.test(target.id));
     assert(nonempty(target.record_id) && /^[a-z0-9._-]+$/.test(target.record_id));
-    assert(!ids.has(target.id) && !records.has(target.record_id), 'Duplicate target or record');
-    ids.add(target.id); records.add(target.record_id);
+    assert(!ids.has(target.id), 'Duplicate target');
+    ids.add(target.id);
+    if (records.has(target.record_id)) {
+      const previous = records.get(target.record_id);
+      assert.equal(previous.id, 'default-gaas', 'Only the named Wu default/explicit pair may share a record');
+      assert.equal(target.id, 'extra-gaas-wu2010-step1', 'Only the named Wu default/explicit pair may share a record');
+      for (const key of ['record_id', 'operation_index', 'operation_id', 'operation_label', 'record_json_bytes', 'record_json_sha256']) {
+        assert.equal(target[key], previous[key], `The Wu duplicate must retain the same ${key}`);
+      }
+      namedWuDuplicate = true;
+    } else records.set(target.record_id, target);
     assert(nonempty(target.formula) && target.formula.length <= 128);
     assert(nonempty(target.operation_id) && nonempty(target.operation_label) && target.operation_label.length <= 300);
     assert(Number.isSafeInteger(target.operation_index) && target.operation_index >= 0);
@@ -52,15 +68,27 @@ export function validateTargets(value) {
       defaults.push(target.formula);
       assert(!route.searchParams.has('method'), 'A benchmark must visit the actual default record');
       assert(!Object.hasOwn(target, 'minimum_label_px_after'));
-    } else {
-      assert.equal(target.group, 'route-example');
+    } else if (target.group === 'route-example') {
       examples.push(target.id);
       assert.equal(route.searchParams.get('method'), target.record_id);
+      assert.equal(target.minimum_label_px_after, 12);
+    } else {
+      assert.equal(target.group, 'reader-e-step1');
+      const expected = STEP1_EXAMPLES[target.id];
+      assert(expected, 'Only the three named extra step1 targets are admitted');
+      step1Examples.push(target.id);
+      for (const key of ['formula', 'record_id', 'operation_id']) assert.equal(target[key], expected[key]);
+      assert.equal(target.operation_index, 0, 'An extra target must open the actual first operation');
+      assert.equal(route.pathname, '/material.html');
+      assert.equal(route.searchParams.get('id'), expected.material_id);
+      assert.equal(route.searchParams.get('method'), target.record_id, 'An extra target must explicitly name its record');
       assert.equal(target.minimum_label_px_after, 12);
     }
   }
   assert.deepEqual(defaults, BENCHMARK_FORMULAS);
   assert.deepEqual(examples, EXAMPLES);
+  assert.deepEqual(step1Examples, Object.keys(STEP1_EXAMPLES));
+  assert(namedWuDuplicate && records.size === 17, 'The named Wu pair is the only intentional shared record');
   return value.targets;
 }
 
@@ -82,7 +110,40 @@ export function checkAfterLabels(phase, target, metrics) {
     `Shared drawing label is below ${target.minimum_label_px_after}px on screen`);
 }
 
-function fontMetrics(art) {
+export function checkReportedDrawing(phase, metrics) {
+  if (phase !== 'after') return;
+  const drawings = metrics.reported_drawings || [];
+  if (metrics.renderer !== 'reported-fields' && drawings.length === 0) return;
+  assert.equal(drawings.length, 1, 'A reported scene must contain one new drawing card');
+  const epsilon = 0.01;
+  const rectangle = (r) => r && ['left', 'top', 'right', 'bottom', 'width', 'height'].every((key) => Number.isFinite(r[key]))
+    && r.width > 0 && r.height > 0 && r.right >= r.left && r.bottom >= r.top;
+  const inside = (inner, outer) => rectangle(inner) && inner.left >= outer.left - epsilon
+    && inner.top >= outer.top - epsilon && inner.right <= outer.right + epsilon && inner.bottom <= outer.bottom + epsilon;
+  const drawing = drawings[0];
+  assert(rectangle(drawing.bounds), 'The reported drawing must be visible and measurable');
+  assert(Array.isArray(drawing.leaf_labels) && Array.isArray(drawing.fact_blocks));
+  for (const label of drawing.leaf_labels) {
+    assert(label.visible && Number.isFinite(label.screen_font_px) && label.screen_font_px >= 12,
+      'An on-drawing leaf label is hidden, unmeasured or below12 actual screen pixels');
+    assert(inside(label.text_bounds, drawing.bounds), 'An on-drawing leaf label overflows its drawing');
+  }
+  for (const block of drawing.fact_blocks) {
+    assert(inside(block.bounds, drawing.bounds), 'A fact block overflows the reported drawing');
+    assert(Array.isArray(block.leaf_labels) && block.leaf_labels.length > 0, 'A fact block needs visible measurable leaf labels');
+    for (const label of block.leaf_labels) assert(inside(label.text_bounds, block.bounds), 'A fact label overflows its block');
+  }
+  for (let i = 0; i < drawing.fact_blocks.length; i++) {
+    for (let j = i + 1; j < drawing.fact_blocks.length; j++) {
+      const a = drawing.fact_blocks[i].bounds, b = drawing.fact_blocks[j].bounds;
+      const width = Math.min(a.right, b.right) - Math.max(a.left, b.left);
+      const height = Math.min(a.bottom, b.bottom) - Math.max(a.top, b.top);
+      assert(!(width > epsilon && height > epsilon), 'Reported fact blocks overlap');
+    }
+  }
+}
+
+export function fontMetrics(art) {
   const labels = [];
   for (const text of art.querySelectorAll('svg text')) {
     const rect = text.getBoundingClientRect();
@@ -101,8 +162,61 @@ function fontMetrics(art) {
     labels.push({ kind: 'html-label', text: text.textContent.trim(), css_font_px: parseFloat(style.fontSize), screen_font_px: parseFloat(style.fontSize) });
   }
   const sizes = labels.map((label) => label.screen_font_px).filter((size) => typeof size === 'number' && Number.isFinite(size));
+  // Self-contained: Playwright serializes this whole function into the page.
+  // These HTML labels belong to the drawing card, not the separate full <dl>.
+  const bounds = (node) => {
+    const r = node.getBoundingClientRect();
+    return { left: r.left, top: r.top, right: r.right, bottom: r.bottom, width: r.width, height: r.height };
+  };
+  const screenFont = (node) => {
+    const size = parseFloat(getComputedStyle(node).fontSize);
+    let a = 1, b = 0, c = 0, d = 1;
+    const multiply = (aa, bb, cc, dd) => {
+      [a, b, c, d] = [aa * a + cc * b, bb * a + dd * b, aa * c + cc * d, bb * c + dd * d];
+    };
+    const scalar = (s) => s.endsWith('%') ? parseFloat(s) / 100 : Number(s);
+    for (let parent = node; parent; parent = parent.parentElement) {
+      const style = getComputedStyle(parent);
+      if (style.transform && style.transform !== 'none') {
+        const matrix = new DOMMatrixReadOnly(style.transform);
+        if (!matrix.is2D) return null;
+        multiply(matrix.a, matrix.b, matrix.c, matrix.d);
+      }
+      if (style.scale && style.scale !== 'none') {
+        const axes = style.scale.trim().split(/\s+/).map(scalar);
+        if (axes.length > 2 || axes.some((x) => !Number.isFinite(x))) return null;
+        multiply(axes[0], 0, 0, axes[1] ?? axes[0]);
+      }
+      if (style.rotate && style.rotate !== 'none') {
+        const rotation = /^(-?[\d.]+)(deg|rad|turn)$/.exec(style.rotate);
+        if (!rotation) return null;
+        const angle = Number(rotation[1]) * (rotation[2] === 'deg' ? Math.PI / 180 : rotation[2] === 'turn' ? 2 * Math.PI : 1);
+        multiply(Math.cos(angle), Math.sin(angle), -Math.sin(angle), Math.cos(angle));
+      }
+      if (style.zoom && style.zoom !== 'normal') {
+        const zoom = scalar(style.zoom);
+        if (!Number.isFinite(zoom) || zoom <= 0) return null;
+        multiply(zoom, 0, 0, zoom);
+      }
+    }
+    return size * Math.hypot(c, d);
+  };
+  const reportedDrawings = [...art.querySelectorAll('.reported-scene-drawing')].map((drawing) => {
+    const leafNodes = [...drawing.querySelectorAll('strong,span')].filter((node) => !node.querySelector('strong,span'));
+    const leaf = (node) => {
+      const style = getComputedStyle(node), r = bounds(node), range = document.createRange();
+      range.selectNodeContents(node);
+      const text = range.getBoundingClientRect();
+      return { tag: node.tagName.toLowerCase(), visible: r.width > 0 && r.height > 0 && style.visibility !== 'hidden' && style.display !== 'none',
+        screen_font_px: screenFont(node), text_bounds: { left: text.left, top: text.top, right: text.right, bottom: text.bottom, width: text.width, height: text.height } };
+    };
+    const factSelector = '.reported-scene-inlet,.reported-scene-atmosphere,.reported-scene-duration,.reported-scene-temperature,.reported-scene-heating-plate';
+    return { bounds: bounds(drawing), leaf_labels: leafNodes.map(leaf),
+      fact_blocks: [...drawing.querySelectorAll(factSelector)].map((block) => ({ class_name: block.className, bounds: bounds(block), leaf_labels: leafNodes.filter((node) => block.contains(node)).map(leaf) })) };
+  });
   return { scene: art.dataset.scene || null, classes: art.className, external_image_count: art.querySelectorAll('img').length,
-    inline_svg_count: art.querySelectorAll('svg').length, labels, minimum_measured_screen_font_px: sizes.length ? Math.min(...sizes) : null };
+    inline_svg_count: art.querySelectorAll('svg').length, labels, minimum_measured_screen_font_px: sizes.length ? Math.min(...sizes) : null,
+    renderer: art.dataset.renderer || null, reported_drawings: reportedDrawings };
 }
 
 function fileReceipt(out, name) {
@@ -140,7 +254,8 @@ async function visit(browser, base, out, phase, target, viewport) {
     await stage.scrollIntoViewIfNeeded();
     await stage.evaluate((node) => node.scrollIntoView({ block: 'start', behavior: 'instant' }));
     await page.waitForTimeout(750);
-    assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth + 2), false, 'Horizontal page overflow');
+    row.horizontal_page_overflow = await page.evaluate(() => document.documentElement.scrollWidth > innerWidth + 2);
+    assert.equal(row.horizontal_page_overflow, false, 'Horizontal page overflow');
     row.scene_metrics = await art.evaluate(fontMetrics);
     row.below_image_note_count = await page.locator('#protocol .protocol-stage .protocol-visual > .protocol-visual-note').count();
     assert.equal(row.below_image_note_count, 1, 'Expected one note below the operation image');
@@ -159,6 +274,7 @@ async function visit(browser, base, out, phase, target, viewport) {
     row.screenshots = [fileReceipt(out, `${stem}-viewport.png`), fileReceipt(out, `${stem}-protocol.png`)];
     row.actual_final_url = page.url();
     checkAfterLabels(phase, target, row.scene_metrics);
+    checkReportedDrawing(phase, row.scene_metrics);
     row.automated_checks_passed = true;
     row.human_visual_review = 'pending';
   } catch (error) {
@@ -223,7 +339,7 @@ export async function main(argv = process.argv.slice(2)) {
   const failures = receipt.pages.filter((row) => !row.automated_checks_passed);
   receipt.summary = `${receipt.pages.length} target/viewports, ${failures.length} failed`;
   save();
-  assert(receipt.pages.length === 30 && failures.length === 0, receipt.summary);
+  assert(receipt.pages.length === 36 && failures.length === 0, receipt.summary);
 }
 
 if (process.argv[1] && pathToFileURL(path.resolve(process.argv[1])).href === import.meta.url) {
