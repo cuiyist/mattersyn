@@ -33,7 +33,7 @@ function glassVessel(spec, id) {
   // Liquid color and level are illustrative, never derived from product color,
   // yield, concentration or volume. No graduations, capacity or missing fittings.
   return `<defs><clipPath id="${id}-vessel"><path d="${shape}"/></clipPath></defs>
-    <path d="${shape}" fill="url(#${id}-glass)" stroke="${ink}" stroke-width="2.5"/>
+    <path data-part="apparatus-outline" d="${shape}" fill="url(#${id}-glass)" stroke="${ink}" stroke-width="2.5"/>
     <g clip-path="url(#${id}-vessel)">
       ${liquid ? `<path d="M63 175Q150 188 237 175V254H63Z" fill="#d6b66f" fill-opacity=".58"/><ellipse cx="150" cy="177" rx="87" ry="10" fill="#e3c77f" fill-opacity=".6"/>` : ''}
       <path d="M102 93V150Q83 194 110 218M137 38V113" fill="none" stroke="white" stroke-opacity=".85" stroke-width="6" stroke-linecap="round"/>
@@ -43,10 +43,26 @@ function glassVessel(spec, id) {
     ${spec.vesselKind === 'three-neck-flask' ? `<path d="M94 61H116M184 61H206" stroke="${ink}" stroke-width="3"/>` : ''}`;
 }
 
+// Fixed geometry bounds only: no dimensions are inferred from scientific data.
+// Tight, centered viewBoxes make the actual vessel large without stretching it.
+export function reportedDrawingViewport(spec) {
+  const fixedWidths = {chamber:300,furnace:300,centrifuge:300,'mill-jar':300,'closed-reactor':172,filter:186,'mortar-pestle':205};
+  const vesselWidths = {'three-neck-flask':180,flask:168,tube:86,vial:108,beaker:144,plain:140};
+  const width = fixedWidths[spec.kind] || vesselWidths[spec.vesselKind] || vesselWidths.plain;
+  const fixedMinY = {furnace:51,centrifuge:68,'mill-jar':72,'closed-reactor':16,filter:53,'mortar-pestle':29};
+  const vesselMinY = {'three-neck-flask':23,flask:23,tube:67,vial:69,beaker:67,plain:83};
+  const needsTopLeaders = (spec.added||[]).length > 0 || spec.gasLine || (typeof spec.environment === 'string' && spec.environment.trim());
+  const top = spec.kind === 'inject' ? Math.min(0,portsFor(spec).inlet[1]-124)
+    : ['chamber','reflux'].includes(spec.kind) || needsTopLeaders ? 0
+      : Math.max(0,(fixedMinY[spec.kind] ?? vesselMinY[spec.vesselKind] ?? vesselMinY.plain)-8);
+  const bottom = spec.kind === 'chamber' ? 290 : 260;
+  return {x:150-width/2,y:top,width,height:bottom-top,bottom};
+}
+
 function geometry(spec, id, facts) {
   const metal = `fill="url(#${id}-metal)" stroke="${ink}" stroke-width="2.5"`;
   const glass = `fill="url(#${id}-glass)" stroke="${ink}" stroke-width="2.5"`;
-  const ports = portsFor(spec);
+  const ports = portsFor(spec),view = reportedDrawingViewport(spec),left = view.x+view.width*.08,right = view.x+view.width*.92;
   let body;
   let leaders = '';
   if (spec.kind === 'chamber') {
@@ -65,7 +81,7 @@ function geometry(spec, id, facts) {
       const labelIndex=facts.sources.indexOf(source);
       leaders+=`<path data-part="source-leader" data-source-index="${i}" d="M${((labelIndex+.5)*300/Math.max(facts.sources.length,1)).toFixed(1)} 2L${x.toFixed(1)} ${y.toFixed(1)}" fill="none" stroke="${ink}" stroke-width="1.2"/>`;
       if(spec.beamSystem)body+=`<path data-part="source-beam" data-source-index="${i}" d="M${ix.toFixed(1)} ${iy.toFixed(1)}L${target.toFixed(1)} 176" fill="none" stroke="#9eacb8" stroke-width="2" stroke-dasharray="5 4"/>`;
-      else body+=`<path data-part="source-feed" data-source-index="${i}" d="M${ix.toFixed(1)} ${iy.toFixed(1)}L${target.toFixed(1)} 160" fill="none" stroke="${ink}" stroke-width="2"/>`;
+      else body+=`<path data-part="source-feed" data-source-index="${i}" d="M${ix.toFixed(1)} ${iy.toFixed(1)}L${target.toFixed(1)} 176" fill="none" stroke="${ink}" stroke-width="2"/>`;
     });
     facts.sources.forEach((source,i)=>{if(!source.identified)leaders+=`<path data-part="unassigned-source-leader" d="M${((i+.5)*300/Math.max(facts.sources.length,1)).toFixed(1)} 2L42 140" fill="none" stroke="${ink}" stroke-width="1.2"/>`;});
     if(facts.flowHeaterTemperatures.length)leaders+=`<path data-part="heater-label-leader" d="M150 209V290" fill="none" stroke="${ink}" stroke-width="1.2"/>`;
@@ -83,9 +99,9 @@ function geometry(spec, id, facts) {
     body = `<path d="M35 132V196C35 250 224 250 224 196V132" ${metal}/><ellipse cx="129" cy="132" rx="94" ry="64" ${glass}/><circle cx="129" cy="132" r="23" fill="#c8d8e2" stroke="${ink}" stroke-width="3"/><path d="M86 100L172 164M172 100L86 164" stroke="${ink}" stroke-width="8"/><path d="M246 96H278V207C278 232 246 232 246 207Z" ${glass}/><path d="M249 171H275V208Q262 227 249 208Z" fill="#d6b66f" fill-opacity=".58"/>`;
   } else {
     body = glassVessel(spec, id);
-    if (spec.kind === 'reflux') body += `<path d="M139 1H161V79H139Z" ${glass}/><path d="M150 3V77M139 18H123M161 61H177" fill="none" stroke="${ink}" stroke-width="3"/>`;
+    if (spec.kind === 'reflux') body += `<path data-part="reflux-condenser" d="M139 1H161V79H139Z" ${glass}/><path data-part="reflux-lines" d="M150 3V77M139 18H123M161 61H177" fill="none" stroke="${ink}" stroke-width="3"/>`;
     if (spec.kind === 'inject') body += `<g data-part="syringe" transform="translate(${ports.inlet[0]} ${ports.inlet[1] - 118})"><path d="M-10 0H10M0 0V21M-9 21H9V69H-9ZM0 69V120" ${glass}/><path d="M-5 33V59" stroke="#c8d4d5" stroke-width="6"/></g>`;
-    if (spec.kind === 'cool') body += `<path d="M257 100V179M247 168L257 179L267 168" fill="none" stroke="${ink}" stroke-width="3"/>`;
+    if (spec.kind === 'cool') {const x=view.x+view.width-5;body += `<path data-part="cooling-arrow" d="M${x} 100V179M${x-2.5} 168L${x} 179L${x+2.5} 168" fill="none" stroke="${ink}" stroke-width="2"/>`;}
   }
   // Opposite ports: additions enter from the left; atmosphere enters at the
   // right opening. The three-neck gas line ends at the open side neck, never
@@ -94,19 +110,19 @@ function geometry(spec, id, facts) {
     const [x, mouth] = ['furnace', 'closed-reactor', 'mill-jar', 'mortar-pestle', 'centrifuge'].includes(spec.kind)
       ? [75, 40] : spec.kind === 'filter' ? [110, 53] : ports.inlet;
     const y = mouth - 4;
-    leaders += `<path data-part="addition-arrow" d="M31 17H${x}V${y}M${x - 6} ${y - 8}L${x} ${y}L${x + 6} ${y - 8}" fill="none" stroke="${ink}" stroke-width="1.4"/>`;
+    leaders += `<path data-part="addition-arrow" d="M${left} 17H${x}V${y}M${x - 6} ${y - 8}L${x} ${y}L${x + 6} ${y - 8}" fill="none" stroke="${ink}" stroke-width="1.4"/>`;
   }
   if (spec.gasLine && (facts.atmosphere || !spec.environment)) {
     const end = spec.vesselKind === 'three-neck-flask' && !['chamber', 'furnace', 'closed-reactor', 'mill-jar', 'filter', 'centrifuge'].includes(spec.kind)
-      ? 'M276 17H195V57' : spec.kind === 'chamber' ? 'M276 17V147H275'
-        : ['furnace', 'closed-reactor', 'mill-jar', 'filter', 'centrifuge'].includes(spec.kind) ? 'M276 17V40H240'
-          : `M276 17H${ports.gas[0]}V${ports.gas[1] - 4}`;
+      ? `M${right} 17H195V57` : spec.kind === 'chamber' ? `M${right} 17V147H275`
+        : ['furnace', 'closed-reactor', 'mill-jar', 'filter', 'centrifuge'].includes(spec.kind) ? `M${right} 17V40H${Math.min(240,view.x+view.width-15)}`
+          : `M${right} 17H${ports.gas[0]}V${ports.gas[1] - 4}`;
     leaders += `<path data-part="gas-line" d="${end}" fill="none" stroke="#6c93a5" stroke-width="1.4" stroke-linecap="round"/>`;
-    if(spec.kind==='inject')leaders+=`<path data-part="gas-label-leader" d="M276 ${Math.min(0,ports.inlet[1]-124)}V17" fill="none" stroke="#6c93a5" stroke-width="1.4"/>`;
+    if(spec.kind==='inject')leaders+=`<path data-part="gas-label-leader" d="M${right} ${Math.min(0,ports.inlet[1]-124)}V17" fill="none" stroke="#6c93a5" stroke-width="1.4"/>`;
   }
-  else if(facts.atmosphere)leaders+=`<path data-part="atmosphere-leader" d="M276 17V126H238" fill="none" stroke="${ink}" stroke-width="1.2"/>`;
-  if(spec.kind==='inject'&&facts.added.length)leaders+=`<path data-part="addition-label-leader" d="M31 ${ports.inlet[1]-122}H${ports.inlet[0]-13}" fill="none" stroke="${ink}" stroke-width="1.2"/>`;
-  return `<defs><linearGradient id="${id}-glass"><stop stop-color="#dcecf4" stop-opacity=".8"/><stop offset=".36" stop-color="#fafdff" stop-opacity=".55"/><stop offset="1" stop-color="#c3dbe8" stop-opacity=".7"/></linearGradient><linearGradient id="${id}-metal"><stop stop-color="#d6e2e9"/><stop offset=".45" stop-color="#f3f7fa"/><stop offset="1" stop-color="#b9ccd7"/></linearGradient></defs><ellipse cx="150" cy="247" rx="113" ry="7" fill="#7193a5" fill-opacity=".1"/><g data-part="apparatus-body">${body}</g><g data-part="leader-line">${leaders}</g>`;
+  else if(facts.atmosphere)leaders+=`<path data-part="atmosphere-leader" d="M${right} 17V126H${Math.min(238,view.x+view.width-8)}" fill="none" stroke="${ink}" stroke-width="1.2"/>`;
+  if(spec.kind==='inject'&&facts.added.length)leaders+=`<path data-part="addition-label-leader" d="M${left} ${ports.inlet[1]-122}H${ports.inlet[0]-13}" fill="none" stroke="${ink}" stroke-width="1.2"/>`;
+  return `<defs><linearGradient id="${id}-glass"><stop stop-color="#dcecf4" stop-opacity=".8"/><stop offset=".36" stop-color="#fafdff" stop-opacity=".55"/><stop offset="1" stop-color="#c3dbe8" stop-opacity=".7"/></linearGradient><linearGradient id="${id}-metal"><stop stop-color="#d6e2e9"/><stop offset=".45" stop-color="#f3f7fa"/><stop offset="1" stop-color="#b9ccd7"/></linearGradient></defs><ellipse cx="150" cy="247" rx="${Math.min(113,view.width/2-5)}" ry="7" fill="#7193a5" fill-opacity=".1"/><g data-part="apparatus-body">${body}</g><g data-part="leader-line">${leaders}</g>`;
 }
 
 const clean = value => typeof value === 'string' ? value.trim() : '';
@@ -211,9 +227,8 @@ export function createReportedDrawing(spec, conditions = []) {
   if(inlet)upper.append(inlet);if(atmosphere){atmosphere.style.gridColumn='2';atmosphere.style.textAlign='right';upper.append(atmosphere);}if(inlet||atmosphere)drawing.append(upper);
   const equipment=node('div');equipment.className='reported-scene-apparatus';Object.assign(equipment.style,{display:'grid',justifyItems:'center',minWidth:'0',width:'100%'});
   const plot=node('div');plot.className='reported-scene-geometry';Object.assign(plot.style,{position:'relative',width:'100%',minWidth:'0'});
-  const svg=document.createElementNS('http://www.w3.org/2000/svg','svg'),top=spec.kind==='inject'?Math.min(0,portsFor(spec).inlet[1]-124):0;
-  const bottom=spec.kind==='chamber'?290:260;
-  svg.setAttribute('viewBox',`0 ${top} 300 ${bottom-top}`);svg.setAttribute('role','img');svg.setAttribute('aria-label',spec.kind.replaceAll('-',' ')+' operation diagram');
+  const svg=document.createElementNS('http://www.w3.org/2000/svg','svg'),view=reportedDrawingViewport(spec),bottom=view.bottom;
+  svg.setAttribute('viewBox',`${view.x} ${view.y} ${view.width} ${view.height}`);svg.setAttribute('role','img');svg.setAttribute('aria-label',spec.kind.replaceAll('-',' ')+' operation diagram');
   Object.assign(svg.style,{display:'block',width:'100%',height:'auto'});svg.innerHTML=geometry(spec,`reported-art-${++sequence}`,facts);plot.append(svg);equipment.append(plot);
   if(spec.heating||facts.primaryHeaterShortValue){
     const plate=node('div');plate.className='reported-scene-heating-plate';if(!spec.heating)plate.dataset.passive='true';

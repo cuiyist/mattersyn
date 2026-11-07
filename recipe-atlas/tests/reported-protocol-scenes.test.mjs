@@ -491,7 +491,10 @@ test('three-neck gas ends above the open right neck and never crosses a side wal
   const scene = createReportedProtocolScene(op('add', 'Add', {vessel: {status: 'reported', value: 'Three-neck flask'},
     environment: {status: 'reported', value: 'N2'}}), rec());
   const svg = all(scene).find(n => n.tagName === 'svg');
-  assert.match(svg.innerHTML, /data-part="gas-line" d="M276 17H195V57"/);
+  const gas = /data-part="gas-line" d="M([0-9.]+) 17H195V57"/.exec(svg.innerHTML);
+  assert.ok(gas);
+  const [left, , width] = svg.attributes.viewBox.split(' ').map(Number);
+  assert.ok(Number(gas[1]) >= left + width * .8 && Number(gas[1]) <= left + width);
   assert.doesNotMatch(svg.innerHTML, /M72 47h72v34h30/);
   assert.ok(!all(scene).some(n => n.className === 'reported-scene-heating-plate'));
 }));
@@ -533,7 +536,11 @@ test('injection tips and gas lines meet every reported vessel opening without cl
     const operation=op('inject','Inject',{vessel:name?{status:'reported',value:name}:undefined,environment:{status:'reported',value:'N2'}});
     const svg=all(createReportedProtocolScene(operation,rec())).find(n=>n.tagName==='svg');
     assert.ok(svg.innerHTML.includes(`data-part="syringe" transform="translate(${x} ${y-118})"`));
-    assert.ok(svg.innerHTML.includes(`M276 17H${gx}V${y-4}`));
+    const gas = new RegExp(`data-part="gas-line" d="M([0-9.]+) 17H${gx}V${y-4}"`).exec(svg.innerHTML);
+    assert.ok(gas);
+    const [left, , width] = svg.attributes.viewBox.split(' ').map(Number);
+    assert.ok(Number(gas[1]) >= left + width * .8 && Number(gas[1]) <= left + width);
+    assert.ok(x - 10 >= left && x + 10 <= left + width);
     assert.ok(Number(svg.attributes.viewBox.split(' ')[1])<=y-124);
     assert.doesNotMatch(svg.innerHTML,/rotate\(-22\)/);
   }
