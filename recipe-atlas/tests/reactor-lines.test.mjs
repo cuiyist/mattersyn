@@ -474,7 +474,8 @@ test('unbound generated revision steps use own reported fields regardless of rev
   mountWithInertProviders(reportedProviders)(host,r);
   const scene=flatten(host).find(n=>n.dataset.renderer==='reported-fields');assert.ok(scene,id+' '+status);
   assert.equal(scene.dataset.scene,'solution');assert.match(host.textContent,/80 °C|80 degC/);assert.match(host.textContent,/Fixture nitrogen/);
-  const labels=flatten(scene).filter(n=>['DT','DD'].includes(n.tagName));assert.ok(labels.length>=4);assert.ok(labels.every(n=>parseFloat(n.style.fontSize)>=12));
+  const labels=flatten(scene).filter(n=>['SPAN','STRONG','DT','DD'].includes(n.tagName)&&n.textContent.trim());assert.ok(labels.length>=3);assert.ok(labels.every(n=>parseFloat(n.style.fontSize)>=12));
+  assert.ok(labels.some(n=>/80 °C|80 degC/.test(n.textContent)));assert.ok(labels.some(n=>n.textContent.includes('Fixture nitrogen')));
   assert.equal(host.textContent.split(REPORTED_SCENE_CAVEAT).length-1,1);
   assert.equal(JSON.stringify(r),before);assert.doesNotMatch(scene.innerHTML||'',/Fixture nitrogen|fixture solution/);
  }
@@ -543,7 +544,9 @@ test('an unbound rich revision scene enlarges the same safe labels with one cave
  const expand=flatten(host).find(n=>n.tagName==='BUTTON'&&n.textContent==='Enlarge operation diagram ↗');assert.ok(expand);assert.equal(typeof expand.onclick,'function');expand.onclick();
  const dialog=document.body.children[0];assert.equal(dialog.tagName,'DIALOG');assert.equal(dialog.open,true);
  assert.equal(dialog.textContent.split(REPORTED_SCENE_CAVEAT).length-1,1);
- assert.ok(flatten(dialog).some(n=>n.tagName==='DD'&&n.textContent.includes('<fixture markup>')));
- assert.ok(flatten(dialog).filter(n=>['DT','DD'].includes(n.tagName)).every(n=>parseFloat(n.style.fontSize)>=12));
+ assert.ok(flatten(dialog).some(n=>['SPAN','DD'].includes(n.tagName)&&n.textContent.includes('<fixture markup>')));
+ assert.ok(flatten(dialog).every(n=>!String(n.innerHTML||'').includes('<fixture markup>')));
+ const labels=flatten(dialog).filter(n=>['SPAN','STRONG','DT','DD'].includes(n.tagName)&&n.textContent.trim());
+ assert.ok(labels.length>=3);assert.ok(labels.every(n=>parseFloat(n.style.fontSize)>=12));
  assert.equal(JSON.stringify(r),before);
 }));
