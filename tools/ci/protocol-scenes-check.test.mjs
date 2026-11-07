@@ -95,7 +95,7 @@ const rect = (left, top, width, height) => ({ left, top, right: left + width, bo
 const label = (left, top, px = 13) => ({ tag: 'span', visible: true, screen_font_px: px, text_bounds: rect(left, top, 40, 16) });
 function drawingMetrics() {
   const a = label(15, 15), b = label(215, 15);
-  return { renderer: 'reported-fields', reported_drawings: [{ bounds: rect(0, 0, 400, 300), leaf_labels: [a, b], fact_blocks: [
+  return { renderer: 'reported-fields', reported_drawings: [{ bounds: rect(0, 0, 400, 300), layout: 'leader-lines-v2', apparatus_bounds: rect(8, 80, 384, 210), svg_bounds: rect(8, 80, 384, 210), apparatus_body_bounds: rect(40,90,320,180), apparatus_body_svg_bbox: rect(25,10,250,180), svg_viewbox: {x:0,y:0,width:300,height:200}, appendage_geometry_bounds: [], leader_line_count: 2, plain_annotations: [{border_width_px: 0, background_transparent: true}], leaf_labels: [a, b], fact_blocks: [
     { class_name: 'reported-scene-inlet', bounds: rect(10, 10, 150, 70), leaf_labels: [a] },
     { class_name: 'reported-scene-atmosphere', bounds: rect(210, 10, 150, 70), leaf_labels: [b] },
   ] }] };
@@ -146,9 +146,14 @@ class MetricNode {
     for (const child of children) child.parentElement = this;
   }
   getBoundingClientRect() { return this.bounds; }
+  getBBox() { return this.svgBBox || {x:this.bounds.left,y:this.bounds.top,width:this.bounds.width,height:this.bounds.height}; }
   contains(node) { return node === this || this.children.some((child) => child.contains(node)); }
   querySelectorAll(selector) {
-    const matches = (node, term) => term.startsWith('.') ? node.className.split(/\s+/).includes(term.slice(1)) : node.tagName.toLowerCase() === term;
+    const matches = (node, term) => {
+      if (term === '[data-part="leader-line"] path') return node.tagName === 'PATH' && node.parentElement?.dataset.part === 'leader-line';
+      const part = /^\[data-part="([^"]+)"\]$/.exec(term); if(part) return node.dataset.part === part[1];
+      return term.startsWith('.') ? node.className.split(/\s+/).includes(term.slice(1)) : node.tagName.toLowerCase() === term;
+    };
     const terms = selector.split(',').map((term) => term.trim()), out = [];
     for (const child of this.children) { if (terms.some((term) => matches(child, term))) out.push(child); out.push(...child.querySelectorAll(selector)); }
     return out;
@@ -170,8 +175,12 @@ function metricFixture() {
   const strong = new MetricNode('strong', '', rect(20, 20, 90, 18), [indicator]);
   const value = new MetricNode('span', '', rect(20, 45, 90, 18));
   const plate = new MetricNode('div', 'reported-scene-heating-plate', rect(10, 10, 120, 70), [strong, value]);
-  const equipment = new MetricNode('div', 'reported-scene-equipment', rect(5, 5, 200, 200), [plate]);
-  const drawing = new MetricNode('div', 'reported-scene-drawing', rect(0, 0, 400, 300), [equipment]);
+  const line = new MetricNode('path', '', rect(10, 10, 15, 30));
+  const leaders = new MetricNode('g', '', rect(10, 10, 15, 30), [line]); leaders.dataset.part = 'leader-line';
+  const body = new MetricNode('g','',rect(40,20,320,170));body.dataset.part='apparatus-body';body.svgBBox={x:25,y:10,width:250,height:180};
+  const svg = new MetricNode('svg', '', rect(8, 8, 384, 200), [body,leaders]);svg.viewBox={baseVal:{x:0,y:0,width:300,height:200}};
+  const equipment = new MetricNode('div', 'reported-scene-apparatus', rect(8, 8, 384, 280), [svg, plate]);
+  const drawing = new MetricNode('div', 'reported-scene-drawing', rect(0, 0, 400, 300), [equipment]); drawing.dataset.layout = 'leader-lines-v2';
   const outside = new MetricNode('dl', 'reported-scene-labels', rect(0, 310, 400, 30), [new MetricNode('dd', '', rect(0, 310, 100, 16), [], '8px')]);
   const art = new MetricNode('div', 'protocol-art', rect(0, 0, 400, 350), [drawing, outside]); art.dataset.renderer = 'reported-fields';
   return { art, drawing };
@@ -202,3 +211,34 @@ test('direct no-argument invocation is inert and does not require Playwright or 
   assert.equal(result.status, 0, result.stderr);
   assert.deepEqual(JSON.parse(result.stdout), { status: 'DEFAULT_INERT', browser_started: false, network_calls: 0, screenshots_created: 0 });
 });
+
+test('G drawings keep a full-width centered apparatus with plain connected labels', () => {
+  for (const [mutate, message] of [
+    [(d) => { d.layout = 'corner-boxes'; }, /leader-label/],
+    [(d) => { d.apparatus_bounds = rect(60, 80, 280, 210); }, /drawing width/],
+    [(d) => { d.apparatus_bounds = rect(0, 80, 370, 210); }, /centered/],
+    [(d) => { d.svg_bounds = rect(100, 80, 200, 210); }, /fill its panel/],
+    [(d) => { d.plain_annotations[0].border_width_px = 1; }, /label boxes/],
+    [(d) => { d.plain_annotations[0].background_transparent = false; }, /transparent/],
+    [(d) => { d.leader_line_count = 0; }, /leader lines/],
+  ]) { const metrics = drawingMetrics(); mutate(metrics.reported_drawings[0]); assert.throws(() => checkReportedDrawing('after', metrics), message); }
+});
+
+test('nested temperature is measured once inside its heater, without hiding independent overlap', () => {
+  withMetricDOM(() => {
+    const { art, drawing } = metricFixture();
+    const plate = drawing.querySelector('.reported-scene-heating-plate');
+    const value = plate.children[1];
+    const temperature = new MetricNode('div', 'reported-scene-temperature', rect(15, 40, 105, 30), [value]);
+    plate.children[1] = temperature; temperature.parentElement = plate;
+    const metrics = fontMetrics(art);
+    assert.equal(metrics.reported_drawings[0].fact_blocks.length, 1);
+    assert.equal(metrics.reported_drawings[0].leaf_labels.length, 2);
+    assert.equal(metrics.reported_drawings[0].leader_line_count, 1);
+    checkReportedDrawing('after', metrics);
+  });
+});
+
+test('actual vessel geometry must fill the drawing even when wrapper and SVG are full width',()=>{const m=drawingMetrics();m.reported_drawings[0].apparatus_body_bounds=rect(140,90,114,180);assert.throws(()=>checkReportedDrawing('after',m),/actual apparatus body must occupy/);const b=drawingMetrics();b.reported_drawings[0].apparatus_body_svg_bbox=rect(95,10,114,180);assert.throws(()=>checkReportedDrawing('after',b),/SVG body geometry/);});
+test('visible body and zero-width or zero-height leader appendages stay inside SVG',()=>{const m=drawingMetrics();m.reported_drawings[0].appendage_geometry_bounds=[rect(20,90,0,50),rect(30,100,50,0)];checkReportedDrawing('after',m);m.reported_drawings[0].appendage_geometry_bounds.push(rect(-1,90,20,40));assert.throws(()=>checkReportedDrawing('after',m),/visible syringe/);const b=drawingMetrics();b.reported_drawings[0].apparatus_body_bounds=rect(0,90,320,180);assert.throws(()=>checkReportedDrawing('after',b),/must not clip/);});
+test('font metrics measure actual SVG body bbox and viewBox rather than its wrapper',()=>withMetricDOM(()=>{const{art}=metricFixture(),d=fontMetrics(art).reported_drawings[0];assert.equal(d.apparatus_body_bounds.width,320);assert.equal(d.apparatus_body_svg_bbox.width,250);assert.equal(d.svg_viewbox.width,300);assert.deepEqual(d.appendage_geometry_bounds,[]);}));

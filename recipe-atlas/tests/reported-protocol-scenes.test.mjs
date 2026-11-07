@@ -1,6 +1,8 @@
 import assert from 'node:assert/strict';
 import {test} from 'node:test';
-import {reportedProtocolSceneDescriptor as descriptor, createReportedProtocolScene, REPORTED_SCENE_CAVEAT} from '../static/reported-protocol-scenes.mjs';
+import {reportedProtocolSceneDescriptor as descriptor, createReportedProtocolScene, REPORTED_SCENE_CAVEAT, shortReportedSceneName, compactReportedSceneQuantity} from '../static/reported-protocol-scenes.mjs';
+
+import {quantityValue} from '../static/quantity-value.mjs';
 
 const q = (value, unit = 'degC', status = 'reported') => ({value, unit, status});
 const op = (action, label = action, extra = {}) => ({id: 'step', action, label, inputs: [], parameters: {}, environment: {status: 'not_reported', value: null}, ...extra});
@@ -268,8 +270,8 @@ test('scientific labels are unscaled HTML with >=12px type and wrapping', () => 
     {formatQuantity: quantity => `${quantity.value} ${quantity.unit} · retained qualifier`});
   assert.equal(scene.dataset.renderer, 'reported-fields');
   assert.equal(scene.style.height, 'auto');
-  const labels = all(scene).filter(n => n.tagName === 'dt' || n.tagName === 'dd');
-  assert.ok(labels.length >= 6);
+  const labels = all(scene).filter(n => ['span', 'strong', 'dt', 'dd'].includes(n.tagName) && n.textContent);
+  assert.ok(labels.length >= 4);
   assert.ok(labels.every(n => parseFloat(n.style.fontSize) >= 12 && n.style.overflowWrap === 'anywhere'));
   assert.match(labels.map(n => n.textContent).join(' '), /retained qualifier/);
   const svg = all(scene).find(n => n.tagName === 'svg');
@@ -296,7 +298,7 @@ test('reported room-temperature qualifier or raw spelling is kept without a nume
     const operation = op('stir', 'Stir', {parameters: {temperature: quantity}});
     assert.equal(choose(operation).conditions.length, 1);
     const scene = createReportedProtocolScene(operation, rec(), {formatQuantity: () => 'Not reported'});
-    assert.ok(all(scene).some(n => n.textContent === 'Room temperature'));
+    assert.ok(all(scene).some(n => n.textContent === 'temperature: Room temperature'));
     assert.ok(!all(scene).some(n => /\b25\b/.test(n.textContent)));
     assert.equal(choose(operation).heating, false);
   }
@@ -432,18 +434,43 @@ test('stock mapping and literal labels do not mutate frozen records', () => {
 });
 
 
-test('on-drawing facts sit by ports, duration and heated plate, with the full rows retained', () => withDocument(() => {
+test('on-drawing facts sit by ports, duration and heated plate without duplicate rows', () => withDocument(() => {
   const materials = ['one', 'two', 'three', 'four'].map(id => ({id, name: id + ' precursor', role: 'metal_precursor'}));
   const scene = createReportedProtocolScene(op('heat', 'Heat and add', {inputs: materials.map(m => m.id),
     parameters: {temperature: q(180), duration: q(30, 'min')}, environment: {status: 'reported', value: 'Nitrogen'}}), rec({materials}),
     {formatQuantity: q => `${q.value} ${q.unit}`});
   const elements = all(scene), byClass = c => elements.find(n => n.className === c);
-  assert.equal(byClass('reported-scene-inlet').children.length, 4); // heading + at most three names
-  assert.ok(byClass('reported-scene-labels') && elements.some(n => n.tagName === 'dd' && n.textContent.includes('four precursor')));
-  assert.ok(all(byClass('reported-scene-heating-plate')).some(n => n.textContent === '180 degC'));
+  assert.ok(byClass('reported-scene-inlet'));
+  assert.equal(all(byClass('reported-scene-inlet')).filter(n => /precursor$/.test(n.textContent)).length, 3);
+  assert.ok(!byClass('reported-scene-labels')); // the fourth full name is in its adjacent material chip
+  assert.ok(all(byClass('reported-scene-heating-plate')).some(n => n.textContent === 'temperature: 180 degC'));
   assert.ok(all(byClass('reported-scene-atmosphere')).some(n => n.textContent === 'Nitrogen'));
   assert.ok(all(byClass('reported-scene-duration')).some(n => n.textContent === '30 min'));
   assert.ok(elements.filter(n => ['span', 'strong', 'dt', 'dd'].includes(n.tagName)).every(n => parseFloat(n.style.fontSize) >= 12));
+}));
+
+test('short labels use only an explicit name abbreviation and retain full record identity', () => {
+  assert.equal(shortReportedSceneName('Trioctylphosphine (TOP)'), 'TOP');
+  assert.equal(shortReportedSceneName('1-Dodecanethiol (DT)'), 'DT');
+  for (const name of ['bis(trimethylsilyl) sulfide', 'copper(II) acetate', 'Unspecified material (II)',
+    'octadecene', 'Long unnamed precursor', 'TOP solution (0.1 M)']) assert.equal(shortReportedSceneName(name), name);
+  const record = freeze(rec({materials: [{id: 'top', name: 'Trioctylphosphine (TOP)', role: 'ligand'}]}));
+  const chosen = choose(op('add', 'Add', {inputs: ['top']}), record);
+  assert.deepEqual(chosen.added, ['Trioctylphosphine (TOP)']);
+  assert.deepEqual(chosen.addedLabels, ['TOP']);
+  assert.equal(record.materials[0].name, 'Trioctylphosphine (TOP)');
+});
+
+test('only facts absent from the drawing and adjacent cards retain detail rows', () => withDocument(() => {
+  const materials = ['one', 'two', 'three', 'four'].map(id => ({id, name: id + ' precursor', role: 'metal_precursor'}));
+  const stocks = [{id: 'stock', name: 'Separately prepared fifth stock', components: []}];
+  const scene = createReportedProtocolScene(op('add', 'Add', {inputs: [...materials.map(m => m.id), 'stock'],
+    vessel: {status: 'reported', value: 'Three-neck flask'},
+    parameters: {temperature: q(180), duration: q(30, 'min'), pressure: q(2, 'bar'), exit_pressure: q(1, 'bar'), light_flux: q(5, 'a.u.')},
+    environment: {status: 'reported', value: 'Nitrogen'}}), rec({materials, stocks}), {formatQuantity: q => `${q.value} ${q.unit}`});
+  const rows = all(scene).filter(n => n.tagName === 'dd').map(n => n.textContent);
+  assert.deepEqual(rows, ['Separately prepared fifth stock', 'Three-neck flask', '1 bar', '5 a.u.']);
+  assert.ok(!rows.includes('four precursor') && !rows.includes('2 bar') && !rows.includes('Nitrogen'));
 }));
 
 test('glass shading is neutral and a stir bar and lit heater require own-step reports', () => withDocument(() => {
@@ -464,7 +491,10 @@ test('three-neck gas ends above the open right neck and never crosses a side wal
   const scene = createReportedProtocolScene(op('add', 'Add', {vessel: {status: 'reported', value: 'Three-neck flask'},
     environment: {status: 'reported', value: 'N2'}}), rec());
   const svg = all(scene).find(n => n.tagName === 'svg');
-  assert.match(svg.innerHTML, /data-part="gas-line" d="M276 17H195V57"/);
+  const gas = /data-part="gas-line" d="M([0-9.]+) 17H195V57"/.exec(svg.innerHTML);
+  assert.ok(gas);
+  const [left, , width] = svg.attributes.viewBox.split(' ').map(Number);
+  assert.ok(Number(gas[1]) >= left + width * .8 && Number(gas[1]) <= left + width);
   assert.doesNotMatch(svg.innerHTML, /M72 47h72v34h30/);
   assert.ok(!all(scene).some(n => n.className === 'reported-scene-heating-plate'));
 }));
@@ -485,12 +515,13 @@ test('separate rendered and enlarged scenes have unique gradient and clipping ID
 }));
 
 
-test('explicit removal of heating does not light a plate from a hot injection temperature', () => withDocument(() => {
+test('explicit removal of heating leaves a plain temperature label without a plate', () => withDocument(() => {
   const operation = op('inject', 'Inject after heat was removed', {parameters: {temperature: q(200)}});
   assert.equal(choose(operation).heating, false);
   const scene = createReportedProtocolScene(operation, rec(), {formatQuantity: q => `${q.value} ${q.unit}`});
   assert.ok(!all(scene).some(n => n.className === 'reported-scene-heating-indicator'));
-  assert.ok(all(scene).some(n => n.textContent === '200 degC'));
+  assert.ok(!all(scene).some(n => n.className === 'reported-scene-heating-plate'));
+  assert.ok(all(scene).some(n => n.textContent === 'temperature: 200 degC'));
 }));
 
 test('own As4 flux is labelled beside chamber beams without inferring a numeric flux', () => withDocument(() => {
@@ -505,8 +536,34 @@ test('injection tips and gas lines meet every reported vessel opening without cl
     const operation=op('inject','Inject',{vessel:name?{status:'reported',value:name}:undefined,environment:{status:'reported',value:'N2'}});
     const svg=all(createReportedProtocolScene(operation,rec())).find(n=>n.tagName==='svg');
     assert.ok(svg.innerHTML.includes(`data-part="syringe" transform="translate(${x} ${y-118})"`));
-    assert.ok(svg.innerHTML.includes(`M276 17H${gx}V${y-4}`));
+    const gas = new RegExp(`data-part="gas-line" d="M([0-9.]+) 17H${gx}V${y-4}"`).exec(svg.innerHTML);
+    assert.ok(gas);
+    const [left, , width] = svg.attributes.viewBox.split(' ').map(Number);
+    assert.ok(Number(gas[1]) >= left + width * .8 && Number(gas[1]) <= left + width);
+    assert.ok(x - 10 >= left && x + 10 <= left + width);
     assert.ok(Number(svg.attributes.viewBox.split(' ')[1])<=y-124);
     assert.doesNotMatch(svg.innerHTML,/rotate\(-22\)/);
   }
 }));
+
+
+test('compact heater values retain typed bounds/ranges and never discard an unknown qualifier', () => {
+  const format = x => (x.approximate ? '≈' : '') + quantityValue(x) + ' ' + x.unit
+    + (x.qualifier ? ' · ' + x.qualifier : '') + (x.basis ? ' · ' + x.basis : '');
+  for (const [quantity, expected] of [
+    [{value: 580, unit: 'degC', basis: 'Reported substrate temperature'}, '580 degC'],
+    [{value: null, maximum: 200, unit: 'degC', qualifier: 'reported upper bound'}, '≤200 degC'],
+    [{value: null, minimum: 100, minimum_exclusive: true, unit: 'degC', qualifier: 'lower bound'}, '>100 degC'],
+    [{value: null, minimum: 100, maximum: 200, unit: 'degC'}, '100–200 degC'],
+    [{value: 180, unit: 'degC', approximate: true}, '≈180 degC'],
+    [{value: 200, unit: 'degC', qualifier: 'Reported upper bound'}, null],
+    [{value: 180, unit: 'degC', qualifier: 'At most, depending on the variant'}, null],
+    [{value: null, unit: 'degC', qualifier: 'Room temperature'}, null],
+  ]) {
+    const original = structuredClone(quantity); freeze(quantity);
+    assert.equal(compactReportedSceneQuantity(quantity, format), expected);
+    assert.deepEqual(quantity, original);
+  }
+  assert.equal(compactReportedSceneQuantity(q(180), null), null);
+  assert.equal(compactReportedSceneQuantity(q(180), () => 'Not reported'), null);
+});

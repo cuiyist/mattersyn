@@ -1,5 +1,7 @@
 import { extendedReportedScene } from './reported-scene-extensions.mjs';
-import { createReportedDrawing } from './reported-scene-drawing.mjs';
+import { createReportedDrawing, reportedDrawingFacts } from './reported-scene-drawing.mjs';
+import { matchProtocolCondition } from './protocol-conditions.mjs?v=0.39.1';
+import { quantityValue } from './quantity-value.mjs';
 // Reader-only scenes. No record writes, paper/model reads or source-specific art.
 // The caller preserves handmade/per-paper handlers and calls this only at the
 // source-bound/generic fallback boundary. A null result retains the old image.
@@ -182,6 +184,23 @@ function addedNames(o, r, sceneKind) {
   return [...new Set(names)];
 }
 
+// Use only an abbreviation explicitly supplied by this record's own name.
+// Do not invent a short identity, strip an oxidation state, or truncate chemistry.
+export function shortReportedSceneName(name) {
+  const full = text(name);
+  const alias = /^.+\s+\(([A-Z][A-Za-z0-9+-]{1,14})\)$/.exec(full)?.[1];
+  return alias && !/^[IVX]+$/.test(alias) ? alias : full;
+}
+
+function namesInConditionCards(o, r) {
+  // The shared protocol reference panel expands these same direct stock inputs
+  // to material chips. A stock name itself is not a component name.
+  const ids = new Set([...(o.inputs || []), ...(o.optional_inputs || [])]);
+  for (const stock of r.stocks || []) if (ids.has(stock.id))
+    for (const component of stock.components || []) ids.add(component.material_id);
+  return new Set((r.materials || []).filter(m => ids.has(m.id)).map(m => text(m.name)));
+}
+
 function baseSceneSpec(o, r = {}, options = {}, extendedKind = null) {
   if (!o || !present(o.action)) return null;
   const action = words(o.action), own = words([o.action, o.label].filter(Boolean).join(' '));
@@ -253,7 +272,7 @@ function baseSceneSpec(o, r = {}, options = {}, extendedKind = null) {
     // Workup gets the requested generic tube symbol without claiming a reported
     // vessel name, capacity or fittings. A reported shape still takes precedence.
     vesselKind: useVessel ? vesselKind(useVessel) : workup ? 'tube' : 'plain',
-    added, conditions, sourceFeed,
+    added, addedLabels: added.map(shortReportedSceneName), conditions, sourceFeed,
     beamSystem: /\bmbe\b|molecular beam epitax/.test(system + ' ' + own),
     // Only explicit current-step substrate inputs are named. No recipe-wide
     // material or substrate list is assigned to every deposition operation.
@@ -288,6 +307,21 @@ function htmlNode(tag, value) {
   return n;
 }
 
+// Compact only typed quantities whose qualifier adds no scientific meaning.
+// Full qualifiers/bases remain in the adjacent condition cards. Unknown wording
+// stays intact and uses the drawing's long-label layout instead of truncation.
+export function compactReportedSceneQuantity(quantity, formatQuantity) {
+  if (typeof formatQuantity !== 'function' || quantityValue(quantity) === null) return null;
+  const qualifier = text(quantity?.qualifier).toLowerCase();
+  const redundantUpper = quantity.value == null && quantity.minimum == null && quantity.maximum != null
+    && /^(?:reported )?upper bound$/.test(qualifier);
+  const redundantLower = quantity.value == null && quantity.maximum == null && quantity.minimum != null
+    && /^(?:reported )?lower bound$/.test(qualifier);
+  if (qualifier && !redundantUpper && !redundantLower) return null;
+  const value = formatQuantity({...quantity, qualifier: '', basis: ''});
+  return present(value) && !/not reported|unavailable/i.test(value) ? value : null;
+}
+
 export function createReportedProtocolScene(o, r, options = {}) {
   const spec = reportedProtocolSceneSpec(o, r, options);
   if (!spec) return null;
@@ -307,22 +341,33 @@ export function createReportedProtocolScene(o, r, options = {}) {
     dd.style.margin = '2px 0 0';
     group.append(dt, dd); labels.append(group);
   };
-  if (spec.added.length) row('Added this step', spec.added.join('; '));
-  if (spec.substrates.length) row('Reported substrate', spec.substrates.join('; '));
-  if (spec.vessel) row(spec.vessel.scope === 'recipe' ? 'Reported recipe vessel' : 'Reported vessel', spec.vessel.value);
   const formattedConditions = [];
   for (const {key, quantity} of spec.conditions) {
-    // The existing Reader amount() formatter retains qualifiers and bases.
-    // Do not invent a replacement when no formatter was supplied.
+    // The existing Reader formatter retains reported qualifiers and bases.
     let formatted = typeof options.formatQuantity === 'function' ? options.formatQuantity(quantity) : '';
     if ((!present(formatted) || /not reported|unavailable/i.test(formatted)) && roomTemperature(quantity))
       formatted = text(quantity.raw_text) || text(quantity.qualifier);
-    if (present(formatted) && !/not reported|unavailable/i.test(formatted)) {
-      row(key.replaceAll('_', ' '), formatted);
-      formattedConditions.push({key, value: formatted});
-    }
+    if (present(formatted) && !/not reported|unavailable/i.test(formatted))
+      formattedConditions.push({key, value: formatted, shortValue: compactReportedSceneQuantity(quantity, options.formatQuantity)});
   }
-  if (spec.environment) row('Reported atmosphere', spec.environment);
-  host.append(createReportedDrawing(spec, formattedConditions), labels);
+  const shown = reportedDrawingFacts(spec, formattedConditions);
+  const cardNames = namesInConditionCards(o, r);
+  const drawnInputs = new Set(shown.addedIndicesShown);
+  const extraNames = spec.added.filter((name, index) => !drawnInputs.has(index) && !cardNames.has(name));
+  if (extraNames.length) row('Additional inputs', extraNames.join('; '));
+  const drawnSubstrates = new Set(shown.substrateLabels);
+  const extraSubstrates = spec.substrates.filter(name => !drawnSubstrates.has(name) && !cardNames.has(name));
+  if (extraSubstrates.length) row('Reported substrate', extraSubstrates.join('; '));
+  if (spec.vessel && !shown.vesselNameShown)
+    row(spec.vessel.scope === 'recipe' ? 'Reported recipe vessel' : 'Reported vessel', spec.vessel.value);
+  const pressureCard = matchProtocolCondition(Object.entries(o.parameters || {}), 'pressure')?.[0];
+  const drawnConditions = new Set([...shown.temperatureConditionKeysShown, ...shown.durationConditionKeysShown, ...shown.fluxConditionKeysShown]);
+  for (const {key, value} of formattedConditions) {
+    // Keep a row only when neither the drawing nor the adjacent pressure card
+    // shows this exact reported condition. Secondary pressure/flux stays visible.
+    if (!drawnConditions.has(key) && key !== pressureCard) row(key.replaceAll('_', ' '), value);
+  }
+  host.append(createReportedDrawing(spec, formattedConditions));
+  if (labels.children.length) host.append(labels);
   return host;
 }

@@ -122,6 +122,31 @@ export function checkReportedDrawing(phase, metrics) {
     && inner.top >= outer.top - epsilon && inner.right <= outer.right + epsilon && inner.bottom <= outer.bottom + epsilon;
   const drawing = drawings[0];
   assert(rectangle(drawing.bounds), 'The reported drawing must be visible and measurable');
+  assert.equal(drawing.layout, 'leader-lines-v2', 'The reported drawing must use the large leader-label layout');
+  assert(inside(drawing.apparatus_bounds, drawing.bounds), 'The apparatus panel must stay inside the drawing');
+  assert(drawing.apparatus_bounds.width >= drawing.bounds.width * 0.90, 'The apparatus must use the drawing width');
+  const center = (r) => (r.left + r.right) / 2;
+  assert(Math.abs(center(drawing.apparatus_bounds) - center(drawing.bounds)) <= 8, 'The apparatus panel must be centered');
+  assert(inside(drawing.svg_bounds, drawing.apparatus_bounds), 'The apparatus SVG must stay inside its panel');
+  assert(drawing.svg_bounds.width >= drawing.apparatus_bounds.width * 0.95, 'The apparatus SVG must fill its panel');
+  assert(inside(drawing.apparatus_body_bounds, drawing.svg_bounds), 'The actual apparatus body must not clip its SVG');
+  assert(drawing.apparatus_body_bounds.width >= drawing.bounds.width * 0.70, 'The actual apparatus body must occupy most of the drawing width');
+  assert(rectangle(drawing.apparatus_body_svg_bbox) && drawing.apparatus_body_svg_bbox.width >= drawing.svg_viewbox.width * 0.70, 'SVG body geometry must fill its viewBox');
+  assert(Array.isArray(drawing.appendage_geometry_bounds), 'Visible appendage measurements are required');
+  for (const r of drawing.appendage_geometry_bounds) {
+    assert(r && ['left','top','right','bottom','width','height'].every((key) => Number.isFinite(r[key]))
+      && r.width >= 0 && r.height >= 0 && (r.width > 0 || r.height > 0)
+      && r.left >= drawing.svg_bounds.left - epsilon && r.top >= drawing.svg_bounds.top - epsilon
+      && r.right <= drawing.svg_bounds.right + epsilon && r.bottom <= drawing.svg_bounds.bottom + epsilon,
+    'A visible syringe, cooling arrow, condenser or leader clips its SVG');
+  }
+  assert(Number.isSafeInteger(drawing.leader_line_count) && drawing.leader_line_count >= 0);
+  assert(Array.isArray(drawing.plain_annotations));
+  for (const label of drawing.plain_annotations) {
+    assert.equal(label.border_width_px, 0, 'Leader annotations must not use label boxes');
+    assert(label.background_transparent, 'Leader annotations must have transparent backgrounds');
+  }
+  if (drawing.plain_annotations.length) assert(drawing.leader_line_count > 0, 'Reported labels need thin leader lines');
   assert(Array.isArray(drawing.leaf_labels) && Array.isArray(drawing.fact_blocks));
   for (const label of drawing.leaf_labels) {
     assert(label.visible && Number.isFinite(label.screen_font_px) && label.screen_font_px >= 12,
@@ -211,8 +236,34 @@ export function fontMetrics(art) {
         screen_font_px: screenFont(node), text_bounds: { left: text.left, top: text.top, right: text.right, bottom: text.bottom, width: text.width, height: text.height } };
     };
     const factSelector = '.reported-scene-inlet,.reported-scene-atmosphere,.reported-scene-duration,.reported-scene-temperature,.reported-scene-heating-plate';
-    return { bounds: bounds(drawing), leaf_labels: leafNodes.map(leaf),
-      fact_blocks: [...drawing.querySelectorAll(factSelector)].map((block) => ({ class_name: block.className, bounds: bounds(block), leaf_labels: leafNodes.filter((node) => block.contains(node)).map(leaf) })) };
+    // Nested heater temperature text is part of the heater block; independent
+    // blocks still must not overlap. Count every leaf once in its outer block.
+    const blocks = [...drawing.querySelectorAll(factSelector)];
+    const apparatus = drawing.querySelector('.reported-scene-apparatus');
+    const svg = apparatus?.querySelector('svg');
+    // SVG getBBox ignores clipPaths: shared liquid/highlight paths may extend
+    // beyond their visible vessel. Measure the fixed visible vessel outline,
+    // then verify every visible external appendage/leader independently.
+    const body = svg?.querySelector('[data-part="apparatus-outline"]') || svg?.querySelector('[data-part="apparatus-body"]');
+    const appendages = svg ? [...svg.querySelectorAll('[data-part="syringe"],[data-part="cooling-arrow"],[data-part="reflux-condenser"],[data-part="reflux-lines"],[data-part="addition-arrow"],[data-part="gas-line"],[data-part="gas-label-leader"],[data-part="addition-label-leader"]')] : [];
+    const geometry = body?.getBBox();
+    const viewbox = svg?.viewBox.baseVal;
+    const plainSelector = '.reported-scene-inlet,.reported-scene-source,.reported-scene-atmosphere,.reported-scene-duration,.reported-scene-temperature,.reported-scene-substrate';
+    const transparent = (color) => !color || color === 'transparent' || /^rgba\([^)]*,\s*0(?:\.0+)?\)$/.test(color);
+    return { bounds: bounds(drawing), layout: drawing.dataset.layout || null,
+      apparatus_bounds: apparatus ? bounds(apparatus) : null, svg_bounds: svg ? bounds(svg) : null,
+      apparatus_body_bounds: body ? bounds(body) : null,
+      apparatus_body_svg_bbox: geometry ? {left:geometry.x,top:geometry.y,right:geometry.x+geometry.width,bottom:geometry.y+geometry.height,width:geometry.width,height:geometry.height} : null,
+      svg_viewbox: viewbox ? {x:viewbox.x,y:viewbox.y,width:viewbox.width,height:viewbox.height} : null,
+      appendage_geometry_bounds: appendages.map(bounds),
+      leader_line_count: drawing.querySelectorAll('[data-part="leader-line"] path').length,
+      plain_annotations: [...drawing.querySelectorAll(plainSelector)].filter((node) => !blocks.some((block) => block.className === 'reported-scene-heating-plate' && block.contains(node))).map((node) => {
+        const style = getComputedStyle(node);
+        return { border_width_px: Math.max(...['borderTopWidth', 'borderRightWidth', 'borderBottomWidth', 'borderLeftWidth'].map((key) => parseFloat(style[key]) || 0)),
+          background_transparent: transparent(style.backgroundColor) && (!style.backgroundImage || style.backgroundImage === 'none') };
+      }),
+      leaf_labels: leafNodes.map(leaf),
+      fact_blocks: blocks.filter((block) => !blocks.some((parent) => parent !== block && parent.contains(block))).map((block) => ({ class_name: block.className, bounds: bounds(block), leaf_labels: leafNodes.filter((node) => block.contains(node)).map(leaf) })) };
   });
   return { scene: art.dataset.scene || null, classes: art.className, external_image_count: art.querySelectorAll('img').length,
     inline_svg_count: art.querySelectorAll('svg').length, labels, minimum_measured_screen_font_px: sizes.length ? Math.min(...sizes) : null,
