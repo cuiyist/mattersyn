@@ -71,6 +71,10 @@ jobs:
         run: node --test recipe-atlas/tests/pending-variants.test.mjs
       - name: Test material-page first view
         run: node --test recipe-atlas/tests/reader-first-view.test.mjs
+      - name: Test compact method-family grouping and selector
+        run: |
+          python -m unittest discover -s recipe-atlas/tests -p 'test_method_famil*.py' -v
+          node --test recipe-atlas/tests/method-families.test.mjs tools/ci/method-families-check.test.mjs
       - name: Validate the public source projection
         run: |
           python tools/publication/bind_source_allowlist.py \
@@ -107,7 +111,10 @@ jobs:
           base = os.environ['COMPARISON_BASE']
           if not base.strip('0'): base = 'HEAD^'
           paths = subprocess.check_output(['git', 'diff', '--name-only', base, 'HEAD'], text=True).splitlines()
-          changed = any(p in {'recipe-atlas/static/protocol-visuals.mjs', 'recipe-atlas/static/reported-protocol-scenes.mjs', 'recipe-atlas/static/reported-scene-drawing.mjs', 'recipe-atlas/static/reported-scene-extensions.mjs'} or p.startswith('tools/ci/protocol-scenes-') for p in paths)
+          methods = any(p in {'recipe-atlas/scripts/method_families.py','recipe-atlas/scripts/method_family_projection.py','recipe-atlas/scripts/build_atlas.py','recipe-atlas/static/method-families.mjs','recipe-atlas/static/reader-app.mjs','recipe-atlas/static/reader.css','recipe-atlas/templates/material-reader.html'} or p.startswith('tools/ci/method-families-') for p in paths)
+          changed = methods or any(p in {'recipe-atlas/static/protocol-visuals.mjs', 'recipe-atlas/static/reported-protocol-scenes.mjs', 'recipe-atlas/static/reported-scene-drawing.mjs', 'recipe-atlas/static/reported-scene-extensions.mjs'} or p.startswith('tools/ci/protocol-scenes-') for p in paths)
+          print('PROTOCOL_SCENES_COMPARISON_BASE=' + base)
+          print('METHOD_FAMILIES_CHANGED=' + str(int(methods)))
           print('PROTOCOL_SCENES_CHANGED=' + str(int(changed)))
           PY
       - name: Capture the eighteen protocol steps before and after the display change
@@ -121,14 +128,28 @@ jobs:
           python -m http.server 8173 --bind 127.0.0.1 --directory "$RUNNER_TEMP/protocol-serve" >"$RUNNER_TEMP/protocol-server.log" 2>&1 &
           SERVER_PID=$!
           trap 'kill "$SERVER_PID"' EXIT
-          node tools/ci/protocol-scenes-check.mjs --base https://cuiyist.github.io/mattersyn-site/ --out "$RUNNER_TEMP/protocol-scenes/before" --phase before
-          node tools/ci/protocol-scenes-check.mjs --base http://127.0.0.1:8173/mattersyn-site/ --out "$RUNNER_TEMP/protocol-scenes/after" --phase after
+          git show "${PROTOCOL_SCENES_COMPARISON_BASE}:tools/ci/protocol-scenes-targets.json" > "$RUNNER_TEMP/protocol-scenes-before-targets.json"
+          node tools/ci/protocol-scenes-check.mjs --base https://cuiyist.github.io/mattersyn-site/ --out "$RUNNER_TEMP/protocol-scenes/before" --phase before --targets "$RUNNER_TEMP/protocol-scenes-before-targets.json"
+          node tools/ci/protocol-scenes-check.mjs --base http://127.0.0.1:8173/mattersyn-site/ --out "$RUNNER_TEMP/protocol-scenes/after" --phase after --targets tools/ci/protocol-scenes-targets.json
+          if [[ "$METHOD_FAMILIES_CHANGED" == "1" ]]; then
+            mkdir -p "$RUNNER_TEMP/method-families"
+            node --input-type=module -e 'import fs from "node:fs";import {beforeTargetsFromProtocolSnapshot as convert} from "./tools/ci/method-families-check.mjs";fs.writeFileSync(process.argv[2],JSON.stringify(convert(JSON.parse(fs.readFileSync(process.argv[1],"utf8"))))+"\n",{flag:"wx"});' "$RUNNER_TEMP/protocol-scenes-before-targets.json" "$RUNNER_TEMP/method-families-before-targets.json"
+            node tools/ci/method-families-check.mjs --base https://cuiyist.github.io/mattersyn-site/ --out "$RUNNER_TEMP/method-families/before" --phase before --targets "$RUNNER_TEMP/method-families-before-targets.json"
+            node tools/ci/method-families-check.mjs --base http://127.0.0.1:8173/mattersyn-site/ --out "$RUNNER_TEMP/method-families/after" --phase after --targets tools/ci/method-families-targets.json
+          fi
       - name: Retain protocol before/after screenshots
         if: always() && matrix.os == 'ubuntu-latest' && env.PROTOCOL_SCENES_CHANGED == '1'
         uses: actions/upload-artifact@v4
         with:
           name: mattersyn-protocol-scenes-${{ github.sha }}
           path: ${{ runner.temp }}/protocol-scenes/
+          retention-days: 14
+      - name: Retain method-family before/after screenshots
+        if: always() && matrix.os == 'ubuntu-latest' && env.METHOD_FAMILIES_CHANGED == '1'
+        uses: actions/upload-artifact@v4
+        with:
+          name: mattersyn-method-families-${{ github.sha }}
+          path: ${{ runner.temp }}/method-families/
           retention-days: 14
       - name: Retain test receipts
         if: always()
