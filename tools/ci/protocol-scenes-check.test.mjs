@@ -95,7 +95,7 @@ const rect = (left, top, width, height) => ({ left, top, right: left + width, bo
 const label = (left, top, px = 13) => ({ tag: 'span', visible: true, screen_font_px: px, text_bounds: rect(left, top, 40, 16) });
 function drawingMetrics() {
   const a = label(15, 15), b = label(215, 15);
-  return { renderer: 'reported-fields', reported_drawings: [{ bounds: rect(0, 0, 400, 300), leaf_labels: [a, b], fact_blocks: [
+  return { renderer: 'reported-fields', reported_drawings: [{ bounds: rect(0, 0, 400, 300), layout: 'leader-lines-v2', apparatus_bounds: rect(8, 80, 384, 210), svg_bounds: rect(8, 80, 384, 210), leader_line_count: 2, plain_annotations: [{border_width_px: 0, background_transparent: true}], leaf_labels: [a, b], fact_blocks: [
     { class_name: 'reported-scene-inlet', bounds: rect(10, 10, 150, 70), leaf_labels: [a] },
     { class_name: 'reported-scene-atmosphere', bounds: rect(210, 10, 150, 70), leaf_labels: [b] },
   ] }] };
@@ -148,7 +148,10 @@ class MetricNode {
   getBoundingClientRect() { return this.bounds; }
   contains(node) { return node === this || this.children.some((child) => child.contains(node)); }
   querySelectorAll(selector) {
-    const matches = (node, term) => term.startsWith('.') ? node.className.split(/\s+/).includes(term.slice(1)) : node.tagName.toLowerCase() === term;
+    const matches = (node, term) => {
+      if (term === '[data-part="leader-line"] path') return node.tagName === 'PATH' && node.parentElement?.dataset.part === 'leader-line';
+      return term.startsWith('.') ? node.className.split(/\s+/).includes(term.slice(1)) : node.tagName.toLowerCase() === term;
+    };
     const terms = selector.split(',').map((term) => term.trim()), out = [];
     for (const child of this.children) { if (terms.some((term) => matches(child, term))) out.push(child); out.push(...child.querySelectorAll(selector)); }
     return out;
@@ -170,8 +173,11 @@ function metricFixture() {
   const strong = new MetricNode('strong', '', rect(20, 20, 90, 18), [indicator]);
   const value = new MetricNode('span', '', rect(20, 45, 90, 18));
   const plate = new MetricNode('div', 'reported-scene-heating-plate', rect(10, 10, 120, 70), [strong, value]);
-  const equipment = new MetricNode('div', 'reported-scene-equipment', rect(5, 5, 200, 200), [plate]);
-  const drawing = new MetricNode('div', 'reported-scene-drawing', rect(0, 0, 400, 300), [equipment]);
+  const line = new MetricNode('path', '', rect(10, 10, 15, 30));
+  const leaders = new MetricNode('g', '', rect(10, 10, 15, 30), [line]); leaders.dataset.part = 'leader-line';
+  const svg = new MetricNode('svg', '', rect(8, 8, 384, 200), [leaders]);
+  const equipment = new MetricNode('div', 'reported-scene-apparatus', rect(8, 8, 384, 280), [svg, plate]);
+  const drawing = new MetricNode('div', 'reported-scene-drawing', rect(0, 0, 400, 300), [equipment]); drawing.dataset.layout = 'leader-lines-v2';
   const outside = new MetricNode('dl', 'reported-scene-labels', rect(0, 310, 400, 30), [new MetricNode('dd', '', rect(0, 310, 100, 16), [], '8px')]);
   const art = new MetricNode('div', 'protocol-art', rect(0, 0, 400, 350), [drawing, outside]); art.dataset.renderer = 'reported-fields';
   return { art, drawing };
@@ -201,4 +207,31 @@ test('direct no-argument invocation is inert and does not require Playwright or 
   const result = spawnSync(process.execPath, [script], { encoding: 'utf8', env: { ...process.env, PLAYWRIGHT_DIR: 'Z:/definitely-not-installed' } });
   assert.equal(result.status, 0, result.stderr);
   assert.deepEqual(JSON.parse(result.stdout), { status: 'DEFAULT_INERT', browser_started: false, network_calls: 0, screenshots_created: 0 });
+});
+
+test('G drawings keep a full-width centered apparatus with plain connected labels', () => {
+  for (const [mutate, message] of [
+    [(d) => { d.layout = 'corner-boxes'; }, /leader-label/],
+    [(d) => { d.apparatus_bounds = rect(60, 80, 280, 210); }, /drawing width/],
+    [(d) => { d.apparatus_bounds = rect(0, 80, 370, 210); }, /centered/],
+    [(d) => { d.svg_bounds = rect(100, 80, 200, 210); }, /fill its panel/],
+    [(d) => { d.plain_annotations[0].border_width_px = 1; }, /label boxes/],
+    [(d) => { d.plain_annotations[0].background_transparent = false; }, /transparent/],
+    [(d) => { d.leader_line_count = 0; }, /leader lines/],
+  ]) { const metrics = drawingMetrics(); mutate(metrics.reported_drawings[0]); assert.throws(() => checkReportedDrawing('after', metrics), message); }
+});
+
+test('nested temperature is measured once inside its heater, without hiding independent overlap', () => {
+  withMetricDOM(() => {
+    const { art, drawing } = metricFixture();
+    const plate = drawing.querySelector('.reported-scene-heating-plate');
+    const value = plate.children[1];
+    const temperature = new MetricNode('div', 'reported-scene-temperature', rect(15, 40, 105, 30), [value]);
+    plate.children[1] = temperature; temperature.parentElement = plate;
+    const metrics = fontMetrics(art);
+    assert.equal(metrics.reported_drawings[0].fact_blocks.length, 1);
+    assert.equal(metrics.reported_drawings[0].leaf_labels.length, 2);
+    assert.equal(metrics.reported_drawings[0].leader_line_count, 1);
+    checkReportedDrawing('after', metrics);
+  });
 });

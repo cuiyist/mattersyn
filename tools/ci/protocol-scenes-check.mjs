@@ -122,6 +122,20 @@ export function checkReportedDrawing(phase, metrics) {
     && inner.top >= outer.top - epsilon && inner.right <= outer.right + epsilon && inner.bottom <= outer.bottom + epsilon;
   const drawing = drawings[0];
   assert(rectangle(drawing.bounds), 'The reported drawing must be visible and measurable');
+  assert.equal(drawing.layout, 'leader-lines-v2', 'The reported drawing must use the large leader-label layout');
+  assert(inside(drawing.apparatus_bounds, drawing.bounds), 'The apparatus panel must stay inside the drawing');
+  assert(drawing.apparatus_bounds.width >= drawing.bounds.width * 0.90, 'The apparatus must use the drawing width');
+  const center = (r) => (r.left + r.right) / 2;
+  assert(Math.abs(center(drawing.apparatus_bounds) - center(drawing.bounds)) <= 8, 'The apparatus panel must be centered');
+  assert(inside(drawing.svg_bounds, drawing.apparatus_bounds), 'The apparatus SVG must stay inside its panel');
+  assert(drawing.svg_bounds.width >= drawing.apparatus_bounds.width * 0.95, 'The apparatus SVG must fill its panel');
+  assert(Number.isSafeInteger(drawing.leader_line_count) && drawing.leader_line_count >= 0);
+  assert(Array.isArray(drawing.plain_annotations));
+  for (const label of drawing.plain_annotations) {
+    assert.equal(label.border_width_px, 0, 'Leader annotations must not use label boxes');
+    assert(label.background_transparent, 'Leader annotations must have transparent backgrounds');
+  }
+  if (drawing.plain_annotations.length) assert(drawing.leader_line_count > 0, 'Reported labels need thin leader lines');
   assert(Array.isArray(drawing.leaf_labels) && Array.isArray(drawing.fact_blocks));
   for (const label of drawing.leaf_labels) {
     assert(label.visible && Number.isFinite(label.screen_font_px) && label.screen_font_px >= 12,
@@ -211,8 +225,23 @@ export function fontMetrics(art) {
         screen_font_px: screenFont(node), text_bounds: { left: text.left, top: text.top, right: text.right, bottom: text.bottom, width: text.width, height: text.height } };
     };
     const factSelector = '.reported-scene-inlet,.reported-scene-atmosphere,.reported-scene-duration,.reported-scene-temperature,.reported-scene-heating-plate';
-    return { bounds: bounds(drawing), leaf_labels: leafNodes.map(leaf),
-      fact_blocks: [...drawing.querySelectorAll(factSelector)].map((block) => ({ class_name: block.className, bounds: bounds(block), leaf_labels: leafNodes.filter((node) => block.contains(node)).map(leaf) })) };
+    // Nested heater temperature text is part of the heater block; independent
+    // blocks still must not overlap. Count every leaf once in its outer block.
+    const blocks = [...drawing.querySelectorAll(factSelector)];
+    const apparatus = drawing.querySelector('.reported-scene-apparatus');
+    const svg = apparatus?.querySelector('svg');
+    const plainSelector = '.reported-scene-inlet,.reported-scene-source,.reported-scene-atmosphere,.reported-scene-duration,.reported-scene-temperature,.reported-scene-substrate';
+    const transparent = (color) => !color || color === 'transparent' || /^rgba\([^)]*,\s*0(?:\.0+)?\)$/.test(color);
+    return { bounds: bounds(drawing), layout: drawing.dataset.layout || null,
+      apparatus_bounds: apparatus ? bounds(apparatus) : null, svg_bounds: svg ? bounds(svg) : null,
+      leader_line_count: drawing.querySelectorAll('[data-part="leader-line"] path').length,
+      plain_annotations: [...drawing.querySelectorAll(plainSelector)].filter((node) => !blocks.some((block) => block.className === 'reported-scene-heating-plate' && block.contains(node))).map((node) => {
+        const style = getComputedStyle(node);
+        return { border_width_px: Math.max(...['borderTopWidth', 'borderRightWidth', 'borderBottomWidth', 'borderLeftWidth'].map((key) => parseFloat(style[key]) || 0)),
+          background_transparent: transparent(style.backgroundColor) && (!style.backgroundImage || style.backgroundImage === 'none') };
+      }),
+      leaf_labels: leafNodes.map(leaf),
+      fact_blocks: blocks.filter((block) => !blocks.some((parent) => parent !== block && parent.contains(block))).map((block) => ({ class_name: block.className, bounds: bounds(block), leaf_labels: leafNodes.filter((node) => block.contains(node)).map(leaf) })) };
   });
   return { scene: art.dataset.scene || null, classes: art.className, external_image_count: art.querySelectorAll('img').length,
     inline_svg_count: art.querySelectorAll('svg').length, labels, minimum_measured_screen_font_px: sizes.length ? Math.min(...sizes) : null,
