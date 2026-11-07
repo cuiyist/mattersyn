@@ -1,3 +1,5 @@
+import { extendedReportedScene } from './reported-scene-extensions.mjs';
+import { createReportedDrawing } from './reported-scene-drawing.mjs';
 // Reader-only scenes. No record writes, paper/model reads or source-specific art.
 // The caller preserves handmade/per-paper handlers and calls this only at the
 // source-bound/generic fallback boundary. A null result retains the old image.
@@ -180,7 +182,7 @@ function addedNames(o, r, sceneKind) {
   return [...new Set(names)];
 }
 
-export function reportedProtocolSceneSpec(o, r = {}, options = {}) {
+function baseSceneSpec(o, r = {}, options = {}, extendedKind = null) {
   if (!o || !present(o.action)) return null;
   const action = words(o.action), own = words([o.action, o.label].filter(Boolean).join(' '));
   const ownDetails = words([o.action, o.label, o.description].filter(Boolean).join(' '));
@@ -198,8 +200,9 @@ export function reportedProtocolSceneSpec(o, r = {}, options = {}) {
     && !positive(ownDetails, /\b(?:water|solvent) vapou?r\b/);
   const unsupportedSolidPreparation = positive(ownDetails, /\bmortar\b|\bpestle\b/)
     || positive(ownDetails, /\b(?:powders?|wafer|substrate|dry solids?)\b/) && !liquidContext;
-  let kind = null;
-  if (positive(action, /\bcentrifug\w*\b/)) kind = 'centrifuge';
+  let kind = extendedKind;
+  if (kind) { /* Explicit own-field extension, selected only after the original rules fail. */ }
+  else if (positive(action, /\bcentrifug\w*\b/)) kind = 'centrifuge';
   else if (positive(action, /\bfilter\w*\b/)) kind = 'filter';
   else if (positive(action, /\b(?:wash\w*|rins\w*|precipitat\w*|floccul\w*|redisper\w*|resuspend\w*)\b/)) kind = 'workup-tube';
   else if (positive(action, /\bdry\w*\b/)) kind = 'dry-tube';
@@ -227,11 +230,17 @@ export function reportedProtocolSceneSpec(o, r = {}, options = {}) {
   if (!kind) return null;
   const workup = ['centrifuge', 'filter', 'workup-tube', 'dry-tube'].includes(kind);
   const useVessel = stepVessel || (!workup ? vessel : null);
-  const heating = ['reflux', 'furnace'].includes(kind)
+  const heatStopped = /\b(?:without|no) (?:further )?heat(?:ing)?\b|\bheat(?:ing)? (?:was |is )?(?:removed|off|stopped)\b|\b(?:remove|stop|turn off|switch off) (?:the )?heat(?:ing)?\b/.test(ownDetails);
+  const heating = !heatStopped && (['reflux', 'furnace'].includes(kind)
     || !workup && (positive(action, /\bheat\w*\b/)
-      || ['solution', 'inject'].includes(kind) && ownHotTemperature(o));
+      || ['solution', 'inject'].includes(kind) && ownHotTemperature(o)));
   const gasLine = /nitrogen|argon|helium|hydrogen|oxygen|\bn2\b|\bar\b|\bo2\b|vacuum|inert|gas|flow|bubbl/i.test(environment)
     || positive(action, /\b(?:evacuat\w*|vacuum)\b/);
+  // A mixing action alone does not establish magnetic stirring. An explicit
+  // stirring statement draws only a schematic stir bar, not a speed or vortex.
+  const stirStatement = text(o.description) || text(o.label) || text(o.action);
+  const stirring = positive(stirStatement, /\bstir\w*\b/)
+    || positive(reportedText(line?.stirring), /\bstir\w*\b|\bmagnetic\b/);
   const conditions = Object.entries(o.parameters || {}).filter(([key, q]) => conditionKeys.test(key) && quantityReported(q))
     .map(([key, quantity]) => ({key, quantity}));
   const added = addedNames(o, r, kind);
@@ -240,7 +249,7 @@ export function reportedProtocolSceneSpec(o, r = {}, options = {}) {
     || positive(own, /\b(?:beam|flux|source feed)\b/)
     || /\b(?:as|sb)[24]\b|\b(?:beam|flux)\b/i.test(environment));
   return {
-    kind, heating, gasLine, environment, vessel: useVessel,
+    kind, heating, gasLine, stirring, environment, vessel: useVessel,
     // Workup gets the requested generic tube symbol without claiming a reported
     // vessel name, capacity or fittings. A reported shape still takes precedence.
     vesselKind: useVessel ? vesselKind(useVessel) : workup ? 'tube' : 'plain',
@@ -253,45 +262,21 @@ export function reportedProtocolSceneSpec(o, r = {}, options = {}) {
   };
 }
 
+export function reportedProtocolSceneSpec(o, r = {}, options = {}) {
+  const known = baseSceneSpec(o, r, options);
+  if (known) return known;
+  const extension = extendedReportedScene(o, r, {descriptor: baseSceneSpec, readReactorLineNote: options.readReactorLine});
+  if (!extension.kind) return null;
+  // Extensions cannot borrow synthesis equipment or route context for a transfer,
+  // storage or bookkeeping step. Only their own validated apparatus survives.
+  const scoped = {...r, method: 'Other', products: (r.products || []).map(p => ({...p,
+    notes: (p.notes || []).filter(note => !/^Reactor:/.test(note))}))};
+  const own = extension.selector_action ? {...o, action: extension.selector_action} : o;
+  const spec = baseSceneSpec(own, scoped, {...options, routeLabel: ''}, extension.kind);
+  return spec ? {...spec, extensionRule: extension.rule} : null;
+}
+
 export const reportedProtocolSceneDescriptor = reportedProtocolSceneSpec;
-
-const glass = '#edf4f7', ink = '#668594';
-const paths = {
-  vessel: `<path d="M174 54h72v68c48 17 65 51 49 84-12 27-39 40-85 40s-73-13-85-40c-16-33 1-67 49-84Z" fill="${glass}" stroke="${ink}" stroke-width="3"/><path d="M131 194q79 18 158 0" fill="none" stroke="#adc4ce" stroke-width="3"/>`,
-  heater: `<rect x="137" y="252" width="146" height="20" rx="5" fill="#dce6eb" stroke="${ink}" stroke-width="3"/><path d="M168 261h84" stroke="#a67d5b" stroke-width="3"/>`,
-  syringe: `<g transform="translate(271 28) rotate(25)"><path d="M0 0v22m-13-22h26m-9 22v55h-18V22Zm-9 55v49" fill="${glass}" stroke="${ink}" stroke-width="3"/></g>`,
-  gas: `<path d="M72 47h72v34h30m-42-34v-18" fill="none" stroke="${ink}" stroke-width="3"/>`,
-  tube: `<path d="M165 64h90v145c0 46-90 46-90 0Z" fill="${glass}" stroke="${ink}" stroke-width="3"/><path d="M168 177q42 12 84 0" fill="none" stroke="#adc4ce" stroke-width="3"/>`,
-};
-
-function solutionVessel(spec) {
-  if (spec.vesselKind === 'three-neck-flask') return paths.vessel
-    + `<path d="M151 130V78h20v40M249 130V78h20v40" fill="${glass}" stroke="${ink}" stroke-width="3"/>`;
-  if (spec.vesselKind === 'flask') return paths.vessel;
-  if (spec.vesselKind === 'tube') return paths.tube;
-  if (spec.vesselKind === 'vial') return `<path d="M163 78h94v145q-47 27-94 0Z" fill="${glass}" stroke="${ink}" stroke-width="3"/><path d="M159 78h102" stroke="${ink}" stroke-width="5"/>`;
-  if (spec.vesselKind === 'beaker') return `<path d="M147 84h112l16-10v150q-64 29-128 0Z" fill="${glass}" stroke="${ink}" stroke-width="3"/>`;
-  // No narrow neck, side arms, graduation, capacity or fitted lid when absent.
-  return `<path d="M148 98h124v126q-62 28-124 0Z" fill="${glass}" stroke="${ink}" stroke-width="3"/><path d="M151 180q59 12 118 0" fill="none" stroke="#adc4ce" stroke-width="3"/>`;
-}
-
-function diagram(spec) {
-  const {kind} = spec;
-  if (kind === 'chamber') return `<rect x="60" y="48" width="300" height="180" rx="22" fill="${glass}" stroke="${ink}" stroke-width="3"/><path d="M180 180h100v13H180z" fill="none" stroke="${ink}" stroke-width="3"/>`
-    + (spec.sourceFeed ? spec.beamSystem
-      ? `<path d="M95 85l70 60m-48-9 48 9-9-47" fill="none" stroke="${ink}" stroke-width="3"/>`
-      : `<path d="M109 25v50h34v57" fill="none" stroke="${ink}" stroke-width="3"/>` : '')
-    + (spec.gasLine ? paths.gas : '');
-  if (kind === 'closed-reactor') return `<rect x="142" y="61" width="136" height="179" rx="25" fill="${glass}" stroke="${ink}" stroke-width="4"/><path d="M127 62h166v-16H127zM160 26h100v20M177 9v18m66-18v18" fill="${glass}" stroke="${ink}" stroke-width="3"/>`;
-  if (kind === 'furnace') return `<rect x="65" y="45" width="290" height="194" rx="14" fill="#eef1f3" stroke="${ink}" stroke-width="4"/><rect x="94" y="77" width="232" height="126" rx="8" fill="#f6f6f3" stroke="${ink}" stroke-width="2"/><path d="M170 158h80l-12 28h-56Z" fill="${glass}" stroke="${ink}" stroke-width="3"/>`;
-  if (kind === 'mill-jar') return `<rect x="119" y="71" width="182" height="139" rx="36" fill="${glass}" stroke="${ink}" stroke-width="4"/><path d="M125 100h170M130 180h160M94 139H59m12-11-12 11 12 11m255-11h35m-12-11 12 11-12 11" fill="none" stroke="${ink}" stroke-width="3"/><g fill="#cedde5" stroke="${ink}" stroke-width="2"><circle cx="172" cy="136" r="13"/><circle cx="221" cy="163" r="13"/><circle cx="248" cy="126" r="13"/></g>`;
-  if (kind === 'filter') return `<path d="M115 46h190l-80 110v36l-30 10v-46Z" fill="${glass}" stroke="${ink}" stroke-width="3"/><path d="M164 219v43h92v-43M210 196v31" fill="none" stroke="${ink}" stroke-width="3"/>`;
-  if (kind === 'centrifuge') return `<ellipse cx="170" cy="147" rx="99" ry="69" fill="${glass}" stroke="${ink}" stroke-width="4"/><circle cx="170" cy="147" r="24" fill="#dbe6ec" stroke="${ink}" stroke-width="3"/><path d="m125 111 90 72m0-72-90 72" stroke="${ink}" stroke-width="8"/><g transform="translate(132 0) scale(.8)">${paths.tube}</g>`;
-  if (kind === 'workup-tube' || kind === 'dry-tube') return solutionVessel(spec) + (spec.gasLine ? paths.gas : '');
-  if (kind === 'reflux') return `<path d="M190 12h40v105h-40zM210 117v20M190 36h-22m62 56h22" fill="${glass}" stroke="${ink}" stroke-width="3"/>` + solutionVessel(spec) + paths.heater + (spec.gasLine ? paths.gas : '');
-  return solutionVessel(spec) + (spec.heating ? paths.heater : '') + (kind === 'inject' ? paths.syringe : '')
-    + (spec.gasLine ? paths.gas : '') + (kind === 'cool' ? `<path d="M330 93v92m-13-16 13 16 13-16" fill="none" stroke="${ink}" stroke-width="3"/>` : '');
-}
 
 function htmlNode(tag, value) {
   const n = document.createElement(tag);
@@ -313,15 +298,6 @@ export function createReportedProtocolScene(o, r, options = {}) {
   host.dataset.reportedScene = 'true';
   Object.assign(host.style, {display: 'grid', gridTemplateColumns: 'minmax(0,1fr)',
     height: 'auto', minHeight: '260px', minWidth: '0', width: '100%', gap: '12px'});
-  const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-  svg.setAttribute('viewBox', '0 0 420 280');
-  svg.setAttribute('role', 'img');
-  svg.setAttribute('aria-label', (['workup-tube', 'dry-tube'].includes(spec.kind)
-    ? spec.kind.replace('-tube', '') : spec.kind).replaceAll('-', ' ') + ' operation diagram');
-  svg.style.width = '100%';
-  svg.style.height = 'auto';
-  svg.style.maxHeight = '280px';
-  svg.innerHTML = diagram(spec); // Fixed geometry only: never record-provided markup.
   const labels = htmlNode('dl');
   labels.className = 'reported-scene-labels';
   Object.assign(labels.style, {margin: '0', display: 'grid', gap: '7px'});
@@ -334,15 +310,19 @@ export function createReportedProtocolScene(o, r, options = {}) {
   if (spec.added.length) row('Added this step', spec.added.join('; '));
   if (spec.substrates.length) row('Reported substrate', spec.substrates.join('; '));
   if (spec.vessel) row(spec.vessel.scope === 'recipe' ? 'Reported recipe vessel' : 'Reported vessel', spec.vessel.value);
+  const formattedConditions = [];
   for (const {key, quantity} of spec.conditions) {
     // The existing Reader amount() formatter retains qualifiers and bases.
     // Do not invent a replacement when no formatter was supplied.
     let formatted = typeof options.formatQuantity === 'function' ? options.formatQuantity(quantity) : '';
     if ((!present(formatted) || /not reported|unavailable/i.test(formatted)) && roomTemperature(quantity))
       formatted = text(quantity.raw_text) || text(quantity.qualifier);
-    if (present(formatted) && !/not reported|unavailable/i.test(formatted)) row(key.replaceAll('_', ' '), formatted);
+    if (present(formatted) && !/not reported|unavailable/i.test(formatted)) {
+      row(key.replaceAll('_', ' '), formatted);
+      formattedConditions.push({key, value: formatted});
+    }
   }
   if (spec.environment) row('Reported atmosphere', spec.environment);
-  host.append(svg, labels);
+  host.append(createReportedDrawing(spec, formattedConditions), labels);
   return host;
 }

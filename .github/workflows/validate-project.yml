@@ -56,7 +56,7 @@ jobs:
       - name: Test shared thermal stage illustrations
         run: node --test recipe-atlas/tests/generic-thermal-scenes.test.mjs
       - name: Test reported protocol scenes and screenshot target contract
-        run: node --test recipe-atlas/tests/reported-protocol-scenes.test.mjs tools/ci/protocol-scenes-check.test.mjs
+        run: node --test recipe-atlas/tests/reported-protocol-scenes.test.mjs recipe-atlas/tests/reported-scene-extensions.test.mjs tools/ci/protocol-scenes-check.test.mjs
       - name: Test source-scoped apparatus context
         run: node --test recipe-atlas/tests/yu1998-scene-scope.test.mjs
       - name: Test reader specimen and figure isolation
@@ -107,10 +107,10 @@ jobs:
           base = os.environ['COMPARISON_BASE']
           if not base.strip('0'): base = 'HEAD^'
           paths = subprocess.check_output(['git', 'diff', '--name-only', base, 'HEAD'], text=True).splitlines()
-          changed = any(p in {'recipe-atlas/static/protocol-visuals.mjs', 'recipe-atlas/static/reported-protocol-scenes.mjs'} or p.startswith('tools/ci/protocol-scenes-') for p in paths)
+          changed = any(p in {'recipe-atlas/static/protocol-visuals.mjs', 'recipe-atlas/static/reported-protocol-scenes.mjs', 'recipe-atlas/static/reported-scene-drawing.mjs', 'recipe-atlas/static/reported-scene-extensions.mjs'} or p.startswith('tools/ci/protocol-scenes-') for p in paths)
           print('PROTOCOL_SCENES_CHANGED=' + str(int(changed)))
           PY
-      - name: Capture the fifteen protocol steps before and after the display change
+      - name: Capture the eighteen protocol steps before and after the display change
         if: matrix.os == 'ubuntu-latest' && env.PROTOCOL_SCENES_CHANGED == '1'
         run: |
           npm install --silent --no-save --prefix "$RUNNER_TEMP/protocol-pw" playwright@1.48.2

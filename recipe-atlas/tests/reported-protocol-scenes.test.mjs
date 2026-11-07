@@ -38,9 +38,9 @@ test('wafer desorption uses its reported epitaxy system without a liquid vessel'
   assert.equal(choose(op('heat', 'Heat the wafer')), null);
 });
 
-test('dry powder preparation keeps its image instead of borrowing a liquid vessel', () => {
+test('dry preparation uses only its explicit supported apparatus or keeps its image', () => {
   assert.equal(choose(op('mix', 'Resulting powder was well mixed using an agate mortar and pestle'),
-    rec({products: [{notes: ['Reactor: closed aluminum crucible (Main PDF p.2).']}]})), null);
+    rec({products: [{notes: ['Reactor: closed aluminum crucible (Main PDF p.2).']}]})).kind, 'mortar-pestle');
   assert.equal(choose(op('mix', 'Mix Mg and B powders in the stoichiometric ratio of MgB2'),
     rec({method: 'Powder-in-tube', products: [{notes: ['Reactor: planetary ball mill (Main PDF p.2).']}]})), null);
 });
@@ -85,12 +85,13 @@ test('workup uses a generic tube symbol unless its own vessel is reported', () =
   }
 });
 
-test('deposition uses its own reported system while ordinary solution growth does not', () => {
+test('deposition uses its reported system while explicit solution growth uses a plain vessel', () => {
   assert.equal(choose(op('grow'), rec({method: 'Molecular beam epitaxy'})).kind, 'chamber');
   assert.equal(choose(op('deposit'), rec({method: 'Chemical vapor deposition'})).kind, 'chamber');
   assert.equal(choose(op('sputter'), rec({method: 'Sputtering'})).kind, 'chamber');
   assert.equal(choose(op('evaporate'), rec({method: 'Thermal evaporation'})).kind, 'chamber');
-  assert.equal(choose(op('grow', 'Grow crystals in solution')), null);
+  assert.equal(choose(op('grow', 'Grow crystals in solution')).kind, 'solution');
+  assert.equal(choose(op('grow', 'Grow crystals')), null);
   assert.equal(choose(op('wash'), rec({method: 'MBE'})).kind, 'workup-tube');
 });
 
@@ -271,7 +272,7 @@ test('scientific labels are unscaled HTML with >=12px type and wrapping', () => 
   assert.ok(labels.length >= 6);
   assert.ok(labels.every(n => parseFloat(n.style.fontSize) >= 12 && n.style.overflowWrap === 'anywhere'));
   assert.match(labels.map(n => n.textContent).join(' '), /retained qualifier/);
-  const svg = scene.children[0];
+  const svg = all(scene).find(n => n.tagName === 'svg');
   assert.doesNotMatch(svg.innerHTML, /<text\b|retained qualifier|Argon|precursor name/);
 }));
 
@@ -280,13 +281,13 @@ test('reported vessel names select different fixed shapes and an absent vessel s
   for (const [name, kind] of [['Beaker', 'beaker'], ['Vial', 'vial'], ['Test tube', 'tube'], ['Round-bottom flask', 'flask'], ['Three-neck flask', 'three-neck-flask']]) {
     const operation = op('mix', 'Mix', {vessel: {status: 'reported', value: name}});
     assert.equal(choose(operation).vesselKind, kind);
-    rendered.set(kind, createReportedProtocolScene(operation, rec()).children[0].innerHTML);
+    rendered.set(kind, all(createReportedProtocolScene(operation, rec())).find(n => n.tagName === 'svg').innerHTML.replaceAll(/reported-art-\d+/g, 'art'));
   }
   assert.equal(new Set(rendered.values()).size, 5);
   const plain = createReportedProtocolScene(op('mix'), rec());
   assert.equal(choose(op('mix')).vesselKind, 'plain');
-  assert.ok(![...rendered.values()].includes(plain.children[0].innerHTML));
-  assert.doesNotMatch(plain.children[0].innerHTML, /M174 54h72v68/); // the old flask neck
+  assert.ok(![...rendered.values()].includes(all(plain).find(n => n.tagName === 'svg').innerHTML.replaceAll(/reported-art-\d+/g, 'art')));
+  assert.doesNotMatch(all(plain).find(n => n.tagName === 'svg').innerHTML.replaceAll(/reported-art-\d+/g, 'art'), /M174 54h72v68/); // the old flask neck
 }));
 
 test('reported room-temperature qualifier or raw spelling is kept without a numeric temperature', () => withDocument(() => {
@@ -310,9 +311,9 @@ test('record values never enter SVG markup and no repeated caveat is inside the 
   const name = '<img src=x onerror=alert(1)>';
   const scene = createReportedProtocolScene(op('add', 'Add', {inputs: ['m']}), rec({materials: [{id: 'm', name, role: 'ligand'}]}));
   assert.ok(all(scene).some(n => n.textContent === name));
-  assert.ok(!scene.children[0].innerHTML.includes(name));
+  assert.ok(!all(scene).find(n => n.tagName === 'svg').innerHTML.includes(name));
   assert.ok(!all(scene).some(n => n.textContent === REPORTED_SCENE_CAVEAT));
-  assert.doesNotMatch(scene.children[0].innerHTML, /schematic|illustrative|not measured|not reported/i);
+  assert.doesNotMatch(all(scene).find(n => n.tagName === 'svg').innerHTML, /schematic|illustrative|not measured|not reported/i);
 }));
 
 test('all matched families produce diagram geometry without fetching or mutating records', () => withDocument(() => {
@@ -320,7 +321,7 @@ test('all matched families produce diagram geometry without fetching or mutating
   for (const operation of cases) {
     const r = freeze(rec({operations: [operation]})), before = JSON.stringify(r);
     const scene = createReportedProtocolScene(operation, r, {formatQuantity: quantity => String(quantity.value)});
-    assert.ok(scene && scene.children[0].innerHTML.length > 30);
+    assert.ok(scene && all(scene).find(n => n.tagName === 'svg').innerHTML.length > 30);
     assert.equal(JSON.stringify(r), before);
   }
 }));
@@ -429,3 +430,83 @@ test('stock mapping and literal labels do not mutate frozen records', () => {
   freeze(f.record); assert.deepEqual(added(f), ['fresh aqueous NaBH4 solution']);
   assert.equal(JSON.stringify(f.record), raw);
 });
+
+
+test('on-drawing facts sit by ports, duration and heated plate, with the full rows retained', () => withDocument(() => {
+  const materials = ['one', 'two', 'three', 'four'].map(id => ({id, name: id + ' precursor', role: 'metal_precursor'}));
+  const scene = createReportedProtocolScene(op('heat', 'Heat and add', {inputs: materials.map(m => m.id),
+    parameters: {temperature: q(180), duration: q(30, 'min')}, environment: {status: 'reported', value: 'Nitrogen'}}), rec({materials}),
+    {formatQuantity: q => `${q.value} ${q.unit}`});
+  const elements = all(scene), byClass = c => elements.find(n => n.className === c);
+  assert.equal(byClass('reported-scene-inlet').children.length, 4); // heading + at most three names
+  assert.ok(byClass('reported-scene-labels') && elements.some(n => n.tagName === 'dd' && n.textContent.includes('four precursor')));
+  assert.ok(all(byClass('reported-scene-heating-plate')).some(n => n.textContent === '180 degC'));
+  assert.ok(all(byClass('reported-scene-atmosphere')).some(n => n.textContent === 'Nitrogen'));
+  assert.ok(all(byClass('reported-scene-duration')).some(n => n.textContent === '30 min'));
+  assert.ok(elements.filter(n => ['span', 'strong', 'dt', 'dd'].includes(n.tagName)).every(n => parseFloat(n.style.fontSize) >= 12));
+}));
+
+test('glass shading is neutral and a stir bar and lit heater require own-step reports', () => withDocument(() => {
+  for (const [operation, stirred, heated] of [
+    [op('mix', 'Mix'), false, false], [op('stir', 'Stir'), true, false],
+    [op('heat', 'Heat while stirring'), true, true],
+    [op('mix', 'Mix', {description: 'Mix without stirring.'}), false, false],
+  ]) {
+    const scene = createReportedProtocolScene(operation, rec()), elements = all(scene);
+    const svg = elements.find(n => n.tagName === 'svg');
+    assert.match(svg.innerHTML, /linearGradient/);
+    assert.equal(svg.innerHTML.includes('data-part="stir-bar"'), stirred);
+    assert.equal(elements.some(n => n.className === 'reported-scene-heating-indicator'), heated);
+  }
+}));
+
+test('three-neck gas ends above the open right neck and never crosses a side wall', () => withDocument(() => {
+  const scene = createReportedProtocolScene(op('add', 'Add', {vessel: {status: 'reported', value: 'Three-neck flask'},
+    environment: {status: 'reported', value: 'N2'}}), rec());
+  const svg = all(scene).find(n => n.tagName === 'svg');
+  assert.match(svg.innerHTML, /data-part="gas-line" d="M276 17H195V57"/);
+  assert.doesNotMatch(svg.innerHTML, /M72 47h72v34h30/);
+  assert.ok(!all(scene).some(n => n.className === 'reported-scene-heating-plate'));
+}));
+
+test('ambient air labels do not create a gas connection, absent facts create no callouts', () => withDocument(() => {
+  const scene = createReportedProtocolScene(op('mix', 'Mix', {environment: {status: 'reported', value: 'Ambient air'}}), rec());
+  const elements = all(scene);
+  assert.ok(elements.some(n => n.textContent === 'Ambient air'));
+  assert.doesNotMatch(elements.find(n => n.tagName === 'svg').innerHTML, /data-part="gas-line"/);
+  assert.ok(!elements.some(n => ['reported-scene-inlet', 'reported-scene-duration', 'reported-scene-temperature'].includes(n.className)));
+}));
+
+test('separate rendered and enlarged scenes have unique gradient and clipping IDs', () => withDocument(() => {
+  const a = all(createReportedProtocolScene(op('mix'), rec())).find(n => n.tagName === 'svg').innerHTML;
+  const b = all(createReportedProtocolScene(op('mix'), rec())).find(n => n.tagName === 'svg').innerHTML;
+  const ids = s => [...s.matchAll(/id="([^"]+)"/g)].map(m => m[1]);
+  assert.ok(ids(a).every(id => !ids(b).includes(id)));
+}));
+
+
+test('explicit removal of heating does not light a plate from a hot injection temperature', () => withDocument(() => {
+  const operation = op('inject', 'Inject after heat was removed', {parameters: {temperature: q(200)}});
+  assert.equal(choose(operation).heating, false);
+  const scene = createReportedProtocolScene(operation, rec(), {formatQuantity: q => `${q.value} ${q.unit}`});
+  assert.ok(!all(scene).some(n => n.className === 'reported-scene-heating-indicator'));
+  assert.ok(all(scene).some(n => n.textContent === '200 degC'));
+}));
+
+test('own As4 flux is labelled beside chamber beams without inferring a numeric flux', () => withDocument(() => {
+  const scene = createReportedProtocolScene(op('grow', 'Grow GaAs', {environment: {status: 'reported', value: 'As4 flux'}}), rec({method: 'MBE'}));
+  const feed = all(scene).find(n => n.className === 'reported-scene-inlet');
+  assert.ok(feed && all(feed).some(n => n.textContent === 'As4 flux'));
+}));
+
+
+test('injection tips and gas lines meet every reported vessel opening without clipping', () => withDocument(() => {
+  for (const [name, x, y, gx] of [['Three-neck flask',105,61,195],['Round-bottom flask',142,28,158],['Test tube',136,67,168],['Vial',129,69,176],['Beaker',122,75,190],['',124,83,185]]) {
+    const operation=op('inject','Inject',{vessel:name?{status:'reported',value:name}:undefined,environment:{status:'reported',value:'N2'}});
+    const svg=all(createReportedProtocolScene(operation,rec())).find(n=>n.tagName==='svg');
+    assert.ok(svg.innerHTML.includes(`data-part="syringe" transform="translate(${x} ${y-118})"`));
+    assert.ok(svg.innerHTML.includes(`M276 17H${gx}V${y-4}`));
+    assert.ok(Number(svg.attributes.viewBox.split(' ')[1])<=y-124);
+    assert.doesNotMatch(svg.innerHTML,/rotate\(-22\)/);
+  }
+}));
