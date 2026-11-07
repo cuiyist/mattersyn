@@ -7,6 +7,7 @@ import {matchProtocolCondition} from '../static/protocol-conditions.mjs';
 import {conditionFieldText,conditionDisclosureText} from '../static/source-field-copy.mjs';
 import {createReportedProtocolScene,REPORTED_SCENE_CAVEAT} from '../static/reported-protocol-scenes.mjs';
 import {selectProtocolArt} from '../static/protocol-art-binding.mjs';
+import {operationKind} from '../static/protocol-operation-kind.mjs';
 
 // Invented fixtures only. No production record, source, asset, HTTP or model I/O.
 const keys=['vessel_type','atmosphere','schlenk_line','glovebox','heating_method','stirring','addition_method','cooling_method'];
@@ -127,7 +128,7 @@ test('the retained original fact helper demonstrates the hidden-note and raw-JSO
 function mountWithInertProviders(overrides={}){
  const source=readFileSync(new URL('../static/protocol-visuals.mjs',import.meta.url),'utf8');
  const names=[...source.matchAll(/^import \{([^}]+)\} from .+;$/gm)].flatMap(m=>m[1].split(',').map(n=>n.trim().split(/\s+as\s+/).at(-1)));
- const actual={readReactorLineNote,reactorEnvironmentText,createReactorLineDetails,reactorLineCaption,reactorDisplayRecord,reactorQuantityUnavailable,quantityValue,matchProtocolCondition,conditionFieldText,conditionDisclosureText,...overrides,kind:()=> 'context',mountProtocolReferences:()=>Promise.resolve()};
+ const actual={readReactorLineNote,reactorEnvironmentText,createReactorLineDetails,reactorLineCaption,reactorDisplayRecord,reactorQuantityUnavailable,quantityValue,matchProtocolCondition,conditionFieldText,conditionDisclosureText,kind:()=> 'context',mountProtocolReferences:()=>Promise.resolve(),...overrides};
  const inert=()=>null;
  const code=source.replace(/^import .+;\r?\n/gm,'').replace('export function mountProtocol','function mountProtocol');
  // Per-paper providers are now looked up in the lazily filled table P, not imported.
@@ -486,11 +487,40 @@ test('a generated step missing from an existing binding uses the rich fallback',
  assert.doesNotMatch(host.textContent,/Old admitted image/);
 }));
 
-test('unsupported generated actions retain the existing generic fallback',()=>dom(()=>{
- const r=generatedRevisionRecord();r.operations[0].action='unsupported_fixture';r.operations[0].label='Unsupported fixture';r.operations[0].description='Unsupported fixture';
- const host=new Element('div');mountWithInertProviders(reportedProviders)(host,r);
- assert.ok(flatten(host).some(n=>n.dataset.scene==='context'));assert.ok(!flatten(host).some(n=>n.dataset.renderer==='reported-fields'));
- assert.ok(!host.textContent.includes(REPORTED_SCENE_CAVEAT));
+test('unsupported generated actions use a neutral action card instead of apparatus',()=>dom(()=>{
+ for(const id of ['d2-s02-grow','d3-s02-grow','d10-s02-grow'])for(const status of ['source_extracted','source_reviewed','unknown']){
+  const r=generatedRevisionRecord(id,status),op=r.operations[0];op.action='grow';op.label='Grow fixture shell';op.description=op.label;
+  op.parameters={};op.environment={value:null,status:'not_reported',note:'',evidence:[]};
+  assert.equal(operationKind(op),'heat');assert.equal(createReportedProtocolScene(op,r),null);
+  const before=JSON.stringify(r),host=new Element('div');
+  mountWithInertProviders({...reportedProviders,kind:operationKind,createGenericThermalScene:()=>{throw Error('Unsupported generated step entered legacy apparatus');}})(host,r);
+  const card=flatten(host).find(n=>n.dataset.renderer==='reported-action');assert.ok(card,id+' '+status);
+  assert.equal(card.dataset.scene,'action');assert.equal(card.textContent,op.label);
+  assert.ok(flatten(card).filter(n=>n.tagName==='P').every(n=>parseFloat(n.style.fontSize)>=12));
+  assert.equal(flatten(card).filter(n=>['SVG','IMG'].includes(n.tagName)).length,0);
+  assert.ok(flatten(card).every(n=>n.innerHTML===undefined));
+  assert.doesNotMatch(card.textContent,/HEAT|HEATING|flask|vessel|nitrogen|80/);
+  assert.equal(host.textContent.split(REPORTED_SCENE_CAVEAT).length-1,1);
+  assert.ok(!host.textContent.includes('Enlarge operation diagram'));
+  assert.equal(JSON.stringify(r),before);
+ }
+}));
+
+test('an unsupported generated action card preserves only its literal label safely',()=>dom(()=>{
+ const r=generatedRevisionRecord('d2-s02-functionalize'),op=r.operations[0];op.action='in_situ_functionalization';op.label='Functionalize <fixture markup>';op.description=op.label;
+ op.parameters={};op.environment={value:null,status:'not_reported',note:'',evidence:[]};
+ const host=new Element('div');mountWithInertProviders({...reportedProviders,kind:operationKind})(host,r);
+ const card=flatten(host).find(n=>n.dataset.renderer==='reported-action');assert.ok(card);assert.equal(card.textContent,op.label);
+ assert.ok(flatten(card).every(n=>n.innerHTML===undefined));assert.equal(flatten(card).length,2);
+}));
+
+test('a bound generated operation still retains its admitted image when its scene is unsupported',()=>dom(()=>{
+ const r=generatedRevisionRecord('d2-s02-grow'),op=r.operations[0];op.action='grow';op.label='Grow fixture shell';op.description=op.label;op.parameters={};op.environment={value:null,status:'not_reported',note:'',evidence:[]};
+ const host=new Element('div'),binding={asset_path:'assets/protocol/fixture.svg',caption:'Existing exact illustration.',source_locator:'Fixture page 2'};
+ mountWithInertProviders({...reportedProviders,kind:operationKind,selectProtocolArt:()=>binding})(host,r,'https://example.invalid/');
+ assert.equal(flatten(host).find(n=>n.tagName==='IMG').src,'https://example.invalid/assets/protocol/fixture.svg');
+ assert.ok(!flatten(host).some(n=>n.dataset.renderer==='reported-action'));
+ assert.match(host.textContent,/Existing exact illustration/);
 }));
 
 test('original and malformed non-generated IDs never enter the new fallback',()=>dom(()=>{
