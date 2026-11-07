@@ -1,7 +1,7 @@
 {
   "schema_version": "1.3.0",
   "record_id": "koh2017-acs-chemmater-7b01648-in-zn-p-qds-2",
-  "revision": 1,
+  "revision": 2,
   "record_type": "literature_protocol",
   "title": "Sungjun Koh; Taedaehyeong Eom; Whi Dong Kim; Kangha Lee; Dongkyu Lee; Young Kuk Lee; Hyungjun Kim; Wan Ki Bae; Doh C. Lee (2017): In(Zn)P QDs",
   "material": {
@@ -22,7 +22,7 @@
     {
       "id": "koh2017-acs-chemmater-7b01648",
       "doi": "10.1021/acs.chemmater.7b01648",
-      "title": "Zinc–Phosphorus Complex Working as an Atomic Valve for Colloidal Growth of Monodisperse Indium Phosphide Quantum Dots",
+      "title": "Zinc\u2013Phosphorus Complex Working as an Atomic Valve for Colloidal Growth of Monodisperse Indium Phosphide Quantum Dots",
       "authors": "Sungjun Koh; Taedaehyeong Eom; Whi Dong Kim; Kangha Lee; Dongkyu Lee; Young Kuk Lee; Hyungjun Kim; Wan Ki Bae; Doh C. Lee",
       "year": 2017,
       "url": "https://doi.org/10.1021/acs.chemmater.7b01648",
@@ -75,9 +75,14 @@
       "derivation": null
     },
     "morphology": {
-      "value": null,
-      "status": "not_reported",
-      "evidence": [],
+      "value": "sphere",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "koh2017-acs-chemmater-7b01648",
+          "locator": "Main PDF p.2"
+        }
+      ],
       "note": ""
     }
   },
@@ -276,13 +281,321 @@
   "stocks": [],
   "material_states": [
     {
+      "id": "koh2017-acs-chemmater-7b01648-in-zn-p-qds-2--after-d2-s01-add",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "koh2017-acs-chemmater-7b01648-in-zn-p-qds-2--indium-acetate",
+        "koh2017-acs-chemmater-7b01648-in-zn-p-qds-2--myristic-acid",
+        "koh2017-acs-chemmater-7b01648-in-zn-p-qds-2--zinc-stearate",
+        "koh2017-acs-chemmater-7b01648-in-zn-p-qds-2--1-octadecene"
+      ]
+    },
+    {
+      "id": "koh2017-acs-chemmater-7b01648-in-zn-p-qds-2--after-d2-s02-degas",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "koh2017-acs-chemmater-7b01648-in-zn-p-qds-2--after-d2-s01-add"
+      ]
+    },
+    {
+      "id": "koh2017-acs-chemmater-7b01648-in-zn-p-qds-2--after-d2-s03-purge",
+      "name": "mixture after step 3",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "koh2017-acs-chemmater-7b01648-in-zn-p-qds-2--after-d2-s02-degas"
+      ]
+    },
+    {
+      "id": "koh2017-acs-chemmater-7b01648-in-zn-p-qds-2--after-d2-s04-add",
+      "name": "mixture after step 4",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "koh2017-acs-chemmater-7b01648-in-zn-p-qds-2--after-d2-s03-purge",
+        "koh2017-acs-chemmater-7b01648-in-zn-p-qds-2--tris-trimethylsilyl-phosphine"
+      ]
+    },
+    {
+      "id": "koh2017-acs-chemmater-7b01648-in-zn-p-qds-2--after-d2-s05-degas",
+      "name": "mixture after step 5",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "koh2017-acs-chemmater-7b01648-in-zn-p-qds-2--after-d2-s04-add"
+      ]
+    },
+    {
       "id": "koh2017-acs-chemmater-7b01648-in-zn-p-qds-2--after-s01-heat",
+      "name": "mixture after step 6",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "koh2017-acs-chemmater-7b01648-in-zn-p-qds-2--after-d2-s05-degas"
+      ]
+    },
+    {
+      "id": "koh2017-acs-chemmater-7b01648-in-zn-p-qds-2--after-d2-s07-cool",
       "name": "product as isolated",
       "kind": "product",
-      "parent_ids": []
+      "parent_ids": [
+        "koh2017-acs-chemmater-7b01648-in-zn-p-qds-2--after-s01-heat"
+      ]
     }
   ],
   "operations": [
+    {
+      "id": "d2-s01-add",
+      "action": "add",
+      "label": "Add indium acetate, myristic acid, zinc stearate, and 1-octadecene to flask",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "koh2017-acs-chemmater-7b01648-in-zn-p-qds-2--indium-acetate",
+        "koh2017-acs-chemmater-7b01648-in-zn-p-qds-2--myristic-acid",
+        "koh2017-acs-chemmater-7b01648-in-zn-p-qds-2--zinc-stearate",
+        "koh2017-acs-chemmater-7b01648-in-zn-p-qds-2--1-octadecene"
+      ],
+      "outputs": [
+        "koh2017-acs-chemmater-7b01648-in-zn-p-qds-2--after-d2-s01-add"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "Ar",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "koh2017-acs-chemmater-7b01648",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Add indium acetate, myristic acid, zinc stearate, and 1-octadecene to flask",
+      "evidence": [
+        {
+          "source_id": "koh2017-acs-chemmater-7b01648",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "d2-s02-degas",
+      "action": "degas",
+      "label": "Degas solution under reduced pressure",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "d2-s01-add"
+      ],
+      "inputs": [
+        "koh2017-acs-chemmater-7b01648-in-zn-p-qds-2--after-d2-s01-add"
+      ],
+      "outputs": [
+        "koh2017-acs-chemmater-7b01648-in-zn-p-qds-2--after-d2-s02-degas"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 110,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "110 \u00b0C",
+          "evidence": [
+            {
+              "source_id": "koh2017-acs-chemmater-7b01648",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 2,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "2 h",
+          "evidence": [
+            {
+              "source_id": "koh2017-acs-chemmater-7b01648",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "Ar",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "koh2017-acs-chemmater-7b01648",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Degas solution under reduced pressure",
+      "evidence": [
+        {
+          "source_id": "koh2017-acs-chemmater-7b01648",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "d2-s03-purge",
+      "action": "purge",
+      "label": "Purge flask with argon",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "d2-s02-degas"
+      ],
+      "inputs": [
+        "koh2017-acs-chemmater-7b01648-in-zn-p-qds-2--after-d2-s02-degas"
+      ],
+      "outputs": [
+        "koh2017-acs-chemmater-7b01648-in-zn-p-qds-2--after-d2-s03-purge"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "Ar",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "koh2017-acs-chemmater-7b01648",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Purge flask with argon",
+      "evidence": [
+        {
+          "source_id": "koh2017-acs-chemmater-7b01648",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "d2-s04-add",
+      "action": "add",
+      "label": "Add tris(trimethylsilyl)phosphine",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "d2-s03-purge"
+      ],
+      "inputs": [
+        "koh2017-acs-chemmater-7b01648-in-zn-p-qds-2--after-d2-s03-purge",
+        "koh2017-acs-chemmater-7b01648-in-zn-p-qds-2--tris-trimethylsilyl-phosphine"
+      ],
+      "outputs": [
+        "koh2017-acs-chemmater-7b01648-in-zn-p-qds-2--after-d2-s04-add"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "Ar",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "koh2017-acs-chemmater-7b01648",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Add tris(trimethylsilyl)phosphine",
+      "evidence": [
+        {
+          "source_id": "koh2017-acs-chemmater-7b01648",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "d2-s05-degas",
+      "action": "degas",
+      "label": "Degas solution again to remove hexane",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "d2-s04-add"
+      ],
+      "inputs": [
+        "koh2017-acs-chemmater-7b01648-in-zn-p-qds-2--after-d2-s04-add"
+      ],
+      "outputs": [
+        "koh2017-acs-chemmater-7b01648-in-zn-p-qds-2--after-d2-s05-degas"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "Ar",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "koh2017-acs-chemmater-7b01648",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Degas solution again to remove hexane",
+      "evidence": [
+        {
+          "source_id": "koh2017-acs-chemmater-7b01648",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
     {
       "id": "s01-heat",
       "action": "heat",
@@ -290,8 +603,12 @@
       "stage": "synthesis",
       "branch": "",
       "optional": false,
-      "depends_on": [],
-      "inputs": [],
+      "depends_on": [
+        "d2-s05-degas"
+      ],
+      "inputs": [
+        "koh2017-acs-chemmater-7b01648-in-zn-p-qds-2--after-d2-s05-degas"
+      ],
       "outputs": [
         "koh2017-acs-chemmater-7b01648-in-zn-p-qds-2--after-s01-heat"
       ],
@@ -305,7 +622,7 @@
           "approximate": false,
           "qualifier": "",
           "basis": "",
-          "raw_text": "300 °C",
+          "raw_text": "300 \u00b0C",
           "evidence": [
             {
               "source_id": "koh2017-acs-chemmater-7b01648",
@@ -334,9 +651,14 @@
         }
       },
       "environment": {
-        "value": null,
-        "status": "not_reported",
-        "evidence": [],
+        "value": "Ar",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "koh2017-acs-chemmater-7b01648",
+            "locator": "Main PDF p.2"
+          }
+        ],
         "note": ""
       },
       "endpoint": {
@@ -353,6 +675,68 @@
           "locator": "Main PDF p.2"
         }
       ]
+    },
+    {
+      "id": "d2-s07-cool",
+      "action": "cool",
+      "label": "Cool solution to room temperature",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-heat"
+      ],
+      "inputs": [
+        "koh2017-acs-chemmater-7b01648-in-zn-p-qds-2--after-s01-heat"
+      ],
+      "outputs": [
+        "koh2017-acs-chemmater-7b01648-in-zn-p-qds-2--after-d2-s07-cool"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 20,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "20 min",
+          "evidence": [
+            {
+              "source_id": "koh2017-acs-chemmater-7b01648",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "Ar",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "koh2017-acs-chemmater-7b01648",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Cool solution to room temperature",
+      "evidence": [
+        {
+          "source_id": "koh2017-acs-chemmater-7b01648",
+          "locator": "Main PDF p.2"
+        }
+      ]
     }
   ],
   "condition_options": [],
@@ -361,7 +745,7 @@
       "sample_id": "koh2017-acs-chemmater-7b01648-in-zn-p-qds-2--product",
       "source_sample_label": "In(Zn)P QDs",
       "batch_id": null,
-      "material_state_id": "koh2017-acs-chemmater-7b01648-in-zn-p-qds-2--after-s01-heat",
+      "material_state_id": "koh2017-acs-chemmater-7b01648-in-zn-p-qds-2--after-d2-s07-cool",
       "parent_sample_id": null,
       "composition": {
         "value": "In(Zn)P",
@@ -386,9 +770,14 @@
         "note": ""
       },
       "morphology": {
-        "value": null,
-        "status": "not_reported",
-        "evidence": [],
+        "value": "sphere",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "koh2017-acs-chemmater-7b01648",
+            "locator": "Main PDF p.2"
+          }
+        ],
         "note": ""
       },
       "surface": {
@@ -411,7 +800,8 @@
       ],
       "notes": [
         "Reaction temperature: 300 degC (Main PDF p.2).",
-        "Reaction time: 20 min (Main PDF p.2)."
+        "Reaction time: 20 min (Main PDF p.2).",
+        "Reactor: three-neck round-bottom flask (50 mL, 14/20) (Main PDF p.2)."
       ]
     }
   ],
@@ -421,10 +811,7 @@
     "review_status": "source_extracted",
     "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
     "missing_fields": [
-      "Shape not reported in the extracted text.",
-      "Size not reported in the extracted text.",
-      "Reactor not reported in the extracted text.",
-      "Atmosphere not reported in the extracted text."
+      "Size not reported in the extracted text."
     ],
     "conflicts": [],
     "requested_tasks": [],

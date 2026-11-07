@@ -1,7 +1,7 @@
 {
   "schema_version": "1.3.0",
   "record_id": "zhou2011-cm202368w-mpa-stabilized-cdte-qds-1",
-  "revision": 1,
+  "revision": 2,
   "record_type": "literature_protocol",
   "title": "Ding Zhou; Min Lin; Zhaolai Chen; Haizhu Sun; Hao Zhang; Hongchen Sun; Bai Yang (2011): MPA-stabilized CdTe QDs",
   "material": {
@@ -39,9 +39,14 @@
   },
   "intended_target": {
     "composition": {
-      "value": null,
-      "status": "not_reported",
-      "evidence": [],
+      "value": "CdTe",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "zhou2011-cm202368w",
+          "locator": "Main PDF p.2"
+        }
+      ],
       "note": ""
     },
     "phase": {
@@ -99,13 +104,64 @@
   "stocks": [],
   "material_states": [
     {
+      "id": "zhou2011-cm202368w-mpa-stabilized-cdte-qds-1--after-d2-s01-dissolve",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "zhou2011-cm202368w-mpa-stabilized-cdte-qds-1--cdcl2"
+      ]
+    },
+    {
       "id": "zhou2011-cm202368w-mpa-stabilized-cdte-qds-1--after-s01-store",
       "name": "product as isolated",
       "kind": "product",
-      "parent_ids": []
+      "parent_ids": [
+        "zhou2011-cm202368w-mpa-stabilized-cdte-qds-1--after-d2-s01-dissolve"
+      ]
     }
   ],
   "operations": [
+    {
+      "id": "d2-s01-dissolve",
+      "action": "dissolve",
+      "label": "Dissolve CdCl2 in water",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "zhou2011-cm202368w-mpa-stabilized-cdte-qds-1--cdcl2"
+      ],
+      "outputs": [
+        "zhou2011-cm202368w-mpa-stabilized-cdte-qds-1--after-d2-s01-dissolve"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "zhou2011-cm202368w",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Dissolve CdCl2 in water",
+      "evidence": [
+        {
+          "source_id": "zhou2011-cm202368w",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
     {
       "id": "s01-store",
       "action": "store",
@@ -113,8 +169,12 @@
       "stage": "synthesis",
       "branch": "",
       "optional": false,
-      "depends_on": [],
-      "inputs": [],
+      "depends_on": [
+        "d2-s01-dissolve"
+      ],
+      "inputs": [
+        "zhou2011-cm202368w-mpa-stabilized-cdte-qds-1--after-d2-s01-dissolve"
+      ],
       "outputs": [
         "zhou2011-cm202368w-mpa-stabilized-cdte-qds-1--after-s01-store"
       ],
@@ -139,9 +199,14 @@
         }
       },
       "environment": {
-        "value": null,
-        "status": "not_reported",
-        "evidence": [],
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "zhou2011-cm202368w",
+            "locator": "Main PDF p.2"
+          }
+        ],
         "note": ""
       },
       "endpoint": {
@@ -169,9 +234,14 @@
       "material_state_id": "zhou2011-cm202368w-mpa-stabilized-cdte-qds-1--after-s01-store",
       "parent_sample_id": null,
       "composition": {
-        "value": null,
-        "status": "not_reported",
-        "evidence": [],
+        "value": "CdTe",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "zhou2011-cm202368w",
+            "locator": "Main PDF p.2"
+          }
+        ],
         "note": ""
       },
       "phase": {
@@ -205,7 +275,8 @@
         }
       ],
       "notes": [
-        "Reaction time: 2 h (Main PDF p.2)."
+        "Reaction time: 2 h (Main PDF p.2).",
+        "Reactor: conical flask (Main PDF p.2)."
       ]
     }
   ],
@@ -218,8 +289,6 @@
       "Shape not reported in the extracted text.",
       "Ligand not reported in the extracted text.",
       "Size not reported in the extracted text.",
-      "Reactor not reported in the extracted text.",
-      "Atmosphere not reported in the extracted text.",
       "Reaction temperature not reported in the extracted text.",
       "Amount of CdCl2 not reported in the extracted text."
     ],
