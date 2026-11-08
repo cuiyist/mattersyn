@@ -69,7 +69,7 @@ function geometry(spec, id, facts) {
     const beamSources=facts.sources.filter(source=>source.identified);
     body=`<circle data-part="round-chamber" cx="150" cy="147" r="106" ${metal}/><circle cx="150" cy="147" r="89" fill="#f7fbfd" stroke="#b8ccd8" stroke-width="2"/>
       <path d="M25 132H46V164H25ZM254 132H275V164H254Z" ${metal}/><path d="M28 127V169M272 127V169" stroke="${ink}" stroke-width="4"/>
-      <path data-part="substrate-holder" d="M106 181H194V190H106ZM134 190H166V218H134Z" fill="#b5c9d5" stroke="${ink}" stroke-width="2"/>
+      <path data-part="substrate-holder" d="M106 181H194V190H106Z" fill="#b5c9d5" stroke="${ink}" stroke-width="2"/><path data-part="substrate-stem" d="M134 190H166V218H134Z" fill="#b5c9d5" stroke="${ink}" stroke-width="2"/>
       <path data-part="substrate" d="M115 176H185V181H115Z" fill="#b6a6a0" stroke="${ink}" stroke-width="1.5"/>
       ${facts.heaterTemperatures.length||spec.heating?`<path data-part="substrate-heater" d="M125 199H175V208H125Z" fill="${spec.heating?'#d9b18e':'#cbd7de'}" stroke="${ink}" stroke-width="1.5"/>`:''}`;
     const n=beamSources.length;
@@ -195,7 +195,11 @@ export function reportedDrawingFacts(spec, formattedConditions = []) {
   }
   const heaterTemperatures=temperatures.filter(c=>!sourceTemperatures.includes(c));
   const primaryHeaterTemperature=heaterTemperatures[0]||null;
-  const primaryHeaterShortValue=spec.kind==='chamber'&&typeof primaryHeaterTemperature?.shortValue==='string'&&clean(primaryHeaterTemperature.shortValue)?primaryHeaterTemperature.shortValue:null;
+  // A compact face has room for one short typed value. Longer values keep
+  // their full original formatted text in the existing flow/leader path. This
+  // chooses layout only: no quantity text is parsed, shortened or truncated.
+  const short=primaryHeaterTemperature?.shortValue;
+  const primaryHeaterShortValue=spec.kind==='chamber'&&typeof short==='string'&&clean(short)&&Array.from(short).length<=12?short:null;
   return {added:added.slice(0,3),addedIndicesShown:added.slice(0,3).map(x=>x.index),sources,atmosphere:atmosphere.join('; '),sourceEnvironment,
     heaterTemperatures,sourceTemperatures,primaryHeaterShortValue,
     flowHeaterTemperatures:spec.kind==='chamber'?(primaryHeaterShortValue?heaterTemperatures.slice(1):heaterTemperatures):[],
@@ -233,8 +237,11 @@ export function createReportedDrawing(spec, conditions = []) {
   if(spec.heating||facts.primaryHeaterShortValue){
     const plate=node('div');plate.className='reported-scene-heating-plate';if(!spec.heating)plate.dataset.passive='true';
     Object.assign(plate.style,{display:'grid',gap:'3px',width:'min(78%,300px)',minWidth:'0',marginTop:'-5px',boxSizing:'border-box',textAlign:'center',padding:'6px 8px',borderTop:'4px solid #b6c7d2',borderRadius:'3px 3px 8px 8px',background:'linear-gradient(#e4ecf1,#c4d3dd)'});
-    if(spec.kind==='chamber')Object.assign(plate.style,{position:'absolute',left:'50%',top:(199/bottom*100)+'%',transform:'translateX(-50%)',width:'76%',marginTop:'0',padding:'0',borderTop:'0',borderRadius:'0',background:'none'});
-    if(spec.heating){const lamp=node('i');lamp.className='reported-scene-heating-indicator';lamp.setAttribute('aria-hidden','true');Object.assign(lamp.style,{display:'inline-block',width:'7px',height:'7px',marginLeft:'7px',borderRadius:'50%',background:'#dc9854',boxShadow:'0 0 4px #e8b982'});if(spec.kind==='chamber'&&facts.primaryHeaterShortValue)plate.append(lamp);else{const state=node('strong','HEATING');state.append(lamp);plate.append(state);}}
+    if(spec.kind==='chamber'){
+      plate.dataset.heaterFront='true';
+      Object.assign(plate.style,{position:'absolute',left:'50%',top:(205/bottom*100)+'%',transform:'translate(-50%,-50%)',display:'flex',alignItems:'center',justifyContent:'center',gap:'4px',width:'max-content',maxWidth:'76%',whiteSpace:'nowrap',marginTop:'0',padding:'1px 6px',border:'1px solid #7899ad',borderTop:'1px solid #7899ad',borderRadius:'2px',background:'#d6e2e9'});
+    }
+    if(spec.heating){const lamp=node('i');lamp.className='reported-scene-heating-indicator';lamp.setAttribute('aria-hidden','true');Object.assign(lamp.style,{display:'inline-block',width:'7px',height:'7px',marginLeft:'7px',borderRadius:'50%',background:'#dc9854',boxShadow:'0 0 4px #e8b982'});if(spec.kind==='chamber')lamp.style.marginLeft=facts.primaryHeaterShortValue?'0':'5px';if(spec.kind==='chamber'&&facts.primaryHeaterShortValue)plate.append(lamp);else{const state=node('strong','HEATING');state.append(lamp);plate.append(state);}}
     const values=spec.kind==='chamber'?(facts.primaryHeaterShortValue?[facts.primaryHeaterShortValue]:[]):facts.heaterTemperatures.map(c=>`${c.key.replaceAll('_',' ')}: ${c.shortValue||c.value}`);
     const temp=annotation('reported-scene-temperature','',values);if(temp)plate.append(temp);(spec.kind==='chamber'?plot:equipment).append(plate);
   }

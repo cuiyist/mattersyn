@@ -173,4 +173,53 @@ class FamiliesTest(unittest.TestCase):
   self.assertEqual(m.classify_record(r,'ZnS')['kind'],'processing')
   r['operations'][0]['inputs'].remove('seed-stock');self.assertNotEqual(m.classify_record(r,'ZnS')['kind'],'processing')
   r['material']['architecture']='single_material';r['method']='Seed-mediated Au growth';r['operations'][0]['inputs'].append('seed-stock');self.assertNotEqual(m.classify_record(r,'Au')['kind'],'processing')
+
+ def sparse_shell_record(self):
+  r=record(metal='Zn(C2H3O2)2',nonmetal='S',route='Hot injection')
+  r['material'].update(formula='AgIn5S8/ZnS',architecture='core_shell',components=['AgIn5S8','ZnS'])
+  r['operations'][0].update(action='add',label='ZnS solution added',description='ZnS solution added')
+  r['operations'] += [{'id':'cool','action':'cool','stage':'synthesis','inputs':[]},{'id':'centrifuge','action':'centrifuge','stage':'workup','inputs':[]},{'id':'redisperse','action':'redisperse','stage':'workup','inputs':[]}]
+  return r
+ def test_sparse_shell_addition_without_core_origin_is_Other(self):
+  r=self.sparse_shell_record();old=copy.deepcopy(r);c=m.classify_record(r,'ZnS')
+  self.assertEqual(c['kind'],'other');self.assertEqual(c['reason'],'sparse_core_shell_context');self.assertEqual(r,old)
+ def test_sparse_shell_with_consumed_given_core_is_Processing(self):
+  r=self.sparse_shell_record();r['materials'].append(mat('given','preformed AIS cores','seed'));r['operations'][0]['inputs'].append('given')
+  self.assertEqual(m.classify_record(r,'ZnS')['kind'],'processing')
+ def test_unused_inventory_core_does_not_promote_sparse_shell(self):
+  r=self.sparse_shell_record();r['materials'].append(mat('given','preformed AIS cores','seed'))
+  self.assertEqual(m.classify_record(r,'ZnS')['reason'],'sparse_core_shell_context')
+ def test_own_core_creation_before_shell_feed_stays_synthesis(self):
+  r=self.sparse_shell_record()
+  r['operations'].insert(0,{'id':'make-core','action':'inject','label':'Inject reported core precursor to form AIS cores','stage':'synthesis','inputs':[]})
+  self.assertEqual(m.classify_record(r,'ZnS')['kind'],'synthesis')
+ def test_Hanley_like_core_then_shell_preparation_stays_synthesis(self):
+  r=record(metal='CdO',nonmetal='S',route='Hot injection');r['material'].update(formula='CdSe/CdS',architecture='core_shell',components=['CdSe','CdS'])
+  r['materials'] += [mat('se','selenium','chalcogen_precursor'),mat('top','TOP','ligand')]
+  r['operations']=[{'id':'charge','action':'cool','label':'Cool CdO mixture','stage':'synthesis','inputs':['metal']},{'id':'prepare-se','action':'prepare','label':'Prepare Se precursor','stage':'synthesis','inputs':['se','top']},{'id':'inject-se','action':'inject','label':'Inject Se precursor into CdO mixture','stage':'synthesis','inputs':['metal','se','top']},{'id':'inject-shell','action':'inject','label':'Inject CdSe/TOPS solution into Cd solution','stage':'synthesis','inputs':['metal','nonmetal']},{'id':'quench','action':'quench','label':'Quench reaction','stage':'synthesis','inputs':[]}]
+  self.assertEqual(m.classify_record(r,'CdS')['kind'],'synthesis')
+ def test_sparse_guard_requires_explicit_shell_formula_feed_and_core_shell_identity(self):
+  r=self.sparse_shell_record();r['operations'][0]['label']=r['operations'][0]['description']='Add materials'
+  self.assertIsNone(m.sparse_core_shell_context(r))
+  r=self.sparse_shell_record();r['material']['architecture']='single_material'
+  self.assertIsNone(m.sparse_core_shell_context(r))
+ def test_sparse_guard_does_not_guess_through_unknown_growth_steps(self):
+  r=self.sparse_shell_record();r['operations'].append({'id':'growth','action':'grow','stage':'synthesis','inputs':[]})
+  self.assertIsNone(m.sparse_core_shell_context(r))
+
+ def test_sparse_multilayer_unknown_architecture_component_feed_and_heat_is_Other(self):
+  r=self.sparse_shell_record();r['material'].update(formula='AgIn3Se5/ZnSe/ZnS',architecture='unresolved',components=['AgIn3Se5','ZnSe','ZnS'])
+  r['operations'][0]['action']='inject';r['operations'][0]['label']=r['operations'][0]['description']='ZnS precursor injected'
+  r['material_states']=[{'id':'after-add','parent_ids':['metal','nonmetal']}]
+  r['operations']=[r['operations'][0],{'id':'hold','action':'heat','stage':'synthesis','label':'Maintain the mixture','inputs':['after-add']}]
+  self.assertEqual(m.classify_record(r,'ZnS')['reason'],'sparse_core_shell_context')
+ def test_sparse_component_guard_preserves_other_consumed_precursor_evidence(self):
+  r=self.sparse_shell_record();r['materials'].append(mat('in','indium chloride','metal_precursor','InCl3'));r['operations'][0]['inputs'].append('in')
+  self.assertIsNone(m.sparse_core_shell_context(r))
+ def test_explicit_core_creation_in_conditioning_step_is_not_sparse_shell_only(self):
+  r=self.sparse_shell_record();r['operations'].append({'id':'core','action':'heat','stage':'synthesis','label':'Grow the AIS cores','inputs':[]})
+  self.assertIsNone(m.sparse_core_shell_context(r))
+ def test_single_material_seeded_Au_growth_stays_synthesis_under_sparse_guard(self):
+  r=record(metal='HAuCl4',route='Seed-mediated growth');r['material'].update(formula='Au',components=['Au'],architecture='single_material');r['materials']=[r['materials'][0],mat('seed','preformed Au nanocrystals','seed')];r['operations'][0]['inputs']=['metal','seed']
+  self.assertEqual(m.classify_record(r,'Au')['kind'],'synthesis')
 if __name__=='__main__':unittest.main(verbosity=2)

@@ -1,6 +1,6 @@
 """Pure chemical identity/context selection; no network, RDKit or I/O on import."""
 import collections, copy, re, unicodedata
-from formula_equivalence import formula_equivalent
+from formula_equivalence import formula_equivalent, parse_formula
 
 CORE_IDENTITY_SOURCE_SHA256 = '1ae5e3563d906fa093af61796d36ab6a195f08929fcd3b0b05530c08c2b56978'
 
@@ -8,6 +8,10 @@ COMPONENT_SCOPE = 'Independent molecular components only. No geometry between io
 FIXED_NAMES = {'hexane': 'hexane', 'n-hexane': 'hexane', 'ode': '1-octadecene', '1-octadecene': '1-octadecene', 'oa': 'oleic-acid', 'oleic acid': 'oleic-acid', 'ola': 'oleylamine', 'oleylamine': 'oleylamine', 'top': 'top', 'trioctylphosphine': 'top', 'tri-n-octylphosphine': 'top', 'topo': 'topo', 'trioctylphosphine oxide': 'topo', 'tri-n-octylphosphine oxide': 'topo'}
 FIXED_NAMES.update({'octane': 'octane', 'n-octane': 'octane'})
 FIXED_NAMES.update({'1-octadecene (ode)': '1-octadecene', 'oleic acid (oa)': 'oleic-acid', 'oleylamine (ola)': 'oleylamine', 'trioctylphosphine (top)': 'top', 'trioctylphosphine oxide (topo)': 'topo'})
+# Exact bounded new-lookup codes without their own CID/formula/connectivity.
+UNPROVEN_BARE_ABBREVIATIONS = frozenset(['achn', 'aibn', 'ano', 'apba', 'aptes', 'aptms', 'ctab', 'ctac', 'ddab', 'ddt', 'dmap', 'dmso', 'dotap', 'edta', 'f4-tcnq', 'fitc', 'gsh', 'meh-ppv', 'mps', 'mpts', 'nhs', 'nmp', 'np-5', 'oam', 'od', 'opa', 'opv', 'p3ht', 'pbg', 'pdda', 'pfbt', 'pmdeta', 'smcc', 'tdpa', 'teos', 'tga', 'tmaoh', 'toa', 'toab', 'tops', 'ttab', 'usy'])
+TDPA_FULL_NAMES = {'tetradecylphosphonic acid (tdpa)', '1-tetradecylphosphonic acid (tdpa)'}
+FIXED_NAMES.update({name:'tetradecylphosphonic-acid' for name in TDPA_FULL_NAMES})
 WHOLE_CONTEXT_KINDS = {'mixture', 'specimen', 'support', 'surface', 'composite', 'equipment', 'supported-particles', 'analytical-data', 'unresolved-identity', 'material-context', 'sample-context', 'host', 'material_identity', 'author_hypothesis', 'symbolic_context', 'symbolic_identity', 'context', 'identity_only', 'symbolic', 'polymer'}
 
 def key(s):
@@ -16,8 +20,40 @@ def key(s):
 def rotatable(e):
     return bool(e.get('model3dPath') or e.get('component3dModels'))
 
+def unresolved_lookup_abbreviation(e):
+    name = str(e.get('name','')).strip()
+    if (re.fullmatch('[A-Z][A-Z0-9-]{1,11}',name) is None and key(name) not in UNPROVEN_BARE_ABBREVIATIONS) or key(name) in FIXED_NAMES:
+        return False
+    if e.get('pubchemCid') is not None or e.get('formula') or e.get('model2dPath') or rotatable(e) or (e.get('provenance') or {}).get('smiles') or e.get('connectivitySmiles'):
+        return False
+    if any(alias != name and ' ' in alias and re.search('[a-z]{4}',alias) and not re.search('source|abbreviation|unreported|unspecified',alias,re.I) for alias in e.get('aliases',[])):
+        return False
+    # A formula explicitly written as the label is identity metadata; the exact
+    # bounded collisions remain held even when their letters also parse as atoms.
+    return key(name) in UNPROVEN_BARE_ABBREVIATIONS or parse_formula(name) is None
+
+def material_context_reason(e):
+    hard_kinds={'mixture','specimen','support','surface','composite','equipment','supported-particles','analytical-data','material-context','sample-context','host'}
+    name=key(e.get('name',''))
+    if e.get('depictionKind') in hard_kinds:
+        return 'whole_context'
+    # Purpose qualifiers do not change a defined reagent into its target specimen.
+    entity_name=re.split(r'\b(?:for|used in|used as)\b',name,maxsplit=1)[0].strip()
+    # Own entity wording only: no source-paper or product-phase inference.
+    pattern=r'\b(?:films?|wafers?|substrates?|nanocrystals?|nanocrystalline|nanoclusters?|nanoparticles?|nanowires?|nanorods?|nanosheets?|nanoprisms?|microbeads?|aunps?|colloids?|colloidal|sols?|electrodes?|anodes?|cathodes?|contacts?|coatings?|grids?|knudsen cells?|heaters?|markers?|doped|functionalized|capped|modified|unannealed)\b|\bnano[- ]|\bas[- ](?:synthesized|prepared|grown|deposited)\b'
+    if re.search(pattern,entity_name) or (' ' in entity_name and re.search(r'\b(?:qds?|ncs|nps)\b',entity_name)):
+        return 'whole_context'
+    return None
+
 def context_reason(e):
     name = key(e.get('name', ''))
+    entity_context=material_context_reason(e)
+    if entity_context:
+        return entity_context
+    if unresolved_lookup_abbreviation(e):
+        return 'unresolved_abbreviation'
+    if name in TDPA_FULL_NAMES and e.get('depictionKind') in WHOLE_CONTEXT_KINDS:
+        return 'whole_context'
     if re.search('\\b(?:hexanes|octanes)\\b|^octadecene$|\\b(?:mixed isomers|isomer mixture)\\b', name):
         return 'ambiguous_isomer'
     if name in {'octane', 'n-octane'} and e.get('depictionKind') in WHOLE_CONTEXT_KINDS - {'symbolic_context', 'unresolved-identity'}:
@@ -122,3 +158,7 @@ def reused_reference_errors(source_entry, reference, index, resolved_proof=None)
         if reference.get(field) != expected.get(field):
             errors.append('reused reference differs from exact original ' + field)
     return errors
+
+def requires_connected_molecule_reference(e):
+    """The known CdMe2 disconnected representation is not its molecule."""
+    return e.get('pubchemCid') == 10479 or key(e.get('name','')) in {'dimethylcadmium','dimethylcadmium (cdme2)','dimethylcadmium (me2cd)','cdme2','me2cd'}

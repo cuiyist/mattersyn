@@ -57,6 +57,28 @@ class IdentityTests(unittest.TestCase):
         target={'id':'salt-reference','name':'Known salt','formula':'C2H3NaO2','depictionKind':'ionic_components','component3dModels':[{'id':'acetate','formula':'C2H3O2-','model3dPath':'models/acetate.json','model3dSha256':'a'*64}],'component3dScope':'Original independent component scope.','caption':'Reference only'};index=identity.ReferenceIndex([target]);original=source('Known salt',formula='C2H3NaO2');ref=identity.reference_from_existing(target,'unique_exact_compound_name');before=copy.deepcopy(target);ref['component3dScope']+=' '+identity.COMPONENT_SCOPE;self.assertEqual(identity.reused_reference_errors(original,ref,index),[]);self.assertEqual(target,before)
         for scope in[identity.COMPONENT_SCOPE,'Original independent component scope. Whole sample geometry assigned.']:
             self.assertTrue(identity.reused_reference_errors(original,ref|{'component3dScope':scope},index))
+    def test_full_TDPA_name_with_its_abbreviation_reuses_only_exact_existing_identity(self):
+        target=molecule('tetradecylphosphonic-acid','Tetradecylphosphonic acid',78401,'C14H31O3P');index=identity.ReferenceIndex([target])
+        for name in['tetradecylphosphonic acid (TDPA)','1-Tetradecylphosphonic acid (TDPA)']:
+            original=source(name);before=copy.deepcopy(original);hit,reason=index.existing(original);self.assertEqual(hit['id'],target['id']);ref=identity.reference_from_existing(hit,reason);self.assertEqual(identity.reused_reference_errors(original,ref,index),[]);self.assertEqual(original,before)
+        for name in['TDPA','tetradecylphosphoric acid (TDPA)','tetradecylphosphoic acid (TDPA)','tetradecylphosphonic acid (TDPA) stock']:
+            self.assertIsNone(index.existing(source(name))[0])
+        self.assertIsNotNone(identity.context_reason(source('tetradecylphosphonic acid (TDPA)',depictionKind='mixture')))
+    def test_lookup_only_bare_codes_cannot_become_first_PubChem_identity(self):
+        for name in['TDPA','OAM','oam','DDT','MEH-PPV','TOPS','USY','NHS']:
+            with self.subTest(name=name):self.assertTrue(identity.unresolved_lookup_abbreviation(source(name)));self.assertEqual(identity.context_reason(source(name)),'unresolved_abbreviation')
+        for e in[source('ODE'),source('OA'),source('OLA'),source('TOP'),source('TOPO'),source('H2O'),source('H2SO4'),source('DMF',model2dPath='models/own-verified.json'),source('DMSO',pubchemCid=679),source('EDTA',formula='C10H16N2O8'),source('DMSO',aliases=['Dimethyl sulfoxide'])]:
+            with self.subTest(entry=e):self.assertFalse(identity.unresolved_lookup_abbreviation(e))
+    def test_dimethylcadmium_disconnected_exclusion_is_compound_wide_not_record_id(self):
+        for e in[source('Dimethylcadmium'),source('dimethylcadmium (CdMe2)'),source('dimethylcadmium (Me2Cd)'),source('CdMe2'),source('Another label',pubchemCid=10479)]:self.assertTrue(identity.requires_connected_molecule_reference(e))
+        self.assertFalse(identity.requires_connected_molecule_reference(source('Cadmium acetate')))
+    def test_H7_entity_context_precedes_ambient_formula_and_fixed_identity(self):
+        for name,formula in [('As-synthesized InP film','InP'),('GaAs wafer','GaAs'),('InP substrate','InP'),('OLAM-capped InAs QDs','InAs'),('GSH-capped Au nanoclusters','Au'),('Au-catalyzed InP nanowire stem','InP'),('Gold electrode material','Au'),('Zinc oxide preformed NPs','ZnO'),('Nano-Al analytical feed','Al')]:
+            e=source(name,formula=formula)
+            with self.subTest(name=name):self.assertEqual(identity.material_context_reason(e),'whole_context');self.assertEqual(identity.context_reason(e),'whole_context')
+        for e in[source('InP',formula='InP'),source('Indium phosphide',formula='InP'),source('Gold',formula='Au'),source('Zinc oxide powder',formula='ZnO'),source('Water in nitrate stock',pubchemCid=962,formula='H2O'),source('Water for colloidal synthesis',pubchemCid=962,formula='H2O'),source('NCS',model2dPath='models/own-ncs.json',formula='C4H4ClNO2')]:
+            with self.subTest(entry=e):self.assertIsNone(identity.material_context_reason(e));self.assertIsNone(identity.context_reason(e))
+        self.assertEqual(identity.context_reason(source('OA',depictionKind='mixture')),'whole_context')
     def test_resolved_exact_name_CID_requires_own_name_lookup_proof(self):
         target=molecule('known','Other accepted systematic name',702,'C2H6O');index=identity.ReferenceIndex([target]);original=source('Own exact reported name',formula='C2H6O');ref=identity.reference_from_existing(target,'resolved_exact_name_identical_CID');proof={'entry_id':original['id'],'query_field':'chemical_name','query':original['name'],'cid':702,'status':'UNIQUE_CID_CONNECTIVITY_CANDIDATE','cache_sha256':'a'*64,'source_url':'https://pubchem.ncbi.nlm.nih.gov/compound/702'}
         self.assertEqual(identity.reused_reference_errors(original,ref,index,proof),[]);self.assertTrue(identity.reused_reference_errors(original,ref,index))

@@ -12,7 +12,7 @@ D = Path(__file__).parent
 SCRIPTS = D.parent / 'scripts'
 sys.path.insert(0,str(SCRIPTS))
 for name in ('chemical_reference_identity', 'chemical_reference_overlay', 'chemical_reference_quality'):
-    suffix = ('.r3.proposed'if name=='chemical_reference_quality'else'.r2.proposed') if SCRIPTS == D and name in {'chemical_reference_quality','chemical_reference_identity'} else '.proposed' if SCRIPTS == D else ''
+    suffix = ('.owner-examples.proposed'if name=='chemical_reference_quality'else'.h7-context.proposed') if SCRIPTS == D and name in {'chemical_reference_quality','chemical_reference_identity'} else '.proposed' if SCRIPTS == D else ''
     filename = SCRIPTS / (name + suffix + '.py')
     spec = importlib.util.spec_from_file_location(name, filename)
     module = importlib.util.module_from_spec(spec);sys.modules[name] = module;spec.loader.exec_module(module)
@@ -88,6 +88,8 @@ class OverlayQualityTests(unittest.TestCase):
     def test_named_ligand_proof_must_match_original_entry_and_scope(self):
         import h4_named_ligand_references as h4
         self.run_check();proof={'schema':'MatterSyn-H4-named-ligand-reference/1','entry_id':h4.SN_ID,'source_CID':16685263,'source_formula':'C10H14Cl2O4Sn','reference_scope':h4.REFERENCE_SCOPE,'referenceOnly':True,'trainingEligible':False,'free_ion_claim':False,'solution_speciation_claim':False,'metal_ligand_geometry_assigned':False,'relative_component_geometry_assigned':False,'ligand_formula':'C5H7O2-','ligand_multiplicity':2,'existing_component_id':h4.ACAC_REFERENCE['id'],'source_graph_not_cleaved':True};self.ref.pop('model3dPath');self.ref.update(route='independent_component_references',component3dModels=[h4.ACAC_REFERENCE|{'caption':'Independent known named acetylacetonate reference.'}],component3dScope=h4.REFERENCE_SCOPE+' No geometry between ions is assigned.',namedLigandReference=proof);self.files['assets/chemical-registry/'+h4.ACAC_REFERENCE['model3dPath']]=encode(self.model);self.assertTrue(any('named ligand proof and original identity differ'in x for x in self.run_check(False)))
+    def test_disconnected_dimethylcadmium_exclusion_covers_Owen_ID(self):
+        self.entry.update(id='owen2008-cdse-ja804414f-cdme2',name='Dimethylcadmium',formula='C2H6Cd',pubchemCid=10479);eid=self.entry['id'];self.bindings['recordBindings']['r']['m']=eid;self.overlay['entries']={eid:self.ref};self.files['assets/chemical-registry/registry.json']=encode(self.registry);self.files['assets/chemical-registry/bindings.json']=encode(self.bindings);self.overlay['originalRegistrySha256']=hashlib.sha256(encode(self.registry)).hexdigest();self.overlay['originalBindingsSha256']=hashlib.sha256(encode(self.bindings)).hexdigest();self.run_check();component={k:self.ref[k]for k in['model3dPath','model3dSha256','caption']};component['id']='methyl';self.ref.pop('model3dPath');self.ref.update(route='independent_component_references',component3dModels=[component],component3dScope='No geometry between ions is assigned.');self.assertTrue(any('excluded disconnected CdMe2'in error for error in self.run_check()))
     def test_use_count_button_and_flags_rejected(self):
         for field,value in [('chemicalUseCount',2),('buttonLabel','Explore structure'),('trainingEligible',True),('referenceOnly',False)]:
             with self.subTest(field=field):old=self.ref[field];self.ref[field]=value;self.assertTrue(self.run_check());self.ref[field]=old
@@ -122,6 +124,7 @@ class OverlayQualityTests(unittest.TestCase):
         self.ref.update(route='ambient_crystal_reference',referenceId=crystal['id'],crystalReference=copy.deepcopy(crystal),**{key:crystal[key]for key in ('modelPath','modelSha256','cifPath','cifSha256')})
         self.proof={'formulas':{'InAs':{'reference_id':crystal['id'],'ambient_structure_unique':True,'basis':'Fixed unique ambient zinc-blende family.','registry_sha256':hashlib.sha256(crystal_raw).hexdigest(),'existing_reference_ids':[crystal['id']],'space_group_number':216}}}
         audit=SyntheticAudit();quality.check_chemical_reference_overlay(audit,self.base,self.registry,self.bindings,self.overlay,self.proof);self.assertEqual(audit.errors,[])
+        self.entry['name']='As-synthesized InAs film';self.files['assets/chemical-registry/registry.json']=encode(self.registry);self.overlay['originalRegistrySha256']=hashlib.sha256(encode(self.registry)).hexdigest();audit=SyntheticAudit();quality.check_chemical_reference_overlay(audit,self.base,self.registry,self.bindings,self.overlay,self.proof);self.assertTrue(any('context/isomer'in error for error in audit.errors));self.entry['name']='InAs';self.files['assets/chemical-registry/registry.json']=encode(self.registry);self.overlay['originalRegistrySha256']=hashlib.sha256(encode(self.registry)).hexdigest()
         self.proof['formulas']={};audit=SyntheticAudit();quality.check_chemical_reference_overlay(audit,self.base,self.registry,self.bindings,self.overlay,self.proof);self.assertTrue(any('not explicitly admitted'in error for error in audit.errors))
     def test_original_quality_classification_guard_and_ci_build_entrypoint_remain(self):
         source=D.parents[1]

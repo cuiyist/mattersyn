@@ -147,6 +147,8 @@ def check_chemical_reference_overlay(audit, base, registry, bindings, overlay, a
                 resolved=resolved_identity_proof.get('entries',{}).get(eid)
             for error in identity_rules.reused_reference_errors(entries[eid], ref, identity_index, resolved):
                 audit.check(False, label + ': ' + error)
+        if identity_rules.requires_connected_molecule_reference(entries[eid]):
+            audit.check(route == 'molecule_reference', label + ': the excluded disconnected CdMe2 representation cannot stand for a molecular reference')
         if route == 'molecule_reference':
             audit.check(not ref.get('component3dModels') and not ref.get('crystalReference'), label + ': mixed viewer routes')
             model_reference(ref, label)

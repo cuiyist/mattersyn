@@ -147,6 +147,23 @@ export function checkReportedDrawing(phase, metrics) {
     assert(label.background_transparent, 'Leader annotations must have transparent backgrounds');
   }
   if (drawing.plain_annotations.length) assert(drawing.leader_line_count > 0, 'Reported labels need thin leader lines');
+  assert(Array.isArray(drawing.chamber_heater_fronts), 'Measured chamber heater fronts are required');
+  assert(Number.isSafeInteger(drawing.chamber_heater_overlay_count) && drawing.chamber_heater_overlay_count === drawing.chamber_heater_fronts.length, 'Every chamber heater label needs an opaque inset front');
+  for (const front of drawing.chamber_heater_fronts) {
+    assert(inside(front.bounds,drawing.svg_bounds), 'The heater front must stay inside the chamber drawing');
+    assert(front.fully_opaque, 'The heater face must cover the old SVG rectangle behind its text');
+    assert(Array.isArray(front.leaf_labels) && front.leaf_labels.length, 'The heater face needs measured text');
+    for (const label of front.leaf_labels) {
+      const t=label.text_bounds,b=front.bounds;
+      assert(t.left >= b.left+2 && t.right <= b.right-2 && t.top >= b.top+2 && t.bottom <= b.bottom-2,
+        'Heater text needs a clear inset from every visible heater-face border');
+    }
+    for (const other of [front.holder_platform_bounds,...front.beam_bounds].filter(Boolean)) {
+      const a=front.bounds;
+      assert(!(Math.min(a.right,other.right)-Math.max(a.left,other.left)>epsilon && Math.min(a.bottom,other.bottom)-Math.max(a.top,other.top)>epsilon),
+        'The heater front must not obscure the holder platform or source beams');
+    }
+  }
   assert(Array.isArray(drawing.leaf_labels) && Array.isArray(drawing.fact_blocks));
   for (const label of drawing.leaf_labels) {
     assert(label.visible && Number.isFinite(label.screen_font_px) && label.screen_font_px >= 12,
@@ -261,6 +278,14 @@ export function fontMetrics(art) {
         const style = getComputedStyle(node);
         return { border_width_px: Math.max(...['borderTopWidth', 'borderRightWidth', 'borderBottomWidth', 'borderLeftWidth'].map((key) => parseFloat(style[key]) || 0)),
           background_transparent: transparent(style.backgroundColor) && (!style.backgroundImage || style.backgroundImage === 'none') };
+      }),
+      chamber_heater_overlay_count: [...drawing.querySelectorAll('.reported-scene-heating-plate')].filter((node)=>node.parentElement?.className==='reported-scene-geometry').length,
+      chamber_heater_fronts: [...drawing.querySelectorAll('[data-heater-front="true"]')].map((front)=>{
+        const style=getComputedStyle(front),color=style.backgroundColor||'';
+        return {bounds:bounds(front),fully_opaque:(/^rgb\(/.test(color)||/^rgba\([^)]*,\s*1(?:\.0+)?\)$/.test(color)) && Number(style.opacity||1)===1 && (!style.backgroundImage||style.backgroundImage==='none'),
+          leaf_labels:leafNodes.filter((node)=>front.contains(node)).map(leaf),
+          holder_platform_bounds:svg?.querySelector('[data-part="substrate-holder"]')?bounds(svg.querySelector('[data-part="substrate-holder"]')):null,
+          beam_bounds:svg?[...svg.querySelectorAll('[data-part="source-beam"],[data-part="source-feed"]')].map(bounds):[]};
       }),
       leaf_labels: leafNodes.map(leaf),
       fact_blocks: blocks.filter((block) => !blocks.some((parent) => parent !== block && parent.contains(block))).map((block) => ({ class_name: block.className, bounds: bounds(block), leaf_labels: leafNodes.filter((node) => block.contains(node)).map(leaf) })) };
