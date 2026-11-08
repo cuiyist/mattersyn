@@ -6,6 +6,7 @@ input/stock/state links are used. No paper, model, registry or amount-based gues
 import hashlib,re
 from collections import Counter,defaultdict
 from route_labels import completeness,route_label
+from formula_equivalence import formula_equivalent
 
 ELEMENT_NAMES={'Cd':'cadmium','Zn':'zinc','In':'indium','Pb':'lead','Au':'gold','Se':'selenium','S':'sulfur','As':'arsenic','P':'phosphorus','O':'oxygen','Si':'silicon','Te':'tellurium'}
 METALS=set('Li Be Na Mg Al K Ca Sc Ti V Cr Mn Fe Co Ni Cu Zn Ga Rb Sr Y Zr Nb Mo Tc Ru Rh Pd Ag Cd In Sn Cs Ba La Ce Pr Nd Pm Sm Eu Gd Tb Dy Ho Er Tm Yb Lu Hf Ta W Re Os Ir Pt Au Hg Tl Pb Bi Fr Ra Ac Th Pa U'.split())
@@ -105,12 +106,16 @@ def fixed_source_identity(material):
  name=str(material.get('name') or '').strip();formula=str(material.get('formula') or '').strip()
  named,conflict=fixed_name_alias(name)
  if conflict:return None
+ normalized=source_identity(material)
+ if not named and normalized and normalized['label']in SOURCE_ELEMENT_BY_LABEL:
+  return {**normalized,'source_elements':{SOURCE_ELEMENT_BY_LABEL[normalized['label']]}}
  if named:
   found=source_identity(material)
   return {**found,'source_elements':{SOURCE_ELEMENT_BY_LABEL[named['label']]}} if found else None
  # An unambiguous fixed formula is usable even if the material has a generic
  # reagent name; product compounds such as InAs/CdSe/PbS are absent deliberately.
- known=ALIASES.get(norm(formula)) if formula else None
+ formula_base=re.sub(r'[.\u00b7]\d*H2O$','',formula)
+ known=ALIASES.get(norm(formula_base)) if formula else None
  if known and not re.search(r'\b(?:unresolved|unknown|unspecified|source-defined|stock|solution|feed|mixture|dispersion|suspension)\b|\bin\s+',name,re.I):
   return {**known,'source_elements':{SOURCE_ELEMENT_BY_LABEL[known['label']]}}
  return None
@@ -184,25 +189,30 @@ def year(record):
 def record_key(record):
  return (record.get('quality',{}).get('review_status')=='source_extracted',-completeness(record),year(record))
 def route(record,override=None):
- value=str(override or route_label(record) or record.get('method') or '').strip().replace('_',' ')
- value=re.sub(r' with source-(?:paired|linked).*$', '', value,flags=re.I)
- if value.casefold() in {'other','synthesis as described in the source',''}:return ''
- matches=[]
- for phrase,canonical in ROUTE_ALIASES.items():
-  pattern=re.escape(phrase).replace(r'\ ',r'[\s-]+').replace(r'\-',r'[\s-]+')
-  for match in re.finditer(r'(?<![a-z0-9])'+pattern+r'(?![a-z0-9])',value,re.I):matches.append((match.start(),match.end(),canonical))
- # A longer fixed technique owns its nested synonym, e.g. solid-source MBE.
- matches=[m for m in matches if not any(a<=m[0] and b>=m[1] and b-a>m[1]-m[0] for a,b,_ in matches)]
- if matches:
-  kinds={label for _,_,label in matches}
-  if len(kinds)!=1:return ''
-  for a,b,_ in matches:
-   left=max([value.rfind(x,0,a) for x in ';.!?'])+1
-   endings=[i for x in ';.!?' if (i:=value.find(x,b))>=0];right=min(endings)if endings else len(value)
-   clause=value[left:right]
-   if re.search(r'\b(?:not|without|avoid(?:ed|ing)?|rather than|instead of|unlike|compared (?:with|to)|comparison|versus|vs)\b',clause,re.I):return ''
-  return next(iter(kinds))
- return value
+ raw_method=str(record.get('method')or'').strip().replace('_',' ')
+ value=str(override or route_label(record) or raw_method).strip().replace('_',' ')
+ # Explicit rejection/negation/conflict is never a missing-label fallback.
+ for explicit in (raw_method,value):
+  if any(re.search(pattern,explicit,re.I)for _,pattern in NAMED_METHODS+ROUTE_CLASSES)and not route_class(explicit):return ''
+ result=route_class(value)
+ if route_class(raw_method):return result
+ # Missing/generic route labels may use only this record's reported system.
+ # Aggregate every field so conflicting systems cannot be selected by order.
+ own=[]
+ for op in record.get('operations',[]):
+  own += [str(op.get('label')or''),str(op.get('vessel')or''),str(op.get('system')or'')]
+  env=op.get('environment')or{}
+  if env.get('status')=='reported':own.append(str(env.get('value')or''))
+  for key,q in (op.get('parameters')or{}).items():
+   if isinstance(q,dict)and q.get('status')=='reported'and re.search(r'system|apparatus|vessel',key,re.I):own.append(str(q.get('value')or''))
+ systems=set()
+ if result in {name for name,_ in ROUTE_CLASSES[7:10]}:systems.add(result)
+ for label in own:
+  found=route_class(label,systems_only=True)
+  if not found and any(re.search(pattern,label,re.I)for _,pattern in ROUTE_CLASSES[7:10]):return ''
+  if found:systems.add(found)
+ if len(systems)>1:return ''
+ return result or(next(iter(systems))if systems else'')
 
 def target_sources(formula):
  if re.search(r'[/,:]|\bx\b',formula):return None
@@ -211,17 +221,16 @@ def target_sources(formula):
  nonmetal=[e for e in els if e!=metal[0]]
  return (metal[0],nonmetal) if len(nonmetal)<=1 else None
 def source_identity(material):
- name=str(material.get('name') or '').strip();formula=str(material.get('formula') or '').strip()
- # No conversion, hydrate stripping, formula inference or composition-only alias.
+ name=str(material.get('name')or'').strip();formula=str(material.get('formula')or'').strip()
  named,conflict=fixed_name_alias(name)
  if conflict:return None
- if named:
-  result=dict(named)
-  if formula and re.search(r'(?:[.\u00b7\ufffd]|\s)\d*(?:\.\d+)?H2O',formula) and 'hydrate' not in result['label']:
-   result={**result,'key':result['key']+'|formula:'+norm(formula),'label':result['label']+' ('+formula+')'}
-  return result
- if not name or GENERIC_SOURCE.fullmatch(name) or '\ufffd' in name or re.search(r'\b(?:precursor|unresolved|unknown|unspecified|undefined|source-defined|stock|solution)\b',name,re.I):return None
- return {'key':norm(name),'label':name,'elements':set(re.findall(r'[A-Z][a-z]?',formula or (name if re.fullmatch(r'[A-Za-z0-9().+\u00b7-]+',name) else '')))}
+ # J2 ignores hydrate water for family grouping only; record/chemical models stay exact.
+ if not named:
+  base=re.sub(r'\s*\(?\b(?:mono|di|tri|tetra|penta|hexa|hepta|octa|nona|deca)?hydrate\)?\s*$','',name,flags=re.I).strip()
+  named=ALIASES.get(norm(base))
+ if named:return family_source(named)
+ if not name or GENERIC_SOURCE.fullmatch(name)or '\ufffd'in name or re.search(r'\b(?:precursor|unresolved|unknown|unspecified|undefined|source-defined|stock|solution)\b',name,re.I):return None
+ return {'key':norm(name),'label':name,'elements':set(re.findall(r'[A-Z][a-z]?',formula or(name if re.fullmatch(r'[A-Za-z0-9().+\u00b7-]+',name)else'')))}
 def role_matches(material,element,metal):
  role=re.sub(r'[_-]+',' ',str(material.get('role') or '')).strip().casefold()
  word=ELEMENT_NAMES.get(element,'').casefold();symbol=element.casefold()
@@ -259,14 +268,16 @@ def processing(record):
  own=' '.join([str(record.get('method') or '')]+[str(o.get('action') or '').replace('_',' ')+' '+str(o.get('label') or '') for o in record.get('operations',[])])
  shell_overgrowth=record.get('material',{}).get('architecture')=='core_shell' and any(given_core(m)or str(m.get('role')or'').casefold()=='seed'for m in supplied) and re.search(r'\b(?:overgrowth|seeded growth|shell growth)\b',own,re.I)
  return bool(given and (PROCESS.search(own) or shell_overgrowth))
-def pick_source(record,element,metal):
+def pick_source(record,element,metal,identity_context=None):
  used,used_stocks=used_materials(record);candidates=[]
  for m in record.get('materials',[]):
   if excluded_source(m):continue
   typed=role_matches(m,element,metal)
   fixed=fixed_source_identity(m)
+  pinned=pinned_source_identity(record,m,identity_context)
+  if not fixed and pinned and pinned.get('source_elements'):fixed=pinned
   if not typed and (not fixed or element not in fixed['source_elements']):continue
-  identity=fixed or source_identity(m)
+  identity=fixed or pinned or source_identity(m)
   if not identity:
    explicit=set(re.findall(r'[A-Z][a-z]?',str(m.get('formula') or '')))
    if not explicit or element in explicit:return None,'unresolved_source_identity'
@@ -278,7 +289,7 @@ def pick_source(record,element,metal):
   candidates.append((m,identity))
  # An explicitly named nonmetal feed may resolve an exact used stock link.
  # TOP plus elemental Se alone never implies TOP-Se.
- if not metal:
+ if not metal and element not in {'Se','S'}:
   stocks={s['id']:s for s in record.get('stocks',[])}
   for i,(m,identity) in enumerate(candidates):
    feeds={}
@@ -297,9 +308,9 @@ def pick_source(record,element,metal):
    if prepared:feeds[prepared['key']]=prepared
    if len(feeds)>1:return None,'ambiguous_named_stock_feeds'
    if feeds:candidates[i]=(m,next(iter(feeds.values())))
- identities={identity['key']:identity for _,identity in candidates}
+ identities={family_source(identity)['key']:family_source(identity)for _,identity in candidates}
  if len(identities)!=1:return None,'missing_source' if not identities else 'multiple_sources'
- value=next(iter(identities.values()));return {'key':value['key'],'label':value['label']},None
+ value=family_source(next(iter(identities.values())));return {'key':value['key'],'label':value['label']},None
 def sparse_core_shell_context(record):
  """A sparse named component feed cannot establish the other components' origin."""
  material=record.get('material',{})
@@ -337,21 +348,21 @@ def sparse_core_shell_context(record):
   if not identity or not identity.get('elements') or identity['elements']-allowed:return None
  return 'other'
 
-def classify_record(record,formula,method_label=None):
- if processing(record):return {'kind':'processing','key':'processing','label':'Processing of material'}
- sparse=sparse_core_shell_context(record)
- if sparse=='processing':return {'kind':'processing','key':'processing','label':'Processing of material'}
- if sparse=='other':return {'kind':'other','key':'other','label':'Other methods','reason':'sparse_core_shell_context'}
- target=target_sources(formula);name=route(record,method_label)
- if not target or not name:return {'kind':'other','key':'other','label':'Other methods','reason':'unsupported_target' if not target else 'missing_route'}
- metal,nonmetals=target;m,reason=pick_source(record,metal,True)
- if reason:return {'kind':'other','key':'other','label':'Other methods','reason':'metal_'+reason}
- n=None
- if nonmetals:
-  n,reason=pick_source(record,nonmetals[0],False)
-  if reason:return {'kind':'other','key':'other','label':'Other methods','reason':'nonmetal_'+reason}
- key='|'.join([name.casefold(),m['key'],n['key'] if n else 'not-applicable'])
- return {'kind':'synthesis','key':key,'label':name+' - '+m['label']+(' + '+n['label'] if n else ''),'route':name,'metal_source':m['label'],'nonmetal_source':n['label'] if n else None}
+def classify_record(record,formula,method_label=None,identity_context=None):
+ if post_processing(record):return {'kind':'processing','key':'processing','label':'Processing of material'}
+ if component_product(record,formula):return {'kind':'component','key':'component','label':formula+' as shell or component'}
+ name=route(record,method_label)
+ if not name:return {'kind':'other','key':'other','label':'Other methods','reason':'missing_route'}
+ target=target_sources(formula)
+ if not target:return {'kind':'synthesis','key':name.casefold()+'|sources-not-listed','label':name+', sources not listed','route':name,'reason':'unsupported_target'}
+ metal,nonmetals=target;m,reason=pick_source(record,metal,True,identity_context)
+ n=None;why='metal_'+reason if reason else None
+ if not reason and nonmetals:
+  n,reason=pick_source(record,nonmetals[0],False,identity_context)
+  if reason:why='nonmetal_'+reason
+ if reason:return {'kind':'synthesis','key':name.casefold()+'|sources-not-listed','label':name+', sources not listed','route':name,'reason':why}
+ key='|'.join([name.casefold(),m['key'],n['key']if n else'not-applicable'])
+ return {'kind':'synthesis','key':key,'label':name+' - '+m['label']+(' + '+n['label']if n else''),'route':name,'metal_source':m['label'],'nonmetal_source':n['label']if n else None}
 def author_label(authors,publication_year=None):
  if isinstance(authors,list):names=[str(a).strip() for a in authors if str(a).strip()]
  else:
@@ -365,15 +376,28 @@ def author_label(authors,publication_year=None):
   return (base or 'Source')+(' ('+str(publication_year)+')' if publication_year is not None and publication_year!=9999 else '')
  base=names[0]+' et al.' if len(names)>2 else ' and '.join(names)
  return (base or 'Source')+(' ('+str(publication_year)+')' if publication_year is not None and publication_year!=9999 else '')
-def build_method_families(records,formula,method_labels=None):
+def build_method_families(records,formula,method_labels=None,identity_context=None):
+ identity_context=load_identity_context()if identity_context is None else identity_context
+ input_order={r['record_id']:i for i,r in enumerate(records)}
  method_labels=method_labels or {};byid={r['record_id']:r for r in records}
  if len(byid)!=len(records):raise ValueError('Duplicate supplied record ID')
  groups={};diagnostics=Counter()
  for r in records:
-  classified=classify_record(r,formula,method_labels.get(r['record_id']));key=classified['kind']+'|'+classified['key'];g=groups.setdefault(key,{'descriptor':classified,'records':[]});g['records'].append(r)
+  classified=classify_record(r,formula,method_labels.get(r['record_id']),identity_context);key=classified['kind']+'|'+classified['key'];g=groups.setdefault(key,{'descriptor':classified,'records':[]});g['records'].append(r)
   if classified.get('reason'):diagnostics[classified['reason']]+=1
+ # A detailed source family supported by only one distinct paper becomes a
+ # route-local other-sources group. Variants never inflate adoption.
+ folded={}
+ for key,g in groups.items():
+  descriptor=g['descriptor']
+  if descriptor['kind']=='synthesis'and'metal_source'in descriptor and len({paper_key(r)for r in g['records']})==1:
+   route_name=descriptor['route'];descriptor={'kind':'synthesis','key':route_name.casefold()+'|other-sources','label':route_name+', other sources','route':route_name}
+  target_key=descriptor['kind']+'|'+descriptor['key']
+  destination=folded.setdefault(target_key,{'descriptor':descriptor,'records':[]});destination['records']+=g['records']
+ groups=folded
  families=[]
  for key,g in groups.items():
+  g['records'].sort(key=lambda r:input_order[r['record_id']])
   ordered=sorted(g['records'],key=record_key);papers=defaultdict(list)
   for r in ordered:
    pk=paper_key(r)
@@ -388,5 +412,126 @@ def build_method_families(records,formula,method_labels=None):
  # Reader interpretation: identified synthesis families compete by adoption;
  # Other is the unclassified fallback, then explicitly-last Processing.
  # If no identified synthesis family exists, Other supplies the default.
- families.sort(key=lambda g:({'synthesis':0,'other':1,'processing':2}[g['kind']],-g['paper_count'],g['earliest_year'],g['label'].casefold(),g['id']))
+ families.sort(key=lambda g:({'synthesis':0,'other':1,'component':2,'processing':3}[g['kind']],-g['paper_count'],g['earliest_year'],g['label'].casefold(),g['id']))
  return {'schema':'mattersyn-method-families/1','material_formula':formula,'paper_count_unique':len({paper_key(r) for r in records}),'record_count':len(records),'default_record_id':families[0]['default_record_id'] if families else None,'families':families,'diagnostics_record_counts':dict(diagnostics)}
+
+
+
+# J presentation-only source normalization. Hydrates do not create new families.
+alias('Me2Cd',{'Cd','C','H'},'CdMe2','dimethylcadmium (CdMe2)','dimethylcadmium (Me2Cd)')
+alias('Cd acetate',{'Cd'},'Cd(Ac)2','cadmium acetate hydrate','cadmium acetate dihydrate')
+alias('HAuCl4',{'Au','H','Cl'},'HAuCl4.3H2O','HAuCl4·3H2O','chloroauric acid trihydrate','hydrogen tetrachloroaurate trihydrate')
+for symbol,word in [('Cd','cadmium'),('Zn','zinc'),('Pb','lead'),('In','indium')]:
+ for ligand in ('myristate','palmitate','stearate','oleate'):
+  label=symbol+' '+ligand
+  if norm(label)not in ALIASES:alias(label,{symbol},word+' '+ligand,word+'(II) '+ligand if symbol!='In'else word+'(III) '+ligand)
+  SOURCE_ELEMENT_BY_LABEL[label]=symbol
+alias('Se',{'Se'},'selenium shot','selenium shots','Se shots','Se in ODE','selenium in ODE','selenium in 1-octadecene','Se/TOP feed','Se/TBP feed')
+alias('S',{'S'},'sulfur shots','sulfur in ODE','S in ODE','S/TOP feed','TOP-S','TOPS','TBP-S','TBPS','trioctylphosphine sulfide','tributylphosphine sulfide')
+
+ROUTE_CLASSES=[
+ ('Hot injection',r'\bhot[- ]?inject\w*\b'),
+ ('Heat-up',r'\bheat[- ]?up\b|\bnon[- ]?inject\w*\b|\bone[- ]pot\b'),
+ ('SILAR',r'\bsilar\b|successive ionic layer'),
+ ('Solvothermal or hydrothermal',r'\b(?:solvo|hydro)thermal\b'),
+ ('Aqueous or colloidal precipitation',r'\baqueous\b|\bcolloidal\b|\bprecipitat\w*\b'),
+ ('Sol-gel',r'\bsol[- \u2013]gel\b'),
+ ('Solid state',r'\bsolid[- ]state\b|\bsolid[- ]phase\b|\bball[- ]mill\w*\b|\bmechanochem\w*\b'),
+ ('Molecular beam epitaxy',r'\bmbe\b|molecular[- ]beam epitax\w*'),
+ ('Chemical vapour deposition',r'\b(?:mocvd|movpe|mcvd|cvd)\b|metal[- ]?organic (?:chemical )?vapou?r|chemical vapou?r deposition'),
+ ('Other vapour or physical deposition',r'(?<!organic )vapou?r[- ]phase epitax|\b(?:sputter\w*|evaporat\w* deposition|physical vapou?r|pulsed[- ]laser deposition|pld|chemical[- ]beam epitaxy|liquid[- ]phase epitaxy|droplet epitaxy)\b'),
+ ('Electrochemical',r'\belectrochem\w*|\belectrodeposit\w*'),
+ ('Microwave',r'\bmicrowave\w*'),
+]
+NAMED_METHODS=[('Brust',r'\bbrust(?:[- ]schiffrin)?\b'),('Turkevich/citrate reduction',r'\bturkevich\b|\bcitrate[- ](?:reduction|reducing)\b'),('St\u00f6ber',r'\bst[o\u00f6]ber\b'),('Pechini',r'\bpechini\b'),('Polyol',r'\bpolyol\b'),('Thermal decomposition',r'\bthermal(?:ly)? decompos\w*\b'),('Chemical reduction',r'\bchemical reduction\b'),('Seed-mediated growth',r'\bseed[- ]mediated growth\b'),('Cation exchange',r'\bcation[- ]exchange\b'),('Reflux',r'\breflux\b'),('Microemulsion',r'\bmicroemulsion\b'),('Chemical bath deposition',r'chemical bath deposition|\bcbd\b'),('Microfluidic',r'\bmicrofluidic\b')]
+NEGATED_ROUTE=re.compile(r'\b(?:no|not|without|avoid\w*|instead of|rather than|unlike|compar\w*|versus|vs)\b',re.I)
+
+def route_class(value,systems_only=False):
+ value=str(value or'').strip().replace('_',' ')
+ if not value:return ''
+ table=ROUTE_CLASSES[7:10]if systems_only else NAMED_METHODS+ROUTE_CLASSES
+ found=[]
+ for label,pattern in table:
+  for match in re.finditer(pattern,value,re.I):
+   left=max(value.rfind(mark,0,match.start())for mark in ';.!?')+1
+   end=[i for mark in ';.!?'if(i:=value.find(mark,match.end()))>=0]
+   clause=value[left:min(end)if end else len(value)]
+   if NEGATED_ROUTE.search(clause):return ''
+   found.append(label)
+ # Hot injection owns a generic colloidal/aqueous qualifier; named methods own
+ # their general class. Conflicting explicit routes remain unclassified.
+ named=[name for name,_ in NAMED_METHODS if name in found]
+ kinds=set(found)
+ if named and not re.search(r'\b(?:or|and|versus|vs)\b',value,re.I):kinds.discard('Aqueous or colloidal precipitation')
+ if 'Hot injection'in kinds:
+  kinds.discard('Aqueous or colloidal precipitation')
+  if not re.search(r'heat[- ]?up|non[- ]?inject',value,re.I):kinds.discard('Heat-up')
+ if 'Microwave'in kinds:kinds.discard('Solvothermal or hydrothermal')
+ if 'Sol-gel'in kinds:kinds.discard('Aqueous or colloidal precipitation')
+ return next(iter(kinds))if len(kinds)==1 else ''
+
+def family_source(identity):
+ value=dict(identity);label=value['label']
+ replacements={'Cd acetate dihydrate':'Cd acetate','HAuCl4 trihydrate':'HAuCl4','Pb acetate trihydrate':'Pb acetate','Se/TOP feed':'Se','TOP-Se':'Se','TBP-Se':'Se'}
+ label=replacements.get(label,label)
+ value.update(label=label,key=norm(label)if label!=identity['label']else value['key'])
+ return value
+
+def component_product(record,formula):
+ material=record.get('material',{});own=str(material.get('formula')or'').strip()
+ components={str(x).strip()for x in material.get('components',[])if str(x).strip()}
+ if own and not formula_equivalent(own,formula):return True
+ if len(components)>1:return True
+ if material.get('architecture')in {'core_shell','heterostructure','composite','doped_host','doped','phase_mixture','coated'}:return True
+ for product in record.get('products',[]):
+  composition=product.get('composition')or{}
+  value=str(composition.get('value')or'').strip()
+  if composition.get('status')=='reported'and re.fullmatch(r'[A-Za-z0-9()/,:.+-]+',value)and not formula_equivalent(value,formula):return True
+ return False
+
+def post_processing(record):
+ if not processing(record):return False
+ own=' '.join([str(record.get('method')or'')]+[str(o.get('action')or'').replace('_',' ')+' '+str(o.get('label')or'')for o in record.get('operations',[])])
+ return bool(re.search(r'ligand[- ]exchange|surface functional\w*|spin[- ]coat\w*|drop[- ]cast\w*|self[- ]assembly|device (?:fabrication|assembly)|film (?:fabrication|assembly|deposition)',own,re.I))
+
+def identity_context_from_chemistry(registry,bindings,overlay):
+ """Index H's already pinned whole-compound identities once, not per recipe."""
+ entries={entry['id']:entry for entry in registry.get('entries',[])};result={}
+ for rid,materials in bindings.get('recordBindings',{}).items():
+  rows={}
+  for mid,eid in materials.items():
+   entry=entries.get(eid,{})
+   ref=overlay.get('entries',{}).get(eid,{})
+   if ref.get('route')=='flat':continue
+   candidate=entry
+   if ref.get('route')=='molecule_reference'and ref.get('referenceOnly')is True and ref.get('reason')in {'identical_CID','unique_exact_compound_name','owner_fixed_named_identity','resolved_exact_name_identical_CID'}:
+    candidate=entries.get(ref.get('referenceRegistryId'),entry)
+   cid=candidate.get('pubchemCid')
+   if type(cid)is not int or cid<=0:continue
+   # Never turn independent ligand/component references into a compound CID.
+   if ref and ref.get('route')not in {'molecule_reference','independent_component_references','ambient_crystal_reference'}:continue
+   named,_=fixed_name_alias(candidate.get('name'))
+   if named:identity=family_source(named)
+   else:identity={'key':'cid:'+str(cid),'label':str(candidate.get('name')or entry.get('name')),'elements':set(re.findall(r'[A-Z][a-z]?',str(entry.get('formula')or'')))}
+   if named and named['label']in SOURCE_ELEMENT_BY_LABEL:identity['source_elements']={SOURCE_ELEMENT_BY_LABEL[named['label']]}
+   rows[mid]=identity
+  if rows:result[rid]=rows
+ return result
+
+def pinned_source_identity(record,material,context):
+ return (context or{}).get(record['record_id'],{}).get(material['id'])
+
+from functools import lru_cache
+@lru_cache(maxsize=1)
+def load_identity_context():
+ """Use existing H input pins once per build; no registry/model/network lookup."""
+ import json
+ from pathlib import Path
+ from chemical_reference_overlay import enrich_registry
+ base=Path(__file__).resolve().parents[1]/'static/assets/chemical-registry'
+ paths=[base/name for name in ('registry.json','bindings.json','reader-3d-reference-overrides.json')]
+ if not any(path.exists()for path in paths):return {}
+ if not all(path.is_file()for path in paths):raise ValueError('Incomplete H chemistry inputs')
+ raw=[path.read_bytes()for path in paths];registry,bindings,overlay=map(json.loads,raw)
+ enrich_registry(registry,bindings,overlay,hashlib.sha256(raw[0]).hexdigest(),hashlib.sha256(raw[1]).hexdigest())
+ return identity_context_from_chemistry(registry,bindings,overlay)
