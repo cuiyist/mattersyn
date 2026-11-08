@@ -88,8 +88,35 @@ export function createProtocolArtFrame(art,fit={}){
 // All-step measurement is a small DOM layout pass, not another site build/read.
 export function createRecordFitController({host,operations,createArt,onChange}){
   let plan=null,key='',dead=false,observer=null;
-  const watchedImages=new WeakSet();
-  const observeImageDimensions=root=>{for(const image of root.querySelectorAll?.('img')||[]){if(image.complete||watchedImages.has(image))continue;watchedImages.add(image);const loaded=()=>{if(dead||!host.isConnected)return;key='';const frame=host.querySelector('.protocol-art-frame');if(frame&&controller.refresh(frame))onChange?.();};image.addEventListener('load',loaded,{once:true});image.addEventListener('error',loaded,{once:true});}};
+  const watchedImages=new WeakSet(),hintedImages=new WeakSet(),imageResults=new Map();
+  const imageKey=image=>image.currentSrc||image.src||null;
+  const rememberImage=(image,outcome)=>{
+    const source=imageKey(image);if(!source)return true;
+    const width=image.naturalWidth||0,height=image.naturalHeight||0;
+    const result={outcome,width,height},previous=imageResults.get(source);
+    imageResults.set(source,result);
+    return !previous||previous.outcome!==outcome||previous.width!==width||previous.height!==height;
+  };
+  const applyKnownImageRatio=image=>{
+    const known=imageResults.get(imageKey(image));
+    // Rebuilt measurement nodes can still be awaiting the same cached image.
+    // Its actual observed ratio avoids re-planning from a zero-height clone.
+    if(known?.outcome==='load'&&known.width>0&&known.height>0&&image.style&&(!image.style.aspectRatio||hintedImages.has(image))){
+      image.style.aspectRatio=known.width+' / '+known.height;hintedImages.add(image);
+    }
+  };
+  const observeImageDimensions=root=>{for(const image of root.querySelectorAll?.('img')||[]){
+    if(image.complete){if(rememberImage(image,image.naturalWidth>0?'load':'error'))key='';applyKnownImageRatio(image);continue;}
+    applyKnownImageRatio(image);
+    if(watchedImages.has(image))continue;watchedImages.add(image);
+    const finished=outcome=>{
+      if(dead||!host.isConnected)return;
+      const changed=rememberImage(image,outcome);applyKnownImageRatio(image);
+      if(!changed)return;
+      key='';const frame=host.querySelector('.protocol-art-frame');if(frame&&controller.refresh(frame))onChange?.();
+    };
+    image.addEventListener('load',()=>finished('load'),{once:true});image.addEventListener('error',()=>finished('error'),{once:true});
+  }};
   const metricsByID=new Map(),modesByID=new Map();
   const controller={
     options(id){return plan?{...plan,metric:metricsByID.get(id),compact:true,...modesByID.get(id)}:{compact:true};},

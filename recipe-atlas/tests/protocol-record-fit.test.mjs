@@ -52,3 +52,34 @@ test('measured inner widths constrain the one scale shared across a mixed record
  assert.ok(fit.metrics.every(m=>m.width*fit.scale<=310-m.horizontalOverhead));
  for(const horizontalOverhead of [-1,NaN,310])assert.throws(()=>fitRecordGeometry([{width:300,height:217,horizontalOverhead}],{width:310,maxHeight:320}));
 });
+
+function freshNativeImageFixture(){
+ const previous=globalThis.document,images=[];let changed=0;
+ const frame={getBoundingClientRect:()=>({width:280}),querySelectorAll:()=>[]};
+ const host={isConnected:true,append(){},querySelector:()=>frame};
+ globalThis.document={createElement:()=>({dataset:{},style:{},replaceChildren(){},remove(){}})};
+ const controller=createRecordFitController({host,operations:[{id:'image'}],createArt:()=>{
+  const events={},image={src:'fixture://same-image.svg',complete:false,naturalWidth:0,naturalHeight:0,style:{},addEventListener:(name,fn)=>{events[name]=fn;}};
+  images.push(image);image.finish=(outcome,width=0,height=0)=>{image.complete=true;image.naturalWidth=width;image.naturalHeight=height;events[outcome]();};
+  const height=()=>image.style.aspectRatio?100*Number(image.style.aspectRatio.split('/')[1])/Number(image.style.aspectRatio.split('/')[0]):100;
+  return{getBoundingClientRect:()=>({left:0,top:0,right:100,bottom:height(),width:100,height:height()}),querySelectorAll:selector=>selector==='img'?[image]:[]};
+ },onChange:()=>{changed++;}});
+ return{controller,images,changed:()=>changed,close:()=>{controller.disconnect();globalThis.document=previous;},frame};
+}
+test('fresh same-source native image nodes do not repeatedly invalidate an unchanged intrinsic result',()=>{
+ const f=freshNativeImageFixture();try{
+  f.controller.refresh(f.frame);assert.equal(f.images.length,1);
+  f.images[0].finish('load',100,200);assert.equal(f.changed(),1);
+  assert.equal(f.controller.options('image').metric.height,200,'first delayed dimensions must correct the placeholder plan');
+  assert.equal(f.images.length,2);f.images[1].finish('load',100,200);
+  assert.equal(f.changed(),1,'same source/result must settle without a fresh redraw');assert.equal(f.images.length,2);
+ }finally{f.close();}
+});
+test('native image error results settle once, while a later different intrinsic result remains observable',()=>{
+ const f=freshNativeImageFixture();try{
+  f.controller.refresh(f.frame);f.images[0].finish('error');assert.equal(f.changed(),1);
+  f.images[1].finish('error');assert.equal(f.changed(),1);assert.equal(f.images.length,2);
+  f.images[1].finish('load',100,300);assert.equal(f.changed(),2);assert.equal(f.controller.options('image').metric.height,300);
+  f.controller.disconnect();f.images[2].finish('load',100,400);assert.equal(f.changed(),2);
+ }finally{f.close();}
+});
