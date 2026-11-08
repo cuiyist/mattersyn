@@ -105,13 +105,27 @@ class StageTests(unittest.TestCase):
         self.assertFalse((self.site/'stale/old.html').exists())
 
     def test_stage_linked_destinations_compare_after_each_sequential_copy(self):
+        self._assert_linked_destinations_follow_tree_order(('a.txt', 'b.txt'))
+
+    def test_stage_linked_destinations_also_handle_reverse_tree_order(self):
+        self._assert_linked_destinations_follow_tree_order(('b.txt', 'a.txt'))
+
+    def _assert_linked_destinations_follow_tree_order(self, order):
         import os
         write(self.dist, 'a.txt', 'new shared bytes')
         write(self.dist, 'b.txt', 'new shared bytes')
         write(self.site, 'a.txt', 'old shared bytes')
         os.link(self.site/'a.txt', self.site/'b.txt')
-        added, changed, removed = rb.stage_dist(self.dist, self.site)
-        self.assertEqual(changed, ['a.txt', 'index.html'])
+        original_tree = rb.tree_files
+        def ordered_tree(root, skip_top=()):
+            files = original_tree(root, skip_top)
+            return dict(sorted(files.items(), key=lambda row: (
+                order.index(row[0]) if row[0] in order else len(order), row[0])))
+        # Filesystem enumeration order is unspecified. Both orders must compare
+        # the second linked destination only after the first copy changes it.
+        with mock.patch.object(rb, 'tree_files', side_effect=ordered_tree):
+            added, changed, removed = rb.stage_dist(self.dist, self.site)
+        self.assertEqual(changed, sorted([order[0], 'index.html']))
         self.assertEqual((self.site/'a.txt').read_text(), 'new shared bytes')
         self.assertEqual((self.site/'b.txt').read_text(), 'new shared bytes')
         self.assertEqual(added, ['data/records/b.json'])
