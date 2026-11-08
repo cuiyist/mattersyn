@@ -8,6 +8,7 @@ import {conditionFieldText,conditionDisclosureText} from '../static/source-field
 import {createReportedProtocolScene,REPORTED_SCENE_CAVEAT} from '../static/reported-protocol-scenes.mjs';
 import {selectProtocolArt} from '../static/protocol-art-binding.mjs';
 import {operationKind} from '../static/protocol-operation-kind.mjs';
+import {protocolPresentationPolicy,createProtocolArtFrame,createRecordFitController} from '../static/protocol-record-fit.mjs';
 
 // Invented fixtures only. No production record, source, asset, HTTP or model I/O.
 const keys=['vessel_type','atmosphere','schlenk_line','glovebox','heating_method','stirring','addition_method','cooling_method'];
@@ -128,7 +129,7 @@ test('the retained original fact helper demonstrates the hidden-note and raw-JSO
 function mountWithInertProviders(overrides={}){
  const source=readFileSync(new URL('../static/protocol-visuals.mjs',import.meta.url),'utf8');
  const names=[...source.matchAll(/^import \{([^}]+)\} from .+;$/gm)].flatMap(m=>m[1].split(',').map(n=>n.trim().split(/\s+as\s+/).at(-1)));
- const actual={readReactorLineNote,reactorEnvironmentText,createReactorLineDetails,reactorLineCaption,reactorDisplayRecord,reactorQuantityUnavailable,quantityValue,matchProtocolCondition,conditionFieldText,conditionDisclosureText,kind:()=> 'context',mountProtocolReferences:()=>Promise.resolve(),...overrides};
+ const actual={protocolPresentationPolicy,createProtocolArtFrame,createRecordFitController,readReactorLineNote,reactorEnvironmentText,createReactorLineDetails,reactorLineCaption,reactorDisplayRecord,reactorQuantityUnavailable,quantityValue,matchProtocolCondition,conditionFieldText,conditionDisclosureText,kind:()=> 'context',mountProtocolReferences:()=>Promise.resolve(),...overrides};
  const inert=()=>null;
  const code=source.replace(/^import .+;\r?\n/gm,'').replace('export function mountProtocol','function mountProtocol');
  // Per-paper providers are now looked up in the lazily filled table P, not imported.
@@ -137,7 +138,7 @@ function mountWithInertProviders(overrides={}){
 test('the copied protocol mount displays new fields and prose, hides JSON, and qualifies unknown vessel',()=>dom(()=>{
  const r=record();r.operations=[operation(line(),{vessel_volume:quantity(25)})];
  const host=new Element('div');mountWithInertProviders()(host,r);
- for(const value of ['Original fixture environment','Original fixture narrative.','Vessel volume','25 mL','Fixture page 3, quantity','Conceptual vessel: vessel type is not reported'])assert.ok(host.textContent.includes(value),value);
+ for(const value of ['Original fixture environment','Original fixture narrative.','Vessel volume','25 mL','Fixture page 3, quantity','Schematic: vessel shapes and colors are illustrative.'])assert.ok(host.textContent.includes(value),value);
  assert.doesNotMatch(host.textContent,/reactor_line=|"reactor_line_id"|"status"/);
 }));
 test('the copied protocol mount leaves old environments and captions without reactor rows',()=>dom(()=>{
@@ -195,7 +196,7 @@ test('actual generic pressure keeps source-bound zero and range while honest unk
  for(const [q,expected] of [[quantity(0,'kPa'),/0 kPa/],[{...quantity(null,'kPa'),minimum:20,maximum:30},/20–30 kPa/]]){
   const text=renderedText(operation(line(),{pressure:q}));assert.match(text,expected);assert.match(text,/Fixture page 3, quantity/);assert.doesNotMatch(text,/Reactor quantity unavailable/);
  }
- const text=renderedText(operation(line(),{pressure:{...quantity(null,'kPa'),status:'not_reported',evidence:[]}}));assert.match(text,/not reported/);assert.doesNotMatch(text,/Reactor quantity unavailable|0 kPa/);
+ const text=renderedText(operation(line(),{pressure:{...quantity(null,'kPa'),status:'not_reported',evidence:[]}}));assert.match(text,/Not reported/);assert.doesNotMatch(text,/Reactor quantity unavailable|0 kPa/);
 });
 
 const attributeMissing=()=>({value:null,status:'not_reported',basis:'Fixture missing basis',evidence:[]});
@@ -422,7 +423,7 @@ test('source-extracted mount keeps real field formatters and source data unchang
  const r=record(),op=operation();r.quality={review_status:'source_extracted'};
  op.environment={value:null,status:'not_reported',note:'',evidence:[]};r.operations=[op];
  const before=JSON.stringify(r),host=new Element('div');mountWithInertProviders()(host,r);
- assert.match(host.textContent,/Not recorded in this field/);assert.match(host.textContent,/Conditions and source/);
+ assert.match(host.textContent,/Not reported/);assert.match(host.textContent,/Conditions and source/);
  assert.doesNotMatch(host.textContent,/Temperature null|Environment null|Endpoint: null/);
  assert.equal(JSON.stringify(r),before);
 }));
@@ -502,7 +503,7 @@ test('unsupported generated actions use a neutral action card instead of apparat
   assert.ok(flatten(card).every(n=>n.innerHTML===undefined));
   assert.doesNotMatch(card.textContent,/HEAT|HEATING|flask|vessel|nitrogen|80/);
   assert.equal(host.textContent.split(REPORTED_SCENE_CAVEAT).length-1,1);
-  assert.ok(!host.textContent.includes('Enlarge operation diagram'));
+  assert.equal(flatten(host).filter(n=>n.tagName==='BUTTON'&&n.textContent==='Enlarge operation diagram ↗').length,1);
   assert.equal(JSON.stringify(r),before);
  }
 }));
@@ -524,11 +525,13 @@ test('a bound generated operation still retains its admitted image when its scen
  assert.match(host.textContent,/Existing exact illustration/);
 }));
 
-test('original and malformed non-generated IDs never enter the new fallback',()=>dom(()=>{
+test('ordinary original IDs use the same own-field scene without status or revision gating',()=>dom(()=>{
  for(const id of ['charge-and-heat','s01-heat','d0-s01-heat','d1-s01-heat','d01-s01-heat','d02-s01-heat','d2-','d2.0-s01-heat','d2-s01-heat/extra']){
   const r=generatedRevisionRecord(id),host=new Element('div');
-  mountWithInertProviders({selectProtocolArt:()=>null,createReportedProtocolScene:()=>{throw Error('Original ID entered new fallback');}})(host,r);
-  assert.ok(!flatten(host).some(n=>n.dataset.renderer==='reported-fields'));
+  mountWithInertProviders(reportedProviders)(host,r);
+  assert.ok(flatten(host).some(n=>n.dataset.renderer==='reported-fields'));
+  assert.equal(flatten(host).filter(n=>n.tagName==='BUTTON'&&n.textContent==='Enlarge operation diagram ↗').length,1);
+  assert.equal(host.textContent.split(protocolPresentationPolicy(r).caption).length-1,1);
  }
 }));
 
@@ -549,4 +552,22 @@ test('an unbound rich revision scene enlarges the same safe labels with one cave
  const labels=flatten(dialog).filter(n=>['SPAN','STRONG','DT','DD'].includes(n.tagName)&&n.textContent.trim());
  assert.ok(labels.length>=3);assert.ok(labels.every(n=>parseFloat(n.style.fontSize)>=12));
  assert.equal(JSON.stringify(r),before);
+}));
+
+test('the mounted runtime consumes the real presentation policy under both statuses',()=>dom(()=>{
+ for(const review_status of ['source_reviewed','source_extracted']){
+  const r=generatedRevisionRecord('original-operation',review_status),host=new Element('div');
+  mountWithInertProviders(reportedProviders)(host,r);
+  const policy=protocolPresentationPolicy(r);
+  assert.equal(host.textContent.split(policy.caption).length-1,1);
+  assert.equal(flatten(host).filter(n=>n.tagName==='BUTTON'&&n.textContent==='Enlarge operation diagram ↗').length,1);
+  assert.ok(flatten(host).some(n=>n.dataset.renderer==='reported-fields'));
+ }
+}));
+test('protected custom condition grids normalize exact placeholders without changing qualitative values',()=>dom(()=>{
+ const r=record();r.operations=[operation()];const host=new Element('div'),custom=new Element('div'),grid=new Element('dl');custom.dataset.scene='protected';
+ mountWithInertProviders({createRusch2026Art:()=>custom,buildRusch2026Scene:()=>({caption:'Protected useful source caption.'}),createRusch2026ConditionGrid:()=>{for(const value of ['Not recorded in this field','not specified','Nitrogen, room temperature','<qualified original>']){const row=new Element('div'),dd=new Element('dd');dd.textContent=value;row.append(dd);grid.append(row);}return grid;}})(host,r);
+ const values=flatten(grid).filter(n=>n.tagName==='DD').map(n=>n.textContent);
+ assert.equal(values.filter(v=>v==='Not reported').length,2);assert.ok(values.includes('Nitrogen, room temperature'));assert.ok(values.includes('<qualified original>'));
+ assert.ok(host.textContent.includes('Protected useful source caption.'));assert.ok(flatten(host).includes(custom));
 }));

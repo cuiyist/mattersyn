@@ -84,7 +84,7 @@ export function defaultCrystalReferences(entries,r,excluded=[]){
    // A reused library title may mention another record's core/shell role.
    // Every composite default has a neutral component role, even when the
    // product architecture is named; a library title cannot assign that role.
-   const name=r.quality?.review_status==='source_extracted'&&parts.length>1
+   const name=parts.length>1
     ?String(entry.name||'').replace(/\s*(?:[·:—–-]\s*)?\b(?:core|shell)\s+comparison\s*$/i,'').trim():entry.name;
    chosen.push({...entry,name,displayPolicy:'independent_reference',sample_context_ids:undefined,sampleContextIdsByRecord:undefined,bindingScopes:undefined,finiteModelPath:undefined,
     roleByRecord:{[r.record_id]:parts.length>1?'Component reference':'Reference by composition'},scope,phaseScope:scope,description:scope,sample_context_note:null,defaultByComposition:true});

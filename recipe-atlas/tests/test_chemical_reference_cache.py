@@ -5,8 +5,8 @@ import unittest
 
 ROOT=Path(__file__).resolve().parents[1]
 H_VERSION='0.43.0'
-READER_VERSION='0.44.0'
-READER_MODULES={'reader-app.mjs','illustrated-record.mjs','material-guide.mjs','material-hub.mjs','method-families.mjs'}
+READER_VERSION='0.45.0'
+READER_MODULES={'illustrated-record.mjs', 'crystal-defaults.mjs', 'chemical-viewer.mjs', 'crystal-viewer.mjs', 'material-guide.mjs', 'source-field-copy.mjs', 'protocol-record-fit.mjs', 'material-hub.mjs', 'reader-structures.mjs', 'reader-particle.mjs', 'reported-protocol-scenes.mjs', 'protocol-visuals.mjs', 'reader-app.mjs', 'protocol-references.mjs', 'evans2010-products.mjs', 'reported-scene-drawing.mjs'}
 
 
 class ChemicalReferenceCacheTests(unittest.TestCase):
@@ -14,7 +14,7 @@ class ChemicalReferenceCacheTests(unittest.TestCase):
     def viewer_url(self,code):
         urls=re.findall(r'''['"](\./chemical-viewer\.mjs(?:\?[^'"\r\n]*)?)['"]''',code)
         self.assertTrue(urls)
-        for url in urls:self.assertEqual(url,'./chemical-viewer.mjs?v='+H_VERSION)
+        for url in urls:self.assertEqual(url,'./chemical-viewer.mjs?v='+READER_VERSION)
         return urls[0]
     def test_every_actual_direct_viewer_caller_uses_fresh_H_URL(self):
         for name in('reader-app.mjs','reader-structures.mjs','crystal-viewer.mjs','evans2010-products.mjs','illustrated-record.mjs','material-guide.mjs','protocol-references.mjs'):

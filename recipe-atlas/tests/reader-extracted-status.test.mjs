@@ -61,12 +61,12 @@ test('extracted component default titles are neutral for every architecture with
   assert.equal(JSON.stringify({r,entries}),before);
  }
 });
-test('audited and other non-extracted component default titles retain their core and shell suffixes',()=>{
+test('all other statuses use the same neutral component default titles',()=>{
  for(const status of ['source_reviewed','audited','pending',undefined]){
   for(const architecture of [undefined,'unresolved','core_shell','core_multishell','composite']){
    const r=componentRecord(status,architecture),before=JSON.stringify({r,entries});
    const refs=defaultCrystalReferences(entries,r);
-   assert.deepEqual(refs.map(ref=>ref.name),entries.map(ref=>ref.name));
+   assert.deepEqual(refs.map(ref=>ref.name),['Bulk wurtzite CdSe reference','Bulk ZnS reference']);
    assert.equal(JSON.stringify({r,entries}),before);
   }
  }
@@ -79,10 +79,10 @@ test('source-extracted interpretation fallback makes no implicit review claim',(
  assert.doesNotMatch(interpretationFallback(r),/review|audit|extract/i);
  assert.equal(JSON.stringify(r),before);
 });
-test('audited interpretation fallback remains unchanged',()=>{
+test('all record statuses use the same neutral interpretation fallback',()=>{
  for(const status of ['source_reviewed','audited',undefined]){
   const r=record(status),before=JSON.stringify(r);
-  assert.equal(interpretationFallback(r),'Interpretation is available with the original source and complete review.');
+  assert.equal(interpretationFallback(r),'Further interpretation is available in the original source.');
   assert.equal(JSON.stringify(r),before);
  }
 });

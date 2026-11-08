@@ -109,3 +109,10 @@ test('future BEFORE retains J from its exact base snapshot and rejects missing o
 test('displayed family names and distinct-paper counts must match their exact metadata',()=>{
  for(const mutate of [m=>m.families[0].label='Free text label',m=>m.families[0].adoption='2 recipes']){const m=metrics();mutate(m);assert.throws(()=>checkMethodListMetrics(m,targets().targets[0],groups()));}
 });
+
+
+test('K protocol schema2 BEFORE uses exact20 shape and retains strict J preview metadata',()=>{
+ const prior=targets(),protocol={schema:'mattersyn-protocol-scenes-targets/2',targets:[...prior.targets.map(t=>({group:'benchmark-default',formula:t.formula,route:t.route,record_id:t.default_record_id,record_json_bytes:t.record_json_bytes,record_json_sha256:t.record_json_sha256})),...Array.from({length:14},()=>({group:'route-example'}))]};
+ const before=beforeTargetsFromProtocolSnapshot(protocol,prior);assert.equal(before.preview_policy,J_PREVIEW_POLICY);assert.equal(before.phase,'before');validateTargets(before,'before');
+ for(const [schema,count]of [['mattersyn-protocol-scenes-targets/1',20],['mattersyn-protocol-scenes-targets/2',18],['unknown',20]]){const bad=structuredClone(protocol);bad.schema=schema;bad.targets=bad.targets.slice(0,count);assert.throws(()=>beforeTargetsFromProtocolSnapshot(bad,prior));}
+});

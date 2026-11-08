@@ -1,3 +1,4 @@
+import {formulaFieldText,READER_COPY} from './source-field-copy.mjs?v=0.45.0';
 import {mountMethodFamilyList,chooseMethodRecord} from './method-families.mjs?v=0.44.0';
 import {appendFigureCaptions,figureCaptionTexts} from './figure-captions.mjs?v=0.41.9';
 import {installReaderHashNavigation,applyReaderFragment} from './reader-navigation.mjs';
@@ -8,11 +9,11 @@ import {el,link,button,badge,section,disclosure,siteURL,recordURL,human,isEquipm
 
 import {quantityValue} from './quantity-value.mjs';
 
-import {chemicalRegistry,chemicalEntry,chemicalImage,openChemical,hasRotatableChemicalModel,chemicalButtonLabel,chemicalDisplayCaption} from './chemical-viewer.mjs?v=0.43.0';
+import {chemicalRegistry,chemicalEntry,chemicalImage,openChemical,hasRotatableChemicalModel,chemicalButtonLabel,chemicalDisplayCaption} from './chemical-viewer.mjs?v=0.45.0';
 
-import {mountProtocol} from './protocol-visuals.mjs?v=0.43.0';
+import {mountProtocol} from './protocol-visuals.mjs?v=0.45.0';
 
-import {mountReaderStructures} from './reader-structures.mjs?v=0.43.0';
+import {mountReaderStructures} from './reader-structures.mjs?v=0.45.0';
 
 import {loadReaderPresentations} from './reader-presentation-loader.mjs?v=0.43.0';
 const cache=new Map();
@@ -72,7 +73,7 @@ async function precursors(host,r,presentation={}){
 
  const [data,thumbs,stockBindings]=await Promise.all([chemicalRegistry(r.record_id),json('data/chemical-thumbnail-map.json'),json('data/reader-stock-bindings.json')]);if(!host.isConnected)return;function cardImage(entry){const img=chemicalImage(entry),item=thumbs.entries[entry.id];if(item?.thumbnail_path)img.src=siteURL(item.thumbnail_path);return img;}const chemicals=r.materials.filter(m=>!isEquipment(m)),grid=el('div',undefined,'reader-chemicals');
 
- for(const m of chemicals){const card=el('article',undefined,'reader-chemical');card.dataset.materialId=m.id;const entry=chemicalEntry(data,r.record_id,m.id);card.append(el('small',human(m.role)),el('h3',m.name),el('div',entry?.displayFormula||entry?.formula||m.formula||'Source-defined composition','reader-formula'));
+ for(const m of chemicals){const card=el('article',undefined,'reader-chemical');card.dataset.materialId=m.id;const entry=chemicalEntry(data,r.record_id,m.id);card.append(el('small',human(m.role)),el('h3',m.name),el('div',formulaFieldText(entry?.displayFormula||entry?.formula||m.formula),'reader-formula'));
 
   if(entry){const image=cardImage(entry);image.alt=m.name+' chemical structure';card.append(image,button(chemicalButtonLabel(entry),()=>openChemical(entry),'molecule-link'));}else card.append(el('p','Chemical identity is retained in the source record.','reader-note'));
 
@@ -96,7 +97,7 @@ async function precursors(host,r,presentation={}){
   for(const option of alternatives){
    const material=r.materials.find(item=>item.id===option.chemical_material_id),entry=chemicalEntry(data,r.record_id,option.chemical_material_id);
    const card=el('article',undefined,'reader-chemical');
-   card.append(badge('Source-defined alternative','scope'),el('h3',material?.name||entry?.name||option.chemical_material_id),el('div',entry?.displayFormula||entry?.formula||material?.formula||'','reader-formula'),el('p',option.label,'reader-note'));
+   card.append(badge('Source-defined alternative','scope'),el('h3',material?.name||entry?.name||option.chemical_material_id),el('div',formulaFieldText(entry?.displayFormula||entry?.formula||material?.formula),'reader-formula'),el('p',option.label,'reader-note'));
    if(entry){card.append(cardImage(entry),button(chemicalButtonLabel(entry),()=>openChemical(entry),'molecule-link'));}
    const parameters=Object.entries(option.parameters||{});if(parameters.length)card.append(quantities(parameters,false));
    card.append(link('Source details →',recordURL(r.record_id)+'#protocol','reader-data-link'));
@@ -130,7 +131,7 @@ async function precursors(host,r,presentation={}){
 
  const products=presentation.precursorProductReferences||[];
  if(products.length){const productsGrid=el('div',undefined,'reader-chemicals');host.append(el('h3','Precursor products'),el('p','Reference molecular connectivity for the products of these precursor procedures; these are separate from nanocrystal specimen structures.','reader-note'));
-  for(const product of products){const entry=data.entries.get(product.registry_id),card=el('article',undefined,'reader-chemical');card.append(el('h3',entry?.name||product.label),el('div',product.formula||entry?.displayFormula||entry?.formula||'','reader-formula'));
+  for(const product of products){const entry=data.entries.get(product.registry_id),card=el('article',undefined,'reader-chemical');card.append(el('h3',entry?.name||product.label),el('div',formulaFieldText(product.formula||entry?.displayFormula||entry?.formula),'reader-formula'));
    if(entry)card.append(cardImage(entry),button(chemicalButtonLabel(entry),()=>openChemical(entry),'molecule-link'));
    card.append(el('p',product.label),el('p',chemicalDisplayCaption(entry,product.caption),'reader-note'));
    if(product.composition_evidence?.length)card.append(disclosure('Source evidence',...product.composition_evidence.map(e=>el('p',e.source_id+' · '+e.locator))));
@@ -178,7 +179,7 @@ export function figureGallery(host,figures,r,category,presentation={}){
 const KEEP_ALL_SECTIONS=new Set(['wu2008']);
 export function emptySections(r,flags){if(KEEP_ALL_SECTIONS.has(r?.lineage?.source_group))return new Set();return new Set(Object.entries(flags).filter(([,empty])=>empty).map(([id])=>id));}
 export function hideEmptySections(sections,empty){let n=0;for(const s of sections){s.hidden=empty.has(s.id);if(s.hidden)continue;const number=s.querySelector?.('.reader-number');if(number)number.textContent=String(++n).padStart(2,'0');}return empty;}
-export function interpretationFallback(r){return r.quality?.review_status==='source_extracted'?'Further interpretation is available in the original source.':'Interpretation is available with the original source and complete review.';}
+export function interpretationFallback(r){return READER_COPY.interpretation;}
 function intuition(host,r,presentation){const items=presentation.intuition||presentation.chemical_intuition||[];if(!items.length){host.append(el('p',interpretationFallback(r),'reader-note'),link('Source discussion →',reviewURL(r,presentation,'#source-intuition'),'reader-data-link'));return false;}
  const grid=el('div',undefined,'reader-intuition');for(const item of items.slice(0,3)){const card=el('article');if(item.title)card.append(el('h3',item.title));card.append(el('p',item.summary||item.text||''),el('small',human(item.claim_type||'Source interpretation')),link('Evidence →',reviewURL(r,presentation,'#source-intuition'),'reader-data-link'));grid.append(card);}host.append(grid);if(items.length>3)host.append(link('All interpretations and references →',reviewURL(r,presentation,'#source-intuition'),'reader-data-link'));return true;}
 function sourceDisagreements(host,pairs,r){if(!Array.isArray(pairs)||!pairs.length)return;const heading=el('h3','Source comparisons','reader-conflict-heading');heading.id='source-disagreements';host.append(heading,el('p','Each account retains its context and source locator. Unresolved discrepancies remain marked; distinct measurement bases are shown separately.','reader-conflict-intro'));for(const pair of pairs){if(!Array.isArray(pair.claims)||pair.claims.length<2){if(pair.context){const note=el('article',undefined,'reader-conflict');note.append(el('h4',pair.topic||pair.field||'Source qualification'),el('p',safeText(pair.context)),link('Complete source qualification →',recordURL(r.record_id)+'#evidence','reader-data-link'));host.append(note);}continue;}const card=el('article',undefined,'reader-conflict');const top=el('div',undefined,'reader-conflict-top');top.append(el('h4',pair.topic||pair.field||'Source disagreement'),badge(pair.status==='preserved_distinct'?'Distinct bases':'Unresolved','reader-conflict-status'));card.append(top);if(pair.context)card.append(el('p',pair.context,'reader-conflict-context'));const claims=el('div',undefined,'reader-conflict-claims');pair.claims.forEach((claim,index)=>{const item=el('section',undefined,'reader-conflict-claim');item.append(el('span',claim.label||`Report ${index+1}`,'reader-conflict-label'),el('p',safeText(claim.statement)||safeText(claim.value)||safeText(claim.claim)||'Claim text not supplied.'));const locator=claim.sourceLocator||claim.source_locator;if(locator)item.append(el('small',safeText(locator),'reader-conflict-locator'));const source=r.sources.find(s=>s.id===(claim.sourceId||claim.source_id));if(source)item.append(link(source.title+' ↗',sourceURL(source),'reader-data-link'));claims.append(item);});card.append(claims);host.append(card);}}
@@ -237,7 +238,7 @@ async function buildMethod(host,r,presentation){
 
  sections[3].append(link('Complete measurements and source evidence →',recordURL(r.record_id)+'#properties','reader-data-link'));const hasIntuition=intuition(sections[4],r,presentation);
 
- const sources=section('sources','06','Sources');for(const source of r.sources){const card=el('div',undefined,'reader-citation');card.append(el('strong',source.title),el('p',source.authors+' · '+(source.year??'Year unverified')),link((source.doi||'Source')+' ↗',sourceURL(source)),document.createTextNode(' · '),link(r.quality?.review_status==='source_extracted'?'Source details →':'Source review →',source.id===r.lineage.source_group?reviewURL(r,presentation):sourceURL(source)));sources.append(card);}sourceDisagreements(sources,presentation.conflictPairs,r);host.append(sources);
+ const sources=section('sources','06','Sources');for(const source of r.sources){const card=el('div',undefined,'reader-citation');card.append(el('strong',source.title),el('p',source.authors+' · '+(source.year??'Year unverified')),link((source.doi||'Source')+' ↗',sourceURL(source)),document.createTextNode(' · '),link(READER_COPY.sourceLink,source.id===r.lineage.source_group?reviewURL(r,presentation):sourceURL(source)));sources.append(card);}sourceDisagreements(sources,presentation.conflictPairs,r);host.append(sources);
  if(/^data\/paper-reviews\/[a-z0-9-]+\/[a-z0-9-]+\.json$/.test(presentation.data_links?.contexts||''))sources.append(link('Download additional source contexts ↓',presentation.data_links.contexts,'reader-data-link'));
  const additionalFigures=sourceFigureRows(figs,true);if(additionalFigures.length){sources.append(el('h3','Additional source figures'),el('p','These figures retain their original specimen and context qualifications.','reader-note'));figureGallery(sources,additionalFigures,r,'source',presentation);}
  mountWuContext(host,sections,sources,r,presentation);
@@ -279,7 +280,7 @@ export async function mountReader(main,{materialId,recordId}={}){
  const useGroups=!!groups&&groupedIDs.size===records.length&&records.every(row=>groupedIDs.has(row.record_id));
  let active=chooseMethodRecord(useGroups?groups:null,records,recordId);const baseTitle=data?.formula||records[0].formula;
 
- main.replaceChildren();const toolbar=el('div',undefined,'reader-view-toolbar');toolbar.append(link('Periodic table / '+baseTitle,'index.html','reader-breadcrumb'),el('span',records.some(r=>r.review_status==='source_extracted')?'Synthesis and evidence':'Reviewed synthesis and evidence','reader-version'));main.append(toolbar);
+ main.replaceChildren();const toolbar=el('div',undefined,'reader-view-toolbar');toolbar.append(link('Periodic table / '+baseTitle,'index.html','reader-breadcrumb'),el('span',READER_COPY.toolbar,'reader-version'));main.append(toolbar);
 
  const heading=el('header',undefined,'reader-heading');heading.append(el('h1',baseTitle));{const name=data?.name||'Synthesis and material evidence';if(name!==baseTitle)heading.append(el('p',name));}const componentLabel=componentScopeLabel(data);if(componentLabel)heading.append(badge(componentLabel,'scope'));main.append(heading);
 

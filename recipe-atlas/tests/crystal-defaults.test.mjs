@@ -119,9 +119,9 @@ test('machine-extracted composite defaults never inherit unspecified core/shell 
  }
 });
 
-test('audited, pending and unspecified-status defaults retain original library titles',()=>{
+test('audited, pending and unspecified-status defaults use the same neutral component titles',()=>{
  for(const status of ['reviewed','independently_audited','pending',undefined])
-  assert.deepEqual(defaultCrystalReferences(titleEntries,titleRecord(status,'unresolved')).map(ref=>ref.name),titleEntries.map(ref=>ref.name));
+  assert.deepEqual(defaultCrystalReferences(titleEntries,titleRecord(status,'unresolved')).map(ref=>ref.name),['Bulk wurtzite CdSe reference','Bulk wurtzite CdS reference']);
 });
 
 test('single-composition defaults keep their title scope unchanged',()=>{
@@ -153,11 +153,11 @@ test('neutral titles retain phase filtering, cell/provenance pins and immutable 
  assert.deepEqual(defaultCrystalReferences(refs,{...record,products:[{phase:{value:'unknown phase'}}]}),[]);
 });
 
-test('ordinary core/shell library assets remain unchanged for their audited contexts',()=>{
+test('ordinary core/shell references use neutral titles while their audited library data stays unchanged',()=>{
  const entries=titleEntries.map(ref=>({...ref,record_ids:['audited-core-shell'],componentRole:ref.formula==='CdSe'?'Core reference':'Shell reference'}));
  const before=JSON.stringify(entries);
  const result=defaultCrystalReferences(entries,titleRecord('reviewed','core_shell'));
- assert.deepEqual(result.map(ref=>ref.name),entries.map(ref=>ref.name));
+ assert.deepEqual(result.map(ref=>ref.name),['Bulk wurtzite CdSe reference','Bulk wurtzite CdS reference']);
  assert.equal(JSON.stringify(entries),before);
 });
 

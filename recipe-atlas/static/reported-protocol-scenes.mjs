@@ -1,11 +1,12 @@
 import { extendedReportedScene } from './reported-scene-extensions.mjs';
-import { createReportedDrawing, reportedDrawingFacts } from './reported-scene-drawing.mjs?v=0.41.10';
+import { createReportedDrawing, reportedDrawingFacts } from './reported-scene-drawing.mjs?v=0.45.0';
 import { matchProtocolCondition } from './protocol-conditions.mjs?v=0.39.1';
+import { PROTOCOL_SCENE_CAPTION,wireDrawingCallouts } from './protocol-record-fit.mjs?v=0.45.0';
 import { quantityValue } from './quantity-value.mjs';
 // Reader-only scenes. No record writes, paper/model reads or source-specific art.
 // The caller preserves handmade/per-paper handlers and calls this only at the
 // source-bound/generic fallback boundary. A null result retains the old image.
-export const REPORTED_SCENE_CAVEAT = 'Schematic: vessel shapes and colors are illustrative.';
+export const REPORTED_SCENE_CAVEAT = PROTOCOL_SCENE_CAPTION;
 
 const text = value => typeof value === 'string' ? value.trim() : '';
 const normalized = value => text(value).toLowerCase().replaceAll('_', ' ').replace(/\s+/g, ' ');
@@ -72,12 +73,12 @@ function vesselKind(vessel) {
 
 function ownHotTemperature(o) {
   return Object.entries(o.parameters || {}).some(([key, q]) => {
-    if (!/temperature/i.test(key) || !quantityReported(q)) return false;
+    if (!/temperature/i.test(key) || /(?:^|_)(?:stock|source|feed|precursor|injection_solution)(?:_|$)/i.test(key) || !quantityReported(q)) return false;
     const value = Number.isFinite(q.value) ? q.value : q.minimum;
     if (!Number.isFinite(value)) return false; // an upper bound is not an exact hot charge
     const unit = text(q.unit).toLowerCase();
     const celsius = ['degc', '°c', 'c'].includes(unit) ? value : unit === 'k' ? value - 273.15 : null;
-    return celsius !== null && celsius >= 100;
+    return celsius !== null && celsius > 25;
   });
 }
 
@@ -88,7 +89,7 @@ function recipeVessel(r) {
     /^Reactor:\s*(.+?)\s*\(Main PDF p\.[^)]*\)\.$/.exec(text(note))?.[1]).filter(Boolean))];
   if (values.length !== 1) return null;
   const value = values[0];
-  if (!present(value) || /^(?:2 ml distilled water|thin films of silicon oxide|25 × 25 mm ito coated)/i.test(words(value))) return null;
+  if (!present(value) || !/\b(?:flask|vial|tube|beaker|reactor|autoclave|furnace|chamber|crucible|schlenk|glovebox|mill|mbe|mocvd|movpe|cvd|epitaxy system|epitaxy apparatus)\b/i.test(words(value))) return null;
   return {value, scope: 'recipe'};
 }
 
@@ -272,7 +273,7 @@ function baseSceneSpec(o, r = {}, options = {}, extendedKind = null) {
     // Workup gets the requested generic tube symbol without claiming a reported
     // vessel name, capacity or fittings. A reported shape still takes precedence.
     vesselKind: useVessel ? vesselKind(useVessel) : workup ? 'tube' : 'plain',
-    added, addedLabels: added.map(shortReportedSceneName), conditions, sourceFeed,
+    added, addedLabels: added.map(shortReportedSceneName), addedFormulas:added.map(name=>{const matches=(r.materials||[]).filter(m=>m.name===name&&typeof m.formula==='string'&&/^(?:[A-Z][a-z]?\d*|[()[\].+·-])+$/.test(m.formula));const values=[...new Set(matches.map(m=>m.formula))];return values.length===1?values[0]:null;}), conditions, sourceFeed,
     beamSystem: /\bmbe\b|molecular beam epitax/.test(system + ' ' + own),
     // Only explicit current-step substrate inputs are named. No recipe-wide
     // material or substrate list is assigned to every deposition operation.
@@ -331,7 +332,7 @@ export function createReportedProtocolScene(o, r, options = {}) {
   host.dataset.renderer = 'reported-fields';
   host.dataset.reportedScene = 'true';
   Object.assign(host.style, {display: 'grid', gridTemplateColumns: 'minmax(0,1fr)',
-    height: 'auto', minHeight: '260px', minWidth: '0', width: '100%', gap: '12px'});
+    height: 'auto', minHeight: '0px', minWidth: '0', width: '100%', gap: '12px'});
   const labels = htmlNode('dl');
   labels.className = 'reported-scene-labels';
   Object.assign(labels.style, {margin: '0', display: 'grid', gap: '7px'});
@@ -348,26 +349,39 @@ export function createReportedProtocolScene(o, r, options = {}) {
     if ((!present(formatted) || /not reported|unavailable/i.test(formatted)) && roomTemperature(quantity))
       formatted = text(quantity.raw_text) || text(quantity.qualifier);
     if (present(formatted) && !/not reported|unavailable/i.test(formatted))
-      formattedConditions.push({key, value: formatted, shortValue: compactReportedSceneQuantity(quantity, options.formatQuantity)});
+      formattedConditions.push({key, value: formatted, shortValue: compactReportedSceneQuantity(quantity, options.formatQuantity), drawingValue: compactDrawingQuantity(quantity,options.formatQuantity)});
   }
   const shown = reportedDrawingFacts(spec, formattedConditions);
   const cardNames = namesInConditionCards(o, r);
   const drawnInputs = new Set(shown.addedIndicesShown);
   const extraNames = spec.added.filter((name, index) => !drawnInputs.has(index) && !cardNames.has(name));
-  if (extraNames.length) row('Additional inputs', extraNames.join('; '));
+  const fullFacts=[];
+  if (extraNames.length) {if(options.layout?.compact)fullFacts.push({label:'Additional inputs',value:extraNames.join('; ')});else row('Additional inputs', extraNames.join('; '));}
   const drawnSubstrates = new Set(shown.substrateLabels);
   const extraSubstrates = spec.substrates.filter(name => !drawnSubstrates.has(name) && !cardNames.has(name));
-  if (extraSubstrates.length) row('Reported substrate', extraSubstrates.join('; '));
-  if (spec.vessel && !shown.vesselNameShown)
-    row(spec.vessel.scope === 'recipe' ? 'Reported recipe vessel' : 'Reported vessel', spec.vessel.value);
+  if (extraSubstrates.length) {if(options.layout?.compact)fullFacts.push({label:'Reported substrate',value:extraSubstrates.join('; ')});else row('Reported substrate', extraSubstrates.join('; '));}
+  if (spec.vessel && !shown.vesselNameShown){const title=spec.vessel.scope === 'recipe'?'Reported recipe vessel':'Reported vessel';if(options.layout?.fallback&&spec.vessel.value.length>40){row(title,'Vessel details ↗');fullFacts.push({label:title,value:spec.vessel.value,callout:'Vessel details ↗'});}else row(title,spec.vessel.value);}
   const pressureCard = matchProtocolCondition(Object.entries(o.parameters || {}), 'pressure')?.[0];
   const drawnConditions = new Set([...shown.temperatureConditionKeysShown, ...shown.durationConditionKeysShown, ...shown.fluxConditionKeysShown]);
   for (const {key, value} of formattedConditions) {
     // Keep a row only when neither the drawing nor the adjacent pressure card
     // shows this exact reported condition. Secondary pressure/flux stays visible.
-    if (!drawnConditions.has(key) && key !== pressureCard) row(key.replaceAll('_', ' '), value);
+    if (!drawnConditions.has(key) && key !== pressureCard) {if(options.layout?.compact)fullFacts.push({label:key.replaceAll('_',' '),value});else row(key.replaceAll('_', ' '), value);}
   }
-  host.append(createReportedDrawing(spec, formattedConditions));
+  const drawing=createReportedDrawing(spec,formattedConditions,options.layout||{});host.append(drawing);
+  host.recordGeometry={...drawing.reportedViewport,extraOverhead:spec.kind==='chamber'?32:0};
+  host.recordFullFacts=[...fullFacts,...(drawing.reportedFullFacts||[])];
+  host.updateDrawingLayout=()=>drawing.updateAnnotationLayout?.();
+  host.createExpandedDrawing=()=>createReportedProtocolScene(o,r,{...options,layout:{compact:false}});
   if (labels.children.length) host.append(labels);
+  wireDrawingCallouts(host,host.recordFullFacts,String(r.record_id||'record')+'-'+String(o.id||'step'));
   return host;
+}
+
+// Drawing-only typed values; full qualifiers/basis remain in visible condition cards.
+function compactDrawingQuantity(quantity,format){
+ if(typeof format!=='function'||!quantityReported(quantity))return null;
+ if(![quantity.value,quantity.minimum,quantity.maximum].some(v=>typeof v==='number'&&Number.isFinite(v)))return null;
+ const value=format({...quantity,qualifier:'',basis:''});
+ return present(value)&&!(/not reported|unavailable/i.test(value))?value:null;
 }
