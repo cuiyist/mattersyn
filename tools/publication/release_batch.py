@@ -546,6 +546,39 @@ def fetch(url, opener=None):
     return http_get(url, {'Cache-Control': 'no-cache'}, opener)  # anonymous: no cookies, no credentials
 
 
+def _transient_live_transport_error(error):
+    """Retry only transient anonymous transport failures, never wrong bytes."""
+    if isinstance(error, urllib.error.HTTPError):
+        return error.code == 429 or 500 <= error.code < 600
+    reason = error.reason if isinstance(error, urllib.error.URLError) else error
+    return isinstance(reason, (TimeoutError, ConnectionResetError))
+
+
+def _live_hash_check(url, expected_sha256, opener, sleep):
+    """Keep every failed attempt; a successful response must match exact bytes."""
+    failures = []
+    for attempt in range(1, 4):
+        try:
+            actual = hashlib.sha256(fetch(url, opener)).hexdigest()
+        except Exception as error:
+            transient = _transient_live_transport_error(error)
+            failures.append({'attempt': attempt, 'outcome': 'fetch_error',
+                             'error_class': error.__class__.__name__,
+                             'reason_class': error.reason.__class__.__name__ if isinstance(error, urllib.error.URLError) else None,
+                             'http_status': error.code if isinstance(error, urllib.error.HTTPError) else None,
+                             'retryable': transient})
+            if transient and attempt < 3:
+                sleep(attempt)
+                continue
+            return False, {'attempts': attempt, 'final_outcome': 'fetch_error', 'attempt_failures': failures}
+        if actual != expected_sha256:
+            failures.append({'attempt': attempt, 'outcome': 'sha256_mismatch',
+                             'expected_sha256': expected_sha256, 'actual_sha256': actual,
+                             'retryable': False})
+            return False, {'attempts': attempt, 'final_outcome': 'sha256_mismatch', 'attempt_failures': failures}
+        return True, ({'attempts': attempt, 'final_outcome': 'sha256_match', 'attempt_failures': failures} if failures else None)
+
+
 def verify_live(site_url, dist, source_commit, paper_routes=None, material_routes=None,
                 sample=40, timeout_s=1800, poll_s=20, opener=None, sleep=time.sleep, changed_paths=None):
     base = site_url.rstrip('/') + '/'
@@ -575,30 +608,48 @@ def verify_live(site_url, dist, source_commit, paper_routes=None, material_route
     probes = list(dict.fromkeys(must + rest[:max(0, sample - len(must))] + sorted(changed_paths)))
     def check_file(rel):
         try:
-            live = hashlib.sha256(fetch(f'{base}{rel}?v={int(time.time())}', opener)).hexdigest()
-            return rel, live == sha256(files[rel])
-        except Exception:
-            return rel, False
+            matches, details = _live_hash_check(f'{base}{rel}?v={int(time.time())}', sha256(files[rel]), opener, sleep)
+            return rel, matches, details
+        except Exception as error:
+            return rel, False, {'attempts': 0, 'final_outcome': 'local_check_error',
+                                'attempt_failures': [{'attempt': 0, 'outcome': 'local_check_error',
+                                                      'error_class': error.__class__.__name__, 'retryable': False}]}
     # Every existing probe is still mandatory. Independent anonymous GET/hash
     # checks use at most eight workers; map yields the original probe order so
     # slow requests and failures cannot change deterministic receipt ordering.
+    probe_attempt_failures = []
     with ThreadPoolExecutor(max_workers=8) as executor:
-        for rel, matches in executor.map(check_file, probes):
+        for rel, matches, details in executor.map(check_file, probes):
             (checked if matches else mismatched).append(rel)
+            if details:
+                probe_attempt_failures.append({'scope': 'file', 'path': rel, **details})
     def check_route(binding):
         route = binding['route']
         route_url = urllib.parse.urljoin(base, route)
         route_url += ('&' if '?' in route_url else '?') + f'v={int(time.time())}'
+        details = []
+        def component(url, rel, kind):
+            matches, attempts = _live_hash_check(url, sha256(files[rel]), opener, sleep)
+            if attempts:
+                details.append({'component': kind, 'path': rel, **attempts})
+            return matches, bool(attempts and attempts['final_outcome'] == 'fetch_error')
         try:
-            page_ok = hashlib.sha256(fetch(route_url, opener)).hexdigest() == sha256(files[binding['page']])
-            data_ok = hashlib.sha256(fetch(f"{base}{binding['data']}?v={int(time.time())}", opener)).hexdigest() == sha256(files[binding['data']])
+            page_ok, fetch_failed = component(route_url, binding['page'], 'page')
+            if fetch_failed:
+                return False, details
+            data_ok, fetch_failed = component(f"{base}{binding['data']}?v={int(time.time())}", binding['data'], 'data')
+            if fetch_failed:
+                return False, details
             inventory = binding.get('inventory')
-            inventory_ok = (not inventory or
-                            hashlib.sha256(fetch(f"{base}{inventory}?v={int(time.time())}", opener)).hexdigest() ==
-                            sha256(files[inventory]))
-        except Exception:
-            return False
-        return page_ok and data_ok and inventory_ok
+            inventory_ok = True
+            if inventory:
+                inventory_ok, _ = component(f"{base}{inventory}?v={int(time.time())}", inventory, 'inventory')
+        except Exception as error:
+            details.append({'component': 'binding', 'attempts': 0, 'final_outcome': 'local_check_error',
+                            'attempt_failures': [{'attempt': 0, 'outcome': 'local_check_error',
+                                                  'error_class': error.__class__.__name__, 'retryable': False}]})
+            return False, details
+        return page_ok and data_ok and inventory_ok, details
 
     checked_routes, failed_routes = [], []
     # Each route still performs its own anonymous page/data/inventory GETs.
@@ -606,23 +657,28 @@ def verify_live(site_url, dist, source_commit, paper_routes=None, material_route
     # and duplicate bindings remain separate checks, without a content cache.
     with ThreadPoolExecutor(max_workers=8) as executor:
         paper_rows = sorted((paper_routes or {}).items())
-        for (source, _), matches in zip(paper_rows, executor.map(
+        for (source, binding), (matches, details) in zip(paper_rows, executor.map(
                 check_route, (binding for _, binding in paper_rows))):
             (checked_routes if matches else failed_routes).append(source)
+            if details:
+                probe_attempt_failures.append({'scope': 'paper_route', 'source': source, 'route': binding['route'], 'components': details})
         checked_materials, failed_materials = [], []
         material_rows = [(source, binding)
                          for source, bindings in sorted((material_routes or {}).items())
                          for binding in bindings]
-        for (source, binding), matches in zip(material_rows, executor.map(
+        for (source, binding), (matches, details) in zip(material_rows, executor.map(
                 check_route, (binding for _, binding in material_rows))):
             label = f"{source}:{binding['id']}"
             (checked_materials if matches else failed_materials).append(label)
+            if details:
+                probe_attempt_failures.append({'scope': 'material_route', 'source': source, 'id': binding['id'], 'route': binding['route'], 'components': details})
     return {'passed': not mismatched and not failed_routes and not failed_materials and bool(checked), 'anonymous': True,
             'checked_files': len(checked), 'mismatched_files': mismatched,
             'checked_changed_files': sorted(set(changed_paths)&set(checked)),
             'checked_paper_routes': checked_routes, 'failed_paper_routes': failed_routes,
             'checked_material_routes': checked_materials, 'failed_material_routes': failed_materials,
-            'source_commit': source_commit, 'verified_at': now(), 'site_url': base}
+            'source_commit': source_commit, 'verified_at': now(), 'site_url': base,
+            'probe_attempt_failures': probe_attempt_failures}
 
 
 def ledger_events(papers, source_commit, site_url, receipt_sha256, at):
