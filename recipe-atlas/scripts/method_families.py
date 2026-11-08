@@ -300,8 +300,48 @@ def pick_source(record,element,metal):
  identities={identity['key']:identity for _,identity in candidates}
  if len(identities)!=1:return None,'missing_source' if not identities else 'multiple_sources'
  value=next(iter(identities.values()));return {'key':value['key'],'label':value['label']},None
+def sparse_core_shell_context(record):
+ """A sparse named component feed cannot establish the other components' origin."""
+ material=record.get('material',{})
+ parts=[part.strip() for part in str(material.get('formula')or'').split('/')]
+ if material.get('architecture')not in {'core_shell','unresolved'} or len(parts)<2 or material.get('components')!=parts:return None
+ component=parts[-1];sources=target_sources(component)
+ if not sources:return None
+ additions=[];workup={'precipitate','centrifuge','wash','filter','redisperse','dry','isolate','collect','decant','separate'}
+ states={state.get('id')for state in record.get('material_states',[])}
+ for operation in record.get('operations',[]):
+  action=str(operation.get('action')or'').casefold().replace('_',' ')
+  own=' '.join(str(operation.get(key)or'')for key in ('label','description'))
+  explicit_core_creation=re.search(r'\b(?:form|grow|synthesi[sz]e|nucleat)\w*\b.{0,50}\bcores?\b|\bcore (?:formation|growth|synthesis|nucleation)\b',own,re.I)
+  if explicit_core_creation and not re.search(r'\b(?:no|not|without|avoid|prevent)\b|core[- /]shell',own,re.I):return None
+  if action in {'add','inject'} and operation.get('stage')=='synthesis':additions.append(operation)
+  elif action in {'cool','quench'}:continue
+  elif action in {'heat','hold','stir','wait'} and all(key in states for key in operation.get('inputs',[])+operation.get('optional_inputs',[])):continue
+  elif operation.get('stage')=='workup' and action in workup:continue
+  else:return None
+ if len(additions)!=1:return None
+ operation=additions[0];own=' '.join(str(operation.get(key)or'')for key in ('label','description'))
+ if not re.search(r'(?<![A-Za-z0-9])'+re.escape(component)+r'(?![A-Za-z0-9])',own,re.I):return None
+ if not re.search(r'\b(?:solution|precursor|feed|shell|overgrowth|coating)\b',own,re.I):return None
+ used,_=used_materials(record)
+ supplied=[item for item in record.get('materials',[])if item.get('id')in used]
+ given=any(str(item.get('role')or'').casefold()=='seed' or MADE.search(str(item.get('name')or'')) or MADE.search(str(item.get('role')or'')) or (re.search(r'\bcores?\b',str(item.get('name')or''),re.I)and not re.search(r'\b(?:precursor|source|reaction)\b',str(item.get('name')or''),re.I))for item in supplied)
+ if given:return 'processing'
+ # Other explicitly consumed precursor sources may make an integrated product;
+ # this narrow sparse-feed fallback does not override that own-record evidence.
+ allowed={sources[0],*sources[1]}
+ for item in supplied:
+  role=str(item.get('role')or'').replace('_',' ')
+  if not re.search(r'\b(?:precursor|source|reagent|feed|solute)\b',role,re.I):continue
+  identity=source_identity(item)
+  if not identity or not identity.get('elements') or identity['elements']-allowed:return None
+ return 'other'
+
 def classify_record(record,formula,method_label=None):
  if processing(record):return {'kind':'processing','key':'processing','label':'Processing of material'}
+ sparse=sparse_core_shell_context(record)
+ if sparse=='processing':return {'kind':'processing','key':'processing','label':'Processing of material'}
+ if sparse=='other':return {'kind':'other','key':'other','label':'Other methods','reason':'sparse_core_shell_context'}
  target=target_sources(formula);name=route(record,method_label)
  if not target or not name:return {'kind':'other','key':'other','label':'Other methods','reason':'unsupported_target' if not target else 'missing_route'}
  metal,nonmetals=target;m,reason=pick_source(record,metal,True)
