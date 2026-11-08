@@ -255,6 +255,165 @@ class NetworkTests(unittest.TestCase):
             self.assertFalse(self.live(dist, served, materials=materials)['passed'])
 
 
+class LiveTransportRetryTests(unittest.TestCase):
+    def hash(self, raw):
+        return rb.hashlib.sha256(raw).hexdigest()
+
+    def request(self, sequence):
+        calls = []
+        def opener(req, timeout):
+            calls.append((req.full_url, timeout, dict(req.header_items())))
+            value = sequence.pop(0)
+            if isinstance(value, Exception):
+                raise value
+            return FakeResponse(value)
+        return opener, calls
+
+    def http_error(self, status):
+        return rb.urllib.error.HTTPError('https://example.test/site/a.html', status, 'synthetic', None, None)
+
+    def test_transient_HTTP_timeout_and_connection_reset_only(self):
+        for error in [self.http_error(429), self.http_error(500), self.http_error(503), self.http_error(599),
+                      TimeoutError(), ConnectionResetError(), rb.urllib.error.URLError(TimeoutError()),
+                      rb.urllib.error.URLError(ConnectionResetError())]:
+            with self.subTest(error=type(error).__name__):
+                self.assertTrue(rb._transient_live_transport_error(error))
+        for error in [self.http_error(403), self.http_error(404), self.http_error(408),
+                      ValueError(), rb.urllib.error.URLError('timed out'),
+                      rb.urllib.error.URLError(ValueError('certificate or other permanent error'))]:
+            with self.subTest(error=type(error).__name__):
+                self.assertFalse(rb._transient_live_transport_error(error))
+
+    def test_transient_then_exact_bytes_preserves_failed_attempt(self):
+        for error in [self.http_error(429), self.http_error(503), TimeoutError(),
+                      rb.urllib.error.URLError(TimeoutError()), rb.urllib.error.URLError(ConnectionResetError())]:
+            opener, calls = self.request([error, b'exact'])
+            waits = []
+            ok, detail = rb._live_hash_check('https://example.test/site/a.html', self.hash(b'exact'), opener, waits.append)
+            self.assertTrue(ok); self.assertEqual(len(calls), 2); self.assertEqual(waits, [1])
+            self.assertEqual(detail['attempts'], 2); self.assertEqual(detail['final_outcome'], 'sha256_match')
+            self.assertEqual(detail['attempt_failures'][0]['attempt'], 1)
+            self.assertEqual(detail['attempt_failures'][0]['error_class'], error.__class__.__name__)
+            self.assertEqual(detail['attempt_failures'][0]['outcome'], 'fetch_error')
+            self.assertTrue(all(not any(k.lower() in ('authorization','cookie') for k in c[2]) for c in calls))
+            self.assertEqual([c[1] for c in calls], [60, 60])
+
+    def test_transient_exhaustion_keeps_all_three_failures(self):
+        opener, calls = self.request([self.http_error(503) for _ in range(3)])
+        waits = []
+        ok, detail = rb._live_hash_check('https://example.test/site/a.html', self.hash(b'exact'), opener, waits.append)
+        self.assertFalse(ok); self.assertEqual(len(calls), 3); self.assertEqual(waits, [1, 2])
+        self.assertEqual([x['attempt'] for x in detail['attempt_failures']], [1, 2, 3])
+        self.assertEqual([x['http_status'] for x in detail['attempt_failures']], [503, 503, 503])
+        self.assertEqual(detail['final_outcome'], 'fetch_error')
+
+    def test_nontransient_errors_do_not_retry(self):
+        for error in [self.http_error(403), self.http_error(404), self.http_error(400),
+                      rb.urllib.error.URLError(ValueError()), ValueError()]:
+            opener, calls = self.request([error])
+            waits = []
+            ok, detail = rb._live_hash_check('https://example.test/site/a.html', self.hash(b'exact'), opener, waits.append)
+            self.assertFalse(ok); self.assertEqual(len(calls), 1); self.assertEqual(waits, [])
+            self.assertFalse(detail['attempt_failures'][0]['retryable'])
+
+    def test_successful_wrong_bytes_never_retry(self):
+        opener, calls = self.request([b'wrong'])
+        waits = []
+        ok, detail = rb._live_hash_check('https://example.test/site/a.html', self.hash(b'exact'), opener, waits.append)
+        self.assertFalse(ok); self.assertEqual(len(calls), 1); self.assertEqual(waits, [])
+        self.assertEqual(detail['final_outcome'], 'sha256_mismatch')
+        self.assertEqual(detail['attempt_failures'][0]['actual_sha256'], self.hash(b'wrong'))
+        self.assertEqual(detail['attempt_failures'][0]['expected_sha256'], self.hash(b'exact'))
+
+    def test_wrong_bytes_after_transient_still_fail_without_more_retry(self):
+        opener, calls = self.request([self.http_error(503), b'wrong'])
+        ok, detail = rb._live_hash_check('https://example.test/site/a.html', self.hash(b'exact'), opener, lambda _: None)
+        self.assertFalse(ok); self.assertEqual(len(calls), 2)
+        self.assertEqual([x['outcome'] for x in detail['attempt_failures']], ['fetch_error', 'sha256_mismatch'])
+
+    def test_success_first_attempt_has_no_failure_history(self):
+        opener, calls = self.request([b'exact'])
+        self.assertEqual(rb._live_hash_check('https://example.test/site/a.html', self.hash(b'exact'), opener, lambda _: None), (True, None))
+        self.assertEqual(len(calls), 1)
+
+    def fixture(self, root):
+        snap = json.dumps({'source_commit': 'c' * 40}).encode()
+        for path, data in [('data/release-snapshot.json', snap), ('index.html', b'home'),
+                           ('data/materials-index.json', b'{}'), ('a.html', b'a'),
+                           ('paper-review.html', b'paper'), ('paper.json', b'data'),
+                           ('inventory.json', b'inventory'), ('material.html', b'material'), ('material.json', b'material-data')]:
+            write(root, path, data)
+        paper = {'a': {'route':'paper-review.html?id=a', 'page':'paper-review.html', 'data':'paper.json', 'inventory':'inventory.json'}}
+        materials = {'a': [{'id':mid, 'route':'material.html?id='+mid, 'page':'material.html', 'data':'material.json', 'inventory':'inventory.json'} for mid in ['m1','m2']]}
+        return paper, materials
+
+    def test_all_original_probes_bindings_and_eight_worker_limits_remain(self):
+        import collections
+        with tempfile.TemporaryDirectory() as t:
+            dist = Path(t); paper, materials = self.fixture(dist)
+            served = {name:path.read_bytes() for name,path in rb.tree_files(dist).items()}
+            calls = collections.Counter()
+            def opener(req, timeout):
+                rel = req.full_url.split('/site/',1)[1].split('?',1)[0]; calls[rel] += 1
+                if calls[rel] == 1 and rel in ('a.html','paper-review.html','material.json'):
+                    raise self.http_error(503)
+                return FakeResponse(served[rel])
+            executor = rb.ThreadPoolExecutor
+            with mock.patch.object(rb, 'ThreadPoolExecutor', wraps=executor) as pool:
+                result = rb.verify_live('https://example.test/site/', dist, 'c'*40, paper, materials,
+                                        sample=0, timeout_s=0, opener=opener, sleep=lambda _:None, changed_paths=['a.html'])
+            self.assertTrue(result['passed']); self.assertEqual(result['checked_files'], 4)
+            self.assertEqual(result['checked_changed_files'], ['a.html'])
+            self.assertEqual(result['checked_paper_routes'], ['a'])
+            self.assertEqual(result['checked_material_routes'], ['a:m1','a:m2'])
+            self.assertEqual(calls['inventory.json'], 3, 'Each binding still checks its own inventory')
+            self.assertEqual(calls['material.html'], 2, 'Duplicate pages retain separate checks')
+            self.assertEqual([x.kwargs['max_workers'] for x in pool.call_args_list], [8,8])
+            self.assertEqual({x['scope'] for x in result['probe_attempt_failures']}, {'file','paper_route','material_route'})
+
+    def test_wrong_binding_bytes_still_fail_and_all_bindings_are_checked(self):
+        import collections
+        with tempfile.TemporaryDirectory() as t:
+            dist = Path(t); paper, materials = self.fixture(dist)
+            served = {name:path.read_bytes() for name,path in rb.tree_files(dist).items()};served['material.json']=b'wrong'
+            calls = collections.Counter()
+            def opener(req, timeout):
+                rel=req.full_url.split('/site/',1)[1].split('?',1)[0];calls[rel]+=1;return FakeResponse(served[rel])
+            result=rb.verify_live('https://example.test/site/',dist,'c'*40,paper,materials,sample=0,timeout_s=0,opener=opener,sleep=lambda _:None)
+            self.assertFalse(result['passed']);self.assertEqual(result['failed_material_routes'],['a:m1','a:m2'])
+            self.assertEqual(calls['material.json'],2,'Wrong hashes are not retried')
+            self.assertEqual(calls['inventory.json'],3,'No binding or inventory check removed')
+
+
+    def test_final_page_fetch_failure_keeps_original_route_short_circuit(self):
+        import collections
+        with tempfile.TemporaryDirectory() as t:
+            dist=Path(t);paper,_=self.fixture(dist)
+            served={name:path.read_bytes() for name,path in rb.tree_files(dist).items()};calls=collections.Counter()
+            def opener(req,timeout):
+                rel=req.full_url.split('/site/',1)[1].split('?',1)[0];calls[rel]+=1
+                if rel=='paper-review.html':raise self.http_error(503)
+                return FakeResponse(served[rel])
+            result=rb.verify_live('https://example.test/site/',dist,'c'*40,paper,sample=0,timeout_s=0,opener=opener,sleep=lambda _:None)
+            self.assertFalse(result['passed']);self.assertEqual(result['failed_paper_routes'],['a'])
+            self.assertEqual(calls['paper-review.html'],3);self.assertEqual(calls['paper.json'],0);self.assertEqual(calls['inventory.json'],0)
+            detail=next(x for x in result['probe_attempt_failures'] if x['scope']=='paper_route')
+            self.assertEqual(len(detail['components'][0]['attempt_failures']),3)
+
+    def test_final_data_fetch_failure_keeps_original_inventory_short_circuit(self):
+        import collections
+        with tempfile.TemporaryDirectory() as t:
+            dist=Path(t);paper,_=self.fixture(dist)
+            served={name:path.read_bytes() for name,path in rb.tree_files(dist).items()};calls=collections.Counter()
+            def opener(req,timeout):
+                rel=req.full_url.split('/site/',1)[1].split('?',1)[0];calls[rel]+=1
+                if rel=='paper.json':raise rb.urllib.error.URLError(ConnectionResetError())
+                return FakeResponse(served[rel])
+            result=rb.verify_live('https://example.test/site/',dist,'c'*40,paper,sample=0,timeout_s=0,opener=opener,sleep=lambda _:None)
+            self.assertFalse(result['passed']);self.assertEqual(result['failed_paper_routes'],['a'])
+            self.assertEqual(calls['paper-review.html'],1);self.assertEqual(calls['paper.json'],3);self.assertEqual(calls['inventory.json'],0)
+
+
 class LedgerTests(unittest.TestCase):
     def test_events_accepted_by_metrics_tool(self):
         events = rb.ledger_events({'paper-a': ['r1'], 'paper-b': ['r2', 'r3']}, 'd' * 40, 'https://example.test/site/', 'e' * 64,

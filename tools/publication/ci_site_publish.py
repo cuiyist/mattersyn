@@ -31,6 +31,7 @@ from __future__ import annotations
 import argparse
 import base64
 import datetime as dt
+import hashlib
 import json
 import os
 import re
@@ -186,6 +187,61 @@ def cmd_build(a):
     return 0
 
 
+LIVE_REVERIFICATION_INPUT = Path('publication/live-reverification-scope.json')
+LIVE_REVERIFICATION_RECEIPT = Path('receipts/live-reverification-scope.json')
+
+
+def validate_live_reverification_scope(value, built_paths, site_base_commit):
+    """Retain a reviewed prior mandatory probe set; current build hashes still win."""
+    if not isinstance(value, dict) or value.get('schema') != 'MatterSyn-live-reverification-scope/1':
+        fail('invalid live reverification scope schema')
+    for key in ('prior_source_commit', 'prior_site_commit'):
+        if not isinstance(value.get(key), str) or not re.fullmatch(r'[0-9a-f]{40}', value[key]):
+            fail('invalid prior live reverification commit')
+    if value['prior_site_commit'] != site_base_commit:
+        fail('live reverification scope does not name this staged Site base')
+    if type(value.get('prior_publisher_run')) is not int or value['prior_publisher_run'] <= 0:
+        fail('invalid prior publisher run')
+    if not isinstance(value.get('prior_receipt_sha256'), str) or not re.fullmatch(r'[0-9a-f]{64}', value['prior_receipt_sha256']):
+        fail('invalid prior live receipt digest')
+    paths = value.get('required_paths')
+    if (not isinstance(paths, list) or not paths or not all(isinstance(p, str) for p in paths)
+            or len(paths) != len(set(paths))
+            or any(p not in built_paths or p.split('/')[0] in rb.SITE_CONTROL for p in paths)):
+        fail('live reverification paths must name unique built files')
+    return paths
+
+
+def carry_live_reverification_scope(source, work, built_paths, site_base_commit):
+    path = source / LIVE_REVERIFICATION_INPUT
+    if not path.is_file():
+        return None
+    raw = path.read_bytes()
+    validate_live_reverification_scope(json.loads(raw), built_paths, site_base_commit)
+    target = work / LIVE_REVERIFICATION_RECEIPT
+    target.parent.mkdir(parents=True, exist_ok=True)
+    target.write_bytes(raw)
+    return {'receipt': LIVE_REVERIFICATION_RECEIPT.as_posix(), 'bytes': len(raw),
+            'sha256': hashlib.sha256(raw).hexdigest()}
+
+
+def read_live_reverification_scope(stage, work, built_paths):
+    binding = stage.get('live_reverification_scope')
+    if binding is None:
+        if (work / LIVE_REVERIFICATION_RECEIPT).exists():
+            fail('carried live reverification receipt is missing its stage binding')
+        return [], None
+    if not isinstance(binding, dict) or binding.get('receipt') != LIVE_REVERIFICATION_RECEIPT.as_posix():
+        fail('invalid live reverification receipt binding')
+    raw = (work / LIVE_REVERIFICATION_RECEIPT).read_bytes()
+    if len(raw) != binding.get('bytes') or hashlib.sha256(raw).hexdigest() != binding.get('sha256'):
+        fail('live reverification receipt bytes changed after staging')
+    value = json.loads(raw)
+    paths = validate_live_reverification_scope(value, built_paths, stage['site_base_commit'])
+    return paths, {'receipt_sha256': binding['sha256'],
+                   **{key: value[key] for key in ('prior_source_commit', 'prior_site_commit', 'prior_publisher_run', 'prior_receipt_sha256')}}
+
+
 # --------------------------------------------------------------------- stage
 def cmd_stage(a):
     src, work, site = a.source.resolve(), a.work.resolve(), a.site.resolve()
@@ -246,6 +302,9 @@ def cmd_stage(a):
              'paper_routes': paper_routes, 'material_routes': material_routes, 'review_routes': review_routes,
              'files_added': added, 'files_changed': changed, 'files_removed': removed,
              'entries': {p: rows[p] for p in added + changed}}
+    recovery = carry_live_reverification_scope(src, work, rows, site_base)
+    if recovery is not None:
+        stage['live_reverification_scope'] = recovery
     rb.write_json(work / 'stage.json', stage)
     rb.write_json(work / 'receipts/review-routes.json', review_routes)
     log(f'site main {site_base[:12]}: {len(added)} added, {len(changed)} changed, {len(removed)} removed; '
@@ -442,9 +501,15 @@ def cmd_verify(a):
         rb.write_json(work / 'receipts/live-verification.json', {'passed': False, 'pages_runs': runs})
         fail(f'the site Pages workflow did not succeed for {push["site_commit"]}: {runs}')
     log(f'Pages run finished: {runs}; anonymous live check')
+    required_paths, recovery = read_live_reverification_scope(stage, work, rb.tree_files(work / DIST))
+    paths = sorted(set(built_changed_paths(stage)) | set(required_paths))
     result = rb.verify_live(a.site_url, work / DIST, stage['source_commit'], stage['paper_routes'],
-                            stage['material_routes'],
-                            changed_paths=built_changed_paths(stage))
+                            stage['material_routes'], changed_paths=paths)
+    if recovery is not None:
+        checked = set(result.get('checked_changed_files', []))
+        result['reverification_scope'] = {**recovery, 'required_files': len(required_paths),
+                                         'checked_required_files': len(set(required_paths) & checked),
+                                         'failed_required_paths': sorted(set(required_paths) - checked)}
     result['pages_runs'] = runs
     rb.write_json(work / 'receipts/live-verification.json', result)
     if not result['passed']:
