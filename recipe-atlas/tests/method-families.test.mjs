@@ -16,7 +16,7 @@ function data() {return {schema: METHOD_FAMILIES_SCHEMA, default_record_id: 'a',
     {citation: 'Alpha et al. (2001)', record_ids: ['a', 'b']}, {citation: 'Beta (2002)', record_ids: ['c']}, {citation: 'Gamma (2003)', record_ids: ['d']},
   ]}, {id: 'processing', kind: 'processing', label: 'Processing of material', paper_count: 1, papers: [{citation: 'Delta (2004)', record_ids: ['e']}]},
 ]};}
-function mount(groups = data()) {const host = new Element('aside'), selected = []; const ui = mountMethodFamilyList(host, {groups, records, document: doc, onSelect: rid => selected.push(rid), initialPaperLimit: 2}); return {host, selected, ui};}
+function mount(groups = data()) {const host = new Element('aside'), selected = []; const ui = mountMethodFamilyList(host, {groups, records, document: doc, onSelect: rid => selected.push(rid), initialFamilyLimit: 3, initialPapersPerFamily: 2}); return {host, selected, ui};}
 function elements(node, tag) {return [node, ...node.children.flatMap(child => elements(child, tag))].filter(n => !tag || n.tagName === tag);}
 
 test('one paper card folds variants; grouping never fetches or changes records', () => {
@@ -44,7 +44,7 @@ test('collapse never hides active linked record and captions have no status dist
   const {ui} = mount(); ui.select('d'); const toggle = elements(ui.root, 'button').find(x => x.textContent === 'Show fewer'); toggle.onclick();
   assert.equal(elements(ui.root, 'article')[2].hidden, false); assert.doesNotMatch(ui.root.textContent, /source_extracted|reviewed|machine.extract/i);
 });
-test('largest Other default is consumed literally; component does not choose another default', () => {
+test('backend default is consumed literally; frontend does not choose another family', () => {
   const {ui, selected} = mount(); ui.select(data().default_record_id);
   assert.equal(elements(ui.root, 'article')[0].dataset.activeRecord, 'a'); assert.deepEqual(selected, []);
 });
@@ -66,14 +66,44 @@ test('identical own titles still produce distinguishable variant options', () =>
  const same=records.map(r=>({...r,title:'Identical source title'}));const host=new Element('aside');const ui=mountMethodFamilyList(host,{groups:data(),records:same,document:doc,onSelect:()=>{}});const options=elements(ui.root,'option');assert.equal(options[0].textContent,'Variant 1 - Identical source title');assert.equal(options[1].textContent,'Variant 2 - Identical source title');assert.notEqual(options[0].textContent,options[1].textContent);assert.deepEqual(options.map(o=>o.value),['a','b']);
 });
 
-test('the global initial card limit hides empty family headings and one toggle expands all families',()=>{
- const {ui}=mount();const cards=elements(ui.root,'article'),families=elements(ui.root,'section');assert.equal(cards.filter(c=>!c.hidden).length,2);assert.equal(families[1].hidden,true);
+test('first three ordered families get their own first two cards and one toggle expands all',()=>{
+ const {ui}=mount();const cards=elements(ui.root,'article'),families=elements(ui.root,'section');assert.equal(cards.filter(c=>!c.hidden).length,3);assert.equal(families[1].hidden,false);
+ assert.equal(ui.root.dataset.initialFamilyLimit,'3');assert.equal(ui.root.dataset.initialPapersPerFamily,'2');assert.equal(ui.root.dataset.initialCardLimit,undefined);
  const toggles=elements(ui.root,'button').filter(b=>b.className==='reader-family-toggle');assert.equal(toggles.length,1);ui.select('a');toggles[0].onclick();assert.equal(cards.filter(c=>!c.hidden).length,4);assert.equal(families[1].hidden,false);assert.equal(cards[0].dataset.activeRecord,'a');
- toggles[0].onclick();assert.equal(cards.filter(c=>!c.hidden).length,2);assert.equal(families[1].hidden,true);
+ toggles[0].onclick();assert.equal(cards.filter(c=>!c.hidden).length,3);assert.equal(families[1].hidden,false);
 });
-test('deep link to a globally hidden family expands all cards and keeps the selected variant visible',()=>{
- const {ui}=mount();ui.select('e');assert.ok(elements(ui.root,'article').every(c=>!c.hidden));assert.ok(elements(ui.root,'section').every(f=>!f.hidden));assert.equal(elements(ui.root,'article')[3].dataset.activeRecord,'e');
+test('deep link to a preview-hidden family expands all cards and keeps its selected variant visible',()=>{
+ const f=manyFamilies(),host=new Element('aside'),ui=mountMethodFamilyList(host,{...f,document:doc,onSelect:()=>{}});ui.select('component-0-variant');assert.ok(elements(ui.root,'article').every(c=>!c.hidden));assert.ok(elements(ui.root,'section').every(s=>!s.hidden));assert.equal(elements(ui.root,'select')[0].value,'component-0-variant');assert.equal(elements(ui.root,'article').find(c=>c.dataset.activeRecord==='component-0-variant').hidden,false);
 });
 test('default policy respects method links and falls back only for older material data',()=>{
  assert.equal(chooseMethodRecord(data(),records,'b'),'b');assert.equal(chooseMethodRecord(data(),records),'a');assert.equal(chooseMethodRecord(null,[records[2],records[0]]),'c');assert.equal(chooseMethodRecord(null,[]),null);
+});
+
+
+function manyFamilies() {
+ const families=[],all=[];
+ for(const [id,kind,count] of [['own-a','synthesis',5],['own-b','synthesis',4],['own-other','other',3],['component','component',20],['processing','processing',9]]) {
+  const papers=[];for(let i=0;i<count;i++){const ids=[`${id}-${i}`];if(id==='component'&&i===0)ids.push('component-0-variant');for(const rid of ids)all.push({record_id:rid,title:'Own '+rid});papers.push({citation:`Own author ${id} ${i}`,record_ids:ids});}
+  families.push({id,kind,label:id==='component'?'ZnS as shell or component':id==='processing'?'Processing of ZnS':id,paper_count:count,papers});
+ }
+ return {records:all,groups:{schema:METHOD_FAMILIES_SCHEMA,default_record_id:'own-a-0',families}};
+}
+function mountedMany(){const f=manyFamilies(),host=new Element('aside');return {...f,ui:mountMethodFamilyList(host,{...f,document:doc,onSelect:()=>{}})};}
+test('J preview is first three backend-ordered families with top two papers each, not first six globally',()=>{
+ const {ui}=mountedMany(),families=elements(ui.root,'section');assert.deepEqual(families.map(f=>elements(f,'article').filter(c=>!c.hidden).length),[2,2,2,0,0]);assert.deepEqual(families.map(f=>f.hidden),[false,false,false,true,true]);assert.equal(elements(ui.root,'article').filter(c=>!c.hidden).length,6);assert.match(ui.root.textContent,/ZnS as shell or component/);assert.match(ui.root.textContent,/20 papers/);
+});
+test('larger component and processing groups never reorder an own family or default',()=>{
+ const {ui,groups,records:all}=mountedMany();assert.deepEqual(elements(ui.root,'section').map(f=>f.dataset.familyId),groups.families.map(f=>f.id));assert.equal(chooseMethodRecord(groups,all),'own-a-0');ui.select('own-a-0');assert.equal(elements(ui.root,'article')[0].dataset.activeRecord,'own-a-0');
+});
+test('Show fewer retains only a deliberately selected outside-preview card as an explicit-link exception',()=>{
+ const {ui}=mountedMany();ui.select('component-0-variant');const toggle=elements(ui.root,'button').find(b=>b.className==='reader-family-toggle');assert.equal(toggle.attributes['aria-expanded'],'true');toggle.onclick();assert.equal(toggle.attributes['aria-expanded'],'false');const families=elements(ui.root,'section');assert.deepEqual(families.map(f=>elements(f,'article').filter(c=>!c.hidden).length),[2,2,2,1,0]);assert.equal(elements(ui.root,'article').find(c=>c.dataset.activeRecord==='component-0-variant').hidden,false);ui.select('own-a-0');assert.deepEqual(families.map(f=>elements(f,'article').filter(c=>!c.hidden).length),[2,2,2,0,0]);
+});
+test('a hidden third card or fourth family needs Show all even when total is fewer than six',()=>{
+ for(const [counts,visible] of [[[3],2],[[1,1,1,1],3]]){const all=[],families=counts.map((n,f)=>({id:'f'+f,kind:'synthesis',label:'Own'+f,paper_count:n,papers:Array.from({length:n},(_,p)=>{const rid=`f${f}p${p}`;all.push({record_id:rid,title:rid});return{citation:rid,record_ids:[rid]}})}));const g={schema:METHOD_FAMILIES_SCHEMA,default_record_id:'f0p0',families},ui=mountMethodFamilyList(new Element('aside'),{groups:g,records:all,document:doc,onSelect:()=>{}});assert.equal(elements(ui.root,'article').filter(c=>!c.hidden).length,visible);assert.equal(elements(ui.root,'button').filter(b=>b.className==='reader-family-toggle').length,1);}
+});
+test('fewer than three own families include following component and processing families without padding cards',()=>{
+ const f=manyFamilies();f.groups.families=[f.groups.families[0],f.groups.families[3],f.groups.families[4]];const allowed=new Set(f.groups.families.flatMap(g=>g.papers.flatMap(p=>p.record_ids)));f.records=f.records.filter(r=>allowed.has(r.record_id));const ui=mountMethodFamilyList(new Element('aside'),{...f,document:doc,onSelect:()=>{}});assert.deepEqual(elements(ui.root,'section').map(s=>elements(s,'article').filter(c=>!c.hidden).length),[2,2,2]);
+});
+test('preview options reject invalid counts without fetching or modifying records',()=>{
+ for(const options of [{initialFamilyLimit:0},{initialFamilyLimit:1.5},{initialPapersPerFamily:0},{initialPapersPerFamily:NaN}])assert.throws(()=>mountMethodFamilyList(new Element('aside'),{groups:data(),records,document:doc,onSelect:()=>{},...options}));
 });

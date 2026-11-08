@@ -1,4 +1,4 @@
-import {mountMethodFamilyList,chooseMethodRecord} from './method-families.mjs?v=0.42.0';
+import {mountMethodFamilyList,chooseMethodRecord} from './method-families.mjs?v=0.44.0';
 import {appendFigureCaptions,figureCaptionTexts} from './figure-captions.mjs?v=0.41.9';
 import {installReaderHashNavigation,applyReaderFragment} from './reader-navigation.mjs';
 import {renderPendingVariants,PENDING_BADGE,pendingVariants} from './pending-variants.mjs';

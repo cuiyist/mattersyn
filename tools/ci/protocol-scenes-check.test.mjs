@@ -245,8 +245,12 @@ test('before named-Wu default duplicate and after snapshot each keep18 IDs with 
  const namedWu=before.targets.find(t=>t.id==='extra-gaas-wu2010-step1');
  for(const key of ['record_id','operation_id','operation_index','operation_label','record_json_sha256','record_json_bytes'])beforeDefault[key]=namedWu[key];
  assert.equal(validateTargets(before).length,18);assert.equal(new Set(before.targets.map(t=>t.record_id)).size,17);
- assert.equal(validateTargets(copy()).length,18);assert.equal(new Set(original.targets.map(t=>t.record_id)).size,18);
- assert.notEqual(beforeDefault.record_id,original.targets.find(t=>t.id==='default-gaas').record_id);
+ const actual=copy(),actualDefault=actual.targets.find(t=>t.id==='default-gaas');
+ assert.equal(validateTargets(actual).length,18);
+ assert.equal(new Set(actual.targets.map(t=>t.record_id)).size,18-Number(actualDefault.record_id===namedWu.record_id));
+ const alternative=copy();alternative.targets.find(t=>t.id==='default-gaas').record_id='another-gaas-default';
+ assert.equal(validateTargets(alternative).length,18);assert.equal(new Set(alternative.targets.map(t=>t.record_id)).size,18);
+ assert.notEqual(beforeDefault.record_id,alternative.targets.find(t=>t.id==='default-gaas').record_id);
 });
 test('explicit target snapshot CLI option preserves required phase/base/out',()=>{
  assert.equal(argumentsFor(['--base','https://example.invalid/','--out','out','--phase','before','--targets','prior.json']).targets,'prior.json');

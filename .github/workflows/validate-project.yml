@@ -139,7 +139,8 @@ jobs:
           node tools/ci/protocol-scenes-check.mjs --base http://127.0.0.1:8173/mattersyn-site/ --out "$RUNNER_TEMP/protocol-scenes/after" --phase after --targets tools/ci/protocol-scenes-targets.json
           if [[ "$METHOD_FAMILIES_CHANGED" == "1" ]]; then
             mkdir -p "$RUNNER_TEMP/method-families"
-            node --input-type=module -e 'import fs from "node:fs";import {beforeTargetsFromProtocolSnapshot as convert} from "./tools/ci/method-families-check.mjs";fs.writeFileSync(process.argv[2],JSON.stringify(convert(JSON.parse(fs.readFileSync(process.argv[1],"utf8"))))+"\n",{flag:"wx"});' "$RUNNER_TEMP/protocol-scenes-before-targets.json" "$RUNNER_TEMP/method-families-before-targets.json"
+            git show "${PROTOCOL_SCENES_COMPARISON_BASE}:tools/ci/method-families-targets.json" > "$RUNNER_TEMP/method-families-base-targets.json"
+            node --input-type=module -e 'import fs from "node:fs";import {beforeTargetsFromProtocolSnapshot as convert} from "./tools/ci/method-families-check.mjs";fs.writeFileSync(process.argv[3],JSON.stringify(convert(JSON.parse(fs.readFileSync(process.argv[1],"utf8")),JSON.parse(fs.readFileSync(process.argv[2],"utf8"))))+"\n",{flag:"wx"});' "$RUNNER_TEMP/protocol-scenes-before-targets.json" "$RUNNER_TEMP/method-families-base-targets.json" "$RUNNER_TEMP/method-families-before-targets.json"
             node tools/ci/method-families-check.mjs --base https://cuiyist.github.io/mattersyn-site/ --out "$RUNNER_TEMP/method-families/before" --phase before --targets "$RUNNER_TEMP/method-families-before-targets.json"
             node tools/ci/method-families-check.mjs --base http://127.0.0.1:8173/mattersyn-site/ --out "$RUNNER_TEMP/method-families/after" --phase after --targets tools/ci/method-families-targets.json
           fi

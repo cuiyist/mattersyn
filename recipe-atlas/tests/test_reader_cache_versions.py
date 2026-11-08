@@ -5,12 +5,13 @@ import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
 VERSION = '0.41.9'
-PUBLIC_READER_VERSION = '0.43.0'
+PUBLIC_READER_VERSION = '0.44.0'
+H_VERSION = '0.43.0'
 PUBLIC_MODULES = ('illustrated-record.mjs', 'material-guide.mjs', 'material-hub.mjs', 'method-families.mjs', 'reader-app.mjs')
 H_MODULES = ('chemical-reference-route.mjs', 'chemical-viewer.mjs', 'crystal-viewer.mjs', 'evans2010-products.mjs', 'illustrated-record.mjs', 'material-app.mjs', 'material-guide.mjs', 'material-hub.mjs', 'protocol-references.mjs', 'protocol-visuals.mjs', 'reader-app.mjs', 'reader-presentation-loader.mjs', 'reader-structures.mjs')
 G_HEATER_VERSION = '0.41.10'
 G_HEATER_MODULES = ('reported-protocol-scenes.mjs', 'reported-scene-drawing.mjs')
-def version_for(module): return PUBLIC_READER_VERSION if module in H_MODULES else '0.42.0' if module in PUBLIC_MODULES or module == 'reader.css' else G_HEATER_VERSION if module in G_HEATER_MODULES else VERSION
+def version_for(module): return PUBLIC_READER_VERSION if module in PUBLIC_MODULES else H_VERSION if module in H_MODULES else '0.42.0' if module == 'reader.css' else G_HEATER_VERSION if module in G_HEATER_MODULES else VERSION
 
 
 class ReaderCacheVersionTests(unittest.TestCase):

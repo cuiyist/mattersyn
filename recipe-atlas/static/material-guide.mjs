@@ -1,4 +1,4 @@
-import {figureGallery} from './reader-app.mjs?v=0.43.0';
+import {figureGallery} from './reader-app.mjs?v=0.44.0';
 import {stockScope} from './stock-scope.mjs';
 import {quantityValue} from './quantity-value.mjs';
 import {sourceItemCard} from './source-evidence.mjs?v=0.41.9';
