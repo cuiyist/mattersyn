@@ -1,4 +1,4 @@
-// Capture the same eighteen selected protocol steps before and after a Reader change.
+// Capture the same twenty selected protocol steps before and after a Reader change.
 // Importing this module or invoking it without arguments performs no browser I/O.
 //
 // node tools/ci/protocol-scenes-check.mjs --base <site-root> --out <fresh-dir> \
@@ -13,8 +13,11 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 
-export const TARGET_SCHEMA = 'mattersyn-protocol-scenes-targets/1';
+export const LEGACY_TARGET_SCHEMA = 'mattersyn-protocol-scenes-targets/1';
+export const TARGET_SCHEMA = 'mattersyn-protocol-scenes-targets/2';
 export const VIEWPORTS = Object.freeze([{ width: 1440, height: 900 }, { width: 390, height: 844 }]);
+export const TALAPIN_VIEWPORT = Object.freeze({width:1024,height:768});
+export const viewportsForTarget = target => target.id === 'extra-inas-talapin2002-injection' ? [...VIEWPORTS,TALAPIN_VIEWPORT] : VIEWPORTS;
 export const BENCHMARK_FORMULAS = Object.freeze(['CdSe', 'CdS', 'ZnS', 'InAs', 'PbS', 'InP', 'Au', 'TiO2', 'GaAs', 'SnO2']);
 const TARGET_FILE = fileURLToPath(new URL('./protocol-scenes-targets.json', import.meta.url));
 const FIELDS = new Set(['id', 'group', 'formula', 'record_id', 'route', 'operation_index', 'operation_id', 'operation_label', 'record_json_bytes', 'record_json_sha256', 'minimum_label_px_after']);
@@ -24,19 +27,49 @@ const STEP1_EXAMPLES = Object.freeze({
   'extra-au-fan2006-step1': { formula: 'Au', record_id: 'fan2006-b600923a-ordered-gold-nanocrystal-silica-particle-1', operation_id: 's01-prepare', material_id: 'au-3325c2' },
   'extra-pbs-reinhart2017-step1': { formula: 'PbS', record_id: 'reinhart2017-jacs-7b00158-3-mercaptopropionic-acid-3-mpa-capped-pb-1', operation_id: 's01-add', material_id: 'pbs-7e1774' },
 });
+export const K_REGRESSION_TARGETS = Object.freeze([
+  {
+    "id": "extra-inas-talapin2002-injection",
+    "group": "reader-k-size",
+    "formula": "InAs",
+    "record_id": "talapin2002-ja0123599-inas-nanocrystals-3",
+    "route": "material.html?id=inas-a2e691&method=talapin2002-ja0123599-inas-nanocrystals-3",
+    "operation_index": 3,
+    "operation_id": "s04-inject",
+    "operation_label": "Inject InCl3-TMS3As solution into TOP",
+    "record_json_bytes": 15856,
+    "record_json_sha256": "4c60778816907eab34c4d990d72275ba6454e37ea2bc56e9c3dfea28eab21d0f",
+    "minimum_label_px_after": 12
+  },
+  {
+    "id": "extra-cdse-zhu2011-injection",
+    "group": "reader-k-size",
+    "formula": "CdSe",
+    "record_id": "zhu-ja210312s-cdse-core",
+    "route": "material.html?id=cdse-d923c5&method=zhu-ja210312s-cdse-core",
+    "operation_index": 6,
+    "operation_id": "inject",
+    "operation_label": "Swiftly inject selenium stock",
+    "record_json_bytes": 30936,
+    "record_json_sha256": "a7eb84e375ea1c0825709c4649e6482a3b279fcf80a4c67ab953aa4bc656b24e",
+    "minimum_label_px_after": 12
+  }
+].map(Object.freeze));
 const sha256 = (bytes) => createHash('sha256').update(bytes).digest('hex');
 const nonempty = (value) => typeof value === 'string' && value.trim().length > 0 && !/[\r\n\0]/.test(value);
 
 export function validateTargets(value) {
   assert(value && typeof value === 'object' && !Array.isArray(value));
   assert.deepEqual(Object.keys(value).sort(), ['schema', 'targets']);
-  assert.equal(value.schema, TARGET_SCHEMA);
-  assert(Array.isArray(value.targets) && value.targets.length === 18, 'Exactly eighteen fixed protocol targets are required');
+  const count = value.schema === LEGACY_TARGET_SCHEMA ? 18 : value.schema === TARGET_SCHEMA ? 20 : null;
+  assert(count !== null, 'Exact protocol target schema required');
+  assert(Array.isArray(value.targets) && value.targets.length === count, 'Exact eighteen legacy or twenty K protocol targets are required');
   const ids = new Set();
   const records = new Map();
   const defaults = [];
   const examples = [];
   const step1Examples = [];
+  const sizeExamples = [];
   let namedWuDuplicate = false;
   for (const target of value.targets) {
     assert(target && typeof target === 'object' && !Array.isArray(target));
@@ -72,6 +105,11 @@ export function validateTargets(value) {
       examples.push(target.id);
       assert.equal(route.searchParams.get('method'), target.record_id);
       assert.equal(target.minimum_label_px_after, 12);
+    } else if (target.group === 'reader-k-size') {
+      const expected = K_REGRESSION_TARGETS.find(row => row.id === target.id);
+      assert(expected, 'Only the two exact K regression targets are admitted');
+      assert.deepEqual(target, expected, 'K regression record, operation, route and raw record pins are fixed');
+      sizeExamples.push(target.id);
     } else {
       assert.equal(target.group, 'reader-e-step1');
       const expected = STEP1_EXAMPLES[target.id];
@@ -88,8 +126,66 @@ export function validateTargets(value) {
   assert.deepEqual(defaults, BENCHMARK_FORMULAS);
   assert.deepEqual(examples, EXAMPLES);
   assert.deepEqual(step1Examples, Object.keys(STEP1_EXAMPLES));
-  assert.equal(records.size,18-Number(namedWuDuplicate),'Only the named Wu pair may share a record when that phase default is Wu');
+  assert.deepEqual(sizeExamples, count === 20 ? K_REGRESSION_TARGETS.map(row => row.id) : []);
+  assert.equal(records.size,count-Number(namedWuDuplicate),'Only the named Wu pair may share a record when that phase default is Wu');
   return value.targets;
+}
+
+// Preserve every exact comparison-base target. The only additions to a legacy
+// eighteen-target snapshot are these two literal regressions, verified against
+// comparison-base canonical record bytes before a browser is started.
+export function beforeTargetsFromBaseSnapshot(snapshot, baseRecordBytes) {
+  const prior = validateTargets(snapshot);
+  const records = baseRecordBytes || {};
+  assert.deepEqual(Object.keys(records).sort(), K_REGRESSION_TARGETS.map(t => t.record_id).sort(), 'Two exact comparison-base record byte inputs required');
+  for (const target of K_REGRESSION_TARGETS) {
+    const raw = records[target.record_id];
+    assert(Buffer.isBuffer(raw) || raw instanceof Uint8Array, 'Raw comparison-base record bytes required');
+    assert.equal(raw.length, target.record_json_bytes);
+    assert.equal(sha256(raw), target.record_json_sha256, 'K regression record differs from comparison-base raw pin');
+    const record = JSON.parse(Buffer.from(raw).toString('utf8'));
+    assert.equal(record.record_id, target.record_id);
+    assert.equal(record.operations?.[target.operation_index]?.id, target.operation_id);
+    assert.equal(record.operations?.[target.operation_index]?.label, target.operation_label);
+  }
+  const value = {schema: TARGET_SCHEMA, targets: structuredClone(prior)};
+  if (snapshot.schema === LEGACY_TARGET_SCHEMA) value.targets.push(...structuredClone(K_REGRESSION_TARGETS));
+  validateTargets(value);
+  assert.deepEqual(value.targets.slice(0,18), snapshot.targets.slice(0,18), 'All original eighteen target objects must be preserved');
+  return value;
+}
+
+export const REPORTED_SCENE_KINDS = Object.freeze(['solution','inject','cool','degas','reflux','chamber','closed-reactor','furnace','centrifuge','filter','workup-tube','dry-tube','mill-jar','mortar-pestle']);
+export const VESSEL_VARIANTS = Object.freeze(['plain','flask','three-neck-flask','tube','vial','beaker']);
+export function sceneFixtureMatrix() {
+  const conditions=[{key:'temperature',value:'270 °C',shortValue:'270 °C'},{key:'duration',value:'30 min'}];
+  const common={vesselKind:'three-neck-flask',added:['Cadmium acetate dihydrate','Tris(trimethylsilyl)arsine','Trioctylphosphine oxide'],environment:'Nitrogen',gasLine:true,heating:true,stirring:true};
+  const rows=REPORTED_SCENE_KINDS.map(kind=>({id:'kind-'+kind,spec:{...common,kind},conditions:structuredClone(conditions)}));
+  for(const row of rows){
+    if(['mortar-pestle','mill-jar'].includes(row.spec.kind)){Object.assign(row.spec,{added:['Reported dry powder A','Reported dry powder B'],gasLine:false,environment:'',heating:false,stirring:false});row.conditions=[{key:'duration',value:'30 min'}];}
+    else if(row.spec.kind==='furnace'){Object.assign(row.spec,{added:[],gasLine:false,environment:'',stirring:false});}
+    else if(row.spec.kind==='centrifuge'){Object.assign(row.spec,{added:[],gasLine:false,environment:'',heating:false,stirring:false});row.conditions=[{key:'duration',value:'10 min'}];}
+    else if(row.spec.kind==='filter'){Object.assign(row.spec,{added:['Reported suspension'],gasLine:false,environment:'',heating:false,stirring:false});row.conditions=[{key:'duration',value:'10 min'}];}
+    else if(row.spec.kind==='cool')row.spec.heating=false;
+  }
+  const chamber=rows.find(r=>r.spec.kind==='chamber');Object.assign(chamber.spec,{added:['Ga','As2','As4'],environment:'Ar',beamSystem:true,substrates:['GaAs wafer']});
+  chamber.conditions.push({key:'Ga flux',value:'1 unit'},{key:'As2 flux',value:'2 units'},{key:'As4 flux',value:'3 units'});
+  for(const vesselKind of VESSEL_VARIANTS)rows.push({id:'vessel-'+vesselKind,spec:{...common,kind:'inject',vesselKind},conditions:structuredClone(conditions)});
+  rows.push({id:'chamber-feed',spec:{...structuredClone(chamber.spec),beamSystem:false},conditions:structuredClone(chamber.conditions)});
+  rows.push({id:'unheated-no-gas-no-stir',spec:{...common,kind:'solution',gasLine:false,environment:'',heating:false,stirring:false},conditions:[]});
+  return rows;
+}
+
+// A separate one-operation record must exercise width fit: the22-scene record
+// is height-limited and cannot reveal a missing inner-panel horizontal inset.
+export function standaloneWidthLimitedFurnace() {
+  return {id:'single-furnace-width-limited',spec:{kind:'furnace',vesselKind:'plain',added:[],environment:'',gasLine:false,heating:true,stirring:false},
+    conditions:[{key:'temperature',value:'800 °C',shortValue:'800 °C'}]};
+}
+export function fixtureRecordCases(viewport) {
+  const cases=[{container_width:Math.min(560,viewport.width-48),standalone:false},{container_width:280,standalone:false}];
+  if(viewport.width===390)cases.push({container_width:310,standalone:true});
+  return cases;
 }
 
 export function targetURL(base, target) {
@@ -128,9 +224,12 @@ export function checkReportedDrawing(phase, metrics) {
   const center = (r) => (r.left + r.right) / 2;
   assert(Math.abs(center(drawing.apparatus_bounds) - center(drawing.bounds)) <= 8, 'The apparatus panel must be centered');
   assert(inside(drawing.svg_bounds, drawing.apparatus_bounds), 'The apparatus SVG must stay inside its panel');
-  assert(drawing.svg_bounds.width >= drawing.apparatus_bounds.width * 0.95, 'The apparatus SVG must fill its panel');
+  // K1 fits geometry to the first exhausted width or height; the SVG may
+  // therefore be narrower than its full-width centered label panel.
+  assert(Math.abs(center(drawing.svg_bounds) - center(drawing.apparatus_bounds)) <= 8, 'The fitted apparatus SVG must be centered');
   assert(inside(drawing.apparatus_body_bounds, drawing.svg_bounds), 'The actual apparatus body must not clip its SVG');
-  assert(drawing.apparatus_body_bounds.width >= drawing.bounds.width * 0.70, 'The actual apparatus body must occupy most of the drawing width');
+  // Apparatus-to-card width is intentionally not fixed: a tall record uses
+  // the same height-limited geometry scale for every step (K1).
   assert(rectangle(drawing.apparatus_body_svg_bbox) && drawing.apparatus_body_svg_bbox.width >= drawing.svg_viewbox.width * 0.70, 'SVG body geometry must fill its viewBox');
   assert(Array.isArray(drawing.appendage_geometry_bounds), 'Visible appendage measurements are required');
   for (const r of drawing.appendage_geometry_bounds) {
@@ -139,6 +238,12 @@ export function checkReportedDrawing(phase, metrics) {
       && r.left >= drawing.svg_bounds.left - epsilon && r.top >= drawing.svg_bounds.top - epsilon
       && r.right <= drawing.svg_bounds.right + epsilon && r.bottom <= drawing.svg_bounds.bottom + epsilon,
     'A visible syringe, cooling arrow, condenser or leader clips its SVG');
+  }
+  for (const leader of drawing.annotation_overlay_geometry || []) {
+    const r=leader.bounds,outer=leader.svg_bounds;
+    assert(r && ['left','top','right','bottom','width','height'].every(k=>Number.isFinite(r[k])) && r.width>=0 && r.height>=0 && (r.width>0||r.height>0), 'Overlay leader geometry must be measurable');
+    assert(rectangle(outer) && r.left>=outer.left-epsilon && r.top>=outer.top-epsilon && r.right<=outer.right+epsilon && r.bottom<=outer.bottom+epsilon,'A visible leader clips its own annotation overlay');
+    assert(inside(outer,drawing.bounds),'Annotation overlay must stay inside the drawing');
   }
   assert(Number.isSafeInteger(drawing.leader_line_count) && drawing.leader_line_count >= 0);
   assert(Array.isArray(drawing.plain_annotations));
@@ -149,19 +254,24 @@ export function checkReportedDrawing(phase, metrics) {
   if (drawing.plain_annotations.length) assert(drawing.leader_line_count > 0, 'Reported labels need thin leader lines');
   assert(Array.isArray(drawing.chamber_heater_fronts), 'Measured chamber heater fronts are required');
   assert(Number.isSafeInteger(drawing.chamber_heater_overlay_count) && drawing.chamber_heater_overlay_count === drawing.chamber_heater_fronts.length, 'Every chamber heater label needs an opaque inset front');
+  const heaterDiagnostic = front => {
+    const number=value=>Number.isFinite(value)?Math.round(value*1000)/1000:null;
+    const rect=value=>value?Object.fromEntries(['left','top','right','bottom','width','height'].map(key=>[key,number(value[key])])):null;
+    return JSON.stringify({front:rect(front.bounds),svg:rect(drawing.svg_bounds),holder:rect(front.holder_platform_bounds),drawing:rect(drawing.bounds),actual_scale:drawing.actual_body_scale?{x:number(drawing.actual_body_scale.x),y:number(drawing.actual_body_scale.y)}:null,declared_record_scale:number(drawing.declared_record_geometry_scale),declared_svg_scale:number(drawing.declared_svg_geometry_scale)}).slice(0,1600);
+  };
   for (const front of drawing.chamber_heater_fronts) {
-    assert(inside(front.bounds,drawing.svg_bounds), 'The heater front must stay inside the chamber drawing');
+    assert(inside(front.bounds,drawing.svg_bounds), 'The heater front must stay inside the chamber drawing; geometry=' + heaterDiagnostic(front));
     assert(front.fully_opaque, 'The heater face must cover the old SVG rectangle behind its text');
     assert(Array.isArray(front.leaf_labels) && front.leaf_labels.length, 'The heater face needs measured text');
     for (const label of front.leaf_labels) {
       const t=label.text_bounds,b=front.bounds;
       assert(t.left >= b.left+2 && t.right <= b.right-2 && t.top >= b.top+2 && t.bottom <= b.bottom-2,
-        'Heater text needs a clear inset from every visible heater-face border');
+        'Heater text needs a clear inset from every visible heater-face border; geometry=' + heaterDiagnostic(front));
     }
     for (const other of [front.holder_platform_bounds,...front.beam_bounds].filter(Boolean)) {
       const a=front.bounds;
       assert(!(Math.min(a.right,other.right)-Math.max(a.left,other.left)>epsilon && Math.min(a.bottom,other.bottom)-Math.max(a.top,other.top)>epsilon),
-        'The heater front must not obscure the holder platform or source beams');
+        'The heater front must not obscure the holder platform or source beams; geometry=' + heaterDiagnostic(front));
     }
   }
   assert(Array.isArray(drawing.leaf_labels) && Array.isArray(drawing.fact_blocks));
@@ -257,7 +367,7 @@ export function fontMetrics(art) {
     // blocks still must not overlap. Count every leaf once in its outer block.
     const blocks = [...drawing.querySelectorAll(factSelector)];
     const apparatus = drawing.querySelector('.reported-scene-apparatus');
-    const svg = apparatus?.querySelector('svg');
+    const svg = apparatus?.querySelector('svg[data-geometry-scale]') || apparatus?.querySelector('svg');
     // SVG getBBox ignores clipPaths: shared liquid/highlight paths may extend
     // beyond their visible vessel. Measure the fixed visible vessel outline,
     // then verify every visible external appendage/leader independently.
@@ -270,10 +380,14 @@ export function fontMetrics(art) {
     return { bounds: bounds(drawing), layout: drawing.dataset.layout || null,
       apparatus_bounds: apparatus ? bounds(apparatus) : null, svg_bounds: svg ? bounds(svg) : null,
       apparatus_body_bounds: body ? bounds(body) : null,
+      declared_record_geometry_scale: drawing.dataset.recordGeometryScale ? Number(drawing.dataset.recordGeometryScale) : null,
+      declared_svg_geometry_scale: svg?.dataset.geometryScale ? Number(svg.dataset.geometryScale) : null,
+      actual_body_scale: (() => { const m = body?.getScreenCTM?.(); return m ? {x:Math.hypot(m.a,m.b),y:Math.hypot(m.c,m.d)} : null; })(),
       apparatus_body_svg_bbox: geometry ? {left:geometry.x,top:geometry.y,right:geometry.x+geometry.width,bottom:geometry.y+geometry.height,width:geometry.width,height:geometry.height} : null,
       svg_viewbox: viewbox ? {x:viewbox.x,y:viewbox.y,width:viewbox.width,height:viewbox.height} : null,
-      appendage_geometry_bounds: appendages.map(bounds),
-      leader_line_count: drawing.querySelectorAll('[data-part="leader-line"] path').length,
+      appendage_geometry_bounds: appendages.map(bounds).filter(r=>r.width>0||r.height>0),
+      annotation_overlay_geometry: [...drawing.querySelectorAll('svg[data-part="annotation-leaders"]')].flatMap(overlay=>[...overlay.querySelectorAll('path,line,polyline')].map(node=>({bounds:bounds(node),svg_bounds:bounds(overlay)}))),
+      leader_line_count: [...drawing.querySelectorAll('[data-part="leader-line"] path,path[data-part="leader-line"]')].filter(node=>{const r=bounds(node);return r.width>0||r.height>0;}).length,
       plain_annotations: [...drawing.querySelectorAll(plainSelector)].filter((node) => !blocks.some((block) => block.className === 'reported-scene-heating-plate' && block.contains(node))).map((node) => {
         const style = getComputedStyle(node);
         return { border_width_px: Math.max(...['borderTopWidth', 'borderRightWidth', 'borderBottomWidth', 'borderLeftWidth'].map((key) => parseFloat(style[key]) || 0)),
@@ -290,9 +404,140 @@ export function fontMetrics(art) {
       leaf_labels: leafNodes.map(leaf),
       fact_blocks: blocks.filter((block) => !blocks.some((parent) => parent !== block && parent.contains(block))).map((block) => ({ class_name: block.className, bounds: bounds(block), leaf_labels: leafNodes.filter((node) => block.contains(node)).map(leaf) })) };
   });
-  return { scene: art.dataset.scene || null, classes: art.className, external_image_count: art.querySelectorAll('img').length,
+  const frame = art.closest?.('[data-protocol-art-frame]') || art.querySelector('[data-protocol-art-frame]');
+  const nativeHost = frame?.querySelector('[data-protocol-native-art]');
+  const frameMetrics = frame ? {bounds:bounds(frame),scroll_width:frame.scrollWidth,client_width:frame.clientWidth,scroll_height:frame.scrollHeight,client_height:frame.clientHeight,overflow_x:getComputedStyle(frame).overflowX,overflow_y:getComputedStyle(frame).overflowY,declared_record_geometry_scale:frame.dataset.recordGeometryScale?Number(frame.dataset.recordGeometryScale):null,native_width:frame.dataset.nativeArtWidth?Number(frame.dataset.nativeArtWidth):null,native_height:frame.dataset.nativeArtHeight?Number(frame.dataset.nativeArtHeight):null,native_bounds:nativeHost?bounds(nativeHost):null} : null;
+  return { protocol_frame:frameMetrics, scene: art.dataset.scene || null, classes: art.className, external_image_count: art.querySelectorAll('img').length,
     inline_svg_count: art.querySelectorAll('svg').length, labels, minimum_measured_screen_font_px: sizes.length ? Math.min(...sizes) : null,
     renderer: art.dataset.renderer || null, reported_drawings: reportedDrawings };
+}
+
+// Every selected operation is measured at the real viewport, not inferred from
+// a declared data attribute or a single screenshot. Native/per-paper artwork
+// retains its existing font exemptions; reported G drawings keep all leaf-font,
+// overlap, leader, clipping and heater checks above.
+export function checkRecordOperationMetrics(phase, operations, viewport) {
+  if (phase !== 'after') return;
+  assert(Array.isArray(operations) && operations.length, 'All actual record operations require numeric metrics');
+  const cap = viewport.width <= 700 ? 320 : 400;
+  const scales = [];
+  for (const [index,row] of operations.entries()) {
+    assert.equal(row.operation_index,index,'All operations must be measured once in record order');
+    assert.equal(row.below_image_note_count,1,'Every operation needs one common caption line');
+    assert.equal(row.enlarge_count,1,'Every operation needs one Enlarge control');
+    const metrics=row.metrics, frame=metrics?.protocol_frame;
+    assert(frame && frame.bounds && Number.isFinite(frame.bounds.height) && frame.bounds.height>0, 'Every normal drawing requires a visible common art frame');
+    assert(frame.bounds.height <= cap+0.5, `Drawing exceeds ${cap}px viewport height cap`);
+    assert(frame.bounds.width>0 && frame.bounds.width<=viewport.width+0.5,'Drawing frame exceeds viewport width');
+    for (const axis of ['width','height']) {
+      assert(Number.isFinite(frame['scroll_'+axis]) && Number.isFinite(frame['client_'+axis]),'Drawing scroll dimensions are required');
+      const overflow=frame['overflow_'+(axis==='width'?'x':'y')];
+      assert(!['auto','scroll'].includes(overflow),'Drawing frame must have no user-scroll mechanism');
+      if(frame['scroll_'+axis] > frame['client_'+axis]+1) {
+        // CSS transforms retain untransformed scroll extents on protected native
+        // artwork. The actual transformed host is independently bounded below.
+        assert(!(metrics.reported_drawings || []).length && frame.native_bounds && ['hidden','clip'].includes(overflow),'Whole drawing must fit without internal scrolling or clipped excess');
+      }
+    }
+    const insideFrame = bounds => bounds && ['left','right','top','bottom','width','height'].every(k=>Number.isFinite(bounds[k])) && bounds.width>0 && bounds.height>0 && bounds.left>=frame.bounds.left-0.5 && bounds.right<=frame.bounds.right+0.5 && bounds.top>=frame.bounds.top-0.5 && bounds.bottom<=frame.bounds.bottom+0.5;
+    if (!(metrics.reported_drawings || []).length && (metrics.inline_svg_count>0 || metrics.external_image_count>0)) {
+      assert(insideFrame(frame.native_bounds),'Protected native artwork must be fully visible inside its frame');
+      assert(Number.isFinite(frame.native_width)&&frame.native_width>0 && Number.isFinite(frame.native_height)&&frame.native_height>0,'Native dimensions must be measured before fit');
+      const x=frame.native_bounds.width/frame.native_width,y=frame.native_bounds.height/frame.native_height,declared=frame.declared_record_geometry_scale,tolerance=Math.max(0.001,x*0.005);
+      assert(Number.isFinite(declared)&&declared>0 && Math.abs(x-y)<=tolerance && Math.abs(x-declared)<=tolerance,'Native artwork displayed/intrinsic scale must match actual uniform record fit');
+      scales.push(x);
+    }
+    checkReportedDrawing(phase,metrics);
+    for (const drawing of metrics.reported_drawings || []) {
+      assert(insideFrame(drawing.bounds),'The complete reported drawing must stay inside its common frame');
+      const actual=drawing.actual_body_scale, declared=drawing.declared_record_geometry_scale, svg=drawing.declared_svg_geometry_scale;
+      assert(actual && ['x','y'].every(k=>Number.isFinite(actual[k])&&actual[k]>0),'Actual apparatus getScreenCTM scale is required');
+      assert(Number.isFinite(declared)&&declared>0 && Number.isFinite(svg)&&svg>0,'Record and SVG scale metadata are required');
+      const tolerance=Math.max(0.001,actual.x*0.005);
+      assert(Math.abs(actual.x-actual.y)<=tolerance,'Apparatus geometry must scale uniformly');
+      assert(Math.abs(actual.x-declared)<=tolerance && Math.abs(actual.x-svg)<=tolerance,'Declared geometry scale must match actual screen geometry');
+      scales.push(actual.x);
+    }
+  }
+  if (scales.length) {
+    const tolerance=Math.max(0.001,scales[0]*0.005);
+    assert(scales.every(s=>Math.abs(s-scales[0])<=tolerance),'Every shared operation of one record must have the same actual geometry scale');
+  }
+}
+export async function collectRecordOperationMetrics(page, record) {
+  assert(Array.isArray(record?.operations) && record.operations.length, 'Raw record operations required');
+  const buttons=page.locator('#protocol .protocol-step-list button');
+  assert.equal(await buttons.count(),record.operations.length,'Rendered operation list differs from raw record');
+  const rows=[];
+  for (const [index,operation] of record.operations.entries()) {
+    await buttons.nth(index).click();
+    await page.waitForFunction(label=>document.querySelector('#protocol .protocol-copy h3')?.textContent===label,operation.label,{timeout:30000});
+    await page.waitForFunction(()=>[...document.querySelectorAll('#protocol .protocol-art img')].every(img=>img.complete&&img.naturalWidth>0),null,{timeout:30000});
+    await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
+    rows.push({operation_index:index,operation_id:operation.id,
+      below_image_note_count:await page.locator('#protocol .protocol-stage .protocol-visual > .protocol-visual-note').count(),
+      enlarge_count:await page.locator('#protocol .protocol-stage .protocol-visual button').filter({hasText:'Enlarge operation diagram'}).count(),
+      metrics:await page.locator('#protocol .protocol-art').evaluate(fontMetrics)});
+  }
+  return rows;
+}
+
+// Candidate-only synthetic layout probes use the exact runtime controller and
+// drawing factory. They do not add site assets, records or scientific claims.
+export async function probeSceneFixtureMatrix(browser, base) {
+  const matrix=sceneFixtureMatrix(),results=[],standaloneResults=[];
+  for(const viewport of VIEWPORTS){
+    const context=await browser.newContext({viewport,deviceScaleFactor:1,serviceWorkers:'block',reducedMotion:'reduce'}),page=await context.newPage(),errors=[];
+    page.on('pageerror',error=>errors.push(String(error.message||error)));
+    try{
+      const root=new URL(base.endsWith('/')?base:base+'/');
+      const response=await page.goto(new URL('index.html',root).href,{waitUntil:'domcontentloaded',timeout:90000});assert.equal(response?.status(),200);
+      await page.addStyleTag({url:new URL('reader.css',root).href});
+      for(const recordCase of fixtureRecordCases(viewport)){
+        const containerWidth=recordCase.container_width,recordFixtures=recordCase.standalone?[standaloneWidthLimitedFurnace()]:matrix;
+        await page.evaluate(async({root,matrix,width})=>{
+          window.__KFixture?.controller?.disconnect();
+          const drawingModule=await import(new URL('reported-scene-drawing.mjs',root).href);
+          const fit=await import(new URL('protocol-record-fit.mjs',root).href);
+          if(document.fonts?.ready)await document.fonts.ready;
+          const host=document.createElement('div');host.className='k-fixture-host protocol-visual';
+          Object.assign(host.style,{width:width+'px',maxWidth:'none',padding:'0',margin:'0',boxSizing:'border-box'});
+          document.body.replaceChildren(host);document.body.className='reader-main';Object.assign(document.body.style,{margin:'0',padding:'0',maxWidth:'none'});
+          const createArt=(row,options)=>{
+            const art=document.createElement('div');art.className='protocol-art protocol-art-reported';art.dataset.renderer='reported-fields';art.dataset.scene=row.spec.kind;
+            Object.assign(art.style,{display:'grid',gridTemplateColumns:'minmax(0,1fr)',height:'auto',minHeight:'0px',minWidth:'0',width:'100%',gap:'12px'});
+            const drawing=drawingModule.createReportedDrawing(row.spec,row.conditions,options);art.append(drawing);
+            art.recordGeometry={...drawing.reportedViewport,extraOverhead:row.spec.kind==='chamber'?32:0};
+            art.updateDrawingLayout=()=>drawing.updateAnnotationLayout?.();return art;
+          };
+          let current=matrix[0],controller;
+          const render=row=>{
+            current=row;const options=controller.options(row.id),art=createArt(row,options),frame=fit.createProtocolArtFrame(art,options);
+            const policy=fit.protocolPresentationPolicy({},{}),note=document.createElement('p'),enlarge=document.createElement('button');
+            note.className='protocol-visual-note';note.textContent=policy.caption;enlarge.textContent='Enlarge operation diagram ↗';enlarge.type='button';
+            host.replaceChildren(frame,note,enlarge);
+            if(controller.refresh(frame)){render(row);return;}
+            art.updateDrawingLayout?.();
+          };
+          controller=fit.createRecordFitController({host,operations:matrix,createArt,onChange:()=>render(current)});
+          window.__KFixture={controller,render,matrix};render(current);
+        },{root:root.href,matrix:recordFixtures,width:containerWidth});
+        const rows=[];
+        for(const [index,fixture]of recordFixtures.entries()){
+          await page.evaluate(id=>{const f=window.__KFixture;f.render(f.matrix.find(row=>row.id===id));},fixture.id);
+          await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
+          const metrics=await page.locator('.k-fixture-host .protocol-art').evaluate(fontMetrics);
+          const row={operation_index:index,operation_id:fixture.id,below_image_note_count:await page.locator('.k-fixture-host > .protocol-visual-note').count(),enlarge_count:await page.locator('.k-fixture-host > button').count(),metrics};
+          try{checkRecordOperationMetrics('after',[{...row,operation_index:0}],viewport);}catch(error){throw new Error(`Synthetic ${fixture.id} at ${viewport.width}px / ${containerWidth}px container: ${error.message}`);}
+          rows.push(row);
+        }
+        checkRecordOperationMetrics('after',rows,viewport);
+        assert.deepEqual(errors,[],'Synthetic scene matrix page errors');
+        (recordCase.standalone?standaloneResults:results).push({viewport,container_width:containerWidth,record_kind:recordCase.standalone?'single-width-limited-furnace':'shared22-scene-record',fixtures:rows.map(({operation_id,metrics})=>({id:operation_id,scene:metrics.scene,frame_height:metrics.protocol_frame.bounds.height,frame_width:metrics.protocol_frame.bounds.width,actual_body_scales:metrics.reported_drawings.map(d=>d.actual_body_scale),minimum_leaf_font_px:Math.min(...metrics.reported_drawings.flatMap(d=>d.leaf_labels.map(l=>l.screen_font_px))),passed:true})),same_record_scale_passed:true});
+      }
+    }finally{await context.close();}
+  }
+  return{synthetic_only:true,source_records_changed:0,fixture_count:matrix.length,configurations:results,standalone_width_limited_records:standaloneResults,tested_fixture_views:matrix.length*results.length+standaloneResults.reduce((n,r)=>n+r.fixtures.length,0),passed:true};
 }
 
 function fileReceipt(out, name) {
@@ -420,6 +665,23 @@ export async function visit(browser, base, out, phase, target, viewport) {
     row.actual_final_url = page.url();
     checkAfterLabels(phase, target, row.scene_metrics);
     checkReportedDrawing(phase, row.scene_metrics);
+    if (phase === 'after') {
+      const allOperationMetrics = await collectRecordOperationMetrics(page, JSON.parse(bytes.toString('utf8')));
+      checkRecordOperationMetrics(phase, allOperationMetrics, viewport);
+      // Keep complete numeric evidence without repeating every label/block in
+      // the artifact for every operation. Full checks ran above on each step.
+      row.record_operation_metrics = allOperationMetrics.map(({operation_index,operation_id,below_image_note_count,enlarge_count,metrics})=>({
+        operation_index,operation_id,below_image_note_count,enlarge_count,frame:metrics.protocol_frame,scene:metrics.scene,renderer:metrics.renderer,
+        inline_svg_count:metrics.inline_svg_count,external_image_count:metrics.external_image_count,
+        minimum_measured_screen_font_px:metrics.minimum_measured_screen_font_px,full_drawing_checks_passed:true,
+        shared_geometry:metrics.reported_drawings.map(d=>({actual_body_scale:d.actual_body_scale,declared_record_geometry_scale:d.declared_record_geometry_scale,declared_svg_geometry_scale:d.declared_svg_geometry_scale,drawing_height:d.bounds.height,leaf_label_count:d.leaf_labels.length,fact_block_count:d.fact_blocks.length}))
+      }));
+      // Leave the selected screenshot operation/URL stable after numeric checks.
+      await buttons.nth(target.operation_index).click();
+      await page.waitForFunction(label=>document.querySelector('#protocol .protocol-copy h3')?.textContent===label,target.operation_label,{timeout:30000});
+      assert.deepEqual(errors, [], 'Uncaught page script errors during all-operation measurement');
+      assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false,'All-operation measurement introduced horizontal page overflow');
+    }
     row.automated_checks_passed = true;
     row.human_visual_review = 'pending';
   } catch (error) {
@@ -467,15 +729,16 @@ export async function main(argv = process.argv.slice(2)) {
   save();
   let browser;
   try {
-    browser = await chromium.launch();
+    browser = await chromium.launch({args: ['--disable-gpu']});
     receipt.browser_started = true;
     for (const target of targets) {
-      for (const viewport of VIEWPORTS) {
+      for (const viewport of viewportsForTarget(target)) {
         const row = await visit(browser, args.base, out, args.phase, target, viewport);
         receipt.pages.push(row); save();
         console.log(`${args.phase} ${target.id} ${viewport.width}: ${row.automated_checks_passed ? 'pass' : row.error}`);
       }
     }
+    if(args.phase==='after'){receipt.scene_fixture_matrix=await probeSceneFixtureMatrix(browser,args.base);save();}
   } catch (error) {
     receipt.capture_error = String(error.message || error);
     throw error;
@@ -486,7 +749,7 @@ export async function main(argv = process.argv.slice(2)) {
   const failures = receipt.pages.filter((row) => !row.automated_checks_passed);
   receipt.summary = `${receipt.pages.length} target/viewports, ${failures.length} failed`;
   save();
-  assert(receipt.pages.length === 36 && failures.length === 0, receipt.summary);
+  assert(receipt.pages.length === targets.reduce((count,target)=>count+viewportsForTarget(target).length,0) && failures.length === 0, receipt.summary);
 }
 
 if (process.argv[1] && pathToFileURL(path.resolve(process.argv[1])).href === import.meta.url) {

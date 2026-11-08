@@ -5,13 +5,14 @@ import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
 VERSION = '0.41.9'
-PUBLIC_READER_VERSION = '0.44.0'
+PUBLIC_READER_VERSION = '0.45.0'
 H_VERSION = '0.43.0'
+K_MODULES = ('chemical-viewer.mjs', 'crystal-defaults.mjs', 'crystal-viewer.mjs', 'evans2010-products.mjs', 'illustrated-record.mjs', 'material-guide.mjs', 'material-hub.mjs', 'protocol-record-fit.mjs', 'protocol-references.mjs', 'protocol-visuals.mjs', 'reader-app.mjs', 'reader-particle.mjs', 'reader-structures.mjs', 'reported-protocol-scenes.mjs', 'reported-scene-drawing.mjs', 'source-field-copy.mjs')
 PUBLIC_MODULES = ('illustrated-record.mjs', 'material-guide.mjs', 'material-hub.mjs', 'method-families.mjs', 'reader-app.mjs')
 H_MODULES = ('chemical-reference-route.mjs', 'chemical-viewer.mjs', 'crystal-viewer.mjs', 'evans2010-products.mjs', 'illustrated-record.mjs', 'material-app.mjs', 'material-guide.mjs', 'material-hub.mjs', 'protocol-references.mjs', 'protocol-visuals.mjs', 'reader-app.mjs', 'reader-presentation-loader.mjs', 'reader-structures.mjs')
 G_HEATER_VERSION = '0.41.10'
 G_HEATER_MODULES = ('reported-protocol-scenes.mjs', 'reported-scene-drawing.mjs')
-def version_for(module): return PUBLIC_READER_VERSION if module in PUBLIC_MODULES else H_VERSION if module in H_MODULES else '0.42.0' if module == 'reader.css' else G_HEATER_VERSION if module in G_HEATER_MODULES else VERSION
+def version_for(module): return '0.44.0' if module == 'method-families.mjs' else PUBLIC_READER_VERSION if module in K_MODULES else H_VERSION if module in H_MODULES else '0.42.0' if module == 'reader.css' else G_HEATER_VERSION if module in G_HEATER_MODULES else VERSION
 
 
 class ReaderCacheVersionTests(unittest.TestCase):
@@ -85,7 +86,7 @@ class ReaderCacheVersionTests(unittest.TestCase):
         # Fresh record and legacy-material parents must reach both corrected modules.
         self.assertIn('material-guide.mjs?v=' + PUBLIC_READER_VERSION, self.read('static/illustrated-record.mjs'))
         self.assertIn('material-guide.mjs?v=' + PUBLIC_READER_VERSION, self.read('static/material-hub.mjs'))
-        self.assertIn('reader-particle.mjs?v=' + VERSION, self.read('static/reader-structures.mjs'))
+        self.assertIn('reader-particle.mjs?v=' + version_for('reader-particle.mjs'), self.read('static/reader-structures.mjs'))
 
     def test_heater_drawing_is_reachable_with_current_child_and_parent_tokens(self):
         expected = {

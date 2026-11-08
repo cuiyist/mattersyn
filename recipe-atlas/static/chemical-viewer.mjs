@@ -1,3 +1,4 @@
+import {formulaFieldText} from './source-field-copy.mjs?v=0.45.0';
 import {hasReference3d, chemicalButtonLabel, viewerEntry, flatReferenceReason, chemicalDisplayCaption, chemicalModelCaption} from './chemical-reference-route.mjs?v=0.43.0';
 export {chemicalButtonLabel, chemicalDisplayCaption};
 const base=new URL('assets/chemical-registry/',import.meta.url);
@@ -34,12 +35,12 @@ export async function openChemical(entry){
  entry=viewerEntry(entry);
  const generation=++dialogGeneration;
  if(!dialog){dialog=el('dialog',undefined,'guide-molecule-dialog reader-molecule-dialog');document.body.append(dialog);dialog.addEventListener('close',()=>{dialogGeneration++;referenceCleanup?.();referenceCleanup=null;viewer?.clear();viewer=null;});}
- referenceCleanup?.();referenceCleanup=null;viewer?.clear();viewer=null;dialog.replaceChildren();const head=el('header'),close=el('button','Close ×');close.type='button';close.onclick=()=>dialog.close();head.append(el('h2',entry.name),close);const host=el('div',undefined,'molecule-model');host.tabIndex=0;host.setAttribute('aria-label',entry.name+' structure viewer');dialog.append(head,el('p',entry.formula||'Source-defined composition','molecular-formula'),host);if(!dialog.open)dialog.showModal();let scale=1,fit=null,depictionCaption=entry.caption||entry.depictionKind;
+ referenceCleanup?.();referenceCleanup=null;viewer?.clear();viewer=null;dialog.replaceChildren();const head=el('header'),close=el('button','Close ×');close.type='button';close.onclick=()=>dialog.close();head.append(el('h2',entry.name),close);const host=el('div',undefined,'molecule-model');host.tabIndex=0;host.setAttribute('aria-label',entry.name+' structure viewer');dialog.append(head,el('p',formulaFieldText(entry.formula),'molecular-formula'),host);if(!dialog.open)dialog.showModal();let scale=1,fit=null,depictionCaption=entry.caption||entry.depictionKind;
  const controls=el('div',undefined,'protocol-controls'),info=el('p','Select an atom to identify it.','atom-inspection');
  const why=flatReferenceReason(entry);if(why)dialog.append(el('p',why,'chemical-caption'));
  try{
  if(entry.readerAmbientReference){
-  const {drawReference}=await import('./reader-structures.mjs?v=0.43.0');
+  const {drawReference}=await import('./reader-structures.mjs?v=0.45.0');
   if(!dialog.open||generation!==dialogGeneration)return;
   host.classList.remove('molecule-model');host.classList.add('reader-structure-panel');host.style.height='auto';
   const mounted=await drawReference(host,entry.readerAmbientReference,false);

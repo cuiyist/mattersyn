@@ -129,7 +129,7 @@ test('source-extracted figure introduction stays neutral without changing source
  assert.equal(nodes(h,'button').filter(n=>n.attributes.role==='tab').length,7);
  assert.equal(JSON.stringify({r,data}),before);
 });
-test('audited and other existing figure introductions retain their exact wording and gallery',async()=>{
+test('all statuses share the neutral figure introduction and retain their exact gallery',async()=>{
  const {fallbackSources:legacyFallback}=await isolatedGuide('legacy-source-intro-fixture');
  const data=freeze({records:{'route-a':{figures:fixture}}});
  globalThis.fetch=async()=>presentationResponse(data);
@@ -137,7 +137,8 @@ test('audited and other existing figure introductions retain their exact wording
  for(const status of ['source_reviewed','audited','pending',undefined]){
   const r=freeze({...record,quality:{review_status:status},review_status:'source_extracted'}),rBefore=JSON.stringify(r),h=host();
   assert.equal(await legacyFallback(h,r),true);
-  assert.equal(h.children[0].textContent,'Source figures assigned to this reviewed record retain their own specimen and context qualifications; their display does not establish the same physical batch.');
+  assert.equal(h.children[0].textContent,'Source figures assigned to this record retain their own specimen and context qualifications; their display does not establish the same physical batch.');
+  assert.doesNotMatch(h.children[0].textContent,/reviewed|audited|extracted/i);
   assert.equal(nodes(h,'button').filter(n=>n.attributes.role==='tab').length,7);
   assert.equal(JSON.stringify(r),rBefore);
  }

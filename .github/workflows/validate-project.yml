@@ -57,6 +57,8 @@ jobs:
         run: node --test recipe-atlas/tests/generic-thermal-scenes.test.mjs
       - name: Test reported protocol scenes and screenshot target contract
         run: node --test recipe-atlas/tests/reported-protocol-scenes.test.mjs recipe-atlas/tests/reported-scene-extensions.test.mjs tools/ci/protocol-scenes-check.test.mjs recipe-atlas/tests/reported-scene-drawing.test.mjs
+      - name: Test bounded record drawings and uniform reader copy
+        run: node --test recipe-atlas/tests/protocol-record-fit.test.mjs recipe-atlas/tests/source-field-copy.test.mjs recipe-atlas/tests/reader-neutral-copy-all-records.test.mjs
       - name: Test source-scoped apparatus context
         run: node --test recipe-atlas/tests/yu1998-scene-scope.test.mjs
       - name: Test reader specimen and figure isolation
@@ -116,7 +118,7 @@ jobs:
           if not base.strip('0'): base = 'HEAD^'
           paths = subprocess.check_output(['git', 'diff', '--name-only', base, 'HEAD'], text=True).splitlines()
           methods = any(p in {'recipe-atlas/scripts/method_families.py','recipe-atlas/scripts/method_family_projection.py','recipe-atlas/scripts/build_atlas.py','recipe-atlas/static/method-families.mjs','recipe-atlas/static/reader-app.mjs','recipe-atlas/static/reader.css','recipe-atlas/templates/material-reader.html'} or p.startswith('tools/ci/method-families-') for p in paths)
-          changed = methods or any(p in {'recipe-atlas/static/protocol-visuals.mjs', 'recipe-atlas/static/reported-protocol-scenes.mjs', 'recipe-atlas/static/reported-scene-drawing.mjs', 'recipe-atlas/static/reported-scene-extensions.mjs'} or p.startswith('tools/ci/protocol-scenes-') for p in paths)
+          changed = methods or any(p in {'recipe-atlas/static/protocol-visuals.mjs', 'recipe-atlas/static/protocol-record-fit.mjs', 'recipe-atlas/static/reported-protocol-scenes.mjs', 'recipe-atlas/static/reported-scene-drawing.mjs', 'recipe-atlas/static/reported-scene-extensions.mjs'} or p.startswith('tools/ci/protocol-scenes-') for p in paths)
           print('PROTOCOL_SCENES_COMPARISON_BASE=' + base)
           print('METHOD_FAMILIES_CHANGED=' + str(int(methods)))
           print('PROTOCOL_SCENES_CHANGED=' + str(int(changed)))
@@ -134,7 +136,8 @@ jobs:
           python -m http.server 8173 --bind 127.0.0.1 --directory "$RUNNER_TEMP/protocol-serve" >"$RUNNER_TEMP/protocol-server.log" 2>&1 &
           SERVER_PID=$!
           trap 'kill "$SERVER_PID"' EXIT
-          git show "${PROTOCOL_SCENES_COMPARISON_BASE}:tools/ci/protocol-scenes-targets.json" > "$RUNNER_TEMP/protocol-scenes-before-targets.json"
+          git show "${PROTOCOL_SCENES_COMPARISON_BASE}:tools/ci/protocol-scenes-targets.json" > "$RUNNER_TEMP/protocol-scenes-base-targets.json"
+          node --input-type=module -e 'import fs from "node:fs";import{execFileSync}from"node:child_process";import{beforeTargetsFromBaseSnapshot as convert,K_REGRESSION_TARGETS as rows}from"./tools/ci/protocol-scenes-check.mjs";const records=Object.fromEntries(rows.map(t=>[t.record_id,execFileSync("git",["show",process.argv[2]+":recipe-atlas/data/records/"+t.record_id+".json"])]));fs.writeFileSync(process.argv[3],JSON.stringify(convert(JSON.parse(fs.readFileSync(process.argv[1],"utf8")),records))+"\n",{flag:"wx"});' "$RUNNER_TEMP/protocol-scenes-base-targets.json" "$PROTOCOL_SCENES_COMPARISON_BASE" "$RUNNER_TEMP/protocol-scenes-before-targets.json"
           node tools/ci/protocol-scenes-check.mjs --base https://cuiyist.github.io/mattersyn-site/ --out "$RUNNER_TEMP/protocol-scenes/before" --phase before --targets "$RUNNER_TEMP/protocol-scenes-before-targets.json"
           node tools/ci/protocol-scenes-check.mjs --base http://127.0.0.1:8173/mattersyn-site/ --out "$RUNNER_TEMP/protocol-scenes/after" --phase after --targets tools/ci/protocol-scenes-targets.json
           if [[ "$METHOD_FAMILIES_CHANGED" == "1" ]]; then

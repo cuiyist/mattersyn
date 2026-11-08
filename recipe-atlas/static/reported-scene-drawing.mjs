@@ -1,3 +1,4 @@
+import {compactDrawingFacts} from './protocol-record-fit.mjs?v=0.45.0';
 // Record-derived protocol drawings. Own-field labels use textContent only.
 const ink = '#7899ad';
 let sequence = 0;
@@ -216,27 +217,36 @@ function annotation(className, title, values, titleOnly = false) {
   return host;
 }
 
-export function createReportedDrawing(spec, conditions = []) {
-  const facts=reportedDrawingFacts(spec,conditions),drawing=node('div');drawing.className='reported-scene-drawing';
+export function createReportedDrawing(spec, conditions = [], options = {}) {
+  const displayedConditions=options.fallback?conditions.map(c=>{const value=c.drawingValue&&c.drawingValue!==c.value?c.drawingValue+' ↗':c.value;return {...c,value,shortValue:value.length<=12?value:null};}):conditions;
+  const originalFacts=reportedDrawingFacts(spec,displayedConditions);
+  const compact=options.compact?compactDrawingFacts(originalFacts,spec,conditions,options):{facts:originalFacts,fullFacts:[]};
+  const facts=compact.facts,drawing=node('div');drawing.className='reported-scene-drawing';
   drawing.dataset.layout='leader-lines-v2';drawing.dataset.stirring=String(Boolean(spec.stirring));drawing.dataset.heating=String(Boolean(spec.heating));
-  drawing.reportedFacts=facts;
-  Object.assign(drawing.style,{display:'grid',gridTemplateColumns:'minmax(0,1fr)',gap:'8px',padding:'8px',background:'radial-gradient(ellipse at 50% 54%,#f0f5f8,transparent 72%)',boxSizing:'border-box',width:'100%',minWidth:'0'});
+  drawing.reportedFacts=facts;drawing.reportedFullFacts=compact.fullFacts;drawing.reportedViewport=reportedDrawingViewport(spec);
+  drawing.dataset.fitCompact=String(Boolean(options.compact));
+  Object.assign(drawing.style,{display:'grid',gridTemplateColumns:'minmax(0,1fr)',gap:'8px',padding:'8px',background:'radial-gradient(ellipse at 50% 54%,#f0f5f8,transparent 72%)',boxSizing:'border-box',width:'100%',minWidth:'0',position:'relative'});
   const upper=node('div');upper.className='reported-scene-ports';Object.assign(upper.style,{display:'grid',gridTemplateColumns:'minmax(0,1fr) minmax(0,1fr)',gap:'12px',alignItems:'end'});
   let inlet;
   if(spec.kind==='chamber'&&facts.sources.length){
     inlet=node('div');inlet.className='reported-scene-inlet';Object.assign(inlet.style,{display:'grid',gridTemplateColumns:`repeat(${facts.sources.length},minmax(0,1fr))`,gap:'7px 0',gridColumn:'1 / -1',alignItems:'end'});
     for(const source of facts.sources){const cell=annotation('reported-scene-source',source.label,source.lines,true);cell.style.padding='0 3px';cell.dataset.sourceId=source.id;cell.style.textAlign='center';inlet.append(cell);}
-  }else inlet=annotation('reported-scene-inlet','Added',facts.added.map(x=>x.label));
+  }else inlet=annotation('reported-scene-inlet',options.compact?'':'Added',options.fallback&&facts.added.length?[facts.added.map(x=>x.label).join('; ')]:facts.added.map(x=>x.label));
   const atmosphere=annotation('reported-scene-atmosphere','',facts.atmosphere?[facts.atmosphere]:[]);
   if(inlet)upper.append(inlet);if(atmosphere){atmosphere.style.gridColumn='2';atmosphere.style.textAlign='right';upper.append(atmosphere);}if(inlet||atmosphere)drawing.append(upper);
   const equipment=node('div');equipment.className='reported-scene-apparatus';Object.assign(equipment.style,{display:'grid',justifyItems:'center',minWidth:'0',width:'100%'});
   const plot=node('div');plot.className='reported-scene-geometry';Object.assign(plot.style,{position:'relative',width:'100%',minWidth:'0'});
   const svg=document.createElementNS('http://www.w3.org/2000/svg','svg'),view=reportedDrawingViewport(spec),bottom=view.bottom;
   svg.setAttribute('viewBox',`${view.x} ${view.y} ${view.width} ${view.height}`);svg.setAttribute('role','img');svg.setAttribute('aria-label',spec.kind.replaceAll('-',' ')+' operation diagram');
-  Object.assign(svg.style,{display:'block',width:'100%',height:'auto'});svg.innerHTML=geometry(spec,`reported-art-${++sequence}`,facts);plot.append(svg);equipment.append(plot);
+  svg.dataset.reportedApparatus='true';
+  const scale=options.scale;
+  const fitted=Number.isFinite(scale)&&scale>0;
+  if(fitted){drawing.dataset.recordGeometryScale=String(scale);svg.dataset.geometryScale=String(scale);}
+  Object.assign(svg.style,{display:'block',width:fitted?view.width*scale+'px':'100%',height:options.measureOnly?'0px':fitted?view.height*scale+'px':'auto',maxWidth:'none',margin:'0 auto'});
+  svg.innerHTML=geometry(spec,`reported-art-${++sequence}`,facts);if(fitted)svg.querySelector?.('g[data-part="leader-line"]')?.setAttribute('display','none');plot.append(svg);equipment.append(plot);
   if(spec.heating||facts.primaryHeaterShortValue){
     const plate=node('div');plate.className='reported-scene-heating-plate';if(!spec.heating)plate.dataset.passive='true';
-    Object.assign(plate.style,{display:'grid',gap:'3px',width:'min(78%,300px)',minWidth:'0',marginTop:'-5px',boxSizing:'border-box',textAlign:'center',padding:'6px 8px',borderTop:'4px solid #b6c7d2',borderRadius:'3px 3px 8px 8px',background:'linear-gradient(#e4ecf1,#c4d3dd)'});
+    Object.assign(plate.style,{display:options.compact?'flex':'grid',flexWrap:'wrap',alignItems:'center',justifyContent:'center',gap:options.compact?'4px 8px':'3px',width:'min(78%,300px)',minWidth:'0',marginTop:'-5px',boxSizing:'border-box',textAlign:'center',padding:options.compact?'4px 6px':'6px 8px',borderTop:'4px solid #b6c7d2',borderRadius:'3px 3px 8px 8px',background:'linear-gradient(#e4ecf1,#c4d3dd)'});
     if(spec.kind==='chamber'){
       plate.dataset.heaterFront='true';
       Object.assign(plate.style,{position:'absolute',left:'50%',top:(205/bottom*100)+'%',transform:'translate(-50%,-50%)',display:'flex',alignItems:'center',justifyContent:'center',gap:'4px',width:'max-content',maxWidth:'76%',whiteSpace:'nowrap',marginTop:'0',padding:'1px 6px',border:'1px solid #7899ad',borderTop:'1px solid #7899ad',borderRadius:'2px',background:'#d6e2e9'});
@@ -249,6 +259,34 @@ export function createReportedDrawing(spec, conditions = []) {
   if(flowTemperatures.length){const temp=annotation('reported-scene-temperature','',flowTemperatures.map(c=>`${c.key.replaceAll('_',' ')}: ${c.value}`));temp.style.textAlign='center';temp.style.width='90%';equipment.append(temp);const leader=document.createElementNS('http://www.w3.org/2000/svg','svg');leader.setAttribute('viewBox','0 0 2 12');leader.style.width='2px';leader.style.height='12px';leader.style.marginTop='-8px';leader.setAttribute('aria-hidden','true');leader.innerHTML='<g data-part="leader-line"><path d="M1 0V12" stroke="#7899ad" stroke-width="1.2"/></g>';if(equipment.insertBefore)equipment.insertBefore(leader,temp);else equipment.append(leader);}
   if(facts.substrateLabels.length)equipment.append(annotation('reported-scene-substrate','Reported substrate',facts.substrateLabels));
   drawing.append(equipment);
-  const duration=annotation('reported-scene-duration','Duration',facts.durations.map(c=>facts.durations.length>1?c.key.replaceAll('_',' ')+': '+c.value:c.value));if(duration){duration.style.textAlign='center';duration.style.justifySelf='center';const leader=document.createElementNS('http://www.w3.org/2000/svg','svg');leader.setAttribute('viewBox','0 0 2 14');leader.setAttribute('aria-hidden','true');leader.style.width='2px';leader.style.height='14px';leader.style.justifySelf='center';leader.innerHTML='<g data-part="leader-line"><path d="M1 0V14" stroke="#7899ad" stroke-width="1.2"/></g>';duration.children.length?duration.insertBefore?.(leader,duration.children[0]):null;if(!duration.insertBefore)duration.append(leader);drawing.append(duration);}
+  drawing.updateAnnotationLayout=()=>updateFittedAnnotations(drawing,svg,plot,spec,facts,options);
+  const duration=annotation('reported-scene-duration',options.compact?'':'Duration',facts.durations.map(c=>facts.durations.length>1?c.key.replaceAll('_',' ')+': '+c.value:c.value));if(duration){duration.style.textAlign='center';duration.style.justifySelf='center';const leader=document.createElementNS('http://www.w3.org/2000/svg','svg');leader.setAttribute('viewBox','0 0 2 14');leader.setAttribute('aria-hidden','true');leader.style.width='2px';leader.style.height='14px';leader.style.justifySelf='center';leader.innerHTML='<g data-part="leader-line"><path d="M1 0V14" stroke="#7899ad" stroke-width="1.2"/></g>';duration.children.length?duration.insertBefore?.(leader,duration.children[0]):null;if(!duration.insertBefore)duration.append(leader);drawing.append(duration);}
   return drawing;
+}
+
+
+
+// Pixel overlay connects fixed-font labels to the scaled, unchanged openings.
+function updateFittedAnnotations(drawing,svg,plot,spec,facts,options){
+ if(!(Number.isFinite(options.scale)&&options.scale>0)||typeof drawing.getBoundingClientRect!=='function'||!svg.getScreenCTM)return;
+ const rect=drawing.getBoundingClientRect(),matrix=svg.getScreenCTM();if(!matrix||!rect.width)return;
+ drawing.querySelector?.('svg[data-part="annotation-leaders"]')?.remove();
+ const overlay=document.createElementNS('http://www.w3.org/2000/svg','svg');overlay.dataset.part='annotation-leaders';
+ overlay.setAttribute('data-part','annotation-leaders');overlay.setAttribute('aria-hidden','true');
+ Object.assign(overlay.style,{position:'absolute',left:'0',top:'0',width:'100%',height:'100%',pointerEvents:'none',overflow:'visible'});
+ overlay.setAttribute('viewBox',`0 0 ${rect.width} ${rect.height}`);
+ const point=(x,y)=>({x:matrix.a*x+matrix.c*y+matrix.e-rect.left,y:matrix.b*x+matrix.d*y+matrix.f-rect.top});
+ const edge=node=>{const r=node.getBoundingClientRect();return {x:(r.left+r.right)/2-rect.left,y:r.bottom-rect.top+2};};
+ const line=(label,target,arrow=false)=>{if(!label)return;const start=edge(label),p=document.createElementNS('http://www.w3.org/2000/svg','path');p.setAttribute('data-part','leader-line');const elbow=Math.min(target.y-6,Math.max(start.y+6,target.y-12));p.setAttribute('d',`M${start.x} ${start.y}V${elbow}H${target.x}V${target.y}`+(arrow?`M${target.x-4} ${target.y-5}L${target.x} ${target.y}L${target.x+4} ${target.y-5}`:''));p.setAttribute('fill','none');p.setAttribute('stroke','#7899ad');p.setAttribute('stroke-width','1.2');overlay.append(p);};
+ const sources=[...drawing.querySelectorAll('.reported-scene-source')];
+ if(spec.kind==='chamber'){
+  const identified=facts.sources.filter(s=>s.identified);
+  sources.forEach((label,index)=>{const source=facts.sources[index],i=identified.indexOf(source);if(i<0){line(label,point(42,140));return;}const angle=identified.length===1?-Math.PI/2:-Math.PI*.82+i*(Math.PI*.64/Math.max(identified.length-1,1));line(label,point(150+107*Math.cos(angle),147+107*Math.sin(angle)));});
+ }else{
+  const port=portsFor(spec);line(drawing.querySelector('.reported-scene-inlet'),point(port.inlet[0],spec.kind==='inject'?port.inlet[1]-124:port.inlet[1]-6),spec.kind!=='inject');
+  line(drawing.querySelector('.reported-scene-atmosphere'),point(port.gas[0],port.gas[1]));
+ }
+ const plate=drawing.querySelector('[data-heater-front="true"]');
+ if(plate){const holder=svg.querySelector('[data-part="substrate-holder"]')?.getBoundingClientRect(),bounds=plate.getBoundingClientRect(),plotRect=plot.getBoundingClientRect();const anchor=point(150,205);let cy=anchor.y-(plotRect.top-rect.top);if(holder)cy=Math.max(cy,holder.bottom-plotRect.top+bounds.height/2+3);plate.style.top=cy+'px';plot.style.minHeight=Math.max(reportedDrawingViewport(spec).height*options.scale,cy+bounds.height/2+3)+'px';}
+ drawing.append(overlay);
 }

@@ -1,11 +1,12 @@
-import {figureGallery} from './reader-app.mjs?v=0.44.0';
+import {READER_COPY} from './source-field-copy.mjs?v=0.45.0';
+import {figureGallery} from './reader-app.mjs?v=0.45.0';
 import {stockScope} from './stock-scope.mjs';
 import {quantityValue} from './quantity-value.mjs';
 import {sourceItemCard} from './source-evidence.mjs?v=0.41.9';
-import {mountCrystalReferences} from './crystal-viewer.mjs?v=0.43.0';
-export {mountCrystalReferences} from './crystal-viewer.mjs?v=0.43.0';
-import {mountProtocol} from './protocol-visuals.mjs?v=0.43.0';
-import {chemicalRegistry,chemicalEntry,chemicalImage,openChemical,mountStockComponents,mountReagentComponents} from './chemical-viewer.mjs?v=0.43.0';
+import {mountCrystalReferences} from './crystal-viewer.mjs?v=0.45.0';
+export {mountCrystalReferences} from './crystal-viewer.mjs?v=0.45.0';
+import {mountProtocol} from './protocol-visuals.mjs?v=0.45.0';
+import {chemicalRegistry,chemicalEntry,chemicalImage,openChemical,mountStockComponents,mountReagentComponents} from './chemical-viewer.mjs?v=0.45.0';
 const el=(tag,text,cls)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(cls)n.className=cls;return n;};
 const link=(text,url)=>{const a=el('a',text);a.href=new URL(url.startsWith('/')&&!url.startsWith('//')?url.slice(1):url,import.meta.url);return a;};
 import {loadReaderPresentations} from './reader-presentation-loader.mjs?v=0.43.0';
@@ -18,7 +19,7 @@ export async function fallbackSources(host,r){
  readerPresentations??=loadReaderPresentations(new URL('data/reader-presentation.json',import.meta.url));
  const presentation=(await readerPresentations).records?.[r.record_id];
  if(!Array.isArray(presentation?.figures)||!presentation.figures.length)return false;
- const recordScope=r.quality?.review_status==='source_extracted'?'record':'reviewed record';
+ const recordScope=READER_COPY.sourceFigureScope;
  host.append(el('p','Source figures assigned to this '+recordScope+' retain their own specimen and context qualifications; their display does not establish the same physical batch.','guide-notice'));
  figureGallery(host,presentation.figures,r,'source',presentation);
  return true;

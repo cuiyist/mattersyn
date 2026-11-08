@@ -5,19 +5,19 @@ import os from 'node:os';
 import path from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
-import { validateTargets, targetURL, checkAfterLabels, checkReportedDrawing, fontMetrics, VIEWPORTS, argumentsFor, safeDiagnosticURL, safeDiagnosticText, registerFailureDiagnostics, structuralReadinessSummary, collectFailureDiagnostics, visit } from './protocol-scenes-check.mjs';
+import { validateTargets, targetURL, checkAfterLabels, checkReportedDrawing, fontMetrics, VIEWPORTS, argumentsFor, safeDiagnosticURL, safeDiagnosticText, registerFailureDiagnostics, structuralReadinessSummary, collectFailureDiagnostics, visit, LEGACY_TARGET_SCHEMA, TARGET_SCHEMA, K_REGRESSION_TARGETS, beforeTargetsFromBaseSnapshot, checkRecordOperationMetrics, collectRecordOperationMetrics, viewportsForTarget, REPORTED_SCENE_KINDS, VESSEL_VARIANTS, sceneFixtureMatrix, standaloneWidthLimitedFurnace, fixtureRecordCases } from './protocol-scenes-check.mjs';
 
 const original = JSON.parse(fs.readFileSync(new URL('./protocol-scenes-targets.json', import.meta.url), 'utf8'));
 const copy = () => structuredClone(original);
 
-test('fixed public target set has ten actual defaults, five named examples and three explicit step1 views', () => {
+test('fixed public target set preserves eighteen views and adds two exact K injection regressions', () => {
   const rows = validateTargets(copy());
-  assert.equal(rows.length, 18);
+  assert.equal(rows.length, 20);
   assert.equal(rows.filter((row) => row.group === 'benchmark-default').length, 10);
   assert.equal(rows.filter((row) => row.group === 'route-example').length, 5);
   assert.equal(rows.filter((row) => row.group === 'reader-e-step1').length, 3);
   assert.deepEqual(VIEWPORTS.map((row) => row.width), [1440, 390]);
-  assert.equal(rows.length * VIEWPORTS.length * 2, 72);
+  assert.equal(rows.length * VIEWPORTS.length * 2, 80);
 });
 
 test('private fields, record duplicates, absent target and invalid operation/hash are rejected', () => {
@@ -43,12 +43,12 @@ test('changed defaults retain exact Wu step1; only an actual Wu default may shar
   const rows=validateTargets(copy()),ordinary=rows.find(r=>r.id==='default-gaas'),extra=rows.find(r=>r.id==='extra-gaas-wu2010-step1');
   assert.equal(new URL(extra.route,'https://validation.invalid/').searchParams.get('method'),extra.record_id);
   const duplicate=copy();for(const key of ['record_id','operation_id','operation_index','operation_label','record_json_sha256','record_json_bytes'])duplicate.targets[8][key]=extra[key];
-  assert.equal(validateTargets(duplicate).length,18);
+  assert.equal(validateTargets(duplicate).length,20);
   for(const mutate of [x=>{x.targets[15].record_json_sha256='0'.repeat(64);},x=>{x.targets[15].record_json_bytes++;},x=>{x.targets[15].operation_label+=' altered';},x=>{x.targets[16].record_id=extra.record_id;}]){const value=structuredClone(duplicate);mutate(value);assert.throws(()=>validateTargets(value));}
 });
 
 test('all three extra views are the exact first operation on their explicit material/record route', () => {
-  const extras = original.targets.slice(15);
+  const extras = original.targets.slice(15,18);
   assert.deepEqual(extras.map((row) => [row.id, row.operation_index, row.operation_id]), [
     ['extra-gaas-wu2010-step1', 0, 's01-grow'],
     ['extra-au-fan2006-step1', 0, 's01-prepare'],
@@ -208,12 +208,12 @@ test('direct no-argument invocation is inert and does not require Playwright or 
   assert.deepEqual(JSON.parse(result.stdout), { status: 'DEFAULT_INERT', browser_started: false, network_calls: 0, screenshots_created: 0 });
 });
 
-test('G drawings keep a full-width centered apparatus with plain connected labels', () => {
+test('K retains full-width labels and centered height-fitted apparatus with plain connected labels', () => {
   for (const [mutate, message] of [
     [(d) => { d.layout = 'corner-boxes'; }, /leader-label/],
     [(d) => { d.apparatus_bounds = rect(60, 80, 280, 210); }, /drawing width/],
     [(d) => { d.apparatus_bounds = rect(0, 80, 370, 210); }, /centered/],
-    [(d) => { d.svg_bounds = rect(100, 80, 200, 210); }, /fill its panel/],
+    [(d) => { d.svg_bounds = rect(120, 80, 200, 210); }, /centered/],
     [(d) => { d.plain_annotations[0].border_width_px = 1; }, /label boxes/],
     [(d) => { d.plain_annotations[0].background_transparent = false; }, /transparent/],
     [(d) => { d.leader_line_count = 0; }, /leader lines/],
@@ -235,21 +235,21 @@ test('nested temperature is measured once inside its heater, without hiding inde
   });
 });
 
-test('actual vessel geometry must fill the drawing even when wrapper and SVG are full width',()=>{const m=drawingMetrics();m.reported_drawings[0].apparatus_body_bounds=rect(140,90,114,180);assert.throws(()=>checkReportedDrawing('after',m),/actual apparatus body must occupy/);const b=drawingMetrics();b.reported_drawings[0].apparatus_body_svg_bbox=rect(95,10,114,180);assert.throws(()=>checkReportedDrawing('after',b),/SVG body geometry/);});
+test('height-limited geometry may be narrow without weakening intrinsic body/viewBox or clipping checks',()=>{const m=drawingMetrics();m.reported_drawings[0].apparatus_body_bounds=rect(140,90,114,180);checkReportedDrawing('after',m);const b=drawingMetrics();b.reported_drawings[0].apparatus_body_svg_bbox=rect(95,10,114,180);assert.throws(()=>checkReportedDrawing('after',b),/SVG body geometry/);});
 test('visible body and zero-width or zero-height leader appendages stay inside SVG',()=>{const m=drawingMetrics();m.reported_drawings[0].appendage_geometry_bounds=[rect(20,90,0,50),rect(30,100,50,0)];checkReportedDrawing('after',m);m.reported_drawings[0].appendage_geometry_bounds.push(rect(-1,90,20,40));assert.throws(()=>checkReportedDrawing('after',m),/visible syringe/);const b=drawingMetrics();b.reported_drawings[0].apparatus_body_bounds=rect(0,90,320,180);assert.throws(()=>checkReportedDrawing('after',b),/must not clip/);});
 test('font metrics measure actual SVG body bbox and viewBox rather than its wrapper',()=>withMetricDOM(()=>{const{art}=metricFixture(),d=fontMetrics(art).reported_drawings[0];assert.equal(d.apparatus_body_bounds.width,320);assert.equal(d.apparatus_body_svg_bbox.width,250);assert.equal(d.svg_viewbox.width,300);assert.deepEqual(d.appendage_geometry_bounds,[]);}));
 
-test('before named-Wu default duplicate and after snapshot each keep18 IDs with changed defaults',()=>{
+test('before named-Wu default duplicate and after snapshot each keep20 IDs with changed defaults',()=>{
  const before=copy();
  const beforeDefault=before.targets.find(t=>t.id==='default-gaas');
  const namedWu=before.targets.find(t=>t.id==='extra-gaas-wu2010-step1');
  for(const key of ['record_id','operation_id','operation_index','operation_label','record_json_sha256','record_json_bytes'])beforeDefault[key]=namedWu[key];
- assert.equal(validateTargets(before).length,18);assert.equal(new Set(before.targets.map(t=>t.record_id)).size,17);
+ assert.equal(validateTargets(before).length,20);assert.equal(new Set(before.targets.map(t=>t.record_id)).size,19);
  const actual=copy(),actualDefault=actual.targets.find(t=>t.id==='default-gaas');
- assert.equal(validateTargets(actual).length,18);
- assert.equal(new Set(actual.targets.map(t=>t.record_id)).size,18-Number(actualDefault.record_id===namedWu.record_id));
+ assert.equal(validateTargets(actual).length,20);
+ assert.equal(new Set(actual.targets.map(t=>t.record_id)).size,20-Number(actualDefault.record_id===namedWu.record_id));
  const alternative=copy();alternative.targets.find(t=>t.id==='default-gaas').record_id='another-gaas-default';
- assert.equal(validateTargets(alternative).length,18);assert.equal(new Set(alternative.targets.map(t=>t.record_id)).size,18);
+ assert.equal(validateTargets(alternative).length,20);assert.equal(new Set(alternative.targets.map(t=>t.record_id)).size,20);
  assert.notEqual(beforeDefault.record_id,alternative.targets.find(t=>t.id==='default-gaas').record_id);
 });
 test('explicit target snapshot CLI option preserves required phase/base/out',()=>{
@@ -345,4 +345,115 @@ test('actual visit retains HTTP200 readiness timeout and failure despite diagnos
   assert.equal(row.error, originalError.message); assert.deepEqual(row.page_errors, []); assert.equal(closed, true);
   assert.deepEqual(seen, [['goto', 90000], ['main[data-reader-ready]', 60000]]);
   assert.equal(row.failure_diagnostics.collection_errors.length, 2);
+});
+
+
+test('legacy schema requires exactly18; K requires exactly20 and preserves all original18 objects',()=>{
+ const legacy={schema:LEGACY_TARGET_SCHEMA,targets:structuredClone(original.targets.slice(0,18))};
+ assert.equal(validateTargets(legacy).length,18);assert.equal(validateTargets(copy()).length,20);
+ assert.deepEqual(original.targets.slice(0,18),legacy.targets);
+ for(const [schema,count]of [[LEGACY_TARGET_SCHEMA,20],[TARGET_SCHEMA,18],['unknown',20]]){const x=copy();x.schema=schema;x.targets=x.targets.slice(0,count);assert.throws(()=>validateTargets(x));}
+});
+test('both K regressions retain exact material method operation and raw record pins',()=>{
+ assert.deepEqual(original.targets.slice(18),K_REGRESSION_TARGETS);
+ assert.deepEqual(K_REGRESSION_TARGETS.map(x=>[x.record_id,x.operation_index,x.operation_id]),[
+ ['talapin2002-ja0123599-inas-nanocrystals-3',3,'s04-inject'],['zhu-ja210312s-cdse-core',6,'inject']]);
+ for(const field of ['record_id','operation_id','operation_index','operation_label','record_json_bytes','record_json_sha256','route']){const x=copy();x.targets[18][field]=typeof x.targets[18][field]==='number'?x.targets[18][field]+1:x.targets[18][field]+'x';assert.throws(()=>validateTargets(x));}
+});
+test('before conversion refuses absent or changed base raw records before any browser can run',()=>{
+ const legacy={schema:LEGACY_TARGET_SCHEMA,targets:structuredClone(original.targets.slice(0,18))};
+ assert.throws(()=>beforeTargetsFromBaseSnapshot(legacy,{}));
+ const rows=Object.fromEntries(K_REGRESSION_TARGETS.map(x=>[x.record_id,Buffer.from('{}')]));
+ assert.throws(()=>beforeTargetsFromBaseSnapshot(legacy,rows));
+});
+function recordMetricRows(scales=[0.8,0.8],height=300){
+ return scales.map((scale,index)=>{const metrics=drawingMetrics();Object.assign(metrics.reported_drawings[0],{bounds:rect(0,0,390,300),apparatus_bounds:rect(8,80,374,210),svg_bounds:rect(8,80,374,210)});metrics.protocol_frame={bounds:rect(0,0,390,height),scroll_width:390,client_width:390,scroll_height:height,client_height:height};Object.assign(metrics.reported_drawings[0],{actual_body_scale:{x:scale,y:scale},declared_record_geometry_scale:scale,declared_svg_geometry_scale:scale});return{operation_index:index,operation_id:'step-'+index,below_image_note_count:1,enlarge_count:1,metrics};});
+}
+test('all-operation drawing frame enforces400desktop/320phone and no scroll-clipping excess',()=>{
+ checkRecordOperationMetrics('after',recordMetricRows([0.8,0.8],400),{width:1440});
+ checkRecordOperationMetrics('after',recordMetricRows([0.8,0.8],320),{width:390});
+ assert.throws(()=>checkRecordOperationMetrics('after',recordMetricRows([0.8],400.51),{width:1440}),/400px/);
+ assert.throws(()=>checkRecordOperationMetrics('after',recordMetricRows([0.8],320.51),{width:390}),/320px/);
+ for(const field of ['scroll_height','scroll_width']){const rows=recordMetricRows();rows[0].metrics.protocol_frame[field]+=2;assert.throws(()=>checkRecordOperationMetrics('after',rows,{width:390}),/scrolling|clipped/);}
+ const missing=recordMetricRows();delete missing[0].metrics.protocol_frame;assert.throws(()=>checkRecordOperationMetrics('after',missing,{width:390}),/frame/);
+ const wrongOrder=recordMetricRows();wrongOrder[1].operation_index=0;assert.throws(()=>checkRecordOperationMetrics('after',wrongOrder,{width:390}),/record order/);
+ checkRecordOperationMetrics('before',[],{width:390});
+});
+test('same-scale checks actual CTM at every operation rather than trusting declared scale metadata',()=>{
+ checkRecordOperationMetrics('after',recordMetricRows(),{width:390});
+ assert.throws(()=>checkRecordOperationMetrics('after',recordMetricRows([0.8,0.7]),{width:390}),/same actual geometry scale/);
+ for(const field of ['declared_record_geometry_scale','declared_svg_geometry_scale']){const rows=recordMetricRows();rows[0].metrics.reported_drawings[0][field]=1;assert.throws(()=>checkRecordOperationMetrics('after',rows,{width:390}),/actual screen/);}
+ const skewed=recordMetricRows();skewed[0].metrics.reported_drawings[0].actual_body_scale.y=0.7;assert.throws(()=>checkRecordOperationMetrics('after',skewed,{width:390}),/uniformly/);
+ const noActual=recordMetricRows();delete noActual[0].metrics.reported_drawings[0].actual_body_scale;assert.throws(()=>checkRecordOperationMetrics('after',noActual,{width:390}),/getScreenCTM/);
+ const lateTiny=recordMetricRows();lateTiny[1].metrics.reported_drawings[0].leaf_labels[0].screen_font_px=11.9;assert.throws(()=>checkRecordOperationMetrics('after',lateTiny,{width:390}),/below12/);
+});
+
+
+test('Talapin adds1024x768 without losing any of the40 standard K views',()=>{
+ const rows=validateTargets(copy());assert.equal(rows.reduce((n,t)=>n+viewportsForTarget(t).length,0),41);
+ assert.deepEqual(viewportsForTarget(rows.find(t=>t.id==='extra-inas-talapin2002-injection')).map(v=>[v.width,v.height]),[[1440,900],[390,844],[1024,768]]);
+ for(const row of rows.filter(t=>t.id!=='extra-inas-talapin2002-injection'))assert.deepEqual(viewportsForTarget(row),VIEWPORTS);
+});
+
+
+test('every measured operation retains one common caption and Enlarge control',()=>{
+ for(const field of ['below_image_note_count','enlarge_count'])for(const value of [0,2]){const rows=recordMetricRows();rows[1][field]=value;assert.throws(()=>checkRecordOperationMetrics('after',rows,{width:390}),/caption|Enlarge/);}
+});
+
+
+test('annotation leaders remain clipped to their own full-width overlay and complete drawing',()=>{
+ const m=drawingMetrics(),d=m.reported_drawings[0];d.annotation_overlay_geometry=[{bounds:rect(5,10,0,40),svg_bounds:rect(0,0,400,300)}];checkReportedDrawing('after',m);
+ d.annotation_overlay_geometry[0].bounds=rect(-1,10,20,40);assert.throws(()=>checkReportedDrawing('after',m),/own annotation overlay/);
+ d.annotation_overlay_geometry[0]={bounds:rect(5,10,0,40),svg_bounds:rect(-1,0,400,300)};assert.throws(()=>checkReportedDrawing('after',m),/inside the drawing/);
+});
+test('protected artwork fit uses actual displayed/native ratio and every step stays within the common frame',()=>{
+ const native=recordMetricRows();for(const row of native){row.metrics.reported_drawings=[];row.metrics.renderer='per-paper';row.metrics.inline_svg_count=1;Object.assign(row.metrics.protocol_frame,{declared_record_geometry_scale:0.8,native_width:300,native_height:250,native_bounds:rect(20,20,240,200)});}
+ checkRecordOperationMetrics('after',native,{width:390});
+ const clipped=structuredClone(native);clipped[1].metrics.protocol_frame.native_bounds.left=-1;assert.throws(()=>checkRecordOperationMetrics('after',clipped,{width:390}),/fully visible/);
+ const drift=structuredClone(native);Object.assign(drift[1].metrics.protocol_frame,{native_bounds:rect(20,20,210,175),declared_record_geometry_scale:0.7});assert.throws(()=>checkRecordOperationMetrics('after',drift,{width:390}),/same actual geometry scale/);
+ const missing=structuredClone(native);delete missing[0].metrics.protocol_frame.native_width;assert.throws(()=>checkRecordOperationMetrics('after',missing,{width:390}),/Native dimensions/);
+ const large=recordMetricRows();large[0].metrics.reported_drawings[0].bounds=rect(0,-1,400,300);assert.throws(()=>checkRecordOperationMetrics('after',large,{width:390}),/complete reported drawing/);
+});
+
+
+test('legacy transform phantom scroll extents require hidden non-scrolling frame and actual containment',()=>{
+ const rows=recordMetricRows([0.8]);rows[0].metrics.reported_drawings=[];rows[0].metrics.renderer='per-paper';rows[0].metrics.inline_svg_count=1;Object.assign(rows[0].metrics.protocol_frame,{declared_record_geometry_scale:0.8,native_width:300,native_height:250,native_bounds:rect(20,20,240,200),scroll_width:500,scroll_height:500,overflow_x:'hidden',overflow_y:'hidden'});
+ checkRecordOperationMetrics('after',rows,{width:390});
+ for(const value of ['auto','scroll','visible']){const x=structuredClone(rows);x[0].metrics.protocol_frame.overflow_y=value;assert.throws(()=>checkRecordOperationMetrics('after',x,{width:390}),/scroll|clipped/);}
+ const clipped=structuredClone(rows);clipped[0].metrics.protocol_frame.native_bounds=rect(20,20,500,200);assert.throws(()=>checkRecordOperationMetrics('after',clipped,{width:390}),/fully visible/);
+ const shared=recordMetricRows([0.8]);Object.assign(shared[0].metrics.protocol_frame,{scroll_height:500,overflow_y:'hidden'});assert.throws(()=>checkRecordOperationMetrics('after',shared,{width:390}),/clipped excess/);
+});
+
+
+test('actual-browser fixture matrix covers every reported kind six injection openings and condition toggles',()=>{
+ const rows=sceneFixtureMatrix();assert.equal(rows.length,22);assert.equal(new Set(rows.map(r=>r.id)).size,22);
+ assert.deepEqual(rows.filter(r=>r.id.startsWith('kind-')).map(r=>r.spec.kind),REPORTED_SCENE_KINDS);
+ assert.deepEqual(rows.filter(r=>r.id.startsWith('vessel-')).map(r=>r.spec.vesselKind),VESSEL_VARIANTS);
+ assert(rows.filter(r=>r.spec.kind==='inject').every(r=>r.spec.added.length===3));
+ assert.equal(rows.find(r=>r.id==='kind-chamber').spec.beamSystem,true);assert.equal(rows.find(r=>r.id==='chamber-feed').spec.beamSystem,false);
+ const off=rows.find(r=>r.id==='unheated-no-gas-no-stir');assert.deepEqual([off.spec.heating,off.spec.gasLine,off.spec.stirring],[false,false,false]);assert.deepEqual(off.conditions,[]);
+});
+
+
+test('heater guard keeps bounded numeric-only failure geometry without weakening containment',()=>{
+ const m=drawingMetrics(),d=m.reported_drawings[0];Object.assign(d,{chamber_heater_overlay_count:1,actual_body_scale:{x:0.7,y:0.7},declared_record_geometry_scale:0.7,declared_svg_geometry_scale:0.7});d.chamber_heater_fronts=[{bounds:rect(-1,220,80,25),fully_opaque:true,leaf_labels:[label(10,224)],holder_platform_bounds:rect(150,190,100,10),beam_bounds:[]}];
+ assert.throws(()=>checkReportedDrawing('after',m),error=>{assert.match(error.message,/heater front must stay inside/);const detail=error.message.split('geometry=')[1];assert(detail.length<=1600);const value=JSON.parse(detail);assert.equal(value.front.left,-1);assert.equal(value.svg.left,8);assert.equal(value.holder.top,190);assert.deepEqual(value.actual_scale,{x:0.7,y:0.7});assert(!/text|quote|source/.test(detail));return true;});
+});
+
+
+test('all-operation probe waits for loaded native images and preserves timeout without retry',async()=>{
+ const calls=[];let imageFailure=false;
+ const page={locator(selector){if(selector.includes('step-list'))return{count:async()=>1,nth:()=>({click:async()=>calls.push('click')})};return{count:async()=>1,filter(){return this;},evaluate:async()=>({renderer:'per-paper'})};},
+ async waitForFunction(fn,arg,options){assert.equal(options.timeout,30000);if(fn.toString().includes('naturalWidth')){calls.push('images');if(imageFailure)throw Error('Image readiness timeout');}else calls.push('heading');},async evaluate(){calls.push('frames');}};
+ const record={operations:[{id:'one',label:'One'}]};const rows=await collectRecordOperationMetrics(page,record);assert.equal(rows.length,1);assert.deepEqual(calls,['click','heading','images','frames']);
+ calls.length=0;imageFailure=true;await assert.rejects(collectRecordOperationMetrics(page,record),/Image readiness timeout/);assert.deepEqual(calls,['click','heading','images']);
+});
+
+
+test('standalone furnace is a separate width-limited310px phone record while all22x4 fixtures remain',()=>{
+ const cases=VIEWPORTS.flatMap(viewport=>fixtureRecordCases(viewport).map(record=>({viewport,...record})));
+ assert.deepEqual(cases.filter(c=>!c.standalone).map(c=>[c.viewport.width,c.container_width]),[[1440,560],[1440,280],[390,342],[390,280]]);
+ assert.deepEqual(cases.filter(c=>c.standalone).map(c=>[c.viewport.width,c.viewport.height,c.container_width]),[[390,844,310]]);
+ const furnace=standaloneWidthLimitedFurnace();assert.equal(furnace.spec.kind,'furnace');assert.equal(furnace.spec.heating,true);assert.deepEqual(furnace.spec.added,[]);assert.equal(furnace.conditions.length,1);assert.equal(furnace.conditions[0].key,'temperature');
+ assert.equal(sceneFixtureMatrix().length*cases.filter(c=>!c.standalone).length+cases.filter(c=>c.standalone).length,89);
 });

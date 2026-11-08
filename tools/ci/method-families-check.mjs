@@ -56,8 +56,10 @@ export function validateTargets(value, phase) {
   return value.targets;
 }
 export function beforeTargetsFromProtocolSnapshot(protocol, methodSnapshot) {
-  assert.equal(protocol?.schema, 'mattersyn-protocol-scenes-targets/1');
-  assert(Array.isArray(protocol.targets) && protocol.targets.length === 18);
+  const protocolCount = protocol?.schema === 'mattersyn-protocol-scenes-targets/1' ? 18
+    : protocol?.schema === 'mattersyn-protocol-scenes-targets/2' ? 20 : null;
+  assert(protocolCount !== null, 'Exact legacy or K comparison-base protocol schema required');
+  assert(Array.isArray(protocol.targets) && protocol.targets.length === protocolCount);
   assert(methodSnapshot && methodSnapshot.phase === 'after', 'Exact comparison-base method snapshot required');
   const legacy = methodSnapshot.schema === LEGACY_TARGET_SCHEMA;
   if (legacy) assert.deepEqual(Object.keys(methodSnapshot).sort(), ['phase', 'schema', 'targets']);
