@@ -176,6 +176,18 @@ export function sceneFixtureMatrix() {
   return rows;
 }
 
+// A separate one-operation record must exercise width fit: the22-scene record
+// is height-limited and cannot reveal a missing inner-panel horizontal inset.
+export function standaloneWidthLimitedFurnace() {
+  return {id:'single-furnace-width-limited',spec:{kind:'furnace',vesselKind:'plain',added:[],environment:'',gasLine:false,heating:true,stirring:false},
+    conditions:[{key:'temperature',value:'800 °C',shortValue:'800 °C'}]};
+}
+export function fixtureRecordCases(viewport) {
+  const cases=[{container_width:Math.min(560,viewport.width-48),standalone:false},{container_width:280,standalone:false}];
+  if(viewport.width===390)cases.push({container_width:310,standalone:true});
+  return cases;
+}
+
 export function targetURL(base, target) {
   const root = new URL(base);
   assert(['http:', 'https:'].includes(root.protocol) && !root.username && !root.password && !root.search && !root.hash);
@@ -473,7 +485,7 @@ export async function collectRecordOperationMetrics(page, record) {
 // Candidate-only synthetic layout probes use the exact runtime controller and
 // drawing factory. They do not add site assets, records or scientific claims.
 export async function probeSceneFixtureMatrix(browser, base) {
-  const matrix=sceneFixtureMatrix(),results=[];
+  const matrix=sceneFixtureMatrix(),results=[],standaloneResults=[];
   for(const viewport of VIEWPORTS){
     const context=await browser.newContext({viewport,deviceScaleFactor:1,serviceWorkers:'block',reducedMotion:'reduce'}),page=await context.newPage(),errors=[];
     page.on('pageerror',error=>errors.push(String(error.message||error)));
@@ -481,7 +493,8 @@ export async function probeSceneFixtureMatrix(browser, base) {
       const root=new URL(base.endsWith('/')?base:base+'/');
       const response=await page.goto(new URL('index.html',root).href,{waitUntil:'domcontentloaded',timeout:90000});assert.equal(response?.status(),200);
       await page.addStyleTag({url:new URL('reader.css',root).href});
-      for(const containerWidth of [Math.min(560,viewport.width-48),280]){
+      for(const recordCase of fixtureRecordCases(viewport)){
+        const containerWidth=recordCase.container_width,recordFixtures=recordCase.standalone?[standaloneWidthLimitedFurnace()]:matrix;
         await page.evaluate(async({root,matrix,width})=>{
           window.__KFixture?.controller?.disconnect();
           const drawingModule=await import(new URL('reported-scene-drawing.mjs',root).href);
@@ -508,9 +521,9 @@ export async function probeSceneFixtureMatrix(browser, base) {
           };
           controller=fit.createRecordFitController({host,operations:matrix,createArt,onChange:()=>render(current)});
           window.__KFixture={controller,render,matrix};render(current);
-        },{root:root.href,matrix,width:containerWidth});
+        },{root:root.href,matrix:recordFixtures,width:containerWidth});
         const rows=[];
-        for(const [index,fixture]of matrix.entries()){
+        for(const [index,fixture]of recordFixtures.entries()){
           await page.evaluate(id=>{const f=window.__KFixture;f.render(f.matrix.find(row=>row.id===id));},fixture.id);
           await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
           const metrics=await page.locator('.k-fixture-host .protocol-art').evaluate(fontMetrics);
@@ -520,11 +533,11 @@ export async function probeSceneFixtureMatrix(browser, base) {
         }
         checkRecordOperationMetrics('after',rows,viewport);
         assert.deepEqual(errors,[],'Synthetic scene matrix page errors');
-        results.push({viewport,container_width:containerWidth,fixtures:rows.map(({operation_id,metrics})=>({id:operation_id,scene:metrics.scene,frame_height:metrics.protocol_frame.bounds.height,frame_width:metrics.protocol_frame.bounds.width,actual_body_scales:metrics.reported_drawings.map(d=>d.actual_body_scale),minimum_leaf_font_px:Math.min(...metrics.reported_drawings.flatMap(d=>d.leaf_labels.map(l=>l.screen_font_px))),passed:true})),same_record_scale_passed:true});
+        (recordCase.standalone?standaloneResults:results).push({viewport,container_width:containerWidth,record_kind:recordCase.standalone?'single-width-limited-furnace':'shared22-scene-record',fixtures:rows.map(({operation_id,metrics})=>({id:operation_id,scene:metrics.scene,frame_height:metrics.protocol_frame.bounds.height,frame_width:metrics.protocol_frame.bounds.width,actual_body_scales:metrics.reported_drawings.map(d=>d.actual_body_scale),minimum_leaf_font_px:Math.min(...metrics.reported_drawings.flatMap(d=>d.leaf_labels.map(l=>l.screen_font_px))),passed:true})),same_record_scale_passed:true});
       }
     }finally{await context.close();}
   }
-  return{synthetic_only:true,source_records_changed:0,fixture_count:matrix.length,configurations:results,passed:true};
+  return{synthetic_only:true,source_records_changed:0,fixture_count:matrix.length,configurations:results,standalone_width_limited_records:standaloneResults,tested_fixture_views:matrix.length*results.length+standaloneResults.reduce((n,r)=>n+r.fixtures.length,0),passed:true};
 }
 
 function fileReceipt(out, name) {

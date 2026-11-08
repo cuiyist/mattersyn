@@ -39,3 +39,16 @@ test('a native image load invalidates the placeholder plan and disconnect preven
   controller.disconnect();events.load();assert.equal(changed,1);
  }finally{globalThis.document=previous;}
 });
+
+test('a short width-limited furnace reserves the measured apparatus-panel padding',()=>{
+ const fit=fitRecordGeometry([{id:'only-furnace',width:300,height:217,overhead:24,horizontalOverhead:16}],{width:310,maxHeight:320});
+ assert.ok(Math.abs(fit.scale-(294/300*.995))<1e-12);
+ assert.ok(300*fit.scale<=294);assert.ok(fit.metrics[0].renderedHeight<320);
+ // The former outer-frame-only plan would put its right edge beyond the panel.
+ assert.ok(300*(310/300*.995)>294);
+});
+test('measured inner widths constrain the one scale shared across a mixed record',()=>{
+ const fit=fitRecordGeometry([{width:300,height:217,overhead:24,horizontalOverhead:16},{width:180,height:260,overhead:20,horizontalOverhead:24}],{width:310,maxHeight:320});
+ assert.ok(fit.metrics.every(m=>m.width*fit.scale<=310-m.horizontalOverhead));
+ for(const horizontalOverhead of [-1,NaN,310])assert.throws(()=>fitRecordGeometry([{width:300,height:217,horizontalOverhead}],{width:310,maxHeight:320}));
+});

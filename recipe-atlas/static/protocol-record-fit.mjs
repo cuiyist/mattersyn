@@ -52,7 +52,11 @@ export function fitRecordGeometry(metrics,{width,maxHeight}){
     if(!finite(metric.width)||metric.width<=0||!finite(metric.height)||metric.height<=0||!finite(metric.overhead||0))throw new TypeError('Finite native geometry/annotation metrics required');
     const overhead=metric.overhead||0;
     if(overhead>=maxHeight)throw new RangeError('Annotation overhead leaves no drawing space');
-    scale=Math.min(scale,width/metric.width,(maxHeight-overhead)/metric.height);
+    // The common frame also contains fixed-width padding around the apparatus.
+    // Reserve its measured width; scaling SVG geometry never scales labels.
+    const horizontal=metric.horizontalOverhead??0;
+    if(!finite(horizontal)||horizontal>=width)throw new RangeError('Horizontal annotation/padding overhead leaves no drawing space');
+    scale=Math.min(scale,(width-horizontal)/metric.width,(maxHeight-overhead)/metric.height);
   }
   if(!metrics.length)scale=1;
   // A tiny fixed reserve absorbs subpixel rounding, never a font transform.
@@ -115,7 +119,10 @@ export function createRecordFitController({host,operations,createArt,onChange}){
           let metric;
           if(art.recordGeometry){
             const view=art.recordGeometry;
-            metric={id:operation.id,kind:'shared-svg',width:view.width,height:view.height,overhead:Math.max(0,art.getBoundingClientRect().height)+(view.extraOverhead||0)+2};
+            const panel=art.querySelector?.('.reported-scene-geometry');
+            const panelWidth=panel?.getBoundingClientRect().width;
+            const horizontalOverhead=Number.isFinite(panelWidth)?Math.max(0,width-panelWidth):0;
+            metric={id:operation.id,kind:'shared-svg',width:view.width,height:view.height,horizontalOverhead,overhead:Math.max(0,art.getBoundingClientRect().height)+(view.extraOverhead||0)+2};
           }else{
             const rect=art.getBoundingClientRect(),boxes=[...(art.querySelectorAll?.('*')||[])].map(child=>child.getBoundingClientRect());
             metric={id:operation.id,kind:'native-art',...nativeArtMetric(rect,boxes),overhead:0};

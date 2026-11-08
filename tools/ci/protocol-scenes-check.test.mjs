@@ -5,7 +5,7 @@ import os from 'node:os';
 import path from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
-import { validateTargets, targetURL, checkAfterLabels, checkReportedDrawing, fontMetrics, VIEWPORTS, argumentsFor, safeDiagnosticURL, safeDiagnosticText, registerFailureDiagnostics, structuralReadinessSummary, collectFailureDiagnostics, visit, LEGACY_TARGET_SCHEMA, TARGET_SCHEMA, K_REGRESSION_TARGETS, beforeTargetsFromBaseSnapshot, checkRecordOperationMetrics, collectRecordOperationMetrics, viewportsForTarget, REPORTED_SCENE_KINDS, VESSEL_VARIANTS, sceneFixtureMatrix } from './protocol-scenes-check.mjs';
+import { validateTargets, targetURL, checkAfterLabels, checkReportedDrawing, fontMetrics, VIEWPORTS, argumentsFor, safeDiagnosticURL, safeDiagnosticText, registerFailureDiagnostics, structuralReadinessSummary, collectFailureDiagnostics, visit, LEGACY_TARGET_SCHEMA, TARGET_SCHEMA, K_REGRESSION_TARGETS, beforeTargetsFromBaseSnapshot, checkRecordOperationMetrics, collectRecordOperationMetrics, viewportsForTarget, REPORTED_SCENE_KINDS, VESSEL_VARIANTS, sceneFixtureMatrix, standaloneWidthLimitedFurnace, fixtureRecordCases } from './protocol-scenes-check.mjs';
 
 const original = JSON.parse(fs.readFileSync(new URL('./protocol-scenes-targets.json', import.meta.url), 'utf8'));
 const copy = () => structuredClone(original);
@@ -447,4 +447,13 @@ test('all-operation probe waits for loaded native images and preserves timeout w
  async waitForFunction(fn,arg,options){assert.equal(options.timeout,30000);if(fn.toString().includes('naturalWidth')){calls.push('images');if(imageFailure)throw Error('Image readiness timeout');}else calls.push('heading');},async evaluate(){calls.push('frames');}};
  const record={operations:[{id:'one',label:'One'}]};const rows=await collectRecordOperationMetrics(page,record);assert.equal(rows.length,1);assert.deepEqual(calls,['click','heading','images','frames']);
  calls.length=0;imageFailure=true;await assert.rejects(collectRecordOperationMetrics(page,record),/Image readiness timeout/);assert.deepEqual(calls,['click','heading','images']);
+});
+
+
+test('standalone furnace is a separate width-limited310px phone record while all22x4 fixtures remain',()=>{
+ const cases=VIEWPORTS.flatMap(viewport=>fixtureRecordCases(viewport).map(record=>({viewport,...record})));
+ assert.deepEqual(cases.filter(c=>!c.standalone).map(c=>[c.viewport.width,c.container_width]),[[1440,560],[1440,280],[390,342],[390,280]]);
+ assert.deepEqual(cases.filter(c=>c.standalone).map(c=>[c.viewport.width,c.viewport.height,c.container_width]),[[390,844,310]]);
+ const furnace=standaloneWidthLimitedFurnace();assert.equal(furnace.spec.kind,'furnace');assert.equal(furnace.spec.heating,true);assert.deepEqual(furnace.spec.added,[]);assert.equal(furnace.conditions.length,1);assert.equal(furnace.conditions[0].key,'temperature');
+ assert.equal(sceneFixtureMatrix().length*cases.filter(c=>!c.standalone).length+cases.filter(c=>c.standalone).length,89);
 });
