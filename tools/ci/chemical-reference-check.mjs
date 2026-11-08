@@ -37,7 +37,7 @@ export function selectTargets(registry,bindings,overlay,recordHasMaterial=()=>tr
  for(const [id,predicate]of [
   ['reused-molecule',r=>r.route==='molecule_reference'&&['identical_CID','unique_exact_compound_name','owner_fixed_named_identity'].includes(r.reason)],
   ['computed-molecule',r=>r.route==='molecule_reference'&&r.reason==='validated_connectivity_computed_conformer'],
-  ['independent-ions',r=>r.route==='independent_component_references'],
+  ['independent-ions',r=>r.route==='independent_component_references'&&!r.namedLigandReference],
   ['ambient-cell',r=>r.route==='ambient_crystal_reference'],
   ['flat-reason',r=>r.route==='flat'&&typeof r.whyNo3d==='string'&&r.whyNo3d.length>0],
  ]){
@@ -46,6 +46,9 @@ export function selectTargets(registry,bindings,overlay,recordHasMaterial=()=>tr
   const hit=Object.entries(overlay.entries).sort(([a],[b])=>a.localeCompare(b)).find(([eid,r])=>predicate(r)&&binding(eid));
   assert(hit,`No actual bound ${id} target in generated overlay`);add(id,hit[0]);
  }
+ const namedId='name-card-indium-palmitate',named=overlay.entries[namedId];
+ assert(named?.route==='independent_component_references'&&named.namedLigandReference?.entry_id===namedId,'Exact indium-palmitate named-ligand reference required');
+ add('named-ligand-reference',namedId);
  return targets;
 }
 
