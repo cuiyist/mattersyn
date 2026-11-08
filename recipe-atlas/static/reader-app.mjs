@@ -8,13 +8,13 @@ import {el,link,button,badge,section,disclosure,siteURL,recordURL,human,isEquipm
 
 import {quantityValue} from './quantity-value.mjs';
 
-import {chemicalRegistry,chemicalEntry,chemicalImage,openChemical,hasRotatableChemicalModel} from './chemical-viewer.mjs?v=0.41.0';
+import {chemicalRegistry,chemicalEntry,chemicalImage,openChemical,hasRotatableChemicalModel,chemicalButtonLabel,chemicalDisplayCaption} from './chemical-viewer.mjs?v=0.43.0';
 
-import {mountProtocol} from './protocol-visuals.mjs?v=0.41.10';
+import {mountProtocol} from './protocol-visuals.mjs?v=0.43.0';
 
-import {mountReaderStructures} from './reader-structures.mjs?v=0.41.9';
+import {mountReaderStructures} from './reader-structures.mjs?v=0.43.0';
 
-import {loadReaderPresentations} from './reader-presentation-loader.mjs?v=0.41.9';
+import {loadReaderPresentations} from './reader-presentation-loader.mjs?v=0.43.0';
 const cache=new Map();
 
 function json(path){if(path==='data/reader-presentation.json')return loadReaderPresentations(siteURL(path));if(!cache.has(path))cache.set(path,fetch(siteURL(path),{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Unavailable '+path);return r.json();}));return cache.get(path);}
@@ -74,7 +74,7 @@ async function precursors(host,r,presentation={}){
 
  for(const m of chemicals){const card=el('article',undefined,'reader-chemical');card.dataset.materialId=m.id;const entry=chemicalEntry(data,r.record_id,m.id);card.append(el('small',human(m.role)),el('h3',m.name),el('div',entry?.displayFormula||entry?.formula||m.formula||'Source-defined composition','reader-formula'));
 
-  if(entry){const image=cardImage(entry);image.alt=m.name+' chemical structure';card.append(image,button(hasRotatableChemicalModel(entry)?'Rotate structure ↗':'Inspect structure ↗',()=>openChemical(entry),'molecule-link'));}else card.append(el('p','Chemical identity is retained in the source record.','reader-note'));
+  if(entry){const image=cardImage(entry);image.alt=m.name+' chemical structure';card.append(image,button(chemicalButtonLabel(entry),()=>openChemical(entry),'molecule-link'));}else card.append(el('p','Chemical identity is retained in the source record.','reader-note'));
 
   const qs=Object.entries(m.quantities||{}),known=qs.filter(([,q])=>quantityValue(q)!==null);known.sort(([a],[b])=>Number(/purity|grade/.test(a))-Number(/purity|grade/.test(b)));card.append(quantities(known.slice(0,3),true,r));
 
@@ -97,7 +97,7 @@ async function precursors(host,r,presentation={}){
    const material=r.materials.find(item=>item.id===option.chemical_material_id),entry=chemicalEntry(data,r.record_id,option.chemical_material_id);
    const card=el('article',undefined,'reader-chemical');
    card.append(badge('Source-defined alternative','scope'),el('h3',material?.name||entry?.name||option.chemical_material_id),el('div',entry?.displayFormula||entry?.formula||material?.formula||'','reader-formula'),el('p',option.label,'reader-note'));
-   if(entry){card.append(cardImage(entry),button(hasRotatableChemicalModel(entry)?'Rotate structure ↗':'Inspect structure ↗',()=>openChemical(entry),'molecule-link'));}
+   if(entry){card.append(cardImage(entry),button(chemicalButtonLabel(entry),()=>openChemical(entry),'molecule-link'));}
    const parameters=Object.entries(option.parameters||{});if(parameters.length)card.append(quantities(parameters,false));
    card.append(link('Source details →',recordURL(r.record_id)+'#protocol','reader-data-link'));
    choiceGrid.append(card);
@@ -113,7 +113,7 @@ async function precursors(host,r,presentation={}){
 
   const components=context?.components?.map(c=>{const base=data.entries.get(c.registry_id);return {entry:base?{...base,...c.viewOverrides,sourceBindingCaption:c.viewOverrides?.caption}:null,role:c.role};})||stock.components.map(c=>({entry:chemicalEntry(data,r.record_id,c.material_id),role:r.materials.find(m=>m.id===c.material_id)?.role||'Component'}));
 
-  for(const {entry,role} of components.filter(c=>c.entry)){const card=button('',()=>openChemical(entry),'reader-stock-component');card.append(cardImage(entry),el('span',entry.name),el('small',human(role)));images.append(card);}
+  for(const {entry,role} of components.filter(c=>c.entry)){const card=button('',()=>openChemical(entry),'reader-stock-component');card.append(cardImage(entry),el('span',entry.name),el('small',human(role)),el('span',chemicalButtonLabel(entry),'molecule-link'));images.append(card);}
 
   if(context?.scope)facts.append(disclosure('Composition and interpretation',el('p',context.scope)));facts.append(link('Complete stock record →',recordURL(r.record_id)+'#precursors','reader-data-link'));body.append(facts,images);d.append(body);stockList.append(d);
 
@@ -131,8 +131,8 @@ async function precursors(host,r,presentation={}){
  const products=presentation.precursorProductReferences||[];
  if(products.length){const productsGrid=el('div',undefined,'reader-chemicals');host.append(el('h3','Precursor products'),el('p','Reference molecular connectivity for the products of these precursor procedures; these are separate from nanocrystal specimen structures.','reader-note'));
   for(const product of products){const entry=data.entries.get(product.registry_id),card=el('article',undefined,'reader-chemical');card.append(el('h3',entry?.name||product.label),el('div',product.formula||entry?.displayFormula||entry?.formula||'','reader-formula'));
-   if(entry)card.append(cardImage(entry),button('Inspect structure ↗',()=>openChemical(entry),'molecule-link'));
-   card.append(el('p',product.label),el('p',product.caption,'reader-note'));
+   if(entry)card.append(cardImage(entry),button(chemicalButtonLabel(entry),()=>openChemical(entry),'molecule-link'));
+   card.append(el('p',product.label),el('p',chemicalDisplayCaption(entry,product.caption),'reader-note'));
    if(product.composition_evidence?.length)card.append(disclosure('Source evidence',...product.composition_evidence.map(e=>el('p',e.source_id+' · '+e.locator))));
    productsGrid.append(card);
   }host.append(productsGrid);

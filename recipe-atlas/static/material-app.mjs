@@ -70,6 +70,7 @@ async function initializeMolecules(){
  if(!method)return;
  try{
   const response=await fetch('assets/cdse-molecular-structures.json');if(!response.ok)throw Error('Molecular data unavailable');molecules=await response.json();showStock(0);
+  document.querySelectorAll('[data-compound]').forEach(b=>{const m=molecules.find(x=>x.id===b.dataset.compound),rotate=m?.representation==='3d'&&m.allowRotation!==false&&m.atoms?.length>1;b.textContent=rotate?'Rotate 3D ↗':'View formula ↗';b.setAttribute('aria-label',(m?.name||b.dataset.compound)+': '+b.textContent);});
   document.querySelectorAll('[data-stock]').forEach(b=>b.addEventListener('click',()=>showStock(Number(b.dataset.stock))));
   const dialog=$('compound-dialog'),content=$('compound-dialog-content');let trigger;
   document.querySelectorAll('[data-compound]').forEach(b=>b.addEventListener('click',()=>{trigger=b;clearPanels(content);content.replaceChildren(molecularPanel(b.dataset.compound,'Molecular structure'));$('compound-dialog-title').textContent=b.dataset.compound==='selenium'?'Selenium starting material':molecules.find(x=>x.id===b.dataset.compound)?.name??b.textContent;dialog.showModal();for(const p of panels)if(content.contains(p.host)){p.viewer?.resize();p.reset?.();p.draw?.();}}));

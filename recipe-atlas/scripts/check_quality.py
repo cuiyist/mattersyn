@@ -14,6 +14,7 @@ import math
 from pathlib import Path
 import re
 import sys
+from chemical_reference_quality import check_chemical_reference_overlay
 
 CRYSTALS = {
     "norberg-undoped-zno-cod9004178-reference": (186, "dbc92c19b101d4fabb5594cc89f2a31629a0e8adab6539edd248c40c585649a1", {"Zn": 2, "O": 2}),
@@ -662,6 +663,11 @@ class Audit:
                 for atom in atoms:self.check(all(isinstance(atom.get(k),(int,float)) and math.isfinite(atom[k]) for k in ('x','y','z')),f'{eid}: invalid component geometry')
                 for bond in model.get('bonds',[]):self.check(all(isinstance(bond.get(k),int) and 0<=bond[k]<len(atoms) for k in ('a','b')),f'{eid}: invalid component bond')
                 for group in model.get('functionalGroups',[]):self.check(isinstance(group,dict) and all(isinstance(i,int) and 0<=i<len(atoms) for i in group.get('atomIndices',[])),f'{eid}: invalid component group')
+        overlay_path = base / "reader-3d-reference-overrides.json"
+        if overlay_path.is_file():
+            check_chemical_reference_overlay(self, base, registry, bindings, load(overlay_path))
+        else:
+            self.check(not any((base / "models").glob("h-reader-*-3d.json")), "Computed chemical references lack their presentation overlay")
         self.counts["chemical_identities"] = len(entries)
 
     def crystals(self):

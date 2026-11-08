@@ -71,6 +71,10 @@ jobs:
         run: node --test recipe-atlas/tests/pending-variants.test.mjs
       - name: Test material-page first view
         run: node --test recipe-atlas/tests/reader-first-view.test.mjs
+      - name: Test chemical reference display and release validation
+        run: |
+          node --test recipe-atlas/tests/chemical-reference-route.test.mjs tools/ci/chemical-reference-check.test.mjs
+          python -B -m unittest discover -s recipe-atlas/tests -p "test_chemical_reference_*.py" -v
       - name: Test compact method-family grouping and selector
         run: |
           python -m unittest discover -s recipe-atlas/tests -p 'test_method_famil*.py' -v
@@ -116,6 +120,8 @@ jobs:
           print('PROTOCOL_SCENES_COMPARISON_BASE=' + base)
           print('METHOD_FAMILIES_CHANGED=' + str(int(methods)))
           print('PROTOCOL_SCENES_CHANGED=' + str(int(changed)))
+          chemical_changed = any(p in {'recipe-atlas/static/chemical-reference-route.mjs', 'recipe-atlas/static/chemical-viewer.mjs', 'recipe-atlas/static/reader-app.mjs', 'recipe-atlas/static/material-app.mjs', 'recipe-atlas/scripts/build_reader_shards.py', 'recipe-atlas/scripts/chemical_reference_quality.py', 'recipe-atlas/scripts/chemical_ambient_reference_pins.json'} or p.startswith(('recipe-atlas/static/assets/chemical-registry/', 'tools/ci/chemical-reference-check')) for p in paths)
+          print('CHEMICAL_REFERENCES_CHANGED=' + str(int(chemical_changed)))
           PY
       - name: Capture the eighteen protocol steps before and after the display change
         if: matrix.os == 'ubuntu-latest' && env.PROTOCOL_SCENES_CHANGED == '1'
@@ -150,6 +156,25 @@ jobs:
         with:
           name: mattersyn-method-families-${{ github.sha }}
           path: ${{ runner.temp }}/method-families/
+          retention-days: 14
+      - name: Check actual precursor chemical modals
+        if: matrix.os == 'ubuntu-latest' && env.CHEMICAL_REFERENCES_CHANGED == '1'
+        run: |
+          npm install --silent --no-save --prefix "$RUNNER_TEMP/protocol-pw" playwright@1.48.2
+          npx --prefix "$RUNNER_TEMP/protocol-pw" playwright install --with-deps chromium >/dev/null
+          export PLAYWRIGHT_DIR="$RUNNER_TEMP/protocol-pw"
+          mkdir -p "$RUNNER_TEMP/chemical-serve"
+          ln -s "$RUNNER_TEMP/candidate/project/recipe-atlas/dist" "$RUNNER_TEMP/chemical-serve/mattersyn-site"
+          python -m http.server 8174 --bind 127.0.0.1 --directory "$RUNNER_TEMP/chemical-serve" >"$RUNNER_TEMP/chemical-server.log" 2>&1 &
+          SERVER_PID=$!
+          trap 'kill "$SERVER_PID"' EXIT
+          node tools/ci/chemical-reference-check.mjs --base http://127.0.0.1:8174/mattersyn-site/ --dist "$RUNNER_TEMP/candidate/project/recipe-atlas/dist" --out "$RUNNER_TEMP/chemical-modals"
+      - name: Retain chemical modal screenshots
+        if: always() && matrix.os == 'ubuntu-latest' && env.CHEMICAL_REFERENCES_CHANGED == '1'
+        uses: actions/upload-artifact@v4
+        with:
+          name: mattersyn-chemical-modals-${{ github.sha }}
+          path: ${{ runner.temp }}/chemical-modals/
           retention-days: 14
       - name: Retain test receipts
         if: always()
