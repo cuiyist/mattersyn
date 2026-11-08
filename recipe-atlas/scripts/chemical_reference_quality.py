@@ -86,7 +86,7 @@ def _model_path(relative):
     return isinstance(relative, str) and re.fullmatch(r'models/[A-Za-z0-9][A-Za-z0-9._/-]*\.json', relative) is not None and not any(p in ('.', '..') for p in relative.split('/'))
 
 
-def check_chemical_reference_overlay(audit, base, registry, bindings, overlay, ambient_proof=None, resolved_identity_proof=None):
+def check_chemical_reference_overlay(audit, base, registry, bindings, overlay, ambient_proof=None, resolved_identity_proof=None, standard_identity_proof=None):
     """Validate every use/target/reference; mutate only Audit errors/counts."""
     digest = lambda name: hashlib.sha256((base / name).read_bytes()).hexdigest()
     try:
@@ -139,7 +139,13 @@ def check_chemical_reference_overlay(audit, base, registry, bindings, overlay, a
         audit.check(entries[eid].get('depictionKind') not in {'mixture', 'specimen', 'support', 'surface', 'composite', 'equipment', 'polymer', 'material-context', 'sample-context'}, label + ': whole context was promoted to one structure')
         audit.check(identity_rules.context_reason(entries[eid]) is None, label + ': original context/isomer identity excludes a 3D reference')
         audit.check(not identity_rules.unqualified_bulk_hold(entries[eid]) or route == 'ambient_crystal_reference', label + ': unqualified form requires an admitted existing ambient/own-name reference')
-        if 'referenceRegistryId' in ref or ref.get('reason') in identity_rules.REUSED_REFERENCE_REASONS:
+        if ref.get('reason') == 'fixed_standard_abbreviation':
+            if standard_identity_proof is None:
+                standard_identity_proof = json.loads(Path(__file__).with_name('chemical_standard_abbreviation_pins.json').read_text(encoding='utf-8'))
+            audit.check(standard_identity_proof.get('schema') == 'MatterSyn-H-fixed-standard-abbreviation-reference-pins/1' and standard_identity_proof.get('originalRegistrySha256') == overlay['originalRegistrySha256'], label + ': fixed-standard identity proof is stale')
+            for error in identity_rules.standard_abbreviation_reference_errors(entries[eid], ref, standard_identity_proof.get('entries',{}).get(eid), entries):
+                audit.check(False, label + ': ' + error)
+        elif 'referenceRegistryId' in ref or ref.get('reason') in identity_rules.REUSED_REFERENCE_REASONS:
             resolved=None
             if ref.get('reason')=='resolved_exact_name_identical_CID':
                 if resolved_identity_proof is None:resolved_identity_proof=json.loads(Path(__file__).with_name('chemical_resolved_identity_pins.json').read_text(encoding='utf-8'))

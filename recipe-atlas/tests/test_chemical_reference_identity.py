@@ -65,9 +65,9 @@ class IdentityTests(unittest.TestCase):
             self.assertIsNone(index.existing(source(name))[0])
         self.assertIsNotNone(identity.context_reason(source('tetradecylphosphonic acid (TDPA)',depictionKind='mixture')))
     def test_lookup_only_bare_codes_cannot_become_first_PubChem_identity(self):
-        for name in['TDPA','OAM','oam','DDT','MEH-PPV','TOPS','USY','NHS']:
+        for name in['TDPA','OAM','oam','DDT','MEH-PPV','TOPS','USY']:
             with self.subTest(name=name):self.assertTrue(identity.unresolved_lookup_abbreviation(source(name)));self.assertEqual(identity.context_reason(source(name)),'unresolved_abbreviation')
-        for e in[source('ODE'),source('OA'),source('OLA'),source('TOP'),source('TOPO'),source('H2O'),source('H2SO4'),source('DMF',model2dPath='models/own-verified.json'),source('DMSO',pubchemCid=679),source('EDTA',formula='C10H16N2O8'),source('DMSO',aliases=['Dimethyl sulfoxide'])]:
+        for e in[source('NHS'),source('ODE'),source('OA'),source('OLA'),source('TOP'),source('TOPO'),source('H2O'),source('H2SO4'),source('DMF',model2dPath='models/own-verified.json'),source('DMSO',pubchemCid=679),source('EDTA',formula='C10H16N2O8'),source('DMSO',aliases=['Dimethyl sulfoxide'])]:
             with self.subTest(entry=e):self.assertFalse(identity.unresolved_lookup_abbreviation(e))
     def test_dimethylcadmium_disconnected_exclusion_is_compound_wide_not_record_id(self):
         for e in[source('Dimethylcadmium'),source('dimethylcadmium (CdMe2)'),source('dimethylcadmium (Me2Cd)'),source('CdMe2'),source('Another label',pubchemCid=10479)]:self.assertTrue(identity.requires_connected_molecule_reference(e))
