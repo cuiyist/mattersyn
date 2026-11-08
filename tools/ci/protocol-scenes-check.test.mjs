@@ -89,7 +89,7 @@ const rect = (left, top, width, height) => ({ left, top, right: left + width, bo
 const label = (left, top, px = 13) => ({ tag: 'span', visible: true, screen_font_px: px, text_bounds: rect(left, top, 40, 16) });
 function drawingMetrics() {
   const a = label(15, 15), b = label(215, 15);
-  return { renderer: 'reported-fields', reported_drawings: [{ bounds: rect(0, 0, 400, 300), layout: 'leader-lines-v2', apparatus_bounds: rect(8, 80, 384, 210), svg_bounds: rect(8, 80, 384, 210), apparatus_body_bounds: rect(40,90,320,180), apparatus_body_svg_bbox: rect(25,10,250,180), svg_viewbox: {x:0,y:0,width:300,height:200}, appendage_geometry_bounds: [], leader_line_count: 2, plain_annotations: [{border_width_px: 0, background_transparent: true}], leaf_labels: [a, b], fact_blocks: [
+  return { renderer: 'reported-fields', reported_drawings: [{ bounds: rect(0, 0, 400, 300), layout: 'leader-lines-v2', apparatus_bounds: rect(8, 80, 384, 210), svg_bounds: rect(8, 80, 384, 210), apparatus_body_bounds: rect(40,90,320,180), apparatus_body_svg_bbox: rect(25,10,250,180), svg_viewbox: {x:0,y:0,width:300,height:200}, appendage_geometry_bounds: [], chamber_heater_fronts: [], chamber_heater_overlay_count:0, leader_line_count: 2, plain_annotations: [{border_width_px: 0, background_transparent: true}], leaf_labels: [a, b], fact_blocks: [
     { class_name: 'reported-scene-inlet', bounds: rect(10, 10, 150, 70), leaf_labels: [a] },
     { class_name: 'reported-scene-atmosphere', bounds: rect(210, 10, 150, 70), leaf_labels: [b] },
   ] }] };
@@ -250,3 +250,7 @@ test('explicit target snapshot CLI option preserves required phase/base/out',()=
  assert.equal(argumentsFor(['--base','https://example.invalid/','--out','out','--phase','before','--targets','prior.json']).targets,'prior.json');
  for(const args of [['--targets','prior.json'],['--base','x','--out','out','--phase','after','--targets','a','--targets','b'],['--base','x','--out','out','--phase','after','--unknown','yes']])assert.throws(()=>argumentsFor(args));
 });
+
+test('heater-face text must be inset on an opaque face clear of platform and beams',()=>{const m=drawingMetrics(),d=m.reported_drawings[0];d.chamber_heater_overlay_count=1;d.chamber_heater_fronts=[{bounds:rect(160,220,80,25),fully_opaque:true,leaf_labels:[label(177,224)],holder_platform_bounds:rect(150,190,100,10),beam_bounds:[rect(190,120,0,60)]}];checkReportedDrawing('after',m);for(const change of ['border','transparent','platform','beam']){const x=structuredClone(m),f=x.reported_drawings[0].chamber_heater_fronts[0];if(change==='border')f.leaf_labels[0].text_bounds=rect(177,221,40,16);if(change==='transparent')f.fully_opaque=false;if(change==='platform')f.holder_platform_bounds=rect(150,220,100,10);if(change==='beam')f.beam_bounds=[rect(195,210,2,30)];assert.throws(()=>checkReportedDrawing('after',x),/heater|Heater/);}checkReportedDrawing('before',{renderer:'reported-fields'});});
+
+test('legacy transparent chamber heater overlay cannot pass after but remains capturable before',()=>{const m=drawingMetrics();m.reported_drawings[0].chamber_heater_overlay_count=1;assert.throws(()=>checkReportedDrawing('after',m),/opaque inset front/);checkReportedDrawing('before',m);});

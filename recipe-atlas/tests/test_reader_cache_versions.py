@@ -7,7 +7,9 @@ ROOT = Path(__file__).resolve().parents[1]
 VERSION = '0.41.9'
 PUBLIC_READER_VERSION = '0.42.0'
 PUBLIC_MODULES = ('illustrated-record.mjs', 'material-guide.mjs', 'material-hub.mjs', 'method-families.mjs', 'reader-app.mjs')
-def version_for(module): return PUBLIC_READER_VERSION if module in PUBLIC_MODULES or module == 'reader.css' else VERSION
+G_HEATER_VERSION = '0.41.10'
+G_HEATER_MODULES = ('protocol-visuals.mjs', 'reported-protocol-scenes.mjs', 'reported-scene-drawing.mjs')
+def version_for(module): return PUBLIC_READER_VERSION if module in PUBLIC_MODULES or module == 'reader.css' else G_HEATER_VERSION if module in G_HEATER_MODULES else VERSION
 
 
 class ReaderCacheVersionTests(unittest.TestCase):
@@ -82,5 +84,21 @@ class ReaderCacheVersionTests(unittest.TestCase):
         self.assertIn('material-guide.mjs?v=' + PUBLIC_READER_VERSION, self.read('static/illustrated-record.mjs'))
         self.assertIn('material-guide.mjs?v=' + PUBLIC_READER_VERSION, self.read('static/material-hub.mjs'))
         self.assertIn('reader-particle.mjs?v=' + VERSION, self.read('static/reader-structures.mjs'))
+
+    def test_heater_drawing_is_reachable_with_current_child_and_parent_tokens(self):
+        expected = {
+            'reported-protocol-scenes.mjs': ('reported-scene-drawing.mjs',),
+            'protocol-visuals.mjs': ('reported-protocol-scenes.mjs',),
+            'reader-app.mjs': ('protocol-visuals.mjs',),
+            'material-guide.mjs': ('protocol-visuals.mjs',),
+            'illustrated-record.mjs': ('protocol-visuals.mjs',),
+        }
+        for parent, children in expected.items():
+            code = self.read('static/' + parent)
+            for child in children:
+                with self.subTest(parent=parent, child=child):
+                    self.assertEqual(code.count('./' + child + '?v=' + version_for(child)), 1)
+                    self.assertNotIn('./' + child + "'", code)
+                    self.assertNotIn('./' + child + '"', code)
 
 if __name__ == '__main__': unittest.main()
