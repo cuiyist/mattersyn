@@ -300,11 +300,80 @@ function fileReceipt(out, name) {
   return { file: name, bytes: bytes.length, sha256: sha256(bytes) };
 }
 
-async function visit(browser, base, out, phase, target, viewport) {
+const DIAGNOSTIC_LIMIT = 20;
+export function safeDiagnosticURL(value) {
+  try {
+    const url = new URL(String(value));
+    return ['http:', 'https:'].includes(url.protocol) ? `${url.origin}${url.pathname}`.slice(0, 240) : '[non-http-url]';
+  } catch { return '[invalid-url]'; }
+}
+export function safeDiagnosticText(value) {
+  return String(value || '').replace(/https?:\/\/[^\s"'<>]+/gi, safeDiagnosticURL)
+    .replace(/(^|[\s(])((?:\/|\.\/)[^\s"'<>?#]*)(?:\?[^\s"'<>#]*)?(?:#[^\s"'<>]*)?/g, '$1$2').slice(0, 240);
+}
+export function registerFailureDiagnostics(page) {
+  const evidence = { request_failures: [], non_2xx_responses: [], console_errors: [], collection_errors: [], omitted: {} };
+  const append = (key, value) => {
+    if (evidence[key].length < DIAGNOSTIC_LIMIT) evidence[key].push(value);
+    else evidence.omitted[key] = (evidence.omitted[key] || 0) + 1;
+  };
+  const handler = (stage, action) => (...args) => {
+    try { action(...args); }
+    catch (error) { append('collection_errors', { stage, error_class: safeDiagnosticText(error.name || 'Error') }); }
+  };
+  page.on('requestfailed', handler('requestfailed', (request) => append('request_failures', {
+    url: safeDiagnosticURL(request.url()), resource_type: safeDiagnosticText(request.resourceType()).slice(0, 32),
+    error: safeDiagnosticText(request.failure()?.errorText || 'request failed') })));
+  page.on('response', handler('response', (response) => {
+    const status = response.status();
+    if (status < 200 || status >= 300) append('non_2xx_responses', { url: safeDiagnosticURL(response.url()), status,
+      resource_type: safeDiagnosticText(response.request().resourceType()).slice(0, 32) });
+  }));
+  page.on('console', handler('console', (message) => {
+    if (message.type() === 'error') append('console_errors', { text: safeDiagnosticText(message.text()) });
+  }));
+  return evidence;
+}
+export function structuralReadinessSummary() {
+  const marker = document.querySelector('main[data-reader-ready]');
+  const scripts = [...document.scripts];
+  const resources = performance.getEntriesByType('resource');
+  const kinds = ['script', 'link', 'fetch', 'xmlhttprequest', 'css', 'img'];
+  const resource_counts = Object.fromEntries(kinds.map((kind) => [kind, resources.filter((r) => r.initiatorType === kind).length]));
+  return { document_ready_state: document.readyState, main_present: Boolean(document.querySelector('main')),
+    reader_marker_present: Boolean(marker), reader_marker_value: marker ? String(marker.getAttribute('data-reader-ready') || '').slice(0, 160) : null,
+    protocol_present: Boolean(document.querySelector('#protocol')), protocol_button_count: document.querySelectorAll('#protocol .protocol-step-list button').length,
+    script_count: scripts.length, external_script_count: scripts.filter((s) => Boolean(s.src)).length,
+    module_script_count: scripts.filter((s) => s.type === 'module').length,
+    resource_count: resources.length, resource_counts };
+}
+export async function collectFailureDiagnostics(page, evidence, out, stem) {
+  const collectionError = (stage, error) => {
+    if (evidence.collection_errors.length < DIAGNOSTIC_LIMIT) evidence.collection_errors.push({ stage, error_class: safeDiagnosticText(error.name || 'Error') });
+    else evidence.omitted.collection_errors = (evidence.omitted.collection_errors || 0) + 1;
+  };
+  let timer;
+  try {
+    evidence.readiness = await Promise.race([page.evaluate(structuralReadinessSummary), new Promise((_, reject) => {
+      timer = setTimeout(() => reject(new Error('Diagnostic timeout')), 5000);
+    })]);
+  } catch (error) { collectionError('structural-readiness', error); }
+  finally { clearTimeout(timer); }
+  try {
+    assert(/^[a-z0-9-]+$/.test(stem), 'Safe diagnostic filename required');
+    const name = `${stem}-failure-viewport.png`;
+    await page.screenshot({ path: path.join(out, name), timeout: 5000 });
+    evidence.screenshot = fileReceipt(out, name);
+  } catch (error) { collectionError('failure-screenshot', error); }
+  return evidence;
+}
+
+export async function visit(browser, base, out, phase, target, viewport) {
   const context = await browser.newContext({ viewport, deviceScaleFactor: 1, serviceWorkers: 'block', reducedMotion: 'reduce' });
   const page = await context.newPage();
   const errors = [];
   page.on('pageerror', (error) => errors.push(String(error.message || error)));
+  const failureEvidence = registerFailureDiagnostics(page);
   const row = { id: target.id, formula: target.formula, record_id: target.record_id, operation_id: target.operation_id,
     operation_index: target.operation_index, viewport, requested_route: target.route };
   try {
@@ -356,6 +425,8 @@ async function visit(browser, base, out, phase, target, viewport) {
   } catch (error) {
     row.automated_checks_passed = false;
     row.error = String(error.message || error);
+    try { row.failure_diagnostics = await collectFailureDiagnostics(page, failureEvidence, out, `${target.id}-${viewport.width}`); }
+    catch (diagnosticError) { row.failure_diagnostics = { collection_errors: [{ stage: 'collector', error_class: safeDiagnosticText(diagnosticError.name || 'Error') }] }; }
   } finally {
     row.page_errors = errors;
     await context.close();

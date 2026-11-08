@@ -1,9 +1,11 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
+import os from 'node:os';
+import path from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
-import { validateTargets, targetURL, checkAfterLabels, checkReportedDrawing, fontMetrics, VIEWPORTS, argumentsFor } from './protocol-scenes-check.mjs';
+import { validateTargets, targetURL, checkAfterLabels, checkReportedDrawing, fontMetrics, VIEWPORTS, argumentsFor, safeDiagnosticURL, safeDiagnosticText, registerFailureDiagnostics, structuralReadinessSummary, collectFailureDiagnostics, visit } from './protocol-scenes-check.mjs';
 
 const original = JSON.parse(fs.readFileSync(new URL('./protocol-scenes-targets.json', import.meta.url), 'utf8'));
 const copy = () => structuredClone(original);
@@ -254,3 +256,89 @@ test('explicit target snapshot CLI option preserves required phase/base/out',()=
 test('heater-face text must be inset on an opaque face clear of platform and beams',()=>{const m=drawingMetrics(),d=m.reported_drawings[0];d.chamber_heater_overlay_count=1;d.chamber_heater_fronts=[{bounds:rect(160,220,80,25),fully_opaque:true,leaf_labels:[label(177,224)],holder_platform_bounds:rect(150,190,100,10),beam_bounds:[rect(190,120,0,60)]}];checkReportedDrawing('after',m);for(const change of ['border','transparent','platform','beam']){const x=structuredClone(m),f=x.reported_drawings[0].chamber_heater_fronts[0];if(change==='border')f.leaf_labels[0].text_bounds=rect(177,221,40,16);if(change==='transparent')f.fully_opaque=false;if(change==='platform')f.holder_platform_bounds=rect(150,220,100,10);if(change==='beam')f.beam_bounds=[rect(195,210,2,30)];assert.throws(()=>checkReportedDrawing('after',x),/heater|Heater/);}checkReportedDrawing('before',{renderer:'reported-fields'});});
 
 test('legacy transparent chamber heater overlay cannot pass after but remains capturable before',()=>{const m=drawingMetrics();m.reported_drawings[0].chamber_heater_overlay_count=1;assert.throws(()=>checkReportedDrawing('after',m),/opaque inset front/);checkReportedDrawing('before',m);});
+
+
+const fakeDiagnosticPage = () => {
+  const handlers = new Map();
+  return { handlers, on(name, callback) { handlers.set(name, callback); } };
+};
+test('failure diagnostic URLs remove credentials queries hashes and non-HTTP payloads', () => {
+  assert.equal(safeDiagnosticURL('https://user:password@example.test/a.js?token=secret#fragment'), 'https://example.test/a.js');
+  assert.equal(safeDiagnosticURL('http://127.0.0.1:8173/a.js?v=123'), 'http://127.0.0.1:8173/a.js');
+  assert.equal(safeDiagnosticURL('data:text/html,secret'), '[non-http-url]');
+  assert.equal(safeDiagnosticURL('not a URL'), '[invalid-url]');
+  assert.equal(safeDiagnosticURL('https://example.test/' + 'a'.repeat(500)).length, 240);
+  const text = safeDiagnosticText('failed https://u:password@example.test/a.js?token=secret#fragment /b.js?token=secret#fragment');
+  assert(!/password|token|secret|fragment|\?/.test(text));
+  assert.equal(safeDiagnosticText('x'.repeat(500)).length, 240);
+});
+test('passive failure evidence caps each event class and records omitted entries', () => {
+  const page = fakeDiagnosticPage(), evidence = registerFailureDiagnostics(page);
+  for (let i = 0; i < 25; i++) {
+    page.handlers.get('requestfailed')({ url: () => 'https://u:p@example.test/a.js?secret=1#x', resourceType: () => 'script', failure: () => ({ errorText: 'net::ERR_FAILED' }) });
+    page.handlers.get('response')({ url: () => 'https://example.test/a.js?secret=1', status: () => 503, request: () => ({ resourceType: () => 'script' }) });
+    page.handlers.get('console')({ type: () => 'error', text: () => 'Error loading https://u:p@example.test/a.js?secret=1' });
+  }
+  page.handlers.get('response')({ status: () => 200 });
+  page.handlers.get('console')({ type: () => 'info' });
+  for (const key of ['request_failures', 'non_2xx_responses', 'console_errors']) {
+    assert.equal(evidence[key].length, 20); assert.equal(evidence.omitted[key], 5);
+  }
+  assert(!JSON.stringify(evidence).includes('secret'));
+  page.handlers.get('requestfailed')({ url: () => { throw new TypeError('secret'); } });
+  assert.deepEqual(evidence.collection_errors, [{ stage: 'requestfailed', error_class: 'TypeError' }]);
+});
+test('structural readiness contains markers and counts without body or script text', () => {
+  const oldDocument = globalThis.document, oldPerformance = globalThis.performance;
+  const marker = { getAttribute: () => 'record-id', get innerText() { throw Error('No text reads'); } };
+  try {
+    globalThis.document = { readyState: 'interactive', scripts: [{ src: '/a.js', type: 'module' }, { src: '', type: '' }],
+      querySelector: (s) => s === 'main[data-reader-ready]' ? marker : s === 'main' ? {} : null,
+      querySelectorAll: () => ({ length: 3 }), get body() { throw Error('No body reads'); } };
+    globalThis.performance = { getEntriesByType: () => [{ initiatorType: 'script' }, { initiatorType: 'fetch' }] };
+    const result = structuralReadinessSummary();
+    assert.equal(result.reader_marker_value, 'record-id'); assert.equal(result.script_count, 2);
+    assert.equal(result.external_script_count, 1); assert.equal(result.module_script_count, 1);
+    assert.equal(result.protocol_button_count, 3); assert.equal(result.resource_counts.fetch, 1);
+    assert(!Object.hasOwn(result, 'text') && !Object.hasOwn(result, 'body'));
+  } finally { globalThis.document = oldDocument; globalThis.performance = oldPerformance; }
+});
+test('diagnostic collection errors are separate and never replace original failure evidence', async () => {
+  const page = fakeDiagnosticPage(), evidence = registerFailureDiagnostics(page);
+  page.evaluate = async () => { throw new TypeError('evaluation failed'); };
+  page.screenshot = async () => { throw new Error('screenshot failed'); };
+  const result = await collectFailureDiagnostics(page, evidence, '/unused', 'target-1440');
+  assert.deepEqual(result.collection_errors, [{ stage: 'structural-readiness', error_class: 'TypeError' }, { stage: 'failure-screenshot', error_class: 'Error' }]);
+});
+test('best-effort failure screenshot has its own exact receipt without replacing normal screenshots', async () => {
+  const out = fs.mkdtempSync(path.join(os.tmpdir(), 'protocol-failure-test-'));
+  try {
+    const page = fakeDiagnosticPage(), evidence = registerFailureDiagnostics(page);
+    page.evaluate = async () => ({ document_ready_state: 'complete', reader_marker_present: false });
+    page.screenshot = async ({ path: destination, timeout }) => { assert.equal(timeout, 5000); fs.writeFileSync(destination, 'synthetic image fixture'); };
+    const result = await collectFailureDiagnostics(page, evidence, out, 'target-1440');
+    assert.equal(result.screenshot.file, 'target-1440-failure-viewport.png');
+    assert.equal(result.screenshot.bytes, Buffer.byteLength('synthetic image fixture'));
+    assert.equal(result.screenshot.sha256.length, 64); assert.deepEqual(result.collection_errors, []);
+  } finally { assert.equal(path.dirname(out), path.resolve(os.tmpdir())); fs.rmSync(out, { recursive: true }); }
+});
+test('unsafe diagnostic screenshot names cannot write outside capture output', async () => {
+  const page = fakeDiagnosticPage(), evidence = registerFailureDiagnostics(page);
+  page.evaluate = async () => ({}); page.screenshot = async () => { throw new Error('must not run'); };
+  const result = await collectFailureDiagnostics(page, evidence, '/unused', '../escape');
+  assert.equal(result.screenshot, undefined); assert.equal(result.collection_errors[0].stage, 'failure-screenshot');
+});
+test('actual visit retains HTTP200 readiness timeout and failure despite diagnostic failures', async () => {
+  const page = fakeDiagnosticPage(), seen = [], originalError = new Error('Original readiness timeout'); let closed = false;
+  page.goto = async (url, options) => { seen.push(['goto', options.timeout]); return { status: () => 200 }; };
+  page.waitForSelector = async (selector, options) => { seen.push([selector, options.timeout]); throw originalError; };
+  page.evaluate = async () => { throw new Error('diagnostic evaluation'); };
+  page.screenshot = async () => { throw new Error('diagnostic screenshot'); };
+  const context = { newPage: async () => page, close: async () => { closed = true; } };
+  const browser = { newContext: async () => context };
+  const row = await visit(browser, 'https://cuiyist.github.io/mattersyn-site/', '/unused', 'before', original.targets[0], VIEWPORTS[0]);
+  assert.equal(row.status, 200); assert.equal(row.automated_checks_passed, false);
+  assert.equal(row.error, originalError.message); assert.deepEqual(row.page_errors, []); assert.equal(closed, true);
+  assert.deepEqual(seen, [['goto', 90000], ['main[data-reader-ready]', 60000]]);
+  assert.equal(row.failure_diagnostics.collection_errors.length, 2);
+});
