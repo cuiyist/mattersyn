@@ -6,7 +6,9 @@ import unittest
 from uuid import uuid4
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = '0.41.9'
+VERSION = '0.41.10'
+LOADER_VERSION = '0.41.9'
+def version_for(module): return LOADER_VERSION if module == 'reader-presentation-loader.mjs' else VERSION
 MODULES = ('illustrated-record.mjs', 'material-hub.mjs', 'material-guide.mjs',
            'reader-app.mjs', 'reader-presentation-loader.mjs')
 EXPECTED = {
@@ -34,7 +36,7 @@ def validate_graph(entries, modules):
     for parent, text in modules.items():
         specifiers = re.findall(r"['\"]\./([^'\"]+\.mjs(?:\?[^'\"]*)?)['\"]", text)
         selected = [item for item in specifiers if item.split('?', 1)[0] in MODULES]
-        expected = {f'{name}?v={VERSION}' for name in EXPECTED[parent]}
+        expected = {f'{name}?v={version_for(name)}' for name in EXPECTED[parent]}
         if set(selected) != expected or len(selected) != len(expected):
             raise ValueError('Stale, duplicated, or missing changed-module import: ' + parent)
         edges[parent] = {item.split('?', 1)[0] for item in selected}
@@ -102,7 +104,7 @@ class PublicReaderCacheRollout(unittest.TestCase):
     def test_all_three_entry_routes_reach_one_consistently_versioned_loader(self):
         entries, modules = self.graph_inputs()
         validate_graph(entries, modules)
-        loader = './reader-presentation-loader.mjs?v=' + VERSION
+        loader = './reader-presentation-loader.mjs?v=' + LOADER_VERSION
         for consumer in ('reader-app.mjs', 'material-guide.mjs'):
             self.assertEqual(modules[consumer].count(loader), 1)
 
@@ -115,8 +117,8 @@ class PublicReaderCacheRollout(unittest.TestCase):
     def test_stale_or_unversioned_import_fails_same_reachable_graph_check(self):
         entries, modules = self.graph_inputs()
         for parent, before, after in (
-            ('illustrated-record.mjs', 'reader-app.mjs?v=0.41.9', 'reader-app.mjs?v=0.41.7'),
-            ('material-hub.mjs', 'material-guide.mjs?v=0.41.9', 'material-guide.mjs?v=0.41.7'),
+            ('illustrated-record.mjs', 'reader-app.mjs?v=0.41.10', 'reader-app.mjs?v=0.41.7'),
+            ('material-hub.mjs', 'material-guide.mjs?v=0.41.10', 'material-guide.mjs?v=0.41.7'),
             ('material-guide.mjs', 'reader-presentation-loader.mjs?v=0.41.9', 'reader-presentation-loader.mjs'),
             ('reader-app.mjs', 'reader-presentation-loader.mjs?v=0.41.9', 'reader-presentation-loader.mjs?v=0.41.10'),
         ):

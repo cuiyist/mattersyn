@@ -2,7 +2,7 @@ import {readReactorLineNote,reactorEnvironmentText,createReactorLineDetails,reac
 import {selectProtocolArt} from './protocol-art-binding.mjs';
 import {operationKind as kind} from './protocol-operation-kind.mjs';
 import {createGenericThermalScene} from './generic-thermal-scenes.mjs?v=0.1.0';
-import {createReportedProtocolScene,REPORTED_SCENE_CAVEAT} from './reported-protocol-scenes.mjs?v=0.1.0';
+import {createReportedProtocolScene,REPORTED_SCENE_CAVEAT} from './reported-protocol-scenes.mjs?v=0.41.10';
 import {matchProtocolCondition} from './protocol-conditions.mjs?v=0.39.1';
 import {mountProtocolReferences} from './protocol-references.mjs?v=0.34.1';
 import {quantityValue} from './quantity-value.mjs';

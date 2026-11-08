@@ -1,5 +1,5 @@
 import { extendedReportedScene } from './reported-scene-extensions.mjs';
-import { createReportedDrawing, reportedDrawingFacts } from './reported-scene-drawing.mjs';
+import { createReportedDrawing, reportedDrawingFacts } from './reported-scene-drawing.mjs?v=0.41.10';
 import { matchProtocolCondition } from './protocol-conditions.mjs?v=0.39.1';
 import { quantityValue } from './quantity-value.mjs';
 // Reader-only scenes. No record writes, paper/model reads or source-specific art.
