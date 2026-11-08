@@ -5,9 +5,11 @@ import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
 VERSION = '0.41.9'
-PUBLIC_READER_VERSION = '0.41.10'
-G_HEATER_MODULES = ('illustrated-record.mjs', 'material-guide.mjs', 'material-hub.mjs', 'protocol-visuals.mjs', 'reader-app.mjs', 'reported-protocol-scenes.mjs', 'reported-scene-drawing.mjs')
-def version_for(module): return PUBLIC_READER_VERSION if module in G_HEATER_MODULES else VERSION
+PUBLIC_READER_VERSION = '0.42.0'
+PUBLIC_MODULES = ('illustrated-record.mjs', 'material-guide.mjs', 'material-hub.mjs', 'method-families.mjs', 'reader-app.mjs')
+G_HEATER_VERSION = '0.41.10'
+G_HEATER_MODULES = ('protocol-visuals.mjs', 'reported-protocol-scenes.mjs', 'reported-scene-drawing.mjs')
+def version_for(module): return PUBLIC_READER_VERSION if module in PUBLIC_MODULES or module == 'reader.css' else G_HEATER_VERSION if module in G_HEATER_MODULES else VERSION
 
 
 class ReaderCacheVersionTests(unittest.TestCase):
@@ -16,7 +18,7 @@ class ReaderCacheVersionTests(unittest.TestCase):
     def test_material_and_record_entrypoints_share_current_reader_graph(self):
         template = self.read('templates/material-reader.html')
         self.assertIn(f'reader-app.mjs?v={PUBLIC_READER_VERSION}', template)
-        self.assertIn(f'reader.css?v={VERSION}', template)
+        self.assertIn('reader.css?v=' + version_for('reader.css'), template)
         self.assertIn(f'illustrated-record.mjs?v={PUBLIC_READER_VERSION}', self.read('scripts/build_dataset.py'))
         illustrated = self.read('static/illustrated-record.mjs')
         self.assertIn(f'./reader-app.mjs?v={PUBLIC_READER_VERSION}', illustrated)
@@ -24,7 +26,7 @@ class ReaderCacheVersionTests(unittest.TestCase):
 
     def test_structure_defaults_and_styles_are_reachable_at_current_version(self):
         expected = {
-            'reader-app.mjs': ('reader-structures.mjs', 'reader.css', 'reader-utils.mjs', 'figure-captions.mjs'),
+            'reader-app.mjs': ('reader-structures.mjs', 'reader.css', 'reader-utils.mjs', 'figure-captions.mjs', 'method-families.mjs'),
             'reader-structures.mjs': ('reader-particle.mjs', 'crystal-defaults.mjs'),
             'crystal-viewer.mjs': ('reader-structures.mjs', 'crystal-defaults.mjs'),
             'material-guide.mjs': ('reader-app.mjs', 'crystal-viewer.mjs', 'source-evidence.mjs'),
@@ -95,7 +97,7 @@ class ReaderCacheVersionTests(unittest.TestCase):
             code = self.read('static/' + parent)
             for child in children:
                 with self.subTest(parent=parent, child=child):
-                    self.assertEqual(code.count('./' + child + '?v=' + PUBLIC_READER_VERSION), 1)
+                    self.assertEqual(code.count('./' + child + '?v=' + version_for(child)), 1)
                     self.assertNotIn('./' + child + "'", code)
                     self.assertNotIn('./' + child + '"', code)
 

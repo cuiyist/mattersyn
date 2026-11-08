@@ -3,6 +3,9 @@ import json,re,hashlib
 from pathlib import Path
 from review_scope import source_review_scope, reviewed_page_count, pending_variants
 from route_labels import route_label, completeness, reader_sort_key
+from method_families import build_method_families
+from method_family_projection import compact_method_families
+from reader_presentation_registry import load_reviewed_reader
 from material_names import common_name
 ROOT=Path(__file__).resolve().parents[1]
 SYMBOLS=set('H He Li Be B C N O F Ne Na Mg Al Si P S Cl Ar K Ca Sc Ti V Cr Mn Fe Co Ni Cu Zn Ga Ge As Se Br Kr Rb Sr Y Zr Nb Mo Tc Ru Rh Pd Ag Cd In Sn Sb Te I Xe Cs Ba La Ce Pr Nd Pm Sm Eu Gd Tb Dy Ho Er Tm Yb Lu Hf Ta W Re Os Ir Pt Au Hg Tl Pb Bi Po At Rn Fr Ra Ac Th Pa U Np Pu Am Cm Bk Cf Es Fm Md No Lr Rf Db Sg Bh Hs Mt Ds Rg Cn Nh Fl Mc Lv Ts Og'.split())
@@ -113,6 +116,8 @@ def main():
     full_reviews={c['doi'].lower():c for c in [read(p) for p in (ROOT/'data/paper-reviews').glob('*.json')]}
     papers={p['doi'].lower():p for p in corpus['papers'] if p.get('doi') and p['coverage']['localDocumentCount']>0}
     materials={}
+    reader_views=load_reviewed_reader(ROOT/'data/reader-presentation-reviewed.json')
+    method_labels={rid:view['method_label'] for rid,view in reader_views['records'].items() if view.get('method_label')}
     def ensure(formula,elements):
         if not elements or not set(elements)<=SYMBOLS:return None
         if formula not in materials:materials[formula]={'id':slug(formula),'alias_ids':material_alias_ids(formula),'formula':formula,'name':NAMES.get(formula) or common_name(formula),'elements':list(dict.fromkeys(elements)),'url':'cdse.html' if formula=='CdSe' else 'material.html?id='+slug(formula),'record_ids':set(),'direct_record_ids':set(),'paper_dois':set(),'mentioned_paper_dois':set(),'architectures':set(),'component_architectures':set()}
@@ -189,6 +194,7 @@ def main():
             contribution['reviewStatus']=p['reviewStatus'] if p['fullDocumentReview'] else 'selected_recipes_reviewed' if contribution['reviewedRecordIds'] else 'source_extracted' if contribution['extractedRecordIds'] else 'published_benchmark' if contribution['benchmarkRecordIds'] else 'indexed_awaiting_review'
             m['papers'].append(contribution)
         m['records']=[{'record_id':r['record_id'],'title':r['title'],'formula':r['material']['formula'],'method':r['method'],'record_type':r['record_type'],'is_synthesis_route':synthesis_route(r),'collection':r['collection'],'review_status':r['quality']['review_status'],**({'method_label':route_label(r)} if route_label(r) else {}),'doi':r['sources'][0]['doi'],'year':r['sources'][0]['year'],'page_url':'records/'+r['record_id']+'.html','architecture':r['material'].get('architecture','single_material'),'contribution_role':'direct_material' if r['record_id'] in m['direct_record_ids'] else component_contribution_role(r['material'].get('architecture','single_material'))} for r in related]
+        m['method_families']=compact_method_families(build_method_families(related,f,method_labels))
         for row in m['records']:
             if papers[row['doi'].lower()].get('pending_variants'):row['pending_variants']=papers[row['doi'].lower()]['pending_variants']
         m['experimental_series']=[{'record_id':r['record_id'],'title':r['title'],'doi':r['sources'][0]['doi'],'year':r['sources'][0]['year'],'page_url':'records/'+r['record_id']+'.html','scope':'Published recipe parameters and optical outcomes; row-specific particle structure and complete preparation are not supplied.'} for r in records if r['collection']=='published_benchmark' and r['material']['formula']==f]

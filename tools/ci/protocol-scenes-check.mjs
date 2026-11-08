@@ -88,7 +88,7 @@ export function validateTargets(value) {
   assert.deepEqual(defaults, BENCHMARK_FORMULAS);
   assert.deepEqual(examples, EXAMPLES);
   assert.deepEqual(step1Examples, Object.keys(STEP1_EXAMPLES));
-  assert(namedWuDuplicate && records.size === 17, 'The named Wu pair is the only intentional shared record');
+  assert.equal(records.size,18-Number(namedWuDuplicate),'Only the named Wu pair may share a record when that phase default is Wu');
   return value.targets;
 }
 
@@ -363,10 +363,10 @@ async function visit(browser, base, out, phase, target, viewport) {
   return row;
 }
 
-function argumentsFor(argv) {
+export function argumentsFor(argv) {
   const args = {};
   for (let i = 0; i < argv.length; i += 2) {
-    assert(['--base', '--out', '--phase'].includes(argv[i]) && typeof argv[i + 1] === 'string', 'Use --base, --out and --phase');
+    assert(['--base', '--out', '--phase', '--targets'].includes(argv[i]) && typeof argv[i + 1] === 'string', 'Use --base, --out and --phase');
     const key = argv[i].slice(2);
     assert(!Object.hasOwn(args, key), 'Duplicate command-line option');
     args[key] = argv[i + 1];
@@ -381,7 +381,7 @@ export async function main(argv = process.argv.slice(2)) {
     return;
   }
   const args = argumentsFor(argv);
-  const raw = fs.readFileSync(TARGET_FILE);
+  const raw = fs.readFileSync(args.targets || TARGET_FILE);
   const targets = validateTargets(JSON.parse(raw));
   for (const target of targets) targetURL(args.base, target);
   const out = path.resolve(args.out);

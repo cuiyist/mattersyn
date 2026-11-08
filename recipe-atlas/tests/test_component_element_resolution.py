@@ -24,6 +24,7 @@ class ComponentElementResolution(unittest.TestCase):
             scope={'source_group':'fixture-source','doi':'10.fixture/component'}
             if pending is not None:scope['pending_variants']=pending
             (root/'data/inventory-evidence.json').write_text(json.dumps({'per_paper':[scope]}),encoding='utf-8')
+            (root/'data/reader-presentation-reviewed.json').write_text(json.dumps({'records':{},'materials':{},'figures_by_source':{}}),encoding='utf-8')
             for r in records:(folder/(r['record_id']+'.json')).write_text(json.dumps(r),encoding='utf-8')
             outputs={}
             with patch.object(build_atlas,'ROOT',root),patch.object(build_atlas,'write',lambda p,v:outputs.__setitem__(p.name,copy.deepcopy(v))),contextlib.redirect_stdout(io.StringIO()):

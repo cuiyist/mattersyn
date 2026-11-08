@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
-import { validateTargets, targetURL, checkAfterLabels, checkReportedDrawing, fontMetrics, VIEWPORTS } from './protocol-scenes-check.mjs';
+import { validateTargets, targetURL, checkAfterLabels, checkReportedDrawing, fontMetrics, VIEWPORTS, argumentsFor } from './protocol-scenes-check.mjs';
 
 const original = JSON.parse(fs.readFileSync(new URL('./protocol-scenes-targets.json', import.meta.url), 'utf8'));
 const copy = () => structuredClone(original);
@@ -37,18 +37,12 @@ test('defaults cannot acquire method parameters, examples must name their exact 
   assert.throws(() => validateTargets(wrongExample));
 });
 
-test('the named Wu default/explicit pair preserves its exact record, operation and hash', () => {
-  const rows = validateTargets(copy());
-  const ordinary = rows.find((row) => row.id === 'default-gaas');
-  const extra = rows.find((row) => row.id === 'extra-gaas-wu2010-step1');
-  assert.equal(new URL(extra.route, 'https://validation.invalid/').searchParams.get('method'), ordinary.record_id);
-  for (const key of ['record_id', 'operation_id', 'operation_index', 'record_json_sha256', 'record_json_bytes']) assert.equal(extra[key], ordinary[key]);
-  for (const mutate of [
-    (x) => { x.targets[15].record_json_sha256 = '0'.repeat(64); },
-    (x) => { x.targets[15].record_json_bytes++; },
-    (x) => { x.targets[15].operation_label += ' altered'; },
-    (x) => { x.targets[16].record_id = ordinary.record_id; },
-  ]) { const value = copy(); mutate(value); assert.throws(() => validateTargets(value)); }
+test('changed defaults retain exact Wu step1; only an actual Wu default may share its pins', () => {
+  const rows=validateTargets(copy()),ordinary=rows.find(r=>r.id==='default-gaas'),extra=rows.find(r=>r.id==='extra-gaas-wu2010-step1');
+  assert.equal(new URL(extra.route,'https://validation.invalid/').searchParams.get('method'),extra.record_id);
+  const duplicate=copy();for(const key of ['record_id','operation_id','operation_index','operation_label','record_json_sha256','record_json_bytes'])duplicate.targets[8][key]=extra[key];
+  assert.equal(validateTargets(duplicate).length,18);
+  for(const mutate of [x=>{x.targets[15].record_json_sha256='0'.repeat(64);},x=>{x.targets[15].record_json_bytes++;},x=>{x.targets[15].operation_label+=' altered';},x=>{x.targets[16].record_id=extra.record_id;}]){const value=structuredClone(duplicate);mutate(value);assert.throws(()=>validateTargets(value));}
 });
 
 test('all three extra views are the exact first operation on their explicit material/record route', () => {
@@ -242,6 +236,20 @@ test('nested temperature is measured once inside its heater, without hiding inde
 test('actual vessel geometry must fill the drawing even when wrapper and SVG are full width',()=>{const m=drawingMetrics();m.reported_drawings[0].apparatus_body_bounds=rect(140,90,114,180);assert.throws(()=>checkReportedDrawing('after',m),/actual apparatus body must occupy/);const b=drawingMetrics();b.reported_drawings[0].apparatus_body_svg_bbox=rect(95,10,114,180);assert.throws(()=>checkReportedDrawing('after',b),/SVG body geometry/);});
 test('visible body and zero-width or zero-height leader appendages stay inside SVG',()=>{const m=drawingMetrics();m.reported_drawings[0].appendage_geometry_bounds=[rect(20,90,0,50),rect(30,100,50,0)];checkReportedDrawing('after',m);m.reported_drawings[0].appendage_geometry_bounds.push(rect(-1,90,20,40));assert.throws(()=>checkReportedDrawing('after',m),/visible syringe/);const b=drawingMetrics();b.reported_drawings[0].apparatus_body_bounds=rect(0,90,320,180);assert.throws(()=>checkReportedDrawing('after',b),/must not clip/);});
 test('font metrics measure actual SVG body bbox and viewBox rather than its wrapper',()=>withMetricDOM(()=>{const{art}=metricFixture(),d=fontMetrics(art).reported_drawings[0];assert.equal(d.apparatus_body_bounds.width,320);assert.equal(d.apparatus_body_svg_bbox.width,250);assert.equal(d.svg_viewbox.width,300);assert.deepEqual(d.appendage_geometry_bounds,[]);}));
+
+test('before named-Wu default duplicate and after snapshot each keep18 IDs with changed defaults',()=>{
+ const before=copy();
+ const beforeDefault=before.targets.find(t=>t.id==='default-gaas');
+ const namedWu=before.targets.find(t=>t.id==='extra-gaas-wu2010-step1');
+ for(const key of ['record_id','operation_id','operation_index','operation_label','record_json_sha256','record_json_bytes'])beforeDefault[key]=namedWu[key];
+ assert.equal(validateTargets(before).length,18);assert.equal(new Set(before.targets.map(t=>t.record_id)).size,17);
+ assert.equal(validateTargets(copy()).length,18);assert.equal(new Set(original.targets.map(t=>t.record_id)).size,18);
+ assert.notEqual(beforeDefault.record_id,original.targets.find(t=>t.id==='default-gaas').record_id);
+});
+test('explicit target snapshot CLI option preserves required phase/base/out',()=>{
+ assert.equal(argumentsFor(['--base','https://example.invalid/','--out','out','--phase','before','--targets','prior.json']).targets,'prior.json');
+ for(const args of [['--targets','prior.json'],['--base','x','--out','out','--phase','after','--targets','a','--targets','b'],['--base','x','--out','out','--phase','after','--unknown','yes']])assert.throws(()=>argumentsFor(args));
+});
 
 test('heater-face text must be inset on an opaque face clear of platform and beams',()=>{const m=drawingMetrics(),d=m.reported_drawings[0];d.chamber_heater_overlay_count=1;d.chamber_heater_fronts=[{bounds:rect(160,220,80,25),fully_opaque:true,leaf_labels:[label(177,224)],holder_platform_bounds:rect(150,190,100,10),beam_bounds:[rect(190,120,0,60)]}];checkReportedDrawing('after',m);for(const change of ['border','transparent','platform','beam']){const x=structuredClone(m),f=x.reported_drawings[0].chamber_heater_fronts[0];if(change==='border')f.leaf_labels[0].text_bounds=rect(177,221,40,16);if(change==='transparent')f.fully_opaque=false;if(change==='platform')f.holder_platform_bounds=rect(150,220,100,10);if(change==='beam')f.beam_bounds=[rect(195,210,2,30)];assert.throws(()=>checkReportedDrawing('after',x),/heater|Heater/);}checkReportedDrawing('before',{renderer:'reported-fields'});});
 

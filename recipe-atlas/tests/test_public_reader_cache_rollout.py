@@ -6,17 +6,19 @@ import unittest
 from uuid import uuid4
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = '0.41.10'
-LOADER_VERSION = '0.41.9'
-def version_for(module): return LOADER_VERSION if module == 'reader-presentation-loader.mjs' else VERSION
+VERSION = '0.41.9'
+PUBLIC_READER_VERSION = '0.42.0'
+PUBLIC_MODULES = ('illustrated-record.mjs', 'material-guide.mjs', 'material-hub.mjs', 'method-families.mjs', 'reader-app.mjs')
+def version_for(module): return PUBLIC_READER_VERSION if module.rsplit('/',1)[-1] in PUBLIC_MODULES else VERSION
 MODULES = ('illustrated-record.mjs', 'material-hub.mjs', 'material-guide.mjs',
-           'reader-app.mjs', 'reader-presentation-loader.mjs')
+           'reader-app.mjs', 'reader-presentation-loader.mjs', 'method-families.mjs')
 EXPECTED = {
     'illustrated-record.mjs': {'reader-app.mjs', 'material-guide.mjs'},
     'material-hub.mjs': {'material-guide.mjs'},
     'material-guide.mjs': {'reader-app.mjs', 'reader-presentation-loader.mjs'},
-    'reader-app.mjs': {'reader-presentation-loader.mjs'},
+    'reader-app.mjs': {'reader-presentation-loader.mjs', 'method-families.mjs'},
     'reader-presentation-loader.mjs': set(),
+    'method-families.mjs': set(),
 }
 
 
@@ -28,7 +30,7 @@ def module_entry(html):
 
 
 def validate_graph(entries, modules):
-    expected_entries = [f'{name}?v={VERSION}' for name in
+    expected_entries = [f'{name}?v={version_for(name)}' for name in
                         ('reader-app.mjs', '../illustrated-record.mjs', 'material-hub.mjs')]
     if entries != expected_entries:
         raise ValueError('Stale or inconsistent entry module version')
@@ -87,24 +89,24 @@ class PublicReaderCacheRollout(unittest.TestCase):
         for file in files:
             with self.subTest(entry=file.name):
                 html = file.read_text(encoding='utf-8')
-                self.assertEqual(module_entry(html), 'reader-app.mjs?v=' + VERSION)
+                self.assertEqual(module_entry(html), 'reader-app.mjs?v=' + PUBLIC_READER_VERSION)
                 self.assertNotIn('{{READER_CONTEXT}}', html)
-                self.assertIn('reader.css?v=0.41.9', html)
+                self.assertIn('reader.css?v=0.42.0', html)
 
     def test_actual_shell_changes_only_material_hub_entry_version(self):
         shell = self.functions()['shell']
-        for name, version in (('material-hub.mjs', VERSION), ('paper-review.mjs', '0.41.9'),
+        for name, version in (('material-hub.mjs', PUBLIC_READER_VERSION), ('paper-review.mjs', '0.41.9'),
                               ('evidence-gallery.mjs', '0.41.9'), ('library-app.mjs', '0.33.0-r2')):
             with self.subTest(entry=name):
                 self.assertEqual(module_entry(shell('Fixture', '<p>Fixture</p>', name)), name + '?v=' + version)
 
     def test_actual_record_html_entry_reaches_new_illustrated_module(self):
-        self.assertEqual(self.record_entry(), '../illustrated-record.mjs?v=' + VERSION)
+        self.assertEqual(self.record_entry(), '../illustrated-record.mjs?v=' + PUBLIC_READER_VERSION)
 
     def test_all_three_entry_routes_reach_one_consistently_versioned_loader(self):
         entries, modules = self.graph_inputs()
         validate_graph(entries, modules)
-        loader = './reader-presentation-loader.mjs?v=' + LOADER_VERSION
+        loader = './reader-presentation-loader.mjs?v=' + VERSION
         for consumer in ('reader-app.mjs', 'material-guide.mjs'):
             self.assertEqual(modules[consumer].count(loader), 1)
 
@@ -117,10 +119,11 @@ class PublicReaderCacheRollout(unittest.TestCase):
     def test_stale_or_unversioned_import_fails_same_reachable_graph_check(self):
         entries, modules = self.graph_inputs()
         for parent, before, after in (
-            ('illustrated-record.mjs', 'reader-app.mjs?v=0.41.10', 'reader-app.mjs?v=0.41.7'),
-            ('material-hub.mjs', 'material-guide.mjs?v=0.41.10', 'material-guide.mjs?v=0.41.7'),
+            ('illustrated-record.mjs', 'reader-app.mjs?v=0.42.0', 'reader-app.mjs?v=0.41.7'),
+            ('material-hub.mjs', 'material-guide.mjs?v=0.42.0', 'material-guide.mjs?v=0.41.7'),
             ('material-guide.mjs', 'reader-presentation-loader.mjs?v=0.41.9', 'reader-presentation-loader.mjs'),
             ('reader-app.mjs', 'reader-presentation-loader.mjs?v=0.41.9', 'reader-presentation-loader.mjs?v=0.41.10'),
+            ('reader-app.mjs', 'method-families.mjs?v=0.42.0', 'method-families.mjs'),
         ):
             with self.subTest(parent=parent):
                 mutated = dict(modules)

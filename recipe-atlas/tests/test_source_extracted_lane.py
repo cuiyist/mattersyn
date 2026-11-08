@@ -39,6 +39,7 @@ class SourceExtractedLaneTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as d:
             root=Path(d);data=root/'data';(data/'records').mkdir(parents=True);(data/'paper-reviews').mkdir();(data/'corpus').mkdir()
             (data/'inventory-evidence.json').write_text('{"per_paper": []}',encoding='utf-8')
+            (data/'reader-presentation-reviewed.json').write_text(json.dumps({'records':{},'materials':{},'figures_by_source':{}}),encoding='utf-8')
             rows=[fixture('gold-a','10.9999/a','source_reviewed'),fixture('machine-b','10.9999/b')]
             for row in rows:(data/'records'/(row['record_id']+'.json')).write_text(json.dumps(row),encoding='utf-8')
             try:build_atlas.ROOT=root;build_atlas.main()
