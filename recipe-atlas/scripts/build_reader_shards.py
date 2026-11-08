@@ -22,6 +22,7 @@ from pathlib import Path
 
 from public_reader_registry import BASE, PART
 from reader_presentation_registry import MARKER, _merge
+from chemical_reference_overlay import enrich_registry
 
 ROOT = Path(__file__).resolve().parents[1]
 SAFE_ID = re.compile(r'^[A-Za-z0-9][A-Za-z0-9._-]*$')
@@ -106,7 +107,13 @@ def chemical_slices(view, chemistry):
 def load_chemistry(dist):
     base = dist / 'assets/chemical-registry'
     read = lambda name: json.loads((base / name).read_bytes()) if (base / name).is_file() else {}
-    return {'registry': read('registry.json'), 'bindings': read('bindings.json'),
+    registry, bindings = read('registry.json'), read('bindings.json')
+    overlay = base / 'reader-3d-reference-overrides.json'
+    if overlay.is_file():
+        registry = enrich_registry(registry, bindings, read(overlay.name),
+            hashlib.sha256((base / 'registry.json').read_bytes()).hexdigest(),
+            hashlib.sha256((base / 'bindings.json').read_bytes()).hexdigest())
+    return {'registry': registry, 'bindings': bindings,
             'solution_contexts': read('solution-components.json'), 'product_bindings': read('product-bindings.json')}
 
 

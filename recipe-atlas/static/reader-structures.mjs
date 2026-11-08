@@ -1,7 +1,7 @@
 import {mountFigureMorphology} from './reader-figure-morphology.mjs?v=0.41.0';
 import {mountParticleContext} from './reader-particle.mjs?v=0.41.9';
 import {el,button,link,badge,siteURL,disclosure,recordURL} from './reader-utils.mjs?v=0.41.9';
-import {elementLegend,atomColors} from './chemical-viewer.mjs?v=0.41.0';
+import {elementLegend,atomColors} from './chemical-viewer.mjs?v=0.43.0';
 import {drawFiniteReference} from './finite-crystal-reference.mjs';
 import {defaultCrystalReferences} from './crystal-defaults.mjs?v=0.41.9';
 let registry,roles,availability;
@@ -83,7 +83,7 @@ async function mountReferenceChoices(panel,entries,r,finite){
  };
  if(sampleSelect)sampleSelect.onchange=refresh;await refresh();
 }
-async function drawReference(host,ref,finite=false){
+export async function drawReference(host,ref,finite=false){
  host.replaceChildren();const badges=el('div',undefined,'reader-badges');badges.append(badge(finite?'Illustration':scopeKind(ref),'reference'),badge('Not a sample reconstruction','scope'));host.append(badges,el('h3',ref.name));
  const view=el('div',undefined,'crystal-reference-view');view.tabIndex=0;view.setAttribute('aria-label',ref.name+' interactive crystal viewer');host.append(view);
  const controls=el('div',undefined,'protocol-controls'),caption=el('p',undefined,'reader-note');host.append(controls,caption);
@@ -115,6 +115,7 @@ async function drawReference(host,ref,finite=false){
  controls.append(button('−',()=>{viewer.zoom(1/1.2);viewer.render();}),button('Reset',()=>draw(extent)),button('+',()=>{viewer.zoom(1.2);viewer.render();}));draw();
  view.onkeydown=e=>{const turns={ArrowLeft:[-12,'y'],ArrowRight:[12,'y'],ArrowUp:[-12,'x'],ArrowDown:[12,'x']}[e.key];if(turns)viewer.rotate(...turns);else if(e.key==='Home')draw(extent);else if(['+','='].includes(e.key))viewer.zoom(1.15);else if(e.key==='-')viewer.zoom(1/1.15);else return;e.preventDefault();viewer.render();};
  const observer=new ResizeObserver(()=>{if(!view.isConnected){viewer.clear();observer.disconnect();return;}if(view.clientWidth&&view.clientHeight){viewer.resize();viewer.render();}});observer.observe(view);
+ return {destroy:()=>{viewer.clear();observer.disconnect();}};
 }
 export function finiteReferencesForRecord(refs,r){
  return refs.filter(ref=>ref.finiteModelPath&&(!Array.isArray(ref.finiteRecordIds)||ref.finiteRecordIds.includes(r.record_id))).map(ref=>({

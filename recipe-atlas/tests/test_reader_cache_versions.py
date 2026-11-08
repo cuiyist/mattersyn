@@ -5,9 +5,10 @@ import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
 VERSION = '0.41.9'
-PUBLIC_READER_VERSION = '0.42.0'
+PUBLIC_READER_VERSION = '0.43.0'
 PUBLIC_MODULES = ('illustrated-record.mjs', 'material-guide.mjs', 'material-hub.mjs', 'method-families.mjs', 'reader-app.mjs')
-def version_for(module): return PUBLIC_READER_VERSION if module in PUBLIC_MODULES or module == 'reader.css' else VERSION
+H_MODULES = ('chemical-reference-route.mjs', 'chemical-viewer.mjs', 'crystal-viewer.mjs', 'evans2010-products.mjs', 'illustrated-record.mjs', 'material-app.mjs', 'material-guide.mjs', 'material-hub.mjs', 'protocol-references.mjs', 'protocol-visuals.mjs', 'reader-app.mjs', 'reader-presentation-loader.mjs', 'reader-structures.mjs')
+def version_for(module): return PUBLIC_READER_VERSION if module in H_MODULES else '0.42.0' if module in PUBLIC_MODULES or module == 'reader.css' else VERSION
 
 
 class ReaderCacheVersionTests(unittest.TestCase):
@@ -40,7 +41,7 @@ class ReaderCacheVersionTests(unittest.TestCase):
                     self.assertNotIn(child + '"', code)
             self.assertNotIn('?v=0.41.3', code)
         guide = self.read('static/material-guide.mjs')
-        self.assertEqual(guide.count('./crystal-viewer.mjs?v=' + VERSION), 2, 'import and export must refer to one module instance')
+        self.assertEqual(guide.count('./crystal-viewer.mjs?v=' + version_for('crystal-viewer.mjs')), 2, 'import and export must refer to one module instance')
 
     def test_legacy_hub_wrapper_refreshes_only_its_reader_dependency(self):
         builder = self.read('scripts/build_reader_views.py')
@@ -76,7 +77,7 @@ class ReaderCacheVersionTests(unittest.TestCase):
                     'static/reader-particle.mjs', 'static/reader-structures.mjs', 'static/wu2008-reader-context.mjs'):
             with self.subTest(parent=rel):
                 text = self.read(rel)
-                self.assertIn(PUBLIC_READER_VERSION if rel in ('templates/material-reader.html', 'scripts/build_dataset.py', 'scripts/build_reader_views.py', 'static/illustrated-record.mjs', 'static/material-hub.mjs', 'static/material-guide.mjs', 'static/reader-app.mjs') else VERSION, text)
+                self.assertIn(PUBLIC_READER_VERSION if rel in ('templates/material-reader.html', 'scripts/build_dataset.py', 'scripts/build_reader_views.py', 'static/illustrated-record.mjs', 'static/material-hub.mjs', 'static/material-guide.mjs', 'static/reader-app.mjs') else version_for(Path(rel).name), text)
                 self.assertNotIn('0.41.6', text)
         # Fresh record and legacy-material parents must reach both corrected modules.
         self.assertIn('material-guide.mjs?v=' + PUBLIC_READER_VERSION, self.read('static/illustrated-record.mjs'))
