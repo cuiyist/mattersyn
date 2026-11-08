@@ -71,6 +71,9 @@ def context_reason(e):
     if re.search('\\b(?:pvp|peg|pva|pdms|pei|polyethylene glycol|polyvinylpyrrolidone|polyvinyl alcohol|polymer)\\b', name):
         return 'undefined_identity'
     free_water_component = e.get('pubchemCid') == 962 and e.get('formula') == 'H2O' and re.match('^water(?:\\b|[- ])', name)
+    entity_name = re.split(r'\b(?:for|used in|used as)\b', name, maxsplit=1)[0].strip()
+    if not free_water_component and re.search(r'\b(?:mixtures?|formulations?)\b', entity_name):
+        return 'whole_context'
     if not free_water_component and re.search('\\b(?:stock|solutions?|dispersions?|quantum dots?|nanocrystals?|nanoparticles?|specimens?|substrates?|wafer|pooled)\\b', name):
         return 'whole_context'
     if re.search('\\b(?:unspecified|undefined|unknown|not reported)\\b', name):

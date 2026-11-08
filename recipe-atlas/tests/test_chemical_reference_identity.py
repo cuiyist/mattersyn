@@ -79,6 +79,12 @@ class IdentityTests(unittest.TestCase):
         for e in[source('InP',formula='InP'),source('Indium phosphide',formula='InP'),source('Gold',formula='Au'),source('Zinc oxide powder',formula='ZnO'),source('Water in nitrate stock',pubchemCid=962,formula='H2O'),source('Water for colloidal synthesis',pubchemCid=962,formula='H2O'),source('NCS',model2dPath='models/own-ncs.json',formula='C4H4ClNO2')]:
             with self.subTest(entry=e):self.assertIsNone(identity.material_context_reason(e));self.assertIsNone(identity.context_reason(e))
         self.assertEqual(identity.context_reason(source('OA',depictionKind='mixture')),'whole_context')
+    def test_whole_mixture_formulation_names_hold_without_demoting_named_components(self):
+        for e in [source('SnSe growth mixture, formulation not restated',formula='SnSe'),source('Precursor formulation',formula='InP'),source('CdSe growth mixtures',formula='CdSe'),source('Cadmium precursor stock'),source('Sodium chloride solution')]:
+            with self.subTest(entry=e):self.assertEqual(identity.context_reason(e),'whole_context')
+        for e in [source('SnSe',formula='SnSe'),source('Water in nitrate mixture',pubchemCid=962,formula='H2O'),source('Water in nitrate stock',pubchemCid=962,formula='H2O'),source('Ethanol for precursor mixture',pubchemCid=702,formula='C2H6O'),source('Ethanol used in precursor mixture',pubchemCid=702,formula='C2H6O'),source('DMSO')]:
+            with self.subTest(entry=e):self.assertIsNone(identity.context_reason(e))
+
     def test_resolved_exact_name_CID_requires_own_name_lookup_proof(self):
         target=molecule('known','Other accepted systematic name',702,'C2H6O');index=identity.ReferenceIndex([target]);original=source('Own exact reported name',formula='C2H6O');ref=identity.reference_from_existing(target,'resolved_exact_name_identical_CID');proof={'entry_id':original['id'],'query_field':'chemical_name','query':original['name'],'cid':702,'status':'UNIQUE_CID_CONNECTIVITY_CANDIDATE','cache_sha256':'a'*64,'source_url':'https://pubchem.ncbi.nlm.nih.gov/compound/702'}
         self.assertEqual(identity.reused_reference_errors(original,ref,index,proof),[]);self.assertTrue(identity.reused_reference_errors(original,ref,index))
