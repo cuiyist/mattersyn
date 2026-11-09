@@ -613,7 +613,8 @@ export async function collectFailureDiagnostics(page, evidence, out, stem) {
   return evidence;
 }
 
-export async function visit(browser, base, out, phase, target, viewport) {
+export async function visit(browser, base, out, phase, target, viewport, { failureAttempt } = {}) {
+  assert(failureAttempt === undefined || failureAttempt === 1 || failureAttempt === 2, 'Bounded diagnostic attempt required');
   const context = await browser.newContext({ viewport, deviceScaleFactor: 1, serviceWorkers: 'block', reducedMotion: 'reduce' });
   const page = await context.newPage();
   const errors = [];
@@ -687,13 +688,55 @@ export async function visit(browser, base, out, phase, target, viewport) {
   } catch (error) {
     row.automated_checks_passed = false;
     row.error = String(error.message || error);
-    try { row.failure_diagnostics = await collectFailureDiagnostics(page, failureEvidence, out, `${target.id}-${viewport.width}`); }
+    try { row.failure_diagnostics = await collectFailureDiagnostics(page, failureEvidence, out, `${target.id}-${viewport.width}${failureAttempt ? `-attempt-${failureAttempt}` : ''}`); }
     catch (diagnosticError) { row.failure_diagnostics = { collection_errors: [{ stage: 'collector', error_class: safeDiagnosticText(diagnosticError.name || 'Error') }] }; }
   } finally {
     row.page_errors = errors;
     await context.close();
   }
   return row;
+}
+
+// One recovery is allowed only for the observed same-site HTTP503 bootstrap
+// failure. Semantic errors, missing assets and later protocol checks never retry.
+export function retryableTransportReadiness(row, base) {
+  if (row.automated_checks_passed !== false || row.status !== 200 || row.observed_initial_record != null
+      || !/^page\.waitForSelector: Timeout \d+ms exceeded\./.test(row.error || '')
+      || !(row.error || '').includes('main[data-reader-ready]')
+      || !Array.isArray(row.page_errors) || row.page_errors.length) return false;
+  const evidence = row.failure_diagnostics, responses = evidence?.non_2xx_responses;
+  if (!evidence || evidence.readiness?.reader_marker_present !== false || evidence.readiness?.main_present !== true
+      || !Array.isArray(responses) || !responses.length || evidence.collection_errors?.length
+      || Object.values(evidence.omitted || {}).some(n => n > 0)) return false;
+  let root;
+  try { root = new URL(base); if (!root.pathname.endsWith('/')) root.pathname += '/'; } catch { return false; }
+  const relative = [];
+  for (const response of responses) {
+    let url;
+    try { url = new URL(response.url); } catch { return false; }
+    if (response.status !== 503 || url.origin !== root.origin || !url.pathname.startsWith(root.pathname)
+        || !['script', 'fetch', 'xmlhttprequest'].includes(response.resource_type)
+        || !/\.(?:m?js|json)$/.test(url.pathname)) return false;
+    relative.push(url.pathname.slice(root.pathname.length));
+  }
+  const urls = new Set(responses.map(response => response.url));
+  if ((evidence.request_failures || []).some(request => !urls.has(request.url) || request.error !== 'net::ERR_ABORTED')) return false;
+  return (evidence.console_errors || []).every(({ text }) =>
+    /^Failed to load resource:.*status of 503\b/.test(text || '')
+    || relative.some(name => text === `Error: Unavailable ${name}` || (text || '').startsWith(`Error: Unavailable ${name}\n`)));
+}
+
+export async function visitWithTransportReadinessRetry(browser, base, out, phase, target, viewport, runVisit = visit) {
+  const first = await runVisit(browser, base, out, phase, target, viewport, { failureAttempt: 1 });
+  if (!retryableTransportReadiness(first, base)) return first;
+  // visit always owns/closes its context. The second call reruns every original
+  // exact record/hash/scene/overflow assertion, with a distinct failure PNG name.
+  const final = await runVisit(browser, base, out, phase, target, viewport, { failureAttempt: 2 });
+  return { ...final, transport_readiness_retry: {
+    maximum_attempts: 2, actual_attempts: 2, reason: 'same_site_HTTP503_blocked_reader_readiness',
+    prior_attempts: [{ attempt: 1, ...first }], final_attempt: 2, final_attempt_result: 'current_row',
+    recovered: final.automated_checks_passed === true
+  } };
 }
 
 export function argumentsFor(argv) {
@@ -733,7 +776,7 @@ export async function main(argv = process.argv.slice(2)) {
     receipt.browser_started = true;
     for (const target of targets) {
       for (const viewport of viewportsForTarget(target)) {
-        const row = await visit(browser, args.base, out, args.phase, target, viewport);
+        const row = await visitWithTransportReadinessRetry(browser, args.base, out, args.phase, target, viewport);
         receipt.pages.push(row); save();
         console.log(`${args.phase} ${target.id} ${viewport.width}: ${row.automated_checks_passed ? 'pass' : row.error}`);
       }
