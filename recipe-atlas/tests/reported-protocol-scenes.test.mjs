@@ -567,3 +567,13 @@ test('compact heater values retain typed bounds/ranges and never discard an unkn
   assert.equal(compactReportedSceneQuantity(q(180), null), null);
   assert.equal(compactReportedSceneQuantity(q(180), () => 'Not reported'), null);
 });
+
+test('swiftly injected own stock resolves through its unique explicit preparation state only',()=>{
+ const build=()=>{
+  const prepare=op('dissolve','Prepare selenium stock',{id:'prepare-feed',inputs:['selenium'],outputs:['feed-output']}),batch=op('heat','Reheat the reaction batch',{id:'reheat',inputs:[],outputs:['reaction-output']}),inject=op('inject','Swiftly inject selenium stock',{id:'inject-feed',description:'Swiftly inject the selenium stock at270 degrees; no rate is stated.',inputs:['reaction-output','feed-output']});
+  return rec({materials:[{id:'selenium',name:'Selenium',formula:'Se',role:'precursor'}],stocks:[{id:'own-feed',name:'Selenium in own reported carrier',preparation_operation_ids:['prepare-feed'],components:[{material_id:'selenium'}]}],material_states:[{id:'feed-output',name:'Prepare selenium stock output',kind:'stock',parent_ids:[]},{id:'reaction-output',name:'Reheated reaction batch',kind:'reaction_batch',parent_ids:[]}],operations:[prepare,batch,inject]});
+ };
+ const r=build(),o=r.operations[2],before=JSON.stringify(r);assert.deepEqual(choose(o,r).added,['selenium stock']);assert.equal(JSON.stringify(r),before);
+ const reactionOnly=build();reactionOnly.operations[2].inputs=['reaction-output'];assert.deepEqual(choose(reactionOnly.operations[2],reactionOnly).added,[]);
+ const absentStock=build();absentStock.stocks=[];assert.deepEqual(choose(absentStock.operations[2],absentStock).added,[]);
+});

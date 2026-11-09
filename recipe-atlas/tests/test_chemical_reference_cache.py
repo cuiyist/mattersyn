@@ -6,7 +6,11 @@ import unittest
 ROOT=Path(__file__).resolve().parents[1]
 H_VERSION='0.43.0'
 READER_VERSION='0.45.0'
+ENTRY_VERSION='0.45.1'
+PATCH_MODULES=('illustrated-record.mjs', 'material-guide.mjs', 'material-hub.mjs', 'protocol-visuals.mjs', 'reader-app.mjs', 'reported-protocol-scenes.mjs')
 READER_MODULES={'illustrated-record.mjs', 'crystal-defaults.mjs', 'chemical-viewer.mjs', 'crystal-viewer.mjs', 'material-guide.mjs', 'source-field-copy.mjs', 'protocol-record-fit.mjs', 'material-hub.mjs', 'reader-structures.mjs', 'reader-particle.mjs', 'reported-protocol-scenes.mjs', 'protocol-visuals.mjs', 'reader-app.mjs', 'protocol-references.mjs', 'evans2010-products.mjs', 'reported-scene-drawing.mjs'}
+
+def version_for(name):return ENTRY_VERSION if name in PATCH_MODULES else READER_VERSION if name in READER_MODULES else H_VERSION
 
 
 class ChemicalReferenceCacheTests(unittest.TestCase):
@@ -25,13 +29,13 @@ class ChemicalReferenceCacheTests(unittest.TestCase):
         self.assertIn('chemicalButtonLabel',app);self.assertIn('chemicalDisplayCaption',app)
         viewer=self.read('static/chemical-viewer.mjs');self.assertIn('chemicalButtonLabel',viewer);self.assertIn('chemicalDisplayCaption',viewer)
     def test_actual_record_material_and_handmade_entry_URLs_are_fresh(self):
-        self.assertIn('reader-app.mjs?v='+READER_VERSION,self.read('templates/material-reader.html'))
-        self.assertIn('../illustrated-record.mjs?v='+READER_VERSION,self.read('scripts/build_dataset.py'))
+        self.assertIn('reader-app.mjs?v='+ENTRY_VERSION,self.read('templates/material-reader.html'))
+        self.assertIn('../illustrated-record.mjs?v='+ENTRY_VERSION,self.read('scripts/build_dataset.py'))
         for name in('murray-1993-method-1-evidence.html','murray-1993-method-2-evidence.html'):
             with self.subTest(name=name):self.assertIn('material-app.mjs?v='+H_VERSION,self.read('static/'+name))
     def test_changed_reverse_dependency_chain_is_consistently_refreshed(self):
         for parent,child in [('illustrated-record.mjs','reader-app.mjs'),('illustrated-record.mjs','material-guide.mjs'),('material-hub.mjs','material-guide.mjs'),('material-guide.mjs','crystal-viewer.mjs'),('protocol-visuals.mjs','protocol-references.mjs'),('crystal-viewer.mjs','evans2010-products.mjs'),('reader-app.mjs','reader-structures.mjs'),('chemical-viewer.mjs','reader-structures.mjs')]:
-            with self.subTest(parent=parent,child=child):self.assertIn(child+'?v='+(READER_VERSION if child in READER_MODULES else H_VERSION),self.read('static/'+parent))
+            with self.subTest(parent=parent,child=child):self.assertIn(child+'?v='+version_for(child),self.read('static/'+parent))
 
 
 if __name__=='__main__':unittest.main()

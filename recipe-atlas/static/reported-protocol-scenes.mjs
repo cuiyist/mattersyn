@@ -105,7 +105,7 @@ function literalStockCharges(o, aliases) {
   for (const own of ownTexts) {
     const names = [];
     for (const clause of own.split(/\.(?=\s|$)|[;\n]/)) {
-      const charge = /^\s*(?:(?:then|slowly|rapidly|carefully|dropwise|immediately)\s+)*(?:add|inject|introduce|load|supply|feed|pour)\s+(.+)$/i.exec(clause);
+      const charge = /^\s*(?:(?:then|slowly|swiftly|rapidly|carefully|dropwise|immediately)\s+)*(?:add|inject|introduce|load|supply|feed|pour)\s+(.+)$/i.exec(clause);
       if (!charge) continue;
       const object = charge[1].split(/\b(?:to|into|onto|through|over|under|at|with|without|in|while|for|using|after|before|and|except|excluding|rather than)\b/i)[0];
       if (/\b(?:no|not|never|avoid|omit|prevent)\b/i.test(object)) continue;
