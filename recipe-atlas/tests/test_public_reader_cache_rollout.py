@@ -7,7 +7,7 @@ from uuid import uuid4
 
 ROOT = Path(__file__).resolve().parents[1]
 VERSION = '0.41.9'
-PUBLIC_READER_VERSION = '0.45.1'
+PUBLIC_READER_VERSION = '0.45.2'
 H_VERSION = '0.43.0'
 K_VERSION = '0.45.0'
 K_PATCH_MODULES = ('illustrated-record.mjs', 'material-guide.mjs', 'material-hub.mjs', 'protocol-visuals.mjs', 'reader-app.mjs', 'reported-protocol-scenes.mjs')
@@ -126,8 +126,8 @@ class PublicReaderCacheRollout(unittest.TestCase):
     def test_stale_or_unversioned_import_fails_same_reachable_graph_check(self):
         entries, modules = self.graph_inputs()
         for parent, before, after in (
-            ('illustrated-record.mjs', 'reader-app.mjs?v=0.45.1', 'reader-app.mjs?v=0.41.7'),
-            ('material-hub.mjs', 'material-guide.mjs?v=0.45.1', 'material-guide.mjs?v=0.41.7'),
+            ('illustrated-record.mjs', 'reader-app.mjs?v=0.45.2', 'reader-app.mjs?v=0.41.7'),
+            ('material-hub.mjs', 'material-guide.mjs?v=0.45.2', 'material-guide.mjs?v=0.41.7'),
             ('material-guide.mjs', 'reader-presentation-loader.mjs?v=0.43.0', 'reader-presentation-loader.mjs'),
             ('reader-app.mjs', 'reader-presentation-loader.mjs?v=0.43.0', 'reader-presentation-loader.mjs?v=0.41.10'),
             ('reader-app.mjs', 'method-families.mjs?v=0.44.0', 'method-families.mjs'),

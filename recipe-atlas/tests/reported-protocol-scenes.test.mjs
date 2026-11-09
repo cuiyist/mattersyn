@@ -577,3 +577,34 @@ test('swiftly injected own stock resolves through its unique explicit preparatio
  const reactionOnly=build();reactionOnly.operations[2].inputs=['reaction-output'];assert.deepEqual(choose(reactionOnly.operations[2],reactionOnly).added,[]);
  const absentStock=build();absentStock.stocks=[];assert.deepEqual(choose(absentStock.operations[2],absentStock).added,[]);
 });
+
+const repeatedAliasRecord=()=>{
+ const materials=[{id:'metal',name:'InCl3',role:'metal_precursor'},{id:'feed',name:'tris(trimethylsilyl)arsine (TMS3As)',role:'chalcogen_precursor'},{id:'receiver',name:'trioctylphosphine (TOP)',role:'solvent'}];
+ const prepare=op('mix','Prepare precursor solution',{id:'prepare',inputs:['metal','feed','receiver']}),inject=op('inject','Inject InCl3-TMS3As solution into TOP',{id:'inject',description:'Inject InCl3-TMS3As solution into TOP',inputs:['metal','feed','receiver']});
+ return rec({materials,operations:[prepare,inject]});
+};
+test('repeated feed may use its own unique explicit terminal abbreviation before the destination',()=>{
+ const r=repeatedAliasRecord(),before=JSON.stringify(r),spec=choose(r.operations[1],r);
+ assert.deepEqual(spec.added,['InCl3','tris(trimethylsilyl)arsine (TMS3As)']);
+ assert.deepEqual(spec.addedLabels,['InCl3','TMS3As']);assert.equal(JSON.stringify(r),before);
+});
+test('terminal abbreviations in receiving or later clauses do not create repeated inlet feeds',()=>{
+ for(const label of ['Inject InCl3 into TMS3As','Inject InCl3 using TMS3As','Inject InCl3 before TMS3As','Inject InCl3 without TMS3As']){
+  const r=repeatedAliasRecord();r.operations[1].label=label;r.operations[1].description=label;
+  assert.deepEqual(choose(r.operations[1],r).added,['InCl3']);
+ }
+});
+test('conditional or negative descriptions do not authorize an abbreviated repeat charge',()=>{
+ for(const description of ['Optionally inject TMS3As','Do not inject TMS3As','If needed, inject TMS3As']){
+  const r=repeatedAliasRecord();r.operations[1].description=description;
+  assert.ok(!choose(r.operations[1],r).added.includes(r.materials[1].name));
+ }
+});
+test('ambiguous own abbreviations and non-input names cannot authorize repeat feeds',()=>{
+ const r=repeatedAliasRecord();r.materials.push({id:'ambiguous',name:'Another reported species (TMS3As)',role:'precursor'});
+ assert.deepEqual(choose(r.operations[1],r).added,['InCl3']);
+ const absent=repeatedAliasRecord();absent.operations[1].inputs=['metal','receiver'];assert.deepEqual(choose(absent.operations[1],absent).added,['InCl3']);
+});
+test('no short feed name is invented when the own material does not give an abbreviation',()=>{
+ const r=repeatedAliasRecord();r.materials[1].name='tris(trimethylsilyl)arsine';assert.deepEqual(choose(r.operations[1],r).added,['InCl3']);
+});

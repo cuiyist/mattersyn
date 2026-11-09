@@ -170,7 +170,15 @@ function addedNames(o, r, sceneKind) {
     if (!present(name)) continue;
     // A repeated input may just describe the mixture already in the vessel.
     // Show a repeated charge only when this step explicitly names that input.
-    if (usedEarlier.has(id) && !label.includes(words(name))) continue;
+    if (usedEarlier.has(id) && !label.includes(words(name))) {
+      // A record may explicitly charge its own short name again. Require a
+      // unique stated abbreviation in the charge clause, never a destination.
+      const alias = shortReportedSceneName(name);
+      const matchingNames = [...materials.values(), ...stocks.values()]
+        .filter(value => words(shortReportedSceneName(value)) === words(alias));
+      if (alias === name || matchingNames.length !== 1
+          || !literalStockCharges(o, [alias]).length) continue;
+    }
     // A formula-level GaAs input is not a measured Ga source. In droplet/flux
     // steps where the explicit step says Ga/gallium but not GaAs, omit this
     // ambiguous mapped input rather than renaming or inventing a reagent.

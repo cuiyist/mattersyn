@@ -6,7 +6,7 @@ import unittest
 ROOT=Path(__file__).resolve().parents[1]
 H_VERSION='0.43.0'
 READER_VERSION='0.45.0'
-ENTRY_VERSION='0.45.1'
+ENTRY_VERSION='0.45.2'
 PATCH_MODULES=('illustrated-record.mjs', 'material-guide.mjs', 'material-hub.mjs', 'protocol-visuals.mjs', 'reader-app.mjs', 'reported-protocol-scenes.mjs')
 READER_MODULES={'illustrated-record.mjs', 'crystal-defaults.mjs', 'chemical-viewer.mjs', 'crystal-viewer.mjs', 'material-guide.mjs', 'source-field-copy.mjs', 'protocol-record-fit.mjs', 'material-hub.mjs', 'reader-structures.mjs', 'reader-particle.mjs', 'reported-protocol-scenes.mjs', 'protocol-visuals.mjs', 'reader-app.mjs', 'protocol-references.mjs', 'evans2010-products.mjs', 'reported-scene-drawing.mjs'}
 
