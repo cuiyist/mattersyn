@@ -56,9 +56,13 @@ function fixedOctaneReference(entry, ref = referenceRoute(entry)) {
       || ref.route === 'existing_molecule' && entry.id === 'octane');
 }
 
-export const chemicalModelCaption = (entry, caption) => fixedOctaneReference(entry) ? referencePresentationText(caption, true) : caption;
+const FIELD_DEFAULT_QUALIFICATION = 'The form normally used is shown as a reference; the source does not state this form.';
+const qualifiedCaption = (entry, caption) => entry?.readerFieldDefaultQualification === FIELD_DEFAULT_QUALIFICATION
+  && !String(caption || '').includes(FIELD_DEFAULT_QUALIFICATION)
+  ? distinctText([caption, FIELD_DEFAULT_QUALIFICATION]) : caption;
+export const chemicalModelCaption = (entry, caption) => qualifiedCaption(entry, fixedOctaneReference(entry) ? referencePresentationText(caption, true) : caption);
 
-export function chemicalDisplayCaption(entry, suppliedCaption) {
+function baseChemicalDisplayCaption(entry, suppliedCaption) {
   const ref = referenceRoute(entry);
   const fixedOctane = fixedOctaneReference(entry, ref);
   if (!newReference(ref) && fixedOctane) return referencePresentationText(suppliedCaption ?? entry?.caption ?? '', true);
@@ -70,7 +74,9 @@ export function chemicalDisplayCaption(entry, suppliedCaption) {
   return distinctText([referencePresentationText(referenceCaption(ref), fixedOctane), referencePresentationText(entry?.caption, fixedOctane)]);
 }
 
-export function viewerEntry(entry) {
+export const chemicalDisplayCaption = (entry, suppliedCaption) => qualifiedCaption(entry, baseChemicalDisplayCaption(entry, suppliedCaption));
+
+function baseViewerEntry(entry) {
   if (entry?._readerReferenceResolved) return entry;
   const ref = referenceRoute(entry);
   const fixedOctane = fixedOctaneReference(entry, ref);
@@ -90,4 +96,16 @@ export function viewerEntry(entry) {
   if (ref.route === 'molecule_reference') return {...scoped, model3dPath: ref.model3dPath,
     assetHashes: {...entry.assetHashes, model3dPath: ref.model3dSha256}};
   return {...scoped, component3dModels: ref.component3dModels, component3dScope: ref.component3dScope};
+}
+
+
+// Only the validated field-default presentation removes this exact duplicate.
+// Original entries/overlay limitations remain unchanged; all other notes stay.
+export function viewerEntry(entry) {
+  const resolved = baseViewerEntry(entry);
+  if (resolved?.readerFieldDefaultQualification !== FIELD_DEFAULT_QUALIFICATION || !hasReference3d(resolved)) return resolved;
+  const caption = qualifiedCaption(resolved, resolved.caption);
+  if (!String(caption || '').includes(FIELD_DEFAULT_QUALIFICATION)) return resolved;
+  return {...resolved, caption,
+    limitations: (resolved.limitations || []).filter(note => note !== FIELD_DEFAULT_QUALIFICATION)};
 }

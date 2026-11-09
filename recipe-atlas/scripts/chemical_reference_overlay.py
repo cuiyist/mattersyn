@@ -1,5 +1,6 @@
 """Pure per-entry enrichment for build_reader_shards.load_chemistry; no I/O."""
 import re
+from chemical_L_identity import qualify_registry_for_reader
 
 def enrich_registry(registry,bindings,overlay,registry_sha256,bindings_sha256):
     if overlay.get('schema')!='MatterSyn-reader-chemical-reference-overlay/1':raise ValueError('chemical reference overlay schema')
@@ -13,6 +14,7 @@ def enrich_registry(registry,bindings,overlay,registry_sha256,bindings_sha256):
         elif row.get('referenceOnly')is not True or row.get('trainingEligible')is not False:raise ValueError('chemical reference eligibility flags')
         # Model path/hash safety and actual byte/rights verification remain in
         # the focused generator/quality/publication gates; no gate is bypassed.
-    result=dict(registry)
-    result['entries']=[{**entry,'readerReference3d':rows[entry['id']]}if entry['id']in rows else entry for entry in registry['entries']]
+    qualified=qualify_registry_for_reader(registry,overlay)
+    result=dict(qualified)
+    result['entries']=[{**entry,'readerReference3d':rows[entry['id']]}if entry['id']in rows else entry for entry in qualified['entries']]
     return result

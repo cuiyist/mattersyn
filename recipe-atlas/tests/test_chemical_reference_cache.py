@@ -6,11 +6,13 @@ import unittest
 ROOT=Path(__file__).resolve().parents[1]
 H_VERSION='0.43.0'
 READER_VERSION='0.45.0'
-ENTRY_VERSION='0.45.2'
+K_PATCH_VERSION='0.45.2'
+L_MODULES=('chemical-reference-route.mjs', 'chemical-viewer.mjs', 'crystal-viewer.mjs', 'evans2010-products.mjs', 'illustrated-record.mjs', 'material-guide.mjs', 'material-hub.mjs', 'protocol-references.mjs', 'protocol-visuals.mjs', 'reader-app.mjs', 'reader-structures.mjs')
+ENTRY_VERSION='0.46.0'
 PATCH_MODULES=('illustrated-record.mjs', 'material-guide.mjs', 'material-hub.mjs', 'protocol-visuals.mjs', 'reader-app.mjs', 'reported-protocol-scenes.mjs')
 READER_MODULES={'illustrated-record.mjs', 'crystal-defaults.mjs', 'chemical-viewer.mjs', 'crystal-viewer.mjs', 'material-guide.mjs', 'source-field-copy.mjs', 'protocol-record-fit.mjs', 'material-hub.mjs', 'reader-structures.mjs', 'reader-particle.mjs', 'reported-protocol-scenes.mjs', 'protocol-visuals.mjs', 'reader-app.mjs', 'protocol-references.mjs', 'evans2010-products.mjs', 'reported-scene-drawing.mjs'}
 
-def version_for(name):return ENTRY_VERSION if name in PATCH_MODULES else READER_VERSION if name in READER_MODULES else H_VERSION
+def version_for(name):return ENTRY_VERSION if name in L_MODULES else K_PATCH_VERSION if name in PATCH_MODULES else READER_VERSION if name in READER_MODULES else H_VERSION
 
 
 class ChemicalReferenceCacheTests(unittest.TestCase):
@@ -18,7 +20,7 @@ class ChemicalReferenceCacheTests(unittest.TestCase):
     def viewer_url(self,code):
         urls=re.findall(r'''['"](\./chemical-viewer\.mjs(?:\?[^'"\r\n]*)?)['"]''',code)
         self.assertTrue(urls)
-        for url in urls:self.assertEqual(url,'./chemical-viewer.mjs?v='+READER_VERSION)
+        for url in urls:self.assertEqual(url,'./chemical-viewer.mjs?v='+version_for('chemical-viewer.mjs'))
         return urls[0]
     def test_every_actual_direct_viewer_caller_uses_fresh_H_URL(self):
         for name in('reader-app.mjs','reader-structures.mjs','crystal-viewer.mjs','evans2010-products.mjs','illustrated-record.mjs','material-guide.mjs','protocol-references.mjs'):
@@ -36,6 +38,13 @@ class ChemicalReferenceCacheTests(unittest.TestCase):
     def test_changed_reverse_dependency_chain_is_consistently_refreshed(self):
         for parent,child in [('illustrated-record.mjs','reader-app.mjs'),('illustrated-record.mjs','material-guide.mjs'),('material-hub.mjs','material-guide.mjs'),('material-guide.mjs','crystal-viewer.mjs'),('protocol-visuals.mjs','protocol-references.mjs'),('crystal-viewer.mjs','evans2010-products.mjs'),('reader-app.mjs','reader-structures.mjs'),('chemical-viewer.mjs','reader-structures.mjs')]:
             with self.subTest(parent=parent,child=child):self.assertIn(child+'?v='+version_for(child),self.read('static/'+parent))
+
+
+    def test_L_own_identity_route_is_reachable_beyond_stale_cached_route(self):
+        code=self.read('static/chemical-viewer.mjs')
+        urls=re.findall(r"['\"](\./chemical-reference-route\.mjs(?:\?[^'\"\r\n]*)?)['\"]",code)
+        self.assertEqual(urls,['./chemical-reference-route.mjs?v='+version_for('chemical-reference-route.mjs')])
+        self.assertNotIn(urls[0],{'./chemical-reference-route.mjs','./chemical-reference-route.mjs?v=0.43.0'})
 
 
 if __name__=='__main__':unittest.main()
