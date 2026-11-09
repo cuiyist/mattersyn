@@ -94,6 +94,13 @@ def header(prefix=''):
     return '<header class="site-header dataset-header"><a class="brand" href="'+prefix+'index.html"><span class="brand-mark">N</span>NanoXtalSyn</a><nav aria-label="Dataset navigation"><a href="'+prefix+'index.html">Periodic table</a><a href="'+prefix+'library.html">Source library</a><a href="'+prefix+'dataset.html">Synthesis dataset</a></nav></header>'
 def section(id,number,title,subtitle,body):return '<section id="'+id+'" class="record-section"><div class="section-heading"><div><span class="section-number">'+number+'</span><h2>'+title+'<small>'+subtitle+'</small></h2></div></div>'+body+'</section>'
 
+def structure_asset_reader_description(asset):
+    """Refresh only the current authored-brand prefix in displayed asset notes."""
+    description = asset['description']
+    prefix = 'MatterSyn-authored '
+    return 'NanoXtalSyn-authored ' + description[len(prefix):] if description.startswith(prefix) else description
+
+
 def render_record(r,meta,background_library=None):
     if background_library is None:background_library=load_library(ROOT)
     rid=r['record_id'];src=r['sources'][0];e=meta['eligibility'];p='../'
@@ -132,7 +139,7 @@ def render_record(r,meta,background_library=None):
     structural=[m for m in r['measurements'] if is_structural(m,r['record_id'])]
     body+=measurement_table(structural)
     if r['structure_assets']:
-        body+='<h3 class="inventory-heading">Structure references</h3><div class="structure-downloads">'+''.join('<a href="'+esc(record_href(x['url']))+'"><strong>'+esc(human(x['role']))+' ↗</strong><span>'+esc(x['description'])+'</span></a>' for x in r['structure_assets'])+'</div>'
+        body+='<h3 class="inventory-heading">Structure references</h3><div class="structure-downloads">'+''.join('<a href="'+esc(record_href(x['url']))+'"><strong>'+esc(human(x['role']))+' ↗</strong><span>'+esc(structure_asset_reader_description(x))+'</span></a>' for x in r['structure_assets'])+'</div>'
     elif r.get('lineage',{}).get('source_group')=='lian2021' and r['record_id'] in {'lian-2021-bulk-a-route','lian-2021-bulk-b-route','lian-2021-bulk-characterization'}:body+='<p class="record-note">Partial non-hydrogen bulk-crystal coordinates from the supporting tables are shown separately below. Hydrogen positions, occupancies and a verified link to the same physical synthesis aliquot are unavailable; no complete sample CIF or exact training pair is assigned.</p>'
     else:body+='<p class="record-note">No sample-resolved atomic coordinates are supplied for this record. A reported phase or size does not establish an exact product CIF.</p>'
     body+='<div id="record-crystal-references"></div>'
