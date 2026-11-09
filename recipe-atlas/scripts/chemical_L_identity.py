@@ -447,6 +447,10 @@ def compose_L_reference(entry, plan, groups):
                 'component3dModels':list(unique.values()),'component3dScope':COMPONENT_SCOPE,
                 'sourceUrls':list(dict.fromkeys(u for g in groups for u in g['reference'].get('sourceUrls',[])))}
     result['reason']=REASON;result['lIdentityPlanSha256']=digest(plan)
+    if result.get('route')=='independent_component_references':
+        scope=result.get('component3dScope','')
+        if not re.search(r'no (?:relative ion geometry|geometry between ions|inter-ion geometry)',scope,re.I):
+            result['component3dScope']=' '.join(filter(None,[scope,COMPONENT_SCOPE]))
     if plan['default_disclaimer']:
         result['caption']=' '.join(filter(None,[result.get('caption'),plan['default_disclaimer']]))
         result['limitations']=list(dict.fromkeys([*result.get('limitations',[]),plan['default_disclaimer']]))

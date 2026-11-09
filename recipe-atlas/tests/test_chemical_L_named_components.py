@@ -24,6 +24,33 @@ def sources():
     return {rules.EXISTING_OLEATE_SOURCE['id']:copy.deepcopy(rules.EXISTING_OLEATE_SOURCE)}
 
 
+class ReusedComponentScopeTests(unittest.TestCase):
+    def composed(self,scope):
+        e=entry('Sodium borohydride',formula='NaBH4')
+        p=rules.plan_identity(e)
+        self.assertEqual(p['kind'],'single_compound')
+        group={'reference':{'route':'independent_component_references',
+            'component3dModels':[{'id':'ion','model3dPath':'models/ion.json'}],
+            'component3dScope':scope,'referenceOnly':True,'trainingEligible':False}}
+        before=copy.deepcopy(group)
+        result=rules.compose_L_reference(e,p,[group])
+        self.assertEqual(group,before)
+        self.assertEqual(result['component3dModels'],group['reference']['component3dModels'])
+        return result['component3dScope']
+
+    def test_legacy_scope_retained_with_explicit_independent_geometry_wording(self):
+        for scope in ['No inter-ion coordinates are inferred.',
+                      'No proton, water, hydration shell or relative-ion arrangement is assigned.',
+                      'Independent illustrative ionic components only; no measured molecular or inter-ion coordinates.']:
+            with self.subTest(scope=scope):
+                value=self.composed(scope)
+                self.assertTrue(value.startswith(scope))
+                self.assertIn(rules.COMPONENT_SCOPE,value)
+
+    def test_existing_explicit_scope_is_not_duplicated(self):
+        self.assertEqual(self.composed(rules.COMPONENT_SCOPE),rules.COMPONENT_SCOPE)
+
+
 class NamedAcetateTests(unittest.TestCase):
     def test_exact_named_aliases_and_reported_bytes_preserved(self):
         for name,forms in [('cadmium acetate',['CdOAc2','Cd(Ac)2','Cd(OAc)2','CdAc2']),
