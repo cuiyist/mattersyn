@@ -11,6 +11,7 @@ from build_reader_shards import main as write_reader_shards
 from reader_presentation_registry import load_reviewed_reader, source_paths
 from public_reader_registry import public_parts
 from route_labels import route_label
+from reader_background import attach_background, load_library, library_digest
 ROOT=Path(__file__).resolve().parents[1]
 
 def validate_reader_view(rid,view):
@@ -46,10 +47,14 @@ def main():
     labels={rid:label for rid,label in labels.items() if label}
     # A labelled copy is a new object, so the unchanged-bytes shortcut below never applies to it.
     if labels:view={**view,'records':{rid:({**entry,'method_label':labels[rid]} if rid in labels else entry) for rid,entry in view['records'].items()}}
+    # Authored general background is a display projection, not a source claim.
+    view,background_coverage=attach_background(view,records,load_library(ROOT))
+    background_coverage['library_sha256']=library_digest(ROOT)
+    (target.parent/'reader-background-coverage.json').write_text(json.dumps(background_coverage,sort_keys=True)+'\n',encoding='utf-8',newline='\n')
     legacy_raw=source.read_bytes() if view is data and len(source_paths(source))==1 else (json.dumps(view,ensure_ascii=False,separators=(',',':'))+'\n').encode('utf-8')
     payloads=public_parts(view,legacy_raw)
     for name,raw in payloads.items():(target.parent/name).write_bytes(raw)
     # Per-record and per-material files for the page loaders (build_reader_shards.py).
     write_reader_shards(ROOT)
-    print(json.dumps({'reader_projection_sha256':hashlib.sha256(target.read_bytes()).hexdigest(),'records':len(data['records']),'materials':len(data['materials']),'route_labels_added':len(labels),'scientific_values_modified':False}))
+    print(json.dumps({'reader_projection_sha256':hashlib.sha256(target.read_bytes()).hexdigest(),'records':len(data['records']),'materials':len(data['materials']),'route_labels_added':len(labels),'scientific_values_modified':False,'chemical_intuition':background_coverage}))
 if __name__=='__main__':main()

@@ -13,7 +13,7 @@ class Element{
 }
 const priorDocument=globalThis.document;
 globalThis.document={body:{dataset:{}},createElement:tag=>new Element(tag)};
-const {emptySections,hideEmptySections,renderProperties,displayMethod,GENERIC_METHOD}=await import('../static/reader-app.mjs');
+const {emptySections,hideEmptySections,renderProperties,renderIntuition,displayMethod,GENERIC_METHOD}=await import('../static/reader-app.mjs');
 globalThis.document=priorDocument;
 const withDOM=callback=>{const prior=globalThis.document;globalThis.document={createElement:tag=>new Element(tag)};try{return callback();}finally{globalThis.document=prior;}};
 
@@ -65,3 +65,31 @@ test('final structures are empty only without a cell, product fact or morphology
  assert.equal(await structureViewsEmpty(r('nonperiodic'),[],[],panels(null)),false);
  assert.equal(await structureViewsEmpty({record_id:'h',lineage:{source_group:'heo2003'}},[],[],panels(null)),false);
 });
+
+const backgroundItem=(id='background')=>({id,title:'General chemistry',summary:'A short authored principle.',label:"General background, not the authors' interpretation",reference:{doi:'10.1021/cr400544s',url:'https://doi.org/10.1021/cr400544s',title:'Mechanisms of Nucleation and Growth of Nanoparticles in Solution'}});
+const descendants=node=>[node,...(node.children||[]).flatMap(descendants)];
+test('background-only intuition stays visible and uses DOI rather than source Evidence links',()=>withDOM(()=>{
+ const host=new Element('section'),r={record_id:'r',lineage:{source_group:'s'},sources:[{id:'s'}]};
+ assert.equal(renderIntuition(host,r,{general_background:[backgroundItem()]}),true);
+ const all=descendants(host);assert.equal(all.filter(n=>n.tagName==='article').length,1);
+ assert.ok(host.textContent.includes("General background, not the authors' interpretation"));
+ assert.deepEqual(all.filter(n=>n.tagName==='a').map(n=>n.href),['https://doi.org/10.1021/cr400544s']);
+ assert.equal(emptySections(r,{intuition:false}).has('intuition'),false);
+}));
+test('source interpretations remain first and unchanged with their independent source limit and view-all link',()=>withDOM(()=>{
+ const r={record_id:'r',lineage:{source_group:'s'},sources:[{id:'s'}]},source=Array.from({length:4},(_,i)=>({title:'Source '+i,summary:'Original '+i,claim_type:'Source interpretation'}));
+ const presentation={intuition:source,general_background:Array.from({length:4},(_,i)=>backgroundItem('b'+i))},before=structuredClone(presentation),host=new Element('section');
+ assert.equal(renderIntuition(host,r,presentation),true);
+ const cards=descendants(host).filter(n=>n.tagName==='article');assert.equal(cards.length,6);
+ assert.ok(cards[0].textContent.includes('Original 0'));assert.ok(cards[2].textContent.includes('Original 2'));
+ assert.equal(cards[3].dataset.backgroundId,'b0');assert.equal(cards[5].dataset.backgroundId,'b2');
+ assert.equal(descendants(host).filter(n=>n.tagName==='a'&&n.textContent==='Evidence →').length,3);
+ assert.equal(descendants(host).filter(n=>n.tagName==='a'&&n.textContent==='All interpretations and references →').length,1);
+ assert.deepEqual(presentation,before);
+}));
+test('actual intuition rendering is status-neutral and genuinely empty content keeps prior hidden behavior',()=>withDOM(()=>{
+ const r={record_id:'r',lineage:{source_group:'s'},sources:[{id:'s'}],quality:{review_status:'reviewed'}},p={general_background:[backgroundItem()]};
+ const first=new Element('section'),second=new Element('section');renderIntuition(first,r,p);renderIntuition(second,{...r,quality:{review_status:'source_extracted'}},p);
+ assert.equal(first.textContent,second.textContent);assert.equal(renderIntuition(new Element('section'),r,{}),false);
+ assert.equal(emptySections(r,{intuition:true}).has('intuition'),true);
+}));

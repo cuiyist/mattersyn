@@ -17,6 +17,13 @@ import generate_release_metadata
 
 
 class GeneratedNewlines(unittest.TestCase):
+    def background_fixture(self, root):
+        # The normal builder requires the authored library even for empty views.
+        (root / 'scripts').mkdir()
+        for relative in ('data/reader-background-library.json',
+                         'scripts/reader_background_reference_pins.json'):
+            (root / relative).write_bytes((ROOT / relative).read_bytes())
+
     def test_actual_json_writers_emit_utf8_lf_and_preserve_values(self):
         value = {'label': 'Synthetic \u00c5 fixture', 'source_text': 'a\r\nb', 'number': 0.25}
         expected_pretty = (json.dumps(value, ensure_ascii=False, indent=2) + '\n').encode('utf-8')
@@ -48,6 +55,7 @@ class GeneratedNewlines(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
             for path in ('data/records', 'dist/data/materials'): (root / path).mkdir(parents=True)
+            self.background_fixture(root)
             source = root / 'data/reader-presentation-reviewed.json'
             raw = b'{\r\n  "records": {},\r\n  "materials": {},\r\n  "figures_by_source": {}\r\n}\r\n'
             source.write_bytes(raw)
@@ -60,6 +68,7 @@ class GeneratedNewlines(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
             for path in ('data/records', 'dist/data/materials'): (root / path).mkdir(parents=True)
+            self.background_fixture(root)
             source = root / 'data/reader-presentation-reviewed.json'
             raw = b'{\r\n  "records": {},\r\n  "materials": {},\r\n  "figures_by_source": {}\r\n}\r\n'; source.write_bytes(raw)
             transformed = {'records': {}, 'materials': {}, 'figures_by_source': {}, 'display': 'Synthetic \u00c5'}

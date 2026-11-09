@@ -5,7 +5,7 @@ import os from 'node:os';
 import path from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
-import { validateTargets, targetURL, checkAfterLabels, checkReportedDrawing, fontMetrics, VIEWPORTS, argumentsFor, safeDiagnosticURL, safeDiagnosticText, registerFailureDiagnostics, structuralReadinessSummary, collectFailureDiagnostics, visit, LEGACY_TARGET_SCHEMA, TARGET_SCHEMA, K_REGRESSION_TARGETS, beforeTargetsFromBaseSnapshot, checkRecordOperationMetrics, collectRecordOperationMetrics, viewportsForTarget, REPORTED_SCENE_KINDS, VESSEL_VARIANTS, sceneFixtureMatrix, standaloneWidthLimitedFurnace, fixtureRecordCases } from './protocol-scenes-check.mjs';
+import { validateTargets, targetURL, checkAfterLabels, checkReportedDrawing, fontMetrics, VIEWPORTS, argumentsFor, safeDiagnosticURL, safeDiagnosticText, registerFailureDiagnostics, structuralReadinessSummary, collectFailureDiagnostics, visit, retryableTransportReadiness, visitWithTransportReadinessRetry, LEGACY_TARGET_SCHEMA, TARGET_SCHEMA, K_REGRESSION_TARGETS, beforeTargetsFromBaseSnapshot, checkRecordOperationMetrics, collectRecordOperationMetrics, viewportsForTarget, REPORTED_SCENE_KINDS, VESSEL_VARIANTS, sceneFixtureMatrix, standaloneWidthLimitedFurnace, fixtureRecordCases } from './protocol-scenes-check.mjs';
 
 const original = JSON.parse(fs.readFileSync(new URL('./protocol-scenes-targets.json', import.meta.url), 'utf8'));
 const copy = () => structuredClone(original);
@@ -456,4 +456,61 @@ test('standalone furnace is a separate width-limited310px phone record while all
  assert.deepEqual(cases.filter(c=>c.standalone).map(c=>[c.viewport.width,c.viewport.height,c.container_width]),[[390,844,310]]);
  const furnace=standaloneWidthLimitedFurnace();assert.equal(furnace.spec.kind,'furnace');assert.equal(furnace.spec.heating,true);assert.deepEqual(furnace.spec.added,[]);assert.equal(furnace.conditions.length,1);assert.equal(furnace.conditions[0].key,'temperature');
  assert.equal(sceneFixtureMatrix().length*cases.filter(c=>!c.standalone).length+cases.filter(c=>c.standalone).length,89);
+});
+
+function transportReadinessFixture(url='https://cuiyist.github.io/mattersyn-site/wu2008-reader-context.mjs', resource_type='script') {
+  return {automated_checks_passed:false,status:200,error:"page.waitForSelector: Timeout 60000ms exceeded.\nCall log:\n  - waiting for locator('main[data-reader-ready]')",page_errors:[],
+    failure_diagnostics:{non_2xx_responses:[{url,status:503,resource_type}],request_failures:[],console_errors:[{text:'Failed to load resource: the server responded with a status of 503 ()'}],collection_errors:[],omitted:{},readiness:{main_present:true,reader_marker_present:false},screenshot:{file:'target-390-attempt-1-failure-viewport.png',bytes:10,sha256:'a'.repeat(64)}}};
+}
+const transportBase='https://cuiyist.github.io/mattersyn-site/';
+test('transport readiness retry accepts only actual same-site script or JSON503 bootstrap failures',()=>{
+  assert.equal(retryableTransportReadiness(transportReadinessFixture(),transportBase),true);
+  const json=transportReadinessFixture(transportBase+'data/materials/au-3325c2.json','fetch');
+  json.failure_diagnostics.console_errors.push({text:'Error: Unavailable data/materials/au-3325c2.json\n    at '+transportBase+'reader-app.mjs'});
+  assert.equal(retryableTransportReadiness(json,transportBase),true);
+  for(const status of [200,403,404,429,500,502,504]){const row=transportReadinessFixture();row.failure_diagnostics.non_2xx_responses[0].status=status;assert.equal(retryableTransportReadiness(row,transportBase),false);}
+  assert.equal(retryableTransportReadiness(transportReadinessFixture('https://other.test/a.mjs'),transportBase),false);
+  assert.equal(retryableTransportReadiness(transportReadinessFixture('https://cuiyist.github.io/mattersyn-site-other/a.mjs'),transportBase),false);
+  assert.equal(retryableTransportReadiness(transportReadinessFixture(transportBase+'a.png','img'),transportBase),false);
+});
+test('transport readiness retry never recovers semantic hash geometry or incomplete diagnostic failures',()=>{
+  for(const mutate of [r=>r.error='Record JSON bytes changed',r=>r.error='Horizontal page overflow',r=>r.error='Apparatus containment failed',r=>r.observed_initial_record='actual',r=>r.page_errors.push('ReferenceError: broken renderer'),r=>r.failure_diagnostics.readiness.reader_marker_present=true,r=>r.failure_diagnostics.collection_errors.push({stage:'collector'}),r=>r.failure_diagnostics.omitted.console_errors=1,r=>r.failure_diagnostics.console_errors.push({text:'SyntaxError: broken renderer'}),r=>r.failure_diagnostics.non_2xx_responses.push({url:transportBase+'missing.js',status:404,resource_type:'script'})]){
+    const row=transportReadinessFixture();mutate(row);assert.equal(retryableTransportReadiness(row,transportBase),false);
+  }
+});
+test('one fresh-context readiness retry retains original diagnostics screenshot pins and full call scope',async()=>{
+  const first=transportReadinessFixture(),saved=structuredClone(first),final={automated_checks_passed:true,status:200,observed_initial_record:'fixed',download_json_sha256:'b'.repeat(64),screenshots:[{file:'target-390-protocol.png',sha256:'c'.repeat(64)}]},calls=[];
+  const runner=async(...args)=>{calls.push(args);return calls.length===1?first:final;};
+  const row=await visitWithTransportReadinessRetry('browser',transportBase,'out','before','target','viewport',runner);
+  assert.equal(calls.length,2);for(const args of calls)assert.deepEqual(args.slice(0,6),['browser',transportBase,'out','before','target','viewport']);
+  assert.deepEqual(calls.map(args=>args[6]),[{failureAttempt:1},{failureAttempt:2}]);
+  assert.equal(row.automated_checks_passed,true);assert.equal(row.download_json_sha256,final.download_json_sha256);assert.deepEqual(row.screenshots,final.screenshots);
+  assert.deepEqual(row.transport_readiness_retry.prior_attempts,[{attempt:1,...saved}]);assert.equal(row.transport_readiness_retry.recovered,true);assert.equal(row.transport_readiness_retry.final_attempt_result,'current_row');assert.deepEqual(first,saved);
+});
+test('one fresh-context readiness retry is bounded at two and final failure still fails',async()=>{
+  let count=0;const runner=async()=>{count++;return transportReadinessFixture();};
+  const row=await visitWithTransportReadinessRetry(null,transportBase,'out','after',{}, {},runner);
+  assert.equal(count,2);assert.equal(row.automated_checks_passed,false);assert.equal(row.transport_readiness_retry.recovered,false);assert.equal(row.transport_readiness_retry.actual_attempts,2);
+});
+test('nontransport and successful visits keep one attempt without adding retry history',async()=>{
+  for(const row of [{automated_checks_passed:true}, {...transportReadinessFixture(),error:'Record JSON bytes changed'}]){
+    let count=0;const result=await visitWithTransportReadinessRetry(null,transportBase,'out','before',{}, {},async()=>{count++;return row;});
+    assert.equal(count,1);assert.equal(result,row);assert.equal(result.transport_readiness_retry,undefined);
+  }
+});
+test('one fresh-context readiness retry owns two real visit contexts and distinct failure screenshot pins',async()=>{
+  const images=new Map(),contexts=[],savedRead=fs.readFileSync;
+  fs.readFileSync=function(file,...args){return images.has(file)?images.get(file):savedRead.call(this,file,...args);};
+  try{
+    const browser={async newContext(options){const number=contexts.length+1,page=fakeDiagnosticPage(),context={options,closed:false,async newPage(){return page;},async close(){this.closed=true;}};contexts.push(context);
+      page.goto=async()=>{page.handlers.get('response')({url:()=>transportBase+'wu2008-reader-context.mjs',status:()=>503,request:()=>({resourceType:()=> 'script'})});return{status:()=>200};};
+      page.waitForSelector=async(selector,options)=>{assert.equal(selector,'main[data-reader-ready]');assert.equal(options.timeout,60000);throw Error(transportReadinessFixture().error);};
+      page.evaluate=async()=>({main_present:true,reader_marker_present:false});
+      page.screenshot=async({path:destination})=>{images.set(destination,Buffer.from('synthetic failure '+number));};return context;}};
+    const row=await visitWithTransportReadinessRetry(browser,transportBase,'unused-artifact-output','before',original.targets[0],VIEWPORTS[1]);
+    assert.equal(contexts.length,2);assert(contexts.every(c=>c.closed&&c.options.serviceWorkers==='block'));
+    const first=row.transport_readiness_retry.prior_attempts[0].failure_diagnostics.screenshot,second=row.failure_diagnostics.screenshot;
+    assert.equal(first.file,original.targets[0].id+'-390-attempt-1-failure-viewport.png');assert.equal(second.file,original.targets[0].id+'-390-attempt-2-failure-viewport.png');
+    assert.notEqual(first.sha256,second.sha256);assert.equal(images.size,2);assert.equal(row.automated_checks_passed,false);
+  }finally{fs.readFileSync=savedRead;}
 });

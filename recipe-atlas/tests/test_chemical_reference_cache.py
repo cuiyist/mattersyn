@@ -8,11 +8,13 @@ H_VERSION='0.43.0'
 READER_VERSION='0.45.0'
 K_PATCH_VERSION='0.45.2'
 L_MODULES=('chemical-reference-route.mjs', 'chemical-viewer.mjs', 'crystal-viewer.mjs', 'evans2010-products.mjs', 'illustrated-record.mjs', 'material-guide.mjs', 'material-hub.mjs', 'protocol-references.mjs', 'protocol-visuals.mjs', 'reader-app.mjs', 'reader-structures.mjs')
-ENTRY_VERSION='0.46.0'
+ENTRY_VERSION='0.47.0'
+L_VERSION='0.46.0'
+M_MODULES=('illustrated-record.mjs', 'material-guide.mjs', 'material-hub.mjs', 'reader-app.mjs', 'reader.css')
 PATCH_MODULES=('illustrated-record.mjs', 'material-guide.mjs', 'material-hub.mjs', 'protocol-visuals.mjs', 'reader-app.mjs', 'reported-protocol-scenes.mjs')
 READER_MODULES={'illustrated-record.mjs', 'crystal-defaults.mjs', 'chemical-viewer.mjs', 'crystal-viewer.mjs', 'material-guide.mjs', 'source-field-copy.mjs', 'protocol-record-fit.mjs', 'material-hub.mjs', 'reader-structures.mjs', 'reader-particle.mjs', 'reported-protocol-scenes.mjs', 'protocol-visuals.mjs', 'reader-app.mjs', 'protocol-references.mjs', 'evans2010-products.mjs', 'reported-scene-drawing.mjs'}
 
-def version_for(name):return ENTRY_VERSION if name in L_MODULES else K_PATCH_VERSION if name in PATCH_MODULES else READER_VERSION if name in READER_MODULES else H_VERSION
+def version_for(name):return ENTRY_VERSION if name in M_MODULES else L_VERSION if name in L_MODULES else K_PATCH_VERSION if name in PATCH_MODULES else READER_VERSION if name in READER_MODULES else H_VERSION
 
 
 class ChemicalReferenceCacheTests(unittest.TestCase):

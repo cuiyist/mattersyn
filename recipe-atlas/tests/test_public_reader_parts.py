@@ -50,6 +50,13 @@ class PublicParts(unittest.TestCase):
   row={'original_path':'assets/withheld.png','original_sha256':'a'*64,'display_path':'assets/source-links/card.svg','display_sha256':hashlib.sha256(card).hexdigest(),'source_url':'https://doi.org/example','display_note':'Source link only'}
   (root/'private-build').mkdir();(root/'private-build/asset-display-overrides.json').write_text(json.dumps({'schema':'mattersyn-asset-display-overrides/1','scope':'private_build_input_do_not_deploy','assets':[row]}),encoding='utf-8')
   expected=asset_display.transform(v,{row['original_path']:row},[])
+  # Normal builder requires the authored library; tiny fixtures carry it too.
+  import reader_background
+  (root/'scripts').mkdir()
+  for relative in ['data/reader-background-library.json','scripts/reader_background_reference_pins.json']:
+   (root/relative).write_bytes((HERE.parent/relative).read_bytes())
+  fixture_records={rid:{'lineage':{'source_group':'s'}}for rid in v['records']}
+  expected,coverage=reader_background.attach_background(expected,fixture_records,reader_background.load_library(root))
   (root/'data/reader-presentation-reviewed.json').write_text(json.dumps(v),encoding='utf-8');(root/'dist/data/materials/m.json').write_text(json.dumps({'record_ids':['r0']}),encoding='utf-8')
   builder.ROOT=root
   with patch.object(m,'MAX_PART_BYTES',int(len(m.encoded(expected))*.8)):builder.main()
