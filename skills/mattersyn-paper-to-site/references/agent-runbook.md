@@ -1,4 +1,4 @@
-# MatterSyn agent runbook (workflow v5)
+# NanoXtalSyn agent runbook (workflow v5)
 
 Step-by-step operating instructions for the curation agent on the curation machine (the one with the
 papers, text caches and local tools). **What** to do and **why** are in [workflow-v5.md](workflow-v5.md);
@@ -11,7 +11,7 @@ Commands are written for PowerShell or bash; the Python is the same on Windows, 
 
 | Placeholder | Meaning |
 |---|---|
-| `<WS>` | The MatterSyn workspace root on the curation machine |
+| `<WS>` | The NanoXtalSyn workspace root on the curation machine |
 | `<SRC>` | `<WS>/repos/mattersyn`, the source checkout (clean, on `main`) |
 | `<SITE>` | `<WS>/repos/mattersyn-site`, the site checkout (clean, on `main`) |
 | `<P>` | `<WS>/research-assets/workflow-v5`, the **private** working area (never committed) |

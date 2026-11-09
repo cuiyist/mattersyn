@@ -1,12 +1,12 @@
-name: MatterSyn site publish
-# Builds the public site from a main commit that passed "MatterSyn source and build checks",
+name: NanoXtalSyn site publish
+# Builds the public site from a main commit that passed "NanoXtalSyn source and build checks",
 # runs the release checks of tools/publication/release_batch.py, and pushes the result to
-# cuiyist/mattersyn-site as one ordinary commit. Pull requests that change this workflow
+# cuiyist/nanoxtalsyn-site as one ordinary commit. Pull requests that change this workflow
 # run a dry run instead: they rebuild the source commit the live site was published from
 # and compare the result with the site's main, file by file, without pushing.
 on:
   workflow_run:
-    workflows: ['MatterSyn source and build checks']
+    workflows: ['NanoXtalSyn source and build checks']
     types: [completed]
     branches: [main]
   workflow_dispatch:
@@ -33,9 +33,9 @@ env:
   PYTHONIOENCODING: utf-8
   PYTHONDONTWRITEBYTECODE: '1'
   SOURCE_REPO: ${{ github.repository }}
-  SITE_REPO: cuiyist/mattersyn-site
-  SITE_URL: https://cuiyist.github.io/mattersyn-site/
-  CI_WORKFLOW: MatterSyn source and build checks
+  SITE_REPO: cuiyist/nanoxtalsyn-site
+  SITE_URL: https://cuiyist.github.io/nanoxtalsyn-site/
+  CI_WORKFLOW: NanoXtalSyn source and build checks
   REVIEWER: 'GitHub Actions site publish workflow (automated release checks of a CI-passed source commit)'
 defaults:
   run:
@@ -98,7 +98,7 @@ jobs:
           if [ "$mode" = dry-run ]; then
             message=$(git -C "$WORK/site" log -1 --format=%B)
             case "$message" in
-              Publish*) built=$(printf '%s\n' "$message" | sed -n 's/.*Built from cuiyist\/mattersyn \([0-9a-f]\{40\}\).*/\1/p' | head -1)
+              Publish*) built=$(printf '%s\n' "$message" | python3 driver/tools/publication/repository_names.py built-source)
                 if [ -n "$built" ] && [ "$built" != "$site_source" ]; then
                   echo "::error::The site's last Publish commit names $built but data/release-snapshot.json names $site_source"; exit 1
                 fi;;
@@ -170,15 +170,15 @@ jobs:
       - name: Check the staged site in a browser (affected routes and the ten benchmark pages)
         if: env.SKIP != '1'
         run: |
-          mkdir -p "$WORK/serve" && ln -s "$WORK/w/site-preview" "$WORK/serve/mattersyn-site"
+          mkdir -p "$WORK/serve" && ln -s "$WORK/w/site-preview" "$WORK/serve/nanoxtalsyn-site"
           (cd "$WORK/serve" && python -m http.server 8172 --bind 127.0.0.1 >/dev/null 2>&1 &)
           sleep 2
           strict=--strict; [ "$MODE" = dry-run ] && strict=
-          node driver/tools/ci/site-pages-check.mjs --base http://127.0.0.1:8172/mattersyn-site/ \
+          node driver/tools/ci/site-pages-check.mjs --base http://127.0.0.1:8172/nanoxtalsyn-site/ \
             --index "$WORK/w/site-preview/data/materials-index.json" --routes "$WORK/w/receipts/review-routes.json" \
             --out "$WORK/w/receipts/browser" $strict
 
-      - name: Publish to mattersyn-site
+      - name: Publish to nanoxtalsyn-site
         if: env.SKIP != '1' && env.MODE == 'publish'
         env:
           SITE_PUSH_TOKEN: ${{ secrets.SITE_PUSH_TOKEN }}
@@ -190,7 +190,7 @@ jobs:
         if: env.SKIP != '1' && env.MODE == 'publish'
         env:
           GITHUB_TOKEN: ${{ github.token }}
-        run: python driver/tools/publication/ci_site_publish.py verify --work "$WORK/w" --site-repo "$SITE_REPO" --site-url "$SITE_URL"
+        run: python driver/tools/publication/ci_site_publish.py verify --source "$WORK/source" --work "$WORK/w" --site-repo "$SITE_REPO" --site-url "$SITE_URL"
 
       - name: Screenshot the ten benchmark pages on the live site
         if: env.SKIP != '1' && env.MODE == 'publish'

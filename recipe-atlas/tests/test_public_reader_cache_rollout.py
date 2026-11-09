@@ -7,7 +7,7 @@ from uuid import uuid4
 
 ROOT = Path(__file__).resolve().parents[1]
 VERSION = '0.41.9'
-PUBLIC_READER_VERSION = '0.47.1'
+PUBLIC_READER_VERSION = '0.48.0'
 L_VERSION = '0.46.0'
 M_MODULES = ('illustrated-record.mjs', 'material-guide.mjs', 'material-hub.mjs', 'reader-app.mjs', 'reader.css')
 H_VERSION = '0.43.0'
@@ -18,9 +18,11 @@ K_PATCH_MODULES = ('illustrated-record.mjs', 'material-guide.mjs', 'material-hub
 K_MODULES = ('chemical-viewer.mjs', 'crystal-defaults.mjs', 'crystal-viewer.mjs', 'evans2010-products.mjs', 'illustrated-record.mjs', 'material-guide.mjs', 'material-hub.mjs', 'protocol-record-fit.mjs', 'protocol-references.mjs', 'protocol-visuals.mjs', 'reader-app.mjs', 'reader-particle.mjs', 'reader-structures.mjs', 'reported-protocol-scenes.mjs', 'reported-scene-drawing.mjs', 'source-field-copy.mjs')
 PUBLIC_MODULES = ('illustrated-record.mjs', 'material-guide.mjs', 'material-hub.mjs', 'method-families.mjs', 'reader-app.mjs')
 H_MODULES = ('chemical-reference-route.mjs', 'chemical-viewer.mjs', 'crystal-viewer.mjs', 'evans2010-products.mjs', 'illustrated-record.mjs', 'material-app.mjs', 'material-guide.mjs', 'material-hub.mjs', 'protocol-references.mjs', 'protocol-visuals.mjs', 'reader-app.mjs', 'reader-presentation-loader.mjs', 'reader-structures.mjs')
+N_VERSION='0.48.0'
+N_MODULES=('chemical-viewer.mjs', 'crystal-viewer.mjs', 'evans2010-products.mjs', 'illustrated-record.mjs', 'material-guide.mjs', 'material-hub.mjs', 'paper-app.mjs', 'paper-review.mjs', 'particle-shapes.mjs', 'protocol-modules.mjs', 'protocol-references.mjs', 'protocol-visuals.mjs', 'reader-app.mjs', 'reader-figure-morphology.mjs', 'reader-particle.mjs', 'reader-scoped-product-art.mjs', 'reader-structures.mjs', 'williamson2021-protocol.mjs')
 def version_for(module):
     name=module.rsplit('/',1)[-1]
-    return '0.44.0' if name == 'method-families.mjs' else PUBLIC_READER_VERSION if name in M_MODULES else L_VERSION if name in L_MODULES else K_PATCH_VERSION if name in K_PATCH_MODULES else K_VERSION if name in K_MODULES else H_VERSION if name in H_MODULES else VERSION
+    return N_VERSION if name in N_MODULES else '0.47.1' if name == 'reader.css' else '0.44.0' if name == 'method-families.mjs' else PUBLIC_READER_VERSION if name in M_MODULES else L_VERSION if name in L_MODULES else K_PATCH_VERSION if name in K_PATCH_MODULES else K_VERSION if name in K_MODULES else H_VERSION if name in H_MODULES else VERSION
 MODULES = ('illustrated-record.mjs', 'material-hub.mjs', 'material-guide.mjs',
            'reader-app.mjs', 'reader-presentation-loader.mjs', 'method-families.mjs')
 EXPECTED = {
@@ -106,7 +108,7 @@ class PublicReaderCacheRollout(unittest.TestCase):
 
     def test_actual_shell_changes_only_material_hub_entry_version(self):
         shell = self.functions()['shell']
-        for name, version in (('material-hub.mjs', PUBLIC_READER_VERSION), ('paper-review.mjs', '0.41.9'),
+        for name, version in (('material-hub.mjs', PUBLIC_READER_VERSION), ('paper-review.mjs', '0.48.0'), ('paper-app.mjs', '0.48.0'),
                               ('evidence-gallery.mjs', '0.41.9'), ('library-app.mjs', '0.33.0-r2')):
             with self.subTest(entry=name):
                 self.assertEqual(module_entry(shell('Fixture', '<p>Fixture</p>', name)), name + '?v=' + version)
@@ -130,8 +132,8 @@ class PublicReaderCacheRollout(unittest.TestCase):
     def test_stale_or_unversioned_import_fails_same_reachable_graph_check(self):
         entries, modules = self.graph_inputs()
         for parent, before, after in (
-            ('illustrated-record.mjs', 'reader-app.mjs?v=0.47.1', 'reader-app.mjs?v=0.41.7'),
-            ('material-hub.mjs', 'material-guide.mjs?v=0.47.1', 'material-guide.mjs?v=0.41.7'),
+            ('illustrated-record.mjs', 'reader-app.mjs?v=0.48.0', 'reader-app.mjs?v=0.41.7'),
+            ('material-hub.mjs', 'material-guide.mjs?v=0.48.0', 'material-guide.mjs?v=0.41.7'),
             ('material-guide.mjs', 'reader-presentation-loader.mjs?v=0.43.0', 'reader-presentation-loader.mjs'),
             ('reader-app.mjs', 'reader-presentation-loader.mjs?v=0.43.0', 'reader-presentation-loader.mjs?v=0.41.10'),
             ('reader-app.mjs', 'method-families.mjs?v=0.44.0', 'method-families.mjs'),

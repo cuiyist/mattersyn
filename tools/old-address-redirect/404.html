@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>NanoXtalSyn — address moved</title>
+<style>body{font:16px/1.6 system-ui,sans-serif;color:#17364b;max-width:42rem;margin:12vh auto;padding:0 1.25rem}h1{font-size:2rem}a{color:#176f86;overflow-wrap:anywhere}.mark{display:inline-grid;place-items:center;width:2.4rem;height:2.4rem;border-radius:.5rem;background:#247e8b;color:white;font-weight:700;margin-right:.5rem}</style>
+</head>
+<body>
+<h1><span class="mark" aria-hidden="true">N</span>NanoXtalSyn</h1>
+<p>Nanocrystal synthesis atlas</p>
+<p>The atlas has moved. <a id="destination" href="https://cuiyist.github.io/nanoxtalsyn-site/">Continue to NanoXtalSyn</a>.</p>
+<script>
+(() => {
+  const oldBase = new URL('https://cuiyist.github.io/mattersyn-site/');
+  const newBase = new URL('https://cuiyist.github.io/nanoxtalsyn-site/');
+  const current = window.location;
+  if (current.origin !== oldBase.origin) return;
+  const oldRoot = oldBase.pathname.slice(0, -1);
+  const relative = current.pathname === oldRoot ? ''
+    : current.pathname.startsWith(oldBase.pathname) ? current.pathname.slice(oldBase.pathname.length) : null;
+  if (relative === null) return;
+  const target = new URL(newBase.href);
+  target.pathname = newBase.pathname + relative;
+  target.search = current.search;
+  target.hash = current.hash;
+  document.getElementById('destination').href = target.href;
+  current.replace(target.href);
+})();
+</script>
+</body>
+</html>

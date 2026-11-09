@@ -3,13 +3,23 @@ name: mattersyn-paper-to-site
 description: Create or refine interactive materials-synthesis websites from research papers and supporting information, especially colloidal nanocrystals and quantum dots. Use for evidence-linked recipes, molecular and crystal viewers, stage-specific apparatus illustrations, and synthesis atlas pages.
 ---
 
-# MatterSyn: paper to interactive synthesis
+# NanoXtalSyn: paper to interactive synthesis
 
 Turn a synthesis paper into a structured, source-linked recipe and a clear interactive page on the
-MatterSyn website, without presenting an incomplete historical method as a complete lab SOP.
+NanoXtalSyn website, without presenting an incomplete historical method as a complete lab SOP.
 
 For a focused edit, do only that edit. Don't rebuild the site, re-extract unchanged papers, or
 add records merely because this skill was invoked.
+
+## Current project identity — 9 November 2026
+
+NanoXtalSyn is the nanocrystal synthesis atlas. Current repositories are [cuiyist/nanoxtalsyn](https://github.com/cuiyist/nanoxtalsyn), [cuiyist/nanoxtalsyn-site](https://github.com/cuiyist/nanoxtalsyn-site) and [cuiyist/nanoxtalsyn2](https://github.com/cuiyist/nanoxtalsyn2); the website is https://cuiyist.github.io/nanoxtalsyn-site/.
+
+Website changes use a source branch and pull request. Full builds, release checks and publication run in GitHub Actions. Record files and Download JSON stay byte-identical for the rename. Existing schema strings, environment variables, globals, policy repo labels, artifact names and file/folder/skill names retain their established identifiers. No paper reading is authorized; the audit lane, Worker A/B and the five older owner-waiting entries remain paused. The release ledger is authoritative for verified live commits and counts.
+
+Earlier dated entries below are preserved verbatim as history.
+
+---
 
 ## Active job — October 11 owner amendment
 

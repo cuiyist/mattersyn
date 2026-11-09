@@ -1,6 +1,6 @@
 # Shared Reader integration
 
-Apply this contract when preparing another paper for the existing MatterSyn atlas. Reuse the accepted source review and inspect changed claims independently; a new presentation does not require repeating unchanged source work.
+Apply this contract when preparing another paper for the existing NanoXtalSyn atlas. Reuse the accepted source review and inspect changed claims independently; a new presentation does not require repeating unchanged source work.
 
 - Start from the current canonical schema and a named source commit. Return additive records, assets and shared-JSON deltas. Do not return whole shared registries or a separate demonstration website that the integration owner must reconstruct.
 - Include the immutable Reader presentation additions, material-hub method membership, source/figure associations, stock and solution displays, chemical bindings and stage illustrations. A canonical JSON file alone is not an integrated Reader contribution. Observation rows and supporting procedures stay distinct from growth routes.

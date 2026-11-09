@@ -1,4 +1,4 @@
-import {chemicalRegistry,chemicalEntry,openChemical} from './chemical-viewer.mjs?v=0.46.0';
+import {chemicalRegistry,chemicalEntry,openChemical} from './chemical-viewer.mjs?v=0.48.0';
 import {el,button,isEquipment,recordURL,link} from './reader-utils.mjs?v=0.41.9';
 let equipmentDialog;
 export function showEquipment(material){

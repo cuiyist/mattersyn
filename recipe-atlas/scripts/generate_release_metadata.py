@@ -37,7 +37,7 @@ def remove_public_progress(dist):
         cleaned=re.sub(r'<link\b[^>]*href=[\"\'][^\"\']*progress\.css[^\"\']*[\"\'][^>]*>','',cleaned)
         if cleaned!=text:page.write_text(cleaned,encoding='utf-8',newline='\n')
     # Preserve a harmless old-link destination without exposing the owner's queue.
-    (dist/'progress.html').write_text('<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="refresh" content="0;url=dataset.html"><title>MatterSyn synthesis dataset</title></head><body><p><a href="dataset.html">Open the synthesis dataset</a></p></body></html>\n',encoding='utf-8',newline='\n')
+    (dist/'progress.html').write_text('<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="refresh" content="0;url=dataset.html"><title>NanoXtalSyn synthesis dataset</title></head><body><p><a href="dataset.html">Open the synthesis dataset</a></p></body></html>\n',encoding='utf-8',newline='\n')
     for name in ('progress.mjs','progress.css','data/review-progress.json','data/pilot-source-queue.json'):
         path=dist/name
         if path.is_file():path.unlink()
@@ -48,7 +48,7 @@ def citation(s,review):
     if paper.get('journal'):line+=' *'+paper['journal']+'*'+(', '+str(paper['volume'])if paper.get('volume')else'')+(', '+str(paper['pages'])if paper.get('pages')else'')+'.'
     if s.get('doi'):line+=' ['+s['doi']+'](https://doi.org/'+s['doi']+').'
     elif s.get('url'):line+=' [Source]('+s['url']+').'
-    if review:line+=' [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id='+review.get('paper_id',s['id'])+').'
+    if review:line+=' [Source review and scope](https://cuiyist.github.io/nanoxtalsyn-site/paper-review.html?id='+review.get('paper_id',s['id'])+').'
     else:line+=' Review scope remains stated in the linked website records.'
     return line.replace('\n',' ')
 def readme_with_references(existing,introduction,body):
@@ -81,9 +81,9 @@ def generate(root,snapshot):
         seen.add(entry['sourceUrl']);refs+=['- ['+entry['name']+']('+entry['sourceUrl']+'). '+entry.get('sourceType','Qualified reference').replace('_',' ')+'.','']
     refs+=['A citation does not grant reuse rights to third-party figures or source text. The separate release boundary gate controls public delivery.',''];body='\n'.join(refs)
     for folder in [root.parent,dist]:
-        (folder/'REFERENCES.md').write_text('# MatterSyn references\n\n'+body,encoding='utf-8',newline='\n')
-        readme=folder/'README.md';intro=('# MatterSyn website'if folder==dist else'# MatterSyn')+'\n\n[Open the atlas](https://cuiyist.github.io/mattersyn-site/)\n\nMatterSyn organizes source-attributed synthesis, characterization and property records. Publication and task-specific training eligibility are separate approvals.\n'
-        readme.write_text(readme_with_references(readme.read_text(encoding='utf-8').replace(' · [Review progress](https://cuiyist.github.io/mattersyn-site/progress.html)','')if readme.exists()else'',intro,body),encoding='utf-8',newline='\n')
+        (folder/'REFERENCES.md').write_text('# NanoXtalSyn references\n\n'+body,encoding='utf-8',newline='\n')
+        readme=folder/'README.md';intro=('# NanoXtalSyn website'if folder==dist else'# NanoXtalSyn')+'\n\n[Open the atlas](https://cuiyist.github.io/nanoxtalsyn-site/)\n\nNanoXtalSyn — Nanocrystal synthesis atlas.\n\nNanoXtalSyn organizes source-attributed synthesis, characterization and property records. Publication and task-specific training eligibility are separate approvals.\n'
+        readme.write_text(readme_with_references(readme.read_text(encoding='utf-8').replace(' · [Review progress](https://cuiyist.github.io/nanoxtalsyn-site/progress.html)','')if readme.exists()else'',intro,body),encoding='utf-8',newline='\n')
     remove_public_progress(dist)
     binding={'schema':'mattersyn-generated-release-metadata/1','release_id':snapshot['release_id'],'updated_at':snapshot['updated_at'],'source_commit':snapshot['source_commit'],'canonical_records':len(records),'primary_sources':len(primary),'manifest_sha256':hashlib.sha256((dist/'data/dataset-manifest.json').read_bytes()).hexdigest(),'progress_public':False,'progress_sha256':None,'bibliography_sha256':hashlib.sha256(body.encode()).hexdigest()}
     dump(dist/'data/release-snapshot.json',binding);return binding

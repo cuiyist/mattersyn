@@ -13,7 +13,7 @@ const stages={
 };
 const el=(tag,text,cls)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(cls)n.className=cls;return n;};
 function context(o,r){return r?.record_id===routeId?stages[o?.id]||null:null;}
-export function buildWilliamson2021Scene(o,r){const x=context(o,r);return x?{caption:`${x[0]}. Shared MatterSyn operation illustration; equipment geometry is generic and reported parameters appear alongside.`}:null;}
+export function buildWilliamson2021Scene(o,r){const x=context(o,r);return x?{caption:`${x[0]}. Shared NanoXtalSyn operation illustration; equipment geometry is generic and reported parameters appear alongside.`}:null;}
 export function decorateWilliamson2021Art(host,o,r){
  const x=context(o,r);if(!host||!x)return host;
  host.classList.add('protocol-art-williamson-source-linked');

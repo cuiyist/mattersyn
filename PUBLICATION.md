@@ -1,3 +1,13 @@
+## Current project identity — 9 November 2026
+
+NanoXtalSyn is the nanocrystal synthesis atlas. Current repositories are [cuiyist/nanoxtalsyn](https://github.com/cuiyist/nanoxtalsyn), [cuiyist/nanoxtalsyn-site](https://github.com/cuiyist/nanoxtalsyn-site) and [cuiyist/nanoxtalsyn2](https://github.com/cuiyist/nanoxtalsyn2); the website is https://cuiyist.github.io/nanoxtalsyn-site/.
+
+Website changes use a source branch and pull request. Full builds, release checks and publication run in GitHub Actions. Record files and Download JSON stay byte-identical for the rename. Existing schema strings, environment variables, globals, policy repo labels, artifact names and file/folder/skill names retain their established identifiers. No paper reading is authorized; the audit lane, Worker A/B and the five older owner-waiting entries remain paused. The release ledger is authoritative for verified live commits and counts.
+
+Earlier dated entries below are preserved verbatim as history.
+
+---
+
 Verified normal three-paper batch at 2026-10-28T14:18:02+00:00: SourceH16 b951a05b13814cbab70b16f59096282c8240d13f / publicM17 c4146dbf09c58eed3bbc035c0cf869f344aee863 / actual Site be411a5c01a1805f1ef3c9b68713f6300f956213. Added3papers/3source_extracted records/8captioned crops; actual accepted Live totals 2724/6577/4456/1167. Root normal publication+Pages+anonymous proofs required. No expert-audit or training credit. Historical failures/refusals, dated census and waiting questions remain unchanged. Current next step/status must be Root-observed at the actual update time.
 
 

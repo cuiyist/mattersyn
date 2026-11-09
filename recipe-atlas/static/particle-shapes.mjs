@@ -1,5 +1,5 @@
 /**
- * MatterSyn morphology artwork — qualitative, code-native illustrations.
+ * NanoXtalSyn morphology artwork — qualitative, code-native illustrations.
  * These geometries are display design, not measured coordinates or dimensions.
  * Choose a key only from source-bound morphology metadata; never infer it here.
  * Color distinguishes illustrated regions and does not encode elemental identity.

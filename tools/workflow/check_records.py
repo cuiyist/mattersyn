@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Source-free consistency checks for MatterSyn canonical records (read-only).
+"""Source-free consistency checks for NanoXtalSyn canonical records (read-only).
 
 Flags internal inconsistencies that a reviewer should look at against the paper. It never
 reads paper text and never decides that a value is wrong; every flag is a question for the

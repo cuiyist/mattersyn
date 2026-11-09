@@ -1,4 +1,4 @@
-# MatterSyn sample structure descriptor v0.2
+# NanoXtalSyn sample structure descriptor v0.2
 
 **Status:** pilot specification. Apply to a small, audited sample before migrating canonical records. It defines separate data views; it does not make every published row training-ready.
 

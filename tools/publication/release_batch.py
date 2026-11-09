@@ -22,13 +22,15 @@ Paper text is never read.
 Standard library only; works on Windows, macOS and Linux.
 """
 from __future__ import annotations
-import argparse, datetime as dt, hashlib, json, os, random, shutil, stat, subprocess, sys, time, urllib.error, urllib.parse, urllib.request
+import argparse, datetime as dt, hashlib, json, os, random, re, shutil, stat, subprocess, sys, time, urllib.error, urllib.parse, urllib.request
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 from scoped_status import eligible_scoped_status
+from repository_names import (SOURCE_REPO, SITE_URL, CI_WORKFLOW_NAME, SITE_PUBLISH_WORKFLOW_NAME,
+                              LEGACY_SITE_PUBLISH_WORKFLOW_NAME, PAGES_WORKFLOW_NAME, LEGACY_PAGES_WORKFLOW_NAME)
 
 SITE_CONTROL = {'.git', '.github', '.release-control', 'tools', '.gitattributes'}  # never replaced by the build
-CI_WORKFLOW = 'MatterSyn source and build checks'
+CI_WORKFLOW = CI_WORKFLOW_NAME
 
 
 # Inline proposal only. Dependencies are the parent's os/stat/shutil globals.
@@ -494,7 +496,7 @@ def new_material_routes(dist, papers):
 def http_get(url, headers=None, opener=None):
     """Anonymous HTTPS GET (no cookies or credentials). Falls back to the system curl when this
     Python has no CA bundle (common with python.org installers on macOS)."""
-    req = urllib.request.Request(url, headers={'User-Agent': 'mattersyn-release-check', **(headers or {})})
+    req = urllib.request.Request(url, headers={'User-Agent': 'NanoXtalSyn-release-check', **(headers or {})})
     try:
         with (opener or urllib.request.urlopen)(req, timeout=60) as r:
             return r.read()
@@ -720,7 +722,31 @@ def write_json(path, data):
     Path(path).write_text(json.dumps(data, indent=2, ensure_ascii=False) + '\n', encoding='utf-8')
 
 
+def stage_pages_workflow_name(src, site):
+    """Rename only the Pages display header for renamed Source; old-source dry runs stay exact."""
+    source_workflow = Path(src) / '.github/workflows/site-publish.yml'
+    if not source_workflow.is_file():
+        return False  # pre-workflow historical sources and small synthetic fixtures
+    names = re.findall(rb'^name: ([^\r\n]+)', source_workflow.read_bytes(), re.M)
+    if names == [LEGACY_SITE_PUBLISH_WORKFLOW_NAME.encode()]:
+        return False
+    if names != [SITE_PUBLISH_WORKFLOW_NAME.encode()]:
+        raise SystemExit('Unexpected Source publisher workflow name')
+    target = Path(site) / '.github/workflows/pages.yml'
+    raw = target.read_bytes()
+    headers = list(re.finditer(rb'^name: ([^\r\n]+)', raw, re.M))
+    if len(headers) != 1 or headers[0].group(1) not in {
+            LEGACY_PAGES_WORKFLOW_NAME.encode(), PAGES_WORKFLOW_NAME.encode()}:
+        raise SystemExit('Unexpected Site Pages workflow name; preserve its job/check configuration')
+    header = headers[0]
+    changed = raw[:header.start(1)]+PAGES_WORKFLOW_NAME.encode()+raw[header.end(1):]
+    if changed != raw:
+        target.write_bytes(changed)
+    return changed != raw
+
+
 def stage_controls(src, site, allow, sync_gate_tools):
+    stage_pages_workflow_name(src, site)
     rc = Path(site) / '.release-control'
     rc.mkdir(exist_ok=True)
     shutil.copyfile(allow, rc / 'site-allowlist.json')
@@ -798,7 +824,7 @@ def validate_prepared(work, src, site, release_id, reviewer, sync_gate_tools, so
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument('--source', required=True, type=Path, help='clean source checkout at the commit to release')
-    ap.add_argument('--site', required=True, type=Path, help='clean mattersyn-site checkout on main')
+    ap.add_argument('--site', required=True, type=Path, help='clean nanoxtalsyn-site checkout on main')
     ap.add_argument('--work', required=True, type=Path, help='new for dry run; reuse for push and live re-verification')
     ap.add_argument('--release-id', required=True)
     ap.add_argument('--reviewer', required=True, help='who approved the papers in this batch (quick audit)')
@@ -810,8 +836,8 @@ def main():
     ap.add_argument('--retire-generated-raw', action='store_true', help='fresh dry run only: remove own copied raw inputs after each successful build; retain every dist and check')
     ap.add_argument('--raw-workspace', type=Path, help='explicit absolute existing workspace containing --work; required with raw retirement or phase budgets')
     ap.add_argument('--phase-budget', type=Path, help='optional complete positive per-step owned peak JSON; fresh free minus peak must retain fixed100GiB')
-    ap.add_argument('--source-repo', default='cuiyist/mattersyn')
-    ap.add_argument('--site-url', default='https://cuiyist.github.io/mattersyn-site/')
+    ap.add_argument('--source-repo', default=SOURCE_REPO)
+    ap.add_argument('--site-url', default=SITE_URL)
     ap.add_argument('--skip-ci-check', action='store_true', help='dry runs only: do not require source CI success')
     ap.add_argument('--wait-ci', type=float, default=0, metavar='MINUTES', help='wait up to MINUTES for source CI to finish')
     a = ap.parse_args()
@@ -864,7 +890,7 @@ def main():
             git(site, 'add', '-A')
             body = '\n'.join(f'- {p} ({len(added_papers[p])} records)' for p in sorted(added_papers)) or '- no new source papers'
             run(['git', '-C', site, 'commit', '-q', '-m', f'Publish {len(added_papers)} papers ({a.release_id})', '-m',
-                 f'Built from cuiyist/mattersyn {commit}.\n\n{body}'])
+                 f'Built from {SOURCE_REPO} {commit}.\n\n{body}'])
             run(['git', '-C', site, 'push', '-q', 'origin', 'HEAD:main'])
             pushed = {'source_commit': commit, 'site_commit': git(site, 'rev-parse', 'HEAD'), 'pushed_at': now()}
             write_json(work / 'push-receipt.json', pushed)

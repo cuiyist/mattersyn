@@ -1,6 +1,6 @@
 # Training-oriented record design
 
-Read when a synthesis atlas is intended to supply machine-learning examples. Apply these scientific distinctions to the requested scope; do not infer that every literature method is training-ready. The original MatterSyn project now implements a pilot canonical-record pipeline; see the project reference for its current files and limits.
+Read when a synthesis atlas is intended to supply machine-learning examples. Apply these scientific distinctions to the requested scope; do not infer that every literature method is training-ready. The original NanoXtalSyn project now implements a pilot canonical-record pipeline; see the project reference for its current files and limits.
 
 ## Unit of evidence and presentation
 
@@ -41,13 +41,13 @@ A 5,000–50,000-record collection is a plausible basis for a specialized model 
 
 Compare retrieval/expert precedents, a simple forward outcome model where outcomes exist, and constrained recipe generation. Split by source paper and connected duplicate/recipe/batch families before augmentation. Use chronological, unseen-chemistry or laboratory holdouts when they match the claimed generalization. Evaluate chemical validity, ingredient/operation/condition quality and uncertainty, then use prospective collaborating-lab experiments. Exact agreement with one published recipe is not the only valid endpoint.
 
-## Deferred MatterSyn extensions
+## Deferred NanoXtalSyn extensions
 
 The original project's user anticipates an evidence-grounded reader chatbot, crystal-structure tools for DFT workflows, and comparison of experimental papers with theory to inform website revisions. These are deferred directions, not authorization to implement, run calculations, retrieve additional papers or expand recurring curation. Current paper review remains the priority until the user requests an extension.
 
 Maintain stable identifiers, source/sample links, structure provenance and version history during current curation. When later requested, ground chatbot answers in cited curated evidence and preserve gaps; validate any DFT model for its intended calculation rather than treating a viewer asset as simulation-ready; keep theoretical assumptions and comparisons separate from reported experimental evidence. Record evidence-supported interpretation changes transparently without rewriting observations to match theory. Scope the actual feature when requested.
 
-## Original MatterSyn example
+## Original NanoXtalSyn example
 
 The implemented pilot uses `data/records/*.json` as the canonical source. `scripts/build_dataset.py` validates records and generates `dist/records/*.html`, public JSON, a manifest, grouped assignments and task-specific JSONL. Run `python -m unittest discover -s tests -v` and `python scripts/check_site.py` after scientific or schema changes. Edit canonical records and increment their revision for published scientific changes; generated copies are not independent authoring sources. Keep old rich paper guides linked as context rather than treating them as extra training examples.
 
@@ -59,7 +59,7 @@ Evaluate leakage at the task-view boundary: choose explicitly linked measurement
 
 The current collection is a pilot, not a load-tested 50,000-record service. Freeze source-group manifests for comparisons and add indexed catalog storage/pagination when needed. Report how many records are actually eligible for each task; do not use page count as a claim of independent experiments or model readiness.
 
-In the MatterSyn chemical registry, retain explicit empty bindings for canonical observations that have no material inventory. The binding record-ID set must equal the canonical record-ID set; an empty material list is not a reason to omit its provenance entry. Update stale draft labels through source-specific presentation metadata after audit, preserving the frozen scientific record.
+In the NanoXtalSyn chemical registry, retain explicit empty bindings for canonical observations that have no material inventory. The binding record-ID set must equal the canonical record-ID set; an empty material list is not a reason to omit its provenance entry. Update stale draft labels through source-specific presentation metadata after audit, preserving the frozen scientific record.
 
 For host-mediated synthesis, carry the intended host explicitly into task inputs when it is source-supported. Schema 1.2.0 provides an optional `intended_target.host`. Precursor-selection exports may carry separately identified host matrices and electrolytes in `process_materials`; do not relabel a salt used for ionic-strength control as an elemental product precursor merely to satisfy an allowlist. Verify the actual exported JSONL after changing roles or schemas. Regional observations, author-model potentials, inferred diffusivities and qualitative electrolyte comparisons remain contextual records unless a specific supervised task has defensible sample linkage and labels.
 

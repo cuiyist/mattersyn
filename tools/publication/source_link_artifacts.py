@@ -7,6 +7,7 @@ from pathlib import Path
 import argparse, copy, hashlib, html, importlib.util, json, re
 from functools import lru_cache
 from safe_paths import checked_path, preflight_tree
+from repository_names import SITE_URL
 
 TEXT={'.json','.jsonl','.html','.js','.mjs','.css','.md','.csv','.txt'}
 RETIRED_PUBLIC_ARTIFACTS=(
@@ -49,7 +50,7 @@ def url_for(asset):
         for url in binding.get('reference_urls',[]):
             if url.startswith('https://doi.org/'):return url
     # A source-library link explicitly represents an unresolved exact source.
-    return 'https://cuiyist.github.io/mattersyn-site/library.html'
+    return SITE_URL+'library.html'
 
 def card(url):
     label=url.replace('https://doi.org/','DOI: ')
@@ -58,7 +59,7 @@ def card(url):
 
 def authored_graphic(kind):
     if kind=='og.png':
-        return b'<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630"><rect width="1200" height="630" fill="#f5f8fc"/><rect x="80" y="90" width="88" height="88" rx="22" fill="#2258df"/><text x="101" y="155" fill="white" font-family="Arial,sans-serif" font-size="58" font-weight="700">M</text><text x="80" y="300" font-family="Arial,sans-serif" font-size="86" fill="#13364d" font-weight="600">MatterSyn</text><text x="84" y="385" font-family="Arial,sans-serif" font-size="37" fill="#486174">Materials synthesis and characterization</text><path d="M84 440h1000" stroke="#cbd7e5" stroke-width="2"/><text x="84" y="508" font-family="Arial,sans-serif" font-size="28" fill="#225da5">Recipes, measured outcomes and traceable sources</text></svg>\n'
+        return b'<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630"><rect width="1200" height="630" fill="#f5f8fc"/><rect x="80" y="90" width="88" height="88" rx="22" fill="#2258df"/><text x="101" y="155" fill="white" font-family="Arial,sans-serif" font-size="58" font-weight="700">N</text><text x="80" y="300" font-family="Arial,sans-serif" font-size="86" fill="#13364d" font-weight="600">NanoXtalSyn</text><text x="84" y="385" font-family="Arial,sans-serif" font-size="37" fill="#486174">Nanocrystal synthesis atlas</text><path d="M84 440h1000" stroke="#cbd7e5" stroke-width="2"/><text x="84" y="508" font-family="Arial,sans-serif" font-size="28" fill="#225da5">Recipes, measured outcomes and traceable sources</text></svg>\n'
     return b'<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800"><rect width="800" height="800" rx="32" fill="#f5f8fc"/><path d="M345 125h110v218c110 45 160 162 109 263-67 130-262 130-329 0-51-101-1-218 110-263z" fill="#e4f4fa" stroke="#29566f" stroke-width="10"/><path d="M242 505c-16 89 30 154 102 177 91 29 174-6 206-82 14-35 15-65 8-95z" fill="#66b8c5" opacity=".75"/><path d="M327 120h146 M347 167h106 M267 725h266" fill="none" stroke="#29566f" stroke-width="10" stroke-linecap="round"/><circle cx="335" cy="576" r="12" fill="white" opacity=".75"/><circle cx="461" cy="616" r="9" fill="white" opacity=".75"/><text x="400" y="60" text-anchor="middle" font-family="Arial,sans-serif" font-size="25" fill="#486174">Illustrative reaction vessel</text><text x="400" y="775" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#486174">Apparatus schematic; dimensions are illustrative</text></svg>\n'
 
 def remove_retired_public_artifacts(root):
@@ -116,10 +117,10 @@ def main():
     overrides=[];public={};replacements={};new_assets=[]
     for asset,location in rows(registry):
         if asset.get('classification')=='unknown'and location['path']not in {'og.png','assets/flask.png'}:raise RuntimeError('Unknown graphic origin requires a distinct reviewed display decision')
-        original=location['path'];checked_path(root,root/original);is_illustration=original in {'og.png','assets/flask.png'};url='https://cuiyist.github.io/mattersyn-site/'if is_illustration else url_for(asset);raw=authored_graphic(original)if is_illustration else card(url);display='assets/source-links/'+sha(raw)[:24]+'.svg';destination=checked_path(root,root/display)
+        original=location['path'];checked_path(root,root/original);is_illustration=original in {'og.png','assets/flask.png'};url=SITE_URL if is_illustration else url_for(asset);raw=authored_graphic(original)if is_illustration else card(url);display='assets/source-links/'+sha(raw)[:24]+'.svg';destination=checked_path(root,root/display)
         if not destination.resolve().is_relative_to(root/'assets/source-links'):raise RuntimeError('Invalid card destination')
         if a.phase!='prepare':destination.parent.mkdir(parents=True,exist_ok=True);destination.write_bytes(raw)
-        row={'original_path':original,'original_sha256':asset['asset_hash'],'display_path':display,'display_sha256':sha(raw),'source_url':url,'display_note':'Original MatterSyn explanatory illustration; dimensions are schematic.'if is_illustration else'Original figure not reproduced; redistribution clearance is pending. This source-link card is not measured data.'}
+        row={'original_path':original,'original_sha256':asset['asset_hash'],'display_path':display,'display_sha256':sha(raw),'source_url':url,'display_note':'Original NanoXtalSyn explanatory illustration; dimensions are schematic.'if is_illustration else'Original figure not reproduced; redistribution clearance is pending. This source-link card is not measured data.'}
         overrides.append(row);replacements[original]=display
         if not is_illustration:public[display]={'source_url':url,'source_identified':'doi.org/'in url,'display_note':row['display_note']}
         new_assets.append({'path':display,'sha256':sha(raw),'classification':'authored_diagram','rights_status':'authored','source_url':url})

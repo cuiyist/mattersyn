@@ -1,7 +1,7 @@
-import {mountFigureMorphology} from './reader-figure-morphology.mjs?v=0.41.0';
-import {mountParticleContext} from './reader-particle.mjs?v=0.45.0';
+import {mountFigureMorphology} from './reader-figure-morphology.mjs?v=0.48.0';
+import {mountParticleContext} from './reader-particle.mjs?v=0.48.0';
 import {el,button,link,badge,siteURL,disclosure,recordURL} from './reader-utils.mjs?v=0.41.9';
-import {elementLegend,atomColors} from './chemical-viewer.mjs?v=0.46.0';
+import {elementLegend,atomColors} from './chemical-viewer.mjs?v=0.48.0';
 import {drawFiniteReference} from './finite-crystal-reference.mjs';
 import {defaultCrystalReferences} from './crystal-defaults.mjs?v=0.45.0';
 let registry,roles,availability;

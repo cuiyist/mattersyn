@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-"""Hash-pinned, additive importer for accepted MatterSyn paper packages.
+"""Hash-pinned, additive importer for accepted NanoXtalSyn paper packages.
 
 This first fixture supports the frozen Thomson et al. Bi2S3 package. It writes
 only a new, private overlay directory; it never writes to --checkout. Existing
@@ -943,7 +943,7 @@ def verify_staged_overlay(stage_dir: Path, expected_manifest_sha256: str | None 
 
 
 def parse_args(argv=None):
-    parser = argparse.ArgumentParser(description="Preflight/stage one independently accepted MatterSyn package into a private overlay.")
+    parser = argparse.ArgumentParser(description="Preflight/stage one independently accepted NanoXtalSyn package into a private overlay.")
     parser.add_argument("--checkout", type=Path, required=True, help="Explicit clean source checkout used as the contract; never written.")
     parser.add_argument("--package", type=Path, required=True, help="Frozen package overlay directory.")
     parser.add_argument("--evidence-root", type=Path, required=True, help="Private root containing the exact author and independent audit freezes.")

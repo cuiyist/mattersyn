@@ -1,4 +1,4 @@
-name: MatterSyn source and build checks
+name: NanoXtalSyn source and build checks
 on:
   push:
     branches: [main]
@@ -36,7 +36,10 @@ jobs:
         working-directory: tools/mattersyn-release
         run: python -m unittest discover -s tests -v
       - name: Test publication and preservation helpers
-        run: python -m unittest discover -s tools/publication -p 'test_*.py' -v
+        run: |
+          python -m unittest discover -s tools/publication -p 'test_*.py' -v
+          python -B -m unittest discover -s tools/publication/tests -p 'test_brand_name_scan.py' -v
+          node --test tools/ci/old-address-redirect.test.mjs
       - name: Test local package staging without private evidence
         run: python -m unittest discover -s tools/package-importer/tests -v
       - name: Test scoped packages and event metrics
@@ -107,6 +110,15 @@ jobs:
             --snapshot "$RUNNER_TEMP/build-snapshot.json" \
             --registry publication/asset-rights-registry.json \
             --artifact-transform tools/publication/source_link_artifacts.py
+      - name: Check complete candidate branding inventory
+        run: |
+          python tools/ci/brand_name_scan.py --scan \
+            --root "$RUNNER_TEMP/candidate/project/recipe-atlas/dist" \
+            --manifest "$RUNNER_TEMP/candidate/candidate-manifest.json" \
+            --source-blueprint publication/build-inputs.json \
+            --identifiers tools/ci/brand-name-identifiers.json \
+            --phase candidate --source-commit "${{ github.sha }}" \
+            --out "$RUNNER_TEMP/n-brand-candidate-scan.json"
       - name: Detect protocol display changes for the fixed before/after comparison
         if: matrix.os == 'ubuntu-latest'
         env:
@@ -132,20 +144,20 @@ jobs:
           npx --prefix "$RUNNER_TEMP/protocol-pw" playwright install --with-deps chromium >/dev/null
           export PLAYWRIGHT_DIR="$RUNNER_TEMP/protocol-pw"
           mkdir -p "$RUNNER_TEMP/protocol-serve" "$RUNNER_TEMP/protocol-scenes"
-          ln -s "$RUNNER_TEMP/candidate/project/recipe-atlas/dist" "$RUNNER_TEMP/protocol-serve/mattersyn-site"
+          ln -s "$RUNNER_TEMP/candidate/project/recipe-atlas/dist" "$RUNNER_TEMP/protocol-serve/nanoxtalsyn-site"
           python -m http.server 8173 --bind 127.0.0.1 --directory "$RUNNER_TEMP/protocol-serve" >"$RUNNER_TEMP/protocol-server.log" 2>&1 &
           SERVER_PID=$!
           trap 'kill "$SERVER_PID"' EXIT
           git show "${PROTOCOL_SCENES_COMPARISON_BASE}:tools/ci/protocol-scenes-targets.json" > "$RUNNER_TEMP/protocol-scenes-base-targets.json"
           node --input-type=module -e 'import fs from "node:fs";import{execFileSync}from"node:child_process";import{beforeTargetsFromBaseSnapshot as convert,K_REGRESSION_TARGETS as rows}from"./tools/ci/protocol-scenes-check.mjs";const records=Object.fromEntries(rows.map(t=>[t.record_id,execFileSync("git",["show",process.argv[2]+":recipe-atlas/data/records/"+t.record_id+".json"])]));fs.writeFileSync(process.argv[3],JSON.stringify(convert(JSON.parse(fs.readFileSync(process.argv[1],"utf8")),records))+"\n",{flag:"wx"});' "$RUNNER_TEMP/protocol-scenes-base-targets.json" "$PROTOCOL_SCENES_COMPARISON_BASE" "$RUNNER_TEMP/protocol-scenes-before-targets.json"
-          node tools/ci/protocol-scenes-check.mjs --base https://cuiyist.github.io/mattersyn-site/ --out "$RUNNER_TEMP/protocol-scenes/before" --phase before --targets "$RUNNER_TEMP/protocol-scenes-before-targets.json"
-          node tools/ci/protocol-scenes-check.mjs --base http://127.0.0.1:8173/mattersyn-site/ --out "$RUNNER_TEMP/protocol-scenes/after" --phase after --targets tools/ci/protocol-scenes-targets.json
+          node tools/ci/protocol-scenes-check.mjs --base https://cuiyist.github.io/nanoxtalsyn-site/ --out "$RUNNER_TEMP/protocol-scenes/before" --phase before --targets "$RUNNER_TEMP/protocol-scenes-before-targets.json"
+          node tools/ci/protocol-scenes-check.mjs --base http://127.0.0.1:8173/nanoxtalsyn-site/ --out "$RUNNER_TEMP/protocol-scenes/after" --phase after --targets tools/ci/protocol-scenes-targets.json
           if [[ "$METHOD_FAMILIES_CHANGED" == "1" ]]; then
             mkdir -p "$RUNNER_TEMP/method-families"
             git show "${PROTOCOL_SCENES_COMPARISON_BASE}:tools/ci/method-families-targets.json" > "$RUNNER_TEMP/method-families-base-targets.json"
             node --input-type=module -e 'import fs from "node:fs";import {beforeTargetsFromProtocolSnapshot as convert} from "./tools/ci/method-families-check.mjs";fs.writeFileSync(process.argv[3],JSON.stringify(convert(JSON.parse(fs.readFileSync(process.argv[1],"utf8")),JSON.parse(fs.readFileSync(process.argv[2],"utf8"))))+"\n",{flag:"wx"});' "$RUNNER_TEMP/protocol-scenes-before-targets.json" "$RUNNER_TEMP/method-families-base-targets.json" "$RUNNER_TEMP/method-families-before-targets.json"
-            node tools/ci/method-families-check.mjs --base https://cuiyist.github.io/mattersyn-site/ --out "$RUNNER_TEMP/method-families/before" --phase before --targets "$RUNNER_TEMP/method-families-before-targets.json"
-            node tools/ci/method-families-check.mjs --base http://127.0.0.1:8173/mattersyn-site/ --out "$RUNNER_TEMP/method-families/after" --phase after --targets tools/ci/method-families-targets.json
+            node tools/ci/method-families-check.mjs --base https://cuiyist.github.io/nanoxtalsyn-site/ --out "$RUNNER_TEMP/method-families/before" --phase before --targets "$RUNNER_TEMP/method-families-before-targets.json"
+            node tools/ci/method-families-check.mjs --base http://127.0.0.1:8173/nanoxtalsyn-site/ --out "$RUNNER_TEMP/method-families/after" --phase after --targets tools/ci/method-families-targets.json
           fi
       - name: Retain protocol before/after screenshots
         if: always() && matrix.os == 'ubuntu-latest' && env.PROTOCOL_SCENES_CHANGED == '1'
@@ -168,11 +180,11 @@ jobs:
           npx --prefix "$RUNNER_TEMP/protocol-pw" playwright install --with-deps chromium >/dev/null
           export PLAYWRIGHT_DIR="$RUNNER_TEMP/protocol-pw"
           mkdir -p "$RUNNER_TEMP/chemical-serve"
-          ln -s "$RUNNER_TEMP/candidate/project/recipe-atlas/dist" "$RUNNER_TEMP/chemical-serve/mattersyn-site"
+          ln -s "$RUNNER_TEMP/candidate/project/recipe-atlas/dist" "$RUNNER_TEMP/chemical-serve/nanoxtalsyn-site"
           python -m http.server 8174 --bind 127.0.0.1 --directory "$RUNNER_TEMP/chemical-serve" >"$RUNNER_TEMP/chemical-server.log" 2>&1 &
           SERVER_PID=$!
           trap 'kill "$SERVER_PID"' EXIT
-          node tools/ci/chemical-reference-check.mjs --base http://127.0.0.1:8174/mattersyn-site/ --dist "$RUNNER_TEMP/candidate/project/recipe-atlas/dist" --out "$RUNNER_TEMP/chemical-modals"
+          node tools/ci/chemical-reference-check.mjs --base http://127.0.0.1:8174/nanoxtalsyn-site/ --dist "$RUNNER_TEMP/candidate/project/recipe-atlas/dist" --out "$RUNNER_TEMP/chemical-modals"
       - name: Retain chemical modal screenshots
         if: always() && matrix.os == 'ubuntu-latest' && env.CHEMICAL_REFERENCES_CHANGED == '1'
         uses: actions/upload-artifact@v4
@@ -189,6 +201,7 @@ jobs:
             ${{ runner.temp }}/source-manifest.json
             ${{ runner.temp }}/source-boundary.json
             ${{ runner.temp }}/candidate/candidate-manifest.json
+            ${{ runner.temp }}/n-brand-candidate-scan.json
           retention-days: 7
   compare-artifacts:
     needs: validate

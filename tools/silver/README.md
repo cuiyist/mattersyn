@@ -1,4 +1,4 @@
-# MatterSyn local silver calibration kit
+# NanoXtalSyn local silver calibration kit
 
 This is a working, standard-library-only **private preparation tool**, not a deployment pipeline or an independently audited dataset. It never launches a model, opens a network connection, downloads a paper, modifies gold records, or publishes a website. The root integrator owns those separate actions. Two separately produced machine drafts are not an independent scientific audit.
 
