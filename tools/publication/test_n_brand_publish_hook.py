@@ -22,6 +22,7 @@ ROOT = Path(__file__).resolve().parents[2]
 
 class PublishedBrandHookTests(unittest.TestCase):
     def fixture(self, root, historical=False):
+        root = root.resolve()
         source, work = root/'source', root/'work'
         (source/'.github/workflows').mkdir(parents=True)
         (source/'tools/ci').mkdir(parents=True)
