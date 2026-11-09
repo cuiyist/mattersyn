@@ -5,7 +5,7 @@ import unittest
 from pathlib import Path
 sys.dont_write_bytecode = True
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
-from derive_inventory import derive,reviewed_seed,hashed,MAIN_SI,MAIN_ONLY,SI_ONLY
+from derive_inventory import derive,reviewed_seed,hashed,MAIN_SI,MAIN_ONLY,SI_ONLY,CURRENT_PIPELINE_NOTE,inventory_display_notes
 
 
 def fixture():
@@ -51,6 +51,33 @@ def fixture():
 
 
 class InventoryDerivationTests(unittest.TestCase):
+    def test_only_exact_current_pipeline_note_has_public_brand_projection(self):
+        old = CURRENT_PIPELINE_NOTE
+        history = '2026-09-16 historical MatterSyn pipeline note.'
+        near = old + ' Authored qualification.'
+        values = [old, history, near, 'mattersyn-inventory-evidence/1',
+                  'https://github.com/cuiyist/mattersyn', 'Other authored MatterSyn evidence.']
+        before = list(values)
+        self.assertEqual(inventory_display_notes(values),
+                         [old.replace('MatterSyn pipeline', 'NanoXtalSyn pipeline'), *values[1:]])
+        self.assertEqual(values, before)
+
+    def test_derived_note_brand_preserves_seed_records_scope_dates_and_provenance(self):
+        data = fixture()
+        data['seed']['per_paper'][0]['notes'] = [CURRENT_PIPELINE_NOTE]
+        data['seed']['per_paper'][0]['date'] = '2026-09-16'
+        data['seed']['per_paper'][0]['review_scope'] = CURRENT_PIPELINE_NOTE
+        data['records'][0]['quality']['review_scope'] = CURRENT_PIPELINE_NOTE
+        before = copy.deepcopy(data)
+        result = derive(**data)
+        row = next(p for p in result['per_paper'] if p['source_group'] == 'paper-a')
+        self.assertEqual(row['notes'], [CURRENT_PIPELINE_NOTE.replace('MatterSyn pipeline', 'NanoXtalSyn pipeline')])
+        self.assertEqual(row['review_scope'], CURRENT_PIPELINE_NOTE)
+        self.assertEqual(row['date'], '2026-09-16')
+        self.assertEqual(data, before)
+        self.assertEqual(result['provenance']['reviewed_evidence_sha256'], hashed(before['seed']))
+        self.assertEqual(result['summary']['canonical_records'], 3)
+
     def test_counts_are_derived_without_mutation_or_scope_promotion(self):
         data=fixture();before=copy.deepcopy(data);result=derive(**data)
         self.assertEqual(data,before)

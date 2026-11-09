@@ -243,4 +243,29 @@ class BrandScanTests(unittest.TestCase):
             n.classify('data/exports/partial_protocol.jsonl', json.dumps(export).encode(), {}, self.ids, ('mattersyn',), load)
 
 
+
+    def test_complete_unclassified_file_index_keeps_twenty_sample_cap(self):
+        rows = [self.put('assets/diagnostic-' + str(i) + '.svg', b'MatterSyn authored') for i in range(22)]
+        rows.append(self.put('index.html', b'NanoXtalSyn'))
+        events = []
+        result = n.scan(self.root, self.manifest(rows), self.blueprint, self.ids, 'candidate', SOURCE, event=events.append)
+        self.assertFalse(result['passed']); self.assertEqual(result['failure_count'], 0)
+        self.assertEqual(result['occurrences']['anything_else'], 22)
+        self.assertEqual(result['files_with_category']['anything_else'], 22)
+        self.assertEqual(len(result['evidence_samples_no_source_text']['anything_else']), 20)
+        index = result['anything_else_files']
+        self.assertEqual(len(index), 22)
+        self.assertEqual([x['path'] for x in index], [x['path'] for x in rows[:-1]])
+        self.assertTrue(all(set(x) == {'path', 'sha256', 'kind', 'occurrences'} and x['occurrences'] == 1 for x in index))
+        self.assertEqual(sum(x['occurrences'] for x in index), result['occurrences']['anything_else'])
+        self.assertEqual(len([e for e in events if e['kind'] == 'anything_else']), 22)
+
+    def test_exact_candidate_event_journal_filename_is_artifact_retained(self):
+        report = Path('n-brand-candidate-scan.json')
+        journal = report.with_suffix(report.suffix + '.events.jsonl')
+        self.assertEqual(journal.name, 'n-brand-candidate-scan.json.events.jsonl')
+        workflow = (MODULE.parents[2] / '.github/workflows/validate-project.yml').read_text(encoding='utf8')
+        self.assertIn('${{ runner.temp }}/' + journal.name, workflow)
+
+
 if __name__ == '__main__': unittest.main()

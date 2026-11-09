@@ -295,7 +295,7 @@ def scan(root, manifest, blueprint, identifiers, phase, source, fetch=anonymous_
     load_record = record_loader(root, records, {row['path']: row for row in manifest['files']})
     selected_kinds = collections.Counter(row['kind'] for row in rows)
     totals = collections.Counter(); matched_files = collections.Counter(); scanned_kinds = collections.Counter(); http_kinds = collections.Counter()
-    examples = {key: [] for key in CATEGORIES}; errors = []; retries = []; matched_unique = 0
+    examples = {key: [] for key in CATEGORIES}; errors = []; retries = []; matched_unique = 0; anything_else_files = []
     def one(row):
         try:
             if phase == 'published':
@@ -322,6 +322,7 @@ def scan(root, manifest, blueprint, identifiers, phase, source, fetch=anonymous_
                     if len(examples[item['category']]) < 20:
                         examples[item['category']].append({'path': row['path'], 'sha256': row['sha256'], **item})
                 if counts['anything_else']:
+                    anything_else_files.append({'path': row['path'], 'sha256': row['sha256'], 'kind': row['kind'], 'occurrences': counts['anything_else']})
                     event({'kind': 'anything_else', 'path': row['path'], 'sha256': row['sha256'], 'counts': dict(counts), 'positions': [x for x in evidence if x['category'] == 'anything_else']})
             if index % 500 == 0:
                 print(json.dumps({'N6_selected_processed': index, 'selected_total': len(rows), 'failures': len(errors), 'anything_else': totals['anything_else']}), flush=True)
@@ -332,6 +333,7 @@ def scan(root, manifest, blueprint, identifiers, phase, source, fetch=anonymous_
             'excluded_binary_or_nontext_files_by_suffix': excluded, 'matching_files_unique': matched_unique,
             'occurrences': {key: totals[key] for key in CATEGORIES}, 'files_with_category': {key: matched_files[key] for key in CATEGORIES},
             'file_category_counts_are_not_additive': True, 'evidence_samples_no_source_text': examples,
+            'anything_else_files': anything_else_files,
             'failure_count': len(errors), 'failures': errors, 'transport_attempt_records': retries,
             'all_selected_HTTP_verified': phase == 'published' and sum(http_kinds.values()) == len(rows) and not errors,
             'record_byte_pin_count': len(records), 'bodies_saved': 0, 'Source_or_remote_mutations': 0}

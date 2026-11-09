@@ -1,5 +1,5 @@
 """Publish reviewed coverage ledgers without private source paths or full-text caches."""
-import json, hashlib, re, shutil
+import copy, json, hashlib, re, shutil
 from pathlib import Path
 from review_scope import source_review_scope, reviewed_page_count, MAIN_SELECTED_SI, pending_variants
 from asset_display import display_view
@@ -107,6 +107,28 @@ def validate(c):
             if not (ROOT/'data/records'/(rid+'.json')).is_file():errors.append('Unresolved recipe link: '+rid)
     return errors
 
+CURRENT_PUBLICATION_BRAND_NOTES = {
+    'Audited contribution prepared for the existing MatterSyn atlas; exact deployment version and success are tracked in the private publication checkpoint.',
+    'Published on the public MatterSyn GitHub Pages atlas; independent scientific, integration and actual browser checks passed. Exact release verification is recorded separately.',
+    'Reviewed contribution for the existing MatterSyn atlas; deployment tracked separately.',
+    'Reviewed contribution integrated into the existing MatterSyn atlas; deployment tracked separately.',
+    'Reviewed contribution prepared for the existing MatterSyn atlas; deployment tracked separately.',
+}
+CURRENT_ILLUSTRATION_BRAND_NOTE = 'MatterSyn-authored, not-to-scale specimen illustration; no measured geometry or atomic positions.'
+
+
+def public_review_branding(review):
+    """Project only six current authored display notes; retain Source evidence."""
+    result = copy.deepcopy(review)
+    status = result.get('publication_status')
+    if status in CURRENT_PUBLICATION_BRAND_NOTES:
+        result['publication_status'] = status.replace('MatterSyn', 'NanoXtalSyn')
+    for illustration in result.get('authored_illustrations', []):
+        if isinstance(illustration, dict) and illustration.get('summary') == CURRENT_ILLUSTRATION_BRAND_NOTE:
+            illustration['summary'] = illustration['summary'].replace('MatterSyn', 'NanoXtalSyn')
+    return result
+
+
 def main():
     index=[]
     for p in sorted(DATA.glob('*.json')):
@@ -114,7 +136,7 @@ def main():
         if errors:raise ValueError(p.name+': '+repr(errors))
         scope=source_review_scope(c)
         c['review_scope_label']=scope['label']
-        write(ROOT/'dist/data/paper-reviews'/p.name,c)
+        write(ROOT/'dist/data/paper-reviews'/p.name,public_review_branding(c))
         index.append({'id':c['paper_id'],'doi':c['doi'],'title':c['title'],'review_scope':scope['scope'],'review_scope_label':scope['label'],'si_status':scope['si_status'],'main_status':scope['main_status'],'pages_read':reviewed_page_count(c),'figures':len(c['figures']),'tables':len(c.get('tables',[])),'record_ids':sorted({rid for x in c['recipe_inventory'] for rid in x.get('record_ids',[])}),'independent_audit':c.get('independent_audit','pending'),'url':'paper-review.html?id='+c['paper_id']})
         if scope['scope']==MAIN_SELECTED_SI:index[-1]['selected_si_pages']=next(d['pages_read'] for d in c['documents'] if d['role']=='si')
     write(ROOT/'dist/data/paper-review-index.json',{'schema_version':'1.0','papers':index,'scope':'Declared supplied-document or selected-SI reading and visual coverage; unreviewed pages, omitted experimental details and raw-data gaps remain explicit. This status is not an exact-structure training eligibility label.'})
