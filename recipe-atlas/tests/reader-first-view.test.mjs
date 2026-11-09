@@ -1,5 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
 import {structureViewsEmpty} from '../static/reader-structures.mjs';
 
 class Element{
@@ -76,12 +77,13 @@ test('background-only intuition stays visible and uses DOI rather than source Ev
  assert.deepEqual(all.filter(n=>n.tagName==='a').map(n=>n.href),['https://doi.org/10.1021/cr400544s']);
  assert.equal(emptySections(r,{intuition:false}).has('intuition'),false);
 }));
-test('source interpretations remain first and unchanged with their independent source limit and view-all link',()=>withDOM(()=>{
- const r={record_id:'r',lineage:{source_group:'s'},sources:[{id:'s'}]},source=Array.from({length:4},(_,i)=>({title:'Source '+i,summary:'Original '+i,claim_type:'Source interpretation'}));
+test('source titles summaries evidence and order remain unchanged under a uniform interpretation label',()=>withDOM(()=>{
+ const r={record_id:'r',lineage:{source_group:'s'},sources:[{id:'s'}]},source=Array.from({length:4},(_,i)=>({title:'Source '+i,summary:'Original '+i,claim_type:i%2?'audited_model':'reviewed procedure rationale'}));
  const presentation={intuition:source,general_background:Array.from({length:4},(_,i)=>backgroundItem('b'+i))},before=structuredClone(presentation),host=new Element('section');
  assert.equal(renderIntuition(host,r,presentation),true);
  const cards=descendants(host).filter(n=>n.tagName==='article');assert.equal(cards.length,6);
  assert.ok(cards[0].textContent.includes('Original 0'));assert.ok(cards[2].textContent.includes('Original 2'));
+ assert.deepEqual(cards.slice(0,3).map(card=>card.children.find(n=>n.tagName==='small').textContent),Array(3).fill('Source interpretation'));
  assert.equal(cards[3].dataset.backgroundId,'b0');assert.equal(cards[5].dataset.backgroundId,'b2');
  assert.equal(descendants(host).filter(n=>n.tagName==='a'&&n.textContent==='Evidence →').length,3);
  assert.equal(descendants(host).filter(n=>n.tagName==='a'&&n.textContent==='All interpretations and references →').length,1);
@@ -93,3 +95,28 @@ test('actual intuition rendering is status-neutral and genuinely empty content k
  assert.equal(first.textContent,second.textContent);assert.equal(renderIntuition(new Element('section'),r,{}),false);
  assert.equal(emptySections(r,{intuition:true}).has('intuition'),true);
 }));
+
+test('reviewed audited extracted and arbitrary raw claim types render one Source interpretation label',()=>withDOM(()=>{
+ const statuses=['source_reviewed','reviewed','audited','source_extracted'];
+ const types=['reviewed procedure rationale','audited_model','machine_extracted_mechanism','author proposed explanation',undefined,null];
+ for(const review_status of statuses)for(const claim_type of types){
+  const r={record_id:'r',lineage:{source_group:'s'},sources:[{id:'s'}],quality:{review_status}};
+  const presentation={intuition:[{title:'Preserved title',summary:'Preserved source explanation.',claim_type}],data_links:{full_review:'https://example.org/source-interpretations'},general_background:[backgroundItem()]};
+  const before=structuredClone(presentation),host=new Element('section');renderIntuition(host,r,presentation);
+  const cards=descendants(host).filter(n=>n.tagName==='article'),source=cards[0];
+  assert.equal(source.children.find(n=>n.tagName==='h3').textContent,'Preserved title');
+  assert.equal(source.children.find(n=>n.tagName==='p').textContent,'Preserved source explanation.');
+  assert.equal(source.children.find(n=>n.tagName==='small').textContent,'Source interpretation');
+  assert.equal(source.children.find(n=>n.tagName==='a').textContent,'Evidence →');
+  assert.equal(source.children.find(n=>n.tagName==='a').href,'https://example.org/source-interpretations');
+  assert.equal(cards[1].dataset.backgroundId,'background');assert.deepEqual(presentation,before);
+ }
+}));
+test('source and general-background labels have block separation before Evidence and DOI citations',()=>{
+ const css=readFileSync(new URL('../static/reader.css',import.meta.url),'utf8');
+ for(const selector of ['.reader-intuition > article > small','.reader-intuition > article > .reader-data-link']){
+  const rule=css.replace(/\/\*[\s\S]*?\*\//g,'').split('}').find(part=>part.trim().startsWith(selector+'{'));
+  assert.ok(rule,'Missing scoped block layout for '+selector);
+  assert.match(rule,/display:\s*block/);assert.match(rule,/margin-top:\s*[1-9]\d*px/);
+ }
+});
