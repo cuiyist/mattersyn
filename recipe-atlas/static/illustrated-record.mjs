@@ -1,7 +1,7 @@
-import {bootstrapRecord,reviewedProtocolArt} from './reader-app.mjs?v=0.46.0';
+import {bootstrapRecord,reviewedProtocolArt} from './reader-app.mjs?v=0.47.0';
 import {mountProtocol} from './protocol-visuals.mjs?v=0.46.0';
 import {enhanceRecordChemicals} from './chemical-viewer.mjs?v=0.46.0';
-import {mountEvidence, mountCrystalReferences} from './material-guide.mjs?v=0.46.0';
+import {mountEvidence, mountCrystalReferences} from './material-guide.mjs?v=0.47.0';
 const id=document.body.dataset.recordId;
 try{const response=await fetch(new URL('data/records/'+id+'.json',import.meta.url),{cache:'no-store'});if(!response.ok)throw Error('Record unavailable');const r=await response.json();if(!await bootstrapRecord(r)){mountProtocol(document.getElementById('record-protocol-visual'),r,'../',await reviewedProtocolArt(r));await enhanceRecordChemicals(r);await mountEvidence(document.getElementById('record-original-evidence'),r);await mountCrystalReferences(document.getElementById('record-crystal-references'),r);}}catch(e){console.error(e);}
 

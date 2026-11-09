@@ -5,7 +5,9 @@ import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
 VERSION = '0.41.9'
-PUBLIC_READER_VERSION = '0.46.0'
+PUBLIC_READER_VERSION = '0.47.0'
+L_VERSION = '0.46.0'
+M_MODULES = ('illustrated-record.mjs', 'material-guide.mjs', 'material-hub.mjs', 'reader-app.mjs', 'reader.css')
 H_VERSION = '0.43.0'
 K_VERSION = '0.45.0'
 K_PATCH_VERSION = '0.45.2'
@@ -16,7 +18,7 @@ PUBLIC_MODULES = ('illustrated-record.mjs', 'material-guide.mjs', 'material-hub.
 H_MODULES = ('chemical-reference-route.mjs', 'chemical-viewer.mjs', 'crystal-viewer.mjs', 'evans2010-products.mjs', 'illustrated-record.mjs', 'material-app.mjs', 'material-guide.mjs', 'material-hub.mjs', 'protocol-references.mjs', 'protocol-visuals.mjs', 'reader-app.mjs', 'reader-presentation-loader.mjs', 'reader-structures.mjs')
 G_HEATER_VERSION = '0.41.10'
 G_HEATER_MODULES = ('reported-protocol-scenes.mjs', 'reported-scene-drawing.mjs')
-def version_for(module): return '0.44.0' if module == 'method-families.mjs' else PUBLIC_READER_VERSION if module in L_MODULES else K_PATCH_VERSION if module in K_PATCH_MODULES else K_VERSION if module in K_MODULES else H_VERSION if module in H_MODULES else '0.42.0' if module == 'reader.css' else G_HEATER_VERSION if module in G_HEATER_MODULES else VERSION
+def version_for(module): return '0.44.0' if module == 'method-families.mjs' else PUBLIC_READER_VERSION if module in M_MODULES else L_VERSION if module in L_MODULES else K_PATCH_VERSION if module in K_PATCH_MODULES else K_VERSION if module in K_MODULES else H_VERSION if module in H_MODULES else PUBLIC_READER_VERSION if module == 'reader.css' else G_HEATER_VERSION if module in G_HEATER_MODULES else VERSION
 
 
 class ReaderCacheVersionTests(unittest.TestCase):
@@ -107,5 +109,21 @@ class ReaderCacheVersionTests(unittest.TestCase):
                     self.assertEqual(code.count('./' + child + '?v=' + version_for(child)), 1)
                     self.assertNotIn('./' + child + "'", code)
                     self.assertNotIn('./' + child + '"', code)
+
+    def test_M_background_and_CSS_refresh_without_changing_L_leaf_versions(self):
+        app = self.read('static/reader-app.mjs')
+        self.assertIn('export function renderIntuition', app)
+        self.assertIn('general_background', app)
+        self.assertIn('reader.css?v=0.47.0', app)
+        self.assertIn('reader.css?v=0.47.0', self.read('templates/material-reader.html'))
+        self.assertIn('.reader-general-background', self.read('static/reader.css'))
+        for child in ('chemical-viewer.mjs', 'protocol-visuals.mjs', 'reader-structures.mjs'):
+            with self.subTest(unchanged_L_leaf=child):
+                self.assertEqual(version_for(child), '0.46.0')
+                self.assertEqual(app.count('./'+child+'?v=0.46.0'), 1)
+                self.assertNotIn('./'+child+'?v=0.47.0', app)
+        self.assertEqual(version_for('reported-protocol-scenes.mjs'), '0.45.2')
+        self.assertEqual(version_for('reported-scene-drawing.mjs'), '0.45.0')
+        self.assertEqual(version_for('method-families.mjs'), '0.44.0')
 
 if __name__ == '__main__': unittest.main()

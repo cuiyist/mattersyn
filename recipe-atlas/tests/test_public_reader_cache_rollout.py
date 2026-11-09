@@ -7,7 +7,9 @@ from uuid import uuid4
 
 ROOT = Path(__file__).resolve().parents[1]
 VERSION = '0.41.9'
-PUBLIC_READER_VERSION = '0.46.0'
+PUBLIC_READER_VERSION = '0.47.0'
+L_VERSION = '0.46.0'
+M_MODULES = ('illustrated-record.mjs', 'material-guide.mjs', 'material-hub.mjs', 'reader-app.mjs', 'reader.css')
 H_VERSION = '0.43.0'
 K_VERSION = '0.45.0'
 K_PATCH_VERSION = '0.45.2'
@@ -18,7 +20,7 @@ PUBLIC_MODULES = ('illustrated-record.mjs', 'material-guide.mjs', 'material-hub.
 H_MODULES = ('chemical-reference-route.mjs', 'chemical-viewer.mjs', 'crystal-viewer.mjs', 'evans2010-products.mjs', 'illustrated-record.mjs', 'material-app.mjs', 'material-guide.mjs', 'material-hub.mjs', 'protocol-references.mjs', 'protocol-visuals.mjs', 'reader-app.mjs', 'reader-presentation-loader.mjs', 'reader-structures.mjs')
 def version_for(module):
     name=module.rsplit('/',1)[-1]
-    return '0.44.0' if name == 'method-families.mjs' else PUBLIC_READER_VERSION if name in L_MODULES else K_PATCH_VERSION if name in K_PATCH_MODULES else K_VERSION if name in K_MODULES else H_VERSION if name in H_MODULES else VERSION
+    return '0.44.0' if name == 'method-families.mjs' else PUBLIC_READER_VERSION if name in M_MODULES else L_VERSION if name in L_MODULES else K_PATCH_VERSION if name in K_PATCH_MODULES else K_VERSION if name in K_MODULES else H_VERSION if name in H_MODULES else VERSION
 MODULES = ('illustrated-record.mjs', 'material-hub.mjs', 'material-guide.mjs',
            'reader-app.mjs', 'reader-presentation-loader.mjs', 'method-families.mjs')
 EXPECTED = {
@@ -100,7 +102,7 @@ class PublicReaderCacheRollout(unittest.TestCase):
                 html = file.read_text(encoding='utf-8')
                 self.assertEqual(module_entry(html), 'reader-app.mjs?v=' + PUBLIC_READER_VERSION)
                 self.assertNotIn('{{READER_CONTEXT}}', html)
-                self.assertIn('reader.css?v=0.42.0', html)
+                self.assertIn('reader.css?v=0.47.0', html)
 
     def test_actual_shell_changes_only_material_hub_entry_version(self):
         shell = self.functions()['shell']
@@ -128,8 +130,8 @@ class PublicReaderCacheRollout(unittest.TestCase):
     def test_stale_or_unversioned_import_fails_same_reachable_graph_check(self):
         entries, modules = self.graph_inputs()
         for parent, before, after in (
-            ('illustrated-record.mjs', 'reader-app.mjs?v=0.46.0', 'reader-app.mjs?v=0.41.7'),
-            ('material-hub.mjs', 'material-guide.mjs?v=0.46.0', 'material-guide.mjs?v=0.41.7'),
+            ('illustrated-record.mjs', 'reader-app.mjs?v=0.47.0', 'reader-app.mjs?v=0.41.7'),
+            ('material-hub.mjs', 'material-guide.mjs?v=0.47.0', 'material-guide.mjs?v=0.41.7'),
             ('material-guide.mjs', 'reader-presentation-loader.mjs?v=0.43.0', 'reader-presentation-loader.mjs'),
             ('reader-app.mjs', 'reader-presentation-loader.mjs?v=0.43.0', 'reader-presentation-loader.mjs?v=0.41.10'),
             ('reader-app.mjs', 'method-families.mjs?v=0.44.0', 'method-families.mjs'),
