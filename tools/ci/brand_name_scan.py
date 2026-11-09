@@ -133,6 +133,7 @@ def token_spans(relative, text, identifiers, exact):
     spans = []
     for token in sorted(exact, key=len, reverse=True):
         need(isinstance(token, str) and token.casefold() != 'mattersyn' and OLD.search(token), 'No bare-brand N4 exemption')
+        if token not in text: continue  # A missing literal cannot satisfy its exact-token regex.
         tail = (r'(?![A-Za-z0-9_./:-])' if token in identifiers.get('internal_marker_tokens', []) else
                 r'(?![A-Za-z0-9_.-])' if token in identifiers.get('technical_folder_tokens', []) else r'(?![A-Za-z0-9_./-])')
         spans.extend((m.start(), m.end(), 'exact_technical_token') for m in re.finditer(r'(?<![A-Za-z0-9_])' + re.escape(token) + tail, text))
@@ -209,7 +210,7 @@ def record_export_spans(relative, text, load_record):
                 visit(original)
                 for match in re.finditer(r'"(?:\\.|[^"\\])*"', line):
                     # A JSON key is never a copied record value.
-                    if line[match.end():].lstrip().startswith(':'): continue
+                    if re.compile(r'\s*:').match(line, match.end()): continue
                     value = json.loads(match[0])
                     if value in leaves:
                         spans.append((offset + match.start(), offset + match.end(), {**proof, 'basis': 'exact_copied_record_string_field', 'Source_field': leaves[value]}))
@@ -217,33 +218,37 @@ def record_export_spans(relative, text, load_record):
     return spans
 
 
-def classify(relative, raw, records, identifiers, exact_tokens, load_record=None):
-    text = raw.decode('utf-8-sig')
-    matches = list(OLD.finditer(text))
-    if not matches:
-        return collections.Counter(), []
-    expected = records.get(relative)
-    record_exact = expected is not None and (len(raw), digest(raw)) == (expected['bytes'], expected['sha256'])
-    histories = dated_spans(relative, text, identifiers) if not record_exact else []
-    exports = record_export_spans(relative, text, load_record) if not record_exact else []
-    tokens = token_spans(relative, text, identifiers, exact_tokens) if not record_exact else []
-    old_urls = [(m.start(), m.end()) for m in OLD_REPO_URL.finditer(text)]
-    counts = collections.Counter(); evidence = []
+def classify(relative,raw,records,identifiers,exact_tokens,load_record=None):
+    text=raw.decode('utf-8-sig');matches=list(OLD.finditer(text))
+    if not matches:return collections.Counter(),[]
+    expected=records.get(relative)
+    record_exact=expected is not None and(len(raw),digest(raw))==(expected['bytes'],expected['sha256'])
+    histories=dated_spans(relative,text,identifiers)if not record_exact else[]
+    exports=record_export_spans(relative,text,load_record)if not record_exact else[]
+    if not record_exact:
+        # Preserve every token/config/regex validation without scanning the body.
+        token_spans(relative,'',identifiers,exact_tokens)
+    tokens=None;old_urls=None;export_index=0
+    counts=collections.Counter();evidence=[];cursor=0;line_number=1;line_start=0
     for match in matches:
-        start = match.start(); category = 'anything_else'; proof = 'no_exact_N4_proof'
-        if record_exact:
-            category, proof = 'record_bytes', 'exact_Source_blueprint_bytes_SHA256'
-        elif field := next((p for a, z, p in exports if a <= start < z), None):
-            category, proof = 'record_bytes', field
-        elif history := next((p for a, z, p in histories if a <= start < z), None):
-            category, proof = 'dated_history', history
-        elif any(a <= start < z for a, z in old_urls):
-            proof = 'current_old_repository_or_Pages_URL'
-        elif token := next((p for a, z, p in tokens if a <= start < z), None):
-            category, proof = 'N4_identifiers', token
-        counts[category] += 1
-        evidence.append({'line': text.count('\n', 0, start) + 1, 'column': start - text.rfind('\n', 0, start), 'category': category, 'proof': proof})
-    return counts, evidence
+        start=match.start();category='anything_else';proof='no_exact_N4_proof'
+        while export_index<len(exports)and exports[export_index][1]<=start:export_index+=1
+        field=(exports[export_index][2]if export_index<len(exports)and exports[export_index][0]<=start<exports[export_index][1]else None)
+        if record_exact:category,proof='record_bytes','exact_Source_blueprint_bytes_SHA256'
+        elif field:category,proof='record_bytes',field
+        elif history:=next((p for a,z,p in histories if a<=start<z),None):category,proof='dated_history',history
+        else:
+            if old_urls is None:old_urls=[(m.start(),m.end())for m in OLD_REPO_URL.finditer(text)]
+            if any(a<=start<z for a,z in old_urls):proof='current_old_repository_or_Pages_URL'
+            else:
+                if tokens is None:tokens=token_spans(relative,text,identifiers,exact_tokens)
+                if token:=next((p for a,z,p in tokens if a<=start<z),None):category,proof='N4_identifiers',token
+        line_number+=text.count('\n',cursor,start)
+        previous_newline=text.rfind('\n',cursor,start)
+        if previous_newline>=0:line_start=previous_newline+1
+        cursor=start;counts[category]+=1
+        evidence.append({'line':line_number,'column':start-line_start+1,'category':category,'proof':proof})
+    return counts,evidence
 
 
 def transient(error):

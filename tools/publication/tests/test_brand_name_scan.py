@@ -7,6 +7,7 @@ import subprocess
 import sys
 import tempfile
 import unittest
+import unittest.mock
 import urllib.error
 
 MODULE = Path(__file__).resolve().parents[2] / 'ci/brand_name_scan.py'
@@ -184,6 +185,62 @@ class BrandScanTests(unittest.TestCase):
         environment = {**os.environ, 'GITHUB_ACTIONS': 'false'}
         result = subprocess.run([sys.executable, '-B', str(MODULE), '--scan'], env=environment, capture_output=True, text=True)
         self.assertNotEqual(result.returncode, 0); self.assertIn('GitHub CI/publisher only', result.stderr)
+
+
+
+    def test_mixed_export_record_identifier_url_and_prose_priority(self):
+        original = {'record_id': 'r', 'note': 'MatterSyn exact field', 'source_schema': 'mattersyn-reader-chemicals/1'}
+        canonical = n.encoded(original); record = self.put('data/records/r.json', canonical)
+        self.blueprint['input_files'] = [{**record, 'path': 'recipe-atlas/data/records/r.json'}]
+        load = n.record_loader(self.root, n.record_pins(self.blueprint), {record['path']: record})
+        export = {'record_id': 'r', 'task': 'partial_protocol', 'record_sha256': n.semantic_digest(original),
+                  'input': {}, 'output': {'note': original['note'], 'schema': original['source_schema'],
+                      'global': '__mattersynChemicalRegistry', 'caption': 'MatterSyn current',
+                      'link': 'https://cuiyist.github.io/mattersyn-site/'}, 'provenance': []}
+        text = '{"note":"neutral \u03bc"}\r\n' + json.dumps(export, ensure_ascii=False) + '\n'
+        counts, evidence = n.classify('data/exports/partial_protocol.jsonl', text.encode(), {}, self.ids,
+                                     n.technical_tokens(self.ids, set()), load)
+        self.assertEqual(counts, {'record_bytes': 2, 'N4_identifiers': 1, 'anything_else': 2})
+        self.assertEqual([x['category'] for x in evidence], ['record_bytes', 'record_bytes', 'N4_identifiers', 'anything_else', 'anything_else'])
+        self.assertEqual(evidence[0]['proof']['Source_field'], '/note')
+        self.assertEqual(evidence[-1]['proof'], 'current_old_repository_or_Pages_URL')
+        self.assertTrue(all(x['line'] == 2 for x in evidence))
+
+    def test_all_record_export_proofs_skip_body_tokens_but_keep_validation(self):
+        original = {'record_id': 'r', 'note': 'MatterSyn', 'url': 'https://cuiyist.github.io/mattersyn-site/',
+                    'schema': 'mattersyn-reader-chemicals/1'}
+        raw = json.dumps(original).encode(); source = {'bytes': len(raw), 'sha256': n.digest(raw)}
+        load = lambda rid: (original, source)
+        native = n.token_spans; bodies = []
+        def observed(relative, text, identifiers, exact):
+            bodies.append(text); return native(relative, text, identifiers, exact)
+        with unittest.mock.patch.object(n, 'token_spans', side_effect=observed):
+            counts, evidence = n.classify('data/records.jsonl', raw, {}, self.ids, n.technical_tokens(self.ids, set()), load)
+        self.assertEqual(counts, {'record_bytes': 3}); self.assertTrue(all(x['category'] == 'record_bytes' for x in evidence))
+        self.assertEqual(bodies, [''])
+        with self.assertRaisesRegex(ValueError, 'No bare-brand N4 exemption'):
+            n.classify('data/records.jsonl', raw, {}, self.ids, ('mattersyn',), load)
+
+    def test_proof_priorities_and_exact_CRLF_unicode_positions(self):
+        raw = '{"record_id":"r",\r\n "note":"\u03bc MatterSyn",\r\n"schema":"mattersyn-reader-chemicals/1"}\r\n'.encode()
+        records = {'data/records/r.json': {'bytes': len(raw), 'sha256': n.digest(raw)}}
+        counts, evidence = n.classify('data/records/r.json', raw, records, self.ids, ())
+        self.assertEqual(counts, {'record_bytes': 2})
+        self.assertEqual([(x['line'], x['column']) for x in evidence], [(2, len(' "note":"\u03bc ') + 1), (3, len('"schema":"') + 1)])
+        section = '## 2026-11-08\r\n\u03bc MatterSyn https://cuiyist.github.io/mattersyn-site/\r\n'
+        self.ids['dated_history_sections'] = [{'path': 'README.md', 'date': '2026-11-08',
+            'section_LF_sha256': n.digest(section.replace('\r\n', '\n').encode())}]
+        counts, evidence = self.classify(section, 'README.md')
+        self.assertEqual(counts, {'dated_history': 2})
+        self.assertEqual(evidence[0]['line'], 2); self.assertEqual(evidence[0]['column'], 3)
+
+    def test_invalid_export_digest_still_fails_before_token_shortcut(self):
+        original = {'record_id': 'r', 'note': 'MatterSyn'}
+        export = {'record_id': 'r', 'task': 'partial_protocol', 'record_sha256': '0' * 64,
+                  'input': {}, 'output': {'note': 'MatterSyn'}, 'provenance': []}
+        load = lambda rid: (original, {'bytes': 1, 'sha256': '0' * 64})
+        with self.assertRaisesRegex(ValueError, 'digest shape differs'):
+            n.classify('data/exports/partial_protocol.jsonl', json.dumps(export).encode(), {}, self.ids, ('mattersyn',), load)
 
 
 if __name__ == '__main__': unittest.main()
