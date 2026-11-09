@@ -49,3 +49,40 @@ test('fixed systematic octane presentation removes only its obsolete isomer unce
 test('existing named octane model remains byte-identical while its presentation follows systematic-name rule',()=>{
  const caption='A source that names octane without specifying an isomer does not establish this exact connectivity; the model does not specify solvent purity.';const e={...entry(),id:'octane',name:'Octane',caption,model3dPath:'models/octane-3d.json'};const before=JSON.stringify(e),v=viewerEntry(e);assert.equal(JSON.stringify(e),before);assert.equal(v.model3dPath,e.model3dPath);assert.equal(chemicalDisplayCaption(e),'the model does not specify solvent purity.');assert.doesNotMatch(chemicalModelCaption(v,caption),/does not establish/);
 });
+
+const fieldDefaultLine='The form normally used is shown as a reference; the source does not state this form.';
+test('qualified existing default keeps exact model and route while showing one source-unspecified line',()=>{
+ const e={...entry(),name:'ODE',model3dPath:'models/1-octadecene-3d.json',assetHashes:{model3dPath:sha},readerFieldDefaultQualification:fieldDefaultLine};
+ const before=JSON.stringify(e),view=viewerEntry(e);assert.equal(view.model3dPath,e.model3dPath);assert.equal(referenceRoute(e).route,'existing_molecule');
+ for(const caption of [chemicalDisplayCaption(e),chemicalModelCaption(view,'Existing illustrative model.')]){assert.equal(caption.split(fieldDefaultLine).length-1,1);}
+ assert.equal(JSON.stringify(e),before);
+});
+test('qualified new reference keeps the line after model caption replaces entry caption',()=>{
+ const e={...entry(),readerFieldDefaultQualification:fieldDefaultLine,readerReference3d:{route:'molecule_reference',model3dPath:'models/example.json',model3dSha256:sha,referenceOnly:true,trainingEligible:false,caption:'Reference only. '+fieldDefaultLine}};
+ const view=viewerEntry(e);assert.equal(chemicalDisplayCaption(e).split(fieldDefaultLine).length-1,1);assert.equal(chemicalModelCaption(view,'Locally computed reference.').split(fieldDefaultLine).length-1,1);
+});
+test('explicit positional names and unvalidated qualification text gain no default claim',()=>{
+ const e={...entry(),name:'1-Octadecene (ODE)',model3dPath:'models/1-octadecene-3d.json'};
+ assert.equal(chemicalModelCaption(e,'Original'),'Original');assert.doesNotMatch(chemicalDisplayCaption(e),/normally used/);
+ assert.equal(chemicalModelCaption({...e,readerFieldDefaultQualification:'Unvalidated statement'},'Original'),'Original');
+});
+
+test('validated field-default projection prevents the observed openChemical caption plus limitation duplicate',()=>{
+ const keep='The source does not specify a bound-surface conformation.';
+ const e={...entry(),name:'Octadecene',readerFieldDefaultQualification:fieldDefaultLine,limitations:['Original limitation.'],readerReference3d:{route:'molecule_reference',model3dPath:'models/default-reference.json',model3dSha256:sha,referenceOnly:true,trainingEligible:false,caption:'Independent reference. '+fieldDefaultLine,limitations:[fieldDefaultLine,keep]}};
+ const before=JSON.stringify(e),view=viewerEntry(e);assert.equal(JSON.stringify(e),before);assert.equal(view.caption.split(fieldDefaultLine).length-1,1);assert.deepEqual(view.limitations,['Original limitation.',keep]);
+ // Unchanged openChemical first uses entry.caption, then the model caption;
+ // its details loop prints distinct limitations beside the chosen caption.
+ for(const caption of [view.caption,chemicalModelCaption(view,'Existing computational reference.')]){
+  const displayed=[caption];if(view.sourceBindingCaption&&view.sourceBindingCaption!==caption)displayed.push(view.sourceBindingCaption);
+  for(const note of new Set(view.limitations||[]))if(note!==caption&&note!==view.sourceBindingCaption)displayed.push(note);
+  assert.equal(displayed.join(' ').split(fieldDefaultLine).length-1,1);
+ }
+ assert.deepEqual(viewerEntry(view).limitations,view.limitations);assert.equal(viewerEntry(view).model3dPath,view.model3dPath);
+});
+test('unvalidated or flat entries never lose a limitation and exact-only filtering keeps unrelated notes',()=>{
+ const embedded='Separate source limitation: '+fieldDefaultLine;
+ for(const e of [{...entry(),readerFieldDefaultQualification:'Unvalidated',model3dPath:'models/original.json',limitations:[fieldDefaultLine]}, {...entry(),readerFieldDefaultQualification:fieldDefaultLine,readerReference3d:{route:'flat',whyNo3d:'Unreported form.'},limitations:[fieldDefaultLine]}])assert.ok(viewerEntry(e).limitations.includes(fieldDefaultLine));
+ const e={...entry(),model3dPath:'models/original.json',readerFieldDefaultQualification:fieldDefaultLine,limitations:[fieldDefaultLine,embedded,'Unrelated solution-speciation limitation.']};
+ const view=viewerEntry(e);assert.deepEqual(view.limitations,[embedded,'Unrelated solution-speciation limitation.']);assert.ok(e.limitations.includes(fieldDefaultLine));
+});

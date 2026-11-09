@@ -15,6 +15,8 @@ import unicodedata
 from chemical_reference_overlay import enrich_registry
 import chemical_reference_identity as identity_rules
 import h4_named_ligand_references as named_ligands
+import chemical_L_identity as L_identity
+import chemical_l4_reference as L4_identity
 
 
 def _number(value):
@@ -86,7 +88,7 @@ def _model_path(relative):
     return isinstance(relative, str) and re.fullmatch(r'models/[A-Za-z0-9][A-Za-z0-9._/-]*\.json', relative) is not None and not any(p in ('.', '..') for p in relative.split('/'))
 
 
-def check_chemical_reference_overlay(audit, base, registry, bindings, overlay, ambient_proof=None, resolved_identity_proof=None, standard_identity_proof=None):
+def check_chemical_reference_overlay(audit, base, registry, bindings, overlay, ambient_proof=None, resolved_identity_proof=None, standard_identity_proof=None, l_identity_proof=None):
     """Validate every use/target/reference; mutate only Audit errors/counts."""
     digest = lambda name: hashlib.sha256((base / name).read_bytes()).hexdigest()
     try:
@@ -126,6 +128,7 @@ def check_chemical_reference_overlay(audit, base, registry, bindings, overlay, a
             audit.check(model.get('conformerGeneration', {}).get('embeddingMethod') == 'ETKDGv3', label + ': computed model method absent')
 
     crystal_rows = None
+    crystal_registry_raw = None
     for eid, ref in rows.items():
         label = 'chemical overlay/' + eid
         route = ref['route']
@@ -136,10 +139,59 @@ def check_chemical_reference_overlay(audit, base, registry, bindings, overlay, a
             audit.check('\n' not in ref['whyNo3d'] and '\r' not in ref['whyNo3d'], label + ': flat reason must be one line')
             audit.check(not any(ref.get(key) for key in ('model3dPath', 'component3dModels', 'crystalReference')), label + ': flat entry assigns coordinates')
             continue
-        audit.check(entries[eid].get('depictionKind') not in {'mixture', 'specimen', 'support', 'surface', 'composite', 'equipment', 'polymer', 'material-context', 'sample-context'}, label + ': whole context was promoted to one structure')
-        audit.check(identity_rules.context_reason(entries[eid]) is None, label + ': original context/isomer identity excludes a 3D reference')
-        audit.check(not identity_rules.unqualified_bulk_hold(entries[eid]) or route == 'ambient_crystal_reference', label + ': unqualified form requires an admitted existing ambient/own-name reference')
-        if ref.get('reason') == 'fixed_standard_abbreviation':
+        l4_reference = ref.get('reason') == 'L_owner_fixed_ambient_default'
+        l4_valid = False
+        l4_selected = None
+        l4_proof = {}
+        if l4_reference:
+            crystal_base = base.parent / 'crystal-references'
+            if crystal_registry_raw is None:
+                crystal_registry_raw = (crystal_base / 'registry.json').read_bytes()
+                crystal_rows = {e['id']: e for e in json.loads(crystal_registry_raw)['entries']}
+            admitted = overlay.get('lAmbientProofs', {})
+            l4_selected = L4_identity.l4_reference_for_entry(entries[eid], admitted, crystal_rows)
+            if l4_selected is not None:
+                l4_proof = admitted.get('formulas', {}).get(l4_selected['formula'], {})
+                l4_valid = (route == 'ambient_crystal_reference' and ref.get('referenceId') == l4_selected['id']
+                            and l4_proof.get('registry_sha256') == hashlib.sha256(crystal_registry_raw).hexdigest()
+                            and l4_proof.get('registry_bytes') == len(crystal_registry_raw)
+                            and ref.get('l4OwnNameProof') == L4_identity.l4_name_proof(entries[eid], l4_selected['id']))
+            audit.check(l4_valid, label + ': L4 fixed own-identity/current-library admission absent or stale')
+        s8_reference = ref.get('reason') == L4_identity.S8_REASON
+        s8_valid = False
+        if s8_reference:
+            sulfur_table = overlay.get('lSulfurProofs', {})
+            sulfur_table = sulfur_table if isinstance(sulfur_table, dict) else {}
+            sulfur_header = (sulfur_table.get('schema') == L4_identity.S8_SCHEMA
+                             and sulfur_table.get('originalRegistrySha256') == overlay['originalRegistrySha256']
+                             and sulfur_table.get('originalBindingsSha256') == overlay['originalBindingsSha256'])
+            audit.check(sulfur_header, label + ': stale elemental-S8 original-input proof')
+            sulfur_errors = L4_identity.validate_s8_reference(entries[eid], ref, sulfur_table.get('entries', {}).get(eid), entries, reference_index=identity_index)
+            for error in sulfur_errors:
+                audit.check(False, label + ': ' + error)
+            s8_valid = sulfur_header and not sulfur_errors
+        l_reference = ref.get('reason') == L_identity.REASON
+        l_valid = False
+        if l_reference:
+            if l_identity_proof is None:
+                l_identity_proof = overlay.get('lIdentityProofs', {})
+            proof_table = l_identity_proof if isinstance(l_identity_proof, dict) else {}
+            header_ok = (proof_table.get('schema') == L_identity.SCHEMA
+                         and proof_table.get('originalRegistrySha256') == overlay['originalRegistrySha256']
+                         and proof_table.get('originalBindingsSha256') == overlay['originalBindingsSha256'])
+            audit.check(header_ok, label + ': stale L original-input identity proof')
+            l_errors = L_identity.validate_L_reference(entries[eid], ref, proof_table.get('entries', {}).get(eid), entries, reference_index=identity_index)
+            for error in l_errors:
+                audit.check(False, label + ': ' + error)
+            l_valid = header_ok and not l_errors
+        # Only a recomputed, exact L plan may qualify its named components or
+        # owner-default form. All other H context exclusions remain unchanged.
+        audit.check(l_valid or l4_valid or s8_valid or entries[eid].get('depictionKind') not in {'mixture', 'specimen', 'support', 'surface', 'composite', 'equipment', 'polymer', 'material-context', 'sample-context'}, label + ': whole context was promoted to one structure')
+        audit.check(l_valid or l4_valid or s8_valid or identity_rules.context_reason(entries[eid]) is None, label + ': original context/isomer identity excludes a 3D reference')
+        audit.check(not identity_rules.unqualified_bulk_hold(entries[eid]) or route == 'ambient_crystal_reference' or s8_valid, label + ': unqualified form requires an admitted existing ambient/own-name reference')
+        if l_reference or s8_reference:
+            pass  # Exact owner-L proof above; ordinary model/geometry/asset gates below still run.
+        elif ref.get('reason') == 'fixed_standard_abbreviation':
             if standard_identity_proof is None:
                 standard_identity_proof = json.loads(Path(__file__).with_name('chemical_standard_abbreviation_pins.json').read_text(encoding='utf-8'))
             audit.check(standard_identity_proof.get('schema') == 'MatterSyn-H-fixed-standard-abbreviation-reference-pins/1' and standard_identity_proof.get('originalRegistrySha256') == overlay['originalRegistrySha256'], label + ': fixed-standard identity proof is stale')
@@ -190,18 +242,21 @@ def check_chemical_reference_overlay(audit, base, registry, bindings, overlay, a
             crystal = ref.get('crystalReference')
             if not audit.check(isinstance(crystal, dict) and isinstance(original, dict) and crystal.get('id') == original['id'], label + ': absent existing crystal reference'):
                 continue
-            if ambient_proof is None:
-                ambient_proof = json.loads(Path(__file__).with_name('chemical_ambient_reference_pins.json').read_text(encoding='utf-8'))
-            normalized = lambda text: re.sub(r'\s+', ' ', unicodedata.normalize('NFKC', str(text)).strip()).casefold()
-            own_name = normalized(entries[eid].get('name', ''))
-            explicit = next((p for p in ambient_proof.get('explicit_phase_names', []) if own_name in {normalized(name) for name in p['reported_names']}), None)
-            formula = entries[eid].get('formula') or entries[eid].get('name')
-            proof = explicit or ambient_proof.get('formulas', {}).get(formula, {})
-            matching = [e for e in crystal_rows.values() if e.get('formula') == original.get('formula')]
-            audit.check(bool(proof.get('basis')) and proof.get('reference_id') == original['id'] and (bool(explicit) or proof.get('ambient_structure_unique') is True), label + ': ambient/own-name phase not explicitly admitted')
-            audit.check(formula == original.get('formula') or bool(explicit) and explicit.get('formula') == original.get('formula') and not entries[eid].get('formula'), label + ': original chemical and crystal formula differ')
-            audit.check(proof.get('registry_sha256') == hashlib.sha256((crystal_base / 'registry.json').read_bytes()).hexdigest(), label + ': stale ambient-library proof')
-            audit.check(set(proof.get('existing_reference_ids', [])) == {e['id'] for e in matching} and {e.get('spaceGroupNumber') for e in matching} == {proof.get('space_group_number')}, label + ': ambient structure signature changed')
+            if l4_reference:
+                audit.check(l4_valid and l4_selected == original, label + ': L4 selected reference differs from exact registry')
+            else:
+                if ambient_proof is None:
+                    ambient_proof = json.loads(Path(__file__).with_name('chemical_ambient_reference_pins.json').read_text(encoding='utf-8'))
+                normalized = lambda text: re.sub(r'\s+', ' ', unicodedata.normalize('NFKC', str(text)).strip()).casefold()
+                own_name = normalized(entries[eid].get('name', ''))
+                explicit = next((p for p in ambient_proof.get('explicit_phase_names', []) if own_name in {normalized(name) for name in p['reported_names']}), None)
+                formula = entries[eid].get('formula') or entries[eid].get('name')
+                proof = explicit or ambient_proof.get('formulas', {}).get(formula, {})
+                matching = [e for e in crystal_rows.values() if e.get('formula') == original.get('formula')]
+                audit.check(bool(proof.get('basis')) and proof.get('reference_id') == original['id'] and (bool(explicit) or proof.get('ambient_structure_unique') is True), label + ': ambient/own-name phase not explicitly admitted')
+                audit.check(formula == original.get('formula') or bool(explicit) and explicit.get('formula') == original.get('formula') and not entries[eid].get('formula'), label + ': original chemical and crystal formula differ')
+                audit.check(proof.get('registry_sha256') == hashlib.sha256((crystal_base / 'registry.json').read_bytes()).hexdigest(), label + ': stale ambient-library proof')
+                audit.check(set(proof.get('existing_reference_ids', [])) == {e['id'] for e in matching} and {e.get('spaceGroupNumber') for e in matching} == {proof.get('space_group_number')}, label + ': ambient structure signature changed')
             audit.check(set(crystal) <= set(original) and all(original.get(key) == value for key, value in crystal.items()), label + ': crystal metadata differs from existing library')
             audit.check(not set(crystal) & {'record_ids', 'sample_ids', 'defaultForSample'}, label + ': source/sample binding copied into chemical reference')
             audit.check(crystal.get('referenceOnly') is True and crystal.get('trainingEligible') is False, label + ': ambient reference scope flags')
@@ -210,7 +265,10 @@ def check_chemical_reference_overlay(audit, base, registry, bindings, overlay, a
             audit.check(_model_path(crystal.get('modelPath')), label + ': unsafe crystal-model path')
             for key, checksum in (('modelPath', 'modelSha256'), ('cifPath', 'cifSha256')):
                 if original.get(key):
-                    audit.asset(crystal_base, original[key], original.get(checksum), label + '/' + key)
+                    asset = audit.asset(crystal_base, original[key], original.get(checksum), label + '/' + key)
+                    if l4_reference and asset:
+                        byte_key = 'model_bytes' if key == 'modelPath' else 'cif_bytes'
+                        audit.check(asset.stat().st_size == l4_proof.get(byte_key), label + ': L4 admitted asset size differs/' + key)
             # Audit.crystals independently validates the exact complete library,
             # cell coordinates/occupancies and pinned CIF/model metadata.
     actual_new = {'models/' + path.name for path in (base / 'models').glob('h-reader-*-3d.json')}

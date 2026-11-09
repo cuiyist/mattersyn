@@ -52,6 +52,71 @@ export function selectTargets(registry,bindings,overlay,recordHasMaterial=()=>tr
  return targets;
 }
 
+
+export const L_FIELD_DEFAULT_QUALIFICATION='The form normally used is shown as a reference; the source does not state this form.';
+const L_IDENTITY_SCHEMA='MatterSyn-L-reference-identity-pins/1';
+const L_SULFUR_SCHEMA='MatterSyn-L4-S8-reference-proof/1';
+const compareId=(a,b)=>a<b?-1:a>b?1:0;
+
+export function selectLTargets(registry,bindings,overlay,recordHasMaterial=()=>true){
+ const entries=new Map(registry.entries.map(e=>[e.id,e])),byEntry=new Map();
+ for(const [rid,row]of Object.entries(bindings.recordBindings).sort(([a],[b])=>compareId(a,b)))for(const [mid,eid]of Object.entries(row).sort(([a],[b])=>compareId(a,b))){
+  if(!byEntry.has(eid))byEntry.set(eid,[]);byEntry.get(eid).push({record_id:rid,material_id:mid});
+ }
+ const bound=eid=>(byEntry.get(eid)||[]).find(b=>recordHasMaterial(b.record_id,b.material_id));
+ const identity=overlay.lIdentityProofs?.entries||{},sulfur=overlay.lSulfurProofs?.entries||{},qualified=overlay.lFieldQualifications||{};
+ if(Object.keys(identity).length)assert.equal(overlay.lIdentityProofs.schema,L_IDENTITY_SCHEMA,'L identity header differs');
+ if(Object.keys(sulfur).length)assert.equal(overlay.lSulfurProofs.schema,L_SULFUR_SCHEMA,'L sulfur header differs');
+ const successful=(proofs,schema)=>Object.entries(proofs).map(([eid,proof])=>{
+  assert(entries.has(eid)&&proof.entry_id===eid&&proof.schema===schema,`L proof has no exact registry entry: ${eid}`);
+  const ref=overlay.entries[eid];assert(ref&&ref.route!=='flat',`L successful proof has no resolved reference: ${eid}`);return {eid,proof,ref};
+ });
+ const identities=successful(identity,L_IDENTITY_SCHEMA),sulfurs=successful(sulfur,L_SULFUR_SCHEMA);
+ const ambient=Object.entries(overlay.entries).filter(([,ref])=>ref.route==='ambient_crystal_reference'&&ref.reason==='L_owner_fixed_ambient_default').map(([eid,ref])=>{
+  const proof=overlay.lAmbientProofs?.formulas?.[ref.crystalReference?.formula],own=ref.l4OwnNameProof;
+  assert(entries.has(eid)&&overlay.lAmbientProofs?.schema==='MatterSyn-L4-admitted-fixed-ambient-proof/1'&&proof?.reference_id===ref.referenceId&&own?.schema==='MatterSyn-L4-own-name-normalization/1'&&own.entry_id===eid&&own.reference_id===ref.referenceId,`L ambient target lacks its actual admitted/own-name proof: ${eid}`);
+  return {eid,proof:own,ref};
+ });
+ const qualifications=Object.entries(qualified).map(([eid,proof])=>{
+  const entry=entries.get(eid),ref=overlay.entries[eid]||{};
+  assert(entry&&proof.qualification===L_FIELD_DEFAULT_QUALIFICATION&&/^[a-f0-9]{64}$/.test(proof.source_entry_sha256)&&/^[a-f0-9]{64}$/.test(proof.reference_sha256),'L field qualification must be an exact validated mapping');
+  assert(ref.route!=='flat'&&(ref.route||entry.model3dPath),'L qualification cannot promote a flat entry');return {eid,proof,ref};
+ });
+ const categories=[
+  ['l4-ambient',ambient],
+  ['l4-s8',sulfurs.filter(x=>x.proof.plan?.kind==='s8_reference'&&x.proof.plan.ownerpart==='L4'&&x.ref.route==='molecule_reference')],
+  ['l1-normalized-molecule',identities.filter(x=>x.proof.plan?.ownerpart==='L1'&&x.ref.route==='molecule_reference')],
+  ['l2-acetate',identities.filter(x=>x.proof.plan?.ownerpart==='L2'&&x.ref.route==='independent_component_references')],
+  ['l5-stock-components',identities.filter(x=>x.proof.plan?.ownerpart==='L5'&&x.ref.route==='independent_component_references')],
+  ['l6-single-compound',identities.filter(x=>x.proof.plan?.ownerpart==='L6'&&x.proof.plan.kind==='single_compound')],
+  ['l3-field-default',qualifications],
+ ];
+ const targets=[],coverage=[];
+ for(const [group,candidates]of categories){
+  const preference=x=>group==='l3-field-default'?(identity[x.eid]?.plan?.ownerpart==='L3'?0:1):group==='l1-normalized-molecule'?(x.proof.plan.transformations?.length?0:1):group==='l6-single-compound'?(x.ref.route==='molecule_reference'?0:1):0;
+  const ordered=candidates.slice().sort((a,b)=>preference(a)-preference(b)||compareId(a.eid,b.eid));
+  if(!ordered.length){coverage.push({group,resolved_entries:0,target_id:null,status:'NO_RESOLVED_ENTRIES'});continue;}
+  const chosen=ordered.find(x=>bound(x.eid));assert(chosen,`L ${group} has resolved entries but no actual Reader precursor binding`);
+  const {eid,proof,ref}=chosen,entry=entries.get(eid),target={id:group,registry_id:eid,...bound(eid),name:entry.name,route:ref.route||'existing_molecule',reference:ref,entry,l_group:group,l_proof_schema:proof.schema||'lFieldQualifications'};
+  if(group==='l3-field-default')target.field_default_qualification=proof.qualification;
+  targets.push(target);coverage.push({group,resolved_entries:ordered.length,target_id:target.id,registry_id:eid,status:'ACTUAL_BOUND_TARGET_SELECTED'});
+ }
+ return {targets,coverage};
+}
+
+export function assertFieldQualification(text,qualification=L_FIELD_DEFAULT_QUALIFICATION){
+ assert.equal(qualification,L_FIELD_DEFAULT_QUALIFICATION,'Unexpected L3 qualification');
+ const normalized=String(text).replace(/\s+/g,' ').trim(),occurrences=normalized.split(qualification).length-1;
+ assert.equal(occurrences,1,'L3 qualification must appear exactly once in the modal');return {qualification,occurrences};
+}
+async function qualificationSnapshot(dialog,qualification,phase){
+ const details=dialog.locator('details.model-source-details');await details.waitFor({state:'attached',timeout:30000});
+ if(await details.getAttribute('open')===null)await details.locator('summary').click();
+ const result=assertFieldQualification(await dialog.innerText(),qualification),paragraphs=details.locator('p').filter({hasText:qualification});
+ assert.equal(await paragraphs.count(),1,'L3 qualification must be in one displayed caption paragraph');await paragraphs.first().scrollIntoViewIfNeeded();
+ return {phase,...result,details_open:true};
+}
+
 async function run({base,dist,out}){
  const output=path.resolve(out);assert(!fs.existsSync(output),'Fresh browser receipt directory required');fs.mkdirSync(output,{recursive:true});
  const root=new URL(base);assert(['http:','https:'].includes(root.protocol)&&!root.username&&!root.password&&!root.search&&!root.hash);if(!root.pathname.endsWith('/'))root.pathname+='/';
@@ -64,8 +129,8 @@ async function run({base,dist,out}){
   if(!recordCache.has(rid))recordCache.set(rid,load('data/records/'+rid+'.json'));
   return recordCache.get(rid).materials.some(m=>m.id===mid);
  };
- const targets=selectTargets(registry,bindings,overlay,eligible);
- const receipt={schema:'MatterSyn-H-actual-precursor-modal-browser-check/1',started_utc:new Date().toISOString(),inputs:files.map(file=>({path:file,sha256:sha(fs.readFileSync(path.join(dist,file)))})),targets:targets.map(({entry,reference,...t})=>t),views:[],errors:[]};
+ const hTargets=selectTargets(registry,bindings,overlay,eligible),lTargets=selectLTargets(registry,bindings,overlay,eligible),targets=[...hTargets,...lTargets.targets];
+ const receipt={schema:'MatterSyn-H-actual-precursor-modal-browser-check/1',started_utc:new Date().toISOString(),inputs:files.map(file=>({path:file,sha256:sha(fs.readFileSync(path.join(dist,file)))})),targets:targets.map(({entry,reference,...t})=>t),l_coverage:lTargets.coverage,views:[],errors:[]};
  const require=createRequire(path.join(process.env.PLAYWRIGHT_DIR||process.cwd(),'package.json')),{chromium}=require('playwright');
  let browser;
  try{
@@ -82,6 +147,7 @@ async function run({base,dist,out}){
     const modelURL=modelPath?new URL(modelPath,root):null;
     const responseWait=modelURL?page.waitForResponse(r=>new URL(r.url()).pathname===modelURL.pathname&&r.status()===200,{timeout:30000}):null;
     await button.click();const dialog=page.locator('dialog.reader-molecule-dialog');await dialog.waitFor({state:'visible'});
+    const qualificationInitial=target.field_default_qualification?await qualificationSnapshot(dialog,target.field_default_qualification,'initial_modal'):null;
     if(component){const scope=dialog.locator('.independent-molecular-components');await scope.waitFor({state:'visible'});assert.match(await scope.textContent(),/no geometry between ions|no relative ion geometry|no inter-ion geometry/i);const rows=scope.locator('.independent-molecular-component');assert.equal(await rows.count(),ref.component3dModels.length);for(let i=0;i<ref.component3dModels.length;i++){const c=ref.component3dModels[i],identity=rows.nth(i).locator('.chemical-component-identity');await identity.waitFor({state:'visible'});assert.equal((await identity.textContent()).trim(),[...new Set([c.name,c.formula].filter(Boolean))].join(' · '));assert.equal((await rows.nth(i).locator('button').textContent()).trim(),'Rotate 3D ↗');}await rows.first().locator('button').click();}
     let modelPin=null,rotation=null;
     if(isFlat){await dialog.getByText(ref.whyNo3d,{exact:true}).waitFor();assert.equal(await dialog.locator('canvas').count(),0);}
@@ -93,9 +159,10 @@ async function run({base,dist,out}){
      const after=sha(await canvas.screenshot());assert.notEqual(before,after,'Dragging did not change the rendered model');rotation={before_png_sha256:before,after_png_sha256:after,changed:true};
      assert.doesNotMatch(await dialog.textContent(),/Source-qualified identity\/formula only|No atoms, bonds, bound surface geometry, molecular conformer or measured coordinates are assigned/);
     }
+    const qualificationAfterModel=target.field_default_qualification?await qualificationSnapshot(dialog,target.field_default_qualification,'after_model_open'):null;
     const overflow=await dialog.evaluate(d=>({scroll:d.scrollWidth,client:d.clientWidth,left:d.getBoundingClientRect().left,right:d.getBoundingClientRect().right}));assert(overflow.scroll<=overflow.client+1&&overflow.left>=-1&&overflow.right<=width+1,'Modal overflows phone/desktop viewport');
     assert.deepEqual(errors,[],'Uncaught script error');const filename=target.id+'-'+width+'-modal.png';await dialog.screenshot({path:path.join(output,filename),animations:'disabled'});
-    receipt.views.push({id:target.id,width,record_id:target.record_id,registry_id:target.registry_id,route:target.route,model:modelPin,rotation,overflow,screenshot:{path:filename,sha256:sha(fs.readFileSync(path.join(output,filename)))},passed:true});
+    receipt.views.push({id:target.id,width,record_id:target.record_id,registry_id:target.registry_id,route:target.route,model:modelPin,rotation,field_default_qualification:qualificationInitial?{initial:qualificationInitial,after_model:qualificationAfterModel}:null,overflow,screenshot:{path:filename,sha256:sha(fs.readFileSync(path.join(output,filename)))},passed:true});
    }catch(e){receipt.errors.push({id:target.id,width,message:String(e.message)});throw e;}finally{await page.close();}
   }
  }catch(e){if(!receipt.errors.length)receipt.errors.push({message:String(e.message)});throw e;}

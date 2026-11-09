@@ -5,16 +5,18 @@ import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
 VERSION = '0.41.9'
-PUBLIC_READER_VERSION = '0.45.2'
+PUBLIC_READER_VERSION = '0.46.0'
 H_VERSION = '0.43.0'
 K_VERSION = '0.45.0'
+K_PATCH_VERSION = '0.45.2'
+L_MODULES = ('chemical-reference-route.mjs', 'chemical-viewer.mjs', 'crystal-viewer.mjs', 'evans2010-products.mjs', 'illustrated-record.mjs', 'material-guide.mjs', 'material-hub.mjs', 'protocol-references.mjs', 'protocol-visuals.mjs', 'reader-app.mjs', 'reader-structures.mjs')
 K_PATCH_MODULES = ('illustrated-record.mjs', 'material-guide.mjs', 'material-hub.mjs', 'protocol-visuals.mjs', 'reader-app.mjs', 'reported-protocol-scenes.mjs')
 K_MODULES = ('chemical-viewer.mjs', 'crystal-defaults.mjs', 'crystal-viewer.mjs', 'evans2010-products.mjs', 'illustrated-record.mjs', 'material-guide.mjs', 'material-hub.mjs', 'protocol-record-fit.mjs', 'protocol-references.mjs', 'protocol-visuals.mjs', 'reader-app.mjs', 'reader-particle.mjs', 'reader-structures.mjs', 'reported-protocol-scenes.mjs', 'reported-scene-drawing.mjs', 'source-field-copy.mjs')
 PUBLIC_MODULES = ('illustrated-record.mjs', 'material-guide.mjs', 'material-hub.mjs', 'method-families.mjs', 'reader-app.mjs')
 H_MODULES = ('chemical-reference-route.mjs', 'chemical-viewer.mjs', 'crystal-viewer.mjs', 'evans2010-products.mjs', 'illustrated-record.mjs', 'material-app.mjs', 'material-guide.mjs', 'material-hub.mjs', 'protocol-references.mjs', 'protocol-visuals.mjs', 'reader-app.mjs', 'reader-presentation-loader.mjs', 'reader-structures.mjs')
 G_HEATER_VERSION = '0.41.10'
 G_HEATER_MODULES = ('reported-protocol-scenes.mjs', 'reported-scene-drawing.mjs')
-def version_for(module): return '0.44.0' if module == 'method-families.mjs' else PUBLIC_READER_VERSION if module in K_PATCH_MODULES else K_VERSION if module in K_MODULES else H_VERSION if module in H_MODULES else '0.42.0' if module == 'reader.css' else G_HEATER_VERSION if module in G_HEATER_MODULES else VERSION
+def version_for(module): return '0.44.0' if module == 'method-families.mjs' else PUBLIC_READER_VERSION if module in L_MODULES else K_PATCH_VERSION if module in K_PATCH_MODULES else K_VERSION if module in K_MODULES else H_VERSION if module in H_MODULES else '0.42.0' if module == 'reader.css' else G_HEATER_VERSION if module in G_HEATER_MODULES else VERSION
 
 
 class ReaderCacheVersionTests(unittest.TestCase):

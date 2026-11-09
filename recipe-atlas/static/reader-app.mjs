@@ -9,11 +9,11 @@ import {el,link,button,badge,section,disclosure,siteURL,recordURL,human,isEquipm
 
 import {quantityValue} from './quantity-value.mjs';
 
-import {chemicalRegistry,chemicalEntry,chemicalImage,openChemical,hasRotatableChemicalModel,chemicalButtonLabel,chemicalDisplayCaption} from './chemical-viewer.mjs?v=0.45.0';
+import {chemicalRegistry,chemicalEntry,chemicalImage,openChemical,hasRotatableChemicalModel,chemicalButtonLabel,chemicalDisplayCaption} from './chemical-viewer.mjs?v=0.46.0';
 
-import {mountProtocol} from './protocol-visuals.mjs?v=0.45.2';
+import {mountProtocol} from './protocol-visuals.mjs?v=0.46.0';
 
-import {mountReaderStructures} from './reader-structures.mjs?v=0.45.0';
+import {mountReaderStructures} from './reader-structures.mjs?v=0.46.0';
 
 import {loadReaderPresentations} from './reader-presentation-loader.mjs?v=0.43.0';
 const cache=new Map();
