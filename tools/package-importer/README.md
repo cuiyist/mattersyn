@@ -1,4 +1,4 @@
-# MatterSyn frozen-package importer (Thomson Bi2S3 fixture)
+# NanoXtalSyn frozen-package importer (Thomson Bi2S3 fixture)
 
 ## Shared new-paper preflight
 

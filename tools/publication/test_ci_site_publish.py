@@ -224,13 +224,14 @@ class LiveReverificationScopeTests(unittest.TestCase):
 
     def test_verify_unions_prior_mandatory_and_current_changed_paths_once(self):
         with tempfile.TemporaryDirectory() as t:
-            _,work,_,stage,_=self.stage_fixture(Path(t))
+            source,work,_,stage,_=self.stage_fixture(Path(t))
             result={'passed':True,'checked_files':2,'checked_changed_files':['new.css','old.html'],
                     'checked_paper_routes':[],'checked_material_routes':[],'mismatched_files':[]}
-            args=SimpleNamespace(work=work,site_repo='o/r',site_url='https://example.test/site/',pages_minutes=1)
-            with mock.patch.object(publisher,'wait_for_pages',return_value=(True,[(1,'success')])),mock.patch.object(publisher.rb,'verify_live',return_value=result)as verify,redirect_stdout(io.StringIO()):
+            args=SimpleNamespace(work=work,source=source,site_repo='o/r',site_url='https://example.test/site/',pages_minutes=1)
+            with mock.patch.object(publisher,'wait_for_pages',return_value=(True,[(1,'success')])),mock.patch.object(publisher.rb,'verify_live',return_value=result)as verify,mock.patch.object(publisher,'scan_published_brand',return_value={'status':'synthetic_test'})as brand,redirect_stdout(io.StringIO()):
                 self.assertEqual(publisher.cmd_verify(args),0)
             self.assertEqual(verify.call_count,1)
+            brand.assert_called_once()
             self.assertEqual(verify.call_args.kwargs['changed_paths'],['new.css','old.html'])
             self.assertEqual(verify.call_args.args[3:5],({},{}),'Existing binding scopes stay unchanged, including empty scopes')
             saved=json.loads((work/'receipts/live-verification.json').read_bytes())
@@ -240,10 +241,10 @@ class LiveReverificationScopeTests(unittest.TestCase):
 
     def test_failed_prior_path_still_fails_and_keeps_receipt_evidence(self):
         with tempfile.TemporaryDirectory() as t:
-            _,work,_,_,_=self.stage_fixture(Path(t))
+            source,work,_,_,_=self.stage_fixture(Path(t))
             result={'passed':False,'checked_files':1,'checked_changed_files':['new.css'],
                     'checked_paper_routes':[],'checked_material_routes':[],'mismatched_files':['old.html']}
-            args=SimpleNamespace(work=work,site_repo='o/r',site_url='https://example.test/site/',pages_minutes=1)
+            args=SimpleNamespace(work=work,source=source,site_repo='o/r',site_url='https://example.test/site/',pages_minutes=1)
             with mock.patch.object(publisher,'wait_for_pages',return_value=(True,[(1,'success')])),mock.patch.object(publisher.rb,'verify_live',return_value=result),redirect_stdout(io.StringIO()),self.assertRaises(SystemExit):
                 publisher.cmd_verify(args)
             saved=json.loads((work/'receipts/live-verification.json').read_bytes())

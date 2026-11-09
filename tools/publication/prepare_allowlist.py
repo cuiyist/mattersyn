@@ -5,9 +5,11 @@ or publish. Use only after the file set and its candidate checks are reviewed.
 """
 from pathlib import Path
 import argparse,datetime,hashlib,importlib.util,json,sys
+from repository_names import policy_repo_label
 
 def main():
     p=argparse.ArgumentParser();p.add_argument('--root',required=True);p.add_argument('--guard',required=True);p.add_argument('--policy',required=True);p.add_argument('--registry',required=True);p.add_argument('--repo',required=True);p.add_argument('--source-commit',required=True);p.add_argument('--release-id',required=True);p.add_argument('--reviewer',required=True);p.add_argument('--out',required=True);a=p.parse_args()
+    a.repo=policy_repo_label(a.repo)
     root=Path(a.root).resolve();out=Path(a.out).resolve()
     if out==root or out.is_relative_to(root):raise RuntimeError('Write the allowlist outside the reviewed tree')
     spec=importlib.util.spec_from_file_location('public_guard',a.guard);g=importlib.util.module_from_spec(spec);sys.modules[spec.name]=g;spec.loader.exec_module(g);config=g.load_config(a.policy,a.registry)

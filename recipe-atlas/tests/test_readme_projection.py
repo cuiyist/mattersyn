@@ -4,7 +4,7 @@ sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
 from generate_release_metadata import readme_with_references
 class ReadmeProjection(unittest.TestCase):
     def test_authored_instructions_survive_repeated_generation(self):
-        original='# MatterSyn\n\n## Build\nRun the reviewed builder.\n'
+        original='# NanoXtalSyn\n\n## Build\nRun the reviewed builder.\n'
         one=readme_with_references(original,'unused','old bibliography')
         two=readme_with_references(one,'unused','new bibliography')
         self.assertTrue(two.startswith(original))

@@ -1,6 +1,6 @@
 # Public release boundary tools
 
-These tools validate or project exact reviewed files from the private MatterSyn
+These tools validate or project exact reviewed files from the private NanoXtalSyn
 project repository to the public website repository. The project-wide workflow is
 in `PUBLICATION.md` at the repository root. Project tooling, memory, skills, audit
 summaries and cleaned source history remain in the private repository. Complete

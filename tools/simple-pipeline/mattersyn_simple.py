@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""MatterSyn simple pipeline: paper -> synthesis-structure pairs -> checked -> website.
+"""NanoXtalSyn simple pipeline: paper -> synthesis-structure pairs -> checked -> website.
 
 Standard library only (PyMuPDF is used for PDFs if it is installed).
 
@@ -807,7 +807,7 @@ def cmd_build(a):
         (out / 'p' / f'{d["id"]}.html').write_text(page, encoding='utf-8')
     public = [{k: v for k, v in d.items()} for d in docs]
     (out / 'pairs.json').write_text(json.dumps(public, ensure_ascii=False), encoding='utf-8')
-    index = (f'<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MatterSyn pairs</title><style>{CSS}</style>'
+    index = (f'<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>NanoXtalSyn pairs</title><style>{CSS}</style>'
              f'<main><h1>Synthesis–structure pairs</h1><p>{len(rows)} pairs from {len(docs)} papers. <span class="tag">{html.escape(a.label)}</span> <a href="pairs.json">Download data</a></p>'
              '<input id="q" placeholder="Filter: CdSe, zinc blende, 300 ..." aria-label="Filter pairs"><div class="wrap"><table id="t"><tr><th>product</th><th>composition</th><th>phase</th><th>size</th><th>temperature</th><th>time</th><th>source</th></tr>'
              + ''.join(rows) + '</table></div></main><script>const q=document.getElementById("q"),r=[...document.querySelectorAll("#t tr")].slice(1);'

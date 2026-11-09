@@ -5,7 +5,7 @@ import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
 VERSION = '0.41.9'
-PUBLIC_READER_VERSION = '0.47.1'
+PUBLIC_READER_VERSION = '0.48.0'
 L_VERSION = '0.46.0'
 M_MODULES = ('illustrated-record.mjs', 'material-guide.mjs', 'material-hub.mjs', 'reader-app.mjs', 'reader.css')
 H_VERSION = '0.43.0'
@@ -18,7 +18,9 @@ PUBLIC_MODULES = ('illustrated-record.mjs', 'material-guide.mjs', 'material-hub.
 H_MODULES = ('chemical-reference-route.mjs', 'chemical-viewer.mjs', 'crystal-viewer.mjs', 'evans2010-products.mjs', 'illustrated-record.mjs', 'material-app.mjs', 'material-guide.mjs', 'material-hub.mjs', 'protocol-references.mjs', 'protocol-visuals.mjs', 'reader-app.mjs', 'reader-presentation-loader.mjs', 'reader-structures.mjs')
 G_HEATER_VERSION = '0.41.10'
 G_HEATER_MODULES = ('reported-protocol-scenes.mjs', 'reported-scene-drawing.mjs')
-def version_for(module): return '0.44.0' if module == 'method-families.mjs' else PUBLIC_READER_VERSION if module in M_MODULES else L_VERSION if module in L_MODULES else K_PATCH_VERSION if module in K_PATCH_MODULES else K_VERSION if module in K_MODULES else H_VERSION if module in H_MODULES else PUBLIC_READER_VERSION if module == 'reader.css' else G_HEATER_VERSION if module in G_HEATER_MODULES else VERSION
+N_VERSION='0.48.0'
+N_MODULES=('chemical-viewer.mjs', 'crystal-viewer.mjs', 'evans2010-products.mjs', 'illustrated-record.mjs', 'material-guide.mjs', 'material-hub.mjs', 'paper-app.mjs', 'paper-review.mjs', 'particle-shapes.mjs', 'protocol-modules.mjs', 'protocol-references.mjs', 'protocol-visuals.mjs', 'reader-app.mjs', 'reader-figure-morphology.mjs', 'reader-particle.mjs', 'reader-scoped-product-art.mjs', 'reader-structures.mjs', 'williamson2021-protocol.mjs')
+def version_for(module): return N_VERSION if module in N_MODULES else '0.47.1' if module == 'reader.css' else '0.44.0' if module == 'method-families.mjs' else PUBLIC_READER_VERSION if module in M_MODULES else L_VERSION if module in L_MODULES else K_PATCH_VERSION if module in K_PATCH_MODULES else K_VERSION if module in K_MODULES else H_VERSION if module in H_MODULES else PUBLIC_READER_VERSION if module == 'reader.css' else G_HEATER_VERSION if module in G_HEATER_MODULES else VERSION
 
 
 class ReaderCacheVersionTests(unittest.TestCase):
@@ -62,7 +64,7 @@ class ReaderCacheVersionTests(unittest.TestCase):
         self.assertIn('material-hub.mjs?v=' + PUBLIC_READER_VERSION, namespace['shell']('Synthetic', '<p>Fixture</p>', 'material-hub.mjs'))
         self.assertIn('library.mjs?v=0.33.0-r2', namespace['shell']('Synthetic', '<p>Fixture</p>', 'library.mjs'))
         for script in ('paper-review.mjs', 'evidence-gallery.mjs'):
-            self.assertIn(script+'?v='+VERSION, namespace['shell']('Synthetic', '<p>Fixture</p>', script))
+            self.assertIn(script+'?v='+version_for(script), namespace['shell']('Synthetic', '<p>Fixture</p>', script))
 
     def test_archive_builder_passes_plain_gallery_identity_to_shared_shell(self):
         tree = ast.parse(self.read('scripts/build_evidence_views.py'))
@@ -87,7 +89,10 @@ class ReaderCacheVersionTests(unittest.TestCase):
                     'static/reader-particle.mjs', 'static/reader-structures.mjs', 'static/wu2008-reader-context.mjs'):
             with self.subTest(parent=rel):
                 text = self.read(rel)
-                self.assertIn(PUBLIC_READER_VERSION if rel in ('templates/material-reader.html', 'scripts/build_dataset.py', 'scripts/build_reader_views.py', 'static/illustrated-record.mjs', 'static/material-hub.mjs', 'static/material-guide.mjs', 'static/reader-app.mjs') else version_for(Path(rel).name), text)
+                if rel == 'static/paper-review.mjs':
+                    self.assertIn('source-evidence.mjs?v='+version_for('source-evidence.mjs'), text)
+                else:
+                    self.assertIn(PUBLIC_READER_VERSION if rel in ('templates/material-reader.html', 'scripts/build_dataset.py', 'scripts/build_reader_views.py', 'static/illustrated-record.mjs', 'static/material-hub.mjs', 'static/material-guide.mjs', 'static/reader-app.mjs') else version_for(Path(rel).name), text)
                 self.assertNotIn('0.41.6', text)
         # Fresh record and legacy-material parents must reach both corrected modules.
         self.assertIn('material-guide.mjs?v=' + PUBLIC_READER_VERSION, self.read('static/illustrated-record.mjs'))
@@ -110,7 +115,7 @@ class ReaderCacheVersionTests(unittest.TestCase):
                     self.assertNotIn('./' + child + "'", code)
                     self.assertNotIn('./' + child + '"', code)
 
-    def test_M_background_and_CSS_refresh_without_changing_L_leaf_versions(self):
+    def test_M_CSS_and_N_parents_refresh_without_changing_unaffected_leaf_versions(self):
         app = self.read('static/reader-app.mjs')
         self.assertIn('export function renderIntuition', app)
         self.assertIn('general_background', app)
@@ -118,10 +123,11 @@ class ReaderCacheVersionTests(unittest.TestCase):
         self.assertIn('reader.css?v=0.47.1', self.read('templates/material-reader.html'))
         self.assertIn('.reader-general-background', self.read('static/reader.css'))
         for child in ('chemical-viewer.mjs', 'protocol-visuals.mjs', 'reader-structures.mjs'):
-            with self.subTest(unchanged_L_leaf=child):
-                self.assertEqual(version_for(child), '0.46.0')
-                self.assertEqual(app.count('./'+child+'?v=0.46.0'), 1)
+            with self.subTest(N_refreshed_parent=child):
+                self.assertEqual(version_for(child), N_VERSION)
+                self.assertEqual(app.count('./'+child+'?v='+N_VERSION), 1)
                 self.assertNotIn('./'+child+'?v=0.47.1', app)
+        self.assertEqual(version_for('chemical-reference-route.mjs'), '0.46.0')
         self.assertEqual(version_for('reported-protocol-scenes.mjs'), '0.45.2')
         self.assertEqual(version_for('reported-scene-drawing.mjs'), '0.45.0')
         self.assertEqual(version_for('method-families.mjs'), '0.44.0')

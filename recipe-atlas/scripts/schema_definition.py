@@ -37,4 +37,4 @@ record['properties']['material']['properties']['components']=strings
 record['properties']['material']['properties']['architecture']={'enum':['single_material','core_shell','heterostructure','alloy','composite','phase_mixture','unresolved']}
 record['properties']['material']['properties']['source_notation']=string
 record['properties']['material']['properties']['shell_layers']=arr(obj({'phase':string,'monolayers':{'type':'integer','minimum':1}},required=['phase','monolayers']))
-SCHEMA={'$schema':'https://json-schema.org/draft/2020-12/schema','$id':'https://mattersyn-recipe-atlas.cuiy781513.chatgpt.site/data/record.schema.json','title':'MatterSyn source-linked synthesis record',**record,'$defs':{'quantity':quantity,'fact':fact,'quality':quality}}
+SCHEMA={'$schema':'https://json-schema.org/draft/2020-12/schema','$id':'https://mattersyn-recipe-atlas.cuiy781513.chatgpt.site/data/record.schema.json','title':'NanoXtalSyn source-linked synthesis record',**record,'$defs':{'quantity':quantity,'fact':fact,'quality':quality}}

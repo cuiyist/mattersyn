@@ -1,6 +1,6 @@
-# Original MatterSyn reference project
+# Original NanoXtalSyn reference project
 
-This is a contextual map for continuing the user's MatterSyn work. Do not redirect unrelated projects here or assume these paths exist on another machine. Read the local project memory for changes after this skill was written.
+This is a contextual map for continuing the user's NanoXtalSyn work. Do not redirect unrelated projects here or assume these paths exist on another machine. Read the local project memory for changes after this skill was written.
 
 - Workspace: `[local path redacted]
 - Memory: `MEMORY.md`
@@ -53,7 +53,7 @@ The Murray 1993 supplement was not located or verified. The method pages therefo
 - Show chemical formulas, structure and highlighted functional groups; allow rotation and zoom where valid coordinates exist.
 - Make apparatus/action illustrations change by stage. Put reported temperature, duration and pressure beside the scene. Split condition phases instead of displaying incompatible conditions together.
 - Include morphology, size, a bulk unit cell and clearly labeled finite crystal model when supported; offer CIF/XYZ downloads and verified MP/COD links. Preserve uncertain sample-to-property links and evidence/interpretation/outlook distinctions.
-- Keep useful earlier examples accessible and save durable progress in MatterSyn memory.
+- Keep useful earlier examples accessible and save durable progress in NanoXtalSyn memory.
 
 The skill's editable project copy is under `mattersyn/skills/mattersyn-paper-to-site`; the discoverable installed copy is under the personal Codex skills directory. Keep these copies aligned for user-requested workflow updates after validation, without touching unrelated personal skills. Consult project memory for the most recent synchronization status.
 

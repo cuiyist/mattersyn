@@ -67,7 +67,7 @@ test('all three extra views are the exact first operation on their explicit mate
 
 test('target URLs stay within live or local candidate site roots', () => {
   const row = original.targets[1];
-  assert.equal(targetURL('https://cuiyist.github.io/mattersyn-site/', row), 'https://cuiyist.github.io/mattersyn-site/' + row.route);
+  assert.equal(targetURL('https://cuiyist.github.io/nanoxtalsyn-site/', row), 'https://cuiyist.github.io/nanoxtalsyn-site/' + row.route);
   assert.equal(targetURL('http://127.0.0.1:8172/candidate', row), 'http://127.0.0.1:8172/candidate/' + row.route);
   for (const route of ['https://other.invalid/material.html', '//other.invalid/material.html', '../material.html']) {
     assert.throws(() => targetURL('http://127.0.0.1:8172/candidate/', { route }));
@@ -340,7 +340,7 @@ test('actual visit retains HTTP200 readiness timeout and failure despite diagnos
   page.screenshot = async () => { throw new Error('diagnostic screenshot'); };
   const context = { newPage: async () => page, close: async () => { closed = true; } };
   const browser = { newContext: async () => context };
-  const row = await visit(browser, 'https://cuiyist.github.io/mattersyn-site/', '/unused', 'before', original.targets[0], VIEWPORTS[0]);
+  const row = await visit(browser, 'https://cuiyist.github.io/nanoxtalsyn-site/', '/unused', 'before', original.targets[0], VIEWPORTS[0]);
   assert.equal(row.status, 200); assert.equal(row.automated_checks_passed, false);
   assert.equal(row.error, originalError.message); assert.deepEqual(row.page_errors, []); assert.equal(closed, true);
   assert.deepEqual(seen, [['goto', 90000], ['main[data-reader-ready]', 60000]]);
@@ -458,11 +458,11 @@ test('standalone furnace is a separate width-limited310px phone record while all
  assert.equal(sceneFixtureMatrix().length*cases.filter(c=>!c.standalone).length+cases.filter(c=>c.standalone).length,89);
 });
 
-function transportReadinessFixture(url='https://cuiyist.github.io/mattersyn-site/wu2008-reader-context.mjs', resource_type='script') {
+function transportReadinessFixture(url='https://cuiyist.github.io/nanoxtalsyn-site/wu2008-reader-context.mjs', resource_type='script') {
   return {automated_checks_passed:false,status:200,error:"page.waitForSelector: Timeout 60000ms exceeded.\nCall log:\n  - waiting for locator('main[data-reader-ready]')",page_errors:[],
     failure_diagnostics:{non_2xx_responses:[{url,status:503,resource_type}],request_failures:[],console_errors:[{text:'Failed to load resource: the server responded with a status of 503 ()'}],collection_errors:[],omitted:{},readiness:{main_present:true,reader_marker_present:false},screenshot:{file:'target-390-attempt-1-failure-viewport.png',bytes:10,sha256:'a'.repeat(64)}}};
 }
-const transportBase='https://cuiyist.github.io/mattersyn-site/';
+const transportBase='https://cuiyist.github.io/nanoxtalsyn-site/';
 test('transport readiness retry accepts only actual same-site script or JSON503 bootstrap failures',()=>{
   assert.equal(retryableTransportReadiness(transportReadinessFixture(),transportBase),true);
   const json=transportReadinessFixture(transportBase+'data/materials/au-3325c2.json','fetch');
@@ -470,7 +470,7 @@ test('transport readiness retry accepts only actual same-site script or JSON503 
   assert.equal(retryableTransportReadiness(json,transportBase),true);
   for(const status of [200,403,404,429,500,502,504]){const row=transportReadinessFixture();row.failure_diagnostics.non_2xx_responses[0].status=status;assert.equal(retryableTransportReadiness(row,transportBase),false);}
   assert.equal(retryableTransportReadiness(transportReadinessFixture('https://other.test/a.mjs'),transportBase),false);
-  assert.equal(retryableTransportReadiness(transportReadinessFixture('https://cuiyist.github.io/mattersyn-site-other/a.mjs'),transportBase),false);
+  assert.equal(retryableTransportReadiness(transportReadinessFixture('https://cuiyist.github.io/nanoxtalsyn-site-other/a.mjs'),transportBase),false);
   assert.equal(retryableTransportReadiness(transportReadinessFixture(transportBase+'a.png','img'),transportBase),false);
 });
 test('transport readiness retry never recovers semantic hash geometry or incomplete diagnostic failures',()=>{

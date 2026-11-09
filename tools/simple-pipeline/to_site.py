@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Turn checked pair files into the inputs of the existing MatterSyn site.
+"""Turn checked pair files into the inputs of the existing NanoXtalSyn site.
 
   python to_site.py records pairs --repo <mattersyn checkout>
 
@@ -16,7 +16,7 @@ from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[2]/'recipe-atlas/scripts'))
 from reader_presentation_registry import load_reviewed_reader, source_paths, write_reviewed_reader
 
-REVIEW_SCOPE = ('Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was '
+REVIEW_SCOPE = ('Extracted from the paper by the NanoXtalSyn pipeline. Each value is tied to a quote found in the paper and was '
                 'produced by two separate local-model extraction passes that agree. It has not been independently audited.')
 UNITS = {'°c': 'degC', 'c': 'degC', 'degc': 'degC', 'k': 'K', 'min': 'min', 'mins': 'min', 'minute': 'min', 'minutes': 'min', 'h': 'h', 'hr': 'h', 'hrs': 'h',
          'hour': 'h', 'hours': 'h', 's': 's', 'sec': 's', 'seconds': 's', 'd': 'd', 'day': 'd', 'days': 'd', 'ml': 'mL', 'l': 'L', 'µl': 'µL', 'μl': 'µL', 'ul': 'µL'}

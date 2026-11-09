@@ -13,7 +13,7 @@ function section(id,title){let s=$(id);if(!s){s=node('section',undefined,'record
 try{
  const id=new URLSearchParams(location.search).get('id');if(!/^[a-z0-9-]+$/.test(id||''))throw Error('Select a reviewed paper from the source library.');
  const response=await fetch('data/paper-reviews/'+id+'.json');if(!response.ok)throw Error('Full-document review has not yet been published for this paper.');const c=await response.json();
- $('review-title').textContent=c.title;document.title=c.title+' · Source review | MatterSyn';$('review-doi').textContent=c.doi;$('review-doi').href='https://doi.org/'+c.doi;
+ $('review-title').textContent=c.title;document.title=c.title+' · Source review | NanoXtalSyn';$('review-doi').textContent=c.doi;$('review-doi').href='https://doi.org/'+c.doi;
  const total=c.documents.reduce((n,d)=>n+d.pages.filter(p=>p.text_read===true&&p.visual_review===true).length,0);$('review-summary').textContent=`${c.review_scope_label||'Supplied-document review'} · ${total} pages read and visually checked · ${c.figures.length} source figure entries · ${c.tables?.length||0} source table entries inventoried. Extracted numerical data collections are listed in the source evidence sections. Complete source reading does not fill information omitted by the authors.`;
  $('review-download').href='data/paper-reviews/'+id+'.json';$('review-download').download=id+'-paper-coverage.json';
  const docs=section('documents','Supplied documents and review scope');

@@ -12,6 +12,7 @@ from reader_presentation_registry import load_reviewed_reader, source_paths
 from public_reader_registry import public_parts
 from route_labels import route_label
 from reader_background import attach_background, load_library, library_digest
+from reader_brand_projection import project_reader_branding
 ROOT=Path(__file__).resolve().parents[1]
 
 def validate_reader_view(rid,view):
@@ -51,6 +52,7 @@ def main():
     view,background_coverage=attach_background(view,records,load_library(ROOT))
     background_coverage['library_sha256']=library_digest(ROOT)
     (target.parent/'reader-background-coverage.json').write_text(json.dumps(background_coverage,sort_keys=True)+'\n',encoding='utf-8',newline='\n')
+    view=project_reader_branding(view)
     legacy_raw=source.read_bytes() if view is data and len(source_paths(source))==1 else (json.dumps(view,ensure_ascii=False,separators=(',',':'))+'\n').encode('utf-8')
     payloads=public_parts(view,legacy_raw)
     for name,raw in payloads.items():(target.parent/name).write_bytes(raw)

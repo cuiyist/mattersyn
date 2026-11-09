@@ -1,7 +1,7 @@
 // Source-bound morphology illustrations; never measured coordinates or training labels.
 import {el,link,badge,recordURL,disclosure,siteURL} from './reader-utils.mjs?v=0.41.9';
-import {particleShapeSVG,particleShapeInfo} from './particle-shapes.mjs?v=0.40.5';
-import {scopedProductArt} from './reader-scoped-product-art.mjs';
+import {particleShapeSVG,particleShapeInfo} from './particle-shapes.mjs?v=0.48.0';
+import {scopedProductArt} from './reader-scoped-product-art.mjs?v=0.48.0';
 import {productFactLabel} from './source-field-copy.mjs?v=0.45.0';
 
 const knownStatus=new Set(['reported','author_derived','calculated','inherited']);

@@ -1,7 +1,7 @@
 import {quantityValue} from './quantity-value.mjs';
 import {resolveMaterialEntry} from './material-aliases.mjs';
 import {componentScopeLabel} from './reader-utils.mjs?v=0.41.9';
-import {mountMaterialGuide} from './material-guide.mjs?v=0.47.1';
+import {mountMaterialGuide} from './material-guide.mjs?v=0.48.0';
 const $=id=>document.getElementById(id);const params=new URLSearchParams(location.search);let id=params.get('id');
 function node(tag,text,cls){const x=document.createElement(tag);if(text!==undefined)x.textContent=text;if(cls)x.className=cls;return x;}
 function link(text,url){const a=node('a',text);a.href=url;return a;}
@@ -16,7 +16,7 @@ try{
  const displayCategories=await(await fetch('data/measurement-display.json')).json();const structural=(m,r)=>Object.hasOwn(displayCategories.record_structural_measurement_ids||{},r.record_id)?displayCategories.record_structural_measurement_ids[r.record_id].includes(m.id):displayCategories.structural_properties.includes(m.property)||displayCategories.structural_property_fragments.some(part=>m.property.includes(part));
  const response=await fetch('data/materials/'+entry.id+'.json',{cache:'no-store'});if(!response.ok)throw Error('Material details are unavailable');const data=await response.json();
  if(document.body.dataset.material!=='CdSe'){
-  document.title=data.formula+' · Synthesis, characterization and properties | MatterSyn';$('material-formula').textContent=data.formula;$('material-name').textContent=data.name;$('material-elements').textContent=data.elements.join(' · ');
+  document.title=data.formula+' · Synthesis, characterization and properties | NanoXtalSyn';$('material-formula').textContent=data.formula;$('material-name').textContent=data.name;$('material-elements').textContent=data.elements.join(' · ');
   $('material-scope-note').textContent=data.scope_note+' '+(data.route_records??data.reviewed_records)+' source-linked method/variant records; this is not an independent-experiment count.';
   if(data.component_only)$('material-formula').textContent=data.formula+' · '+componentScopeLabel(data).toLowerCase();
   $('material-dataset').href='dataset.html?material='+encodeURIComponent(data.formula);

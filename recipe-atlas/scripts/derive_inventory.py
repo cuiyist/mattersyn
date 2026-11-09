@@ -10,6 +10,15 @@ CORPUS_SUMMARY={'local_document_files_indexed','local_paper_groups_indexed','pap
 def read(p):return json.loads(p.read_text(encoding='utf-8-sig'))
 def hashed(obj):return hashlib.sha256(json.dumps(obj,sort_keys=True,separators=(',',':'),ensure_ascii=False).encode()).hexdigest()
 
+CURRENT_PIPELINE_NOTE = 'Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.'
+
+
+def inventory_display_notes(notes):
+    """Rename one current generated pipeline note; retain authored evidence verbatim."""
+    return [note.replace('MatterSyn pipeline', 'NanoXtalSyn pipeline')
+            if note == CURRENT_PIPELINE_NOTE else note for note in notes]
+
+
 def reviewed_seed(inventory,original_sha256):
     """One-time migration; preserve authored scopes/notes, never cached totals."""
     return {'schema':'mattersyn-inventory-evidence/1',
@@ -122,6 +131,7 @@ def derive(seed,records,hubs,reviews,library,manifest,pairs,corpus_source):
     for sid in sorted(groups):
       rr=sorted((r for r in records if r['lineage']['source_group']==sid),key=lambda r:r['record_id'])
       p=copy.deepcopy(metadata[sid]);cc=Counter(categories[r['record_id']] for r in rr)
+      if 'notes' in p:p['notes']=inventory_display_notes(p['notes'])
       if p['doi'].casefold()!=primary[sid]['doi'].casefold():raise ValueError('Reviewed scope DOI mismatch')
       p.update(canonical_record_count=len(rr),synthesis_route_variant_count=cc['route'],contextual_control_count=cc['control'],
         contextual_observation_count=cc['observation'],procedure_count=cc['procedure'],benchmark_row_count=cc['benchmark'],

@@ -1,4 +1,4 @@
-# Local simple pipeline for ordinary MatterSyn pages
+# Local simple pipeline for ordinary NanoXtalSyn pages
 
 This package implements the owner's October 10 evening job. It extracts main-text
 synthesis–structure pairs in two local-model passes, keeps automatically checked
@@ -11,7 +11,7 @@ that lane's ledger nor changes its sampling, calibration or stop rules.
 Use Python 3.11 or later, the project's existing Python environment and the
 dependencies in `requirements.txt`. The extraction script is otherwise standard
 library Python. The converter and summary also use the schema and route functions
-from the current MatterSyn checkout. The installed location is
+from the current NanoXtalSyn checkout. The installed location is
 `tools/simple-pipeline/`. `PROMPT.md` is the extraction prompt. No worker prompt
 or inherited speed/accuracy claim is part of this package.
 

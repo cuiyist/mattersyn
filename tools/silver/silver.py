@@ -1,4 +1,4 @@
-"""Private, text-only MatterSyn silver reconciliation/calibration. No network/model calls."""
+"""Private, text-only NanoXtalSyn silver reconciliation/calibration. No network/model calls."""
 from __future__ import annotations
 
 import argparse

@@ -5,10 +5,10 @@ import {operationKind as kind} from './protocol-operation-kind.mjs';
 import {createGenericThermalScene} from './generic-thermal-scenes.mjs?v=0.1.0';
 import {createReportedProtocolScene,REPORTED_SCENE_CAVEAT} from './reported-protocol-scenes.mjs?v=0.45.2';
 import {matchProtocolCondition} from './protocol-conditions.mjs?v=0.39.1';
-import {mountProtocolReferences} from './protocol-references.mjs?v=0.46.0';
+import {mountProtocolReferences} from './protocol-references.mjs?v=0.48.0';
 import {quantityValue} from './quantity-value.mjs';
 import {conditionFieldText,conditionDisclosureText} from './source-field-copy.mjs?v=0.45.0';
-import {PAPER_PROTOCOLS} from './protocol-modules.mjs';
+import {PAPER_PROTOCOLS} from './protocol-modules.mjs?v=0.48.0';
 import {PROTOCOL_SOURCE_GROUPS} from './protocol-module-registry.mjs';
 // Per-paper scene modules are loaded only when a record from that paper is opened
 // (protocol-module-registry.mjs lists the source groups each module draws). Until a

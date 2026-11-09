@@ -1,7 +1,7 @@
 // Load MatterSyn pages in Chromium, record what each page transfers and how long
 // it takes to show its first record, and save desktop and phone screenshots.
 //
-//   node tools/ci/site-pages-check.mjs --base http://127.0.0.1:8172/mattersyn-site/ \
+//   node tools/ci/site-pages-check.mjs --base http://127.0.0.1:8172/nanoxtalsyn-site/ \
 //     --index <dist>/data/materials-index.json --out <dir> [--routes routes.json] [--strict]
 //
 // The ten benchmark material pages (CdSe, CdS, ZnS, InAs, PbS, InP, Au, TiO2, GaAs,

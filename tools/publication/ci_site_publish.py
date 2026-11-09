@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build, check and publish the MatterSyn site from GitHub Actions.
+"""Build, check and publish the NanoXtalSyn site from GitHub Actions.
 
 This is the GitHub-hosted counterpart of `release_batch.py`. It runs the same
 build commands and release checks, in the same order, and reuses that helper's
@@ -15,7 +15,7 @@ functions, so the site is built exactly as the local release builds it:
              (release_batch.stage_controls)
           7. the site boundary gate (export_release.py from the site's own tools,
              as the site's Pages workflow runs it)
-          8. comparison with mattersyn-site main by Git blob id, using a blobless
+          8. comparison with nanoxtalsyn-site main by Git blob id, using a blobless
              clone without checkout, so the site's 4.7 GB is never downloaded
   push    9. one ordinary commit on top of the site's main, pushed without force.
              Nothing is pushed when nothing changed; a moved site main fails.
@@ -43,10 +43,12 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import release_batch as rb  # noqa: E402  (same directory; reuses the local release helpers)
+from repository_names import (SOURCE_REPO, SITE_REPO, SITE_URL, PAGES_WORKFLOW_NAME,
+                              SITE_PUBLISH_WORKFLOW_NAME, LEGACY_SITE_PUBLISH_WORKFLOW_NAME)
 
 RAW_INPUT_DIRS = ('scripts', 'templates', 'data', 'static', 'tests')
 REFRESHED_CONTROLS = ('site-allowlist.json', 'asset-rights-registry.json', 'site-policy.json')
-PAGES_WORKFLOW = 'MatterSyn validated Pages release'
+PAGES_WORKFLOW = PAGES_WORKFLOW_NAME
 ZERO_OID = '0' * 40
 TIMESTAMP = re.compile(r'\d{4}-\d{2}-\d{2}[T ]\d{2}:\d{2}:\d{2}(?:\.\d+)?(?:Z|[+-]\d{2}:?\d{2})?')
 DIST = Path('final/project/recipe-atlas/dist')
@@ -419,7 +421,7 @@ def cmd_push(a):
     base = stage['site_base_commit']
     remote = git(site, 'ls-remote', 'origin', 'refs/heads/main').split()
     if not remote or remote[0] != base:
-        fail(f'mattersyn-site main moved during this run (was {base}, now {remote[0] if remote else "missing"}); '
+        fail(f'nanoxtalsyn-site main moved during this run (was {base}, now {remote[0] if remote else "missing"}); '
              'nothing was pushed. Re-run this workflow to build on top of the new site main.')
     write = stage['files_added'] + stage['files_changed']
     written = hash_objects(site, [preview / p for p in write], write=True)
@@ -435,7 +437,7 @@ def cmd_push(a):
     if names != set(write) | set(stage['files_removed']):
         fail('the publish tree does not contain exactly the staged changes')
     short = stage['source_commit'][:7]
-    body = f'Built from cuiyist/mattersyn {stage["source_commit"]} by the site publish workflow'
+    body = f'Built from {SOURCE_REPO} {stage["source_commit"]} by the site publish workflow'
     if a.run_url:
         body += f' ({a.run_url})'
     papers = stage['new_papers']
@@ -452,7 +454,7 @@ def cmd_push(a):
     if pushed.returncode:
         now_remote = git(site, 'ls-remote', 'origin', 'refs/heads/main').split()
         moved = now_remote and now_remote[0] != base
-        fail(('mattersyn-site main moved during this run; ' if moved else '') +
+        fail(('nanoxtalsyn-site main moved during this run; ' if moved else '') +
              'the site push was refused and nothing was published: ' + (pushed.stdout + pushed.stderr)[-1500:].replace(token, '***'))
     result.update(pushed=True, site_commit=commit, pushed_at=rb.now(),
                   files_added=len(stage['files_added']), files_changed=len(stage['files_changed']),
@@ -488,6 +490,53 @@ def built_changed_paths(stage):
     return sorted({p for p in stage['files_added'] + stage['files_changed'] if p.split('/')[0] not in rb.SITE_CONTROL})
 
 
+def scan_published_brand(a, work, stage, push):
+    """Post-gate N6: anonymous full scan of the exact published-preview/manifest binding."""
+    source = a.source.resolve()
+    build = read_json(work / 'build.json')
+    expected = build.get('source_commit')
+    if (not isinstance(expected, str) or not re.fullmatch(r'[0-9a-f]{40}', expected)
+            or stage.get('source_commit') != expected or push.get('source_commit') != expected
+            or rb.git(source, 'rev-parse', 'HEAD') != expected
+            or rb.git(source, 'status', '--porcelain', '--untracked-files=all')):
+        fail('brand scan Source differs from the exact clean published build')
+    names = re.findall(rb'^name: ([^\r\n]+)', (source / '.github/workflows/site-publish.yml').read_bytes(), re.M)
+    if names == [LEGACY_SITE_PUBLISH_WORKFLOW_NAME.encode()]:
+        return {'status': 'not_applicable_historical_Source', 'source_commit': expected}
+    if names != [SITE_PUBLISH_WORKFLOW_NAME.encode()]:
+        fail('unexpected Source publisher name for the brand scan')
+    if a.site_repo != SITE_REPO or a.site_url.rstrip('/')+'/' != SITE_URL:
+        fail('N6 must check the renamed Site repository and public Pages address')
+    blueprint = source / 'publication/build-inputs.json'
+    inputs = read_json(blueprint).get('input_files', [])
+    for relative in ('tools/ci/brand_name_scan.py', 'tools/ci/brand-name-identifiers.json'):
+        rows = [row for row in inputs if row.get('path') == relative]
+        path = source / relative
+        if len(rows) != 1 or path.is_symlink() or not path.resolve().is_relative_to(source):
+            fail('brand scan input is missing, duplicate or aliased: '+relative)
+        raw = path.read_bytes()
+        if len(raw) != rows[0].get('bytes') or hashlib.sha256(raw).hexdigest() != rows[0].get('sha256'):
+            fail('brand scan input differs from Source blueprint: '+relative)
+    report_path = work / 'receipts/n-brand-published-scan.json'
+    step('anonymous full published-brand inventory', [
+        sys.executable, source / 'tools/ci/brand_name_scan.py', '--scan',
+        '--root', work / 'site-preview', '--manifest', work / 'site-allowlist.json',
+        '--source-blueprint', blueprint, '--identifiers', source / 'tools/ci/brand-name-identifiers.json',
+        '--phase', 'published', '--source-commit', expected, '--site-commit', push['site_commit'],
+        '--build-receipt', work / 'build.json', '--stage-receipt', work / 'stage.json',
+        '--push-receipt', work / 'push.json', '--live-receipt', work / 'receipts/live-verification.json',
+        '--out', report_path], cwd=source)
+    report = read_json(report_path)
+    count = report.get('selected_text_file_count')
+    if (report.get('schema') != 'NanoXtalSyn-N6-full-published-text-scan/1'
+            or report.get('phase') != 'published' or report.get('passed') is not True
+            or report.get('source_commit') != expected or report.get('site_commit') != push['site_commit']
+            or report.get('all_selected_HTTP_verified') is not True
+            or type(count) is not int or count <= 0 or report.get('anonymous_HTTP_verified_files') != count):
+        fail('full published-brand inventory did not verify every selected anonymous file')
+    return report
+
+
 def cmd_verify(a):
     work = a.work.resolve()
     push = read_json(work / 'push.json')
@@ -516,13 +565,14 @@ def cmd_verify(a):
         fail(f'live check failed: {result.get("reason") or result.get("mismatched_files")[:10]}')
     log(f"live check passed: {result['checked_files']} files, {len(result['checked_paper_routes'])} paper routes, "
         f"{len(result['checked_material_routes'])} material routes")
+    scan_published_brand(a, work, stage, push)
     return 0
 
 
 # ------------------------------------------------------------------- summary
 def cmd_summary(a):
     work = a.work.resolve()
-    lines = ['## MatterSyn site publish', '']
+    lines = ['## NanoXtalSyn site publish', '']
     for name, label in (('build.json', 'Build'), ('stage.json', 'Stage'), ('push.json', 'Push'),
                         ('receipts/site-comparison.json', 'Dry-run comparison'),
                         ('receipts/live-verification.json', 'Live check'), ('receipts/browser/receipt.json', 'Browser check')):
@@ -566,7 +616,7 @@ def main(argv=None):
     s = sub.add_parser('stage')
     s.add_argument('--source', type=Path, required=True)
     s.add_argument('--work', type=Path, required=True)
-    s.add_argument('--site', type=Path, required=True, help='blobless mattersyn-site clone on main')
+    s.add_argument('--site', type=Path, required=True, help='blobless nanoxtalsyn-site clone on main')
     s.add_argument('--sync-gate-tools', action='store_true')
     c = sub.add_parser('compare')
     c.add_argument('--work', type=Path, required=True)
@@ -578,9 +628,10 @@ def main(argv=None):
     u.add_argument('--token-env', default='SITE_PUSH_TOKEN')
     u.add_argument('--run-url', default='')
     v = sub.add_parser('verify')
+    v.add_argument('--source', type=Path, required=True)
     v.add_argument('--work', type=Path, required=True)
-    v.add_argument('--site-repo', default='cuiyist/mattersyn-site')
-    v.add_argument('--site-url', default='https://cuiyist.github.io/mattersyn-site/')
+    v.add_argument('--site-repo', default=SITE_REPO)
+    v.add_argument('--site-url', default=SITE_URL)
     v.add_argument('--pages-minutes', type=float, default=45)
     m = sub.add_parser('summary')
     m.add_argument('--work', type=Path, required=True)

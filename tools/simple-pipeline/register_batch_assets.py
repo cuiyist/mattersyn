@@ -118,7 +118,7 @@ def register(repo, record_ids, recorded_at, direction_id, reviewer, guard, apply
             locators = {'document_role': 'main', 'id': opid}
             if page_match: locators['page'] = int(page_match[1])
             add(path, item.get('asset_sha256'), 'generated_artwork', dict(base_binding, locators=locators), provenance,
-                {'status': 'not_source_derived', 'attribution': 'MatterSyn authored conceptual action diagram; no measured apparatus asserted.'})
+                {'status': 'not_source_derived', 'attribution': 'NanoXtalSyn authored conceptual action diagram; no measured apparatus asserted.'})
         for eid in set((chemical_bindings.get(rid) or {}).values()):
             if not eid.startswith('name-card-'): continue
             entry = chemistry.get(eid)
@@ -126,7 +126,7 @@ def register(repo, record_ids, recorded_at, direction_id, reviewer, guard, apply
                 raise ValueError(f'name card differs: {rid}')
             path = 'assets/chemical-registry/' + entry['svgPath']
             add(path, entry['assetHashes']['svgPath'], 'generated_artwork', base_binding, provenance,
-                {'status': 'not_source_derived', 'attribution': 'MatterSyn authored chemical name card; no molecular connectivity asserted.'})
+                {'status': 'not_source_derived', 'attribution': 'NanoXtalSyn authored chemical name card; no molecular connectivity asserted.'})
 
     index = guard._build_asset_indexes(registry)[1]
     added_assets = added_rules = 0

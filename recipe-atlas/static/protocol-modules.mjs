@@ -9,7 +9,7 @@ export const PAPER_PROTOCOLS=Object.freeze([
  Object.freeze({file:'./ramasamy2014-protocol.mjs?v=0.39.1',names:Object.freeze(['buildRamasamy2014Scene','createRamasamy2014Art'])}),
  Object.freeze({file:'./li2000cu2sns3-protocol.mjs?v=0.39.1',names:Object.freeze(['buildLi2000cu2sns3Scene','createLi2000cu2sns3Art'])}),
  Object.freeze({file:'./li1998-protocol.mjs?v=0.37.0',names:Object.freeze(['buildLi1998Scene','createLi1998Art','createLi1998ConditionGrid'])}),
- Object.freeze({file:'./williamson2021-protocol.mjs?v=0.37.0',names:Object.freeze(['buildWilliamson2021Scene','decorateWilliamson2021Art','createWilliamson2021ConditionGrid'])}),
+ Object.freeze({file:'./williamson2021-protocol.mjs?v=0.48.0',names:Object.freeze(['buildWilliamson2021Scene','decorateWilliamson2021Art','createWilliamson2021ConditionGrid'])}),
  Object.freeze({file:'./wu2008-protocol.mjs',names:Object.freeze(['buildWu2008Scene','createWu2008Art','createWu2008ConditionGrid'])}),
  Object.freeze({file:'./chen2018ami-protocol.mjs',names:Object.freeze(['buildChen2018amiScene','createChen2018amiArt','createChen2018amiConditionGrid'])}),
  Object.freeze({file:'./sasongko2025-protocol.mjs',names:Object.freeze(['buildSasongko2025Scene','createSasongko2025Art','createSasongko2025ConditionGrid'])}),

@@ -40,7 +40,7 @@ export async function openChemical(entry){
  const why=flatReferenceReason(entry);if(why)dialog.append(el('p',why,'chemical-caption'));
  try{
  if(entry.readerAmbientReference){
-  const {drawReference}=await import('./reader-structures.mjs?v=0.46.0');
+  const {drawReference}=await import('./reader-structures.mjs?v=0.48.0');
   if(!dialog.open||generation!==dialogGeneration)return;
   host.classList.remove('molecule-model');host.classList.add('reader-structure-panel');host.style.height='auto';
   const mounted=await drawReference(host,entry.readerAmbientReference,false);
