@@ -120,6 +120,42 @@ class ReaderBackgroundTests(unittest.TestCase):
         self.assertEqual(json.loads(output['records/r.json']), projected['records']['r'])
         self.assertNotIn('general_background', json.loads(output['materials/material.json'])['material'])
 
+    def test_empty_projection_preserves_view_identity_and_zero_coverage(self):
+        view = {'records': {}, 'materials': {}, 'figures_by_source': {}}
+        before = copy.deepcopy(view)
+        projected, coverage = m.attach_background(view, {}, self.library)
+        self.assertIs(projected, view)
+        self.assertEqual(view, before)
+        self.assertEqual(coverage['canonical_records'], 0)
+        self.assertEqual(coverage['reader_records'], 0)
+        self.assertEqual(coverage['after_sections_visible'], 0)
+        self.assertEqual(coverage['background_card_distribution'], {'0': 0, '1': 0, '2': 0, '3': 0})
+
+    def test_canonical_non_Reader_records_keep_separate_default_visibility_counts(self):
+        view = {'records': {'r': {'source_id': 'source', 'figures': []}},
+                'materials': {'material': {'record_ids': ['r']}}, 'figures_by_source': {}}
+        records = {'r': self.record('Hot injection'), 'context': self.record('')}
+        before = copy.deepcopy((view, records))
+        projected, counts = m.attach_background(view, records, self.library)
+        self.assertEqual(set(projected['records']), {'r'})
+        self.assertEqual((counts['canonical_records'], counts['reader_records']), (2, 1))
+        self.assertEqual(counts['after_sections_visible'], 1)
+        self.assertEqual(sum(counts['background_card_distribution'].values()), 1)
+        canonical = counts['all_canonical']
+        self.assertEqual(canonical['Data_only_default_pages'], 1)
+        self.assertEqual(canonical['static_Data_sections_before'], 2)
+        self.assertEqual(canonical['pages_with_authored_background_after'], 2)
+        self.assertEqual(canonical['default_visible_union_before'], 1)
+        self.assertEqual(canonical['default_visible_union_after'], 2)
+        self.assertEqual(sum(canonical['background_card_distribution'].values()), 2)
+        self.assertNotIn('records/context.json', shards(projected))
+        self.assertEqual((view, records), before)
+
+    def test_required_Reader_record_without_canonical_input_is_not_silently_skipped(self):
+        view = {'records': {'required': {}}, 'materials': {}, 'figures_by_source': {}}
+        with self.assertRaises(KeyError):
+            m.attach_background(view, {}, self.library)
+
     def test_empty_source_array_keeps_browser_precedence_and_Wu_placeholder_count(self):
         self.assertEqual(m.source_interpretations({'intuition': [], 'chemical_intuition': [{'summary': 'alias'}]}), [])
         self.assertEqual(m.source_interpretations({'intuition': None, 'chemical_intuition': [{'summary': 'alias'}]}), [{'summary': 'alias'}])

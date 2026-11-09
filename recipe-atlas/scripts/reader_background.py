@@ -5,6 +5,7 @@ The immutable source records and reviewed Reader sidecar are never modified.
 """
 import copy
 import hashlib
+import html
 import json
 import re
 from collections import Counter
@@ -165,8 +166,23 @@ def select_background(record, presentation, library):
     return result
 
 
+def render_record_background(record, library):
+    """Static Data-page sibling; existing source/context hosts remain untouched."""
+    cards = select_background(record, {}, library)
+    esc = lambda value: html.escape(str(value), quote=True)
+    out = ['<div class="intuition-grid reader-intuition reader-general-background record-general-background" data-record-background style="min-width:0">']
+    for item in cards:
+        reference = item['reference']
+        out.append('<article class="intuition-card" data-background-id="'+esc(item['id'])+'" style="min-width:0;overflow-wrap:anywhere">'
+                   '<h3>'+esc(item['title'])+'</h3><p>'+esc(item['summary'])+'</p>'
+                   '<small style="display:block;font-size:13px;line-height:1.5">'+esc(LABEL)+'</small>'
+                   '<a class="reader-data-link" href="'+esc(reference['url'])+'" style="max-width:100%;overflow-wrap:anywhere">'
+                   +esc('Reference: '+reference['title']+' — DOI '+reference['doi'])+'</a></article>')
+    return ''.join(out)+'</div>'
+
+
 def attach_background(view, records, library):
-    """Return a new projection and quote-free counts; every original field is retained."""
+    """Return a projection and quote-free counts; every original field is retained."""
     projected = {}
     counts = Counter()
     selection_counts = Counter()
@@ -184,6 +200,8 @@ def attach_background(view, records, library):
         before_visible += int(source or record.get('lineage', {}).get('source_group') == 'wu2008')
         selection_counts[str(len(background))] += 1
         projected[rid] = {**entry, 'general_background': background}
+    canonical_distribution = Counter(str(len(select_background(record, {}, library))) for record in records.values())
+    data_only = len(records)-len(projected)
     coverage = {'schema': 'mattersyn-reader-background-coverage/1',
                 'canonical_records': len(records), 'reader_records': len(projected),
                 'before_sections_visible': before_visible,
@@ -193,9 +211,21 @@ def attach_background(view, records, library):
                 'source_only': 0, 'background_only': counts['background_only'],
                 'both': counts['both'], 'neither': 0,
                 'background_card_distribution': {str(n): selection_counts[str(n)] for n in range(4)},
+                'all_canonical': {
+                    'record_pages': len(records),
+                    'static_Data_sections_before': len(records),
+                    'static_Data_sections_after': len(records),
+                    'static_Data_sections_include_placeholders': True,
+                    'pages_with_authored_background_after': len(records),
+                    'background_card_distribution': {str(n): canonical_distribution[str(n)] for n in range(4)},
+                    'Data_only_default_pages': data_only,
+                    'default_visible_union_before': before_visible+data_only,
+                    'default_visible_union_after': len(records),
+                    'scope': 'Default Reader for indexed records, otherwise existing Data/evidence page. Static Data section presence includes note/link-only placeholders and is not source-content coverage.'},
                 'status_affects_selection': False, 'scientific_record_values_modified': False,
                 'scope': 'Current Reader records; protected source-only placeholder sections count as visible before, not as source content.'}
-    return {**view, 'records': projected}, coverage
+    # Keep the existing audited-byte fast path when there is no record to enrich.
+    return ({**view, 'records': projected} if projected else view), coverage
 
 
 def source_interpretations(entry):

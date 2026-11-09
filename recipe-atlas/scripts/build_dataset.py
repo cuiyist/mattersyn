@@ -6,6 +6,7 @@ from collections import Counter
 from urllib.parse import urlsplit,parse_qsl
 from dataset_lib import ROOT,SCHEMA,validate_record,eligibility,build_groups,training_view,digest,chemical_signature,fmt
 from review_scope import source_review_scope, pending_variants, pending_variants_html
+from reader_background import load_library, render_record_background
 
 DISPLAY=json.loads((ROOT/'data/measurement-display.json').read_text(encoding='utf-8'))
 PROTOCOL_TYPES={'literature_protocol','protocol_variant','experiment'}
@@ -93,7 +94,8 @@ def header(prefix=''):
     return '<header class="site-header dataset-header"><a class="brand" href="'+prefix+'index.html"><span class="brand-mark">M</span>MatterSyn</a><nav aria-label="Dataset navigation"><a href="'+prefix+'index.html">Periodic table</a><a href="'+prefix+'library.html">Source library</a><a href="'+prefix+'dataset.html">Synthesis dataset</a></nav></header>'
 def section(id,number,title,subtitle,body):return '<section id="'+id+'" class="record-section"><div class="section-heading"><div><span class="section-number">'+number+'</span><h2>'+title+'<small>'+subtitle+'</small></h2></div></div>'+body+'</section>'
 
-def render_record(r,meta):
+def render_record(r,meta,background_library=None):
+    if background_library is None:background_library=load_library(ROOT)
     rid=r['record_id'];src=r['sources'][0];e=meta['eligibility'];p='../'
     extracted=r['quality']['review_status']=='source_extracted'
     s=head(r['title'],p)+'<body data-record-id="'+rid+'">'+header(p)+'<main class="dataset-main record-main"><p class="academic-breadcrumb"><a href="../dataset.html">Synthesis records</a> / '+esc(r['material']['formula'])+' / '+esc(r['method'])+'</p><div class="dataset-heading"><div class="method-label">'+esc(r['method'].upper())+' · '+esc(r['material']['formula'])+'</div><h1>'+esc(r['title'])+'</h1><p>'+esc(src['title'])+'</p><p class="record-citation">'+esc(src['authors'])+' · '+str(src['year'])+' · <a href="'+esc(src['url'])+'" target="_blank" rel="noopener">'+esc(src['doi'])+' ↗</a></p></div>'
@@ -142,6 +144,7 @@ def render_record(r,meta):
     review=ROOT/'data/paper-reviews'/(r['lineage']['source_group']+'.json')
     if review.exists() and not any('paper-review.html' in l['url'] for l in links):links.append({'url':'../paper-review.html?id='+r['lineage']['source_group'],'label':source_review_scope(json.loads(review.read_text(encoding='utf-8')))['label']+' and original figures','relation':'source coverage'})
     body='<div id="record-intuition-content"></div><p>Mechanistic interpretations and related literature remain separate from the experimental training labels.</p>'+(''.join('<a class="context-reference" href="'+esc(l['url'])+'"><strong>'+esc(l['label'])+' ↗</strong><span>'+esc(l['relation'].replace('_',' ') if r['lineage']['source_group'] in ('friedfeld2019','sasongko2025') else l['relation'])+'</span></a>' for l in links) if links else '<p class="record-note">No separately reviewed chemical-intuition essay is attached to this record yet.</p>')
+    body+=render_record_background(r,background_library)
     s+=section('intuition','05','Chemical intuition','Referenced context and interpretation',body)
     body='<div class="eligibility-grid">'+''.join('<article><strong>'+esc(human(task))+'</strong><span class="record-badge '+('eligible' if v['eligible'] else '')+'">'+('Included' if v['eligible'] else 'Excluded')+'</span><p>'+esc('Excluded from training exports.' if extracted else v['reason'])+'</p></article>' for task,v in e.items())+'</div><h3>Unresolved information</h3><ul class="gap-list">'+''.join('<li>'+esc(x)+'</li>' for x in r['quality']['missing_fields'])+'</ul>'
     if r['quality']['conflicts']:body+='<h3>Source distinctions and conflicts</h3><ul class="gap-list">'+''.join('<li>'+esc(x)+'</li>' for x in r['quality']['conflicts'])+'</ul>'
@@ -180,6 +183,7 @@ def main():
     groups=build_groups(records);unique_groups=sorted(set(groups.values()));assign={g:('development' if len(unique_groups)<10 else 'test' if int(digest(g)[:8],16)%10==0 else 'validation' if int(digest(g)[:8],16)%10==1 else 'train') for g in unique_groups}
     public=ROOT/'dist/data';pages=ROOT/'dist/records';pages.mkdir(parents=True,exist_ok=True)
     tasks=['precursor_selection','partial_protocol','size_conditioned_recipe','exact_structure_recipe','success_prediction','optical_outcome'];exports={k:[] for k in tasks};items=[]
+    background_library=load_library(ROOT)
     for r in records:
         rid=r['record_id'];ee=eligibility(r, structure_policy);meta={'record_id':rid,'title':r['title'],'formula':r['material']['formula'],'family':r['material']['family'],'method':r['method'],'record_type':r['record_type'],'source_year':r['sources'][0]['year'],'source_doi':r['sources'][0]['doi'],'revision':r['revision'],'record_sha256':digest(r),'recipe_signature':chemical_signature(r),'group_id':groups[rid],'split':assign[groups[rid]],'eligibility':ee,'record_url':'data/records/'+rid+'.json','page_url':'records/'+rid+'.html','missing_field_count':len(r['quality']['missing_fields'])};items.append(meta)
         meta['collection']=r.get('collection','reviewed_literature')
@@ -187,7 +191,7 @@ def main():
         if source_scopes.get(r['lineage']['source_group']):meta['pending_variants']=source_scopes[r['lineage']['source_group']]
         meta['components']=r['material'].get('components',[r['material']['formula']])
         copy_verified_record(ROOT/'data/records'/(rid+'.json'),public/'records'/(rid+'.json'),r)
-        (pages/(rid+'.html')).write_text(render_record(r,meta),encoding='utf-8',newline='\n')
+        (pages/(rid+'.html')).write_text(render_record(r,meta,background_library),encoding='utf-8',newline='\n')
         for task in tasks:
             if ee[task]['eligible']:
                 x=training_view(r,task, structure_policy);x['group_id']=meta['group_id'];x['split']=meta['split'];x['record_sha256']=meta['record_sha256'];exports[task].append(x)
