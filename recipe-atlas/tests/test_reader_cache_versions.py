@@ -5,7 +5,7 @@ import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
 VERSION = '0.41.9'
-PUBLIC_READER_VERSION = '0.45.1'
+PUBLIC_READER_VERSION = '0.45.2'
 H_VERSION = '0.43.0'
 K_VERSION = '0.45.0'
 K_PATCH_MODULES = ('illustrated-record.mjs', 'material-guide.mjs', 'material-hub.mjs', 'protocol-visuals.mjs', 'reader-app.mjs', 'reported-protocol-scenes.mjs')
