@@ -5,7 +5,7 @@ import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
 VERSION = '0.41.9'
-PUBLIC_READER_VERSION = '0.47.0'
+PUBLIC_READER_VERSION = '0.47.1'
 L_VERSION = '0.46.0'
 M_MODULES = ('illustrated-record.mjs', 'material-guide.mjs', 'material-hub.mjs', 'reader-app.mjs', 'reader.css')
 H_VERSION = '0.43.0'
@@ -114,14 +114,14 @@ class ReaderCacheVersionTests(unittest.TestCase):
         app = self.read('static/reader-app.mjs')
         self.assertIn('export function renderIntuition', app)
         self.assertIn('general_background', app)
-        self.assertIn('reader.css?v=0.47.0', app)
-        self.assertIn('reader.css?v=0.47.0', self.read('templates/material-reader.html'))
+        self.assertIn('reader.css?v=0.47.1', app)
+        self.assertIn('reader.css?v=0.47.1', self.read('templates/material-reader.html'))
         self.assertIn('.reader-general-background', self.read('static/reader.css'))
         for child in ('chemical-viewer.mjs', 'protocol-visuals.mjs', 'reader-structures.mjs'):
             with self.subTest(unchanged_L_leaf=child):
                 self.assertEqual(version_for(child), '0.46.0')
                 self.assertEqual(app.count('./'+child+'?v=0.46.0'), 1)
-                self.assertNotIn('./'+child+'?v=0.47.0', app)
+                self.assertNotIn('./'+child+'?v=0.47.1', app)
         self.assertEqual(version_for('reported-protocol-scenes.mjs'), '0.45.2')
         self.assertEqual(version_for('reported-scene-drawing.mjs'), '0.45.0')
         self.assertEqual(version_for('method-families.mjs'), '0.44.0')

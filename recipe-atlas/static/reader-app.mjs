@@ -68,7 +68,7 @@ export function methodBadges(r,presentation={}){
 }
 
 
-function installStyle(){if(document.querySelector('link[data-reader-css]'))return;const style=el('link');style.rel='stylesheet';style.href=siteURL('reader.css?v=0.47.0');style.dataset.readerCss='true';document.head.append(style);}
+function installStyle(){if(document.querySelector('link[data-reader-css]'))return;const style=el('link');style.rel='stylesheet';style.href=siteURL('reader.css?v=0.47.1');style.dataset.readerCss='true';document.head.append(style);}
 async function precursors(host,r,presentation={}){
 
  const [data,thumbs,stockBindings]=await Promise.all([chemicalRegistry(r.record_id),json('data/chemical-thumbnail-map.json'),json('data/reader-stock-bindings.json')]);if(!host.isConnected)return;function cardImage(entry){const img=chemicalImage(entry),item=thumbs.entries[entry.id];if(item?.thumbnail_path)img.src=siteURL(item.thumbnail_path);return img;}const chemicals=r.materials.filter(m=>!isEquipment(m)),grid=el('div',undefined,'reader-chemicals');
@@ -182,8 +182,8 @@ export function hideEmptySections(sections,empty){let n=0;for(const s of section
 export function interpretationFallback(r){return READER_COPY.interpretation;}
 export function renderIntuition(host,r,presentation={}){
  const items=presentation.intuition||presentation.chemical_intuition||[],background=Array.isArray(presentation.general_background)?presentation.general_background.slice(0,3):[];
- // Existing source cards, their labels and Evidence/View-all links remain first.
- if(items.length){const grid=el('div',undefined,'reader-intuition');for(const item of items.slice(0,3)){const card=el('article');if(item.title)card.append(el('h3',item.title));card.append(el('p',item.summary||item.text||''),el('small',human(item.claim_type||'Source interpretation')),link('Evidence →',reviewURL(r,presentation,'#source-intuition'),'reader-data-link'));grid.append(card);}host.append(grid);if(items.length>3)host.append(link('All interpretations and references →',reviewURL(r,presentation,'#source-intuition'),'reader-data-link'));}
+ // Existing source-card content and Evidence/View-all links remain first; the visible label is uniform.
+ if(items.length){const grid=el('div',undefined,'reader-intuition');for(const item of items.slice(0,3)){const card=el('article');if(item.title)card.append(el('h3',item.title));card.append(el('p',item.summary||item.text||''),el('small','Source interpretation'),link('Evidence →',reviewURL(r,presentation,'#source-intuition'),'reader-data-link'));grid.append(card);}host.append(grid);if(items.length>3)host.append(link('All interpretations and references →',reviewURL(r,presentation,'#source-intuition'),'reader-data-link'));}
  if(background.length){const grid=el('div',undefined,'reader-intuition reader-general-background');for(const item of background){const card=el('article');card.dataset.backgroundId=item.id;if(item.title)card.append(el('h3',item.title));card.append(el('p',item.summary||''),el('small',"General background, not the authors' interpretation"));const reference=item.reference;if(reference?.doi&&reference.url==='https://doi.org/'+reference.doi)card.append(link('Reference: '+reference.title+' — DOI '+reference.doi,reference.url,'reader-data-link'));grid.append(card);}host.append(grid);}
  if(items.length||background.length)return true;
  host.append(el('p',interpretationFallback(r),'reader-note'),link('Source discussion →',reviewURL(r,presentation,'#source-intuition'),'reader-data-link'));return false;
