@@ -1,3 +1,41 @@
+# New local-corpus intake — 14 November 2026
+
+The owner resumed intake and requested continuation through the remaining local
+folders, with duplicates skipped. The independent-audit lane remains paused.
+
+The first new batch completed two local extraction passes for 22 papers. CHECK
+returned 29 candidate pairs in 20 nonempty papers, with two empty results and no
+failed extraction executions. Product scope and native route checks select six
+papers, 14 source-extracted records and 27 figure crops for this source release.
+The other 16 papers remain omitted or held: two empty results, seven technical
+composition/route limitations and seven product-scope uncertainties or exclusions.
+They are not counted as live, and technical holds are not scientific OUT findings.
+
+One deletion-only reading of five rare-material pairs removed seven unsupported
+whole fact objects. No replacement scientific values were added; common-material
+pairs received no additional scientific audit. Bibliography was checked against
+local title pages, including correction of one wrong extracted title/author list.
+Twenty-seven local-model caption paraphrases were prepared; nine descriptions
+were corrected for cluster or nitrogen-doping terminology. Original inputs,
+quotes and model payloads remain private. Public exports contain no quotes.
+
+Existing canonical records and audited-only training eligibility are preserved.
+Chemical identity/model definitions are unchanged: only additive bindings, use
+counts and their exact metadata pins were refreshed, with new unresolved names
+shown as flat name cards. The native reference check passed 56,751 checks and
+hashed 2,243 assets without errors. This is engineering validation, not a
+scientific audit or accuracy measurement.
+
+Status: source preparation; full GitHub build, release, browser and anonymous
+verification remain required. **New publication credit: zero until verified.**
+The batch has waited more than 12 hours, so the existing release rule permits all
+currently ready papers even though fewer than 40 are ready.
+
+Storage: C had approximately 392.5 GB free before preparation; no files were
+deleted. Final storage and live counts will be recorded after verification.
+
+Earlier dated reports follow unchanged.
+
 <!-- reader-protocol-scenes-20261105-C -->
 # Reader protocol drawings — C prepared for GitHub checks
 
