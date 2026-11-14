@@ -1,3 +1,13 @@
+## New local-corpus continuation — 14 November 2026
+
+The owner requested processing the remaining local corpus folders without routine
+approval questions, skipping duplicate website papers. Intake is active in the
+simple two-pass lane; the separate audited lane and old Worker A/B remain paused.
+The first selected release contains six new papers, 14 source-extracted records
+and 27 figures. It is not live until normal GitHub release and anonymous checks
+complete. See the current entry in the single SIMPLE_PIPELINE_REPORT.md report.
+Preserve originals, historical holds, existing records and audited-only exports.
+
 ## Current project identity — 9 November 2026
 
 NanoXtalSyn is the nanocrystal synthesis atlas. Current repositories are [cuiyist/nanoxtalsyn](https://github.com/cuiyist/nanoxtalsyn), [cuiyist/nanoxtalsyn-site](https://github.com/cuiyist/nanoxtalsyn-site) and [cuiyist/nanoxtalsyn2](https://github.com/cuiyist/nanoxtalsyn2); the website is https://cuiyist.github.io/nanoxtalsyn-site/.
